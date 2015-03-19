@@ -1,14 +1,24 @@
 #!/usr/bin/env bash
 
 ##
-#+ ## Summary: a naive way to do logging with various levels in Bash.
+#+ ## Summary: a naive way to do leveled logging in Bash.
+#+ This is an example demoing function defined in mengLog.sh.
 #+
 #+ ## Author: Meng Lu <lumeng.dev@gmail.com>
 #+
+#+ ## Example:
+#+ $ ./leveled-logging_example.sh
+#+ [WARNING] 00:03:09: level=6, an message.
+#+ [WARN] 00:03:09: level=6, an message.
+#+ [SEVERE] 00:03:09: level=7, an message.
+#+ [ERROR] 00:03:09: level=7, an message.
+#+ [FATAL] 00:03:10: level=8, an message.
+#+ [XXX] 00:03:10: level=9, an message.
+##
 
 source "$DROPBOX_PATH/WorkSpace-Dropbox/Computing/repo-meng-lib/Bash/mengLog.sh"
 
-mengLog	"FINEST" "level=1, an message."
+mengLog "FINEST" "level=1, an message."
 mengLog "ALL" "level=1, an message."
 mengLog "FINER" "level=2, an message."
 mengLog "TRACE" "level=2, an message."
