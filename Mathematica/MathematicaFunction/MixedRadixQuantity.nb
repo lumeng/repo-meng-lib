@@ -1,0 +1,123 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 10.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      3070,        114]
+NotebookOptionsPosition[      2537,         89]
+NotebookOutlinePosition[      2892,        105]
+CellTagsIndexPosition[      2849,        102]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["MixedRadixQuantity", "Title",
+ CellChangeTimes->{3.60968838786915*^9}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"MixedRadixQuantity", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"2", ",", "3"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\"\<Feet\>\"", ",", "\"\<Inches\>\""}], "}"}]}], "]"}]], "Input",\
+
+ CellChangeTimes->{{3.609688376000292*^9, 3.609688379338746*^9}}],
+
+Cell[BoxData[
+ InterpretationBox[
+  StyleBox[
+   RowBox[{
+    TemplateBox[{"2"},
+     "QuantityUnit",
+     DisplayFunction->(RowBox[{#, "\[InvisibleSpace]", 
+        TagBox[
+         RowBox[{
+           SuperscriptBox["\[Null]", "\[Prime]"], "\[InvisibleSpace]"}], 
+         CalculateUnits`UnitCommonSymbols`UnitBoxWrapper[
+         "StringBoxes" -> "'"]]}]& )], 
+    TemplateBox[{"3"},
+     "QuantityUnit",
+     DisplayFunction->(RowBox[{#, "\[InvisibleSpace]", 
+        TagBox[
+         SuperscriptBox["\[Null]", 
+          StyleBox["\[Prime]\[Prime]", FontTracking -> "Condensed"]], 
+         CalculateUnits`UnitCommonSymbols`UnitBoxWrapper[
+         "StringBoxes" -> "\""]]}]& )]}],
+   ShowStringCharacters->False],
+  Quantity[
+   MixedRadix[2, 3], 
+   MixedRadix["Feet", "Inches"]],
+  SyntaxForm->Mod]], "Output",
+ CellChangeTimes->{3.609688380704114*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"MixedRadixQuantity", "[", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{"2", ",", "3"}], "}"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"\"\<Feet\>\"", ",", "\"\<Inches\>\""}], "}"}]}], "]"}], "//", 
+  "InputForm"}]], "Input",
+ CellChangeTimes->{{3.6096883770482492`*^9, 3.609688377049383*^9}}],
+
+Cell["Quantity[MixedRadix[2, 3], MixedRadix[\"Feet\", \"Inches\"]]", "Output",
+ CellChangeTimes->{3.609688382083336*^9}]
+}, Open  ]],
+
+Cell["\<\
+Note that MixedRadix expressions appear as arguments in the evaluated \
+MixedRadixQuantity expression.\
+\>", "Text",
+ CellChangeTimes->{{3.609688398810532*^9, 3.6096884330068617`*^9}}]
+}, Open  ]]
+},
+WindowSize->{808, 756},
+WindowMargins->{{36, Automatic}, {16, Automatic}},
+FrontEndVersion->"10.0 for Mac OS X x86 (32-bit, 64-bit Kernel) (April 28, \
+2014)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 76, 1, 92, "Title"],
+Cell[CellGroupData[{
+Cell[681, 27, 284, 8, 28, "Input"],
+Cell[968, 37, 860, 25, 30, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[1865, 67, 324, 9, 28, "Input"],
+Cell[2192, 78, 120, 1, 40, "Output"]
+}, Open  ]],
+Cell[2327, 82, 194, 4, 30, "Text"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)

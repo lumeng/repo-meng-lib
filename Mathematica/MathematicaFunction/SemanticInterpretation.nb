@@ -1,0 +1,202 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='WolframDesktop 10.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       161,          7]
+NotebookDataLength[      6127,        193]
+NotebookOptionsPosition[      5083,        151]
+NotebookOutlinePosition[      5613,        174]
+CellTagsIndexPosition[      5529,        169]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["SemanticInterpretation", "Title",
+ CellChangeTimes->{3.604660806707204*^9}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"?", "SemanticInterpretation"}]], "Input",
+ CellChangeTimes->{{3.604660800867436*^9, 3.6046608032689447`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox["\<\"\\!\\(\\*RowBox[{\\\"SemanticInterpretation\\\", \\\"[\\\", \
+StyleBox[\\\"\\\\\\\"\\\\!\\\\(\\\\*StyleBox[\\\\\\\"string\\\\\\\",\\\\\\\"\
+TI\\\\\\\"]\\\\)\\\\\\\"\\\", ShowStringCharacters->True], \\\"]\\\"}]\\) \
+attempts to give the best semantic intepretation of the specified free-form \
+string as a Wolfram Language \
+expression.\\n\\!\\(\\*RowBox[{\\\"SemanticInterpretation\\\", \\\"[\\\", \
+RowBox[{StyleBox[\\\"\\\\\\\"\\\\!\\\\(\\\\*StyleBox[\\\\\\\"string\\\\\\\",\\\
+\\\\\"TI\\\\\\\"]\\\\)\\\\\\\"\\\", ShowStringCharacters->True], \\\",\\\", \
+StyleBox[\\\"pattern\\\", \\\"TI\\\"]}], \\\"]\\\"}]\\) filters possible \
+semantic interpretations, returning the best one that matches the specified \
+pattern.\\n\\!\\(\\*RowBox[{\\\"SemanticInterpretation\\\", \\\"[\\\", \
+RowBox[{StyleBox[\\\"\\\\\\\"\\\\!\\\\(\\\\*StyleBox[\\\\\\\"string\\\\\\\",\\\
+\\\\\"TI\\\\\\\"]\\\\)\\\\\\\"\\\", ShowStringCharacters->True], \\\",\\\", \
+StyleBox[\\\"pattern\\\", \\\"TI\\\"], \\\",\\\", StyleBox[\\\"head\\\", \
+\\\"TI\\\"]}], \\\"]\\\"}]\\) returns the semantic interpretation wrapped \
+with the specified head.\"\>", "MSG"], "\[NonBreakingSpace]", 
+  ButtonBox[
+   StyleBox["\[RightSkeleton]", "SR"],
+   Active->True,
+   BaseStyle->"Link",
+   ButtonData->"paclet:ref/SemanticInterpretation"]}]], "Print", "PrintUsage",
+ 
+ CellChangeTimes->{3.604660803698545*^9},
+ CellTags->"Info3604635603-1541220"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"SemanticInterpretation", "[", "\"\<us china population\>\"", 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.604660825520133*^9, 3.6046608324615183`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"Semantic`SemanticInterpretationDump`applyAmbiguityFunction", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"{", 
+     RowBox[{
+      TemplateBox[{"3.19330342`*^8"},
+       "QuantityUnit",
+       DisplayFunction->(TooltipBox[
+         StyleBox[
+          RowBox[{#, "\[InvisibleSpace]", 
+            StyleBox[
+             RowBox[{" ", "\"people\""}], "QuantityUnitTraditionalLabel"]}], 
+          ShowStringCharacters -> False], "Unit: people"]& ),
+       InterpretationFunction->(RowBox[{"Quantity", "[", 
+          RowBox[{#, ",", "\"People\""}], "]"}]& )], ",", 
+      TemplateBox[{"1.35936847`*^9"},
+       "QuantityUnit",
+       DisplayFunction->(TooltipBox[
+         StyleBox[
+          RowBox[{#, "\[InvisibleSpace]", 
+            StyleBox[
+             RowBox[{" ", "\"people\""}], "QuantityUnitTraditionalLabel"]}], 
+          ShowStringCharacters -> False], "Unit: people"]& ),
+       InterpretationFunction->(RowBox[{"Quantity", "[", 
+          RowBox[{#, ",", "\"People\""}], "]"}]& )]}], "}"}], "}"}], ",", 
+   "Automatic"}], "]"}]], "Output",
+ CellChangeTimes->{3.604660882177195*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Test SemanticInterpretation performance", "Subsection"],
+
+Cell["\<\
+Test SemanticInterpretation on 1000 randomly sampled words in our dictionary \
+...\
+\>", "Text"],
+
+Cell[BoxData[
+ RowBox[{"\n", 
+  RowBox[{
+   RowBox[{"test", "=", 
+    RowBox[{"ParallelMap", "[", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"AbsoluteTiming", "[", 
+        RowBox[{
+         RowBox[{"SemanticInterpretation", "[", "#", "]"}], "/.", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"$Failed", "\[Rule]", "1"}], ",", 
+           RowBox[{"_", "\[RuleDelayed]", "0"}]}], "}"}]}], "]"}], "&"}], ",", 
+      RowBox[{"RandomSample", "[", 
+       RowBox[{
+        RowBox[{"DictionaryLookup", "[", "]"}], ",", "1000"}], "]"}]}], 
+     "]"}]}], ";"}]}]], "Input"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"times", ",", "res"}], "}"}], "=", 
+   RowBox[{"Transpose", "[", "test", "]"}]}], ";"}]], "Input"],
+
+Cell["\<\
+--Quantiles and full distribution of timings (performance) ...\
+\>", "Text"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"Quantile", "[", 
+   RowBox[{"times", ",", 
+    RowBox[{"{", 
+     RowBox[{"0.", ",", "0.25", ",", "0.5", ",", "0.75", ",", "1."}], "}"}]}],
+    "]"}], "\[IndentingNewLine]"}], "\n", 
+ RowBox[{"Histogram", "[", "times", "]"}], "\n"}], "Input"],
+
+Cell["--The success rate (scope) is 60 % ...", "Text"],
+
+Cell[BoxData[
+ RowBox[{"Tally", "[", "res", "]"}]], "Input"]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{808, 752},
+WindowMargins->{{12, Automatic}, {Automatic, 24}},
+ShowSelection->True,
+FrontEndVersion->"10.0 for Mac OS X x86 (32-bit, 64-bit Kernel) (December 4, \
+2014)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{
+ "Info3604635603-1541220"->{
+  Cell[825, 31, 1447, 25, 106, "Print",
+   CellTags->"Info3604635603-1541220"]}
+ }
+*)
+(*CellTagsIndex
+CellTagsIndex->{
+ {"Info3604635603-1541220", 5425, 163}
+ }
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[583, 22, 81, 1, 92, "Title"],
+Cell[CellGroupData[{
+Cell[689, 27, 133, 2, 28, "Input"],
+Cell[825, 31, 1447, 25, 106, "Print",
+ CellTags->"Info3604635603-1541220"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[2309, 61, 172, 3, 28, "Input"],
+Cell[2484, 66, 1122, 27, 57, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[3643, 98, 61, 0, 44, "Subsection"],
+Cell[3707, 100, 106, 3, 30, "Text"],
+Cell[3816, 105, 584, 17, 63, "Input"],
+Cell[4403, 124, 162, 5, 28, "Input"],
+Cell[4568, 131, 86, 2, 30, "Text"],
+Cell[4657, 135, 278, 7, 80, "Input"],
+Cell[4938, 144, 54, 0, 30, "Text"],
+Cell[4995, 146, 60, 1, 28, "Input"]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)

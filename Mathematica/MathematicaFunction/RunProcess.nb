@@ -1,0 +1,73 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 10.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      1440,         64]
+NotebookOptionsPosition[      1018,         43]
+NotebookOutlinePosition[      1373,         59]
+CellTagsIndexPosition[      1330,         56]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["RunProcess", "Title"],
+
+Cell["\<\
+Check the executable permission of a file.  If the exit code is 0, it is \
+executable.\
+\>", "Text"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"RunProcess", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{
+    "$SystemShell", ",", "\"\<-c\>\"", ",", "\"\<[ -x /var/mail/ ]\>\""}], 
+    "}"}], ",", "\"\<ExitCode\>\""}], "]"}]], "Input"],
+
+Cell[BoxData["0"], "Output"]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{808, 752},
+WindowMargins->{{4, Automatic}, {Automatic, 4}},
+FrontEndVersion->"10.0 for Mac OS X x86 (32-bit, 64-bit Kernel) (December 4, \
+2014)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 27, 0, 92, "Title"],
+Cell[610, 24, 110, 3, 30, "Text"],
+Cell[CellGroupData[{
+Cell[745, 31, 214, 6, 28, "Input"],
+Cell[962, 39, 28, 0, 28, "Output"]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)

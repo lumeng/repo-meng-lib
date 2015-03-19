@@ -1,0 +1,85 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 10.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      2192,         76]
+NotebookOptionsPosition[      1829,         58]
+NotebookOutlinePosition[      2186,         74]
+CellTagsIndexPosition[      2143,         71]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[
+ RowBox[{"Internal`HandlerBlock", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"\"\<\!\(\*
+StyleBox[\"Power\", \"MessageName\"]\)\!\(\*
+StyleBox[\"::\", \"MessageName\"]\)\!\(\*
+StyleBox[\"infy\", \"MessageName\"]\)\>\"", ",", 
+     RowBox[{
+      RowBox[{"(", "#", ")"}], "&"}]}], "}"}], ",", 
+   RowBox[{"1", "/", "0"}]}], "]"}]], "Input"],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"Internal`HandlerBlock", "::", "noevent"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"-- Message text not found -- \
+(\[NoBreak]\\!\\(\\\"\\\\!\\\\(\\\\*\\\\nStyleBox[\\\\\\\"Power\\\\\\\", \\\\\
+\\\"MessageName\\\\\\\"]\\\\)\\\\!\\\\(\\\\*\\\\nStyleBox[\\\\\\\"::\\\\\\\", \
+\\\\\\\"MessageName\\\\\\\"]\\\\)\\\\!\\\\(\\\\*\\\\nStyleBox[\\\\\\\"infy\\\\\
+\\\", \\\\\\\"MessageName\\\\\\\"]\\\\)\\\"\\)\[NoBreak])\"\>"}]], "Message", \
+"MSG"],
+
+Cell[BoxData[
+ RowBox[{"Internal`HandlerBlock", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"\<\"\\!\\(\\*\\nStyleBox[\\\"Power\\\", \
+\\\"MessageName\\\"]\\)\\!\\(\\*\\nStyleBox[\\\"::\\\", \
+\\\"MessageName\\\"]\\)\\!\\(\\*\\nStyleBox[\\\"infy\\\", \
+\\\"MessageName\\\"]\\)\"\>", ",", 
+     RowBox[{"#1", "&"}]}], "}"}], ",", 
+   FractionBox["1", "0"]}], "]"}]], "Output"]
+}, Open  ]]
+},
+WindowSize->{808, 751},
+WindowMargins->{{12, Automatic}, {Automatic, 24}},
+FrontEndVersion->"10.0 for Mac OS X x86 (32-bit, 64-bit Kernel) (December 4, \
+2014)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 356, 10, 28, "Input"],
+Cell[939, 34, 494, 10, 24, "Message"],
+Cell[1436, 46, 377, 9, 48, "Output"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)

@@ -1,0 +1,127 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='WolframDesktop 10.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       161,          7]
+NotebookDataLength[      3763,        118]
+NotebookOptionsPosition[      3022,         85]
+NotebookOutlinePosition[      3546,        108]
+CellTagsIndexPosition[      3463,        103]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[
+ RowBox[{"?", "Interpreter"}]], "Input",
+ CellChangeTimes->{{3.604660543018676*^9, 3.604660543469666*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox["\<\"\\!\\(\\*RowBox[{\\\"Interpreter\\\", \\\"[\\\", \
+StyleBox[\\\"form\\\", \\\"TI\\\"], \\\"]\\\"}]\\) represents an interpreter \
+object that can be applied to a string to try to interpret it as an object of \
+the specified form. \\n\\!\\(\\*RowBox[{\\\"Interpreter\\\", \\\"[\\\", \
+RowBox[{StyleBox[\\\"form\\\", \\\"TI\\\"], \\\",\\\", StyleBox[\\\"test\\\", \
+\\\"TI\\\"]}], \\\"]\\\"}]\\) returns the interpreted object only if applying \
+\\!\\(\\*StyleBox[\\\"test\\\", \\\"TI\\\"]\\) to it yields True; otherwise \
+it returns a ValidationError object.\\n\\!\\(\\*RowBox[{\\\"Interpreter\\\", \
+\\\"[\\\", RowBox[{StyleBox[\\\"form\\\", \\\"TI\\\"], \\\",\\\", StyleBox[\\\
+\"test\\\", \\\"TI\\\"], \\\",\\\", StyleBox[\\\"fail\\\", \\\"TI\\\"]}], \
+\\\"]\\\"}]\\) returns the result of applying the function \\!\\(\\*StyleBox[\
+\\\"fail\\\", \\\"TI\\\"]\\) if the test fails.\"\>", "MSG"], 
+  "\[NonBreakingSpace]", 
+  ButtonBox[
+   StyleBox["\[RightSkeleton]", "SR"],
+   Active->True,
+   BaseStyle->"Link",
+   ButtonData->"paclet:ref/Interpreter"]}]], "Print", "PrintUsage",
+ CellChangeTimes->{3.6046605441039333`*^9},
+ CellTags->"Info3604635343-1541220"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Interpreter", "[", "\"\<Country\>\"", "]"}], "[", "\"\<us\>\"", 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.604660640435285*^9, 3.604660654599649*^9}}],
+
+Cell[BoxData[
+ TemplateBox[{"\"United States\"",RowBox[{"Entity", "[", 
+     RowBox[{"\"Country\"", ",", "\"UnitedStates\""}], "]"}],
+   "\"Entity[\\\"Country\\\", \\\"UnitedStates\\\"]\"","\"country\""},
+  "Entity"]], "Output",
+ CellChangeTimes->{{3.604660649864657*^9, 3.604660655513515*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Interpreter", "[", "\"\<ComputedColor\>\"", "]"}], "[", 
+  "\"\<red\>\"", "]"}]], "Input",
+ CellChangeTimes->{{3.6046606202714443`*^9, 3.60466062027274*^9}}],
+
+Cell[BoxData[
+ TemplateBox[{"\"Mathematica Red\"",RowBox[{"Entity", "[", 
+     RowBox[{"\"Color\"", ",", 
+       RowBox[{"{", 
+         RowBox[{"\"Mathematica\"", ",", "\"Red\""}], "}"}]}], "]"}],
+   "\"Entity[\\\"Color\\\", {\\\"Mathematica\\\", \\\"Red\\\"}]\"",
+   "\"color\""},
+  "Entity"]], "Output",
+ CellChangeTimes->{3.604660623904723*^9}]
+}, Open  ]]
+},
+WindowSize->{808, 752},
+WindowMargins->{{4, Automatic}, {Automatic, 4}},
+ShowSelection->True,
+FrontEndVersion->"10.0 for Mac OS X x86 (32-bit, 64-bit Kernel) (March 6, \
+2014)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{
+ "Info3604635343-1541220"->{
+  Cell[706, 26, 1203, 21, 106, "Print",
+   CellTags->"Info3604635343-1541220"]}
+ }
+*)
+(*CellTagsIndex
+CellTagsIndex->{
+ {"Info3604635343-1541220", 3359, 97}
+ }
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[583, 22, 120, 2, 28, "Input"],
+Cell[706, 26, 1203, 21, 106, "Print",
+ CellTags->"Info3604635343-1541220"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[1946, 52, 184, 4, 28, "Input"],
+Cell[2133, 58, 294, 5, 41, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[2464, 68, 192, 4, 28, "Input"],
+Cell[2659, 74, 347, 8, 41, "Output"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)

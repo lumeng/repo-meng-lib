@@ -1,0 +1,206 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 9.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       157,          7]
+NotebookDataLength[      5611,        197]
+NotebookOptionsPosition[      4869,        166]
+NotebookOutlinePosition[      5240,        182]
+CellTagsIndexPosition[      5197,        179]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["\<\
+Get stack trace programmatically\
+\>", "Title"],
+
+Cell["\<\
+When WL code is running locally and a message is encountered, the Debugging \
+pane can be used to stop at messages, and the \[OpenCurlyDoubleQuote]Show \
+Stack\[CloseCurlyDoubleQuote] button can be used to inspect the stack.
+
+But what if code is deployed to a server and is acting up, issuing messages, \
+and that behavior can\[CloseCurlyQuote]t be reproduced locally.  Nor is it \
+permissible to use the machine interactively? \
+\>", "Text"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"myFunc", "[", "]"}], ":=", 
+  RowBox[{"myFunc2", "[", "]"}]}], "\n", 
+ RowBox[{
+  RowBox[{"myFunc2", "[", "]"}], ":=", 
+  RowBox[{"1", "/", "0"}]}], "\n", 
+ RowBox[{
+  RowBox[{"Internal`HandlerBlock", "[", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{"\"\<MessageTextFilter\>\"", ",", 
+      RowBox[{
+       RowBox[{"Print", "[", 
+        RowBox[{"Stack", "[", "]"}], "]"}], "&"}]}], "}"}], ",", 
+    RowBox[{"myFunc", "[", "]"}]}], "]"}], ";"}], "\n"}], "Input"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+  "CompoundExpression", ",", "Internal`HandlerBlock", ",", "Times", ",", 
+   "Power", ",", "Message", ",", "Print"}], "}"}]], "Print"],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"Power", "::", "infy"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Infinite expression \[NoBreak]\\!\\(1\\/0\\)\[NoBreak] \
+encountered. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
+ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/message/General/infy\\\", ButtonNote -> \
+\\\"Power::infy\\\"]\\)\"\>"}]], "Message", "MSG"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"myFunc", "[", "]"}], ":=", 
+  RowBox[{"myFunc2", "[", "]"}]}], "\n", 
+ RowBox[{
+  RowBox[{"myFunc2", "[", "]"}], ":=", 
+  RowBox[{"1", "/", "0"}]}], "\n", 
+ RowBox[{
+  RowBox[{"Internal`HandlerBlock", "[", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{"\"\<MessageTextFilter\>\"", ",", 
+      RowBox[{
+       RowBox[{"Print", "[", 
+        RowBox[{"Stack", "[", "_", "]"}], "]"}], "&"}]}], "}"}], ",", 
+    RowBox[{"myFunc", "[", "]"}]}], "]"}], ";"}]}], "Input"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   TagBox[
+    RowBox[{
+     RowBox[{"Internal`HandlerBlock", "[", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"\<\"MessageTextFilter\"\>", ",", 
+         RowBox[{
+          RowBox[{"Print", "[", 
+           RowBox[{"Stack", "[", "_", "]"}], "]"}], "&"}]}], "}"}], ",", 
+       RowBox[{"myFunc", "[", "]"}]}], "]"}], ";"}],
+    HoldForm], ",", 
+   TagBox[
+    RowBox[{"Internal`HandlerBlock", "[", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"\<\"MessageTextFilter\"\>", ",", 
+        RowBox[{
+         RowBox[{"Print", "[", 
+          RowBox[{"Stack", "[", "_", "]"}], "]"}], "&"}]}], "}"}], ",", 
+      RowBox[{"myFunc", "[", "]"}]}], "]"}],
+    HoldForm], ",", 
+   TagBox[
+    FractionBox["1", "0"],
+    HoldForm], ",", 
+   TagBox[
+    FractionBox["1", "0"],
+    HoldForm], ",", 
+   TagBox[
+    RowBox[{"Message", "[", 
+     RowBox[{
+      StyleBox[
+       RowBox[{"Power", "::", "infy"}], "MessageName"], ",", 
+      TagBox[
+       FractionBox["1", "0"],
+       HoldForm]}], "]"}],
+    HoldForm], ",", 
+   TagBox[
+    RowBox[{"Print", "[", 
+     RowBox[{"Stack", "[", "_", "]"}], "]"}],
+    HoldForm]}], "}"}]], "Print"],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"Power", "::", "infy"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Infinite expression \[NoBreak]\\!\\(1\\/0\\)\[NoBreak] \
+encountered. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
+ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/message/General/infy\\\", ButtonNote -> \
+\\\"Power::infy\\\"]\\)\"\>"}]], "Message", "MSG"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"?", "HandlerBlock"}]], "Input"],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"Information", "::", "notfound"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Symbol \[NoBreak]\\!\\(\\\"HandlerBlock\\\"\\)\[NoBreak] \
+not found. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\
+\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/message/General/notfound\\\", ButtonNote -> \
+\\\"Information::notfound\\\"]\\)\"\>"}]], "Message", "MSG"]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{740, 752},
+WindowMargins->{{28, Automatic}, {36, Automatic}},
+ShowSelection->True,
+FrontEndVersion->"9.0 for Mac OS X x86 (32-bit, 64-bit Kernel) (May 19, 2013)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[579, 22, 57, 2, 92, "Title"],
+Cell[639, 26, 452, 8, 106, "Text"],
+Cell[CellGroupData[{
+Cell[1116, 38, 498, 15, 80, "Input"],
+Cell[1617, 55, 174, 4, 22, "Print"],
+Cell[1794, 61, 403, 9, 40, "Message"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[2234, 75, 497, 15, 63, "Input"],
+Cell[2734, 92, 1179, 42, 82, "Print"],
+Cell[3916, 136, 403, 9, 40, "Message"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[4356, 150, 55, 1, 28, "Input"],
+Cell[4414, 153, 427, 9, 24, "Message"]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)

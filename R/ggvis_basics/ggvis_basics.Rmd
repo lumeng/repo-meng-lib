@@ -1,0 +1,28 @@
+---
+title: "ggvis basics"
+author: "Meng Lu <lumeng.dev@gmail.com>"
+date: "September 28, 2014"
+output: html_document
+---
+
+```{r, echo = FALSE, message = FALSE}
+library(knitr)
+library(ggvis)
+library(shiny)
+library(dplyr)
+library(magrittr)
+
+# Set up default dimensions. Width and height are multiplied by dpi to get
+# pixel dimensions.
+
+knitr::opts_chunk$set(fig.width = 4, fig.height = 3)
+```
+
+Notes made when reading tutorial ["ggvis basics"](http://ggvis.rstudio.com/ggvis-basics.html) on RStudio Web site.
+
+```{r, message = FALSE}
+mtcars %>%
+  ggvis(x = ~wt, y = ~mpg) %>%
+  layer_points()
+```
+

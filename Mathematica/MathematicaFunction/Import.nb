@@ -1,0 +1,398 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 9.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       157,          7]
+NotebookDataLength[     25708,        389]
+NotebookOptionsPosition[     25319,        370]
+NotebookOutlinePosition[     25668,        385]
+CellTagsIndexPosition[     25625,        382]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["Import", "Title"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Import", "[", 
+  RowBox[{"\"\<http://arxiv.org/e-print/1502.04386v1\>\"", ",", 
+   RowBox[{"{", 
+    RowBox[{"\"\<*.tex\>\"", ",", "\"\<Text\>\""}], "}"}]}], "]"}]], "Input"],
+
+Cell[BoxData[
+ RowBox[{"{", "\<\"% Compiler avec: dvips -t \
+letter\\n\\n%\\\\documentclass{birkart}\\n\\\\documentclass[oneside]{amsart}\\\
+n\\\\usepackage[latin1]{inputenc}\\n\\\\usepackage[T1]{fontenc}\\n\\\\\
+usepackage{amssymb}\\n\\\\usepackage{vmargin}\\n\\\\usepackage{mathrsfs}\\n\\\
+\\usepackage[ps,dvips,arrow,matrix]{xy}\\n\\\\usepackage{lmodern}\\n\\n\\\\\
+setmarginsrb{2.5cm}{1.5cm}{2.5cm}{3.5cm}{1cm}{1cm}{1cm}{1cm}\\n\\n\\\\\
+renewcommand{\\\\leq}{\\\\leqslant}\\n\\\\renewcommand{\\\\geq}{\\\\geqslant}\
+\\n\\\\renewcommand{\\\\emptyset}{\\\\varnothing}\\n\\\\renewcommand{\\\\P}{\\\
+\\mathbf{P}}\\n\\\\newcommand{\\\\F}{\\\\mathbf{F}}\\n\\\\newcommand{\\\\Q}{\\\
+\\mathbf{Q}}\\n\\\\newcommand{\\\\C}{\\\\mathbf{C}}\\n\\\\newcommand{\\\\Z}{\\\
+\\mathbf{Z}}\\n\\\\newcommand{\\\\Ql}{\\\\Q_\\\\ell}\\n\\\\newcommand{\\\\Zl}{\
+\\\\Z_\\\\ell}\\n\\\\newcommand{\\\\kbarre}{{\\\\overline{k}}}\\n\\\\\
+newcommand{\\\\Krond}{\\\\mathscr{K}}\\n\\\\newcommand{\\\\Erond}{\\\\mathscr{\
+E}}\\n\\\\newcommand{\\\\Orond}{\\\\mathscr{O}}\\n\\\\newcommand{\\\\rk}{\\\\\
+mathrm{rank}}\\n\\\\newcommand{\\\\et}{{\\\\text{\[EAcute]t}}}\\n\\\\\
+newcommand{\\\\Gm}{{\\\\mathbf{G}_\\\\mathrm{m}}}\\n\\\\newcommand{\\\\tors}[\
+2]{{\\\\vphantom{#2}}_{#1}{#2}}\\n\\\\newcommand{\\\\isoto}{\\\\xrightarrow{\\\
+\\sim}}\\n\\\\newcommand{\\\\abs}[1]{\\\\left| \\\\mskip1mu #1 \\\\right|}\\n\
+\\n\\\\DeclareMathOperator{\\\\Pic}{Pic}\\n\\\\DeclareMathOperator{\\\\Spec}{\
+Spec}\\n\\\\DeclareMathOperator{\\\\Br}{Br}\\n\\\\DeclareMathOperator{\\\\NS}{\
+NS}\\n\\\\DeclareMathOperator{\\\\Div}{Div}\\n\\n\\\\newtheorem{theorem}{\
+Theorem}[section]\\n\\\\newtheorem{lemma}[theorem]{Lemma}\\n\\\\newtheorem{\
+prop}[theorem]{Proposition}\\n\\\\newtheorem{remark}[theorem]{Remark}\\n\\n\\\
+\\title{Transcendental Brauer-Manin obstruction on a pencil of elliptic \
+curves}\\n\\\\author{Olivier Wittenberg}\\n\\\\date{April 8, \
+2003}\\n\\\\address{UMR 8628, Math\[EAcute]matiques, B\[AHat]timent 425, \
+Universit\[EAcute] de Paris-Sud, F-91405 Orsay, \
+France}\\n\\\\email{olivier.wittenberg@ens.fr{\\\\normalfont{} (or \
+}olivier.wittenberg@normalesup.org{\\\\normalfont{})}}\\n\\n\\\\begin{\
+document}\\n\\\\begin{abstract}\\nThis note gives an explicit example of \
+transcendental Brauer-Manin obstruction to weak approximation.  It has two \
+features which the only previously known\\nexample of such obstruction did \
+not have: the class in the Brauer group which is responsible for the \
+obstruction is divisible, and the underlying algebraic\\nvariety is an \
+elliptic surface.\\n\\\\end{abstract}\\n\\\\maketitle\\n\\n\\\\section{\
+Introduction}\\n\\nLet $\\\\Br(X)$ denote the cohomological Brauer group \
+$H^2_\\\\et(X,\\\\Gm)$ of a scheme $X$. Let $k$ be a number field and \
+$\\\\kbarre$ be\\nan algebraically closed extension of $k$. A class in the \
+Brauer group of a projective smooth variety $X$ over $k$ is said to be \
+\\\\emph{algebraic} if\\nit belongs to the kernel of the restriction map \
+$\\\\Br(X) \\\\rightarrow \\\\Br(X_\\\\kbarre)$, \\\\emph{transcendental} \
+otherwise; this property does not depend on\\nthe choice of $\\\\kbarre$. For \
+any prime number $\\\\ell$, the $\\\\ell$-primary part of the Brauer group \
+over $\\\\C$ fits into an exact sequence\\n$$\\n\\\\xymatrix{\\n0 \\\\ar[r] & \
+(\\\\Ql/\\\\Zl)^{b_2-\\\\rho} \\\\ar[r] & \\\\Br(X_\\\\C)\\\\{\\\\ell\\\\} \\\
+\\ar[r] & H^3(X(\\\\C),\\\\Z)\\\\{\\\\ell\\\\} \\\\ar[r] & 0 \
+\\\\text{,}\\n}\\n$$\\nwhere $b_2$ and $\\\\rho$ respectively denote the \
+second Betti number and the Picard number of $X_\\\\C$, and \
+$M\\\\{\\\\ell\\\\}$ denotes\\nthe $\\\\ell$-primary part of $M$.\\nAlthough \
+this sequence does prove the non-triviality of $\\\\Br(X_\\\\C)$\\nin many \
+cases, e.g. when $X$ is a $K3$ surface, transcendental classes are in general \
+difficult to exhibit.\\n\\nAlmost all known instances of Brauer-Manin \
+obstruction are thus explained by algebraic classes, the only exceptions \
+being Harari's examples \\\\cite{harari}\\nwith conic bundles over \
+$\\\\P^2_\\\\Q$.\\nBesides, in the particular case of pencils of curves of \
+genus $1$, results on the Hasse principle have been obtained only under the \
+assumption that\\nthe $2$-primary part of the Brauer group be ``vertical'', \
+and therefore algebraic (see \\\\cite{css}, \[Section]4.7).\\nThe r\[OHat]le \
+of transcendental elements in the Brauer-Manin obstruction thus seems worthy \
+of investigation.\\nIn this note we present an example of transcendental \
+Brauer-Manin obstruction to weak approximation for an elliptic $K3$ surface \
+over $\\\\Q$,\\nwhere ``elliptic'' means that it possesses a fibration in \
+curves of genus $1$, with a section, over $\\\\P^1_\\\\Q$. It should be noted\
+\\nthat the class of order $2$ which we will exhibit in $\\\\Br(X_\\\\C)$ \
+enjoys the property of being divisible (because $H^3(X(\\\\C),\\\\Z)=0$ for a \
+$K3$ surface),\\nwhich was not the case in Harari's \
+examples.\\n\\n\\\\section{Preliminaries: $2$-descent and the Brauer group of \
+an elliptic curve}\\n\\nThe subscript in $H^i_\\\\et$ will be dropped, as we \
+will only use \[EAcute]tale cohomology.\\nIf $G$ is an abelian group (resp. \
+group scheme), $\\\\tors{n}{G}$ will denote the $n$-torsion subgroup of \
+$G$.\\nLet $k$ be a perfect field of characteristic different from~$2$.\\nThe \
+Hilbert symbol of a pair of elements $f, g \\\\in k^\\\\star$ will be denoted\
+\\n$(f, g)$; it is the class of a quaternion algebra in \
+$\\\\tors{2}\\\\Br(k)$.\\nWhen $X$ is a geometrically integral variety over \
+$k$ and $L$ is an\\nextension of $k$, $L(X)$ will denote the function field \
+of~$X_L$.\\nThe canonical morphism $\\\\Br(X) \\\\rightarrow \\\\Br(k(X))$ is \
+injective if in addition $X$ is regular; this fact will be used without \
+further mention.\\nLet $E$ be an elliptic curve over $k$ whose $2$-torsion \
+points are rational.\\nFix an isomorphism of $k$-group schemes \
+$(\\\\Z/2\\\\Z)^2 \\\\isoto \\\\tors{2}E$. The kernel of the evaluation map \
+at the zero section $\\\\Br(E) \\\\rightarrow \\\\Br(k)$\\nwill be denoted \
+$\\\\Br^0(E)$.\\n\\n\\\\begin{lemma}\\n\\\\label{plem}\\nThe group \
+$\\\\Br^0(E)$ is canonically isomorphic to $H^1(k,E)$.\\n\\\\end{lemma}\\n\\n\
+\\\\begin{proof}\\nLet us write the Leray spectral sequence for the structure \
+morphism $f \\\\colon E \\\\rightarrow \\\\Spec(k)$ and the \
+\[EAcute]tale\\nsheaf~$\\\\Gm$. Since $f_\\\\star \\\\Gm = \\\\Gm$, $R^1 f_\\\
+\\star \\\\Gm = E \\\\oplus \\\\Z$ and $R^q f_\\\\star \\\\Gm = 0$ for $q > \
+1$ by Tsen's theorem, we get an exact \
+sequence\\n$$\\n\\\\xymatrix{\\n\\\\Br(k) \\\\ar[r] & \\\\Br(E) \\\\ar[r] & \
+H^1(k, E) \\\\ar[r] & H^3(k, \\\\Gm) \\\\ar[r] & H^3(E, \\\\Gm) \
+\\\\text{.}\\n}\\n$$\\nThe zero section induces retractions of $\\\\Br(k) \
+\\\\rightarrow \\\\Br(E)$ and of $H^3(k, \\\\Gm) \\\\rightarrow H^3(E, \
+\\\\Gm)$, hence\\nthe lemma.\\n\\\\end{proof}\\n\\nThe Kummer \
+sequence\\n$$\\n\\\\xymatrix@R=0ex{\\n0 \\\\ar[r] & \\\\tors{2}E \\\\ar[r] & \
+E \\\\ar[r]^(0.46){z \\\\mapsto 2z} & E \\\\ar[r] & 0 \
+\\\\text{,}\\n}\\n$$\\ntogether with the previous lemma and the chosen \
+isomorphism $(\\\\Z/2\\\\Z)^2 \\\\isoto \\\\tors{2}E$, yields the exact \
+sequence\\n\\\\begin{equation}\\n\\\\label{sebr}\\n\\\\xymatrix{\\n0 \
+\\\\ar[r] & E(k)/2E(k) \\\\ar[r]^\\\\delta & (k^\\\\star/k^{\\\\star 2})^2 \\\
+\\ar[r]^\\\\gamma & \\\\tors{2}\\\\Br^0(E) \\\\ar[r] & 0 \\\\text{.}\\n}\\n\\\
+\\end{equation}\\n\\nWe shall need explicit descriptions of the maps \
+$\\\\delta$ and $\\\\gamma$. First choose distinct $p, q \\\\in k^\\\\star$ \
+such that\\nthe Weierstrass \
+equation\\n\\\\begin{equation}\\n\\\\label{eqw}\\ny^2 = \
+x(x-p)(x-q)\\n\\\\end{equation}\\ndefines $E$ and the points $P=(p,0)$ and \
+$Q=(q,0)$ are respectively sent\\nto $(1,0)$ and $(0,1)$ via $\\\\tors{2}E \\\
+\\isoto (\\\\Z/2\\\\Z)^2$. It is well-known (see e.g. \\\\cite{silv}, p. 281) \
+that $\\\\delta(M)=(x(M)-q, x(M)-p)$ for\\n$M \\\\in E(k)$ if $M \
+\\\\not\\\\in\\\\tors{2}E(k)$, that $\\\\delta(P)=(p-q, p(p-q))$ and that $\\\
+\\delta(Q)=(q(q-p), \
+q-p)$.\\n\\n\\\\begin{prop}\\n\\\\label{propdeltagamma}\\nLet $f, g \\\\in k^\
+\\\\star$. The classes of the quaternion algebras $(x-p, f)$ and $(x-q, g) \\\
+\\in \\\\Br(k(E))$ actually belong to $\\\\Br^0(E)$,\\nand \
+$\\\\gamma(f,g)=(x-p,f)+(x-q,g)$.\\n\\\\end{prop}\\n\\n\\\\begin{proof}\\nBy \
+symmetry, it is enough to prove that $\\\\gamma(f,1)=(x-p,f)$ in \
+$\\\\Br(k(E))$.\\nChoose a separable closure $\\\\kbarre$ of $k$ and let \
+$G_k$ be its Galois group over $k$.\\nLikewise, choose a separable closure \
+$\\\\overline{k(E)}$ of $\\\\kbarre(E)$ and let $G_{k(E)}$ be its Galois \
+group over $k(E)$.\\nIt follows from the Hochschild-Serre spectral sequence, \
+Tsen's theorem and Hilbert's theorem~90\\nthat the inflation map\\n$H^2(k, \\\
+\\kbarre(E)^\\\\star) \\\\rightarrow \\\\Br(k(E))$ is an isomorphism.\\nLet $\
+\\\\rho \\\\colon H^1(k,E) \\\\rightarrow \
+H^2(k,\\\\kbarre(E)^\\\\star/\\\\kbarre^\\\\star)$\\ndenote the composition \
+of the canonical isomorphism $H^1(k,E) \\\\isoto \
+H^1(k,\\\\Pic(E_\\\\kbarre))$ and the boundary of the exact \
+sequence\\n$$\\n\\\\xymatrix{\\n0 \\\\ar[r] & \\\\kbarre(E)^\\\\star / \
+\\\\kbarre^\\\\star \\\\ar[r] & \\\\Div(E_\\\\kbarre) \\\\ar[r] & \
+\\\\Pic(E_\\\\kbarre) \\\\ar[r] & 0 \\\\text{.}\\n}\\n$$\\nAs shown in the \
+annexe of \\\\cite{ctsan}, the diagram\\n$$\\n\\\\xymatrix@R=2ex{\\n\\\\Br(k) \
+\\\\ar[r] \\\\ar@{=}[ddd] & \\\\Br(E) \\\\ar[r]^(0.47)\\\\theta \\\\ar|(.48){\
+\\\\bigcap}@{}[d] & H^1(k,E) \\\\ar[ddd]^{-\\\\rho} \\\\\\\\\\n& \\\\Br(k(E)) \
+\\\\ar[dd]^(0.45)\\\\wr \\\\\\\\ \\\\\\\\\\n\\\\Br(k) \\\\ar[r] & H^2(k, \
+\\\\kbarre(E)^\\\\star) \\\\ar[r] & H^2(k, \\\\kbarre(E)^\\\\star/\\\\kbarre^\
+\\\\star)\\n}\\n$$\\ncommutes, where $\\\\theta$ denotes the map which stems \
+from the Leray spectral sequence (see lemma \\\\ref{plem}).\\nThis enables us \
+to carry out cocycle calculations for determining the image of \
+$\\\\gamma(f,1)$\\nin $H^2(k,\\\\kbarre(E)^\\\\star/\\\\kbarre^\\\\star)$. We \
+shall use the standard cochain complexes.\\nLet $\\\\chi_f \\\\colon G_k \
+\\\\rightarrow \\\\Z$ be the map with image in $\\\\{0,1\\\\}$ whose \
+composition with the projection\\n$\\\\Z \\\\rightarrow \\\\Z/2\\\\Z$ is the \
+quadratic character associated with $f \\\\in k^\\\\star/k^{\\\\star 2} = \
+H^1(G_k, \\\\Z/2\\\\Z)$.\\nThe image of $(f,1)$ in $H^1(k, E)$ is represented \
+by the $1$-cocycle $a \\\\colon \\\\sigma \\\\mapsto \\\\chi_f(\\\\sigma) P$.\
+\\nIf $M \\\\in E(k)$, let $[M]$ denote the corresponding divisor on \
+$E_\\\\kbarre$.\\nThe $1$-cochain with values in $\\\\Div(E_\\\\kbarre)$ \
+defined by $\\\\sigma \\\\mapsto \\\\chi_f(\\\\sigma) ([P]-[0])$ is a lifting \
+of~$a$.\\nIts differential $(\\\\sigma, \\\\tau) \\\\mapsto \
+(\\\\chi_f(\\\\sigma) + \\\\chi_f(\\\\tau) - \
+\\\\chi_f(\\\\sigma\\\\tau))([P]-[0])$ is, as expected,\\na $2$-cocycle with \
+values in $\\\\kbarre(E)^\\\\star/\\\\kbarre^\\\\star$, which we may rewrite \
+as $(\\\\sigma, \\\\tau) \\\\mapsto \
+(x-p)^{\\\\chi_f(\\\\sigma)\\\\chi_f(\\\\tau)}$;\\nit represents the image of \
+$\\\\gamma(f,1)$ in $H^2(k,\\\\kbarre(E)^\\\\star/\\\\kbarre^\\\\star)$. \
+Since $x-p$ is invariant under $G_k$, the same formula\\ndefines a \
+$2$-cocycle on $G_k$ with values in $\\\\kbarre(E)^\\\\star$. We thus end up \
+with a $2$-cocycle\\n$$\\n\\\\begin{array}{rcl}\\nb \\\\colon G_{k(E)} \
+\\\\times G_{k(E)} & \\\\longrightarrow & \\\\overline{k(E)}^\\\\star \
+\\\\\\\\\\n(\\\\sigma, \\\\tau) & \\\\longmapsto & \
+(x-p)^{\\\\chi_f(\\\\sigma)\\\\chi_f(\\\\tau)}\\n\\\\end{array}\\n$$\\nwhich \
+represents the image of $\\\\gamma(f, 1)$ in $\\\\Br(k(E))$, at least modulo \
+$\\\\Br(k)$, where $\\\\chi_m$ now denotes the lifting with values\\nin \
+$\\\\{0,1\\\\}$ of the quadratic character on $k(E)$ associated with $m \
+\\\\in k(E)^\\\\star$. (Note that $k$ is separably closed in $k(E)$, so \
+that\\n$G_k$ identifies with a quotient of $G_{k(E)}$.) Choose a square root \
+$s$ of $x-p$ in $\\\\overline{k(E)}$.\\nDividing $b$ by the differential of \
+the $1$-cochain $\\\\sigma \\\\mapsto s^{\\\\chi_f(\\\\sigma)}$ gives the \
+$2$-cocycle\\n$(\\\\sigma, \\\\tau) \\\\mapsto (-1)^{\\\\chi_{x-p}(\\\\sigma)\
+\\\\chi_f(\\\\tau)}$, which does represent the image of the cup-product \
+$(x-p) \\\\cup f$ by\\nthe composite map $H^1(k(E),\\\\Z/2\\\\Z)^{\\\\otimes \
+2} \\\\rightarrow H^2(k(E), \\\\Z/2\\\\Z) \\\\rightarrow \
+\\\\Br(k(E))$.\\n\\nWe have now proved that $\\\\gamma(f,1) = (x-p,f)$ in $\\\
+\\Br(k(E))/\\\\Br(k)$, but the equality holds in $\\\\Br(k(E))$ since \
+$(x-p,f)=(y^2/(x-p)^3,f)$\\nevaluates to $0$ at the zero \
+section.\\n\\\\end{proof}\\n\\n\\\\section{An actual example}\\n\\nThe reader \
+is referred to \\\\cite{harari} for the definitions of weak approximation, \
+Brauer-Manin obstruction, residue maps and unramified Brauer group.\\n\\nLet \
+$\\\\Omega$ denote the set of places of $\\\\Q$.\\nDefine the polynomials $p, \
+q \\\\in \\\\Q[t]$ by $p(t) = 3(t-1)^3(t+3)$ and $q(t)=p(-t)$. It will be \
+useful\\nto notice that $p(t)-q(t) = 48 t$. Let $E$ be the elliptic curve \
+over $\\\\Q(t)$ defined by~(\\\\ref{eqw}).\\nDenote by $\\\\Erond$ its \
+minimal proper regular model over $\\\\P^1_\\\\Q$ (see \\\\cite{shaf}); it is \
+a smooth surface over $\\\\Q$ endowed\\nwith a proper flat morphism $f \
+\\\\colon \\\\Erond \\\\rightarrow \\\\P^1_\\\\Q$ whose generic fibre is \
+isomorphic to $E$. A geometric fibre of $f$\\nis either smooth or is a union \
+of rational curves whose intersection numbers may be computed with Tate's \
+algorithm~\\\\cite{tate}. One finds\\nthe following reduction types, in \
+Kodaira's notation \\\\cite{kod}: $I_2$ above $t=0$, $t=3$ and $t=-3$; $I_6$ \
+above $t=1$, $t=-1$ and $t=\\\\infty$; the\\nother fibres are smooth. Recall \
+that a fibre of type $I_n$ has $n$ irreducible components $(C_i)_{1 \\\\leq i \
+\\\\leq n}$, with $(C_i.C_{i+1})=1$,\\n$(C_1.C_n)=1$ and $(C_i.C_j)=0$ if \
+$n-1>\\\\abs{j-i}>1$.\\nPut $$A = \\\\gamma(6t(t+1), 6t(t-1)) = (x-p, \
+6t(t+1)) + (x-q, 6t(t-1)) \\\\in \\\\Br(E) \\\\text{.}$$\\n\\n\\\\begin{prop}\
+\\nThe class $A \\\\in \\\\Br(E)$ belongs to the subgroup \
+$\\\\Br(\\\\Erond)$.\\n\\\\end{prop}\\n\\n\\\\begin{proof}\\nLet $v$ be a \
+discrete rank $1$ valuation on $\\\\Q(\\\\Erond)$ whose restriction \
+to~$\\\\Q$ is trivial,\\nand $\\\\kappa$ be its residue field. We shall prove \
+that $A$ has trivial residue at $v$.\\nLet us choose a uniformiser $\\\\pi$ \
+of $v$ and put\\n$\\\\tilde{z}=z \\\\pi^{-v(z)}$ for $z \\\\in \
+\\\\Q(\\\\Erond)^\\\\star$. It will be convenient to denote by\\n$V \\\\colon \
+\\\\Q(\\\\Erond)^\\\\star \\\\rightarrow \\\\Z \\\\times \\\\kappa^\\\\star$ \
+the group homomorphism\\n$z \\\\mapsto (v(z), [\\\\tilde{z}])$, where $[u]$ \
+denotes the class in $\\\\kappa$ of $u \\\\in \\\\Q(\\\\Erond)$ if \
+$v(u)=0$.\\nFor $f, g \\\\in \\\\Q(\\\\Erond)^\\\\star$, the residue of the \
+quaternion algebra $(f, g)$ at $v$ is given by the tame symbol \
+formula\\n$$\\n\\\\partial_v(f,g) = (-1)^{v(f)v(g)} \\\\left[ \
+\\\\frac{f^{v(g)}}{g^{v(f)}} \\\\right]\\n= (-1)^{v(f)v(g)} \
+\\\\left[\\\\tilde{f}\\\\right]^{v(g)} \\\\left[\\\\vphantom{\\\\tilde{f}} \\\
+\\tilde{g}\\\\right]^{v(f)}\\n \\\\in \\\\kappa^\\\\star / \
+\\\\kappa^{\\\\star 2} \\\\text{.}\\n$$\\nNote that it only depends on $V(f)$ \
+and $V(g)$. Furthermore, if $V(f)$ is a double,\\ni.e. if $v(f)$ is even and \
+$\\\\tilde{f}$ is a square modulo $\\\\pi$, then \
+$\\\\partial_v(f,g)=1$.\\nThese remarks will be used implicitly throughout \
+the proof.\\n\\n\\\\begin{lemma}\\n\\\\label{lemmenr}\\nThe class $(-p, \
+6t(t+1)) + (-q, 6t(t-1)) \\\\in \\\\Br(\\\\Q(t))$ is unramified over \
+$\\\\P^1_\\\\Q$.\\n\\\\end{lemma}\\n\\n\\\\begin{proof}\\nThe residue at a \
+closed point of $\\\\P^1_\\\\Q$ other than $t=\\\\alpha$ for $\\\\alpha\\\\in\
+\\\\{-3,-1,0,1,3,\\\\infty\\\\}$\\nis obviously trivial. It is \
+straightforward to check that the remaining residues are also\\ntrivial.\\n\\\
+\\end{proof}\\n\\nLet us now turn to showing that $\\\\partial_v(A)=1$. As \
+$A$ is invariant under $t \\\\mapsto -t$,\\nwe may assume $v(p) \\\\leq \
+v(q)$. If $v(x) < v(p)$, then $V(x-p)=V(x-q)=V(x)$, from which\\nwe deduce \
+thanks to (\\\\ref{eqw}) that $V(x-p)$ and $V(x-q)$ are doubles.\\nIf $v(x) > \
+v(q)$, then $V(x-p)=V(-p)$ and $V(x-q)=V(-q)$, hence the result by \
+lemma~\\\\ref{lemmenr}. From now on, we may and will therefore assume $v(p) \
+\\\\leq v(x) \\\\leq v(q)$.\\n\\nTo begin with, suppose $v(p)<v(q)$. In this \
+case, either $v(t-3)>0$ or $v(t+1)>0$.\\nIf $v(x)=v(q)$, then $V(x-p)=V(-p)$, \
+hence $\\\\partial_v(A)=\\\\partial_v(-q(x-q), 6t(t-1))$\\nby lemma \
+\\\\ref{lemmenr}; but with a look at (\\\\ref{eqw}), one finds that both \
+$v(-q(x-q))$ and $v(6t(t-1))$ are even.\\nSuppose now $v(x)<v(q)$. It follows \
+from (\\\\ref{eqw}) that $V(x-p)$ is a double,\\nhence \
+$\\\\partial_v(A)=\\\\partial_v(x-q,6t(t-1))=\\\\partial_v(x,6t(t-1))$.\\nIf \
+$v(x)$ is even or if $[6t(t-1)]$ is a square in~$\\\\kappa$, which happens if \
+$v(t-3)>0$, we get $\\\\partial_v(A)=1$.\\nIf on the other hand $v(t+1)>0$ \
+and $v(x)$ is odd, then $[6t(t-1)]=12$, which (\\\\ref{eqw})\\nshows to be a \
+square in $\\\\kappa$.\\n\\nWe are now left with the case $v(p)=v(q)=v(x)$. \
+If $v(t)=0$, then $v(t-3)=v(t-1)=v(t+1)=v(t+3)=0$,\\nso \
+$v(6t(t+1))=v(6t(t-1))=0$ and it suffices to prove that $v(x-p)$ and $v(x-q)$ \
+are\\neven, which follows from (\\\\ref{eqw}) and the equality \
+$v(p)=v(x)=v(q)=v(p-q)=0$.\\nIf $v(t)<0$, then $V(6t(t+1))=V(6t(t-1))$, so \
+that $\\\\partial_v(A)=\\\\partial_v(x, 6t(t+1))$, which is trivial\\nsince \
+both $v(x)=v(p)=4v(t)$ and $v(6t(t+1))$ are even.\\nSuppose finally that \
+$v(t)>0$. If $v(x-p)<v(t)$, then $V(x-p)=V(x-q)$ since $v(p-q)=v(t)$,\\nand $\
+\\\\partial_v(A)=\\\\partial_v(x-p,(t+1)(t-1))=\\\\partial_v(x-p,-1)$; if \
+$v(x-p)=0$, the residue is obviously trivial,\\nand if $v(x-p)>0$, which \
+means that $[\\\\tilde{x}]=[\\\\tilde{p}]=-9$, (\\\\ref{eqw}) shows that $-1$ \
+is a square in $\\\\kappa$.\\nWe therefore assume $v(x-p)\\\\geq v(t)$, which \
+still leads to $[\\\\tilde{x}]=[\\\\tilde{p}]=-9$.\\nAs $v(p-q)=v(t)$, at \
+least one of $v(x-p)$ and $v(x-q)$ is equal to $v(t)$. In either case, \
+(\\\\ref{eqw}) implies that $v(x-p)+v(t)$ is even,\\nso \
+$(-9)^{v(t)}(-1)^{v(x-p)}$ is a square, \
+hence\\n$\\\\partial_v(A)=\\\\partial_v(x,6t(t-1))+\\\\partial_v(x-p,(t+1)(t-\
+1))$ is trivial.\\n\\\\end{proof}\\n\\nWe shall now prove the \
+following.\\n\\n\\\\begin{theorem}\\nThe class $A \\\\in \\\\Br(\\\\Erond)$ \
+is transcendental and yields a Brauer-Manin obstruction to weak approximation \
+on the projective smooth surface $\\\\Erond$ over $\\\\Q$.\\n\\\\end{theorem}\
+\\n\\n\\\\begin{proof}\\nLet us first deal with the second part of the \
+assertion. A glance at equation (\\\\ref{eqw}) shows that $\\\\Erond$ has a $\
+\\\\Q_2$-point\\n$M_2$ with coordinates $x=1$ and $t=2$. (Indeed, this \
+equation defines an affine surface over $\\\\Q$ endowed with a morphism\\nto \
+$\\\\P^1_\\\\Q$ whose smooth locus identifies with an open subset of \
+$\\\\Erond$.) Using the formula given in~\\\\cite{serre}, Ch.~XIV, \
+\[Section]4,\\none easily checks that $A(M_2)$ is non-trivial. Now choose $N \
+\\\\in \\\\Erond(\\\\Q)$ in the image of the zero section and let\\n$M_v \
+\\\\in \\\\Erond(\\\\Q_v)$ be equal to $N$ for any $v \\\\in \
+\\\\Omega\\\\setminus\\\\{2\\\\}$.\\nThis defines an adelic point $(M_v)_{v \
+\\\\in \\\\Omega}$. The class $A(N) \\\\in \\\\Br(\\\\Q)$ is trivial since $A \
+\\\\in \\\\Br^0(E)$;\\nconsequently, the evaluation of $A$ at $(M_v)_{v \
+\\\\in \\\\Omega}$ is non-trivial, which is an obstruction to weak \
+approximation.\\n\\nIt remains to be shown that $A$ is transcendental. The \
+exact sequence (\\\\ref{sebr}) reduces this to the computation\\nof \
+$E(\\\\C(t))/2E(\\\\C(t))$.\\n\\n\\\\begin{lemma}\\nThe surface $\\\\Erond$ \
+is a $K3$ surface.\\n\\\\end{lemma}\\n\\n\\\\begin{proof}\\nThe topological \
+Euler-Poincar\[EAcute] characteristic $e(\\\\Erond_\\\\C)$ of \
+$\\\\Erond_\\\\C$ can be expressed in terms of that of the fibres and that of \
+the base\\n(\\\\cite{bpv}, p.~97, prop.~11.4), which leads to $e(\\\\Erond_\\\
+\\C)=24$. Let $\\\\chi(\\\\Orond_\\\\Erond)$ denote the \
+Euler-Poincar\[EAcute] characteristic of the\\ncoherent sheaf \
+$\\\\Orond_\\\\Erond$. The canonical bundle $\\\\Krond_\\\\Erond$ of \
+$\\\\Erond$ is simply $f^\\\\star \\\\Orond(\\\\chi(\\\\Orond_\\\\Erond)-2)$ \
+(see\\n\\\\cite{bpv}, p.~162, cor.~12.3); in particular it has \
+self-intersection $0$, hence $\\\\chi(\\\\Orond_\\\\Erond)=2$ by Noether's \
+formula. We have now\\nproved the triviality of $\\\\Krond_\\\\Erond$. That \
+$H^1(\\\\Erond, \\\\Orond_\\\\Erond)=0$ follows from \
+$\\\\chi(\\\\Orond_\\\\Erond)=2$ and Serre \
+duality.\\n\\\\end{proof}\\n\\n\\\\begin{lemma}\\nThe elliptic curve $E$ has \
+Mordell-Weil rank $0$ over $\\\\C(t)$.\\n\\\\end{lemma}\\n\\n\\\\begin{proof}\
+\\nLet $\\\\rho(\\\\Erond_\\\\C)$ be the Picard number of $\\\\Erond_\\\\C$ \
+and $R$ be the subgroup of the N\[EAcute]ron-Severi group \
+$\\\\NS(\\\\Erond_\\\\C)$ spanned by the zero\\nsection and the irreducible \
+components of the fibres. As follows from the output of Tate's algorithm, $R$ \
+has rank $20$.\\nOn the other hand, $\\\\rho(\\\\Erond_\\\\C) \\\\leq 20$ \
+since $\\\\Erond$ is a $K3$ surface. The Shioda-Tate formula \
+$$\\\\rho(\\\\Erond_\\\\C) = \\\\rk(E(\\\\C(t))) + \\\\rk(R)$$\\nthus yields \
+the result.\\n\\\\end{proof}\\n\\nThis lemma shows that the $\\\\F_2$-vector \
+space $E(\\\\C(t))/2E(\\\\C(t))$ has dimension $2$. Now the classes \
+$\\\\delta(P)=(t,t(t-1)(t+3))$\\nand $\\\\delta(Q)=(t(t+1)(t-3), t)$ are \
+independent over $\\\\F_2$, hence span the whole kernel of~$\\\\gamma$. On \
+the other hand $(t(t+1), t(t-1))$\\nis evidently not a combination of \
+$\\\\delta(P)$ and $\\\\delta(Q)$, so that $A$ has non-zero image in $\\\\Br(\
+\\\\C(\\\\Erond))$ and is therefore \
+transcendental.\\n\\\\end{proof}\\n\\n\\\\begin{remark} \\\\normalfont\\nIt \
+is actually true that $A(M)=0$ in $\\\\Br(\\\\Q)$ for \\\\emph{all} $M \\\\in \
+\\\\Erond(\\\\Q)$. This is a consequence of the global reciprocity law\\nand \
+the fact that $A$ vanishes on $\\\\Erond(\\\\Q_v)$ for all $v \\\\in \
+\\\\Omega\\\\setminus\\\\{2\\\\}$, which can be checked by a tedious \
+computation.\\n\\\\end{remark}\\n\\n\\\\begin{remark} \\\\normalfont\\nIt is \
+possible to determine $\\\\tors{2}\\\\Br(\\\\Erond)$ completely if one is \
+willing to compute explicit equations for~$\\\\Erond$. This \
+involves\\nblowing up the singular surface given by equation (\\\\ref{eqw}) a \
+sufficient number of times. Alternatively, one may observe that all \
+fibres\\nhave type $I_n$ (in other words, $\\\\Erond \\\\rightarrow \
+\\\\P^1_\\\\Q$ is semi-stable), and then use the equations given by \
+N\[EAcute]ron in this case\\nin \\\\cite{neron}, \[Section]III.\\nEither way \
+one finds that $\\\\tors{2}\\\\Br(\\\\Erond)$ is spanned by $A$ modulo \
+$\\\\tors{2}\\\\Br(\\\\Q)$ after writing out all possible residues of a \
+general\\nclass $\\\\gamma(f,g)$.\\nOn the other hand, the $2$-torsion \
+subgroup of the Brauer group of a complex $K3$ surface with Picard number \
+$20$ has\\nrank $2$ over $\\\\F_2$, so $\\\\tors{2}\\\\Br(\\\\Erond_\\\\C)$ \
+is strictly larger than \
+$\\\\tors{2}\\\\Br(\\\\Erond)/\\\\tors{2}\\\\Br(\\\\Q)$.\\nIt turns out that \
+$\\\\tors{2}\\\\Br(\\\\Erond_\\\\C)$ is spanned by $A$ and the class of the \
+quaternion algebra $(x, t)$, which unexpectedly belongs\\nto $\\\\Br(\\\\Q(\\\
+\\Erond))$ and only gets unramified after extension of scalars to \
+$\\\\Q(\\\\sqrt{-1}, \\\\sqrt{3})$.\\n\\\\end{remark}\\n\\n\\\\begin{remark} \
+\\\\normalfont\\nIn the semi-stable case, a computer program was written to \
+carry out the calculations alluded to in the previous paragraph, as \
+they\\noften get quite lengthy. Its source code is available on request.\\n\\\
+\\end{remark}\\n\\n\\\\section*{Acknowledgements}\\n\\nThe author is most \
+grateful to J-L. Colliot-Th\[EAcute]l\[EGrave]ne for sharing unpublished \
+notes on the topic (which contain in particular\\nthe statement of \
+proposition \\\\ref{propdeltagamma}), and would also like\\nto thank him for \
+his encouragements and many helpful conversations during the course of this \
+research.\\n\\n\\\\bibliographystyle{amsplain}\\n\\\\bibliography{\
+transcendental}\\n\\n\\\\end{document}\"\>", "}"}]], "Output"]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{1440, 851},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+FrontEndVersion->"9.0 for Mac OS X x86 (32-bit, 64-bit Kernel) (May 19, 2013)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[579, 22, 23, 0, 92, "Title"],
+Cell[CellGroupData[{
+Cell[627, 26, 198, 4, 28, "Input"],
+Cell[828, 32, 24463, 334, 6013, "Output"]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)

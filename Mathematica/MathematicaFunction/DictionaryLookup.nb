@@ -1,0 +1,78 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 10.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      1750,         69]
+NotebookOptionsPosition[      1321,         48]
+NotebookOutlinePosition[      1679,         64]
+CellTagsIndexPosition[      1636,         61]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["DictionaryLookup", "Title"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"DictionaryLookup", "[", 
+  RowBox[{"{", 
+   RowBox[{"\"\<Japanese\>\"", ",", 
+    RowBox[{"\"\<ab\>\"", "~~", "___"}]}], "}"}], "]"}]], "Input"],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"DictionaryLookup", "::", "nodict"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"The dictionary \[NoBreak]\\!\\(\\\"Japanese\\\"\\)\
+\[NoBreak] is not available. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
+ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/DictionaryLookup\\\", ButtonNote -> \
+\\\"DictionaryLookup::nodict\\\"]\\)\"\>"}]], "Message", "MSG"],
+
+Cell[BoxData[
+ RowBox[{"{", "}"}]], "Output"]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{808, 752},
+WindowMargins->{{20, Automatic}, {Automatic, 44}},
+FrontEndVersion->"10.0 for Mac OS X x86 (32-bit, 64-bit Kernel) (September 9, \
+2014)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 33, 0, 92, "Title"],
+Cell[CellGroupData[{
+Cell[638, 26, 168, 4, 28, "Input"],
+Cell[809, 32, 436, 9, 24, "Message"],
+Cell[1248, 43, 45, 1, 28, "Output"]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)

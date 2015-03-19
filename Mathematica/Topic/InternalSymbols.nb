@@ -1,0 +1,2316 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 9.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       157,          7]
+NotebookDataLength[     82674,       2307]
+NotebookOptionsPosition[     82246,       2287]
+NotebookOutlinePosition[     82596,       2302]
+CellTagsIndexPosition[     82553,       2299]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["Internal symbols", "Title"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"?", "Internal`*"}]], "Input"],
+
+Cell[BoxData[
+ DynamicModuleBox[{Typeset`open$$ = True}, 
+  PaneSelectorBox[{False->
+   RowBox[{
+    OpenerBox[Dynamic[Typeset`open$$],
+     ImageSize->Small], 
+    StyleBox["Internal`", "InfoHeading"]}], True->GridBox[{
+     {
+      RowBox[{
+       OpenerBox[Dynamic[Typeset`open$$],
+        ImageSize->Small], 
+       StyleBox["Internal`", "InfoHeading"]}]},
+     {GridBox[{
+        {
+         ButtonBox["AbsSquare",
+          BaseStyle->"InformationLink",
+          ButtonData:>{"Info3612690664-6080612", {"AbsSquare", "Internal`"}},
+          ButtonNote->"Internal`"], 
+         ButtonBox["NegativeMachineIntegerQ",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3612690664-6080612", {"NegativeMachineIntegerQ", "Internal`"}},
+          ButtonNote->"Internal`"]},
+        {
+         ButtonBox["AddHandler",
+          BaseStyle->"InformationLink",
+          ButtonData:>{"Info3612690664-6080612", {"AddHandler", "Internal`"}},
+          
+          ButtonNote->"Internal`"], 
+         ButtonBox["NestedTermsList",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3612690664-6080612", {"NestedTermsList", "Internal`"}},
+          ButtonNote->"Internal`"]},
+        {
+         ButtonBox["AddPeriodical",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3612690664-6080612", {"AddPeriodical", "Internal`"}},
+          ButtonNote->"Internal`"], 
+         ButtonBox["NewInput",
+          BaseStyle->"InformationLink",
+          ButtonData:>{"Info3612690664-6080612", {"NewInput", "Internal`"}},
+          ButtonNote->"Internal`"]},
+        {
+         ButtonBox["AddToEntityNameCache",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3612690664-6080612", {"AddToEntityNameCache", "Internal`"}},
+          ButtonNote->"Internal`"], 
+         ButtonBox["NextIntegerPartition",
+          BaseStyle->"InformationLink",
+          ButtonData:>{
+           "Info3612690664-6080612", {"NextIntegerPartition", "Internal`"}},
+          ButtonNote->"Internal`"]},
+        {
+         ButtonBox["AGM",
+          BaseStyle->"InformationLink",
+          ButtonData:>{"Info3612690664-6080612", {"AGM", "Internal`"}},
+          ButtonNote->"Internal`"], 
+         ButtonBox["NonNegativeIntegerQ",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3612690664-6080612", {"NonNegativeIntegerQ", "Internal`"}},
+          ButtonNote->"Internal`"]},
+        {
+         ButtonBox["AlgebraDimension",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3612690664-6080612", {"AlgebraDimension", "Internal`"}},
+          ButtonNote->"Internal`"], 
+         ButtonBox["NonNegativeMachineIntegerQ",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3612690664-6080612", {
+            "NonNegativeMachineIntegerQ", "Internal`"}},
+          ButtonNote->"Internal`"]},
+        {
+         ButtonBox["AlgebraicsOptions",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3612690664-6080612", {"AlgebraicsOptions", "Internal`"}},
+          ButtonNote->"Internal`"], 
+         ButtonBox["NonPositiveIntegerQ",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3612690664-6080612", {"NonPositiveIntegerQ", "Internal`"}},
+          ButtonNote->"Internal`"]},
+        {
+         ButtonBox["AllowExceptions",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3612690664-6080612", {"AllowExceptions", "Internal`"}},
+          ButtonNote->"Internal`"], 
+         ButtonBox["NonPositiveMachineIntegerQ",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3612690664-6080612", {
+            "NonPositiveMachineIntegerQ", "Internal`"}},
+          ButtonNote->"Internal`"]},
+        {
+         ButtonBox["AllSymbols",
+          BaseStyle->"InformationLink",
+          ButtonData:>{"Info3612690664-6080612", {"AllSymbols", "Internal`"}},
+          
+          ButtonNote->"Internal`"], 
+         ButtonBox["NormalizeBigReal",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3612690664-6080612", {"NormalizeBigReal", "Internal`"}},
+          ButtonNote->"Internal`"]},
+        {
+         ButtonBox["AllUnheldSymbols",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3612690664-6080612", {"AllUnheldSymbols", "Internal`"}},
+          ButtonNote->"Internal`"], 
+         ButtonBox["NSolveOptions",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3612690664-6080612", {"NSolveOptions", "Internal`"}},
+          ButtonNote->"Internal`"]},
+        {
+         ButtonBox["AnyflowTestQ",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3612690664-6080612", {"AnyflowTestQ", "Internal`"}},
+          ButtonNote->"Internal`"], 
+         ButtonBox["NumericContinuedFraction",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3612690664-6080612", {
+            "NumericContinuedFraction", "Internal`"}},
+          ButtonNote->"Internal`"]},
+        {
+         ButtonBox["ApplyColorFunction",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3612690664-6080612", {"ApplyColorFunction", "Internal`"}},
+          ButtonNote->"Internal`"], 
+         ButtonBox["OptimizationOptions",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3612690664-6080612", {"OptimizationOptions", "Internal`"}},
+          ButtonNote->"Internal`"]},
+        {
+         ButtonBox["ArithmeticOp",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3612690664-6080612", {"ArithmeticOp", "Internal`"}},
+          ButtonNote->"Internal`"], 
+         ButtonBox["OptimizeSequence",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3612690664-6080612", {"OptimizeSequence", "Internal`"}},
+          ButtonNote->"Internal`"]},
+        {
+         ButtonBox["AsynchronousTaskUserData",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3612690664-6080612", {
+            "AsynchronousTaskUserData", "Internal`"}},
+          ButtonNote->"Internal`"], 
+         ButtonBox["OrderlessPiecewise",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3612690664-6080612", {"OrderlessPiecewise", "Internal`"}},
+          ButtonNote->"Internal`"]},
+        {
+         ButtonBox["Bag",
+          BaseStyle->"InformationLink",
+          ButtonData:>{"Info3612690664-6080612", {"Bag", "Internal`"}},
+          ButtonNote->"Internal`"], 
+         ButtonBox["OutermostToInnermost",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3612690664-6080612", {"OutermostToInnermost", "Internal`"}},
+          ButtonNote->"Internal`"]},
+        {
+         ButtonBox["BagLength",
+          BaseStyle->"InformationLink",
+          ButtonData:>{"Info3612690664-6080612", {"BagLength", "Internal`"}},
+          ButtonNote->"Internal`"], 
+         ButtonBox["OverflowTestQ",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3612690664-6080612", {"OverflowTestQ", "Internal`"}},
+          ButtonNote->"Internal`"]},
+        {
+         ButtonBox["BagPart",
+          BaseStyle->"InformationLink",
+          ButtonData:>{"Info3612690664-6080612", {"BagPart", "Internal`"}},
+          ButtonNote->"Internal`"], 
+         ButtonBox["P2",
+          BaseStyle->"InformationLink",
+          ButtonData:>{"Info3612690664-6080612", {"P2", "Internal`"}},
+          ButtonNote->"Internal`"]},
+        {
+         ButtonBox["BinaryGCD",
+          BaseStyle->"InformationLink",
+          ButtonData:>{"Info3612690664-6080612", {"BinaryGCD", "Internal`"}},
+          ButtonNote->"Internal`"], 
+         ButtonBox["PacletFindFile",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3612690664-6080612", {"PacletFindFile", "Internal`"}},
+          ButtonNote->"Internal`"]},
+        {
+         ButtonBox["BinomialPrimePowerDecomposition",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3612690664-6080612", {
+            "BinomialPrimePowerDecomposition", "Internal`"}},
+          ButtonNote->"Internal`"], 
+         ButtonBox["ParallelThreads",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3612690664-6080612", {"ParallelThreads", "Internal`"}},
+          ButtonNote->"Internal`"]},
+        {
+         ButtonBox["BitReset",
+          BaseStyle->"InformationLink",
+          ButtonData:>{"Info3612690664-6080612", {"BitReset", "Internal`"}},
+          ButtonNote->"Internal`"], 
+         ButtonBox["PartitionRagged",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3612690664-6080612", {"PartitionRagged", "Internal`"}},
+          ButtonNote->"Internal`"]},
+        {
+         ButtonBox["BlockFlatten",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3612690664-6080612", {"BlockFlatten", "Internal`"}},
+          ButtonNote->"Internal`"], 
+         ButtonBox["PatternFreeQ",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3612690664-6080612", {"PatternFreeQ", "Internal`"}},
+          ButtonNote->"Internal`"]},
+        {
+         ButtonBox["BooleanComputationOptions",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3612690664-6080612", {
+            "BooleanComputationOptions", "Internal`"}},
+          ButtonNote->"Internal`"], 
+         ButtonBox["PatternPresentQ",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3612690664-6080612", {"PatternPresentQ", "Internal`"}},
+          ButtonNote->"Internal`"]},
+        {
+         ButtonBox["CachedSystemInformation",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3612690664-6080612", {"CachedSystemInformation", "Internal`"}},
+          ButtonNote->"Internal`"], 
+         ButtonBox["PerfectPower",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3612690664-6080612", {"PerfectPower", "Internal`"}},
+          ButtonNote->"Internal`"]},
+        {
+         ButtonBox["CacheOptions",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3612690664-6080612", {"CacheOptions", "Internal`"}},
+          ButtonNote->"Internal`"], 
+         ButtonBox["Periodicals",
+          BaseStyle->"InformationLink",
+          ButtonData:>{"Info3612690664-6080612", {"Periodicals", "Internal`"}},
+          ButtonNote->"Internal`"]},
+        {
+         ButtonBox["CheckCache",
+          BaseStyle->"InformationLink",
+          ButtonData:>{"Info3612690664-6080612", {"CheckCache", "Internal`"}},
+          
+          ButtonNote->"Internal`"], 
+         ButtonBox["PiecewiseOptions",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3612690664-6080612", {"PiecewiseOptions", "Internal`"}},
+          ButtonNote->"Internal`"]},
+        {
+         ButtonBox["CheckListability",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3612690664-6080612", {"CheckListability", "Internal`"}},
+          ButtonNote->"Internal`"], 
+         ButtonBox["PiecewiseOrderless",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3612690664-6080612", {"PiecewiseOrderless", "Internal`"}},
+          ButtonNote->"Internal`"]},
+        {
+         ButtonBox["CheckNCache",
+          BaseStyle->"InformationLink",
+          ButtonData:>{"Info3612690664-6080612", {"CheckNCache", "Internal`"}},
+          ButtonNote->"Internal`"], 
+         ButtonBox["PoleAssignment",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3612690664-6080612", {"PoleAssignment", "Internal`"}},
+          ButtonNote->"Internal`"]},
+        {
+         ButtonBox["CheckPrime",
+          BaseStyle->"InformationLink",
+          ButtonData:>{"Info3612690664-6080612", {"CheckPrime", "Internal`"}},
+          
+          ButtonNote->"Internal`"], 
+         ButtonBox["PolyGCDCacheHead",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3612690664-6080612", {"PolyGCDCacheHead", "Internal`"}},
+          ButtonNote->"Internal`"]},
+        {
+         ButtonBox["CheckQuantityCache",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3612690664-6080612", {"CheckQuantityCache", "Internal`"}},
+          ButtonNote->"Internal`"], 
+         ButtonBox["PolynomialFunctionQ",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3612690664-6080612", {"PolynomialFunctionQ", "Internal`"}},
+          ButtonNote->"Internal`"]},
+        {
+         ButtonBox["CheckSolutions",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3612690664-6080612", {"CheckSolutions", "Internal`"}},
+          ButtonNote->"Internal`"], 
+         ButtonBox["PopupWindowNotebook",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3612690664-6080612", {"PopupWindowNotebook", "Internal`"}},
+          ButtonNote->"Internal`"]},
+        {
+         ButtonBox["ClearCachedSystemInformation",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3612690664-6080612", {
+            "ClearCachedSystemInformation", "Internal`"}},
+          ButtonNote->"Internal`"], 
+         ButtonBox["PositiveIntegerQ",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3612690664-6080612", {"PositiveIntegerQ", "Internal`"}},
+          ButtonNote->"Internal`"]},
+        {
+         ButtonBox["ColorRules",
+          BaseStyle->"InformationLink",
+          ButtonData:>{"Info3612690664-6080612", {"ColorRules", "Internal`"}},
+          
+          ButtonNote->"Internal`"], 
+         ButtonBox["PositiveMachineIntegerQ",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3612690664-6080612", {"PositiveMachineIntegerQ", "Internal`"}},
+          ButtonNote->"Internal`"]},
+        {
+         ButtonBox["ColumnwiseQuantityVectorQ",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3612690664-6080612", {
+            "ColumnwiseQuantityVectorQ", "Internal`"}},
+          ButtonNote->"Internal`"], 
+         ButtonBox["PossibleQuantityQ",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3612690664-6080612", {"PossibleQuantityQ", "Internal`"}},
+          ButtonNote->"Internal`"]},
+        {
+         ButtonBox["Compact",
+          BaseStyle->"InformationLink",
+          ButtonData:>{"Info3612690664-6080612", {"Compact", "Internal`"}},
+          ButtonNote->"Internal`"], 
+         ButtonBox["PowerMatrix",
+          BaseStyle->"InformationLink",
+          ButtonData:>{"Info3612690664-6080612", {"PowerMatrix", "Internal`"}},
+          ButtonNote->"Internal`"]},
+        {
+         ButtonBox["CompactifyMemory",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3612690664-6080612", {"CompactifyMemory", "Internal`"}},
+          ButtonNote->"Internal`"], 
+         ButtonBox["PowerMatrix1",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3612690664-6080612", {"PowerMatrix1", "Internal`"}},
+          ButtonNote->"Internal`"]},
+        {
+         ButtonBox["CompareNumeric",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3612690664-6080612", {"CompareNumeric", "Internal`"}},
+          ButtonNote->"Internal`"], 
+         ButtonBox["PowerMatrix2",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3612690664-6080612", {"PowerMatrix2", "Internal`"}},
+          ButtonNote->"Internal`"]},
+        {
+         ButtonBox["ComparePatterns",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3612690664-6080612", {"ComparePatterns", "Internal`"}},
+          ButtonNote->"Internal`"], 
+         ButtonBox["PrecAccur",
+          BaseStyle->"InformationLink",
+          ButtonData:>{"Info3612690664-6080612", {"PrecAccur", "Internal`"}},
+          ButtonNote->"Internal`"]},
+        {
+         ButtonBox["CompareToPAT",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3612690664-6080612", {"CompareToPAT", "Internal`"}},
+          ButtonNote->"Internal`"], 
+         ButtonBox["PreprocessEquations",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3612690664-6080612", {"PreprocessEquations", "Internal`"}},
+          ButtonNote->"Internal`"]},
+        {
+         ButtonBox["CompileError",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3612690664-6080612", {"CompileError", "Internal`"}},
+          ButtonNote->"Internal`"], 
+         ButtonBox["PreviousIntegerPartition",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3612690664-6080612", {
+            "PreviousIntegerPartition", "Internal`"}},
+          ButtonNote->"Internal`"]},
+        {
+         ButtonBox["CompileEvaluate",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3612690664-6080612", {"CompileEvaluate", "Internal`"}},
+          ButtonNote->"Internal`"], 
+         ButtonBox["PrimePowerDecomposition",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3612690664-6080612", {"PrimePowerDecomposition", "Internal`"}},
+          ButtonNote->"Internal`"]},
+        {
+         ButtonBox["CompileFunctionCall",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3612690664-6080612", {"CompileFunctionCall", "Internal`"}},
+          ButtonNote->"Internal`"], 
+         ButtonBox["PrintSwitchSettings",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3612690664-6080612", {"PrintSwitchSettings", "Internal`"}},
+          ButtonNote->"Internal`"]},
+        {
+         ButtonBox["CompileFunctionCallWithArithmeticFlags",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3612690664-6080612", {
+            "CompileFunctionCallWithArithmeticFlags", "Internal`"}},
+          ButtonNote->"Internal`"], 
+         ButtonBox["ProductLogApproximation",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3612690664-6080612", {"ProductLogApproximation", "Internal`"}},
+          ButtonNote->"Internal`"]},
+        {
+         ButtonBox["CompileInline",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3612690664-6080612", {"CompileInline", "Internal`"}},
+          ButtonNote->"Internal`"], 
+         ButtonBox["PutInformation",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3612690664-6080612", {"PutInformation", "Internal`"}},
+          ButtonNote->"Internal`"]},
+        {
+         ButtonBox["CompileOnDemand",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3612690664-6080612", {"CompileOnDemand", "Internal`"}},
+          ButtonNote->"Internal`"], 
+         ButtonBox["QuadraticFundamentalUnit",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3612690664-6080612", {
+            "QuadraticFundamentalUnit", "Internal`"}},
+          ButtonNote->"Internal`"]},
+        {
+         ButtonBox["CompileType",
+          BaseStyle->"InformationLink",
+          ButtonData:>{"Info3612690664-6080612", {"CompileType", "Internal`"}},
+          ButtonNote->"Internal`"], 
+         ButtonBox["QuantityArrayQ",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3612690664-6080612", {"QuantityArrayQ", "Internal`"}},
+          ButtonNote->"Internal`"]},
+        {
+         ButtonBox["CompileTypeEvaluate",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3612690664-6080612", {"CompileTypeEvaluate", "Internal`"}},
+          ButtonNote->"Internal`"], 
+         ButtonBox["QuantityMatrixQ",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3612690664-6080612", {"QuantityMatrixQ", "Internal`"}},
+          ButtonNote->"Internal`"]},
+        {
+         ButtonBox["CompileValues",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3612690664-6080612", {"CompileValues", "Internal`"}},
+          ButtonNote->"Internal`"], 
+         ButtonBox["QuantityToValue",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3612690664-6080612", {"QuantityToValue", "Internal`"}},
+          ButtonNote->"Internal`"]},
+        {
+         ButtonBox["ComplexInterval",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3612690664-6080612", {"ComplexInterval", "Internal`"}},
+          ButtonNote->"Internal`"], 
+         ButtonBox["QuantityVectorQ",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3612690664-6080612", {"QuantityVectorQ", "Internal`"}},
+          ButtonNote->"Internal`"]},
+        {
+         ButtonBox["ComplexRoots",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3612690664-6080612", {"ComplexRoots", "Internal`"}},
+          ButtonNote->"Internal`"], 
+         ButtonBox["QuietStatus",
+          BaseStyle->"InformationLink",
+          ButtonData:>{"Info3612690664-6080612", {"QuietStatus", "Internal`"}},
+          ButtonNote->"Internal`"]},
+        {
+         ButtonBox["ConvertFormTest",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3612690664-6080612", {"ConvertFormTest", "Internal`"}},
+          ButtonNote->"Internal`"], 
+         ButtonBox["RadicalMemberQ",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3612690664-6080612", {"RadicalMemberQ", "Internal`"}},
+          ButtonNote->"Internal`"]},
+        {
+         ButtonBox["CreateAsynchronousTask",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3612690664-6080612", {"CreateAsynchronousTask", "Internal`"}},
+          
+          ButtonNote->"Internal`"], 
+         ButtonBox["RasterGraphics",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3612690664-6080612", {"RasterGraphics", "Internal`"}},
+          ButtonNote->"Internal`"]},
+        {
+         ButtonBox["CubeRootModList",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3612690664-6080612", {"CubeRootModList", "Internal`"}},
+          ButtonNote->"Internal`"], 
+         ButtonBox["RationalFunctionQ",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3612690664-6080612", {"RationalFunctionQ", "Internal`"}},
+          ButtonNote->"Internal`"]},
+        {
+         ButtonBox["CubeRootOfUnity",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3612690664-6080612", {"CubeRootOfUnity", "Internal`"}},
+          ButtonNote->"Internal`"], 
+         ButtonBox["RationalNoReduce",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3612690664-6080612", {"RationalNoReduce", "Internal`"}},
+          ButtonNote->"Internal`"]},
+        {
+         ButtonBox["CubicResidueQ",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3612690664-6080612", {"CubicResidueQ", "Internal`"}},
+          ButtonNote->"Internal`"], 
+         ButtonBox["RawArrayOptions",
+          BaseStyle->"InformationLink",
+          ButtonData:>{
+           "Info3612690664-6080612", {"RawArrayOptions", "Internal`"}},
+          ButtonNote->"Internal`"]},
+        {
+         ButtonBox["DataList",
+          BaseStyle->"InformationLink",
+          ButtonData:>{"Info3612690664-6080612", {"DataList", "Internal`"}},
+          ButtonNote->"Internal`"], 
+         ButtonBox["RealContinuedFraction",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3612690664-6080612", {"RealContinuedFraction", "Internal`"}},
+          ButtonNote->"Internal`"]},
+        {
+         ButtonBox["DataPrecompute",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3612690664-6080612", {"DataPrecompute", "Internal`"}},
+          ButtonNote->"Internal`"], 
+         ButtonBox["RealValuedNumberQ",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3612690664-6080612", {"RealValuedNumberQ", "Internal`"}},
+          ButtonNote->"Internal`"]},
+        {
+         ButtonBox["DateListToDateList",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3612690664-6080612", {"DateListToDateList", "Internal`"}},
+          ButtonNote->"Internal`"], 
+         ButtonBox["RealValuedNumericQ",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3612690664-6080612", {"RealValuedNumericQ", "Internal`"}},
+          ButtonNote->"Internal`"]},
+        {
+         ButtonBox["DateListToSeconds",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3612690664-6080612", {"DateListToSeconds", "Internal`"}},
+          ButtonNote->"Internal`"], 
+         ButtonBox["ReciprocalSqrt",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3612690664-6080612", {"ReciprocalSqrt", "Internal`"}},
+          ButtonNote->"Internal`"]},
+        {
+         ButtonBox["DateRange",
+          BaseStyle->"InformationLink",
+          ButtonData:>{"Info3612690664-6080612", {"DateRange", "Internal`"}},
+          ButtonNote->"Internal`"], 
+         ButtonBox["ReduceOptions",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3612690664-6080612", {"ReduceOptions", "Internal`"}},
+          ButtonNote->"Internal`"]},
+        {
+         ButtonBox["DCHypergeometricPFQ",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3612690664-6080612", {"DCHypergeometricPFQ", "Internal`"}},
+          ButtonNote->"Internal`"], 
+         ButtonBox["RelativelyPrimeBasis",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3612690664-6080612", {"RelativelyPrimeBasis", "Internal`"}},
+          ButtonNote->"Internal`"]},
+        {
+         ButtonBox["DeactivateMessages",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3612690664-6080612", {"DeactivateMessages", "Internal`"}},
+          ButtonNote->"Internal`"], 
+         ButtonBox["ReleaseInert",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3612690664-6080612", {"ReleaseInert", "Internal`"}},
+          ButtonNote->"Internal`"]},
+        {
+         ButtonBox["Deflatten",
+          BaseStyle->"InformationLink",
+          ButtonData:>{"Info3612690664-6080612", {"Deflatten", "Internal`"}},
+          ButtonNote->"Internal`"], 
+         ButtonBox["RemovedSymbolQ",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3612690664-6080612", {"RemovedSymbolQ", "Internal`"}},
+          ButtonNote->"Internal`"]},
+        {
+         ButtonBox["DeleteCache",
+          BaseStyle->"InformationLink",
+          ButtonData:>{"Info3612690664-6080612", {"DeleteCache", "Internal`"}},
+          ButtonNote->"Internal`"], 
+         ButtonBox["RemoveHandler",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3612690664-6080612", {"RemoveHandler", "Internal`"}},
+          ButtonNote->"Internal`"]},
+        {
+         ButtonBox["DeleteNCache",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3612690664-6080612", {"DeleteNCache", "Internal`"}},
+          ButtonNote->"Internal`"], 
+         ButtonBox["RemovePeriodical",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3612690664-6080612", {"RemovePeriodical", "Internal`"}},
+          ButtonNote->"Internal`"]},
+        {
+         ButtonBox["DeleteQuantityCache",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3612690664-6080612", {"DeleteQuantityCache", "Internal`"}},
+          ButtonNote->"Internal`"], 
+         ButtonBox["RepetitionFromMultiplicity",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3612690664-6080612", {
+            "RepetitionFromMultiplicity", "Internal`"}},
+          ButtonNote->"Internal`"]},
+        {
+         ButtonBox["DeleteTrailingZeros",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3612690664-6080612", {"DeleteTrailingZeros", "Internal`"}},
+          ButtonNote->"Internal`"], 
+         ButtonBox["Restart",
+          BaseStyle->"InformationLink",
+          ButtonData:>{"Info3612690664-6080612", {"Restart", "Internal`"}},
+          ButtonNote->"Internal`"]},
+        {
+         ButtonBox["DenseToSparse",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3612690664-6080612", {"DenseToSparse", "Internal`"}},
+          ButtonNote->"Internal`"], 
+         ButtonBox["RiccatiSolve",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3612690664-6080612", {"RiccatiSolve", "Internal`"}},
+          ButtonNote->"Internal`"]},
+        {
+         ButtonBox["DependsOnQ",
+          BaseStyle->"InformationLink",
+          ButtonData:>{"Info3612690664-6080612", {"DependsOnQ", "Internal`"}},
+          
+          ButtonNote->"Internal`"], 
+         ButtonBox["S1",
+          BaseStyle->"InformationLink",
+          ButtonData:>{"Info3612690664-6080612", {"S1", "Internal`"}},
+          ButtonNote->"Internal`"]},
+        {
+         ButtonBox["DependsQ",
+          BaseStyle->"InformationLink",
+          ButtonData:>{"Info3612690664-6080612", {"DependsQ", "Internal`"}},
+          ButtonNote->"Internal`"], 
+         ButtonBox["S2",
+          BaseStyle->"InformationLink",
+          ButtonData:>{"Info3612690664-6080612", {"S2", "Internal`"}},
+          ButtonNote->"Internal`"]},
+        {
+         ButtonBox["DimensionToBaseUnit",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3612690664-6080612", {"DimensionToBaseUnit", "Internal`"}},
+          ButtonNote->"Internal`"], 
+         ButtonBox["SchurDecomposition",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3612690664-6080612", {"SchurDecomposition", "Internal`"}},
+          ButtonNote->"Internal`"]},
+        {
+         ButtonBox["DiracGammaMatrix",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3612690664-6080612", {"DiracGammaMatrix", "Internal`"}},
+          ButtonNote->"Internal`"], 
+         ButtonBox["ScriptForm",
+          BaseStyle->"InformationLink",
+          ButtonData:>{"Info3612690664-6080612", {"ScriptForm", "Internal`"}},
+          
+          ButtonNote->"Internal`"]},
+        {
+         ButtonBox["DirectPartitionsP",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3612690664-6080612", {"DirectPartitionsP", "Internal`"}},
+          ButtonNote->"Internal`"], 
+         ButtonBox["SecondsToDateList",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3612690664-6080612", {"SecondsToDateList", "Internal`"}},
+          ButtonNote->"Internal`"]},
+        {
+         ButtonBox["DirectPartitionsQ",
+          BaseStyle->"InformationLink",
+          ButtonData:>{
+           "Info3612690664-6080612", {"DirectPartitionsQ", "Internal`"}},
+          ButtonNote->"Internal`"], 
+         ButtonBox["SequenceSpecification",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3612690664-6080612", {"SequenceSpecification", "Internal`"}},
+          ButtonNote->"Internal`"]},
+        {
+         ButtonBox["DisableEntityFramework",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3612690664-6080612", {"DisableEntityFramework", "Internal`"}},
+          
+          ButtonNote->"Internal`"], 
+         ButtonBox["SetAlgebraicsOptions",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3612690664-6080612", {"SetAlgebraicsOptions", "Internal`"}},
+          ButtonNote->"Internal`"]},
+        {
+         ButtonBox["DisableFormulaData",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3612690664-6080612", {"DisableFormulaData", "Internal`"}},
+          ButtonNote->"Internal`"], 
+         ButtonBox["SetBooleanComputationOptions",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3612690664-6080612", {
+            "SetBooleanComputationOptions", "Internal`"}},
+          ButtonNote->"Internal`"]},
+        {
+         ButtonBox["DisablePredictiveAlphaUtilities",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3612690664-6080612", {
+            "DisablePredictiveAlphaUtilities", "Internal`"}},
+          ButtonNote->"Internal`"], 
+         ButtonBox["SetCache",
+          BaseStyle->"InformationLink",
+          ButtonData:>{"Info3612690664-6080612", {"SetCache", "Internal`"}},
+          ButtonNote->"Internal`"]},
+        {
+         ButtonBox["DisableQuantityUnits",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3612690664-6080612", {"DisableQuantityUnits", "Internal`"}},
+          ButtonNote->"Internal`"], 
+         ButtonBox["SetCacheOptions",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3612690664-6080612", {"SetCacheOptions", "Internal`"}},
+          ButtonNote->"Internal`"]},
+        {
+         ButtonBox["DiscreteRiccatiSolve",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3612690664-6080612", {"DiscreteRiccatiSolve", "Internal`"}},
+          ButtonNote->"Internal`"], 
+         ButtonBox["SetFiniteElementOptions",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3612690664-6080612", {"SetFiniteElementOptions", "Internal`"}},
+          ButtonNote->"Internal`"]},
+        {
+         ButtonBox["DisplayFormTest",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3612690664-6080612", {"DisplayFormTest", "Internal`"}},
+          ButtonNote->"Internal`"], 
+         ButtonBox["SetGeometricFunctionsOptions",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3612690664-6080612", {
+            "SetGeometricFunctionsOptions", "Internal`"}},
+          ButtonNote->"Internal`"]},
+        {
+         ButtonBox["DoubleToString",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3612690664-6080612", {"DoubleToString", "Internal`"}},
+          ButtonNote->"Internal`"], 
+         ButtonBox["SetGraphOptions",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3612690664-6080612", {"SetGraphOptions", "Internal`"}},
+          ButtonNote->"Internal`"]},
+        {
+         ButtonBox["DynamicEvaluate",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3612690664-6080612", {"DynamicEvaluate", "Internal`"}},
+          ButtonNote->"Internal`"], 
+         ButtonBox["SetGroupTheoryOptions",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3612690664-6080612", {"SetGroupTheoryOptions", "Internal`"}},
+          ButtonNote->"Internal`"]},
+        {
+         ButtonBox["EffectivePrecision",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3612690664-6080612", {"EffectivePrecision", "Internal`"}},
+          ButtonNote->"Internal`"], 
+         ButtonBox["SetHolidayCalendar",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3612690664-6080612", {"SetHolidayCalendar", "Internal`"}},
+          ButtonNote->"Internal`"]},
+        {
+         ButtonBox["EmbeddedSymbols",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3612690664-6080612", {"EmbeddedSymbols", "Internal`"}},
+          ButtonNote->"Internal`"], 
+         ButtonBox["SetHolonomicOptions",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3612690664-6080612", {"SetHolonomicOptions", "Internal`"}},
+          ButtonNote->"Internal`"]},
+        {
+         ButtonBox["EncodeCharacters",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3612690664-6080612", {"EncodeCharacters", "Internal`"}},
+          ButtonNote->"Internal`"], 
+         ButtonBox["SetHomotopies",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3612690664-6080612", {"SetHomotopies", "Internal`"}},
+          ButtonNote->"Internal`"]},
+        {
+         ButtonBox["Escape",
+          BaseStyle->"InformationLink",
+          ButtonData:>{"Info3612690664-6080612", {"Escape", "Internal`"}},
+          ButtonNote->"Internal`"], 
+         ButtonBox["SetImageProcessingOptions",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3612690664-6080612", {
+            "SetImageProcessingOptions", "Internal`"}},
+          ButtonNote->"Internal`"]},
+        {
+         ButtonBox["Euler2Gamma",
+          BaseStyle->"InformationLink",
+          ButtonData:>{"Info3612690664-6080612", {"Euler2Gamma", "Internal`"}},
+          ButtonNote->"Internal`"], 
+         ButtonBox["SetImportExportOptions",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3612690664-6080612", {"SetImportExportOptions", "Internal`"}},
+          
+          ButtonNote->"Internal`"]},
+        {
+         ButtonBox["ExactQuotient",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3612690664-6080612", {"ExactQuotient", "Internal`"}},
+          ButtonNote->"Internal`"], 
+         ButtonBox["SetInequalitySolverOptions",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3612690664-6080612", {
+            "SetInequalitySolverOptions", "Internal`"}},
+          ButtonNote->"Internal`"]},
+        {
+         ButtonBox["ExceptionFreeQ",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3612690664-6080612", {"ExceptionFreeQ", "Internal`"}},
+          ButtonNote->"Internal`"], 
+         ButtonBox["SetNCache",
+          BaseStyle->"InformationLink",
+          ButtonData:>{"Info3612690664-6080612", {"SetNCache", "Internal`"}},
+          ButtonNote->"Internal`"]},
+        {
+         ButtonBox["ExtraExtendedGCD",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3612690664-6080612", {"ExtraExtendedGCD", "Internal`"}},
+          ButtonNote->"Internal`"], 
+         ButtonBox["SetNSolveOptions",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3612690664-6080612", {"SetNSolveOptions", "Internal`"}},
+          ButtonNote->"Internal`"]},
+        {
+         ButtonBox["FactoredNumber",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3612690664-6080612", {"FactoredNumber", "Internal`"}},
+          ButtonNote->"Internal`"], 
+         ButtonBox["SetOptimizationOptions",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3612690664-6080612", {"SetOptimizationOptions", "Internal`"}},
+          
+          ButtonNote->"Internal`"]},
+        {
+         ButtonBox["FactoredNumberAbs",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3612690664-6080612", {"FactoredNumberAbs", "Internal`"}},
+          ButtonNote->"Internal`"], 
+         ButtonBox["SetPiecewiseOptions",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3612690664-6080612", {"SetPiecewiseOptions", "Internal`"}},
+          ButtonNote->"Internal`"]},
+        {
+         ButtonBox["FactoredNumberGCD",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3612690664-6080612", {"FactoredNumberGCD", "Internal`"}},
+          ButtonNote->"Internal`"], 
+         ButtonBox["SetQuantityCache",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3612690664-6080612", {"SetQuantityCache", "Internal`"}},
+          ButtonNote->"Internal`"]},
+        {
+         ButtonBox["FactoredNumberMinus",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3612690664-6080612", {"FactoredNumberMinus", "Internal`"}},
+          ButtonNote->"Internal`"], 
+         ButtonBox["SetRawArrayOptions",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3612690664-6080612", {"SetRawArrayOptions", "Internal`"}},
+          ButtonNote->"Internal`"]},
+        {
+         ButtonBox["FactoredNumberPlus",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3612690664-6080612", {"FactoredNumberPlus", "Internal`"}},
+          ButtonNote->"Internal`"], 
+         ButtonBox["SetReduceOptions",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3612690664-6080612", {"SetReduceOptions", "Internal`"}},
+          ButtonNote->"Internal`"]},
+        {
+         ButtonBox["FactoredNumberPower",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3612690664-6080612", {"FactoredNumberPower", "Internal`"}},
+          ButtonNote->"Internal`"], 
+         ButtonBox["SetSimplificationOptions",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3612690664-6080612", {
+            "SetSimplificationOptions", "Internal`"}},
+          ButtonNote->"Internal`"]},
+        {
+         ButtonBox["FactoredNumberQ",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3612690664-6080612", {"FactoredNumberQ", "Internal`"}},
+          ButtonNote->"Internal`"], 
+         ButtonBox["SetSpecialFunctionsOptions",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3612690664-6080612", {
+            "SetSpecialFunctionsOptions", "Internal`"}},
+          ButtonNote->"Internal`"]},
+        {
+         ButtonBox["FactoredNumberRemoveGCD",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3612690664-6080612", {"FactoredNumberRemoveGCD", "Internal`"}},
+          ButtonNote->"Internal`"], 
+         ButtonBox["SetValueMonitor",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3612690664-6080612", {"SetValueMonitor", "Internal`"}},
+          ButtonNote->"Internal`"]},
+        {
+         ButtonBox["FactoredNumberSubtract",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3612690664-6080612", {"FactoredNumberSubtract", "Internal`"}},
+          
+          ButtonNote->"Internal`"], 
+         ButtonBox["SetValueNoTrack",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3612690664-6080612", {"SetValueNoTrack", "Internal`"}},
+          ButtonNote->"Internal`"]},
+        {
+         ButtonBox["FactoredNumberTimes",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3612690664-6080612", {"FactoredNumberTimes", "Internal`"}},
+          ButtonNote->"Internal`"], 
+         ButtonBox["SetValueTrackExtra",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3612690664-6080612", {"SetValueTrackExtra", "Internal`"}},
+          ButtonNote->"Internal`"]},
+        {
+         ButtonBox["FibonacciPolynomial",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3612690664-6080612", {"FibonacciPolynomial", "Internal`"}},
+          ButtonNote->"Internal`"], 
+         ButtonBox["SetVisualizationOptions",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3612690664-6080612", {"SetVisualizationOptions", "Internal`"}},
+          ButtonNote->"Internal`"]},
+        {
+         ButtonBox["FinancialLogging",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3612690664-6080612", {"FinancialLogging", "Internal`"}},
+          ButtonNote->"Internal`"], 
+         ButtonBox["SetWaveletOptions",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3612690664-6080612", {"SetWaveletOptions", "Internal`"}},
+          ButtonNote->"Internal`"]},
+        {
+         ButtonBox["FindOneRoot",
+          BaseStyle->"InformationLink",
+          ButtonData:>{"Info3612690664-6080612", {"FindOneRoot", "Internal`"}},
+          ButtonNote->"Internal`"], 
+         ButtonBox["SimplificationOptions",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3612690664-6080612", {"SimplificationOptions", "Internal`"}},
+          ButtonNote->"Internal`"]},
+        {
+         ButtonBox["FiniteElementOptions",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3612690664-6080612", {"FiniteElementOptions", "Internal`"}},
+          ButtonNote->"Internal`"], 
+         ButtonBox["SimplifyColor",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3612690664-6080612", {"SimplifyColor", "Internal`"}},
+          ButtonNote->"Internal`"]},
+        {
+         ButtonBox["FixRandomSeed",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3612690664-6080612", {"FixRandomSeed", "Internal`"}},
+          ButtonNote->"Internal`"], 
+         ButtonBox["SparseFactorModList",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3612690664-6080612", {"SparseFactorModList", "Internal`"}},
+          ButtonNote->"Internal`"]},
+        {
+         ButtonBox["FromCoefficientList",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3612690664-6080612", {"FromCoefficientList", "Internal`"}},
+          ButtonNote->"Internal`"], 
+         ButtonBox["SparseFactorModList2",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3612690664-6080612", {"SparseFactorModList2", "Internal`"}},
+          ButtonNote->"Internal`"]},
+        {
+         ButtonBox["FromContinuedFraction",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3612690664-6080612", {"FromContinuedFraction", "Internal`"}},
+          ButtonNote->"Internal`"], 
+         ButtonBox["SparseToDense",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3612690664-6080612", {"SparseToDense", "Internal`"}},
+          ButtonNote->"Internal`"]},
+        {
+         ButtonBox["FromFactoredNumber",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3612690664-6080612", {"FromFactoredNumber", "Internal`"}},
+          ButtonNote->"Internal`"], 
+         ButtonBox["SpecialFunctionsOptions",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3612690664-6080612", {"SpecialFunctionsOptions", "Internal`"}},
+          ButtonNote->"Internal`"]},
+        {
+         ButtonBox["FromFactoredNumberMod",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3612690664-6080612", {"FromFactoredNumberMod", "Internal`"}},
+          ButtonNote->"Internal`"], 
+         ButtonBox["SqrtMod",
+          BaseStyle->"InformationLink",
+          ButtonData:>{"Info3612690664-6080612", {"SqrtMod", "Internal`"}},
+          ButtonNote->"Internal`"]},
+        {
+         ButtonBox["FromNestedTermsList",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3612690664-6080612", {"FromNestedTermsList", "Internal`"}},
+          ButtonNote->"Internal`"], 
+         ButtonBox["SqrtModList",
+          BaseStyle->"InformationLink",
+          ButtonData:>{"Info3612690664-6080612", {"SqrtModList", "Internal`"}},
+          ButtonNote->"Internal`"]},
+        {
+         ButtonBox["FromPackedArrayQuiet",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3612690664-6080612", {"FromPackedArrayQuiet", "Internal`"}},
+          ButtonNote->"Internal`"], 
+         ButtonBox["SqrtModPrime",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3612690664-6080612", {"SqrtModPrime", "Internal`"}},
+          ButtonNote->"Internal`"]},
+        {
+         ButtonBox["FromPiecewise",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3612690664-6080612", {"FromPiecewise", "Internal`"}},
+          ButtonNote->"Internal`"], 
+         ButtonBox["Square",
+          BaseStyle->"InformationLink",
+          ButtonData:>{"Info3612690664-6080612", {"Square", "Internal`"}},
+          ButtonNote->"Internal`"]},
+        {
+         ButtonBox["FromStraightLineProgram",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3612690664-6080612", {"FromStraightLineProgram", "Internal`"}},
+          ButtonNote->"Internal`"], 
+         ButtonBox["StartScheduledTaskList",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3612690664-6080612", {"StartScheduledTaskList", "Internal`"}},
+          
+          ButtonNote->"Internal`"]},
+        {
+         ButtonBox["FullMemoryInformation",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3612690664-6080612", {"FullMemoryInformation", "Internal`"}},
+          ButtonNote->"Internal`"], 
+         ButtonBox["StopScheduledTaskList",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3612690664-6080612", {"StopScheduledTaskList", "Internal`"}},
+          ButtonNote->"Internal`"]},
+        {
+         ButtonBox["FullMemoryInUse",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3612690664-6080612", {"FullMemoryInUse", "Internal`"}},
+          ButtonNote->"Internal`"], 
+         ButtonBox["StraightLineProgram",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3612690664-6080612", {"StraightLineProgram", "Internal`"}},
+          ButtonNote->"Internal`"]},
+        {
+         ButtonBox["FundamentalDiscriminantQ",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3612690664-6080612", {
+            "FundamentalDiscriminantQ", "Internal`"}},
+          ButtonNote->"Internal`"], 
+         ButtonBox["StringToDouble",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3612690664-6080612", {"StringToDouble", "Internal`"}},
+          ButtonNote->"Internal`"]},
+        {
+         ButtonBox["GBDivision",
+          BaseStyle->"InformationLink",
+          ButtonData:>{"Info3612690664-6080612", {"GBDivision", "Internal`"}},
+          
+          ButtonNote->"Internal`"], 
+         ButtonBox["StuffBag",
+          BaseStyle->"InformationLink",
+          ButtonData:>{"Info3612690664-6080612", {"StuffBag", "Internal`"}},
+          ButtonNote->"Internal`"]},
+        {
+         ButtonBox["GeneralizedRationalFunctionQ",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3612690664-6080612", {
+            "GeneralizedRationalFunctionQ", "Internal`"}},
+          ButtonNote->"Internal`"], 
+         ButtonBox["SubresultantExtendedGCD",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3612690664-6080612", {"SubresultantExtendedGCD", "Internal`"}},
+          ButtonNote->"Internal`"]},
+        {
+         ButtonBox["GeometricFunctionsOptions",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3612690664-6080612", {
+            "GeometricFunctionsOptions", "Internal`"}},
+          ButtonNote->"Internal`"], 
+         ButtonBox["SwitchForm",
+          BaseStyle->"InformationLink",
+          ButtonData:>{"Info3612690664-6080612", {"SwitchForm", "Internal`"}},
+          
+          ButtonNote->"Internal`"]},
+        {
+         ButtonBox["GeometricTransformation3D",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3612690664-6080612", {
+            "GeometricTransformation3D", "Internal`"}},
+          ButtonNote->"Internal`"], 
+         ButtonBox["SylvesterSolve",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3612690664-6080612", {"SylvesterSolve", "Internal`"}},
+          ButtonNote->"Internal`"]},
+        {
+         ButtonBox["GetIteratorLength",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3612690664-6080612", {"GetIteratorLength", "Internal`"}},
+          ButtonNote->"Internal`"], 
+         ButtonBox["SymbolContext",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3612690664-6080612", {"SymbolContext", "Internal`"}},
+          ButtonNote->"Internal`"]},
+        {
+         ButtonBox["GetPendingTrackChanges",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3612690664-6080612", {"GetPendingTrackChanges", "Internal`"}},
+          
+          ButtonNote->"Internal`"], 
+         ButtonBox["SymbolList",
+          BaseStyle->"InformationLink",
+          ButtonData:>{"Info3612690664-6080612", {"SymbolList", "Internal`"}},
+          
+          ButtonNote->"Internal`"]},
+        {
+         ButtonBox["GetRefreshers",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3612690664-6080612", {"GetRefreshers", "Internal`"}},
+          ButtonNote->"Internal`"], 
+         ButtonBox["SymbolList1",
+          BaseStyle->"InformationLink",
+          ButtonData:>{"Info3612690664-6080612", {"SymbolList1", "Internal`"}},
+          ButtonNote->"Internal`"]},
+        {
+         ButtonBox["GetTrackChanges",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3612690664-6080612", {"GetTrackChanges", "Internal`"}},
+          ButtonNote->"Internal`"], 
+         ButtonBox["SyntacticNegativeQ",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3612690664-6080612", {"SyntacticNegativeQ", "Internal`"}},
+          ButtonNote->"Internal`"]},
+        {
+         ButtonBox["GetTrackedIDs",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3612690664-6080612", {"GetTrackedIDs", "Internal`"}},
+          ButtonNote->"Internal`"], 
+         ButtonBox["TensorTypeQ",
+          BaseStyle->"InformationLink",
+          ButtonData:>{"Info3612690664-6080612", {"TensorTypeQ", "Internal`"}},
+          ButtonNote->"Internal`"]},
+        {
+         ButtonBox["GetTrackedSymbols",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3612690664-6080612", {"GetTrackedSymbols", "Internal`"}},
+          ButtonNote->"Internal`"], 
+         ButtonBox["TestIntegerQ",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3612690664-6080612", {"TestIntegerQ", "Internal`"}},
+          ButtonNote->"Internal`"]},
+        {
+         ButtonBox["GetUnboundSymbols",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3612690664-6080612", {"GetUnboundSymbols", "Internal`"}},
+          ButtonNote->"Internal`"], 
+         ButtonBox["ToEquivalenceClass",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3612690664-6080612", {"ToEquivalenceClass", "Internal`"}},
+          ButtonNote->"Internal`"]},
+        {
+         ButtonBox["GetValueMonitor",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3612690664-6080612", {"GetValueMonitor", "Internal`"}},
+          ButtonNote->"Internal`"], 
+         ButtonBox["ToFactoredNumber",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3612690664-6080612", {"ToFactoredNumber", "Internal`"}},
+          ButtonNote->"Internal`"]},
+        {
+         ButtonBox["GetValueNoTrack",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3612690664-6080612", {"GetValueNoTrack", "Internal`"}},
+          ButtonNote->"Internal`"], 
+         ButtonBox["ToPackedArray",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3612690664-6080612", {"ToPackedArray", "Internal`"}},
+          ButtonNote->"Internal`"]},
+        {
+         ButtonBox["GetValueTrack",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3612690664-6080612", {"GetValueTrack", "Internal`"}},
+          ButtonNote->"Internal`"], 
+         ButtonBox["ToPiecewise",
+          BaseStyle->"InformationLink",
+          ButtonData:>{"Info3612690664-6080612", {"ToPiecewise", "Internal`"}},
+          ButtonNote->"Internal`"]},
+        {
+         ButtonBox["GetValueTrackExtra",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3612690664-6080612", {"GetValueTrackExtra", "Internal`"}},
+          ButtonNote->"Internal`"], 
+         ButtonBox["ToStraightLineProgram",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3612690664-6080612", {"ToStraightLineProgram", "Internal`"}},
+          ButtonNote->"Internal`"]},
+        {
+         ButtonBox["GraphOptions",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3612690664-6080612", {"GraphOptions", "Internal`"}},
+          ButtonNote->"Internal`"], 
+         ButtonBox["TrackChangesPacket",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3612690664-6080612", {"TrackChangesPacket", "Internal`"}},
+          ButtonNote->"Internal`"]},
+        {
+         ButtonBox["GroupTheoryOptions",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3612690664-6080612", {"GroupTheoryOptions", "Internal`"}},
+          ButtonNote->"Internal`"], 
+         ButtonBox["TrackExpression",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3612690664-6080612", {"TrackExpression", "Internal`"}},
+          ButtonNote->"Internal`"]},
+        {
+         ButtonBox["HandlerBlock",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3612690664-6080612", {"HandlerBlock", "Internal`"}},
+          ButtonNote->"Internal`"], 
+         ButtonBox["TrackExpressionNonStrict",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3612690664-6080612", {
+            "TrackExpressionNonStrict", "Internal`"}},
+          ButtonNote->"Internal`"]},
+        {
+         ButtonBox["Handlers",
+          BaseStyle->"InformationLink",
+          ButtonData:>{"Info3612690664-6080612", {"Handlers", "Internal`"}},
+          ButtonNote->"Internal`"], 
+         ButtonBox["TransposeIntegerPartition",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3612690664-6080612", {
+            "TransposeIntegerPartition", "Internal`"}},
+          ButtonNote->"Internal`"]},
+        {
+         ButtonBox["HarmonicNumber",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3612690664-6080612", {"HarmonicNumber", "Internal`"}},
+          ButtonNote->"Internal`"], 
+         ButtonBox["TryLinearSolve",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3612690664-6080612", {"TryLinearSolve", "Internal`"}},
+          ButtonNote->"Internal`"]},
+        {
+         ButtonBox["HashSameQ",
+          BaseStyle->"InformationLink",
+          ButtonData:>{"Info3612690664-6080612", {"HashSameQ", "Internal`"}},
+          ButtonNote->"Internal`"], 
+         ButtonBox["TypeOf",
+          BaseStyle->"InformationLink",
+          ButtonData:>{"Info3612690664-6080612", {"TypeOf", "Internal`"}},
+          ButtonNote->"Internal`"]},
+        {
+         ButtonBox["HelpBrowserHyperlinkText",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3612690664-6080612", {
+            "HelpBrowserHyperlinkText", "Internal`"}},
+          ButtonNote->"Internal`"], 
+         ButtonBox["TypesettingBoxRegion",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3612690664-6080612", {"TypesettingBoxRegion", "Internal`"}},
+          ButtonNote->"Internal`"]},
+        {
+         ButtonBox["HGCD",
+          BaseStyle->"InformationLink",
+          ButtonData:>{"Info3612690664-6080612", {"HGCD", "Internal`"}},
+          ButtonNote->"Internal`"], 
+         ButtonBox["UnderflowTestQ",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3612690664-6080612", {"UnderflowTestQ", "Internal`"}},
+          ButtonNote->"Internal`"]},
+        {
+         ButtonBox["HNSolve",
+          BaseStyle->"InformationLink",
+          ButtonData:>{"Info3612690664-6080612", {"HNSolve", "Internal`"}},
+          ButtonNote->"Internal`"], 
+         ButtonBox["UnnormalizeBigReal",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3612690664-6080612", {"UnnormalizeBigReal", "Internal`"}},
+          ButtonNote->"Internal`"]},
+        {
+         ButtonBox["HoldUntil",
+          BaseStyle->"InformationLink",
+          ButtonData:>{"Info3612690664-6080612", {"HoldUntil", "Internal`"}},
+          ButtonNote->"Internal`"], 
+         ButtonBox["UpdateSyntaxInformation",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3612690664-6080612", {"UpdateSyntaxInformation", "Internal`"}},
+          ButtonNote->"Internal`"]},
+        {
+         ButtonBox["HolonomicOptions",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3612690664-6080612", {"HolonomicOptions", "Internal`"}},
+          ButtonNote->"Internal`"], 
+         ButtonBox["ValueChangeVeto",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3612690664-6080612", {"ValueChangeVeto", "Internal`"}},
+          ButtonNote->"Internal`"]},
+        {
+         ButtonBox["HomotopyType",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3612690664-6080612", {"HomotopyType", "Internal`"}},
+          ButtonNote->"Internal`"], 
+         ButtonBox["VectorNorm",
+          BaseStyle->"InformationLink",
+          ButtonData:>{"Info3612690664-6080612", {"VectorNorm", "Internal`"}},
+          
+          ButtonNote->"Internal`"]},
+        {
+         ButtonBox["HornerEvaluate",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3612690664-6080612", {"HornerEvaluate", "Internal`"}},
+          ButtonNote->"Internal`"], 
+         ButtonBox["VisualizationOptions",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3612690664-6080612", {"VisualizationOptions", "Internal`"}},
+          ButtonNote->"Internal`"]},
+        {
+         ButtonBox["HouseKeep",
+          BaseStyle->"InformationLink",
+          ButtonData:>{"Info3612690664-6080612", {"HouseKeep", "Internal`"}},
+          ButtonNote->"Internal`"], 
+         ButtonBox["WaveletOptions",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3612690664-6080612", {"WaveletOptions", "Internal`"}},
+          ButtonNote->"Internal`"]},
+        {
+         ButtonBox["HullDimensions",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3612690664-6080612", {"HullDimensions", "Internal`"}},
+          ButtonNote->"Internal`"], 
+         ButtonBox["WithGroupTheoryOptions",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3612690664-6080612", {"WithGroupTheoryOptions", "Internal`"}},
+          
+          ButtonNote->"Internal`"]},
+        {
+         ButtonBox["iDateDifference",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3612690664-6080612", {"iDateDifference", "Internal`"}},
+          ButtonNote->"Internal`"], 
+         ButtonBox["WithLocalSettings",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3612690664-6080612", {"WithLocalSettings", "Internal`"}},
+          ButtonNote->"Internal`"]},
+        {
+         ButtonBox["ImageProcessingOptions",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3612690664-6080612", {"ImageProcessingOptions", "Internal`"}},
+          
+          ButtonNote->"Internal`"], 
+         ButtonBox["WouldBeNumericQ",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3612690664-6080612", {"WouldBeNumericQ", "Internal`"}},
+          ButtonNote->"Internal`"]},
+        {
+         ButtonBox["ImportExportOptions",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3612690664-6080612", {"ImportExportOptions", "Internal`"}},
+          ButtonNote->"Internal`"], 
+         ButtonBox["WriteLog",
+          BaseStyle->"InformationLink",
+          ButtonData:>{"Info3612690664-6080612", {"WriteLog", "Internal`"}},
+          ButtonNote->"Internal`"]},
+        {
+         ButtonBox["InequalitySolverOptions",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3612690664-6080612", {"InequalitySolverOptions", "Internal`"}},
+          ButtonNote->"Internal`"], 
+         ButtonBox["$AlphaComputeServer",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3612690664-6080612", {"$AlphaComputeServer", "Internal`"}},
+          ButtonNote->"Internal`"]},
+        {
+         ButtonBox["Inert",
+          BaseStyle->"InformationLink",
+          ButtonData:>{"Info3612690664-6080612", {"Inert", "Internal`"}},
+          ButtonNote->"Internal`"], 
+         ButtonBox["$AlphaExternalMapProvider",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3612690664-6080612", {
+            "$AlphaExternalMapProvider", "Internal`"}},
+          ButtonNote->"Internal`"]},
+        {
+         ButtonBox["InheritedBlock",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3612690664-6080612", {"InheritedBlock", "Internal`"}},
+          ButtonNote->"Internal`"], 
+         ButtonBox["$AlphaLoaded",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3612690664-6080612", {"$AlphaLoaded", "Internal`"}},
+          ButtonNote->"Internal`"]},
+        {
+         ButtonBox["InnermostToOutermost",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3612690664-6080612", {"InnermostToOutermost", "Internal`"}},
+          ButtonNote->"Internal`"], 
+         ButtonBox["$AudioEncodings",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3612690664-6080612", {"$AudioEncodings", "Internal`"}},
+          ButtonNote->"Internal`"]},
+        {
+         ButtonBox["IntegerPartitionQ",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3612690664-6080612", {"IntegerPartitionQ", "Internal`"}},
+          ButtonNote->"Internal`"], 
+         ButtonBox["$ContextMarks",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3612690664-6080612", {"$ContextMarks", "Internal`"}},
+          ButtonNote->"Internal`"]},
+        {
+         ButtonBox["IntegerPartitions",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3612690664-6080612", {"IntegerPartitions", "Internal`"}},
+          ButtonNote->"Internal`"], 
+         ButtonBox["$ConvertForms",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3612690664-6080612", {"$ConvertForms", "Internal`"}},
+          ButtonNote->"Internal`"]},
+        {
+         ButtonBox["JoinOrFail",
+          BaseStyle->"InformationLink",
+          ButtonData:>{"Info3612690664-6080612", {"JoinOrFail", "Internal`"}},
+          
+          ButtonNote->"Internal`"], 
+         ButtonBox["$CreationID",
+          BaseStyle->"InformationLink",
+          ButtonData:>{"Info3612690664-6080612", {"$CreationID", "Internal`"}},
+          ButtonNote->"Internal`"]},
+        {
+         ButtonBox["LeapYearQ",
+          BaseStyle->"InformationLink",
+          ButtonData:>{"Info3612690664-6080612", {"LeapYearQ", "Internal`"}},
+          ButtonNote->"Internal`"], 
+         ButtonBox["$DataCollections",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3612690664-6080612", {"$DataCollections", "Internal`"}},
+          ButtonNote->"Internal`"]},
+        {
+         ButtonBox["LeastQuadraticNonresidue",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3612690664-6080612", {
+            "LeastQuadraticNonresidue", "Internal`"}},
+          ButtonNote->"Internal`"], 
+         ButtonBox["$DebugSharedCachedEvaluation",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3612690664-6080612", {
+            "$DebugSharedCachedEvaluation", "Internal`"}},
+          ButtonNote->"Internal`"]},
+        {
+         ButtonBox["Lehmer2",
+          BaseStyle->"InformationLink",
+          ButtonData:>{"Info3612690664-6080612", {"Lehmer2", "Internal`"}},
+          ButtonNote->"Internal`"], 
+         ButtonBox["$DisablePredictiveAlphaUtilities",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3612690664-6080612", {
+            "$DisablePredictiveAlphaUtilities", "Internal`"}},
+          ButtonNote->"Internal`"]},
+        {
+         ButtonBox["LinearQ",
+          BaseStyle->"InformationLink",
+          ButtonData:>{"Info3612690664-6080612", {"LinearQ", "Internal`"}},
+          ButtonNote->"Internal`"], 
+         ButtonBox["$DisableQuantityUnits",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3612690664-6080612", {"$DisableQuantityUnits", "Internal`"}},
+          ButtonNote->"Internal`"]},
+        {
+         ButtonBox["LineNumbers",
+          BaseStyle->"InformationLink",
+          ButtonData:>{"Info3612690664-6080612", {"LineNumbers", "Internal`"}},
+          ButtonNote->"Internal`"], 
+         ButtonBox["$EFAIL",
+          BaseStyle->"InformationLink",
+          ButtonData:>{"Info3612690664-6080612", {"$EFAIL", "Internal`"}},
+          ButtonNote->"Internal`"]},
+        {
+         ButtonBox["ListMin",
+          BaseStyle->"InformationLink",
+          ButtonData:>{"Info3612690664-6080612", {"ListMin", "Internal`"}},
+          ButtonNote->"Internal`"], 
+         ButtonBox["$EqualTolerance",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3612690664-6080612", {"$EqualTolerance", "Internal`"}},
+          ButtonNote->"Internal`"]},
+        {
+         ButtonBox["LiterallyAbsentQ",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3612690664-6080612", {"LiterallyAbsentQ", "Internal`"}},
+          ButtonNote->"Internal`"], 
+         ButtonBox["$FactoredNumberSieveMax",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3612690664-6080612", {"$FactoredNumberSieveMax", "Internal`"}},
+          ButtonNote->"Internal`"]},
+        {
+         ButtonBox["LiterallyOccurringQ",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3612690664-6080612", {"LiterallyOccurringQ", "Internal`"}},
+          ButtonNote->"Internal`"], 
+         ButtonBox["$FactorStandardComponent",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3612690664-6080612", {
+            "$FactorStandardComponent", "Internal`"}},
+          ButtonNote->"Internal`"]},
+        {
+         ButtonBox["LiteralPresentQ",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3612690664-6080612", {"LiteralPresentQ", "Internal`"}},
+          ButtonNote->"Internal`"], 
+         ButtonBox["$FileCharacterEncoding",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3612690664-6080612", {"$FileCharacterEncoding", "Internal`"}},
+          
+          ButtonNote->"Internal`"]},
+        {
+         ButtonBox["LoadEncodingFile",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3612690664-6080612", {"LoadEncodingFile", "Internal`"}},
+          ButtonNote->"Internal`"], 
+         ButtonBox["$GlobalTime",
+          BaseStyle->"InformationLink",
+          ButtonData:>{"Info3612690664-6080612", {"$GlobalTime", "Internal`"}},
+          ButtonNote->"Internal`"]},
+        {
+         ButtonBox["LocalizedBlock",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3612690664-6080612", {"LocalizedBlock", "Internal`"}},
+          ButtonNote->"Internal`"], 
+         ButtonBox["$GridSuboptions",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3612690664-6080612", {"$GridSuboptions", "Internal`"}},
+          ButtonNote->"Internal`"]},
+        {
+         ButtonBox["LogAGM",
+          BaseStyle->"InformationLink",
+          ButtonData:>{"Info3612690664-6080612", {"LogAGM", "Internal`"}},
+          ButtonNote->"Internal`"], 
+         ButtonBox["$HashTolerance",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3612690664-6080612", {"$HashTolerance", "Internal`"}},
+          ButtonNote->"Internal`"]},
+        {
+         ButtonBox["LucasLPolynomial",
+          BaseStyle->"InformationLink",
+          ButtonData:>{
+           "Info3612690664-6080612", {"LucasLPolynomial", "Internal`"}},
+          ButtonNote->"Internal`"], 
+         ButtonBox["$InstalledPrograms",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3612690664-6080612", {"$InstalledPrograms", "Internal`"}},
+          ButtonNote->"Internal`"]},
+        {
+         ButtonBox["MakePolynomial",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3612690664-6080612", {"MakePolynomial", "Internal`"}},
+          ButtonNote->"Internal`"], 
+         ButtonBox["$MathematicaOnline",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3612690664-6080612", {"$MathematicaOnline", "Internal`"}},
+          ButtonNote->"Internal`"]},
+        {
+         ButtonBox["MakeRat",
+          BaseStyle->"InformationLink",
+          ButtonData:>{"Info3612690664-6080612", {"MakeRat", "Internal`"}},
+          ButtonNote->"Internal`"], 
+         ButtonBox["$OSMMode",
+          BaseStyle->"InformationLink",
+          ButtonData:>{"Info3612690664-6080612", {"$OSMMode", "Internal`"}},
+          ButtonNote->"Internal`"]},
+        {
+         ButtonBox["MaxAbs",
+          BaseStyle->"InformationLink",
+          ButtonData:>{"Info3612690664-6080612", {"MaxAbs", "Internal`"}},
+          ButtonNote->"Internal`"], 
+         ButtonBox["$PackageDependencies",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3612690664-6080612", {"$PackageDependencies", "Internal`"}},
+          ButtonNote->"Internal`"]},
+        {
+         ButtonBox["MaxPathsFollow",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3612690664-6080612", {"MaxPathsFollow", "Internal`"}},
+          ButtonNote->"Internal`"], 
+         ButtonBox["$PrototypeBuild",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3612690664-6080612", {"$PrototypeBuild", "Internal`"}},
+          ButtonNote->"Internal`"]},
+        {
+         ButtonBox["MessageButtonHandler",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3612690664-6080612", {"MessageButtonHandler", "Internal`"}},
+          ButtonNote->"Internal`"], 
+         ButtonBox["$RefreshEnabled",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3612690664-6080612", {"$RefreshEnabled", "Internal`"}},
+          ButtonNote->"Internal`"]},
+        {
+         ButtonBox["MixedVolume",
+          BaseStyle->"InformationLink",
+          ButtonData:>{"Info3612690664-6080612", {"MixedVolume", "Internal`"}},
+          ButtonNote->"Internal`"], 
+         ButtonBox["$Restoring",
+          BaseStyle->"InformationLink",
+          ButtonData:>{"Info3612690664-6080612", {"$Restoring", "Internal`"}},
+          
+          ButtonNote->"Internal`"]},
+        {
+         ButtonBox["MultinomialPrimePowerDecomposition",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3612690664-6080612", {
+            "MultinomialPrimePowerDecomposition", "Internal`"}},
+          ButtonNote->"Internal`"], 
+         ButtonBox["$SameQTolerance",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3612690664-6080612", {"$SameQTolerance", "Internal`"}},
+          ButtonNote->"Internal`"]},
+        {
+         ButtonBox["MultivariateResultant",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3612690664-6080612", {"MultivariateResultant", "Internal`"}},
+          ButtonNote->"Internal`"], 
+         ButtonBox["$ThisPeriodical",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3612690664-6080612", {"$ThisPeriodical", "Internal`"}},
+          ButtonNote->"Internal`"]},
+        {
+         ButtonBox["NCacheKey",
+          BaseStyle->"InformationLink",
+          ButtonData:>{"Info3612690664-6080612", {"NCacheKey", "Internal`"}},
+          ButtonNote->"Internal`"], 
+         ButtonBox["$UseCompress",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3612690664-6080612", {"$UseCompress", "Internal`"}},
+          ButtonNote->"Internal`"]},
+        {
+         ButtonBox["NCountRoots",
+          BaseStyle->"InformationLink",
+          ButtonData:>{"Info3612690664-6080612", {"NCountRoots", "Internal`"}},
+          ButtonNote->"Internal`"], 
+         ButtonBox["$VideoEncodings",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3612690664-6080612", {"$VideoEncodings", "Internal`"}},
+          ButtonNote->"Internal`"]},
+        {
+         ButtonBox["NegativeIntegerQ",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3612690664-6080612", {"NegativeIntegerQ", "Internal`"}},
+          ButtonNote->"Internal`"], 
+         ButtonBox["$WolframCDNServer",
+          BaseStyle->"InformationLink",
+          
+          ButtonData:>{
+           "Info3612690664-6080612", {"$WolframCDNServer", "Internal`"}},
+          ButtonNote->"Internal`"]}
+       },
+       DefaultBaseStyle->"InfoGrid",
+       GridBoxItemSize->{"Columns" -> {{
+            Scaled[0.475]}}}]}
+    },
+    GridBoxAlignment->{"Columns" -> {{Left}}, "Rows" -> {{Baseline}}}]}, 
+   Dynamic[Typeset`open$$],
+   ImageSize->Automatic]]], "Print", "InfoCell"]
+}, Open  ]],
+
+Cell[BoxData[""], "Input"]
+}, Open  ]]
+},
+WindowSize->{740, 752},
+WindowMargins->{{36, Automatic}, {16, Automatic}},
+FrontEndVersion->"9.0 for Mac OS X x86 (32-bit, 64-bit Kernel) (May 19, 2013)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[579, 22, 33, 0, 92, "Title"],
+Cell[CellGroupData[{
+Cell[637, 26, 53, 1, 28, "Input"],
+Cell[693, 29, 81496, 2252, 3792, "Print"]
+}, Open  ]],
+Cell[82204, 2284, 26, 0, 28, "Input"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)

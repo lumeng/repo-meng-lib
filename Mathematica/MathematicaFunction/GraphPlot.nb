@@ -1,0 +1,1287 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 10.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     62570,       1278]
+NotebookOptionsPosition[     61761,       1243]
+NotebookOutlinePosition[     62271,       1265]
+CellTagsIndexPosition[     62185,       1260]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["GraphPlot", "Title"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"?", "GraphPlot"}]], "Input"],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox["\<\"\\!\\(\\*RowBox[{\\\"GraphPlot\\\", \\\"[\\\", StyleBox[\\\"g\
+\\\", \\\"TI\\\"], \\\"]\\\"}]\\) generates a plot of the graph \
+\\!\\(\\*StyleBox[\\\"g\\\", \\\"TI\\\"]\\).\\n\\!\\(\\*RowBox[{\\\"GraphPlot\
+\\\", \\\"[\\\", RowBox[{\\\"{\\\", \
+RowBox[{RowBox[{SubscriptBox[StyleBox[\\\"v\\\", \\\"TI\\\"], \
+RowBox[{StyleBox[\\\"i\\\", \\\"TI\\\"], \\\"\[InvisibleSpace]\\\", StyleBox[\
+\\\"1\\\", \\\"TR\\\"]}]], \\\"\[Rule]\\\", SubscriptBox[StyleBox[\\\"v\\\", \
+\\\"TI\\\"], RowBox[{StyleBox[\\\"j\\\", \\\"TI\\\"], \\\"\[InvisibleSpace]\\\
+\", StyleBox[\\\"1\\\", \\\"TR\\\"]}]]}], \\\",\\\", \
+RowBox[{SubscriptBox[StyleBox[\\\"v\\\", \\\"TI\\\"], \
+RowBox[{StyleBox[\\\"i\\\", \\\"TI\\\"], \\\"\[InvisibleSpace]\\\", StyleBox[\
+\\\"2\\\", \\\"TR\\\"]}]], \\\"\[Rule]\\\", SubscriptBox[StyleBox[\\\"v\\\", \
+\\\"TI\\\"], RowBox[{StyleBox[\\\"j\\\", \\\"TI\\\"], \\\"\[InvisibleSpace]\\\
+\", StyleBox[\\\"2\\\", \\\"TR\\\"]}]]}], \\\",\\\", StyleBox[\\\"\[Ellipsis]\
+\\\", \\\"TR\\\"]}], \\\"}\\\"}], \\\"]\\\"}]\\) generates a plot of the \
+graph in which vertex \\!\\(\\*SubscriptBox[StyleBox[\\\"v\\\", \\\"TI\\\"], \
+StyleBox[\\\"ik\\\", \\\"TI\\\"]]\\) is connected to vertex \
+\\!\\(\\*SubscriptBox[StyleBox[\\\"v\\\", \\\"TI\\\"], StyleBox[\\\"jk\\\", \
+\\\"TI\\\"]]\\).\\n\\!\\(\\*RowBox[{\\\"GraphPlot\\\", \\\"[\\\", \
+RowBox[{\\\"{\\\", RowBox[{RowBox[{\\\"{\\\", \
+RowBox[{RowBox[{SubscriptBox[StyleBox[\\\"v\\\", \\\"TI\\\"], \
+RowBox[{StyleBox[\\\"i\\\", \\\"TI\\\"], \\\"\[InvisibleSpace]\\\", StyleBox[\
+\\\"1\\\", \\\"TR\\\"]}]], \\\"\[Rule]\\\", SubscriptBox[StyleBox[\\\"v\\\", \
+\\\"TI\\\"], RowBox[{StyleBox[\\\"j\\\", \\\"TI\\\"], \\\"\[InvisibleSpace]\\\
+\", StyleBox[\\\"1\\\", \\\"TR\\\"]}]]}], \\\",\\\", SubscriptBox[StyleBox[\\\
+\"lbl\\\", \\\"TI\\\"], StyleBox[\\\"1\\\", \\\"TR\\\"]]}], \\\"}\\\"}], \
+\\\",\\\", StyleBox[\\\"\[Ellipsis]\\\", \\\"TR\\\"]}], \\\"}\\\"}], \
+\\\"]\\\"}]\\) associates labels \\!\\(\\*SubscriptBox[StyleBox[\\\"lbl\\\", \
+\\\"TI\\\"], StyleBox[\\\"k\\\", \\\"TI\\\"]]\\) with edges in the \
+graph.\\n\\!\\(\\*RowBox[{\\\"GraphPlot\\\", \\\"[\\\", StyleBox[\\\"m\\\", \
+\\\"TI\\\"], \\\"]\\\"}]\\) generates a plot of the graph represented by the \
+adjacency matrix \\!\\(\\*StyleBox[\\\"m\\\", \\\"TI\\\"]\\).\"\>", "MSG"], 
+  "\[NonBreakingSpace]", 
+  ButtonBox[
+   StyleBox["\[RightSkeleton]", "SR"],
+   Active->True,
+   BaseStyle->"Link",
+   ButtonData->"paclet:ref/GraphPlot"]}]], "Print", "PrintUsage",
+ CellTags->"Info3634272473-8995600"]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"words", "=", 
+   RowBox[{"DictionaryLookup", "[", "\"\<wol*\>\"", "]"}]}], ";"}]], "Input",
+ CellID->8901538],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"g", "=", 
+   RowBox[{"Flatten", "[", 
+    RowBox[{"Map", "[", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"(", 
+        RowBox[{"Thread", "[", 
+         RowBox[{"#", "->", 
+          RowBox[{"DeleteCases", "[", 
+           RowBox[{
+            RowBox[{"Nearest", "[", 
+             RowBox[{"words", ",", "#", ",", "3"}], "]"}], ",", "#"}], 
+           "]"}]}], "]"}], ")"}], "&"}], ",", "words"}], "]"}], "]"}]}], 
+  ";"}]], "Input",
+ CellID->550942384],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"GraphPlot", "[", 
+    RowBox[{"g", ",", 
+     RowBox[{"Method", "\[Rule]", "#"}]}], "]"}], "&"}], "/@", 
+  RowBox[{"{", 
+   RowBox[{
+   "\"\<SpringElectricalEmbedding\>\"", ",", "\"\<SpringEmbedding\>\"", ",", 
+    "\"\<HighDimensionalEmbedding\>\"", ",", "\"\<CircularEmbedding\>\"", 
+    ",", "\"\<RandomEmbedding\>\"", ",", "\"\<LinearEmbedding\>\""}], 
+   "}"}]}]], "Input"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   GraphicsBox[
+    TagBox[GraphicsComplexBox[CompressedData["
+1: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
+KZD2XsdcDhVH3APb5OlxU/A/jHsTcw==
+      "], {
+       {RGBColor[0.5, 0., 0.], 
+        LineBox[{{1, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 
+          29, 30, 2}, {1, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 
+          44, 45, 46, 3}, {2, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 
+          59, 60, 61, 62, 1}, {2, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 
+          74, 75, 76, 77, 78, 4}, {3, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 
+          89, 90, 91, 92, 93, 94, 1}, {3, 95, 96, 97, 98, 99, 100, 101, 102, 
+          103, 104, 105, 106, 107, 108, 109, 110, 4}, {4, 111, 112, 113, 114, 
+          115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 2}, {4, 
+          127, 128, 129, 130, 131, 132, 133, 134, 135, 136, 137, 138, 139, 
+          140, 141, 142, 3}, {5, 1}, {5, 3}, {6, 143, 144, 145, 146, 147, 148,
+           149, 150, 151, 152, 153, 154, 155, 156, 157, 158, 7}, {6, 5}, {7, 
+          159, 160, 161, 162, 163, 164, 165, 166, 167, 168, 169, 170, 171, 
+          172, 173, 174, 6}, {7, 2}, {8, 175, 176, 177, 178, 179, 180, 181, 
+          182, 183, 184, 185, 186, 187, 188, 189, 190, 9}, {8, 3}, {9, 191, 
+          192, 193, 194, 195, 196, 197, 198, 199, 200, 201, 202, 203, 204, 
+          205, 206, 8}, {9, 207, 208, 209, 210, 211, 212, 213, 214, 215, 216, 
+          217, 218, 219, 220, 221, 222, 10}, {10, 223, 224, 225, 226, 227, 
+          228, 229, 230, 231, 232, 233, 234, 235, 236, 237, 238, 9}, {10, 
+          8}, {11, 3}, {11, 5}, {12, 239, 240, 241, 242, 243, 244, 245, 246, 
+          247, 248, 249, 250, 251, 252, 253, 254, 13}, {12, 8}, {13, 255, 256,
+           257, 258, 259, 260, 261, 262, 263, 264, 265, 266, 267, 268, 269, 
+          270, 12}, {13, 14}, {14, 2}, {14, 5}}]}, 
+       {RGBColor[0, 0, 0.7], 
+        TagBox[
+         TooltipBox[PointBox[1],
+          "\"wold\"",
+          TooltipStyle->"TextStyling"],
+         Annotation[#, "wold", "Tooltip"]& ], 
+        TagBox[
+         TooltipBox[PointBox[2],
+          "\"wolds\"",
+          TooltipStyle->"TextStyling"],
+         Annotation[#, "wolds", "Tooltip"]& ], 
+        TagBox[
+         TooltipBox[PointBox[3],
+          "\"wolf\"",
+          TooltipStyle->"TextStyling"],
+         Annotation[#, "wolf", "Tooltip"]& ], 
+        TagBox[
+         TooltipBox[PointBox[4],
+          "\"wolfs\"",
+          TooltipStyle->"TextStyling"],
+         Annotation[#, "wolfs", "Tooltip"]& ], 
+        TagBox[
+         TooltipBox[PointBox[5],
+          "\"wolfed\"",
+          TooltipStyle->"TextStyling"],
+         Annotation[#, "wolfed", "Tooltip"]& ], 
+        TagBox[
+         TooltipBox[PointBox[6],
+          "\"wolfhound\"",
+          TooltipStyle->"TextStyling"],
+         Annotation[#, "wolfhound", "Tooltip"]& ], 
+        TagBox[
+         TooltipBox[PointBox[7],
+          "\"wolfhounds\"",
+          TooltipStyle->"TextStyling"],
+         Annotation[#, "wolfhounds", "Tooltip"]& ], 
+        TagBox[
+         TooltipBox[PointBox[8],
+          "\"wolfing\"",
+          TooltipStyle->"TextStyling"],
+         Annotation[#, "wolfing", "Tooltip"]& ], 
+        TagBox[
+         TooltipBox[PointBox[9],
+          "\"wolfish\"",
+          TooltipStyle->"TextStyling"],
+         Annotation[#, "wolfish", "Tooltip"]& ], 
+        TagBox[
+         TooltipBox[PointBox[10],
+          "\"wolfishly\"",
+          TooltipStyle->"TextStyling"],
+         Annotation[#, "wolfishly", "Tooltip"]& ], 
+        TagBox[
+         TooltipBox[PointBox[11],
+          "\"wolfram\"",
+          TooltipStyle->"TextStyling"],
+         Annotation[#, "wolfram", "Tooltip"]& ], 
+        TagBox[
+         TooltipBox[PointBox[12],
+          "\"wolverine\"",
+          TooltipStyle->"TextStyling"],
+         Annotation[#, "wolverine", "Tooltip"]& ], 
+        TagBox[
+         TooltipBox[PointBox[13],
+          "\"wolverines\"",
+          TooltipStyle->"TextStyling"],
+         Annotation[#, "wolverines", "Tooltip"]& ], 
+        TagBox[
+         TooltipBox[PointBox[14],
+          "\"wolves\"",
+          TooltipStyle->"TextStyling"],
+         Annotation[#, "wolves", "Tooltip"]& ]}}],
+     Annotation[#, 
+      VertexCoordinateRules -> {{1.7228322499608137`, 1.8752748629217983`}, {
+       1.0320421489366067`, 1.6031353271581035`}, {2.6051958300929616`, 
+       1.8142604893858483`}, {1.704863876966408, 2.4300636847655825`}, {
+       1.6482194535406987`, 1.2116119712240545`}, {0.4714984500950339, 
+       0.9737519454501649}, {0., 1.50475508053172}, {4.082085377816653, 
+       1.489422671272366}, {4.98003562621582, 1.9824536090017495`}, {
+       5.1138802792730145`, 1.461582907596988}, {2.433490771655326, 
+       1.224984791018388}, {3.79022304937397, 0.43314619972063517`}, {
+       2.810828020630493, 0.}, {1.7308876644708344`, 0.52828027465425}}]& ],
+    AspectRatio->Automatic,
+    FrameTicks->None,
+    PlotRange->All,
+    PlotRangePadding->Scaled[0.1]], ",", 
+   GraphicsBox[
+    TagBox[GraphicsComplexBox[CompressedData["
+1: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
+      "], {
+       {RGBColor[0.5, 0., 0.], 
+        LineBox[{{1, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 
+          29, 30, 2}, {1, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 
+          44, 45, 46, 3}, {2, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 
+          59, 60, 61, 62, 1}, {2, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 
+          74, 75, 76, 77, 78, 4}, {3, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 
+          89, 90, 91, 92, 93, 94, 1}, {3, 95, 96, 97, 98, 99, 100, 101, 102, 
+          103, 104, 105, 106, 107, 108, 109, 110, 4}, {4, 111, 112, 113, 114, 
+          115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 2}, {4, 
+          127, 128, 129, 130, 131, 132, 133, 134, 135, 136, 137, 138, 139, 
+          140, 141, 142, 3}, {5, 1}, {5, 3}, {6, 143, 144, 145, 146, 147, 148,
+           149, 150, 151, 152, 153, 154, 155, 156, 157, 158, 7}, {6, 5}, {7, 
+          159, 160, 161, 162, 163, 164, 165, 166, 167, 168, 169, 170, 171, 
+          172, 173, 174, 6}, {7, 2}, {8, 175, 176, 177, 178, 179, 180, 181, 
+          182, 183, 184, 185, 186, 187, 188, 189, 190, 9}, {8, 3}, {9, 191, 
+          192, 193, 194, 195, 196, 197, 198, 199, 200, 201, 202, 203, 204, 
+          205, 206, 8}, {9, 207, 208, 209, 210, 211, 212, 213, 214, 215, 216, 
+          217, 218, 219, 220, 221, 222, 10}, {10, 223, 224, 225, 226, 227, 
+          228, 229, 230, 231, 232, 233, 234, 235, 236, 237, 238, 9}, {10, 
+          8}, {11, 3}, {11, 5}, {12, 239, 240, 241, 242, 243, 244, 245, 246, 
+          247, 248, 249, 250, 251, 252, 253, 254, 13}, {12, 8}, {13, 255, 256,
+           257, 258, 259, 260, 261, 262, 263, 264, 265, 266, 267, 268, 269, 
+          270, 12}, {13, 14}, {14, 2}, {14, 5}}]}, 
+       {RGBColor[0, 0, 0.7], 
+        TagBox[
+         TooltipBox[PointBox[1],
+          "\"wold\"",
+          TooltipStyle->"TextStyling"],
+         Annotation[#, "wold", "Tooltip"]& ], 
+        TagBox[
+         TooltipBox[PointBox[2],
+          "\"wolds\"",
+          TooltipStyle->"TextStyling"],
+         Annotation[#, "wolds", "Tooltip"]& ], 
+        TagBox[
+         TooltipBox[PointBox[3],
+          "\"wolf\"",
+          TooltipStyle->"TextStyling"],
+         Annotation[#, "wolf", "Tooltip"]& ], 
+        TagBox[
+         TooltipBox[PointBox[4],
+          "\"wolfs\"",
+          TooltipStyle->"TextStyling"],
+         Annotation[#, "wolfs", "Tooltip"]& ], 
+        TagBox[
+         TooltipBox[PointBox[5],
+          "\"wolfed\"",
+          TooltipStyle->"TextStyling"],
+         Annotation[#, "wolfed", "Tooltip"]& ], 
+        TagBox[
+         TooltipBox[PointBox[6],
+          "\"wolfhound\"",
+          TooltipStyle->"TextStyling"],
+         Annotation[#, "wolfhound", "Tooltip"]& ], 
+        TagBox[
+         TooltipBox[PointBox[7],
+          "\"wolfhounds\"",
+          TooltipStyle->"TextStyling"],
+         Annotation[#, "wolfhounds", "Tooltip"]& ], 
+        TagBox[
+         TooltipBox[PointBox[8],
+          "\"wolfing\"",
+          TooltipStyle->"TextStyling"],
+         Annotation[#, "wolfing", "Tooltip"]& ], 
+        TagBox[
+         TooltipBox[PointBox[9],
+          "\"wolfish\"",
+          TooltipStyle->"TextStyling"],
+         Annotation[#, "wolfish", "Tooltip"]& ], 
+        TagBox[
+         TooltipBox[PointBox[10],
+          "\"wolfishly\"",
+          TooltipStyle->"TextStyling"],
+         Annotation[#, "wolfishly", "Tooltip"]& ], 
+        TagBox[
+         TooltipBox[PointBox[11],
+          "\"wolfram\"",
+          TooltipStyle->"TextStyling"],
+         Annotation[#, "wolfram", "Tooltip"]& ], 
+        TagBox[
+         TooltipBox[PointBox[12],
+          "\"wolverine\"",
+          TooltipStyle->"TextStyling"],
+         Annotation[#, "wolverine", "Tooltip"]& ], 
+        TagBox[
+         TooltipBox[PointBox[13],
+          "\"wolverines\"",
+          TooltipStyle->"TextStyling"],
+         Annotation[#, "wolverines", "Tooltip"]& ], 
+        TagBox[
+         TooltipBox[PointBox[14],
+          "\"wolves\"",
+          TooltipStyle->"TextStyling"],
+         Annotation[#, "wolves", "Tooltip"]& ]}}],
+     Annotation[#, 
+      VertexCoordinateRules -> {{1.7049341364464818`, 1.4463257886411354`}, {
+       0.879267455335814, 1.755711107504169}, {2.3929724030663664`, 
+       0.7863404158032632}, {1.483646715589923, 0.3914859277015934}, {
+       1.6148582630442863`, 0.9966877206382387}, {0.45126708453911046`, 
+       0.6791273300855789}, {0., 1.4466661072324458`}, {3.357992791590368, 
+       1.2175610113413124`}, {4.281373356795953, 1.2168591786639829`}, {
+       4.134124184138682, 0.5880462468646354}, {2.178429729279592, 0.}, {
+       3.3656044370750378`, 2.3460910922569616`}, {2.398305158724848, 
+       2.794160269082994}, {1.4746728827754896`, 2.257708728249642}}]& ],
+    AspectRatio->Automatic,
+    FrameTicks->None,
+    PlotRange->All,
+    PlotRangePadding->Scaled[0.1]], ",", 
+   GraphicsBox[
+    TagBox[GraphicsComplexBox[CompressedData["
+1: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
+
+      "], {
+       {RGBColor[0.5, 0., 0.], 
+        LineBox[{{1, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 
+          29, 30, 2}, {1, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 
+          44, 45, 46, 3}, {2, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 
+          59, 60, 61, 62, 1}, {2, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 
+          74, 75, 76, 77, 78, 4}, {3, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 
+          89, 90, 91, 92, 93, 94, 1}, {3, 95, 96, 97, 98, 99, 100, 101, 102, 
+          103, 104, 105, 106, 107, 108, 109, 110, 4}, {4, 111, 112, 113, 114, 
+          115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 2}, {4, 
+          127, 128, 129, 130, 131, 132, 133, 134, 135, 136, 137, 138, 139, 
+          140, 141, 142, 3}, {5, 1}, {5, 3}, {6, 143, 144, 145, 146, 147, 148,
+           149, 150, 151, 152, 153, 154, 155, 156, 157, 158, 7}, {6, 5}, {7, 
+          159, 160, 161, 162, 163, 164, 165, 166, 167, 168, 169, 170, 171, 
+          172, 173, 174, 6}, {7, 2}, {8, 175, 176, 177, 178, 179, 180, 181, 
+          182, 183, 184, 185, 186, 187, 188, 189, 190, 9}, {8, 3}, {9, 191, 
+          192, 193, 194, 195, 196, 197, 198, 199, 200, 201, 202, 203, 204, 
+          205, 206, 8}, {9, 207, 208, 209, 210, 211, 212, 213, 214, 215, 216, 
+          217, 218, 219, 220, 221, 222, 10}, {10, 223, 224, 225, 226, 227, 
+          228, 229, 230, 231, 232, 233, 234, 235, 236, 237, 238, 9}, {10, 
+          8}, {11, 3}, {11, 5}, {12, 239, 240, 241, 242, 243, 244, 245, 246, 
+          247, 248, 249, 250, 251, 252, 253, 254, 13}, {12, 8}, {13, 255, 256,
+           257, 258, 259, 260, 261, 262, 263, 264, 265, 266, 267, 268, 269, 
+          270, 12}, {13, 14}, {14, 2}, {14, 5}}]}, 
+       {RGBColor[0, 0, 0.7], 
+        TagBox[
+         TooltipBox[PointBox[1],
+          "\"wold\"",
+          TooltipStyle->"TextStyling"],
+         Annotation[#, "wold", "Tooltip"]& ], 
+        TagBox[
+         TooltipBox[PointBox[2],
+          "\"wolds\"",
+          TooltipStyle->"TextStyling"],
+         Annotation[#, "wolds", "Tooltip"]& ], 
+        TagBox[
+         TooltipBox[PointBox[3],
+          "\"wolf\"",
+          TooltipStyle->"TextStyling"],
+         Annotation[#, "wolf", "Tooltip"]& ], 
+        TagBox[
+         TooltipBox[PointBox[4],
+          "\"wolfs\"",
+          TooltipStyle->"TextStyling"],
+         Annotation[#, "wolfs", "Tooltip"]& ], 
+        TagBox[
+         TooltipBox[PointBox[5],
+          "\"wolfed\"",
+          TooltipStyle->"TextStyling"],
+         Annotation[#, "wolfed", "Tooltip"]& ], 
+        TagBox[
+         TooltipBox[PointBox[6],
+          "\"wolfhound\"",
+          TooltipStyle->"TextStyling"],
+         Annotation[#, "wolfhound", "Tooltip"]& ], 
+        TagBox[
+         TooltipBox[PointBox[7],
+          "\"wolfhounds\"",
+          TooltipStyle->"TextStyling"],
+         Annotation[#, "wolfhounds", "Tooltip"]& ], 
+        TagBox[
+         TooltipBox[PointBox[8],
+          "\"wolfing\"",
+          TooltipStyle->"TextStyling"],
+         Annotation[#, "wolfing", "Tooltip"]& ], 
+        TagBox[
+         TooltipBox[PointBox[9],
+          "\"wolfish\"",
+          TooltipStyle->"TextStyling"],
+         Annotation[#, "wolfish", "Tooltip"]& ], 
+        TagBox[
+         TooltipBox[PointBox[10],
+          "\"wolfishly\"",
+          TooltipStyle->"TextStyling"],
+         Annotation[#, "wolfishly", "Tooltip"]& ], 
+        TagBox[
+         TooltipBox[PointBox[11],
+          "\"wolfram\"",
+          TooltipStyle->"TextStyling"],
+         Annotation[#, "wolfram", "Tooltip"]& ], 
+        TagBox[
+         TooltipBox[PointBox[12],
+          "\"wolverine\"",
+          TooltipStyle->"TextStyling"],
+         Annotation[#, "wolverine", "Tooltip"]& ], 
+        TagBox[
+         TooltipBox[PointBox[13],
+          "\"wolverines\"",
+          TooltipStyle->"TextStyling"],
+         Annotation[#, "wolverines", "Tooltip"]& ], 
+        TagBox[
+         TooltipBox[PointBox[14],
+          "\"wolves\"",
+          TooltipStyle->"TextStyling"],
+         Annotation[#, "wolves", "Tooltip"]& ]}}],
+     Annotation[#, 
+      VertexCoordinateRules -> {{2.8986145349780026`, 0.46984656873110375`}, {
+       3.6658130102530437`, 1.4831055776803739`}, {2.0144370145017465`, 0.}, {
+       2.655349076503593, 0.7322051169544381}, {3.0289428385088737`, 
+       0.4555239804526483}, {3.605599037640636, 0.9374444034625461}, {
+       4.209151876646025, 1.6494819368238747`}, {0.6944482378629633, 
+       0.7320106403218285}, {0., 1.1034567440508023`}, {
+       4.440892098500626*^-16, 1.1034567440508025`}, {2.3636778066710438`, 
+       0.3117632544216842}, {0.8110009589196969, 2.086891333330329}, {
+       2.0061123482846033`, 2.4753172927593416`}, {3.326101124923386, 
+       1.7433066524375134`}}]& ],
+    AspectRatio->Automatic,
+    FrameTicks->None,
+    PlotRange->All,
+    PlotRangePadding->Scaled[0.1]], ",", 
+   GraphicsBox[
+    TagBox[GraphicsComplexBox[CompressedData["
+1:eJw1l3k4Vev7xpV5qEwVpSIk5SRyMiS3DEWJBkpKUZIQDiUiqVSOhNiGVJpR
+GXba20kI0cAxJ2QoRJm27MEelo6+u3X9fuufdT3X+673Xe+znvt+PkvjcOCu
+o7NFRETmzhIR+X3P+6A3GIJpRBhL2CQljWJ9ReTKed8EOB1pnR9vwMb8rMka
++6VcOMT/naryg4e49rQrLTmT+NwnKpxPgGeyvsRGfwh6cuJk3Gkz62xuTBsm
+W+PJ+VJV2qXb0uhwMbEj1xP5v+tuiTy5X25Dz8vf4393L9k/N7IXg8f6In8/
+H5/wK6Rc9g2SSjXI9X8/c2Be/cbO9Hhy//9fp8N7mHw/8x9Ucv7stWHk+2vN
+GXL7vd6vUxplYxwC42Zz+k4Xj4GJT545/QQO+xWWd4uPQ710xe3aJgJJHkG7
+4/eMY9W4QNK1gsCGMEOXoNxx2F2cX7eXSkApMXRBwPQ4lqn+ld5wn0DwdZ9k
+PycGREsqCsrTCFDLJU86PmRgkf7iztXxBOZL+yz9KWCgmC15TXQ2gbaa7fkO
+bkxU21epsPkCdLzPCou4xERFy57P3kwBvmzcSOVQmchWSNrgOSbA20SR5096
+mGB1VCgNCs/jN0KtT5Ri4QBNr2nyqwBQ3m2WZsTCPrG7brEDApTxw9ZQPVig
+Fy/WeSqMTx1N/dgUz8Jxk0uRs4MJLF+iYZceNY7SyM+auubC79T7ak2dGANx
+ltttn0kRmL08vDwvgYE643uiTzsE+EaUlyipTUDx9eVy7ccCJGUXNrbmTUDG
+lS619qwA5qkyN8ssfyBAcCC/Y7cAzpRDFfc7fuCtTNs93T8ECGpz5D4xmcRE
+gkvq0DIecoyWvvKK4KDgvBTBmObi5pBVVXwtB0R83vwXXVx45WtTR1WmsDS3
+eKdjGRfSo225R49PIX5gofHLu1xE82YFDb6cgvkySz+xWC5GrUfDts/hIlbT
+J98omAtrxj7GZQ8uJlo123Ye4uLk0Tf0UBoXQ2qxO9LXEqgk8CUjiwX2ruYn
+3dYELg0ETH4LZaGm40JgiQuBiWMJjxIcWXiZXSi22puAyoH8h7e0Wbg1j2K1
++hSB/B2yNUt+MvEm3OQU/QKBSCdFiWWtTPR/GnF/k0DgYIlVan4OE3VHEoz2
+3iCQl6JY2R7JxJo7986d05xGTTbTWh4T0LAfZifqTaM8yym/aJgB7apda9SM
+ppFHU7SovM6AxXnVFg2zafTKx5s4mzHAejnCz7KYBsV9tXjcwDhiP0duTN40
+jXHJ77pn48ZxNUG6iLCaBsvi5iZ7w3Ho91wb6hDG548eZkt3jUEl78SW2io+
+jm/YdoZbzMaZgU0qK0/yMfE8OW1ODxtPvlQ5fdHhY9E1J4t2UY7wHtop0cuD
+o1EE33oNB6+/BeoWp/AgU1B72n4/B02FIxZiDjwoGXzM6ozj4MjjBSmSEjw8
++xUXM1DGwfQ15YXtVVy8XtwZtpfJwaW6Mem989j4R16brj3IQ6D1wFKJBhai
+d/fbTi3iI07EKfGJsE6DD/Ks5zrzYSh3PtZV+B0U3717fzCRj0RvW4qmIgt3
+G95saKvnY+jr2+SlnUws69nmul9OgIemD2j77zKRJ3i0rm+7AErzjU+N+zIR
+s32HteN1AdxMM/RKx7g4oxqpNJ8vrKspi0sUDR6Wmf5xd1pYH6YGzUfkXITn
+W9jsKhPEBWEa+UjxMg8ZT/K79uhyUVSYNpZO46GmzWgHr28KJao+d6/18XDC
+XdJ3dvoUXMIqp4ek+ejv7dmbuG0KM972kpS1fNz8sLGKPsNB28A7pc6NBLxC
+AgTTpZOYP6lc2ORJIOi1PffDiUnUDgaliF8kkEN4S4YuncSjWu+9gfeEeowM
+XMK9+QMmieLBouUEFnjOT+TzJ3BlV+/Gko8ELN/bnF3hPAEzR/p07BiBhFNH
+Kc/zGWjPErT5zRDQu5Qg2ibOwLX3ZzUZkVPQcrtSECzPR1IMldW3cwqxMjs3
+LxfmX910no2hzhTWm19n7tTmY5+6dfjETw4aLkSsmTHg49Pl4NblHzhQN2SL
+alry8cZJ1bfnMQeiqJtd5sRH5xbG2pXnOTDS0t5S48HH2utNI4r7OCjaL3pm
+fQgff8xVzCrUFeqKmhl/I1qAo6Nzu2xns5C8+eJQIEUAA60TnJRuJmpmnPUe
+Cn0m07lxbjadiYeRpqX6lQK0m3nOiU1iwrPpZbRspwDDe3VSbP2ZsCsjZq0V
++uYegePMiB0T08qy7qmyBMo67ntFr2DigLv3tnU6BHJHHvksrGeCofEzdIVw
+fPPzlvQXqiz4PKa5/e4TysU7PWZ5s2DezCva/EqAbKnbHZ+oLEjp1vM7UwT4
+r+DB5VUECw6FZ8M/eAvAHNL9q2cTG9Z6wbtsjAU4MP5T7dMVNh65l/mbiQtQ
+I/krQ6aeDcqmwLA3zXxs+Fcn++8oHu44LDfn9U5h5y6D612VPLRLez/VyRHm
+PbVGff0sPgZnnPLnBkwh4e9knVjwYZt2buUrwykY6DcuLo/gozjxPN1uioPu
+Zw5LXtP5MDk/nVFF50DtQNB0DIOPJ0fulZuf5CA/useMs1yAlnm8/Ma1HCjl
+SeuusWdCSkli9fpAAvKT7fvMTgrze9g85fJRAuc2hEmNZDHBXfvz+x43YX6c
+bT7o1TJxaFTh6ZPtBN4zlM/wWUzIbcj8eAkEerQCBizUWNBdU90+ri8c18tc
+zLZhgW/nkzy4VFjXX/85LHWChTMKcYeC5QiEeJ8q8LvFQXAZy2HeL2E+4sKC
+P1ZzkLlChmMyxkfgjkWuV0Y58AkwyRdr50NCvWTjKXlhfU7uXhpewUed6Qqk
+/DmFf2+3ut7O4eOFmkfJx31TGKQmd4Ql8LE1wsTR4KwwT64XIpWEvjZ4a/B7
+5p0pNM/TSTjlyoeZT6EZP/gDzvaGXlu3j4fJpYUP+ld8wP5POv5HDHjofn4+
+yuZjK9zVPo9Zy/DwjyDA0yyqFatFM3b0f+XCOMko7bNGK6xcFz/Y8oqL8JrT
+Co6VLRgL1c+/cIML18xnx3P2tWDemrGp26e40O9Ib5CZaMa5qwtfPdzFhVpL
+U6Jx9Rv0RB+mmJ7gQN8qb9hloAbqOezW9ds4cBsO2a3Ir8bM+wyDP1dxUH1Z
+1qpYrBqUg17SkOGgsdJNJEHqNXbdvXbo4BgbBWket4ZFq7DZwWHgVgMboxIf
+M/UnKvDqWdOQ6DM2KkXHaV9qysHh7vS8lcpG7LoTNXK9Jaj94yD9r3ds5LkG
+qB+bU4oxg/z2TT/YmC2uRe/eXYaRCe4ezwUcJDMCdMWo5VgstZFVbS6MU1z3
+hGhUQOx5yR33wxzY9j+ide2uxH7Ko9TlVziI/dNQbKVGFYx7Rxwkn3LQVXrU
+3JNfhXfnymNEGjlQufFmCxQa4RsXXOD3nAuJlSMT6qxGrPDqDwz4yEXPeY0Y
+r54m2FmZKwRxuXjBrNnad6wZRXlBpt4LeKA53/bjDDWD47vl6+Y/hT58PHPJ
+Fp8WiFTEekjt5sEjZP6lwokWxO4Td78XyMMqWmKUaHgrdilf7Je6ykOSZe1s
+mfvJoEVK5+b6jsBjspWiHpIOz43H6mwWj4BqGVR1ffQm/M2yjSh1w+gT33E5
+QvQuFBcMGlLDhjGs0W118es95LLv/FWkPYwXHt7ptZQHaP+WP0Vr+Y4w16T8
+twseweHZXOXWyO+YjFl2YdbxbFS4FxzX0vmOmH6jYPGO57gdfOaPK/4DsArN
+KpbzoSHjSGea7oIBWI7auDf30VAcclPHuKIf6p8L/161iY5N/yov//dYP6J8
+iyT+i6XjvDJtQkS+H2qUr04GL+hIKQtU4vzTB8uY/IwXjXRcZGmurjzUhzWO
+zOar9XToqY71REv2IebsKrNaBhVeLnopve++QF1zx2rJkEKI+5rk7FrXB/6Z
+WamOxvkg/AXmojF9CEo9/mOx7lM4Xy+1+P6xDz7hnw2V7R/j1fNfvwZX9iPD
+bPfnhvQcJFUyIwYi+9Fppfu+eX42FnGT3N+09MNjQSY7tfohcuyZkiE6wvO9
+jorz4kSg1kjbRn7gG6JDh6wnvwaj0fpd1wmT7xA58bPIr9Ab1HViWz0ShfHA
+hm0Odi7Q6olzqv8mjF3fOvvcXoWh5LELaRbDEDE7crGOZVnROqp/8EGaMHbY
+Pxyw3qHiKy1ic8eEMLaxlJFV31ZhlkCjLNgyAsrGLFIPetun4prGunF54hKp
+l528/8IMoroh7mZC6umCtuyVBtluxNUbkHprCBJPfkfpAu9D/6bfeoxb8GTU
+RrULe4LsSb2Kzeu097/xCedmokk9a5r71xyd/0n4v/KA1Ht4FPWV27VOVLMi
+SD+gPO5YWMBrhvjWVNIvdtXHmtT6NcNHfD/pJ8HPJ4r9XzSBfmgh6TdmiomS
+tsmNWOeyk/Sjv/Qe3zx9tAEjGUdIv7rRc7rqsGE9tl5NIv3sfahuhbegDuX7
+kki/c+mj0oZe1mJUNojUw7anO5Q36L1HwTJuzG+9zOyByWnJWjgERJB6ukVo
+qWG8FjL0KFJvUl5rJbZ11cH5WTapx0SV7847Wv6F3duhi7/1mqFzNW1WSz2W
+mRSQenZrOHxv7qcGyEVcJfVeaNeVpzXSCJWdxqQfmAts/7OQ6UDqfTHSL6La
+KT2aaR1oWh1O+omKfXZJsXYnfCdESL+hqe65XveiE0EqqqQfZcjZbzFw+oQM
+6Wbab7+KoXnSSoc/QdlSjfQz/++xdNNLXdgqsYT0u2zDN2ZntLqxYzSD5IHK
+EDsdi72ZMNawJXkhhiP95cCdu9CiLCF5Qvm+wiap8Qc4HbeX5A35StnjGfI5
+eFBcQ/II5aKhqoLcE9xOP0Lyik/6q6kLvXnQCxAneSZogNkkG1OITfekSN45
+7BMd6veLCjnOW5KH8jwYTo2jlfjxYpDkJVvtz98ORVVhpkGe5KkHu2nS9yVe
+Y5GCL8lb8mV+Ir4XXyOGbkbyWKnRyrwkzmsodEqQvJbtFZ7C2leN5Xq5JM8V
+jYYzAp9XI/30KZL3TL3ePh0XqYGHcg/ZD9/2vSv4WFmF8F59sl+qBU9s+Pa1
+EvG+e8l++uKy/5FS+UqYnlxC9tuTM91FaxJfYY4dlezH1Fvv3YIVyqF0TIHs
+1++TL/iX5JYiJimQ7Oc2DJ9fJ11eItDdn+z3KqH9QfNUSvBQpoDkATuzuYll
+F++iyjaJ5IVmpzTvcd9bKFrrRfJEc8+gU/fKDKQxZEjeCLqhm3nTigI9ezOS
+R+TbbM29S5JwZ0UAySvRj8NEC9SuIqG1nuSZSrugI50xl6B65dfK37zjQc2N
+ksuPxv8AbPONMw==
+      "], {
+       {RGBColor[0.5, 0., 0.], 
+        LineBox[{{1, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 
+          29, 30, 2}, {1, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 
+          44, 45, 46, 3}, {2, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 
+          59, 60, 61, 62, 1}, {2, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 
+          74, 75, 76, 77, 78, 4}, {3, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 
+          89, 90, 91, 92, 93, 94, 1}, {3, 95, 96, 97, 98, 99, 100, 101, 102, 
+          103, 104, 105, 106, 107, 108, 109, 110, 4}, {4, 111, 112, 113, 114, 
+          115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 2}, {4, 
+          127, 128, 129, 130, 131, 132, 133, 134, 135, 136, 137, 138, 139, 
+          140, 141, 142, 3}, {5, 1}, {5, 3}, {6, 143, 144, 145, 146, 147, 148,
+           149, 150, 151, 152, 153, 154, 155, 156, 157, 158, 7}, {6, 5}, {7, 
+          159, 160, 161, 162, 163, 164, 165, 166, 167, 168, 169, 170, 171, 
+          172, 173, 174, 6}, {7, 2}, {8, 175, 176, 177, 178, 179, 180, 181, 
+          182, 183, 184, 185, 186, 187, 188, 189, 190, 9}, {8, 3}, {9, 191, 
+          192, 193, 194, 195, 196, 197, 198, 199, 200, 201, 202, 203, 204, 
+          205, 206, 8}, {9, 207, 208, 209, 210, 211, 212, 213, 214, 215, 216, 
+          217, 218, 219, 220, 221, 222, 10}, {10, 223, 224, 225, 226, 227, 
+          228, 229, 230, 231, 232, 233, 234, 235, 236, 237, 238, 9}, {10, 
+          8}, {11, 3}, {11, 5}, {12, 239, 240, 241, 242, 243, 244, 245, 246, 
+          247, 248, 249, 250, 251, 252, 253, 254, 13}, {12, 8}, {13, 255, 256,
+           257, 258, 259, 260, 261, 262, 263, 264, 265, 266, 267, 268, 269, 
+          270, 12}, {13, 14}, {14, 2}, {14, 5}}]}, 
+       {RGBColor[0, 0, 0.7], 
+        TagBox[
+         TooltipBox[PointBox[1],
+          "\"wold\"",
+          TooltipStyle->"TextStyling"],
+         Annotation[#, "wold", "Tooltip"]& ], 
+        TagBox[
+         TooltipBox[PointBox[2],
+          "\"wolds\"",
+          TooltipStyle->"TextStyling"],
+         Annotation[#, "wolds", "Tooltip"]& ], 
+        TagBox[
+         TooltipBox[PointBox[3],
+          "\"wolf\"",
+          TooltipStyle->"TextStyling"],
+         Annotation[#, "wolf", "Tooltip"]& ], 
+        TagBox[
+         TooltipBox[PointBox[4],
+          "\"wolfs\"",
+          TooltipStyle->"TextStyling"],
+         Annotation[#, "wolfs", "Tooltip"]& ], 
+        TagBox[
+         TooltipBox[PointBox[5],
+          "\"wolfed\"",
+          TooltipStyle->"TextStyling"],
+         Annotation[#, "wolfed", "Tooltip"]& ], 
+        TagBox[
+         TooltipBox[PointBox[6],
+          "\"wolfhound\"",
+          TooltipStyle->"TextStyling"],
+         Annotation[#, "wolfhound", "Tooltip"]& ], 
+        TagBox[
+         TooltipBox[PointBox[7],
+          "\"wolfhounds\"",
+          TooltipStyle->"TextStyling"],
+         Annotation[#, "wolfhounds", "Tooltip"]& ], 
+        TagBox[
+         TooltipBox[PointBox[8],
+          "\"wolfing\"",
+          TooltipStyle->"TextStyling"],
+         Annotation[#, "wolfing", "Tooltip"]& ], 
+        TagBox[
+         TooltipBox[PointBox[9],
+          "\"wolfish\"",
+          TooltipStyle->"TextStyling"],
+         Annotation[#, "wolfish", "Tooltip"]& ], 
+        TagBox[
+         TooltipBox[PointBox[10],
+          "\"wolfishly\"",
+          TooltipStyle->"TextStyling"],
+         Annotation[#, "wolfishly", "Tooltip"]& ], 
+        TagBox[
+         TooltipBox[PointBox[11],
+          "\"wolfram\"",
+          TooltipStyle->"TextStyling"],
+         Annotation[#, "wolfram", "Tooltip"]& ], 
+        TagBox[
+         TooltipBox[PointBox[12],
+          "\"wolverine\"",
+          TooltipStyle->"TextStyling"],
+         Annotation[#, "wolverine", "Tooltip"]& ], 
+        TagBox[
+         TooltipBox[PointBox[13],
+          "\"wolverines\"",
+          TooltipStyle->"TextStyling"],
+         Annotation[#, "wolverines", "Tooltip"]& ], 
+        TagBox[
+         TooltipBox[PointBox[14],
+          "\"wolves\"",
+          TooltipStyle->"TextStyling"],
+         Annotation[#, "wolves", "Tooltip"]& ]}}],
+     Annotation[#, 
+      VertexCoordinateRules -> {{1.7029913819398912`, 0.830146916255884}, {
+       1.6186667996916646`, 1.1995970504865718`}, {1.3823945706334417`, 
+       1.4958730546284356`}, {1.0409713074163016`, 1.6602938324777408`}, {
+       0.6620200745981312, 1.6602938324947543`}, {0.3205968113662272, 
+       1.4958730546761068`}, {0.0843245822814006, 1.1995970505554585`}, {0., 
+       0.8301469163323425}, {0.08432458221505235, 0.4606967820940829}, {
+       0.32059681124667194`, 0.1644207779310033}, {0.6620200744490479, 
+       5.1040838222604634`*^-11}, {1.0409713072672186`, 0.}, {
+       1.3823945705138863`, 0.16442077778799014`}, {1.6186667996253168`, 
+       0.460696781887423}}]& ],
+    AspectRatio->Automatic,
+    FrameTicks->None,
+    PlotRange->All,
+    PlotRangePadding->Scaled[0.1]], ",", 
+   GraphicsBox[
+    TagBox[GraphicsComplexBox[CompressedData["
+1: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
+h4i44nJ9HimHUXCPyLTPFMXjvzJzrCw=
+      "], {
+       {RGBColor[0.5, 0., 0.], 
+        LineBox[{{1, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 
+          29, 30, 2}, {1, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 
+          44, 45, 46, 3}, {2, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 
+          59, 60, 61, 62, 1}, {2, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 
+          74, 75, 76, 77, 78, 4}, {3, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 
+          89, 90, 91, 92, 93, 94, 1}, {3, 95, 96, 97, 98, 99, 100, 101, 102, 
+          103, 104, 105, 106, 107, 108, 109, 110, 4}, {4, 111, 112, 113, 114, 
+          115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 2}, {4, 
+          127, 128, 129, 130, 131, 132, 133, 134, 135, 136, 137, 138, 139, 
+          140, 141, 142, 3}, {5, 1}, {5, 3}, {6, 143, 144, 145, 146, 147, 148,
+           149, 150, 151, 152, 153, 154, 155, 156, 157, 158, 7}, {6, 5}, {7, 
+          159, 160, 161, 162, 163, 164, 165, 166, 167, 168, 169, 170, 171, 
+          172, 173, 174, 6}, {7, 2}, {8, 175, 176, 177, 178, 179, 180, 181, 
+          182, 183, 184, 185, 186, 187, 188, 189, 190, 9}, {8, 3}, {9, 191, 
+          192, 193, 194, 195, 196, 197, 198, 199, 200, 201, 202, 203, 204, 
+          205, 206, 8}, {9, 207, 208, 209, 210, 211, 212, 213, 214, 215, 216, 
+          217, 218, 219, 220, 221, 222, 10}, {10, 223, 224, 225, 226, 227, 
+          228, 229, 230, 231, 232, 233, 234, 235, 236, 237, 238, 9}, {10, 
+          8}, {11, 3}, {11, 5}, {12, 239, 240, 241, 242, 243, 244, 245, 246, 
+          247, 248, 249, 250, 251, 252, 253, 254, 13}, {12, 8}, {13, 255, 256,
+           257, 258, 259, 260, 261, 262, 263, 264, 265, 266, 267, 268, 269, 
+          270, 12}, {13, 14}, {14, 2}, {14, 5}}]}, 
+       {RGBColor[0, 0, 0.7], 
+        TagBox[
+         TooltipBox[PointBox[1],
+          "\"wold\"",
+          TooltipStyle->"TextStyling"],
+         Annotation[#, "wold", "Tooltip"]& ], 
+        TagBox[
+         TooltipBox[PointBox[2],
+          "\"wolds\"",
+          TooltipStyle->"TextStyling"],
+         Annotation[#, "wolds", "Tooltip"]& ], 
+        TagBox[
+         TooltipBox[PointBox[3],
+          "\"wolf\"",
+          TooltipStyle->"TextStyling"],
+         Annotation[#, "wolf", "Tooltip"]& ], 
+        TagBox[
+         TooltipBox[PointBox[4],
+          "\"wolfs\"",
+          TooltipStyle->"TextStyling"],
+         Annotation[#, "wolfs", "Tooltip"]& ], 
+        TagBox[
+         TooltipBox[PointBox[5],
+          "\"wolfed\"",
+          TooltipStyle->"TextStyling"],
+         Annotation[#, "wolfed", "Tooltip"]& ], 
+        TagBox[
+         TooltipBox[PointBox[6],
+          "\"wolfhound\"",
+          TooltipStyle->"TextStyling"],
+         Annotation[#, "wolfhound", "Tooltip"]& ], 
+        TagBox[
+         TooltipBox[PointBox[7],
+          "\"wolfhounds\"",
+          TooltipStyle->"TextStyling"],
+         Annotation[#, "wolfhounds", "Tooltip"]& ], 
+        TagBox[
+         TooltipBox[PointBox[8],
+          "\"wolfing\"",
+          TooltipStyle->"TextStyling"],
+         Annotation[#, "wolfing", "Tooltip"]& ], 
+        TagBox[
+         TooltipBox[PointBox[9],
+          "\"wolfish\"",
+          TooltipStyle->"TextStyling"],
+         Annotation[#, "wolfish", "Tooltip"]& ], 
+        TagBox[
+         TooltipBox[PointBox[10],
+          "\"wolfishly\"",
+          TooltipStyle->"TextStyling"],
+         Annotation[#, "wolfishly", "Tooltip"]& ], 
+        TagBox[
+         TooltipBox[PointBox[11],
+          "\"wolfram\"",
+          TooltipStyle->"TextStyling"],
+         Annotation[#, "wolfram", "Tooltip"]& ], 
+        TagBox[
+         TooltipBox[PointBox[12],
+          "\"wolverine\"",
+          TooltipStyle->"TextStyling"],
+         Annotation[#, "wolverine", "Tooltip"]& ], 
+        TagBox[
+         TooltipBox[PointBox[13],
+          "\"wolverines\"",
+          TooltipStyle->"TextStyling"],
+         Annotation[#, "wolverines", "Tooltip"]& ], 
+        TagBox[
+         TooltipBox[PointBox[14],
+          "\"wolves\"",
+          TooltipStyle->"TextStyling"],
+         Annotation[#, "wolves", "Tooltip"]& ]}}],
+     Annotation[#, 
+      VertexCoordinateRules -> {{1.1282796639069839`, 0.3149642829948778}, {
+       0., 1.1417167152198768`}, {0.1281078067725978, 0.9367001385078529}, {
+       0.4301779935008794, 0.}, {0.9899040808862877, 1.3958193469590876`}, {
+       0.7210415352884652, 1.4128645901062888`}, {1.4830886088809772`, 
+       1.0907086959314003`}, {0.9892145940326251, 1.0224898105528024`}, {
+       1.2129149171853402`, 0.19310011995715803`}, {0.38645817367679525`, 
+       0.9497690194584916}, {1.3280223266413385`, 1.5863978111313648`}, {
+       0.5786464480162734, 1.0862077603458902`}, {1.244169243350668, 
+       0.7891677997545188}, {1.5440967245185606`, 0.7900587146789528}}]& ],
+    AspectRatio->Automatic,
+    FrameTicks->None,
+    PlotRange->All,
+    PlotRangePadding->Scaled[0.1]], ",", 
+   GraphicsBox[
+    TagBox[
+     GraphicsComplexBox[{{6., 0.}, {5., 0.}, {1., 0.}, {4., 0.}, {10., 0.}, {
+      0., 0.}, {3., 0.}, {2., 0.}, {13., 0.}, {12., 0.}, {11., 0.}, {7., 
+      0.}, {8., 0.}, {9., 0.}}, {
+       {RGBColor[0.5, 0., 0.], 
+        CircleBox[{5.5, 0.}, 0.5, NCache[{0, Pi}, {0, 3.141592653589793}]], 
+        CircleBox[{3.5, 0.}, 2.5, NCache[{0, Pi}, {0, 3.141592653589793}]], 
+        CircleBox[{5.5, 0.}, 0.5, NCache[{0, Pi}, {0, 3.141592653589793}]], 
+        CircleBox[{4.5, 0.}, 0.5, NCache[{0, Pi}, {0, 3.141592653589793}]], 
+        CircleBox[{3.5, 0.}, 2.5, NCache[{0, Pi}, {0, 3.141592653589793}]], 
+        CircleBox[{2.5, 0.}, 1.5, NCache[{0, Pi}, {0, 3.141592653589793}]], 
+        CircleBox[{4.5, 0.}, 0.5, NCache[{0, Pi}, {0, 3.141592653589793}]], 
+        CircleBox[{2.5, 0.}, 1.5, NCache[{0, Pi}, {0, 3.141592653589793}]], 
+        CircleBox[{8., 0.}, 2., NCache[{0, Pi}, {0, 3.141592653589793}]], 
+        CircleBox[{5.5, 0.}, 4.5, NCache[{0, Pi}, {0, 3.141592653589793}]], 
+        CircleBox[{1.5, 0.}, 1.5, NCache[{0, Pi}, {0, 3.141592653589793}]], 
+        CircleBox[{5., 0.}, 5., NCache[{0, Pi}, {0, 3.141592653589793}]], 
+        CircleBox[{1.5, 0.}, 1.5, NCache[{0, Pi}, {0, 3.141592653589793}]], 
+        CircleBox[{4., 0.}, 1., NCache[{0, Pi}, {0, 3.141592653589793}]], 
+        CircleBox[{7.5, 0.}, 5.5, NCache[{0, Pi}, {0, 3.141592653589793}]], 
+        CircleBox[{1.5, 0.}, 0.5, NCache[{0, Pi}, {0, 3.141592653589793}]], 
+        CircleBox[{7.5, 0.}, 5.5, NCache[{0, Pi}, {0, 3.141592653589793}]], 
+        CircleBox[{12.5, 0.}, 0.5, NCache[{0, Pi}, {0, 3.141592653589793}]], 
+        CircleBox[{12.5, 0.}, 0.5, NCache[{0, Pi}, {0, 3.141592653589793}]], 
+        CircleBox[{7., 0.}, 5., NCache[{0, Pi}, {0, 3.141592653589793}]], 
+        CircleBox[{6., 0.}, 5., NCache[{0, Pi}, {0, 3.141592653589793}]], 
+        CircleBox[{10.5, 0.}, 0.5, NCache[{0, Pi}, {0, 3.141592653589793}]], 
+        CircleBox[{7.5, 0.}, 0.5, NCache[{0, Pi}, {0, 3.141592653589793}]], 
+        CircleBox[{4.5, 0.}, 2.5, NCache[{0, Pi}, {0, 3.141592653589793}]], 
+        CircleBox[{7.5, 0.}, 0.5, NCache[{0, Pi}, {0, 3.141592653589793}]], 
+        CircleBox[{8.5, 0.}, 0.5, NCache[{0, Pi}, {0, 3.141592653589793}]], 
+        CircleBox[{7., 0.}, 2., NCache[{0, Pi}, {0, 3.141592653589793}]], 
+        CircleBox[{9.5, 0.}, 0.5, NCache[{0, Pi}, {0, 3.141592653589793}]]}, 
+       {RGBColor[0, 0, 0.7], 
+        TagBox[
+         TooltipBox[PointBox[1],
+          "\"wold\"",
+          TooltipStyle->"TextStyling"],
+         Annotation[#, "wold", "Tooltip"]& ], 
+        TagBox[
+         TooltipBox[PointBox[2],
+          "\"wolds\"",
+          TooltipStyle->"TextStyling"],
+         Annotation[#, "wolds", "Tooltip"]& ], 
+        TagBox[
+         TooltipBox[PointBox[3],
+          "\"wolf\"",
+          TooltipStyle->"TextStyling"],
+         Annotation[#, "wolf", "Tooltip"]& ], 
+        TagBox[
+         TooltipBox[PointBox[4],
+          "\"wolfs\"",
+          TooltipStyle->"TextStyling"],
+         Annotation[#, "wolfs", "Tooltip"]& ], 
+        TagBox[
+         TooltipBox[PointBox[5],
+          "\"wolfed\"",
+          TooltipStyle->"TextStyling"],
+         Annotation[#, "wolfed", "Tooltip"]& ], 
+        TagBox[
+         TooltipBox[PointBox[6],
+          "\"wolfhound\"",
+          TooltipStyle->"TextStyling"],
+         Annotation[#, "wolfhound", "Tooltip"]& ], 
+        TagBox[
+         TooltipBox[PointBox[7],
+          "\"wolfhounds\"",
+          TooltipStyle->"TextStyling"],
+         Annotation[#, "wolfhounds", "Tooltip"]& ], 
+        TagBox[
+         TooltipBox[PointBox[8],
+          "\"wolfing\"",
+          TooltipStyle->"TextStyling"],
+         Annotation[#, "wolfing", "Tooltip"]& ], 
+        TagBox[
+         TooltipBox[PointBox[9],
+          "\"wolfish\"",
+          TooltipStyle->"TextStyling"],
+         Annotation[#, "wolfish", "Tooltip"]& ], 
+        TagBox[
+         TooltipBox[PointBox[10],
+          "\"wolfishly\"",
+          TooltipStyle->"TextStyling"],
+         Annotation[#, "wolfishly", "Tooltip"]& ], 
+        TagBox[
+         TooltipBox[PointBox[11],
+          "\"wolfram\"",
+          TooltipStyle->"TextStyling"],
+         Annotation[#, "wolfram", "Tooltip"]& ], 
+        TagBox[
+         TooltipBox[PointBox[12],
+          "\"wolverine\"",
+          TooltipStyle->"TextStyling"],
+         Annotation[#, "wolverine", "Tooltip"]& ], 
+        TagBox[
+         TooltipBox[PointBox[13],
+          "\"wolverines\"",
+          TooltipStyle->"TextStyling"],
+         Annotation[#, "wolverines", "Tooltip"]& ], 
+        TagBox[
+         TooltipBox[PointBox[14],
+          "\"wolves\"",
+          TooltipStyle->"TextStyling"],
+         Annotation[#, "wolves", "Tooltip"]& ]}}],
+     Annotation[#, 
+      VertexCoordinateRules -> {{6., 0.}, {5., 0.}, {1., 0.}, {4., 0.}, {10., 
+       0.}, {0., 0.}, {3., 0.}, {2., 0.}, {13., 0.}, {12., 0.}, {11., 0.}, {
+       7., 0.}, {8., 0.}, {9., 0.}}]& ],
+    AspectRatio->Automatic,
+    FrameTicks->None,
+    PlotRange->All,
+    PlotRangePadding->Scaled[0.1]]}], "}"}]], "Output"]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{808, 751},
+WindowMargins->{{12, Automatic}, {Automatic, 24}},
+FrontEndVersion->"10.0 for Mac OS X x86 (32-bit, 64-bit Kernel) (December 4, \
+2014)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{
+ "Info3634272473-8995600"->{
+  Cell[686, 29, 2551, 40, 96, "Print",
+   CellTags->"Info3634272473-8995600"]}
+ }
+*)
+(*CellTagsIndex
+CellTagsIndex->{
+ {"Info3634272473-8995600", 62082, 1254}
+ }
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 26, 0, 92, "Title"],
+Cell[CellGroupData[{
+Cell[631, 26, 52, 1, 28, "Input"],
+Cell[686, 29, 2551, 40, 96, "Print",
+ CellTags->"Info3634272473-8995600"]
+}, Open  ]],
+Cell[3252, 72, 144, 4, 28, "Input",
+ CellID->8901538],
+Cell[3399, 78, 489, 16, 28, "Input",
+ CellID->550942384],
+Cell[CellGroupData[{
+Cell[3913, 98, 425, 11, 63, "Input"],
+Cell[4341, 111, 57392, 1128, 346, "Output"]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)

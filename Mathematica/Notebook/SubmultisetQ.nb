@@ -1,0 +1,526 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 10.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     16797,        517]
+NotebookOptionsPosition[     14757,        445]
+NotebookOutlinePosition[     15111,        461]
+CellTagsIndexPosition[     15068,        458]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["SubmultisetQ", "Title",
+ CellChangeTimes->{{3.620002361053507*^9, 3.620002362012308*^9}}],
+
+Cell["\<\
+Functional specification:
+
+SubmultisetQ[{1, 1, 1, 2, 3}, {1, 1}] ---> True
+SubmultisetQ[{1, 2, 3}, {1, 1}] ---> False\
+\>", "Text",
+ CellChangeTimes->{{3.619987179565909*^9, 3.6199871795671*^9}, {
+  3.620002370707114*^9, 3.620002388779838*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"SubmultisetQ", "[", 
+   RowBox[{"parent_List", ",", "sublist_List"}], "]"}], ":=", 
+  RowBox[{"MatchQ", "[", 
+   RowBox[{
+    RowBox[{"SequenceAlignment", "[", 
+     RowBox[{"parent", ",", "sublist", ",", 
+      RowBox[{"Method", "\[Rule]", "\"\<Global\>\""}]}], "]"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"___", ",", 
+      RowBox[{"Verbatim", "[", "sublist", "]"}], ",", "___"}], "}"}]}], 
+   "]"}]}]], "Input",
+ CellChangeTimes->{{3.619987184719445*^9, 3.619987251107885*^9}, {
+  3.619987465766077*^9, 3.6199874702242517`*^9}, {3.62000205080444*^9, 
+  3.620002051610577*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{"SubmultisetQ", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"1", ",", "1", ",", "1", ",", "2", ",", "3"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"1", ",", "1"}], "}"}]}], "]"}], "\[IndentingNewLine]", 
+ RowBox[{"SubmultisetQ", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"1", ",", "2", ",", "3"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"1", ",", "1"}], "}"}]}], "]"}]}], "Input",
+ CellChangeTimes->{{3.6199872625392237`*^9, 3.61998726277017*^9}}],
+
+Cell[BoxData["True"], "Output",
+ CellChangeTimes->{3.619987265226933*^9, 3.619987471763831*^9, 
+  3.6200020535695868`*^9}],
+
+Cell[BoxData["False"], "Output",
+ CellChangeTimes->{3.619987265226933*^9, 3.619987471763831*^9, 
+  3.620002053573917*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"meng2SubmultisetQ", "[", 
+   RowBox[{"parent_List", ",", "sublist_List"}], "]"}], ":=", 
+  RowBox[{
+   RowBox[{"LongestCommonSubsequence", "[", 
+    RowBox[{"parent", ",", "sublist"}], "]"}], "===", "sublist"}]}], "\n", 
+ RowBox[{"meng2SubmultisetQ", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"1", ",", "1", ",", "1", ",", "2", ",", "3"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"1", ",", "1"}], "}"}]}], "]"}], "\[IndentingNewLine]", 
+ RowBox[{"meng2SubmultisetQ", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"1", ",", "2", ",", "3"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"1", ",", "1"}], "}"}]}], "]"}], "\[IndentingNewLine]"}], "Input",\
+
+ CellChangeTimes->{{3.62004879347989*^9, 3.620048825361726*^9}}],
+
+Cell[BoxData["True"], "Output",
+ CellChangeTimes->{{3.6200488052892733`*^9, 3.620048825962536*^9}}],
+
+Cell[BoxData["False"], "Output",
+ CellChangeTimes->{{3.6200488052892733`*^9, 3.620048825969199*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"meng3SubmultisetQ", "[", 
+   RowBox[{"parent_List", ",", "sublist_List"}], "]"}], ":=", 
+  RowBox[{
+   RowBox[{"LongestCommonSequence", "[", 
+    RowBox[{"parent", ",", "sublist"}], "]"}], "===", "sublist"}]}], "\n", 
+ RowBox[{"meng3SubmultisetQ", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"1", ",", "1", ",", "1", ",", "2", ",", "3"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"1", ",", "1"}], "}"}]}], "]"}], "\[IndentingNewLine]", 
+ RowBox[{"meng3SubmultisetQ", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"1", ",", "2", ",", "3"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"1", ",", "1"}], "}"}]}], "]"}]}], "Input",
+ CellChangeTimes->{{3.620057167296104*^9, 3.620057192745195*^9}}],
+
+Cell[BoxData["True"], "Output",
+ CellChangeTimes->{{3.6200571880756197`*^9, 3.620057193166363*^9}}],
+
+Cell[BoxData["False"], "Output",
+ CellChangeTimes->{{3.6200571880756197`*^9, 3.620057193170277*^9}}]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"args", "=", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"RandomInteger", "[", 
+      RowBox[{"9", ",", "10000"}], "]"}], ",", 
+     RowBox[{"RandomInteger", "[", 
+      RowBox[{"9", ",", "3"}], "]"}]}], "}"}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.620002202161832*^9, 3.62000224681524*^9}}],
+
+Cell[BoxData[
+ RowBox[{"mengTiming", "[", 
+  RowBox[{"meng2SubmultisetQ", "[", 
+   RowBox[{"Sequence", "@@", "args"}], "]"}], "]"}]], "Input"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"mengTiming", "[", 
+  RowBox[{"meng3SubmultisetQ", "[", 
+   RowBox[{"Sequence", "@@", "args"}], "]"}], "]"}]], "Input",
+ CellChangeTimes->{
+  3.620002016049863*^9, {3.620002255134256*^9, 3.620002257320857*^9}, {
+   3.620048836573637*^9, 3.620048837214159*^9}, {3.620057203822773*^9, 
+   3.6200572041551323`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ InterpretationBox["\<\"ran \\!\\(1\\) iterations for a total time of 0.00156 \
+seconds\"\>",
+  StringForm[
+  "ran `1` iterations for a total time of `2` seconds", 1, "0.00156"],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.620002016635827*^9, 3.620002055065021*^9, 
+  3.6200021589413*^9, 3.6200022580778913`*^9, 3.6200488378323193`*^9, 
+  3.620057204567601*^9}],
+
+Cell[BoxData[
+ InterpretationBox["\<\"ran \\!\\(10\\) iterations for a total time of 0.0143 \
+seconds\"\>",
+  StringForm[
+  "ran `1` iterations for a total time of `2` seconds", 10, "0.0143"],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.620002016635827*^9, 3.620002055065021*^9, 
+  3.6200021589413*^9, 3.6200022580778913`*^9, 3.6200488378323193`*^9, 
+  3.620057204571168*^9}],
+
+Cell[BoxData[
+ InterpretationBox["\<\"ran \\!\\(100\\) iterations for a total time of 0.156 \
+seconds\"\>",
+  StringForm[
+  "ran `1` iterations for a total time of `2` seconds", 100, "0.156"],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.620002016635827*^9, 3.620002055065021*^9, 
+  3.6200021589413*^9, 3.6200022580778913`*^9, 3.6200488378323193`*^9, 
+  3.620057204712397*^9}],
+
+Cell[BoxData[
+ InterpretationBox["\<\"ran \\!\\(1000\\) iterations for a total time of 1.48 \
+seconds\"\>",
+  StringForm[
+  "ran `1` iterations for a total time of `2` seconds", 1000, "1.48"],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.620002016635827*^9, 3.620002055065021*^9, 
+  3.6200021589413*^9, 3.6200022580778913`*^9, 3.6200488378323193`*^9, 
+  3.6200572062386847`*^9}],
+
+Cell[BoxData[
+ InterpretationBox["\<\"estimating based on \\!\\(10000\\) iterations run for \
+a total time of 14.3 seconds\"\>",
+  StringForm[
+  "estimating based on `1` iterations run for a total time of `2` seconds", 
+   10000, "14.3"],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.620002016635827*^9, 3.620002055065021*^9, 
+  3.6200021589413*^9, 3.6200022580778913`*^9, 3.6200488378323193`*^9, 
+  3.620057220456337*^9}]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   TagBox[
+    InterpretationBox[
+     RowBox[{"\<\"1.4266485\"\>", "\[Times]", 
+      SuperscriptBox["10", "\<\"-3\"\>"]}],
+     0.00142664849999999994167865224881097674`7.174916897386227,
+     AutoDelete->True],
+    ScientificForm], ",", "True"}], "}"}]], "Output",
+ CellChangeTimes->{3.620002018154767*^9, 3.6200020564897203`*^9, 
+  3.620002160372202*^9, 3.620002277395461*^9, 3.6200488530119057`*^9, 
+  3.620057220460644*^9}]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"jmichelsonV9SubmultisetQ", "[", 
+   RowBox[{"list_List", ",", "sub_List"}], "]"}], ":=", 
+  RowBox[{"With", "[", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{"counts", "=", 
+      RowBox[{"Dispatch", "[", 
+       RowBox[{"Rule", "@@@", 
+        RowBox[{"Tally", "[", "list", "]"}]}], "]"}]}], "}"}], ",", 
+    RowBox[{"Catch", "[", 
+     RowBox[{"Fold", "[", 
+      RowBox[{
+       RowBox[{
+        RowBox[{
+         RowBox[{
+          RowBox[{"Replace", "[", 
+           RowBox[{
+            RowBox[{"#2", "[", 
+             RowBox[{"[", "1", "]"}], "]"}], ",", "counts"}], "]"}], 
+          "\[GreaterEqual]", 
+          RowBox[{"#2", "[", 
+           RowBox[{"[", "2", "]"}], "]"}]}], "||", 
+         RowBox[{"Throw", "[", "False", "]"}]}], "&"}], ",", "True", ",", 
+       RowBox[{"Tally", "[", "sub", "]"}]}], "]"}], "]"}]}], "]"}]}]], "Input",\
+
+ CellChangeTimes->{{3.6200019729980803`*^9, 3.620001978166992*^9}, {
+  3.6200024002974157`*^9, 3.620002401347168*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"mengTiming", "[", 
+  RowBox[{"jmichelsonV9SubmultisetQ", "[", 
+   RowBox[{"Sequence", "@@", "args"}], "]"}], "]"}]], "Input",
+ CellChangeTimes->{3.6200022746067047`*^9, 3.620002406051738*^9}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ InterpretationBox["\<\"ran \\!\\(1\\) iterations for a total time of \
+0.000145 seconds\"\>",
+  StringForm[
+  "ran `1` iterations for a total time of `2` seconds", 1, "0.000145"],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.620002413124786*^9}],
+
+Cell[BoxData[
+ InterpretationBox["\<\"ran \\!\\(10\\) iterations for a total time of \
+0.00117 seconds\"\>",
+  StringForm[
+  "ran `1` iterations for a total time of `2` seconds", 10, "0.00117"],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.62000241312814*^9}],
+
+Cell[BoxData[
+ InterpretationBox["\<\"ran \\!\\(100\\) iterations for a total time of \
+0.00954 seconds\"\>",
+  StringForm[
+  "ran `1` iterations for a total time of `2` seconds", 100, "0.00954"],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.620002413132833*^9}],
+
+Cell[BoxData[
+ InterpretationBox["\<\"ran \\!\\(1000\\) iterations for a total time of \
+0.0786 seconds\"\>",
+  StringForm[
+  "ran `1` iterations for a total time of `2` seconds", 1000, "0.0786"],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.620002413190997*^9}],
+
+Cell[BoxData[
+ InterpretationBox["\<\"ran \\!\\(10000\\) iterations for a total time of \
+0.680 seconds\"\>",
+  StringForm[
+  "ran `1` iterations for a total time of `2` seconds", 10000, "0.680"],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.620002413871263*^9}],
+
+Cell[BoxData[
+ InterpretationBox["\<\"estimating based on \\!\\(100000\\) iterations run \
+for a total time of 6.92 seconds\"\>",
+  StringForm[
+  "estimating based on `1` iterations run for a total time of `2` seconds", 
+   100000, "6.92"],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.620002420819353*^9}]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+  "0.00006920425999999999966405539453262463`6.860732742383039", ",", "True"}],
+   "}"}]], "Output",
+ CellChangeTimes->{3.62000242082404*^9}]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"jmichelsonV10SubmultisetQ", "[", 
+   RowBox[{"list_List", ",", "sub_List"}], "]"}], ":=", 
+  RowBox[{"With", "[", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{"counts", "=", 
+      RowBox[{"Counts", "[", "list", "]"}]}], "}"}], ",", 
+    RowBox[{"AllTrue", "[", 
+     RowBox[{
+      RowBox[{"Tally", "[", "sub", "]"}], ",", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"Lookup", "[", 
+         RowBox[{"counts", ",", 
+          RowBox[{"#", "[", 
+           RowBox[{"[", "1", "]"}], "]"}], ",", "0"}], "]"}], 
+        "\[GreaterEqual]", 
+        RowBox[{"#", "[", 
+         RowBox[{"[", "2", "]"}], "]"}]}], "&"}]}], "]"}]}], "]"}]}]], "Input",\
+
+ CellChangeTimes->{{3.620002133817979*^9, 3.620002143699403*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"mengTiming", "[", 
+  RowBox[{"jmichelsonV10SubmultisetQ", "[", 
+   RowBox[{"Sequence", "@@", "args"}], "]"}], "]"}]], "Input",
+ CellChangeTimes->{{3.620001990834819*^9, 3.620002002814136*^9}, 
+   3.620002151379322*^9, 3.62000227772851*^9}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ InterpretationBox["\<\"ran \\!\\(1\\) iterations for a total time of \
+0.000260 seconds\"\>",
+  StringForm[
+  "ran `1` iterations for a total time of `2` seconds", 1, "0.000260"],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.620002003178739*^9, 3.6200021519565353`*^9, 
+  3.620002288061673*^9, 3.6200024211022997`*^9, 3.6200488533058157`*^9, 
+  3.6200572207431726`*^9}],
+
+Cell[BoxData[
+ InterpretationBox["\<\"ran \\!\\(10\\) iterations for a total time of \
+0.000583 seconds\"\>",
+  StringForm[
+  "ran `1` iterations for a total time of `2` seconds", 10, "0.000583"],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.620002003178739*^9, 3.6200021519565353`*^9, 
+  3.620002288061673*^9, 3.6200024211022997`*^9, 3.6200488533058157`*^9, 
+  3.6200572207453947`*^9}],
+
+Cell[BoxData[
+ InterpretationBox["\<\"ran \\!\\(100\\) iterations for a total time of \
+0.00492 seconds\"\>",
+  StringForm[
+  "ran `1` iterations for a total time of `2` seconds", 100, "0.00492"],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.620002003178739*^9, 3.6200021519565353`*^9, 
+  3.620002288061673*^9, 3.6200024211022997`*^9, 3.6200488533058157`*^9, 
+  3.620057220748453*^9}],
+
+Cell[BoxData[
+ InterpretationBox["\<\"ran \\!\\(1000\\) iterations for a total time of \
+0.0548 seconds\"\>",
+  StringForm[
+  "ran `1` iterations for a total time of `2` seconds", 1000, "0.0548"],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.620002003178739*^9, 3.6200021519565353`*^9, 
+  3.620002288061673*^9, 3.6200024211022997`*^9, 3.6200488533058157`*^9, 
+  3.6200572207742987`*^9}],
+
+Cell[BoxData[
+ InterpretationBox["\<\"ran \\!\\(10000\\) iterations for a total time of \
+0.522 seconds\"\>",
+  StringForm[
+  "ran `1` iterations for a total time of `2` seconds", 10000, "0.522"],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.620002003178739*^9, 3.6200021519565353`*^9, 
+  3.620002288061673*^9, 3.6200024211022997`*^9, 3.6200488533058157`*^9, 
+  3.620057221295805*^9}],
+
+Cell[BoxData[
+ InterpretationBox["\<\"estimating based on \\!\\(100000\\) iterations run \
+for a total time of 5.18 seconds\"\>",
+  StringForm[
+  "estimating based on `1` iterations run for a total time of `2` seconds", 
+   100000, "5.18"],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.620002003178739*^9, 3.6200021519565353`*^9, 
+  3.620002288061673*^9, 3.6200024211022997`*^9, 3.6200488533058157`*^9, 
+  3.6200572264717407`*^9}]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   TagBox[
+    InterpretationBox[
+     RowBox[{"\<\"5.178422\"\>", "\[Times]", 
+      SuperscriptBox["10", "\<\"-5\"\>"]}],
+     0.00005178422000000000302577518596081063`6.734797352349422,
+     AutoDelete->True],
+    ScientificForm], ",", "True"}], "}"}]], "Output",
+ CellChangeTimes->{{3.620001991277294*^9, 3.620002005860056*^9}, 
+   3.62000215361329*^9, 3.6200022943195353`*^9, 3.620002427744039*^9, 
+   3.620048858957802*^9, 3.620057226475*^9}]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{808, 752},
+WindowMargins->{{12, Automatic}, {Automatic, 24}},
+FrontEndVersion->"10.0 for Mac OS X x86 (32-bit, 64-bit Kernel) (June 24, \
+2014)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 95, 1, 92, "Title"],
+Cell[678, 25, 254, 7, 87, "Text"],
+Cell[935, 34, 614, 15, 63, "Input"],
+Cell[CellGroupData[{
+Cell[1574, 53, 482, 13, 46, "Input"],
+Cell[2059, 68, 122, 2, 28, "Output"],
+Cell[2184, 72, 121, 2, 28, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[2342, 79, 757, 20, 97, "Input"],
+Cell[3102, 101, 99, 1, 28, "Output"],
+Cell[3204, 104, 100, 1, 28, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[3341, 110, 730, 19, 80, "Input"],
+Cell[4074, 131, 99, 1, 28, "Output"],
+Cell[4176, 134, 100, 1, 28, "Output"]
+}, Open  ]],
+Cell[4291, 138, 328, 9, 28, "Input"],
+Cell[4622, 149, 142, 3, 28, "Input"],
+Cell[CellGroupData[{
+Cell[4789, 156, 335, 7, 28, "Input"],
+Cell[CellGroupData[{
+Cell[5149, 167, 382, 8, 21, "Print"],
+Cell[5534, 177, 382, 8, 21, "Print"],
+Cell[5919, 187, 382, 8, 21, "Print"],
+Cell[6304, 197, 384, 8, 21, "Print"],
+Cell[6691, 207, 428, 9, 22, "Print"]
+}, Open  ]],
+Cell[7134, 219, 469, 12, 35, "Output"]
+}, Open  ]],
+Cell[7618, 234, 1004, 28, 63, "Input"],
+Cell[CellGroupData[{
+Cell[8647, 266, 215, 4, 28, "Input"],
+Cell[CellGroupData[{
+Cell[8887, 274, 266, 6, 21, "Print"],
+Cell[9156, 282, 265, 6, 21, "Print"],
+Cell[9424, 290, 268, 6, 21, "Print"],
+Cell[9695, 298, 268, 6, 21, "Print"],
+Cell[9966, 306, 268, 6, 21, "Print"],
+Cell[10237, 314, 312, 7, 22, "Print"]
+}, Open  ]],
+Cell[10564, 324, 180, 5, 28, "Output"]
+}, Open  ]],
+Cell[10759, 332, 749, 22, 46, "Input"],
+Cell[CellGroupData[{
+Cell[11533, 358, 263, 5, 28, "Input"],
+Cell[CellGroupData[{
+Cell[11821, 367, 390, 8, 21, "Print"],
+Cell[12214, 377, 392, 8, 21, "Print"],
+Cell[12609, 387, 390, 8, 21, "Print"],
+Cell[13002, 397, 392, 8, 21, "Print"],
+Cell[13397, 407, 390, 8, 21, "Print"],
+Cell[13790, 417, 436, 9, 22, "Print"]
+}, Open  ]],
+Cell[14241, 429, 488, 12, 35, "Output"]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)

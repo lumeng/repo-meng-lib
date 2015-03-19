@@ -1,0 +1,96 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 9.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       157,          7]
+NotebookDataLength[      2621,         87]
+NotebookOptionsPosition[      1997,         59]
+NotebookOutlinePosition[      2515,         81]
+CellTagsIndexPosition[      2432,         76]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["Less", "Title",
+ CellChangeTimes->{{3.6134194545807047`*^9, 3.613419455259967*^9}}],
+
+Cell["\<\
+Less is a useful abstraction universally useful for comparison sortings.\
+\>", "Text",
+ CellChangeTimes->{{3.613419457101213*^9, 3.613419478625198*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"?", "Less"}]], "Input",
+ CellChangeTimes->{{3.613419445934156*^9, 3.613419447197812*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox["\<\"\\!\\(\\*RowBox[{StyleBox[\\\"x\\\", \\\"TI\\\"], \\\"<\\\", \
+StyleBox[\\\"y\\\", \\\"TI\\\"]}]\\) yields True if \\!\\(\\*StyleBox[\\\"x\\\
+\", \\\"TI\\\"]\\) is determined to be less than \\!\\(\\*StyleBox[\\\"y\\\", \
+\\\"TI\\\"]\\). \\n\\!\\(\\*RowBox[{SubscriptBox[StyleBox[\\\"x\\\", \\\"TI\\\
+\"], StyleBox[\\\"1\\\", \\\"TR\\\"]], \\\"<\\\", SubscriptBox[StyleBox[\\\"x\
+\\\", \\\"TI\\\"], StyleBox[\\\"2\\\", \\\"TR\\\"]], \\\"<\\\", \
+SubscriptBox[StyleBox[\\\"x\\\", \\\"TI\\\"], StyleBox[\\\"3\\\", \
+\\\"TR\\\"]]}]\\) yields True if the \
+\\!\\(\\*SubscriptBox[StyleBox[\\\"x\\\", \\\"TI\\\"], StyleBox[\\\"i\\\", \\\
+\"TI\\\"]]\\) form a strictly increasing sequence. \"\>", "MSG"], 
+  "\[NonBreakingSpace]", 
+  ButtonBox[
+   StyleBox["\[RightSkeleton]", "SR"],
+   Active->True,
+   BaseStyle->"Link",
+   ButtonData->"paclet:ref/Less"]}]], "Print", "PrintUsage",
+ CellChangeTimes->{3.613419448514401*^9},
+ CellTags->"Info3613394247-3016055"]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{740, 752},
+WindowMargins->{{4, Automatic}, {Automatic, 4}},
+ShowSelection->True,
+FrontEndVersion->"9.0 for Mac OS X x86 (32-bit, 64-bit Kernel) (May 19, 2013)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{
+ "Info3613394247-3016055"->{
+  Cell[974, 36, 995, 19, 58, "Print",
+   CellTags->"Info3613394247-3016055"]}
+ }
+*)
+(*CellTagsIndex
+CellTagsIndex->{
+ {"Info3613394247-3016055", 2330, 70}
+ }
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[579, 22, 89, 1, 92, "Title"],
+Cell[671, 25, 162, 3, 30, "Text"],
+Cell[CellGroupData[{
+Cell[858, 32, 113, 2, 28, "Input"],
+Cell[974, 36, 995, 19, 58, "Print",
+ CellTags->"Info3613394247-3016055"]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)

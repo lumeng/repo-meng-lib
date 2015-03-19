@@ -1,0 +1,292 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 10.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     11548,        283]
+NotebookOptionsPosition[     10924,        256]
+NotebookOutlinePosition[     11279,        272]
+CellTagsIndexPosition[     11236,        269]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell["EntityList[Ctrl -= planets]", "Text"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"EntityList", "[", 
+  NamespaceBox["LinguisticAssistant",
+   DynamicModuleBox[{WolframAlphaClient`Private`query$$ = "planets", 
+    WolframAlphaClient`Private`boxes$$ = TemplateBox[{"\"planets\"", 
+      RowBox[{"EntityClass", "[", 
+        RowBox[{"\"Planet\"", ",", "All"}], "]"}], 
+      "\"EntityClass[\\\"Planet\\\", All]\"", "\"planets\""}, "EntityClass"], 
+    WolframAlphaClient`Private`allassumptions$$ = {{
+     "type" -> "Clash", "word" -> "planets", "template" -> 
+      "Assuming \"${word}\" is ${desc1}. Use as ${desc2} instead", "count" -> 
+      "4", "Values" -> {{
+        "name" -> "PlanetClass", "desc" -> " referring to planets", "input" -> 
+         "*C.planets-_*PlanetClass-"}, {
+        "name" -> "ExoplanetClass", "desc" -> " referring to exoplanets", 
+         "input" -> "*C.planets-_*ExoplanetClass-"}, {
+        "name" -> "MinorPlanetClass", "desc" -> " referring to minor planets",
+          "input" -> "*C.planets-_*MinorPlanetClass-"}, {
+        "name" -> "Word", "desc" -> "a word", "input" -> 
+         "*C.planets-_*Word-"}}}}, 
+    WolframAlphaClient`Private`assumptions$$ = {}, 
+    WolframAlphaClient`Private`open$$ = {1, 2}}, 
+    DynamicBox[ToBoxes[
+      AlphaIntegration`LinguisticAssistantBoxes["", 1, 
+       Dynamic[WolframAlphaClient`Private`query$$], 
+       Dynamic[WolframAlphaClient`Private`boxes$$], 
+       Dynamic[WolframAlphaClient`Private`allassumptions$$], 
+       Dynamic[WolframAlphaClient`Private`assumptions$$], 
+       Dynamic[WolframAlphaClient`Private`open$$]], StandardForm],
+     ImageSizeCache->{62., {2., 9.}},
+     TrackedSymbols:>{
+      WolframAlphaClient`Private`query$$, WolframAlphaClient`Private`boxes$$, 
+       WolframAlphaClient`Private`allassumptions$$, 
+       WolframAlphaClient`Private`assumptions$$, 
+       WolframAlphaClient`Private`open$$}],
+    DynamicModuleValues:>{},
+    UndoTrackedVariables:>{WolframAlphaClient`Private`open$$}],
+   BaseStyle->{"Deploy"},
+   DeleteWithContents->True,
+   Editable->False,
+   SelectWithContents->True], "]"}]], "Input"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   TemplateBox[{"\"Mercury\"",RowBox[{"Entity", "[", 
+       RowBox[{"\"Planet\"", ",", "\"Mercury\""}], "]"}],
+     "\"Entity[\\\"Planet\\\", \\\"Mercury\\\"]\"","\"planet\""},
+    "Entity"], ",", 
+   TemplateBox[{"\"Mars\"",RowBox[{"Entity", "[", 
+       RowBox[{"\"Planet\"", ",", "\"Mars\""}], "]"}],
+     "\"Entity[\\\"Planet\\\", \\\"Mars\\\"]\"","\"planet\""},
+    "Entity"], ",", 
+   TemplateBox[{"\"Venus\"",RowBox[{"Entity", "[", 
+       RowBox[{"\"Planet\"", ",", "\"Venus\""}], "]"}],
+     "\"Entity[\\\"Planet\\\", \\\"Venus\\\"]\"","\"planet\""},
+    "Entity"], ",", 
+   TemplateBox[{"\"Earth\"",RowBox[{"Entity", "[", 
+       RowBox[{"\"Planet\"", ",", "\"Earth\""}], "]"}],
+     "\"Entity[\\\"Planet\\\", \\\"Earth\\\"]\"","\"planet\""},
+    "Entity"], ",", 
+   TemplateBox[{"\"Jupiter\"",RowBox[{"Entity", "[", 
+       RowBox[{"\"Planet\"", ",", "\"Jupiter\""}], "]"}],
+     "\"Entity[\\\"Planet\\\", \\\"Jupiter\\\"]\"","\"planet\""},
+    "Entity"], ",", 
+   TemplateBox[{"\"Neptune\"",RowBox[{"Entity", "[", 
+       RowBox[{"\"Planet\"", ",", "\"Neptune\""}], "]"}],
+     "\"Entity[\\\"Planet\\\", \\\"Neptune\\\"]\"","\"planet\""},
+    "Entity"], ",", 
+   TemplateBox[{"\"Saturn\"",RowBox[{"Entity", "[", 
+       RowBox[{"\"Planet\"", ",", "\"Saturn\""}], "]"}],
+     "\"Entity[\\\"Planet\\\", \\\"Saturn\\\"]\"","\"planet\""},
+    "Entity"], ",", 
+   TemplateBox[{"\"Uranus\"",RowBox[{"Entity", "[", 
+       RowBox[{"\"Planet\"", ",", "\"Uranus\""}], "]"}],
+     "\"Entity[\\\"Planet\\\", \\\"Uranus\\\"]\"","\"planet\""},
+    "Entity"]}], "}"}]], "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"FullForm", "[", 
+  NamespaceBox["LinguisticAssistant",
+   DynamicModuleBox[{WolframAlphaClient`Private`query$$ = "planets", 
+    WolframAlphaClient`Private`boxes$$ = TemplateBox[{"\"planets\"", 
+      RowBox[{"EntityClass", "[", 
+        RowBox[{"\"Planet\"", ",", "All"}], "]"}], 
+      "\"EntityClass[\\\"Planet\\\", All]\"", "\"planets\""}, "EntityClass"], 
+    WolframAlphaClient`Private`allassumptions$$ = {{
+     "type" -> "Clash", "word" -> "planets", "template" -> 
+      "Assuming \"${word}\" is ${desc1}. Use as ${desc2} instead", "count" -> 
+      "4", "Values" -> {{
+        "name" -> "PlanetClass", "desc" -> " referring to planets", "input" -> 
+         "*C.planets-_*PlanetClass-"}, {
+        "name" -> "ExoplanetClass", "desc" -> " referring to exoplanets", 
+         "input" -> "*C.planets-_*ExoplanetClass-"}, {
+        "name" -> "MinorPlanetClass", "desc" -> " referring to minor planets",
+          "input" -> "*C.planets-_*MinorPlanetClass-"}, {
+        "name" -> "Word", "desc" -> "a word", "input" -> 
+         "*C.planets-_*Word-"}}}}, 
+    WolframAlphaClient`Private`assumptions$$ = {}, 
+    WolframAlphaClient`Private`open$$ = {1, 2}}, 
+    DynamicBox[ToBoxes[
+      AlphaIntegration`LinguisticAssistantBoxes["", 1, 
+       Dynamic[WolframAlphaClient`Private`query$$], 
+       Dynamic[WolframAlphaClient`Private`boxes$$], 
+       Dynamic[WolframAlphaClient`Private`allassumptions$$], 
+       Dynamic[WolframAlphaClient`Private`assumptions$$], 
+       Dynamic[WolframAlphaClient`Private`open$$]], StandardForm],
+     ImageSizeCache->{163., {10., 18.}},
+     TrackedSymbols:>{
+      WolframAlphaClient`Private`query$$, WolframAlphaClient`Private`boxes$$, 
+       WolframAlphaClient`Private`allassumptions$$, 
+       WolframAlphaClient`Private`assumptions$$, 
+       WolframAlphaClient`Private`open$$}],
+    DynamicModuleValues:>{},
+    UndoTrackedVariables:>{WolframAlphaClient`Private`open$$}],
+   BaseStyle->{"Deploy"},
+   DeleteWithContents->True,
+   Editable->False,
+   SelectWithContents->True], "]"}]], "Input"],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   RowBox[{"EntityClass", "[", 
+    RowBox[{"\"\<Planet\>\"", ",", "All"}], "]"}],
+   ShowSpecialCharacters->False,
+   ShowStringCharacters->True,
+   NumberMarks->True],
+  FullForm]], "Output"]
+}, Open  ]],
+
+Cell[BoxData[
+ NamespaceBox["LinguisticAssistant",
+  DynamicModuleBox[{WolframAlphaClient`Private`query$$ = "5 kg", 
+   WolframAlphaClient`Private`boxes$$ = 
+   TemplateBox[{"5"}, "QuantityUnit", DisplayFunction -> (TooltipBox[
+      StyleBox[
+       RowBox[{#, "\[InvisibleSpace]", 
+         StyleBox[
+          RowBox[{" ", "\"kg\""}], "QuantityUnitTraditionalInput"]}], 
+       ShowStringCharacters -> False], "Unit: kilograms"]& ), 
+    InterpretationFunction -> (RowBox[{"Quantity", "[", 
+       RowBox[{#, ",", "\"Kilograms\""}], "]"}]& ), SyntaxForm -> Mod], 
+   WolframAlphaClient`Private`allassumptions$$ = {{
+    "type" -> "Unit", "word" -> "kg", "template" -> 
+     "Assuming ${desc1} for \"${word}\". Use ${desc2} instead", "count" -> 
+     "2", "Values" -> {{
+       "name" -> "Kilograms", "desc" -> "kilograms", "input" -> 
+        "UnitClash_*kg.*Kilograms--"}, {
+       "name" -> "KilogramsForce", "desc" -> "kilograms\[Hyphen]force", 
+        "input" -> "UnitClash_*kg.*KilogramsForce--"}}}}, 
+   WolframAlphaClient`Private`assumptions$$ = {}, 
+   WolframAlphaClient`Private`open$$ = {1, 2}}, 
+   DynamicBox[ToBoxes[
+     AlphaIntegration`LinguisticAssistantBoxes["", 1, 
+      Dynamic[WolframAlphaClient`Private`query$$], 
+      Dynamic[WolframAlphaClient`Private`boxes$$], 
+      Dynamic[WolframAlphaClient`Private`allassumptions$$], 
+      Dynamic[WolframAlphaClient`Private`assumptions$$], 
+      Dynamic[WolframAlphaClient`Private`open$$]], StandardForm],
+    ImageSizeCache->{64., {7., 16.}},
+    TrackedSymbols:>{
+     WolframAlphaClient`Private`query$$, WolframAlphaClient`Private`boxes$$, 
+      WolframAlphaClient`Private`allassumptions$$, 
+      WolframAlphaClient`Private`assumptions$$, 
+      WolframAlphaClient`Private`open$$}],
+   DynamicModuleValues:>{},
+   UndoTrackedVariables:>{WolframAlphaClient`Private`open$$}],
+  BaseStyle->{"Deploy"},
+  DeleteWithContents->True,
+  Editable->False,
+  SelectWithContents->True]], "Input"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"FullForm", "[", 
+  NamespaceBox["LinguisticAssistant",
+   DynamicModuleBox[{WolframAlphaClient`Private`query$$ = "5kg", 
+    WolframAlphaClient`Private`boxes$$ = 
+    TemplateBox[{"5"}, "QuantityUnit", DisplayFunction -> (TooltipBox[
+       StyleBox[
+        RowBox[{#, "\[InvisibleSpace]", 
+          StyleBox[
+           RowBox[{" ", "\"kg\""}], "QuantityUnitTraditionalInput"]}], 
+        ShowStringCharacters -> False], "Unit: kilograms"]& ), 
+     InterpretationFunction -> (RowBox[{"Quantity", "[", 
+        RowBox[{#, ",", "\"Kilograms\""}], "]"}]& ), SyntaxForm -> Mod], 
+    WolframAlphaClient`Private`allassumptions$$ = {{
+     "type" -> "Unit", "word" -> "kg", "template" -> 
+      "Assuming ${desc1} for \"${word}\". Use ${desc2} instead", "count" -> 
+      "2", "Values" -> {{
+        "name" -> "Kilograms", "desc" -> "kilograms", "input" -> 
+         "UnitClash_*kg.*Kilograms--"}, {
+        "name" -> "KilogramsForce", "desc" -> "kilograms\[Hyphen]force", 
+         "input" -> "UnitClash_*kg.*KilogramsForce--"}}}}, 
+    WolframAlphaClient`Private`assumptions$$ = {}, 
+    WolframAlphaClient`Private`open$$ = {1, 2}}, 
+    DynamicBox[ToBoxes[
+      AlphaIntegration`LinguisticAssistantBoxes["", 1, 
+       Dynamic[WolframAlphaClient`Private`query$$], 
+       Dynamic[WolframAlphaClient`Private`boxes$$], 
+       Dynamic[WolframAlphaClient`Private`allassumptions$$], 
+       Dynamic[WolframAlphaClient`Private`assumptions$$], 
+       Dynamic[WolframAlphaClient`Private`open$$]], StandardForm],
+     ImageSizeCache->{64., {7., 16.}},
+     TrackedSymbols:>{
+      WolframAlphaClient`Private`query$$, WolframAlphaClient`Private`boxes$$, 
+       WolframAlphaClient`Private`allassumptions$$, 
+       WolframAlphaClient`Private`assumptions$$, 
+       WolframAlphaClient`Private`open$$}],
+    DynamicModuleValues:>{},
+    UndoTrackedVariables:>{WolframAlphaClient`Private`open$$}],
+   BaseStyle->{"Deploy"},
+   DeleteWithContents->True,
+   Editable->False,
+   SelectWithContents->True], "]"}]], "Input"],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   RowBox[{"Quantity", "[", 
+    RowBox[{"5", ",", "\"\<Kilograms\>\""}], "]"}],
+   ShowSpecialCharacters->False,
+   ShowStringCharacters->True,
+   NumberMarks->True],
+  FullForm]], "Output"]
+}, Open  ]]
+},
+WindowSize->{808, 751},
+WindowMargins->{{4, Automatic}, {Automatic, 4}},
+FrontEndVersion->"10.0 for Mac OS X x86 (32-bit, 64-bit Kernel) (December 4, \
+2014)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 43, 0, 30, "Text"],
+Cell[CellGroupData[{
+Cell[626, 24, 2064, 40, 28, "Input"],
+Cell[2693, 66, 1618, 34, 42, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[4348, 105, 2065, 40, 45, "Input"],
+Cell[6416, 147, 228, 8, 28, "Output"]
+}, Open  ]],
+Cell[6659, 158, 1961, 40, 40, "Input"],
+Cell[CellGroupData[{
+Cell[8645, 202, 2034, 41, 42, "Input"],
+Cell[10682, 245, 226, 8, 28, "Output"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)

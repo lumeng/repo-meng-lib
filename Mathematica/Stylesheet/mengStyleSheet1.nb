@@ -1,0 +1,114 @@
+(* Content-type: application/mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 7.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       145,          7]
+NotebookDataLength[      3014,        105]
+NotebookOptionsPosition[      2019,         78]
+NotebookOutlinePosition[      2413,         95]
+CellTagsIndexPosition[      2370,         92]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[StyleData[StyleDefinitions -> "Default.nb"]],
+
+Cell[StyleData["Terminal"],
+ CellFrame->2,
+ ShowGroupOpener->False,
+ CellMargins->{{66, 4}, {10, 8}},
+ Evaluatable->True,
+ StripStyleOnPaste->True,
+ CellEvaluationFunction->Function[{$CellContext`x, $CellContext`y}, 
+   Import[
+    StringExpression["!", $CellContext`x], "Text"]],
+ CellFrameColor->GrayLevel[0.5],
+ Hyphenation->False,
+ AutoQuoteCharacters->{},
+ PasteAutoQuoteCharacters->{},
+ LanguageCategory->"Formula",
+ ScriptLevel->1,
+ MenuSortingValue->1800,
+ FontFamily->"Monaco",
+ FontSize->13,
+ FontWeight->"Plain",
+ FontSlant->"Plain",
+ FontColor->RGBColor[0, 1, 0],
+ Background->GrayLevel[0]],
+
+Cell[StyleData["Title"]],
+
+Cell[StyleData["Section"],
+ ShowGroupOpener->True],
+
+Cell[StyleData["Subsection"],
+ CellFrame->{{0, 0}, {0, 1}},
+ ShowGroupOpener->True],
+
+Cell[StyleData["Subsubsection"],
+ CellDingbat->Cell["\[FilledSmallSquare]"],
+ ShowGroupOpener->True],
+
+Cell[StyleData["Subsubsubsection"],
+ CellDingbat->Cell["\[FilledSmallCircle]"],
+ ShowGroupOpener->True,
+ MenuSortingValue->1360,
+ FontSlant->"Italic"],
+
+Cell[StyleData["Subsubsubsubsection"],
+ CellDingbat->"\[EmptySmallCircle]",
+ ShowGroupOpener->True,
+ MenuSortingValue->1370,
+ FontSlant->"Italic"],
+
+Cell[StyleData["mengComment"],
+ CellMargins->{{60, Inherited}, {Inherited, Inherited}},
+ CellBaseline->Automatic,
+ MenuSortingValue->1370,
+ FontSize->14,
+ FontColor->RGBColor[0, 0, 0.498039],
+ Background->RGBColor[1., 1., 0.8156862745098039]]
+},
+Saveable->True,
+WindowSize->{1868, 1156},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+FrontEndVersion->"10.0 for Mac OS X x86 (32-bit, 64-bit Kernel) (September 9, \
+2014)",
+StyleDefinitions->"PrivateStylesheetFormatting.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[545, 20, 49, 0, 36, 49, 0, "StyleData", "StyleDefinitions", ""],
+Cell[597, 22, 602, 21, 71, 27, 0, "StyleData", "Terminal", "All",
+ MenuSortingValue->1800],
+Cell[1202, 45, 24, 0, 107, 24, 0, "StyleData", "Title", "All"],
+Cell[1229, 47, 50, 1, 79, 26, 0, "StyleData", "Section", "All"],
+Cell[1282, 50, 83, 2, 60, 29, 0, "StyleData", "Subsection", "All"],
+Cell[1368, 54, 100, 2, 44, 32, 0, "StyleData", "Subsubsection", "All"],
+Cell[1471, 58, 150, 4, 38, 35, 0, "StyleData", "Subsubsubsection", "All",
+ MenuSortingValue->1360],
+Cell[1624, 64, 146, 4, 38, 38, 0, "StyleData", "Subsubsubsubsection", "All",
+ MenuSortingValue->1370],
+Cell[1773, 70, 242, 6, 54, 30, 0, "StyleData", "mengComment", "All",
+ MenuSortingValue->1370]
+}
+]
+*)
+
+(* End of internal cache information *)

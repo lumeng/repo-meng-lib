@@ -1,0 +1,142 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 10.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      3171,        133]
+NotebookOptionsPosition[      2353,         97]
+NotebookOutlinePosition[      2708,        113]
+CellTagsIndexPosition[      2665,        110]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["Inactivate", "Title"],
+
+Cell[CellGroupData[{
+
+Cell["Topics", "Section"],
+
+Cell[CellGroupData[{
+
+Cell["Inactivate has HoldFirst attribute", "Subsection"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Attributes", "[", "Entity", "]"}]], "Input"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"Protected", ",", "ReadProtected"}], "}"}]], "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Attributes", "[", "Inactivate", "]"}]], "Input"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"HoldFirst", ",", "Protected"}], "}"}]], "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{"Unprotect", "[", "Inactivate", "]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"Attributes", "[", "Inactivate", "]"}], "=", 
+   RowBox[{"{", "Protected", "}"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"x", "=", 
+   RowBox[{"Entity", "[", 
+    RowBox[{"\"\<Word\>\"", ",", "\"\<fauna\>\""}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Inactivate", "[", "x", "]"}], "//", 
+  "FullForm"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"Attributes", "[", "Inactivate", "]"}], "=", 
+   RowBox[{"{", 
+    RowBox[{"HoldFirst", ",", "Protected"}], "}"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{"Protect", "[", "Inactivate", "]"}], "\[IndentingNewLine]"}], "Input"],
+
+Cell[BoxData[
+ RowBox[{"{", "\<\"Inactivate\"\>", "}"}]], "Output"],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   RowBox[{
+    RowBox[{"Inactive", "[", "Entity", "]"}], "[", 
+    RowBox[{"\"\<Word\>\"", ",", "\"\<fauna\>\""}], "]"}],
+   ShowSpecialCharacters->False,
+   ShowStringCharacters->True,
+   NumberMarks->True],
+  FullForm]], "Output"],
+
+Cell[BoxData[
+ RowBox[{"{", "}"}]], "Output"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{808, 751},
+WindowMargins->{{4, Automatic}, {Automatic, 4}},
+FrontEndVersion->"10.0 for Mac OS X x86 (32-bit, 64-bit Kernel) (December 4, \
+2014)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 27, 0, 92, "Title"],
+Cell[CellGroupData[{
+Cell[632, 26, 25, 0, 64, "Section"],
+Cell[CellGroupData[{
+Cell[682, 30, 56, 0, 44, "Subsection"],
+Cell[CellGroupData[{
+Cell[763, 34, 68, 1, 28, "Input"],
+Cell[834, 37, 93, 2, 28, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[964, 44, 72, 1, 28, "Input"],
+Cell[1039, 47, 89, 2, 28, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[1165, 54, 747, 20, 131, "Input"],
+Cell[1915, 76, 67, 1, 28, "Output"],
+Cell[1985, 79, 268, 9, 39, "Output"],
+Cell[2256, 90, 45, 1, 28, "Output"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)

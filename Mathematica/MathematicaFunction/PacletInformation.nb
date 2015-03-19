@@ -1,0 +1,142 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 10.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      3714,        133]
+NotebookOptionsPosition[      2817,         94]
+NotebookOutlinePosition[      3324,        116]
+CellTagsIndexPosition[      3240,        111]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["PacletInformation", "Title"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"?", "PacletInformation"}]], "Input"],
+
+Cell[BoxData[
+ StyleBox["\<\"PacletInformation is an internal symbol.\"\>", "MSG"]], "Print",\
+ "PrintUsage",
+ CellTags->"Info3623488010-2651455"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"PacletSites", "[", "]"}]], "Input"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"PacletSite", "[", 
+   RowBox[{"\<\"http://pacletserver.wolfram.com\"\>", 
+    ",", "\<\"Wolfram Research Paclet Server\"\>", ",", 
+    RowBox[{"\<\"Local\"\>", "\[Rule]", "False"}]}], "]"}], "}"}]], "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"PacletInformation", "[", "\"\<DictionaryLookup_Danish\>\"", 
+  "]"}]], "Input"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"\<\"Name\"\>", "\[Rule]", "\<\"DictionaryLookup_Danish\"\>"}], 
+   ",", 
+   RowBox[{"\<\"Version\"\>", "\[Rule]", "\<\"7.0.1\"\>"}], ",", 
+   RowBox[{"\<\"BuildNumber\"\>", "\[Rule]", "\<\"\"\>"}], ",", 
+   RowBox[{"\<\"Qualifier\"\>", "\[Rule]", "\<\"\"\>"}], ",", 
+   RowBox[{"\<\"WolframVersion\"\>", "\[Rule]", "\<\"7.0+\"\>"}], ",", 
+   RowBox[{"\<\"SystemID\"\>", "\[Rule]", "All"}], ",", 
+   RowBox[{"\<\"Description\"\>", "\[Rule]", "\<\"\"\>"}], ",", 
+   RowBox[{"\<\"Category\"\>", "\[Rule]", "\<\"\"\>"}], ",", 
+   RowBox[{"\<\"Creator\"\>", "\[Rule]", "\<\"\"\>"}], ",", 
+   RowBox[{"\<\"Publisher\"\>", "\[Rule]", "\<\"\"\>"}], ",", 
+   RowBox[{"\<\"Support\"\>", "\[Rule]", "\<\"\"\>"}], ",", 
+   RowBox[{"\<\"Internal\"\>", "\[Rule]", "False"}], ",", 
+   RowBox[{"\<\"Location\"\>", 
+    "\[Rule]", \
+"\<\"/Users/meng/Library/Mathematica/Paclets/Repository/DictionaryLookup_\
+Danish-7.0.1\"\>"}], ",", 
+   RowBox[{"\<\"Context\"\>", "\[Rule]", 
+    RowBox[{"{", "}"}]}], ",", 
+   RowBox[{"\<\"Enabled\"\>", "\[Rule]", "True"}], ",", 
+   RowBox[{"\<\"Loading\"\>", "\[Rule]", "Manual"}]}], "}"}]], "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"MemberQ", "[", 
+  RowBox[{
+   RowBox[{"DictionaryLookup", "[", 
+    RowBox[{"{", 
+     RowBox[{"\"\<Danish\>\"", ",", "All"}], "}"}], "]"}], ",", 
+   "\"\<abc\>\""}], "]"}]], "Input"],
+
+Cell[BoxData["True"], "Output"]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{808, 752},
+WindowMargins->{{12, Automatic}, {Automatic, 24}},
+FrontEndVersion->"10.0 for Mac OS X x86 (32-bit, 64-bit Kernel) (September 9, \
+2014)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{
+ "Info3623488010-2651455"->{
+  Cell[702, 29, 146, 3, 40, "Print",
+   CellTags->"Info3623488010-2651455"]}
+ }
+*)
+(*CellTagsIndex
+CellTagsIndex->{
+ {"Info3623488010-2651455", 3139, 105}
+ }
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 34, 0, 92, "Title"],
+Cell[CellGroupData[{
+Cell[639, 26, 60, 1, 28, "Input"],
+Cell[702, 29, 146, 3, 40, "Print",
+ CellTags->"Info3623488010-2651455"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[885, 37, 59, 1, 28, "Input"],
+Cell[947, 40, 248, 5, 46, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[1232, 50, 103, 2, 28, "Input"],
+Cell[1338, 54, 1173, 23, 97, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[2548, 82, 207, 6, 28, "Input"],
+Cell[2758, 90, 31, 0, 28, "Output"]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)

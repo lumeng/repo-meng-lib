@@ -1,0 +1,510 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 9.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       157,          7]
+NotebookDataLength[     21681,        501]
+NotebookOptionsPosition[     20492,        455]
+NotebookOutlinePosition[     20866,        472]
+CellTagsIndexPosition[     20823,        469]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["\<\
+Make one-page table of content for Oracle\[CloseCurlyQuote]s \:300aThe Java \
+Tutorials\:300b\
+\>", "Title"],
+
+Cell["\<\
+By Meng Lu <lumeng.dev@gmail.com>, 2014-6-10\
+\>", "Text"],
+
+Cell[CellGroupData[{
+
+Cell[TextData[StyleBox["Visit \[OpenCurlyDoubleQuote]The Java Tutorials\
+\[CloseCurlyDoubleQuote] home page http://docs.oracle.com/javase/tutorial/;", \
+"Item"]], "ItemNumbered"],
+
+Cell[TextData[{
+ StyleBox["Download stand-alone HTML files of \:300aThe Java \
+Tutorials\:300bby following the link \[OpenCurlyDoubleQuote]", "Item"],
+ "Download the latest Java Tutorials Bundle",
+ StyleBox["\[CloseCurlyDoubleQuote] (", "Item"],
+ "http://www.oracle.com/technetwork/java/javase/java-tutorial-downloads-\
+2005894.html",
+ StyleBox[");", "Item"]
+}], "ItemNumbered"],
+
+Cell[TextData[{
+ "Make one-page table of content HTML",
+ StyleBox[" using the related section in the following;", "Item"]
+}], "ItemNumbered"],
+
+Cell["\<\
+ Optionally, improve the HTML with HTML tiny:\[LineSeparator]$ tidy \
+The_Java_Tutorials_TOC.html > The_Java_Tutorials_TOC.tidy.html\
+\>", "ItemNumbered"],
+
+Cell[TextData[{
+ StyleBox["Install pandoc (c.f. ", "Item"],
+ "https://gist.github.com/schmurfy/3199254",
+ StyleBox[") if not already.  Make MediaWiki markup using pandoc:\
+\[LineSeparator]", "Item"],
+ "\[LineSeparator]$ pandoc -s -S -t mediawiki --toc \
+The_Java_Tutorials_TOC.html -o The_Java_Tutorials_TOC.mediawiki\
+\[LineSeparator]\[LineSeparator]C.f. \
+http://johnmacfarlane.net/pandoc/demos.html"
+}], "ItemNumbered"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["\<\
+Make one-age table of content HTML\
+\>", "Section"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+  "dir", "=", 
+   "\"\</Users/lumeng/Dropbox-x4430/Dropbox/WorkSpace-Dropbox/Academics/\
+Course/201401_java_tutorial/book/The_Java_Tutorials\>\""}], ";"}]], "Input"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"files", "=", 
+  RowBox[{"FileNames", "[", 
+   RowBox[{"\"\<TOC.html\>\"", ",", 
+    RowBox[{"{", "dir", "}"}], ",", "Infinity"}], "]"}]}]], "Input"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"\<\"/Users/lumeng/Dropbox-x4430/Dropbox/WorkSpace-Dropbox/\
+Academics/Course/201401_java_tutorial/book/The_Java_Tutorials/2d/TOC.html\"\>\
+", ",", "\<\"/Users/lumeng/Dropbox-x4430/Dropbox/WorkSpace-Dropbox/Academics/\
+Course/201401_java_tutorial/book/The_Java_Tutorials/collections/TOC.html\"\>",
+    ",", "\<\"/Users/lumeng/Dropbox-x4430/Dropbox/WorkSpace-Dropbox/Academics/\
+Course/201401_java_tutorial/book/The_Java_Tutorials/datetime/TOC.html\"\>", 
+   ",", "\<\"/Users/lumeng/Dropbox-x4430/Dropbox/WorkSpace-Dropbox/Academics/\
+Course/201401_java_tutorial/book/The_Java_Tutorials/deployment/TOC.html\"\>", 
+   ",", "\<\"/Users/lumeng/Dropbox-x4430/Dropbox/WorkSpace-Dropbox/Academics/\
+Course/201401_java_tutorial/book/The_Java_Tutorials/essential/TOC.html\"\>", 
+   ",", "\<\"/Users/lumeng/Dropbox-x4430/Dropbox/WorkSpace-Dropbox/Academics/\
+Course/201401_java_tutorial/book/The_Java_Tutorials/extra/TOC.html\"\>", 
+   ",", "\<\"/Users/lumeng/Dropbox-x4430/Dropbox/WorkSpace-Dropbox/Academics/\
+Course/201401_java_tutorial/book/The_Java_Tutorials/ext/TOC.html\"\>", 
+   ",", "\<\"/Users/lumeng/Dropbox-x4430/Dropbox/WorkSpace-Dropbox/Academics/\
+Course/201401_java_tutorial/book/The_Java_Tutorials/getStarted/TOC.html\"\>", 
+   ",", "\<\"/Users/lumeng/Dropbox-x4430/Dropbox/WorkSpace-Dropbox/Academics/\
+Course/201401_java_tutorial/book/The_Java_Tutorials/i18n/TOC.html\"\>", 
+   ",", "\<\"/Users/lumeng/Dropbox-x4430/Dropbox/WorkSpace-Dropbox/Academics/\
+Course/201401_java_tutorial/book/The_Java_Tutorials/information/TOC.html\"\>",
+    ",", "\<\"/Users/lumeng/Dropbox-x4430/Dropbox/WorkSpace-Dropbox/Academics/\
+Course/201401_java_tutorial/book/The_Java_Tutorials/javabeans/TOC.html\"\>", 
+   ",", "\<\"/Users/lumeng/Dropbox-x4430/Dropbox/WorkSpace-Dropbox/Academics/\
+Course/201401_java_tutorial/book/The_Java_Tutorials/java/TOC.html\"\>", 
+   ",", "\<\"/Users/lumeng/Dropbox-x4430/Dropbox/WorkSpace-Dropbox/Academics/\
+Course/201401_java_tutorial/book/The_Java_Tutorials/jaxb/TOC.html\"\>", 
+   ",", "\<\"/Users/lumeng/Dropbox-x4430/Dropbox/WorkSpace-Dropbox/Academics/\
+Course/201401_java_tutorial/book/The_Java_Tutorials/jaxp/TOC.html\"\>", 
+   ",", "\<\"/Users/lumeng/Dropbox-x4430/Dropbox/WorkSpace-Dropbox/Academics/\
+Course/201401_java_tutorial/book/The_Java_Tutorials/jdbc/TOC.html\"\>", 
+   ",", "\<\"/Users/lumeng/Dropbox-x4430/Dropbox/WorkSpace-Dropbox/Academics/\
+Course/201401_java_tutorial/book/The_Java_Tutorials/jmx/TOC.html\"\>", 
+   ",", "\<\"/Users/lumeng/Dropbox-x4430/Dropbox/WorkSpace-Dropbox/Academics/\
+Course/201401_java_tutorial/book/The_Java_Tutorials/jndi/TOC.html\"\>", 
+   ",", "\<\"/Users/lumeng/Dropbox-x4430/Dropbox/WorkSpace-Dropbox/Academics/\
+Course/201401_java_tutorial/book/The_Java_Tutorials/networking/TOC.html\"\>", 
+   ",", "\<\"/Users/lumeng/Dropbox-x4430/Dropbox/WorkSpace-Dropbox/Academics/\
+Course/201401_java_tutorial/book/The_Java_Tutorials/reflect/TOC.html\"\>", 
+   ",", "\<\"/Users/lumeng/Dropbox-x4430/Dropbox/WorkSpace-Dropbox/Academics/\
+Course/201401_java_tutorial/book/The_Java_Tutorials/rmi/TOC.html\"\>", 
+   ",", "\<\"/Users/lumeng/Dropbox-x4430/Dropbox/WorkSpace-Dropbox/Academics/\
+Course/201401_java_tutorial/book/The_Java_Tutorials/sdp/TOC.html\"\>", 
+   ",", "\<\"/Users/lumeng/Dropbox-x4430/Dropbox/WorkSpace-Dropbox/Academics/\
+Course/201401_java_tutorial/book/The_Java_Tutorials/security/TOC.html\"\>", 
+   ",", "\<\"/Users/lumeng/Dropbox-x4430/Dropbox/WorkSpace-Dropbox/Academics/\
+Course/201401_java_tutorial/book/The_Java_Tutorials/sound/TOC.html\"\>", 
+   ",", "\<\"/Users/lumeng/Dropbox-x4430/Dropbox/WorkSpace-Dropbox/Academics/\
+Course/201401_java_tutorial/book/The_Java_Tutorials/uiswing/TOC.html\"\>"}], 
+  "}"}]], "Output"]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"index", "=", "\"\<http://docs.oracle.com/javase/tutorial/\>\""}], 
+  ";"}]], "Input"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"ordering", "=", 
+  RowBox[{
+   RowBox[{"Composition", "[", "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"#", "[", 
+       RowBox[{"[", 
+        RowBox[{"3", ";;"}], "]"}], "]"}], "&"}], ",", "\[IndentingNewLine]", 
+     
+     RowBox[{
+      RowBox[{"Cases", "[", 
+       RowBox[{"#", ",", 
+        RowBox[{
+         RowBox[{"XMLElement", "[", 
+          RowBox[{"\"\<a\>\"", ",", 
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"\"\<shape\>\"", "\[Rule]", "\"\<rect\>\""}], ",", 
+             RowBox[{"\"\<href\>\"", "\[Rule]", 
+              RowBox[{"href_", "?", 
+               RowBox[{"(", 
+                RowBox[{
+                 RowBox[{
+                  RowBox[{"StringQ", "[", "#", "]"}], "&&", 
+                  RowBox[{"StringMatchQ", "[", 
+                   RowBox[{"#", ",", 
+                    RowBox[{
+                    "RegularExpression", "[", "\"\<^[^/]+/index.html\>\"", 
+                    "]"}]}], "]"}]}], "&"}], ")"}]}]}]}], "}"}], ",", 
+           RowBox[{"{", "_", "}"}]}], "]"}], "\[RuleDelayed]", 
+         RowBox[{"StringReplace", "[", " ", 
+          RowBox[{"href", ",", 
+           RowBox[{
+            RowBox[{
+            "RegularExpression", "[", "\"\<^([^/]+)/index.html\>\"", "]"}], 
+            "\[RuleDelayed]", " ", "\"\<$1\>\""}]}], "]"}]}], ",", 
+        "Infinity"}], "]"}], "&"}], ",", "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{"Import", "[", 
+       RowBox[{"#", ",", "\"\<XMLObject\>\""}], "]"}], "&"}]}], 
+    "\[IndentingNewLine]", "]"}], "[", "index", "]"}]}]], "Input"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"\<\"getStarted\"\>", ",", "\<\"java\"\>", ",", "\<\"essential\"\>",
+    ",", "\<\"collections\"\>", ",", "\<\"datetime\"\>", 
+   ",", "\<\"deployment\"\>", ",", "\<\"uiswing\"\>", 
+   ",", "\<\"networking\"\>", ",", "\<\"ext\"\>", ",", "\<\"java\"\>", 
+   ",", "\<\"i18n\"\>", ",", "\<\"javabeans\"\>", ",", "\<\"jdbc\"\>", 
+   ",", "\<\"jmx\"\>", ",", "\<\"jndi\"\>", ",", "\<\"jaxp\"\>", 
+   ",", "\<\"jaxb\"\>", ",", "\<\"rmi\"\>", ",", "\<\"reflect\"\>", 
+   ",", "\<\"security\"\>", ",", "\<\"sound\"\>", ",", "\<\"2d\"\>", 
+   ",", "\<\"sdp\"\>"}], "}"}]], "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"filesSorted", "=", 
+  RowBox[{
+   RowBox[{"SortBy", "[", 
+    RowBox[{"files", ",", 
+     RowBox[{
+      RowBox[{"With", "[", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{"x", "=", 
+          RowBox[{"FileNameTake", "[", 
+           RowBox[{"#", ",", 
+            RowBox[{"{", 
+             RowBox[{"-", "2"}], "}"}]}], "]"}]}], "}"}], ",", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"!", 
+           RowBox[{"MemberQ", "[", 
+            RowBox[{"ordering", ",", "x"}], "]"}]}], ",", 
+          RowBox[{"Position", "[", 
+           RowBox[{"ordering", ",", "x"}], "]"}]}], "}"}]}], "]"}], "&"}]}], 
+    "]"}], "[", 
+   RowBox[{"[", 
+    RowBox[{";;", 
+     RowBox[{"-", "2"}]}], "]"}], "]"}]}]], "Input"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"\<\"/Users/lumeng/Dropbox-x4430/Dropbox/WorkSpace-Dropbox/\
+Academics/Course/201401_java_tutorial/book/The_Java_Tutorials/getStarted/TOC.\
+html\"\>", 
+   ",", "\<\"/Users/lumeng/Dropbox-x4430/Dropbox/WorkSpace-Dropbox/Academics/\
+Course/201401_java_tutorial/book/The_Java_Tutorials/essential/TOC.html\"\>", 
+   ",", "\<\"/Users/lumeng/Dropbox-x4430/Dropbox/WorkSpace-Dropbox/Academics/\
+Course/201401_java_tutorial/book/The_Java_Tutorials/collections/TOC.html\"\>",
+    ",", "\<\"/Users/lumeng/Dropbox-x4430/Dropbox/WorkSpace-Dropbox/Academics/\
+Course/201401_java_tutorial/book/The_Java_Tutorials/datetime/TOC.html\"\>", 
+   ",", "\<\"/Users/lumeng/Dropbox-x4430/Dropbox/WorkSpace-Dropbox/Academics/\
+Course/201401_java_tutorial/book/The_Java_Tutorials/deployment/TOC.html\"\>", 
+   ",", "\<\"/Users/lumeng/Dropbox-x4430/Dropbox/WorkSpace-Dropbox/Academics/\
+Course/201401_java_tutorial/book/The_Java_Tutorials/uiswing/TOC.html\"\>", 
+   ",", "\<\"/Users/lumeng/Dropbox-x4430/Dropbox/WorkSpace-Dropbox/Academics/\
+Course/201401_java_tutorial/book/The_Java_Tutorials/networking/TOC.html\"\>", 
+   ",", "\<\"/Users/lumeng/Dropbox-x4430/Dropbox/WorkSpace-Dropbox/Academics/\
+Course/201401_java_tutorial/book/The_Java_Tutorials/ext/TOC.html\"\>", 
+   ",", "\<\"/Users/lumeng/Dropbox-x4430/Dropbox/WorkSpace-Dropbox/Academics/\
+Course/201401_java_tutorial/book/The_Java_Tutorials/i18n/TOC.html\"\>", 
+   ",", "\<\"/Users/lumeng/Dropbox-x4430/Dropbox/WorkSpace-Dropbox/Academics/\
+Course/201401_java_tutorial/book/The_Java_Tutorials/javabeans/TOC.html\"\>", 
+   ",", "\<\"/Users/lumeng/Dropbox-x4430/Dropbox/WorkSpace-Dropbox/Academics/\
+Course/201401_java_tutorial/book/The_Java_Tutorials/jdbc/TOC.html\"\>", 
+   ",", "\<\"/Users/lumeng/Dropbox-x4430/Dropbox/WorkSpace-Dropbox/Academics/\
+Course/201401_java_tutorial/book/The_Java_Tutorials/jmx/TOC.html\"\>", 
+   ",", "\<\"/Users/lumeng/Dropbox-x4430/Dropbox/WorkSpace-Dropbox/Academics/\
+Course/201401_java_tutorial/book/The_Java_Tutorials/jndi/TOC.html\"\>", 
+   ",", "\<\"/Users/lumeng/Dropbox-x4430/Dropbox/WorkSpace-Dropbox/Academics/\
+Course/201401_java_tutorial/book/The_Java_Tutorials/jaxp/TOC.html\"\>", 
+   ",", "\<\"/Users/lumeng/Dropbox-x4430/Dropbox/WorkSpace-Dropbox/Academics/\
+Course/201401_java_tutorial/book/The_Java_Tutorials/jaxb/TOC.html\"\>", 
+   ",", "\<\"/Users/lumeng/Dropbox-x4430/Dropbox/WorkSpace-Dropbox/Academics/\
+Course/201401_java_tutorial/book/The_Java_Tutorials/rmi/TOC.html\"\>", 
+   ",", "\<\"/Users/lumeng/Dropbox-x4430/Dropbox/WorkSpace-Dropbox/Academics/\
+Course/201401_java_tutorial/book/The_Java_Tutorials/reflect/TOC.html\"\>", 
+   ",", "\<\"/Users/lumeng/Dropbox-x4430/Dropbox/WorkSpace-Dropbox/Academics/\
+Course/201401_java_tutorial/book/The_Java_Tutorials/security/TOC.html\"\>", 
+   ",", "\<\"/Users/lumeng/Dropbox-x4430/Dropbox/WorkSpace-Dropbox/Academics/\
+Course/201401_java_tutorial/book/The_Java_Tutorials/sound/TOC.html\"\>", 
+   ",", "\<\"/Users/lumeng/Dropbox-x4430/Dropbox/WorkSpace-Dropbox/Academics/\
+Course/201401_java_tutorial/book/The_Java_Tutorials/2d/TOC.html\"\>", 
+   ",", "\<\"/Users/lumeng/Dropbox-x4430/Dropbox/WorkSpace-Dropbox/Academics/\
+Course/201401_java_tutorial/book/The_Java_Tutorials/sdp/TOC.html\"\>", 
+   ",", "\<\"/Users/lumeng/Dropbox-x4430/Dropbox/WorkSpace-Dropbox/Academics/\
+Course/201401_java_tutorial/book/The_Java_Tutorials/java/TOC.html\"\>", 
+   ",", "\<\"/Users/lumeng/Dropbox-x4430/Dropbox/WorkSpace-Dropbox/Academics/\
+Course/201401_java_tutorial/book/The_Java_Tutorials/extra/TOC.html\"\>"}], 
+  "}"}]], "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{"With", "[", "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"{", "\[IndentingNewLine]", 
+    RowBox[{"source", "=", "\[IndentingNewLine]", 
+     RowBox[{"StringJoin", "@@", 
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{
+         RowBox[{
+          RowBox[{"Composition", "[", "\[IndentingNewLine]", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"With", "[", "\[IndentingNewLine]", 
+              RowBox[{
+               RowBox[{"{", 
+                RowBox[{"subdir", "=", 
+                 RowBox[{"FileNameTake", "[", 
+                  RowBox[{
+                   RowBox[{"#", "[", 
+                    RowBox[{"[", "1", "]"}], "]"}], ",", 
+                   RowBox[{"{", 
+                    RowBox[{"-", "2"}], "}"}]}], "]"}]}], "}"}], ",", 
+               "\[IndentingNewLine]", 
+               RowBox[{"StringReplace", "[", "\[IndentingNewLine]", 
+                RowBox[{
+                 RowBox[{"#", "[", 
+                  RowBox[{"[", "2", "]"}], "]"}], ",", "\[IndentingNewLine]", 
+                 
+                 RowBox[{
+                  RowBox[{
+                  "RegularExpression", "[", "\"\<href='([^']+\\\\.html)'\>\"",
+                    "]"}], "\[Rule]", " ", 
+                  RowBox[{
+                  "\"\<href='http://docs.oracle.com/javase/tutorial/\>\"", "<>",
+                    "subdir", "<>", "\"\</$1'\>\""}]}]}], 
+                "\[IndentingNewLine]", "]"}]}], "\[IndentingNewLine]", "]"}], 
+             "&"}], ",", "\[IndentingNewLine]", 
+            RowBox[{
+             RowBox[{"{", "\[IndentingNewLine]", 
+              RowBox[{
+               RowBox[{"#", "[", 
+                RowBox[{"[", "1", "]"}], "]"}], ",", "\[IndentingNewLine]", 
+               RowBox[{"StringJoin", "[", "\[IndentingNewLine]", 
+                RowBox[{
+                 RowBox[{"\"\<<h2 id='\>\"", "<>", 
+                  RowBox[{"FileNameTake", "[", 
+                   RowBox[{
+                    RowBox[{"#", "[", 
+                    RowBox[{"[", "1", "]"}], "]"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{"-", "2"}], "}"}]}], "]"}], "<>", "\"\<'>\>\""}], 
+                 ",", "\[IndentingNewLine]", 
+                 RowBox[{
+                 "\"\<<a href='\>\"", "<>", 
+                  "\"\<http://docs.oracle.com/javase/tutorial/\>\"", "<>", 
+                  RowBox[{"FileNameTake", "[", 
+                   RowBox[{
+                    RowBox[{"#", "[", 
+                    RowBox[{"[", "1", "]"}], "]"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{"-", "2"}], "}"}]}], "]"}], "<>", "\"\</'>\>\""}],
+                  ",", "\[IndentingNewLine]", 
+                 RowBox[{"#", "[", 
+                  RowBox[{"[", 
+                   RowBox[{"2", ",", "1"}], "]"}], "]"}], ",", 
+                 "\[IndentingNewLine]", "\"\<</a></h2>\>\"", ",", 
+                 "\[IndentingNewLine]", "\"\<\\n\\n\>\"", ",", 
+                 "\[IndentingNewLine]", 
+                 RowBox[{"StringReplace", "[", 
+                  RowBox[{
+                   RowBox[{"ExportString", "[", 
+                    RowBox[{
+                    RowBox[{"#", "[", 
+                    RowBox[{"[", 
+                    RowBox[{"2", ",", "2"}], "]"}], "]"}], ",", 
+                    "\"\<XML\>\""}], "]"}], ",", 
+                   RowBox[{
+                   "\"\< id='PageContent'\>\"", "\[Rule]", " ", 
+                    "\"\<\>\""}]}], "]"}], ",", "\[IndentingNewLine]", 
+                 "\"\<\\n\\n\>\""}], "\[IndentingNewLine]", "]"}]}], 
+              "\[IndentingNewLine]", "}"}], "&"}], ",", "\[IndentingNewLine]", 
+            RowBox[{
+             RowBox[{"{", 
+              RowBox[{
+               RowBox[{"#", "[", 
+                RowBox[{"[", "1", "]"}], "]"}], ",", 
+               RowBox[{"#", "[", 
+                RowBox[{"[", 
+                 RowBox[{"2", ",", "All", ",", "1"}], "]"}], "]"}]}], "}"}], 
+             "&"}], ",", "\[IndentingNewLine]", 
+            RowBox[{
+             RowBox[{"{", "\[IndentingNewLine]", 
+              RowBox[{
+               RowBox[{"#", "[", 
+                RowBox[{"[", "1", "]"}], "]"}], ",", "\[IndentingNewLine]", 
+               RowBox[{"{", "\[IndentingNewLine]", 
+                RowBox[{
+                 RowBox[{"Cases", "[", 
+                  RowBox[{"#", ",", 
+                   RowBox[{
+                    RowBox[{"XMLElement", "[", 
+                    RowBox[{"\"\<h1\>\"", ",", 
+                    RowBox[{"{", "}"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{"t_", "?", 
+                    RowBox[{"(", 
+                    RowBox[{
+                    RowBox[{
+                    RowBox[{"StringQ", "[", "#", "]"}], "&&", 
+                    RowBox[{"StringMatchQ", "[", 
+                    RowBox[{"#", ",", 
+                    RowBox[{
+                    "RegularExpression", "[", 
+                    "\"\<Trail: (.*): Table of Contents\>\"", "]"}]}], 
+                    "]"}]}], "&"}], ")"}]}], "}"}]}], "]"}], "\[RuleDelayed]",
+                     " ", 
+                    RowBox[{"StringReplace", "[", 
+                    RowBox[{"t", ",", 
+                    RowBox[{
+                    RowBox[{
+                    "RegularExpression", "[", 
+                    "\"\<Trail: (.*): Table of Contents\>\"", "]"}], 
+                    "\[Rule]", " ", "\"\<$1\>\""}]}], "]"}]}], ",", 
+                   "Infinity"}], "]"}], ",", "\[IndentingNewLine]", 
+                 RowBox[{"Cases", "[", 
+                  RowBox[{"#", ",", 
+                   RowBox[{"XMLElement", "[", 
+                    RowBox[{"\"\<div\>\"", ",", 
+                    RowBox[{"{", 
+                    RowBox[{"\"\<id\>\"", "\[Rule]", "\"\<PageContent\>\""}], 
+                    "}"}], ",", "_"}], "]"}], ",", "Infinity"}], "]"}]}], 
+                "\[IndentingNewLine]", "}"}]}], "\[IndentingNewLine]", "}"}], 
+             "&"}], ",", "\[IndentingNewLine]", 
+            RowBox[{
+             RowBox[{"{", "\[IndentingNewLine]", 
+              RowBox[{
+               RowBox[{"FileNameTake", "[", 
+                RowBox[{"#", ",", 
+                 RowBox[{"-", "2"}]}], "]"}], ",", "\[IndentingNewLine]", 
+               RowBox[{"Import", "[", 
+                RowBox[{"#", ",", "\"\<XMLObject\>\""}], "]"}]}], 
+              "\[IndentingNewLine]", "}"}], "&"}]}], "\[IndentingNewLine]", 
+           "]"}], "[", "#", "]"}], "&"}], "/@", "filesSorted"}], 
+       "\[IndentingNewLine]", ")"}]}]}], "\[IndentingNewLine]", "}"}], ",", 
+   "\[IndentingNewLine]", 
+   RowBox[{"With", "[", "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"f", "=", 
+       RowBox[{"ToFileName", "[", 
+        RowBox[{
+         RowBox[{"{", "$TemporaryDirectory", "}"}], ",", 
+         "\"\<The_Java_Tutorials_TOC.html\>\""}], "]"}]}], "}"}], ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{"WriteString", "[", 
+       RowBox[{"f", ",", "source"}], "]"}], ";", "\[IndentingNewLine]", 
+      RowBox[{"Close", "[", "f", "]"}]}]}], "\[IndentingNewLine]", "]"}]}], 
+  "\[IndentingNewLine]", "]"}], "\[IndentingNewLine]", 
+ RowBox[{"SystemOpen", "[", "%", "]"}], "\[IndentingNewLine]"}], "Input"],
+
+Cell[BoxData["\<\"/tmp/The_Java_Tutorials_TOC.html\"\>"], "Output"]
+}, Open  ]]
+}, Closed]]
+}, Open  ]]
+},
+WindowSize->{1550, 1005},
+WindowMargins->{{4, Automatic}, {Automatic, 4}},
+ShowSelection->True,
+FrontEndVersion->"9.0 for Mac OS X x86 (32-bit, 64-bit Kernel) (March 5, \
+2013)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[579, 22, 118, 3, 92, "Title"],
+Cell[700, 27, 68, 2, 30, "Text"],
+Cell[CellGroupData[{
+Cell[793, 33, 178, 2, 29, "ItemNumbered"],
+Cell[974, 37, 378, 8, 30, "ItemNumbered"],
+Cell[1355, 47, 141, 3, 30, "ItemNumbered"],
+Cell[1499, 52, 164, 3, 49, "ItemNumbered"],
+Cell[1666, 57, 422, 9, 106, "ItemNumbered"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[2125, 71, 61, 2, 80, "Section"],
+Cell[2189, 75, 200, 5, 28, "Input"],
+Cell[CellGroupData[{
+Cell[2414, 84, 172, 4, 28, "Input"],
+Cell[2589, 90, 3750, 50, 420, "Output"]
+}, Open  ]],
+Cell[6354, 143, 120, 3, 28, "Input"],
+Cell[CellGroupData[{
+Cell[6499, 150, 1600, 41, 114, "Input"],
+Cell[8102, 193, 612, 10, 28, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[8751, 208, 755, 24, 28, "Input"],
+Cell[9509, 234, 3595, 49, 403, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[13141, 288, 7241, 160, 811, "Input"],
+Cell[20385, 450, 67, 0, 28, "Output"]
+}, Open  ]]
+}, Closed]]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)

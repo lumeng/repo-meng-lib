@@ -1,0 +1,685 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 9.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       157,          7]
+NotebookDataLength[     23480,        676]
+NotebookOptionsPosition[     20377,        572]
+NotebookOutlinePosition[     20747,        588]
+CellTagsIndexPosition[     20704,        585]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["\<\
+Check Java version and environment variables\
+\>", "Title"],
+
+Cell[CellGroupData[{
+
+Cell["Check environment", "Subsection"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Import", "[", 
+  RowBox[{"\"\<!echo $JAVA_HOME\>\"", ",", "\"\<Text\>\""}], "]"}]], "Input"],
+
+Cell[BoxData["\<\"\"\>"], "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Environment", "[", "\"\<JAVA_HOME\>\"", "]"}]], "Input"],
+
+Cell[BoxData["$Failed"], "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Import", "[", 
+  RowBox[{"\"\<!java -version\>\"", ",", "\"\<Text\>\""}], "]"}]], "Input"],
+
+Cell[BoxData["\<\"\"\>"], "Output"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["\<\
+Start Java without CommandLine specification\
+\>", "Subsection"],
+
+Cell[BoxData["Quit"], "Input"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{"Needs", "[", "\"\<JLink`\>\"", "]"}], "\[IndentingNewLine]", 
+ RowBox[{"ReinstallJava", "[", "]"}], "\[IndentingNewLine]", 
+ RowBox[{"LoadJavaClass", "[", "\"\<java.lang.System\>\"", 
+  "]"}], "\[IndentingNewLine]", 
+ RowBox[{"java`lang`System`getProperty", "[", "\"\<java.version\>\"", 
+  "]"}]}], "Input"],
+
+Cell[BoxData[
+ RowBox[{"LinkObject", "[", 
+  RowBox[{"\<\"'/Applications/Mathematica.app/SystemFiles/Links/JLink/JLink.\
+app/Contents/MacOS/JavaApplicationStub' -init \\\"/tmp/m0000027061\\\"\"\>", 
+   ",", "166", ",", "5"}], "]"}]], "Output"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"JavaClass", "[", 
+   RowBox[{"java", ".", "lang", ".", "System"}], ",", "<>", "]"}],
+  JLink`JavaClass["java.lang.System", 0, {
+    JLink`JVM["vm1"]}, 1, "java`lang`System`", False, True]]], "Output"],
+
+Cell[BoxData["\<\"1.6.0_65\"\>"], "Output"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["\<\
+Start Java with CommandLine\[Rule]\[CloseCurlyDoubleQuote]java\
+\[CloseCurlyDoubleQuote]\
+\>", "Subsection"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{"Needs", "[", "\"\<JLink`\>\"", "]"}], "\[IndentingNewLine]", 
+ RowBox[{"ReinstallJava", "[", 
+  RowBox[{"CommandLine", "\[Rule]", "\"\<java\>\""}], 
+  "]"}], "\[IndentingNewLine]", 
+ RowBox[{"LoadJavaClass", "[", "\"\<java.lang.System\>\"", 
+  "]"}], "\[IndentingNewLine]", 
+ RowBox[{"java`lang`System`getProperty", "[", "\"\<java.version\>\"", 
+  "]"}]}], "Input"],
+
+Cell[BoxData[
+ RowBox[{"LinkObject", "[", 
+  RowBox[{"\<\"java -classpath \
+\\\"/Applications/Mathematica.app/SystemFiles/Links/JLink/JLink.jar\\\" \
+-Xdock:name=J/Link -Xmx256m  \
+-Djava.system.class.loader=com.wolfram.jlink.JLinkSystemClassLoader \
+com.wolfram.jlink.Install -init \\\"/tmp/m0000037061\\\"\"\>", ",", "173", 
+   ",", "5"}], "]"}]], "Output"],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"LinkObject", "::", "linkn"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Argument \[NoBreak]\\!\\(LinkObject[\\(\\(\\\"java \
+-classpath \
+\\\\\\\"/Applications/Mathematica.app/SystemFiles/Links/JLink/JLink.jar\\\\\\\
+\" -Xdock:name=J/Link -Xmx256m  \
+-Djava.system.class.loader=com.wolfram.jlink.JLinkSystemClassLoader \
+com.wolfram.jlink.Install -init \\\\\\\"/tmp/m0000037061\\\\\\\"\\\", 173, \
+5\\)\\)]\\)\[NoBreak] in \[NoBreak]\\!\\(LinkReadyQ[\\(\\(LinkObject[\\(\\(\\\
+\"java -classpath \
+\\\\\\\"/Applications/Mathematica.app/SystemFiles/Links/JLink/JLink.jar\\\\\\\
+\" -Xdock:name=J/Link -Xmx256m  \
+-Djava.system.class.loader=com.wolfram.jlink.JLinkSystemClassLoader \
+com.wolfram.jlink.Install -init \\\\\\\"/tmp/m0000037061\\\\\\\"\\\", 173, \
+5\\)\\)]\\)\\)]\\)\[NoBreak] has an invalid LinkObject number; the link may \
+be closed. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\
+\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/message/LinkObject/linkn\\\", ButtonNote -> \
+\\\"LinkObject::linkn\\\"]\\)\"\>"}]], "Message", "MSG"],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"LinkObject", "::", "linkn"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Argument \[NoBreak]\\!\\(LinkObject[\\(\\(\\\"java \
+-classpath \
+\\\\\\\"/Applications/Mathematica.app/SystemFiles/Links/JLink/JLink.jar\\\\\\\
+\" -Xdock:name=J/Link -Xmx256m  \
+-Djava.system.class.loader=com.wolfram.jlink.JLinkSystemClassLoader \
+com.wolfram.jlink.Install -init \\\\\\\"/tmp/m0000037061\\\\\\\"\\\", 173, \
+5\\)\\)]\\)\[NoBreak] in \
+\[NoBreak]\\!\\(LinkConnectedQ[\\(\\(LinkObject[\\(\\(\\\"java -classpath \
+\\\\\\\"/Applications/Mathematica.app/SystemFiles/Links/JLink/JLink.jar\\\\\\\
+\" -Xdock:name=J/Link -Xmx256m  \
+-Djava.system.class.loader=com.wolfram.jlink.JLinkSystemClassLoader \
+com.wolfram.jlink.Install -init \\\\\\\"/tmp/m0000037061\\\\\\\"\\\", 173, \
+5\\)\\)]\\)\\)]\\)\[NoBreak] has an invalid LinkObject number; the link may \
+be closed. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\
+\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/message/LinkObject/linkn\\\", ButtonNote -> \
+\\\"LinkObject::linkn\\\"]\\)\"\>"}]], "Message", "MSG"],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"LinkObject", "::", "linkn"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Argument \[NoBreak]\\!\\(LinkObject[\\(\\(\\\"java \
+-classpath \
+\\\\\\\"/Applications/Mathematica.app/SystemFiles/Links/JLink/JLink.jar\\\\\\\
+\" -Xdock:name=J/Link -Xmx256m  \
+-Djava.system.class.loader=com.wolfram.jlink.JLinkSystemClassLoader \
+com.wolfram.jlink.Install -init \\\\\\\"/tmp/m0000037061\\\\\\\"\\\", 173, \
+5\\)\\)]\\)\[NoBreak] in \[NoBreak]\\!\\(LinkReadyQ[\\(\\(LinkObject[\\(\\(\\\
+\"java -classpath \
+\\\\\\\"/Applications/Mathematica.app/SystemFiles/Links/JLink/JLink.jar\\\\\\\
+\" -Xdock:name=J/Link -Xmx256m  \
+-Djava.system.class.loader=com.wolfram.jlink.JLinkSystemClassLoader \
+com.wolfram.jlink.Install -init \\\\\\\"/tmp/m0000037061\\\\\\\"\\\", 173, \
+5\\)\\)]\\)\\)]\\)\[NoBreak] has an invalid LinkObject number; the link may \
+be closed. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\
+\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/message/LinkObject/linkn\\\", ButtonNote -> \
+\\\"LinkObject::linkn\\\"]\\)\"\>"}]], "Message", "MSG"],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"General", "::", "stop"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Further output of \
+\[NoBreak]\\!\\(\\*StyleBox[\\(LinkObject :: linkn\\), \
+\\\"MessageName\\\"]\\)\[NoBreak] will be suppressed during this calculation. \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/General/stop\\\", \
+ButtonNote -> \\\"General::stop\\\"]\\)\"\>"}]], "Message", "MSG"],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"InstallJava", "::", "fail"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"A link to the Java runtime could not be established. \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:JLink/ref/InstallJava\\\", \
+ButtonNote -> \\\"JLink`InstallJava::fail\\\"]\\)\"\>"}]], "Message", "MSG"],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"LoadJavaClass", "::", "fail"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Java failed to load class \
+\[NoBreak]\\!\\(\\\"java.lang.System\\\"\\)\[NoBreak]. \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:JLink/ref/LoadJavaClass\\\", \
+ButtonNote -> \\\"JLink`LoadJavaClass::fail\\\"]\\)\"\>"}]], "Message", "MSG"],
+
+Cell[BoxData["$Failed"], "Output"],
+
+Cell[BoxData[
+ RowBox[{"java`lang`System`getProperty", "[", "\<\"java.version\"\>", 
+  "]"}]], "Output"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["\<\
+Start Java with CommandLine -> \
+\"/System/Library/Frameworks/JavaVM.framework/Versions/A/Commands/java\"\
+\>", "Subsection"],
+
+Cell["\<\
+$ /System/Library/Frameworks/JavaVM.framework/Versions/A/Commands/java - \
+version
+java version \"1.6 .0 _ 65\"
+Java (TM) SE Runtime Environment (build 1.6 .0 _ 65 - b14 - 462 - 11 M4609)
+Java HotSpot (TM) 64 - Bit Server VM (build 20.65 - b04 - 462, mixed mode)\
+\>", "Program"],
+
+Cell[BoxData["Quit"], "Input"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{"Needs", "[", "\"\<JLink`\>\"", "]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"ReinstallJava", "[", 
+   RowBox[{
+   "CommandLine", "\[Rule]", 
+    "\"\</System/Library/Frameworks/JavaVM.framework/Versions/A/Commands/java\
+\>\""}], "]"}], "//", "FullForm"}], "\[IndentingNewLine]", 
+ RowBox[{"LoadJavaClass", "[", "\"\<java.lang.System\>\"", 
+  "]"}], "\[IndentingNewLine]", 
+ RowBox[{"java`lang`System`getProperty", "[", "\"\<java.version\>\"", 
+  "]"}], "\[IndentingNewLine]"}], "Input"],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   RowBox[{"LinkObject", "[", 
+    RowBox[{
+    "\"\</System/Library/Frameworks/JavaVM.framework/Versions/A/Commands/java \
+-classpath \
+\\\"/Applications/Mathematica.app/SystemFiles/Links/JLink/JLink.jar\\\" \
+-Xdock:name=J/Link -Xmx256m  \
+-Djava.system.class.loader=com.wolfram.jlink.JLinkSystemClassLoader \
+com.wolfram.jlink.Install -init \\\"/tmp/m0000047061\\\"\>\"", ",", "201", 
+     ",", "5"}], "]"}],
+   ShowSpecialCharacters->False,
+   ShowStringCharacters->True,
+   NumberMarks->True],
+  FullForm]], "Output"],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"LinkObject", "::", "linkn"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Argument \
+\[NoBreak]\\!\\(LinkObject[\\(\\(\\\"/System/Library/Frameworks/JavaVM.\
+framework/Versions/A/Commands/java -classpath \
+\\\\\\\"/Applications/Mathematica.app/SystemFiles/Links/JLink/JLink.jar\\\\\\\
+\" -Xdock:name=J/Link -Xmx256m  \
+-Djava.system.class.loader=com.wolfram.jlink.JLinkSystemClassLoader \
+com.wolfram.jlink.Install -init \\\\\\\"/tmp/m0000047061\\\\\\\"\\\", 201, \
+5\\)\\)]\\)\[NoBreak] in \[NoBreak]\\!\\(LinkReadyQ[\\(\\(LinkObject[\\(\\(\\\
+\"/System/Library/Frameworks/JavaVM.framework/Versions/A/Commands/java \
+-classpath \
+\\\\\\\"/Applications/Mathematica.app/SystemFiles/Links/JLink/JLink.jar\\\\\\\
+\" -Xdock:name=J/Link -Xmx256m  \
+-Djava.system.class.loader=com.wolfram.jlink.JLinkSystemClassLoader \
+com.wolfram.jlink.Install -init \\\\\\\"/tmp/m0000047061\\\\\\\"\\\", 201, \
+5\\)\\)]\\)\\)]\\)\[NoBreak] has an invalid LinkObject number; the link may \
+be closed. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\
+\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/message/LinkObject/linkn\\\", ButtonNote -> \
+\\\"LinkObject::linkn\\\"]\\)\"\>"}]], "Message", "MSG"],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"LinkObject", "::", "linkn"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Argument \
+\[NoBreak]\\!\\(LinkObject[\\(\\(\\\"/System/Library/Frameworks/JavaVM.\
+framework/Versions/A/Commands/java -classpath \
+\\\\\\\"/Applications/Mathematica.app/SystemFiles/Links/JLink/JLink.jar\\\\\\\
+\" -Xdock:name=J/Link -Xmx256m  \
+-Djava.system.class.loader=com.wolfram.jlink.JLinkSystemClassLoader \
+com.wolfram.jlink.Install -init \\\\\\\"/tmp/m0000047061\\\\\\\"\\\", 201, \
+5\\)\\)]\\)\[NoBreak] in \
+\[NoBreak]\\!\\(LinkConnectedQ[\\(\\(LinkObject[\\(\\(\\\"/System/Library/\
+Frameworks/JavaVM.framework/Versions/A/Commands/java -classpath \
+\\\\\\\"/Applications/Mathematica.app/SystemFiles/Links/JLink/JLink.jar\\\\\\\
+\" -Xdock:name=J/Link -Xmx256m  \
+-Djava.system.class.loader=com.wolfram.jlink.JLinkSystemClassLoader \
+com.wolfram.jlink.Install -init \\\\\\\"/tmp/m0000047061\\\\\\\"\\\", 201, \
+5\\)\\)]\\)\\)]\\)\[NoBreak] has an invalid LinkObject number; the link may \
+be closed. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\
+\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/message/LinkObject/linkn\\\", ButtonNote -> \
+\\\"LinkObject::linkn\\\"]\\)\"\>"}]], "Message", "MSG"],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"LinkObject", "::", "linkn"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Argument \
+\[NoBreak]\\!\\(LinkObject[\\(\\(\\\"/System/Library/Frameworks/JavaVM.\
+framework/Versions/A/Commands/java -classpath \
+\\\\\\\"/Applications/Mathematica.app/SystemFiles/Links/JLink/JLink.jar\\\\\\\
+\" -Xdock:name=J/Link -Xmx256m  \
+-Djava.system.class.loader=com.wolfram.jlink.JLinkSystemClassLoader \
+com.wolfram.jlink.Install -init \\\\\\\"/tmp/m0000047061\\\\\\\"\\\", 201, \
+5\\)\\)]\\)\[NoBreak] in \[NoBreak]\\!\\(LinkReadyQ[\\(\\(LinkObject[\\(\\(\\\
+\"/System/Library/Frameworks/JavaVM.framework/Versions/A/Commands/java \
+-classpath \
+\\\\\\\"/Applications/Mathematica.app/SystemFiles/Links/JLink/JLink.jar\\\\\\\
+\" -Xdock:name=J/Link -Xmx256m  \
+-Djava.system.class.loader=com.wolfram.jlink.JLinkSystemClassLoader \
+com.wolfram.jlink.Install -init \\\\\\\"/tmp/m0000047061\\\\\\\"\\\", 201, \
+5\\)\\)]\\)\\)]\\)\[NoBreak] has an invalid LinkObject number; the link may \
+be closed. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\
+\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/message/LinkObject/linkn\\\", ButtonNote -> \
+\\\"LinkObject::linkn\\\"]\\)\"\>"}]], "Message", "MSG"],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"General", "::", "stop"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Further output of \
+\[NoBreak]\\!\\(\\*StyleBox[\\(LinkObject :: linkn\\), \
+\\\"MessageName\\\"]\\)\[NoBreak] will be suppressed during this calculation. \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/General/stop\\\", \
+ButtonNote -> \\\"General::stop\\\"]\\)\"\>"}]], "Message", "MSG"],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"InstallJava", "::", "fail"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"A link to the Java runtime could not be established. \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:JLink/ref/InstallJava\\\", \
+ButtonNote -> \\\"JLink`InstallJava::fail\\\"]\\)\"\>"}]], "Message", "MSG"],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"LoadJavaClass", "::", "fail"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Java failed to load class \
+\[NoBreak]\\!\\(\\\"java.lang.System\\\"\\)\[NoBreak]. \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:JLink/ref/LoadJavaClass\\\", \
+ButtonNote -> \\\"JLink`LoadJavaClass::fail\\\"]\\)\"\>"}]], "Message", "MSG"],
+
+Cell[BoxData["$Failed"], "Output"],
+
+Cell[BoxData[
+ RowBox[{"java`lang`System`getProperty", "[", "\<\"java.version\"\>", 
+  "]"}]], "Output"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["The following does not work and is just some random fiddling", "Section"],
+
+Cell[CellGroupData[{
+
+Cell["\<\
+CommandLine -> \
+\[OpenCurlyDoubleQuote]/Library/Java/JavaVirtualMachines/jdk1.7.0.jdk/\
+Contents/Home/Commands/java\[CloseCurlyDoubleQuote]\
+\>", "Subsection"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"Unprotect", "[", "Environment", "]"}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"Environment", "[", "\"\<JAVA_HOME\>\"", "]"}], "=", 
+   "\"\</Library/Java/JavaVirtualMachines/jdk1.7.0_51.jdk/Contents/Home\>\""}]\
+, ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Protect", "[", "Environment", "]"}], ";"}]}], "Input"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{"Needs", "[", "\"\<JLink`\>\"", "]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"ReinstallJava", "[", 
+   RowBox[{
+   "CommandLine", "\[Rule]", 
+    "\"\</Library/Java/JavaVirtualMachines/jdk1.7.0_51.jdk/Contents/Commands/\
+java\>\""}], "]"}], "//", "FullForm"}], "\[IndentingNewLine]", 
+ RowBox[{"LoadJavaClass", "[", "\"\<java.lang.System\>\"", 
+  "]"}], "\[IndentingNewLine]", 
+ RowBox[{"java`lang`System`getProperty", "[", "\"\<java.version\>\"", 
+  "]"}], "\[IndentingNewLine]"}], "Input"],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"LinkOpen", "::", "linke"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"\[NoBreak]\\!\\(\\\"Could not find MathLink executable\\\"\
+\\)\[NoBreak]. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
+ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/message/LinkOpen/linke\\\", ButtonNote -> \
+\\\"LinkOpen::linke\\\"]\\)\"\>"}]], "Message", "MSG"],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"InstallJava", "::", "launch"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"The Java runtime could not be launched. \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:JLink/ref/InstallJava\\\", \
+ButtonNote -> \\\"JLink`InstallJava::launch\\\"]\\)\"\>"}]], "Message", "MSG"],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox["$Failed",
+   ShowSpecialCharacters->False,
+   ShowStringCharacters->True,
+   NumberMarks->True],
+  FullForm]], "Output"],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"Java", "::", "init"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Java is not running. You must call InstallJava[] to start \
+the Java runtime.\"\>"}]], "Message", "MSG"],
+
+Cell[BoxData["$Failed"], "Output"],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"Java", "::", "init"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Java is not running. You must call InstallJava[] to start \
+the Java runtime.\"\>"}]], "Message", "MSG"],
+
+Cell[BoxData["$Failed"], "Output"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["\<\
+CommandLine -> \
+\"/Library/Java/JavaVirtualMachines/jdk1.8.0.jdk/Contents/Home/Commands/java\"\
+\>", "Subsection"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"Unprotect", "[", "Environment", "]"}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"Environment", "[", "\"\<JAVA_HOME\>\"", "]"}], "=", 
+   "\"\</Library/Java/JavaVirtualMachines/jdk1.8.0.jdk/Contents/Home\>\""}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Protect", "[", "Environment", "]"}], ";"}]}], "Input"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{"Needs", "[", "\"\<JLink`\>\"", "]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"ReinstallJava", "[", 
+   RowBox[{
+   "CommandLine", "\[Rule]", 
+    "\"\</Library/Java/JavaVirtualMachines/jdk1.8.0.jdk/Contents/Home/\
+Commands/java\>\""}], "]"}], "//", "FullForm"}], "\[IndentingNewLine]", 
+ RowBox[{"LoadJavaClass", "[", "\"\<java.lang.System\>\"", 
+  "]"}], "\[IndentingNewLine]", 
+ RowBox[{"java`lang`System`getProperty", "[", "\"\<java.version\>\"", 
+  "]"}], "\[IndentingNewLine]"}], "Input"],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"LinkOpen", "::", "linke"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"\[NoBreak]\\!\\(\\\"Could not find MathLink executable\\\"\
+\\)\[NoBreak]. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
+ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/message/LinkOpen/linke\\\", ButtonNote -> \
+\\\"LinkOpen::linke\\\"]\\)\"\>"}]], "Message", "MSG"],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"InstallJava", "::", "launch"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"The Java runtime could not be launched. \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:JLink/ref/InstallJava\\\", \
+ButtonNote -> \\\"JLink`InstallJava::launch\\\"]\\)\"\>"}]], "Message", "MSG"],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox["$Failed",
+   ShowSpecialCharacters->False,
+   ShowStringCharacters->True,
+   NumberMarks->True],
+  FullForm]], "Output"],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"Java", "::", "init"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Java is not running. You must call InstallJava[] to start \
+the Java runtime.\"\>"}]], "Message", "MSG"],
+
+Cell[BoxData["$Failed"], "Output"],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"Java", "::", "init"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Java is not running. You must call InstallJava[] to start \
+the Java runtime.\"\>"}]], "Message", "MSG"],
+
+Cell[BoxData["$Failed"], "Output"]
+}, Open  ]]
+}, Open  ]]
+}, Closed]]
+}, Open  ]]
+},
+WindowSize->{1440, 852},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+ShowSelection->True,
+FrontEndVersion->"9.0 for Mac OS X x86 (32-bit, 64-bit Kernel) (May 19, 2013)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[579, 22, 69, 2, 92, "Title"],
+Cell[CellGroupData[{
+Cell[673, 28, 39, 0, 44, "Subsection"],
+Cell[CellGroupData[{
+Cell[737, 32, 116, 2, 28, "Input"],
+Cell[856, 36, 35, 0, 28, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[928, 41, 80, 1, 28, "Input"],
+Cell[1011, 44, 34, 0, 28, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[1082, 49, 114, 2, 28, "Input"],
+Cell[1199, 53, 35, 0, 28, "Output"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[1283, 59, 74, 2, 44, "Subsection"],
+Cell[1360, 63, 30, 0, 28, "Input"],
+Cell[CellGroupData[{
+Cell[1415, 67, 332, 6, 80, "Input"],
+Cell[1750, 75, 243, 4, 28, "Output"],
+Cell[1996, 81, 245, 5, 28, "Output"],
+Cell[2244, 88, 43, 0, 28, "Output"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[2336, 94, 118, 3, 44, "Subsection"],
+Cell[CellGroupData[{
+Cell[2479, 101, 390, 8, 80, "Input"],
+Cell[2872, 111, 359, 7, 46, "Output"],
+Cell[3234, 120, 1123, 21, 94, "Message"],
+Cell[4360, 143, 1127, 21, 94, "Message"],
+Cell[5490, 166, 1123, 21, 94, "Message"],
+Cell[6616, 189, 492, 10, 24, "Message"],
+Cell[7111, 201, 401, 8, 24, "Message"],
+Cell[7515, 211, 437, 9, 24, "Message"],
+Cell[7955, 222, 34, 0, 28, "Output"],
+Cell[7992, 224, 104, 2, 28, "Output"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[8145, 232, 135, 3, 44, "Subsection"],
+Cell[8283, 237, 289, 6, 88, "Program"],
+Cell[8575, 245, 30, 0, 28, "Input"],
+Cell[CellGroupData[{
+Cell[8630, 249, 517, 11, 97, "Input"],
+Cell[9150, 262, 557, 15, 57, "Output"],
+Cell[9710, 279, 1255, 23, 78, "Message"],
+Cell[10968, 304, 1259, 23, 78, "Message"],
+Cell[12230, 329, 1255, 23, 78, "Message"],
+Cell[13488, 354, 492, 10, 24, "Message"],
+Cell[13983, 366, 401, 8, 24, "Message"],
+Cell[14387, 376, 437, 9, 24, "Message"],
+Cell[14827, 387, 34, 0, 28, "Output"],
+Cell[14864, 389, 104, 2, 28, "Output"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[15017, 397, 79, 0, 80, "Section"],
+Cell[CellGroupData[{
+Cell[15121, 401, 170, 4, 44, "Subsection"],
+Cell[15294, 407, 383, 10, 63, "Input"],
+Cell[CellGroupData[{
+Cell[15702, 421, 521, 11, 97, "Input"],
+Cell[16226, 434, 418, 9, 24, "Message"],
+Cell[16647, 445, 392, 8, 24, "Message"],
+Cell[17042, 455, 155, 6, 28, "Output"],
+Cell[17200, 463, 222, 6, 24, "Message"],
+Cell[17425, 471, 34, 0, 28, "Output"],
+Cell[17462, 473, 222, 6, 24, "Message"],
+Cell[17687, 481, 34, 0, 28, "Output"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[17770, 487, 125, 3, 44, "Subsection"],
+Cell[17898, 492, 381, 10, 63, "Input"],
+Cell[CellGroupData[{
+Cell[18304, 506, 523, 11, 97, "Input"],
+Cell[18830, 519, 418, 9, 24, "Message"],
+Cell[19251, 530, 392, 8, 24, "Message"],
+Cell[19646, 540, 155, 6, 28, "Output"],
+Cell[19804, 548, 222, 6, 24, "Message"],
+Cell[20029, 556, 34, 0, 28, "Output"],
+Cell[20066, 558, 222, 6, 24, "Message"],
+Cell[20291, 566, 34, 0, 28, "Output"]
+}, Open  ]]
+}, Open  ]]
+}, Closed]]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)

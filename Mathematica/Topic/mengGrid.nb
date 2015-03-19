@@ -1,0 +1,1449 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 10.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     64645,       1440]
+NotebookOptionsPosition[     64057,       1414]
+NotebookOutlinePosition[     64413,       1430]
+CellTagsIndexPosition[     64370,       1427]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["mengGrid", "Title"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"\n", "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{
+    RowBox[{
+     RowBox[{"Options", "[", "mengGrid", "]"}], ":=", 
+     RowBox[{"Join", "[", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"\"\<Headers\>\"", "\[Rule]", 
+          RowBox[{"{", "}"}]}], ",", 
+         RowBox[{"\"\<NumericUID\>\"", "\[Rule]", "True"}], ",", 
+         RowBox[{"\"\<UseOpenerViewQ\>\"", "\[Rule]", "False"}], ",", 
+         RowBox[{"\"\<OpenerViewLabelStringLength\>\"", "\[Rule]", "500"}], 
+         ",", 
+         RowBox[{"\"\<DynamicSortQ\>\"", "\[Rule]", "True"}], ",", 
+         RowBox[{"\"\<SortByFunction\>\"", "\[Rule]", "Identity"}], ",", 
+         RowBox[{"\"\<RepeatedHeadersQ\>\"", "\[Rule]", "True"}], ",", 
+         RowBox[{"\"\<RepeatedHeadersOffset\>\"", "\[Rule]", "30"}], ",", 
+         RowBox[{"\"\<InertNumericUID\>\"", "\[Rule]", "True"}]}], "}"}], ",", 
+       RowBox[{"Options", "[", "Grid", "]"}]}], "]"}]}], ";"}], 
+   "\[IndentingNewLine]", "\n", 
+   RowBox[{
+    RowBox[{"mengGrid", "::", "errarg"}], "=", "\"\<invalid arguments\>\""}], 
+   "\[IndentingNewLine]", "\n", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"mengGrid", "[", 
+      RowBox[{
+       RowBox[{"x_", "?", 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"ListQ", "[", "#", "]"}], "&&", 
+           RowBox[{"MatchQ", "[", 
+            RowBox[{
+             RowBox[{"Dimensions", "[", "#", "]"}], ",", 
+             RowBox[{"{", 
+              RowBox[{"_", ",", "_"}], "}"}]}], "]"}]}], "&"}], ")"}]}], ",", 
+       
+       RowBox[{"opts", ":", 
+        RowBox[{"OptionsPattern", "[", "]"}]}]}], "]"}], ":=", 
+     RowBox[{"If", "[", 
+      RowBox[{
+       RowBox[{"TrueQ", "@", 
+        RowBox[{"OptionValue", "[", "\"\<DynamicSortQ\>\"", "]"}]}], ",", 
+       RowBox[{"DynamicModule", "[", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"sortcolumn", "=", 
+            RowBox[{"If", "[", 
+             RowBox[{
+              RowBox[{"OptionValue", "[", "\"\<NumericUID\>\"", "]"}], ",", 
+              "1", ",", "0"}], "]"}]}], ",", "newdata", ",", "newheaders", 
+           ",", 
+           RowBox[{"headers", "=", 
+            RowBox[{"Replace", "[", 
+             RowBox[{
+              RowBox[{"OptionValue", "[", "\"\<Headers\>\"", "]"}], ",", 
+              RowBox[{
+               RowBox[{"Except", "[", 
+                RowBox[{"_List", "?", 
+                 RowBox[{"(", 
+                  RowBox[{
+                   RowBox[{
+                    RowBox[{"Length", "[", "#", "]"}], "===", 
+                    RowBox[{"Quiet", "[", 
+                    RowBox[{
+                    RowBox[{"Dimensions", "[", "x", "]"}], "[", 
+                    RowBox[{"[", "2", "]"}], "]"}], "]"}]}], "&"}], ")"}]}], 
+                "]"}], "\[Rule]", 
+               RowBox[{"MapIndexed", "[", 
+                RowBox[{
+                 RowBox[{
+                  RowBox[{"\"\<col\>\"", "<>", 
+                   RowBox[{"ToString", "@", "#1"}]}], "&"}], ",", 
+                 RowBox[{"Range", "[", 
+                  RowBox[{
+                   RowBox[{"Dimensions", "[", "x", "]"}], "[", 
+                   RowBox[{"[", "2", "]"}], "]"}], "]"}]}], "]"}]}]}], 
+             "]"}]}]}], "}"}], ",", 
+         RowBox[{"Dynamic", "[", 
+          RowBox[{
+           RowBox[{"newheaders", "=", 
+            RowBox[{"MapIndexed", "[", 
+             RowBox[{
+              RowBox[{
+               RowBox[{"With", "[", 
+                RowBox[{
+                 RowBox[{"{", 
+                  RowBox[{"i", "=", 
+                   RowBox[{"#2", "[", 
+                    RowBox[{"[", "1", "]"}], "]"}]}], "}"}], ",", 
+                 RowBox[{
+                  RowBox[{
+                   RowBox[{"Item", "[", 
+                    RowBox[{"#", ",", 
+                    RowBox[{"Background", "\[Rule]", "LightGray"}]}], "]"}], 
+                   "&"}], "@", 
+                  RowBox[{"If", "[", 
+                   RowBox[{
+                    RowBox[{
+                    RowBox[{"Abs", "[", "sortcolumn", "]"}], "===", "i"}], 
+                    ",", 
+                    RowBox[{"Button", "[", 
+                    RowBox[{
+                    RowBox[{"If", "[", 
+                    RowBox[{
+                    RowBox[{"sortcolumn", ">", "0"}], ",", 
+                    RowBox[{"Replace", "[", 
+                    RowBox[{"#1", ",", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{
+                    RowBox[{"Row", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"header_", ",", "\"\< \>\"", ",", 
+                    RowBox[{"Style", "[", 
+                    RowBox[{
+                    RowBox[{
+                    "\"\<\[UpArrow]\>\"", "|", "\"\<\[DownArrow]\>\""}], ",", 
+                    "color_"}], "]"}]}], "}"}], "]"}], "\[RuleDelayed]", 
+                    RowBox[{"Row", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"header", ",", "\"\< \>\"", ",", 
+                    RowBox[{"Style", "[", 
+                    RowBox[{"\"\<\[DownArrow]\>\"", ",", "color"}], "]"}]}], 
+                    "}"}], "]"}]}], ",", 
+                    RowBox[{"a_", "\[RuleDelayed]", 
+                    RowBox[{"Row", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"a", ",", "\"\< \>\"", ",", 
+                    RowBox[{"Style", "[", 
+                    RowBox[{"\"\<\[DownArrow]\>\"", ",", "Red"}], "]"}]}], 
+                    "}"}], "]"}]}]}], "}"}]}], "]"}], ",", 
+                    RowBox[{"Replace", "[", 
+                    RowBox[{"#1", ",", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{
+                    RowBox[{"Row", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"header_", ",", "\"\< \>\"", ",", 
+                    RowBox[{"Style", "[", 
+                    RowBox[{
+                    RowBox[{
+                    "\"\<\[UpArrow]\>\"", "|", "\"\<\[DownArrow]\>\""}], ",", 
+                    "color_"}], "]"}]}], "}"}], "]"}], "\[RuleDelayed]", 
+                    RowBox[{"Row", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"header", ",", "\"\< \>\"", ",", 
+                    RowBox[{"Style", "[", 
+                    RowBox[{"\"\<\[UpArrow]\>\"", ",", "color"}], "]"}]}], 
+                    "}"}], "]"}]}], ",", 
+                    RowBox[{"a_", "\[RuleDelayed]", 
+                    RowBox[{"Row", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"a", ",", "\"\< \>\"", ",", 
+                    RowBox[{"Style", "[", 
+                    RowBox[{"\"\<\[UpArrow]\>\"", ",", "Red"}], "]"}]}], 
+                    "}"}], "]"}]}]}], "}"}]}], "]"}]}], "]"}], ",", 
+                    RowBox[{"sortcolumn", "=", 
+                    RowBox[{"-", "sortcolumn"}]}], ",", 
+                    RowBox[{"Appearance", "\[Rule]", "\"\<Palette\>\""}]}], 
+                    "]"}], ",", 
+                    RowBox[{"Button", "[", 
+                    RowBox[{
+                    RowBox[{"Row", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"#1", ",", "\"\< \>\"", ",", 
+                    RowBox[{"Invisible", "[", "\"\<\[UpArrow]\>\"", "]"}]}], 
+                    "}"}], "]"}], ",", 
+                    RowBox[{"sortcolumn", "=", "i"}], ",", 
+                    RowBox[{"Appearance", "\[Rule]", "\"\<Palette\>\""}]}], 
+                    "]"}]}], "]"}]}]}], "]"}], "&"}], ",", 
+              RowBox[{"If", "[", 
+               RowBox[{
+                RowBox[{"OptionValue", "[", "\"\<NumericUID\>\"", "]"}], ",", 
+                
+                RowBox[{"Prepend", "[", 
+                 RowBox[{"headers", ",", 
+                  RowBox[{"If", "[", 
+                   RowBox[{
+                    RowBox[{"sortcolumn", "===", "0"}], ",", 
+                    RowBox[{"Row", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"\"\<ID\>\"", ",", "\"\< \>\"", ",", 
+                    RowBox[{"Style", "[", 
+                    RowBox[{"\"\<\[DownArrow]\>\"", ",", "Red"}], "]"}]}], 
+                    "}"}], "]"}], ",", "\"\<ID\>\""}], "]"}]}], "]"}], ",", 
+                "headers"}], "]"}]}], "]"}]}], ";", "\[IndentingNewLine]", 
+           RowBox[{"If", "[", 
+            RowBox[{
+             RowBox[{"OptionValue", "[", "\"\<InertNumericUID\>\"", "]"}], 
+             ",", 
+             RowBox[{"newheaders", "=", 
+              RowBox[{"Prepend", "[", 
+               RowBox[{"newheaders", ",", 
+                RowBox[{"Item", "[", 
+                 RowBox[{
+                  RowBox[{"Style", "[", 
+                   RowBox[{"\"\<row\>\"", ",", "Gray"}], "]"}], ",", 
+                  RowBox[{"Background", "\[Rule]", "LightGray"}], ",", 
+                  RowBox[{"Alignment", "\[Rule]", 
+                   RowBox[{"{", 
+                    RowBox[{"Center", ",", "Center"}], "}"}]}]}], "]"}]}], 
+               "]"}]}]}], "]"}], ";", "\[IndentingNewLine]", 
+           RowBox[{"newdata", "=", 
+            RowBox[{"If", "[", 
+             RowBox[{
+              RowBox[{"sortcolumn", "=!=", "0"}], ",", 
+              RowBox[{
+               RowBox[{"Composition", "[", 
+                RowBox[{
+                 RowBox[{
+                  RowBox[{
+                   RowBox[{"If", "[", 
+                    RowBox[{
+                    RowBox[{"sortcolumn", "<", "0"}], ",", "Reverse", ",", 
+                    "Identity"}], "]"}], "@", "#"}], "&"}], ",", 
+                 RowBox[{
+                  RowBox[{"SortBy", "[", 
+                   RowBox[{"#", ",", 
+                    RowBox[{
+                    RowBox[{
+                    RowBox[{
+                    "OptionValue", "[", "\"\<SortByFunction\>\"", "]"}], "@", 
+                    
+                    RowBox[{"(", 
+                    RowBox[{"#", "[", 
+                    RowBox[{"[", 
+                    RowBox[{"Abs", "[", "sortcolumn", "]"}], "]"}], "]"}], 
+                    ")"}]}], "&"}]}], "]"}], "&"}], ",", 
+                 RowBox[{
+                  RowBox[{"If", "[", 
+                   RowBox[{
+                    RowBox[{"OptionValue", "[", "\"\<NumericUID\>\"", "]"}], 
+                    ",", 
+                    RowBox[{"MapIndexed", "[", 
+                    RowBox[{
+                    RowBox[{
+                    RowBox[{"Prepend", "[", 
+                    RowBox[{"#1", ",", 
+                    RowBox[{"#2", "[", 
+                    RowBox[{"[", "1", "]"}], "]"}]}], "]"}], "&"}], ",", 
+                    "#"}], "]"}], ",", "#"}], "]"}], "&"}]}], "]"}], "[", "x",
+                "]"}], ",", 
+              RowBox[{"If", "[", 
+               RowBox[{
+                RowBox[{"OptionValue", "[", "\"\<NumericUID\>\"", "]"}], ",", 
+                
+                RowBox[{"MapIndexed", "[", 
+                 RowBox[{
+                  RowBox[{
+                   RowBox[{"Prepend", "[", 
+                    RowBox[{"#1", ",", 
+                    RowBox[{"#2", "[", 
+                    RowBox[{"[", "1", "]"}], "]"}]}], "]"}], "&"}], ",", 
+                  "x"}], "]"}], ",", "x"}], "]"}]}], "]"}]}], ";", 
+           "\[IndentingNewLine]", 
+           RowBox[{"If", "[", 
+            RowBox[{
+             RowBox[{"OptionValue", "[", "\"\<InertNumericUID\>\"", "]"}], 
+             ",", 
+             RowBox[{"newdata", "=", 
+              RowBox[{"MapIndexed", "[", 
+               RowBox[{
+                RowBox[{
+                 RowBox[{"Prepend", "[", 
+                  RowBox[{"#1", ",", 
+                   RowBox[{"#2", "[", 
+                    RowBox[{"[", "1", "]"}], "]"}]}], "]"}], "&"}], ",", 
+                "newdata"}], "]"}]}]}], "]"}], ";", "\[IndentingNewLine]", 
+           RowBox[{"If", "[", 
+            RowBox[{
+             RowBox[{"OptionValue", "[", "\"\<RepeatedHeadersQ\>\"", "]"}], 
+             ",", 
+             RowBox[{"newdata", "=", 
+              RowBox[{"addGridHeaders", "[", 
+               RowBox[{"newdata", ",", "newheaders", ",", 
+                RowBox[{
+                "OptionValue", "[", "\"\<RepeatedHeadersOffset\>\"", "]"}]}], 
+               "]"}]}]}], "]"}], ";", "\[IndentingNewLine]", 
+           RowBox[{"Grid", "[", 
+            RowBox[{
+             RowBox[{"Prepend", "[", 
+              RowBox[{"newdata", ",", "newheaders"}], "]"}], ",", 
+             "$mengGridOptionPattern", ",", 
+             RowBox[{"Sequence", "@@", 
+              RowBox[{"FilterRules", "[", 
+               RowBox[{
+                RowBox[{"{", "opts", "}"}], ",", 
+                RowBox[{
+                 RowBox[{"Options", "[", "Grid", "]"}], "[", 
+                 RowBox[{"[", 
+                  RowBox[{"All", ",", "1"}], "]"}], "]"}]}], "]"}]}]}], 
+            "]"}]}], "]"}]}], "]"}], ",", 
+       RowBox[{"Module", "[", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{"table", ",", 
+           RowBox[{"openerViewLabelStringLength", "=", 
+            RowBox[{
+            "OptionValue", "[", "\"\<OpenerViewLabelStringLength\>\"", 
+             "]"}]}], ",", 
+           RowBox[{"headers", "=", 
+            RowBox[{"Replace", "[", 
+             RowBox[{
+              RowBox[{"OptionValue", "[", "\"\<Headers\>\"", "]"}], ",", 
+              RowBox[{
+               RowBox[{"Except", "[", 
+                RowBox[{"_List", "?", 
+                 RowBox[{"(", 
+                  RowBox[{
+                   RowBox[{
+                    RowBox[{"Length", "[", "#", "]"}], "===", 
+                    RowBox[{"Quiet", "[", 
+                    RowBox[{
+                    RowBox[{"Dimensions", "[", "x", "]"}], "[", 
+                    RowBox[{"[", "2", "]"}], "]"}], "]"}]}], "&"}], ")"}]}], 
+                "]"}], "\[Rule]", 
+               RowBox[{"MapIndexed", "[", 
+                RowBox[{
+                 RowBox[{
+                  RowBox[{"\"\<col\>\"", "<>", 
+                   RowBox[{"ToString", "@", "#1"}]}], "&"}], ",", 
+                 RowBox[{"Range", "[", 
+                  RowBox[{
+                   RowBox[{"Dimensions", "[", "x", "]"}], "[", 
+                   RowBox[{"[", "2", "]"}], "]"}], "]"}]}], "]"}]}]}], 
+             "]"}]}]}], "}"}], ",", 
+         RowBox[{
+          RowBox[{"table", "=", 
+           RowBox[{"If", "[", 
+            RowBox[{
+             RowBox[{"OptionValue", "[", "\"\<UseOpenerViewQ\>\"", "]"}], ",", 
+             RowBox[{
+              RowBox[{
+               RowBox[{"Replace", "[", 
+                RowBox[{"#", ",", 
+                 RowBox[{"{", 
+                  RowBox[{
+                   RowBox[{"(", 
+                    RowBox[{"cell_", "?", 
+                    RowBox[{"(", 
+                    RowBox[{
+                    RowBox[{
+                    RowBox[{"StringLength", "[", 
+                    RowBox[{"ToString", "[", "#", "]"}], "]"}], ">", 
+                    "openerViewLabelStringLength"}], "&"}], ")"}]}], ")"}], 
+                   "\[RuleDelayed]", 
+                   RowBox[{"With", "[", 
+                    RowBox[{
+                    RowBox[{"{", 
+                    RowBox[{"str", "=", 
+                    RowBox[{"ToString", "[", "cell", "]"}]}], "}"}], ",", 
+                    RowBox[{"OpenerView", "[", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"StringTake", "[", 
+                    RowBox[{"str", ",", 
+                    RowBox[{"Min", "[", 
+                    RowBox[{"openerViewLabelStringLength", ",", 
+                    RowBox[{"StringLength", "[", "str", "]"}]}], "]"}]}], 
+                    "]"}], ",", 
+                    RowBox[{"StringTake", "[", 
+                    RowBox[{"str", ",", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{
+                    RowBox[{"Min", "[", 
+                    RowBox[{"openerViewLabelStringLength", ",", 
+                    RowBox[{"StringLength", "[", "str", "]"}]}], "]"}], "+", 
+                    "1"}], ",", 
+                    RowBox[{"-", "1"}]}], "}"}]}], "]"}]}], "}"}], "]"}]}], 
+                    "]"}]}], "}"}], ",", "1"}], "]"}], "&"}], "/@", "x"}], 
+             ",", "x"}], "]"}]}], ";", "\[IndentingNewLine]", 
+          RowBox[{"headers", "=", 
+           RowBox[{"If", "[", 
+            RowBox[{
+             RowBox[{"OptionValue", "[", "\"\<NumericUID\>\"", "]"}], ",", 
+             RowBox[{"Prepend", "[", 
+              RowBox[{"headers", ",", "\"\<ID\>\""}], "]"}], ",", "headers"}],
+             "]"}]}], ";", "\[IndentingNewLine]", 
+          RowBox[{"table", "=", 
+           RowBox[{"If", "[", 
+            RowBox[{
+             RowBox[{"OptionValue", "[", "\"\<NumericUID\>\"", "]"}], ",", 
+             RowBox[{"MapIndexed", "[", 
+              RowBox[{
+               RowBox[{
+                RowBox[{"Prepend", "[", 
+                 RowBox[{"#1", ",", 
+                  RowBox[{"#2", "[", 
+                   RowBox[{"[", "1", "]"}], "]"}]}], "]"}], "&"}], ",", 
+               "table"}], "]"}], ",", "table"}], "]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"If", "[", 
+           RowBox[{
+            RowBox[{"OptionValue", "[", "\"\<RepeatedHeadersQ\>\"", "]"}], 
+            ",", 
+            RowBox[{"table", "=", 
+             RowBox[{"addGridHeaders", "[", 
+              RowBox[{"table", ",", "headers", ",", 
+               RowBox[{
+               "OptionValue", "[", "\"\<RepeatedHeadersOffset\>\"", "]"}]}], 
+              "]"}]}]}], "]"}], ";", "\[IndentingNewLine]", 
+          RowBox[{"Grid", "[", 
+           RowBox[{
+            RowBox[{"Prepend", "[", 
+             RowBox[{"table", ",", "headers"}], "]"}], ",", 
+            "$mengGridOptionPattern", ",", 
+            RowBox[{"Sequence", "@@", 
+             RowBox[{"FilterRules", "[", 
+              RowBox[{
+               RowBox[{"{", "opts", "}"}], ",", 
+               RowBox[{
+                RowBox[{"Options", "[", "Grid", "]"}], "[", 
+                RowBox[{"[", 
+                 RowBox[{"All", ",", "1"}], "]"}], "]"}]}], "]"}]}]}], 
+           "]"}]}]}], "]"}]}], "]"}]}], ";"}], "\[IndentingNewLine]", "\n", 
+   RowBox[{
+    RowBox[{"mengGrid", "[", "___", "]"}], ":=", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"Message", "[", 
+       RowBox[{"mengGrid", "::", "errarg"}], "]"}], ";", "$Failed"}], ")"}]}],
+    "\[IndentingNewLine]", "\n", "\[IndentingNewLine]", 
+   RowBox[{"Clear", "[", "addGridHeaders", "]"}], "\n", 
+   RowBox[{
+    RowBox[{"addGridHeaders", "[", 
+     RowBox[{"rows_", ",", "headers_", ",", 
+      RowBox[{"offset_:", "20"}]}], "]"}], ":=", 
+    RowBox[{"Module", "[", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"rowsets", ",", "newrows"}], "}"}], ",", 
+      RowBox[{
+       RowBox[{"rowsets", "=", 
+        RowBox[{"Partition", "[", 
+         RowBox[{"rows", ",", "offset", ",", "offset", ",", 
+          RowBox[{"{", 
+           RowBox[{"1", ",", "1"}], "}"}], ",", 
+          RowBox[{"{", "}"}]}], "]"}]}], ";", "\[IndentingNewLine]", 
+       RowBox[{"newrows", "=", 
+        RowBox[{"Join", "@@", 
+         RowBox[{"Riffle", "[", 
+          RowBox[{"rowsets", ",", 
+           RowBox[{"{", 
+            RowBox[{"{", "headers", "}"}], "}"}]}], "]"}]}]}]}]}], "]"}]}], 
+   "\[IndentingNewLine]", "\n", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"removeGridHeaders", "[", 
+      RowBox[{"rows_", ",", "header_"}], "]"}], ":=", 
+     RowBox[{"DeleteCases", "[", 
+      RowBox[{"rows", ",", "header"}], "]"}]}], ";"}], "\n"}]}]], "Input",
+ InitializationCell->True],
+
+Cell[BoxData["\<\"invalid arguments\"\>"], "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"\n", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"data", "=", 
+     RowBox[{"With", "[", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"$char", "=", 
+          RowBox[{"CharacterRange", "[", 
+           RowBox[{"\"\<\:4e00\>\"", ",", "\"\<\:9fff\>\""}], "]"}]}], ",", 
+         RowBox[{"$words", "=", 
+          RowBox[{"WordData", "[", "]"}]}], ",", 
+         RowBox[{"exprs", "=", 
+          RowBox[{
+           RowBox[{
+            RowBox[{
+             RowBox[{"Composition", "[", "##", "]"}], "[", "x", "]"}], "&"}], 
+           "@@@", 
+           RowBox[{"Permutations", "[", 
+            RowBox[{
+             RowBox[{"{", 
+              RowBox[{
+               RowBox[{
+                RowBox[{"\[Sqrt]", 
+                 RowBox[{"(", "#", ")"}]}], "&"}], ",", "Exp", ",", 
+               RowBox[{
+                RowBox[{"#", "^", "2"}], "&"}], ",", "Sin", ",", "Cos"}], 
+              "}"}], ",", "2"}], "]"}]}]}]}], "}"}], ",", 
+       RowBox[{"Table", "[", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"RandomReal", "[", "10", "]"}], ",", 
+           RowBox[{"RandomChoice", "[", "$char", "]"}], ",", 
+           RowBox[{"RandomChoice", "[", "$words", "]"}], ",", 
+           RowBox[{"RandomChoice", "[", "exprs", "]"}]}], "}"}], ",", 
+         RowBox[{"{", "40", "}"}]}], "]"}]}], "]"}]}], ";"}], 
+   "\[IndentingNewLine]", "\n", 
+   RowBox[{"mengGrid", "[", 
+    RowBox[{"data", ",", 
+     RowBox[{"\"\<DynamicSortQ\>\"", "\[Rule]", "True"}]}], "]"}], 
+   "\[IndentingNewLine]", "\n", 
+   RowBox[{"mengGrid", "[", 
+    RowBox[{"data", ",", 
+     RowBox[{"\"\<DynamicSortQ\>\"", "\[Rule]", "True"}], ",", 
+     RowBox[{"\"\<RepeatedHeadersQ\>\"", "\[Rule]", "True"}]}], "]"}], 
+   "\[IndentingNewLine]", "\[IndentingNewLine]", "\[IndentingNewLine]", 
+   RowBox[{"(*", 
+    RowBox[{
+    "*", " ", "Click", " ", "on", " ", "the", " ", "column", " ", "headings", 
+     " ", "to", " ", "have", " ", "the", " ", "rows", " ", "sorted", " ", 
+     "by", " ", "the", " ", "values", " ", "in", " ", "that", " ", 
+     RowBox[{"column", "."}]}], " ", "**)"}]}]}]], "Input"],
+
+Cell[BoxData[
+ DynamicModuleBox[{$CellContext`sortcolumn$$ = 
+  2, $CellContext`newdata$$ = {{
+   1, 36, 0.1476443680127293, "\:52ba", "marqueterie", $CellContext`x}, {
+   2, 16, 0.17976470303838, "\:5519", "stored-program", E^$CellContext`x}, {
+   3, 17, 1.0432802712395333`, "\:7476", "Monophysitism", 
+    Sin[$CellContext`x]^2}, {
+   4, 18, 1.5417532440018267`, "\:7dbc", "George Enescu", 
+    Sin[E^$CellContext`x]}, {
+   5, 35, 2.1871830276200637`, "\:91a4", "hardpan", E^$CellContext`x}, {
+   6, 33, 3.1839714586482977`, "\:5bc1", "electronics intelligence", 
+    Sin[
+     Cos[$CellContext`x]]}, {
+   7, 1, 3.3164845004661725`, "\:77b8", "ratepayer", $CellContext`x^2}, {
+   8, 2, 3.4258676224401015`, "\:8fe8", "Sierra Leonean", $CellContext`x^
+    Rational[1, 2]}, {
+   9, 28, 3.570715569973814, "\:94fd", "abandoned person", 
+    Cos[$CellContext`x^Rational[1, 2]]}, {
+   10, 10, 3.679645503540403, "\:6cfd", "electrophoretic", 
+    Cos[$CellContext`x]^2}, {
+   11, 40, 4.095579103206289, "\:62af", "tenderised", E^(2 $CellContext`x)}, {
+   12, 20, 4.337934672793068, "\:93e7", "shock-headed", 
+    Sin[$CellContext`x^Rational[1, 2]]}, {
+   13, 12, 4.607616092287232, "\:9ea8", "wheel-like", Sin[$CellContext`x]^
+    Rational[1, 2]}, {
+   14, 34, 5.449136335719977, "\:9c41", "dentist", Sin[$CellContext`x]^2}, {
+   15, 27, 5.508084950887518, "\:65f0", "daringly", E^($CellContext`x^2)}, {
+   16, 31, 5.551766518132716, "\:6b29", "genus Phragmipedium", 
+    Cos[$CellContext`x^2]}, {
+   17, 39, 5.6222899346378945`, "\:8678", "lounging pyjama", 
+    Cos[$CellContext`x]^Rational[1, 2]}, {
+   18, 4, 5.704375014686603, "\:5870", "indefinite integral", 
+    Cos[$CellContext`x]^2}, {
+   19, 14, 5.7094684733295225`, "\:5daa", "inscrutably", Sin[$CellContext`x]^
+    Rational[1, 2]}, {
+   20, 21, 5.803089430825326, "\:55e7", "bull neck", E^$CellContext`x}, {
+   21, 19, 5.907051079855744, "\:549f", 
+    "genus Micruroides", (E^$CellContext`x)^Rational[1, 2]}, {
+   22, 29, 6.174600458583612, "\:5eb7", "acetylize", E^Sin[$CellContext`x]}, {
+   23, 23, 6.224997471526272, "\:883d", "mercuric chloride", 
+    E^(2 $CellContext`x)}, {
+   24, 15, 6.27411690060249, "\:84d1", "excerption", Cos[$CellContext`x]^
+    Rational[1, 2]}, {
+   25, 13, 6.572007569712735, "\:8899", "capital of South Dakota", 
+    Sin[$CellContext`x]}, {
+   26, 37, 6.700422567034906, "\:9d77", "planet wheel", 
+    Cos[
+     Sin[$CellContext`x]]}, {
+   27, 30, 6.704866308184567, "\:9c2f", "Delilah", E^($CellContext`x^2)}, {
+   28, 9, 7.12718056747142, "\:5054", "Leptinotarsa", Cos[$CellContext`x]^
+    Rational[1, 2]}, {
+   29, 8, 7.808956931247074, "\:733a", "reel off", $CellContext`x}, {
+   30, 38, 7.814358407027754, "\:98c6", "cleaner", Cos[$CellContext`x]^
+    Rational[1, 2]}, {
+    Item[
+     Style["row", 
+      GrayLevel[0.5]], Background -> GrayLevel[0.85], 
+     Alignment -> {Center, Center}], 
+    Item[
+     Button[
+      Row[{"ID", " ", 
+        Invisible["\[UpArrow]"]}], $CellContext`sortcolumn$$ = 1, Appearance -> 
+      "Palette"], Background -> GrayLevel[0.85]], 
+    Item[
+     Button[
+      Row[{"col1", " ", 
+        Style["\[DownArrow]", 
+         RGBColor[
+         1, 0, 0]]}], $CellContext`sortcolumn$$ = -$CellContext`sortcolumn$$, 
+      Appearance -> "Palette"], Background -> GrayLevel[0.85]], 
+    Item[
+     Button[
+      Row[{"col2", " ", 
+        Invisible["\[UpArrow]"]}], $CellContext`sortcolumn$$ = 3, Appearance -> 
+      "Palette"], Background -> GrayLevel[0.85]], 
+    Item[
+     Button[
+      Row[{"col3", " ", 
+        Invisible["\[UpArrow]"]}], $CellContext`sortcolumn$$ = 4, Appearance -> 
+      "Palette"], Background -> GrayLevel[0.85]], 
+    Item[
+     Button[
+      Row[{"col4", " ", 
+        Invisible["\[UpArrow]"]}], $CellContext`sortcolumn$$ = 5, Appearance -> 
+      "Palette"], Background -> GrayLevel[0.85]]}, {
+   31, 26, 7.937098433687538, "\:6df4", "family Apidae", $CellContext`x^2}, {
+   32, 32, 8.051345772635653, "\:71a1", "preposition", 
+    Cos[$CellContext`x]^2}, {
+   33, 22, 8.1124790833105, "\:927d", "archaeornis", Sin[$CellContext`x]^2}, {
+   34, 24, 8.415427828451769, "\:59d5", "oxide", E^(2 $CellContext`x)}, {
+   35, 11, 8.950556658463533, "\:655c", "tout ensemble", E^
+    Cos[$CellContext`x]}, {
+   36, 3, 9.177279895481124, "\:4f7e", "John Paul Jones", 
+    Cos[$CellContext`x]^2}, {
+   37, 6, 9.183532438046925, "\:4e81", "sneezewort", Sin[$CellContext`x]^
+    Rational[1, 2]}, {38, 5, 9.267510333078278, "\:96f9", "incontinency", 
+    Sin[$CellContext`x^2]}, {
+   39, 7, 9.663085689449218, "\:71e1", "spring mattress", E^
+    Cos[$CellContext`x]}, {
+   40, 25, 9.684000259005451, "\:68c7", "decipherable", 
+    Sin[
+     Cos[$CellContext`x]]}}, $CellContext`newheaders$$ = {
+   Item[
+    Style["row", 
+     GrayLevel[0.5]], Background -> GrayLevel[0.85], 
+    Alignment -> {Center, Center}], 
+   Item[
+    Button[
+     Row[{"ID", " ", 
+       Invisible["\[UpArrow]"]}], $CellContext`sortcolumn$$ = 1, Appearance -> 
+     "Palette"], Background -> GrayLevel[0.85]], 
+   Item[
+    Button[
+     Row[{"col1", " ", 
+       Style["\[DownArrow]", 
+        RGBColor[
+        1, 0, 0]]}], $CellContext`sortcolumn$$ = -$CellContext`sortcolumn$$, 
+     Appearance -> "Palette"], Background -> GrayLevel[0.85]], 
+   Item[
+    Button[
+     Row[{"col2", " ", 
+       Invisible["\[UpArrow]"]}], $CellContext`sortcolumn$$ = 3, Appearance -> 
+     "Palette"], Background -> GrayLevel[0.85]], 
+   Item[
+    Button[
+     Row[{"col3", " ", 
+       Invisible["\[UpArrow]"]}], $CellContext`sortcolumn$$ = 4, Appearance -> 
+     "Palette"], Background -> GrayLevel[0.85]], 
+   Item[
+    Button[
+     Row[{"col4", " ", 
+       Invisible["\[UpArrow]"]}], $CellContext`sortcolumn$$ = 5, Appearance -> 
+     "Palette"], Background -> GrayLevel[0.85]]}, $CellContext`headers$$ = {
+  "col1", "col2", "col3", "col4"}}, 
+  DynamicBox[
+   ToBoxes[$CellContext`newheaders$$ = 
+     MapIndexed[With[{$CellContext`i$ = Part[#2, 1]}, 
+        (Item[#, Background -> LightGray]& )[
+         If[Abs[$CellContext`sortcolumn$$] === $CellContext`i$, 
+          Button[
+           If[$CellContext`sortcolumn$$ > 0, 
+            Replace[#, {Row[{
+                 Pattern[$CellContext`header, 
+                  Blank[]], " ", 
+                 Style[
+                  Alternatives["\[UpArrow]", "\[DownArrow]"], 
+                  Pattern[$CellContext`color, 
+                   Blank[]]]}] :> Row[{$CellContext`header, " ", 
+                 Style["\[DownArrow]", $CellContext`color]}], 
+              Pattern[$CellContext`a, 
+                Blank[]] :> Row[{$CellContext`a, " ", 
+                 Style["\[DownArrow]", Red]}]}], 
+            Replace[#, {Row[{
+                 Pattern[$CellContext`header, 
+                  Blank[]], " ", 
+                 Style[
+                  Alternatives["\[UpArrow]", "\[DownArrow]"], 
+                  Pattern[$CellContext`color, 
+                   Blank[]]]}] :> Row[{$CellContext`header, " ", 
+                 Style["\[UpArrow]", $CellContext`color]}], 
+              Pattern[$CellContext`a, 
+                Blank[]] :> Row[{$CellContext`a, " ", 
+                 Style[
+                 "\[UpArrow]", 
+                  Red]}]}]], $CellContext`sortcolumn$$ = \
+-$CellContext`sortcolumn$$, Appearance -> "Palette"], 
+          Button[
+           Row[{#, " ", 
+             Invisible[
+             "\[UpArrow]"]}], $CellContext`sortcolumn$$ = $CellContext`i$, 
+           Appearance -> "Palette"]]]]& , 
+       If[
+        OptionValue[
+        meng`Shared`mengGrid, {"DynamicSortQ" -> True}, "NumericUID"], 
+        Prepend[$CellContext`headers$$, 
+         If[$CellContext`sortcolumn$$ === 0, 
+          Row[{"ID", " ", 
+            Style["\[DownArrow]", Red]}], "ID"]], $CellContext`headers$$]]; If[
+      OptionValue[
+      meng`Shared`mengGrid, {"DynamicSortQ" -> True}, 
+       "InertNumericUID"], $CellContext`newheaders$$ = 
+      Prepend[$CellContext`newheaders$$, 
+        Item[
+         Style["row", Gray], Background -> LightGray, 
+         Alignment -> {Center, Center}]]]; $CellContext`newdata$$ = 
+     If[$CellContext`sortcolumn$$ =!= 0, 
+       Composition[
+       If[$CellContext`sortcolumn$$ < 0, Reverse, Identity][#]& , 
+        SortBy[#, OptionValue[
+         meng`Shared`mengGrid, {"DynamicSortQ" -> True}, "SortByFunction"][
+          Part[#, 
+           Abs[$CellContext`sortcolumn$$]]]& ]& , If[
+         OptionValue[
+         meng`Shared`mengGrid, {"DynamicSortQ" -> True}, "NumericUID"], 
+         MapIndexed[Prepend[#, 
+           Part[#2, 1]]& , #], #]& ][{{
+         3.3164845004661725`, "\:77b8", "ratepayer", $CellContext`x^2}, {
+         3.4258676224401015`, "\:8fe8", "Sierra Leonean", $CellContext`x^
+          Rational[1, 2]}, {
+         9.177279895481124, "\:4f7e", "John Paul Jones", 
+          Cos[$CellContext`x]^2}, {
+         5.704375014686603, "\:5870", "indefinite integral", 
+          Cos[$CellContext`x]^2}, {
+         9.267510333078278, "\:96f9", "incontinency", 
+          Sin[$CellContext`x^2]}, {
+         9.183532438046925, "\:4e81", "sneezewort", Sin[$CellContext`x]^
+          Rational[1, 2]}, {
+         9.663085689449218, "\:71e1", "spring mattress", E^
+          Cos[$CellContext`x]}, {
+         7.808956931247074, "\:733a", "reel off", $CellContext`x}, {
+         7.12718056747142, "\:5054", "Leptinotarsa", Cos[$CellContext`x]^
+          Rational[1, 2]}, {
+         3.679645503540403, "\:6cfd", "electrophoretic", 
+          Cos[$CellContext`x]^2}, {
+         8.950556658463533, "\:655c", "tout ensemble", E^
+          Cos[$CellContext`x]}, {
+         4.607616092287232, "\:9ea8", "wheel-like", Sin[$CellContext`x]^
+          Rational[1, 2]}, {
+         6.572007569712735, "\:8899", "capital of South Dakota", 
+          Sin[$CellContext`x]}, {
+         5.7094684733295225`, "\:5daa", "inscrutably", Sin[$CellContext`x]^
+          Rational[1, 2]}, {
+         6.27411690060249, "\:84d1", "excerption", Cos[$CellContext`x]^
+          Rational[1, 2]}, {
+         0.17976470303838, "\:5519", "stored-program", E^$CellContext`x}, {
+         1.0432802712395333`, "\:7476", "Monophysitism", 
+          Sin[$CellContext`x]^2}, {
+         1.5417532440018267`, "\:7dbc", "George Enescu", 
+          Sin[E^$CellContext`x]}, {
+         5.907051079855744, "\:549f", "genus Micruroides", (E^$CellContext`x)^
+          Rational[1, 2]}, {4.337934672793068, "\:93e7", "shock-headed", 
+          Sin[$CellContext`x^Rational[1, 2]]}, {
+         5.803089430825326, "\:55e7", "bull neck", E^$CellContext`x}, {
+         8.1124790833105, "\:927d", "archaeornis", Sin[$CellContext`x]^2}, {
+         6.224997471526272, "\:883d", "mercuric chloride", 
+          E^(2 $CellContext`x)}, {
+         8.415427828451769, "\:59d5", "oxide", E^(2 $CellContext`x)}, {
+         9.684000259005451, "\:68c7", "decipherable", 
+          Sin[
+           Cos[$CellContext`x]]}, {
+         7.937098433687538, "\:6df4", "family Apidae", $CellContext`x^2}, {
+         5.508084950887518, "\:65f0", "daringly", E^($CellContext`x^2)}, {
+         3.570715569973814, "\:94fd", "abandoned person", 
+          Cos[$CellContext`x^Rational[1, 2]]}, {
+         6.174600458583612, "\:5eb7", "acetylize", E^Sin[$CellContext`x]}, {
+         6.704866308184567, "\:9c2f", "Delilah", E^($CellContext`x^2)}, {
+         5.551766518132716, "\:6b29", "genus Phragmipedium", 
+          Cos[$CellContext`x^2]}, {
+         8.051345772635653, "\:71a1", "preposition", Cos[$CellContext`x]^2}, {
+         3.1839714586482977`, "\:5bc1", "electronics intelligence", 
+          Sin[
+           Cos[$CellContext`x]]}, {
+         5.449136335719977, "\:9c41", "dentist", Sin[$CellContext`x]^2}, {
+         2.1871830276200637`, "\:91a4", "hardpan", E^$CellContext`x}, {
+         0.1476443680127293, "\:52ba", "marqueterie", $CellContext`x}, {
+         6.700422567034906, "\:9d77", "planet wheel", 
+          Cos[
+           Sin[$CellContext`x]]}, {
+         7.814358407027754, "\:98c6", "cleaner", Cos[$CellContext`x]^
+          Rational[1, 2]}, {
+         5.6222899346378945`, "\:8678", "lounging pyjama", 
+          Cos[$CellContext`x]^Rational[1, 2]}, {
+         4.095579103206289, "\:62af", "tenderised", E^(2 $CellContext`x)}}], 
+       If[
+        OptionValue[
+        meng`Shared`mengGrid, {"DynamicSortQ" -> True}, "NumericUID"], 
+        MapIndexed[Prepend[#, 
+          Part[#2, 1]]& , {{
+          3.3164845004661725`, "\:77b8", "ratepayer", $CellContext`x^2}, {
+          3.4258676224401015`, "\:8fe8", "Sierra Leonean", $CellContext`x^
+           Rational[1, 2]}, {
+          9.177279895481124, "\:4f7e", "John Paul Jones", 
+           Cos[$CellContext`x]^2}, {
+          5.704375014686603, "\:5870", "indefinite integral", 
+           Cos[$CellContext`x]^2}, {
+          9.267510333078278, "\:96f9", "incontinency", 
+           Sin[$CellContext`x^2]}, {
+          9.183532438046925, "\:4e81", "sneezewort", Sin[$CellContext`x]^
+           Rational[1, 2]}, {
+          9.663085689449218, "\:71e1", "spring mattress", E^
+           Cos[$CellContext`x]}, {
+          7.808956931247074, "\:733a", "reel off", $CellContext`x}, {
+          7.12718056747142, "\:5054", "Leptinotarsa", Cos[$CellContext`x]^
+           Rational[1, 2]}, {
+          3.679645503540403, "\:6cfd", "electrophoretic", 
+           Cos[$CellContext`x]^2}, {
+          8.950556658463533, "\:655c", "tout ensemble", E^
+           Cos[$CellContext`x]}, {
+          4.607616092287232, "\:9ea8", "wheel-like", Sin[$CellContext`x]^
+           Rational[1, 2]}, {
+          6.572007569712735, "\:8899", "capital of South Dakota", 
+           Sin[$CellContext`x]}, {
+          5.7094684733295225`, "\:5daa", "inscrutably", Sin[$CellContext`x]^
+           Rational[1, 2]}, {
+          6.27411690060249, "\:84d1", "excerption", Cos[$CellContext`x]^
+           Rational[1, 2]}, {
+          0.17976470303838, "\:5519", "stored-program", E^$CellContext`x}, {
+          1.0432802712395333`, "\:7476", "Monophysitism", 
+           Sin[$CellContext`x]^2}, {
+          1.5417532440018267`, "\:7dbc", "George Enescu", 
+           Sin[E^$CellContext`x]}, {
+          5.907051079855744, "\:549f", 
+           "genus Micruroides", (E^$CellContext`x)^Rational[1, 2]}, {
+          4.337934672793068, "\:93e7", "shock-headed", 
+           Sin[$CellContext`x^Rational[1, 2]]}, {
+          5.803089430825326, "\:55e7", "bull neck", E^$CellContext`x}, {
+          8.1124790833105, "\:927d", "archaeornis", Sin[$CellContext`x]^2}, {
+          6.224997471526272, "\:883d", "mercuric chloride", 
+           E^(2 $CellContext`x)}, {
+          8.415427828451769, "\:59d5", "oxide", E^(2 $CellContext`x)}, {
+          9.684000259005451, "\:68c7", "decipherable", 
+           Sin[
+            Cos[$CellContext`x]]}, {
+          7.937098433687538, "\:6df4", "family Apidae", $CellContext`x^2}, {
+          5.508084950887518, "\:65f0", "daringly", E^($CellContext`x^2)}, {
+          3.570715569973814, "\:94fd", "abandoned person", 
+           Cos[$CellContext`x^Rational[1, 2]]}, {
+          6.174600458583612, "\:5eb7", "acetylize", E^Sin[$CellContext`x]}, {
+          6.704866308184567, "\:9c2f", "Delilah", E^($CellContext`x^2)}, {
+          5.551766518132716, "\:6b29", "genus Phragmipedium", 
+           Cos[$CellContext`x^2]}, {
+          8.051345772635653, "\:71a1", "preposition", 
+           Cos[$CellContext`x]^2}, {
+          3.1839714586482977`, "\:5bc1", "electronics intelligence", 
+           Sin[
+            Cos[$CellContext`x]]}, {
+          5.449136335719977, "\:9c41", "dentist", Sin[$CellContext`x]^2}, {
+          2.1871830276200637`, "\:91a4", "hardpan", E^$CellContext`x}, {
+          0.1476443680127293, "\:52ba", "marqueterie", $CellContext`x}, {
+          6.700422567034906, "\:9d77", "planet wheel", 
+           Cos[
+            Sin[$CellContext`x]]}, {
+          7.814358407027754, "\:98c6", "cleaner", Cos[$CellContext`x]^
+           Rational[1, 2]}, {
+          5.6222899346378945`, "\:8678", "lounging pyjama", 
+           Cos[$CellContext`x]^Rational[1, 2]}, {
+          4.095579103206289, "\:62af", "tenderised", 
+           E^(2 $CellContext`x)}}], {{
+         3.3164845004661725`, "\:77b8", "ratepayer", $CellContext`x^2}, {
+         3.4258676224401015`, "\:8fe8", "Sierra Leonean", $CellContext`x^
+          Rational[1, 2]}, {
+         9.177279895481124, "\:4f7e", "John Paul Jones", 
+          Cos[$CellContext`x]^2}, {
+         5.704375014686603, "\:5870", "indefinite integral", 
+          Cos[$CellContext`x]^2}, {
+         9.267510333078278, "\:96f9", "incontinency", 
+          Sin[$CellContext`x^2]}, {
+         9.183532438046925, "\:4e81", "sneezewort", Sin[$CellContext`x]^
+          Rational[1, 2]}, {
+         9.663085689449218, "\:71e1", "spring mattress", E^
+          Cos[$CellContext`x]}, {
+         7.808956931247074, "\:733a", "reel off", $CellContext`x}, {
+         7.12718056747142, "\:5054", "Leptinotarsa", Cos[$CellContext`x]^
+          Rational[1, 2]}, {
+         3.679645503540403, "\:6cfd", "electrophoretic", 
+          Cos[$CellContext`x]^2}, {
+         8.950556658463533, "\:655c", "tout ensemble", E^
+          Cos[$CellContext`x]}, {
+         4.607616092287232, "\:9ea8", "wheel-like", Sin[$CellContext`x]^
+          Rational[1, 2]}, {
+         6.572007569712735, "\:8899", "capital of South Dakota", 
+          Sin[$CellContext`x]}, {
+         5.7094684733295225`, "\:5daa", "inscrutably", Sin[$CellContext`x]^
+          Rational[1, 2]}, {
+         6.27411690060249, "\:84d1", "excerption", Cos[$CellContext`x]^
+          Rational[1, 2]}, {
+         0.17976470303838, "\:5519", "stored-program", E^$CellContext`x}, {
+         1.0432802712395333`, "\:7476", "Monophysitism", 
+          Sin[$CellContext`x]^2}, {
+         1.5417532440018267`, "\:7dbc", "George Enescu", 
+          Sin[E^$CellContext`x]}, {
+         5.907051079855744, "\:549f", "genus Micruroides", (E^$CellContext`x)^
+          Rational[1, 2]}, {4.337934672793068, "\:93e7", "shock-headed", 
+          Sin[$CellContext`x^Rational[1, 2]]}, {
+         5.803089430825326, "\:55e7", "bull neck", E^$CellContext`x}, {
+         8.1124790833105, "\:927d", "archaeornis", Sin[$CellContext`x]^2}, {
+         6.224997471526272, "\:883d", "mercuric chloride", 
+          E^(2 $CellContext`x)}, {
+         8.415427828451769, "\:59d5", "oxide", E^(2 $CellContext`x)}, {
+         9.684000259005451, "\:68c7", "decipherable", 
+          Sin[
+           Cos[$CellContext`x]]}, {
+         7.937098433687538, "\:6df4", "family Apidae", $CellContext`x^2}, {
+         5.508084950887518, "\:65f0", "daringly", E^($CellContext`x^2)}, {
+         3.570715569973814, "\:94fd", "abandoned person", 
+          Cos[$CellContext`x^Rational[1, 2]]}, {
+         6.174600458583612, "\:5eb7", "acetylize", E^Sin[$CellContext`x]}, {
+         6.704866308184567, "\:9c2f", "Delilah", E^($CellContext`x^2)}, {
+         5.551766518132716, "\:6b29", "genus Phragmipedium", 
+          Cos[$CellContext`x^2]}, {
+         8.051345772635653, "\:71a1", "preposition", Cos[$CellContext`x]^2}, {
+         3.1839714586482977`, "\:5bc1", "electronics intelligence", 
+          Sin[
+           Cos[$CellContext`x]]}, {
+         5.449136335719977, "\:9c41", "dentist", Sin[$CellContext`x]^2}, {
+         2.1871830276200637`, "\:91a4", "hardpan", E^$CellContext`x}, {
+         0.1476443680127293, "\:52ba", "marqueterie", $CellContext`x}, {
+         6.700422567034906, "\:9d77", "planet wheel", 
+          Cos[
+           Sin[$CellContext`x]]}, {
+         7.814358407027754, "\:98c6", "cleaner", Cos[$CellContext`x]^
+          Rational[1, 2]}, {
+         5.6222899346378945`, "\:8678", "lounging pyjama", 
+          Cos[$CellContext`x]^Rational[1, 2]}, {
+         4.095579103206289, "\:62af", "tenderised", E^(2 $CellContext`x)}}]]; 
+    If[
+      OptionValue[
+      meng`Shared`mengGrid, {"DynamicSortQ" -> True}, 
+       "InertNumericUID"], $CellContext`newdata$$ = MapIndexed[Prepend[#, 
+         Part[#2, 1]]& , $CellContext`newdata$$]]; If[
+      OptionValue[
+      meng`Shared`mengGrid, {"DynamicSortQ" -> True}, 
+       "RepeatedHeadersQ"], $CellContext`newdata$$ = \
+$CellContext`addGridHeaders[$CellContext`newdata$$, $CellContext`newheaders$$, 
+        OptionValue[
+        meng`Shared`mengGrid, {"DynamicSortQ" -> True}, 
+         "RepeatedHeadersOffset"]]]; Grid[
+      Prepend[$CellContext`newdata$$, $CellContext`newheaders$$], 
+      meng`Shared`$mengGridOptionPattern, 
+      Apply[Sequence, 
+       FilterRules[{"DynamicSortQ" -> True}, 
+        Part[
+         Options[Grid], All, 1]]]], StandardForm],
+   ImageSizeCache->{495., {417.134033203125, 422.865966796875}}],
+  DynamicModuleValues:>{}]], "Output"],
+
+Cell[BoxData[
+ DynamicModuleBox[{$CellContext`sortcolumn$$ = 
+  1, $CellContext`newdata$$ = {{
+   1, 1, 3.3164845004661725`, "\:77b8", "ratepayer", $CellContext`x^2}, {
+   2, 2, 3.4258676224401015`, "\:8fe8", "Sierra Leonean", $CellContext`x^
+    Rational[1, 2]}, {
+   3, 3, 9.177279895481124, "\:4f7e", "John Paul Jones", 
+    Cos[$CellContext`x]^2}, {
+   4, 4, 5.704375014686603, "\:5870", "indefinite integral", 
+    Cos[$CellContext`x]^2}, {
+   5, 5, 9.267510333078278, "\:96f9", "incontinency", 
+    Sin[$CellContext`x^2]}, {
+   6, 6, 9.183532438046925, "\:4e81", "sneezewort", Sin[$CellContext`x]^
+    Rational[1, 2]}, {
+   7, 7, 9.663085689449218, "\:71e1", "spring mattress", E^
+    Cos[$CellContext`x]}, {
+   8, 8, 7.808956931247074, "\:733a", "reel off", $CellContext`x}, {
+   9, 9, 7.12718056747142, "\:5054", "Leptinotarsa", Cos[$CellContext`x]^
+    Rational[1, 2]}, {
+   10, 10, 3.679645503540403, "\:6cfd", "electrophoretic", 
+    Cos[$CellContext`x]^2}, {
+   11, 11, 8.950556658463533, "\:655c", "tout ensemble", E^
+    Cos[$CellContext`x]}, {
+   12, 12, 4.607616092287232, "\:9ea8", "wheel-like", Sin[$CellContext`x]^
+    Rational[1, 2]}, {
+   13, 13, 6.572007569712735, "\:8899", "capital of South Dakota", 
+    Sin[$CellContext`x]}, {
+   14, 14, 5.7094684733295225`, "\:5daa", "inscrutably", Sin[$CellContext`x]^
+    Rational[1, 2]}, {
+   15, 15, 6.27411690060249, "\:84d1", "excerption", Cos[$CellContext`x]^
+    Rational[1, 2]}, {
+   16, 16, 0.17976470303838, "\:5519", "stored-program", E^$CellContext`x}, {
+   17, 17, 1.0432802712395333`, "\:7476", "Monophysitism", 
+    Sin[$CellContext`x]^2}, {
+   18, 18, 1.5417532440018267`, "\:7dbc", "George Enescu", 
+    Sin[E^$CellContext`x]}, {
+   19, 19, 5.907051079855744, "\:549f", 
+    "genus Micruroides", (E^$CellContext`x)^Rational[1, 2]}, {
+   20, 20, 4.337934672793068, "\:93e7", "shock-headed", 
+    Sin[$CellContext`x^Rational[1, 2]]}, {
+   21, 21, 5.803089430825326, "\:55e7", "bull neck", E^$CellContext`x}, {
+   22, 22, 8.1124790833105, "\:927d", "archaeornis", Sin[$CellContext`x]^2}, {
+   23, 23, 6.224997471526272, "\:883d", "mercuric chloride", 
+    E^(2 $CellContext`x)}, {
+   24, 24, 8.415427828451769, "\:59d5", "oxide", E^(2 $CellContext`x)}, {
+   25, 25, 9.684000259005451, "\:68c7", "decipherable", 
+    Sin[
+     Cos[$CellContext`x]]}, {
+   26, 26, 7.937098433687538, "\:6df4", "family Apidae", $CellContext`x^2}, {
+   27, 27, 5.508084950887518, "\:65f0", "daringly", E^($CellContext`x^2)}, {
+   28, 28, 3.570715569973814, "\:94fd", "abandoned person", 
+    Cos[$CellContext`x^Rational[1, 2]]}, {
+   29, 29, 6.174600458583612, "\:5eb7", "acetylize", E^Sin[$CellContext`x]}, {
+   30, 30, 6.704866308184567, "\:9c2f", "Delilah", E^($CellContext`x^2)}, {
+    Item[
+     Style["row", 
+      GrayLevel[0.5]], Background -> GrayLevel[0.85], 
+     Alignment -> {Center, Center}], 
+    Item[
+     Button[
+      Row[{"ID", " ", 
+        Style["\[DownArrow]", 
+         RGBColor[
+         1, 0, 0]]}], $CellContext`sortcolumn$$ = -$CellContext`sortcolumn$$, 
+      Appearance -> "Palette"], Background -> GrayLevel[0.85]], 
+    Item[
+     Button[
+      Row[{"col1", " ", 
+        Invisible["\[UpArrow]"]}], $CellContext`sortcolumn$$ = 2, Appearance -> 
+      "Palette"], Background -> GrayLevel[0.85]], 
+    Item[
+     Button[
+      Row[{"col2", " ", 
+        Invisible["\[UpArrow]"]}], $CellContext`sortcolumn$$ = 3, Appearance -> 
+      "Palette"], Background -> GrayLevel[0.85]], 
+    Item[
+     Button[
+      Row[{"col3", " ", 
+        Invisible["\[UpArrow]"]}], $CellContext`sortcolumn$$ = 4, Appearance -> 
+      "Palette"], Background -> GrayLevel[0.85]], 
+    Item[
+     Button[
+      Row[{"col4", " ", 
+        Invisible["\[UpArrow]"]}], $CellContext`sortcolumn$$ = 5, Appearance -> 
+      "Palette"], Background -> GrayLevel[0.85]]}, {
+   31, 31, 5.551766518132716, "\:6b29", "genus Phragmipedium", 
+    Cos[$CellContext`x^2]}, {
+   32, 32, 8.051345772635653, "\:71a1", "preposition", 
+    Cos[$CellContext`x]^2}, {
+   33, 33, 3.1839714586482977`, "\:5bc1", "electronics intelligence", 
+    Sin[
+     Cos[$CellContext`x]]}, {
+   34, 34, 5.449136335719977, "\:9c41", "dentist", Sin[$CellContext`x]^2}, {
+   35, 35, 2.1871830276200637`, "\:91a4", "hardpan", E^$CellContext`x}, {
+   36, 36, 0.1476443680127293, "\:52ba", "marqueterie", $CellContext`x}, {
+   37, 37, 6.700422567034906, "\:9d77", "planet wheel", 
+    Cos[
+     Sin[$CellContext`x]]}, {
+   38, 38, 7.814358407027754, "\:98c6", "cleaner", Cos[$CellContext`x]^
+    Rational[1, 2]}, {
+   39, 39, 5.6222899346378945`, "\:8678", "lounging pyjama", 
+    Cos[$CellContext`x]^Rational[1, 2]}, {
+   40, 40, 4.095579103206289, "\:62af", "tenderised", 
+    E^(2 $CellContext`x)}}, $CellContext`newheaders$$ = {
+   Item[
+    Style["row", 
+     GrayLevel[0.5]], Background -> GrayLevel[0.85], 
+    Alignment -> {Center, Center}], 
+   Item[
+    Button[
+     Row[{"ID", " ", 
+       Style["\[DownArrow]", 
+        RGBColor[
+        1, 0, 0]]}], $CellContext`sortcolumn$$ = -$CellContext`sortcolumn$$, 
+     Appearance -> "Palette"], Background -> GrayLevel[0.85]], 
+   Item[
+    Button[
+     Row[{"col1", " ", 
+       Invisible["\[UpArrow]"]}], $CellContext`sortcolumn$$ = 2, Appearance -> 
+     "Palette"], Background -> GrayLevel[0.85]], 
+   Item[
+    Button[
+     Row[{"col2", " ", 
+       Invisible["\[UpArrow]"]}], $CellContext`sortcolumn$$ = 3, Appearance -> 
+     "Palette"], Background -> GrayLevel[0.85]], 
+   Item[
+    Button[
+     Row[{"col3", " ", 
+       Invisible["\[UpArrow]"]}], $CellContext`sortcolumn$$ = 4, Appearance -> 
+     "Palette"], Background -> GrayLevel[0.85]], 
+   Item[
+    Button[
+     Row[{"col4", " ", 
+       Invisible["\[UpArrow]"]}], $CellContext`sortcolumn$$ = 5, Appearance -> 
+     "Palette"], Background -> GrayLevel[0.85]]}, $CellContext`headers$$ = {
+  "col1", "col2", "col3", "col4"}}, 
+  DynamicBox[
+   ToBoxes[$CellContext`newheaders$$ = 
+     MapIndexed[With[{$CellContext`i$ = Part[#2, 1]}, 
+        (Item[#, Background -> LightGray]& )[
+         If[Abs[$CellContext`sortcolumn$$] === $CellContext`i$, 
+          Button[
+           If[$CellContext`sortcolumn$$ > 0, 
+            Replace[#, {Row[{
+                 Pattern[$CellContext`header, 
+                  Blank[]], " ", 
+                 Style[
+                  Alternatives["\[UpArrow]", "\[DownArrow]"], 
+                  Pattern[$CellContext`color, 
+                   Blank[]]]}] :> Row[{$CellContext`header, " ", 
+                 Style["\[DownArrow]", $CellContext`color]}], 
+              Pattern[$CellContext`a, 
+                Blank[]] :> Row[{$CellContext`a, " ", 
+                 Style["\[DownArrow]", Red]}]}], 
+            Replace[#, {Row[{
+                 Pattern[$CellContext`header, 
+                  Blank[]], " ", 
+                 Style[
+                  Alternatives["\[UpArrow]", "\[DownArrow]"], 
+                  Pattern[$CellContext`color, 
+                   Blank[]]]}] :> Row[{$CellContext`header, " ", 
+                 Style["\[UpArrow]", $CellContext`color]}], 
+              Pattern[$CellContext`a, 
+                Blank[]] :> Row[{$CellContext`a, " ", 
+                 Style[
+                 "\[UpArrow]", 
+                  Red]}]}]], $CellContext`sortcolumn$$ = \
+-$CellContext`sortcolumn$$, Appearance -> "Palette"], 
+          Button[
+           Row[{#, " ", 
+             Invisible[
+             "\[UpArrow]"]}], $CellContext`sortcolumn$$ = $CellContext`i$, 
+           Appearance -> "Palette"]]]]& , 
+       If[
+        OptionValue[
+        meng`Shared`mengGrid, {
+         "DynamicSortQ" -> True, "RepeatedHeadersQ" -> True}, "NumericUID"], 
+        Prepend[$CellContext`headers$$, 
+         If[$CellContext`sortcolumn$$ === 0, 
+          Row[{"ID", " ", 
+            Style["\[DownArrow]", Red]}], "ID"]], $CellContext`headers$$]]; If[
+      OptionValue[
+      meng`Shared`mengGrid, {
+       "DynamicSortQ" -> True, "RepeatedHeadersQ" -> True}, 
+       "InertNumericUID"], $CellContext`newheaders$$ = 
+      Prepend[$CellContext`newheaders$$, 
+        Item[
+         Style["row", Gray], Background -> LightGray, 
+         Alignment -> {Center, Center}]]]; $CellContext`newdata$$ = 
+     If[$CellContext`sortcolumn$$ =!= 0, 
+       Composition[
+       If[$CellContext`sortcolumn$$ < 0, Reverse, Identity][#]& , 
+        SortBy[#, OptionValue[
+         meng`Shared`mengGrid, {
+          "DynamicSortQ" -> True, "RepeatedHeadersQ" -> True}, 
+          "SortByFunction"][
+          Part[#, 
+           Abs[$CellContext`sortcolumn$$]]]& ]& , If[
+         OptionValue[
+         meng`Shared`mengGrid, {
+          "DynamicSortQ" -> True, "RepeatedHeadersQ" -> True}, "NumericUID"], 
+         
+         MapIndexed[Prepend[#, 
+           Part[#2, 1]]& , #], #]& ][{{
+         3.3164845004661725`, "\:77b8", "ratepayer", $CellContext`x^2}, {
+         3.4258676224401015`, "\:8fe8", "Sierra Leonean", $CellContext`x^
+          Rational[1, 2]}, {
+         9.177279895481124, "\:4f7e", "John Paul Jones", 
+          Cos[$CellContext`x]^2}, {
+         5.704375014686603, "\:5870", "indefinite integral", 
+          Cos[$CellContext`x]^2}, {
+         9.267510333078278, "\:96f9", "incontinency", 
+          Sin[$CellContext`x^2]}, {
+         9.183532438046925, "\:4e81", "sneezewort", Sin[$CellContext`x]^
+          Rational[1, 2]}, {
+         9.663085689449218, "\:71e1", "spring mattress", E^
+          Cos[$CellContext`x]}, {
+         7.808956931247074, "\:733a", "reel off", $CellContext`x}, {
+         7.12718056747142, "\:5054", "Leptinotarsa", Cos[$CellContext`x]^
+          Rational[1, 2]}, {
+         3.679645503540403, "\:6cfd", "electrophoretic", 
+          Cos[$CellContext`x]^2}, {
+         8.950556658463533, "\:655c", "tout ensemble", E^
+          Cos[$CellContext`x]}, {
+         4.607616092287232, "\:9ea8", "wheel-like", Sin[$CellContext`x]^
+          Rational[1, 2]}, {
+         6.572007569712735, "\:8899", "capital of South Dakota", 
+          Sin[$CellContext`x]}, {
+         5.7094684733295225`, "\:5daa", "inscrutably", Sin[$CellContext`x]^
+          Rational[1, 2]}, {
+         6.27411690060249, "\:84d1", "excerption", Cos[$CellContext`x]^
+          Rational[1, 2]}, {
+         0.17976470303838, "\:5519", "stored-program", E^$CellContext`x}, {
+         1.0432802712395333`, "\:7476", "Monophysitism", 
+          Sin[$CellContext`x]^2}, {
+         1.5417532440018267`, "\:7dbc", "George Enescu", 
+          Sin[E^$CellContext`x]}, {
+         5.907051079855744, "\:549f", "genus Micruroides", (E^$CellContext`x)^
+          Rational[1, 2]}, {4.337934672793068, "\:93e7", "shock-headed", 
+          Sin[$CellContext`x^Rational[1, 2]]}, {
+         5.803089430825326, "\:55e7", "bull neck", E^$CellContext`x}, {
+         8.1124790833105, "\:927d", "archaeornis", Sin[$CellContext`x]^2}, {
+         6.224997471526272, "\:883d", "mercuric chloride", 
+          E^(2 $CellContext`x)}, {
+         8.415427828451769, "\:59d5", "oxide", E^(2 $CellContext`x)}, {
+         9.684000259005451, "\:68c7", "decipherable", 
+          Sin[
+           Cos[$CellContext`x]]}, {
+         7.937098433687538, "\:6df4", "family Apidae", $CellContext`x^2}, {
+         5.508084950887518, "\:65f0", "daringly", E^($CellContext`x^2)}, {
+         3.570715569973814, "\:94fd", "abandoned person", 
+          Cos[$CellContext`x^Rational[1, 2]]}, {
+         6.174600458583612, "\:5eb7", "acetylize", E^Sin[$CellContext`x]}, {
+         6.704866308184567, "\:9c2f", "Delilah", E^($CellContext`x^2)}, {
+         5.551766518132716, "\:6b29", "genus Phragmipedium", 
+          Cos[$CellContext`x^2]}, {
+         8.051345772635653, "\:71a1", "preposition", Cos[$CellContext`x]^2}, {
+         3.1839714586482977`, "\:5bc1", "electronics intelligence", 
+          Sin[
+           Cos[$CellContext`x]]}, {
+         5.449136335719977, "\:9c41", "dentist", Sin[$CellContext`x]^2}, {
+         2.1871830276200637`, "\:91a4", "hardpan", E^$CellContext`x}, {
+         0.1476443680127293, "\:52ba", "marqueterie", $CellContext`x}, {
+         6.700422567034906, "\:9d77", "planet wheel", 
+          Cos[
+           Sin[$CellContext`x]]}, {
+         7.814358407027754, "\:98c6", "cleaner", Cos[$CellContext`x]^
+          Rational[1, 2]}, {
+         5.6222899346378945`, "\:8678", "lounging pyjama", 
+          Cos[$CellContext`x]^Rational[1, 2]}, {
+         4.095579103206289, "\:62af", "tenderised", E^(2 $CellContext`x)}}], 
+       If[
+        OptionValue[
+        meng`Shared`mengGrid, {
+         "DynamicSortQ" -> True, "RepeatedHeadersQ" -> True}, "NumericUID"], 
+        MapIndexed[Prepend[#, 
+          Part[#2, 1]]& , {{
+          3.3164845004661725`, "\:77b8", "ratepayer", $CellContext`x^2}, {
+          3.4258676224401015`, "\:8fe8", "Sierra Leonean", $CellContext`x^
+           Rational[1, 2]}, {
+          9.177279895481124, "\:4f7e", "John Paul Jones", 
+           Cos[$CellContext`x]^2}, {
+          5.704375014686603, "\:5870", "indefinite integral", 
+           Cos[$CellContext`x]^2}, {
+          9.267510333078278, "\:96f9", "incontinency", 
+           Sin[$CellContext`x^2]}, {
+          9.183532438046925, "\:4e81", "sneezewort", Sin[$CellContext`x]^
+           Rational[1, 2]}, {
+          9.663085689449218, "\:71e1", "spring mattress", E^
+           Cos[$CellContext`x]}, {
+          7.808956931247074, "\:733a", "reel off", $CellContext`x}, {
+          7.12718056747142, "\:5054", "Leptinotarsa", Cos[$CellContext`x]^
+           Rational[1, 2]}, {
+          3.679645503540403, "\:6cfd", "electrophoretic", 
+           Cos[$CellContext`x]^2}, {
+          8.950556658463533, "\:655c", "tout ensemble", E^
+           Cos[$CellContext`x]}, {
+          4.607616092287232, "\:9ea8", "wheel-like", Sin[$CellContext`x]^
+           Rational[1, 2]}, {
+          6.572007569712735, "\:8899", "capital of South Dakota", 
+           Sin[$CellContext`x]}, {
+          5.7094684733295225`, "\:5daa", "inscrutably", Sin[$CellContext`x]^
+           Rational[1, 2]}, {
+          6.27411690060249, "\:84d1", "excerption", Cos[$CellContext`x]^
+           Rational[1, 2]}, {
+          0.17976470303838, "\:5519", "stored-program", E^$CellContext`x}, {
+          1.0432802712395333`, "\:7476", "Monophysitism", 
+           Sin[$CellContext`x]^2}, {
+          1.5417532440018267`, "\:7dbc", "George Enescu", 
+           Sin[E^$CellContext`x]}, {
+          5.907051079855744, "\:549f", 
+           "genus Micruroides", (E^$CellContext`x)^Rational[1, 2]}, {
+          4.337934672793068, "\:93e7", "shock-headed", 
+           Sin[$CellContext`x^Rational[1, 2]]}, {
+          5.803089430825326, "\:55e7", "bull neck", E^$CellContext`x}, {
+          8.1124790833105, "\:927d", "archaeornis", Sin[$CellContext`x]^2}, {
+          6.224997471526272, "\:883d", "mercuric chloride", 
+           E^(2 $CellContext`x)}, {
+          8.415427828451769, "\:59d5", "oxide", E^(2 $CellContext`x)}, {
+          9.684000259005451, "\:68c7", "decipherable", 
+           Sin[
+            Cos[$CellContext`x]]}, {
+          7.937098433687538, "\:6df4", "family Apidae", $CellContext`x^2}, {
+          5.508084950887518, "\:65f0", "daringly", E^($CellContext`x^2)}, {
+          3.570715569973814, "\:94fd", "abandoned person", 
+           Cos[$CellContext`x^Rational[1, 2]]}, {
+          6.174600458583612, "\:5eb7", "acetylize", E^Sin[$CellContext`x]}, {
+          6.704866308184567, "\:9c2f", "Delilah", E^($CellContext`x^2)}, {
+          5.551766518132716, "\:6b29", "genus Phragmipedium", 
+           Cos[$CellContext`x^2]}, {
+          8.051345772635653, "\:71a1", "preposition", 
+           Cos[$CellContext`x]^2}, {
+          3.1839714586482977`, "\:5bc1", "electronics intelligence", 
+           Sin[
+            Cos[$CellContext`x]]}, {
+          5.449136335719977, "\:9c41", "dentist", Sin[$CellContext`x]^2}, {
+          2.1871830276200637`, "\:91a4", "hardpan", E^$CellContext`x}, {
+          0.1476443680127293, "\:52ba", "marqueterie", $CellContext`x}, {
+          6.700422567034906, "\:9d77", "planet wheel", 
+           Cos[
+            Sin[$CellContext`x]]}, {
+          7.814358407027754, "\:98c6", "cleaner", Cos[$CellContext`x]^
+           Rational[1, 2]}, {
+          5.6222899346378945`, "\:8678", "lounging pyjama", 
+           Cos[$CellContext`x]^Rational[1, 2]}, {
+          4.095579103206289, "\:62af", "tenderised", 
+           E^(2 $CellContext`x)}}], {{
+         3.3164845004661725`, "\:77b8", "ratepayer", $CellContext`x^2}, {
+         3.4258676224401015`, "\:8fe8", "Sierra Leonean", $CellContext`x^
+          Rational[1, 2]}, {
+         9.177279895481124, "\:4f7e", "John Paul Jones", 
+          Cos[$CellContext`x]^2}, {
+         5.704375014686603, "\:5870", "indefinite integral", 
+          Cos[$CellContext`x]^2}, {
+         9.267510333078278, "\:96f9", "incontinency", 
+          Sin[$CellContext`x^2]}, {
+         9.183532438046925, "\:4e81", "sneezewort", Sin[$CellContext`x]^
+          Rational[1, 2]}, {
+         9.663085689449218, "\:71e1", "spring mattress", E^
+          Cos[$CellContext`x]}, {
+         7.808956931247074, "\:733a", "reel off", $CellContext`x}, {
+         7.12718056747142, "\:5054", "Leptinotarsa", Cos[$CellContext`x]^
+          Rational[1, 2]}, {
+         3.679645503540403, "\:6cfd", "electrophoretic", 
+          Cos[$CellContext`x]^2}, {
+         8.950556658463533, "\:655c", "tout ensemble", E^
+          Cos[$CellContext`x]}, {
+         4.607616092287232, "\:9ea8", "wheel-like", Sin[$CellContext`x]^
+          Rational[1, 2]}, {
+         6.572007569712735, "\:8899", "capital of South Dakota", 
+          Sin[$CellContext`x]}, {
+         5.7094684733295225`, "\:5daa", "inscrutably", Sin[$CellContext`x]^
+          Rational[1, 2]}, {
+         6.27411690060249, "\:84d1", "excerption", Cos[$CellContext`x]^
+          Rational[1, 2]}, {
+         0.17976470303838, "\:5519", "stored-program", E^$CellContext`x}, {
+         1.0432802712395333`, "\:7476", "Monophysitism", 
+          Sin[$CellContext`x]^2}, {
+         1.5417532440018267`, "\:7dbc", "George Enescu", 
+          Sin[E^$CellContext`x]}, {
+         5.907051079855744, "\:549f", "genus Micruroides", (E^$CellContext`x)^
+          Rational[1, 2]}, {4.337934672793068, "\:93e7", "shock-headed", 
+          Sin[$CellContext`x^Rational[1, 2]]}, {
+         5.803089430825326, "\:55e7", "bull neck", E^$CellContext`x}, {
+         8.1124790833105, "\:927d", "archaeornis", Sin[$CellContext`x]^2}, {
+         6.224997471526272, "\:883d", "mercuric chloride", 
+          E^(2 $CellContext`x)}, {
+         8.415427828451769, "\:59d5", "oxide", E^(2 $CellContext`x)}, {
+         9.684000259005451, "\:68c7", "decipherable", 
+          Sin[
+           Cos[$CellContext`x]]}, {
+         7.937098433687538, "\:6df4", "family Apidae", $CellContext`x^2}, {
+         5.508084950887518, "\:65f0", "daringly", E^($CellContext`x^2)}, {
+         3.570715569973814, "\:94fd", "abandoned person", 
+          Cos[$CellContext`x^Rational[1, 2]]}, {
+         6.174600458583612, "\:5eb7", "acetylize", E^Sin[$CellContext`x]}, {
+         6.704866308184567, "\:9c2f", "Delilah", E^($CellContext`x^2)}, {
+         5.551766518132716, "\:6b29", "genus Phragmipedium", 
+          Cos[$CellContext`x^2]}, {
+         8.051345772635653, "\:71a1", "preposition", Cos[$CellContext`x]^2}, {
+         3.1839714586482977`, "\:5bc1", "electronics intelligence", 
+          Sin[
+           Cos[$CellContext`x]]}, {
+         5.449136335719977, "\:9c41", "dentist", Sin[$CellContext`x]^2}, {
+         2.1871830276200637`, "\:91a4", "hardpan", E^$CellContext`x}, {
+         0.1476443680127293, "\:52ba", "marqueterie", $CellContext`x}, {
+         6.700422567034906, "\:9d77", "planet wheel", 
+          Cos[
+           Sin[$CellContext`x]]}, {
+         7.814358407027754, "\:98c6", "cleaner", Cos[$CellContext`x]^
+          Rational[1, 2]}, {
+         5.6222899346378945`, "\:8678", "lounging pyjama", 
+          Cos[$CellContext`x]^Rational[1, 2]}, {
+         4.095579103206289, "\:62af", "tenderised", E^(2 $CellContext`x)}}]]; 
+    If[
+      OptionValue[
+      meng`Shared`mengGrid, {
+       "DynamicSortQ" -> True, "RepeatedHeadersQ" -> True}, 
+       "InertNumericUID"], $CellContext`newdata$$ = MapIndexed[Prepend[#, 
+         Part[#2, 1]]& , $CellContext`newdata$$]]; If[
+      OptionValue[
+      meng`Shared`mengGrid, {
+       "DynamicSortQ" -> True, "RepeatedHeadersQ" -> True}, 
+       "RepeatedHeadersQ"], $CellContext`newdata$$ = \
+$CellContext`addGridHeaders[$CellContext`newdata$$, $CellContext`newheaders$$, 
+        OptionValue[
+        meng`Shared`mengGrid, {
+         "DynamicSortQ" -> True, "RepeatedHeadersQ" -> True}, 
+         "RepeatedHeadersOffset"]]]; Grid[
+      Prepend[$CellContext`newdata$$, $CellContext`newheaders$$], 
+      meng`Shared`$mengGridOptionPattern, 
+      Apply[Sequence, 
+       FilterRules[{"DynamicSortQ" -> True, "RepeatedHeadersQ" -> True}, 
+        Part[
+         Options[Grid], All, 1]]]], StandardForm],
+   ImageSizeCache->{495., {417.134033203125, 422.865966796875}}],
+  DynamicModuleValues:>{}]], "Output"]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{1440, 851},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+FrontEndVersion->"10.0 for Mac OS X x86 (32-bit, 64-bit Kernel) (December 4, \
+2014)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 25, 0, 92, "Title"],
+Cell[CellGroupData[{
+Cell[630, 26, 19571, 459, 796, "Input",
+ InitializationCell->True],
+Cell[20204, 487, 52, 0, 28, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[20293, 492, 2152, 54, 183, "Input"],
+Cell[22448, 548, 20610, 424, 857, "Output"],
+Cell[43061, 974, 20968, 436, 857, "Output"]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)

@@ -1,0 +1,3262 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 9.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       157,          7]
+NotebookDataLength[     98978,       3253]
+NotebookOptionsPosition[     82232,       2724]
+NotebookOutlinePosition[     82662,       2742]
+CellTagsIndexPosition[     82619,       2739]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[
+ RowBox[{"NotebookDirectory", "[", "]"}]], "Input",
+ CellChangeTimes->{{3.5702936560152807`*^9, 3.570293659076631*^9}}],
+
+Cell[BoxData["\<\"/Users/meng/Dropbox/WorkSpace-Dropbox/Computing/Programming/\
+Mathematica/Notebook/\"\>"], "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Frequently Run Command", "Title"],
+
+Cell[BoxData[
+ RowBox[{"SetOptions", "[", "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"InputNotebook", "[", "]"}], ",", "\[IndentingNewLine]", 
+   RowBox[{"Background", "\[Rule]", " ", 
+    RowBox[{"Opacity", "[", 
+     RowBox[{"0.98", ",", "LightYellow"}], "]"}]}]}], "\[IndentingNewLine]", 
+  "]"}]], "Input"],
+
+Cell[BoxData[
+ RowBox[{"Quit", "[", "]"}]], "Input"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", 
+   RowBox[{
+    RowBox[{"*", " ", "load", " ", 
+     RowBox[{"meng", "'"}], "s", " ", "library"}], ",", " ", 
+    RowBox[{"use", " ", 
+     RowBox[{"mengListSymbols", "[", "]"}], " ", "to", " ", "list", " ", 
+     "new", " ", "symbols"}]}], " ", "**)"}], "\[IndentingNewLine]", 
+  RowBox[{"(*", 
+   RowBox[{
+    RowBox[{"PrependTo", "[", "\[IndentingNewLine]", 
+     RowBox[{"$Path", ",", "\[IndentingNewLine]", 
+      RowBox[{"Which", "[", "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{"StringMatchQ", "[", 
+         RowBox[{"$MachineName", ",", 
+          RowBox[{"RegularExpression", "[", "\"\<vpnclient.*\>\"", "]"}]}], 
+         "]"}], ",", 
+        "\"\</Users/wolfram/WorkSpace-WRILoaner/reposhgmengmacloan/Library\>\"\
+", ",", "\[IndentingNewLine]", 
+        RowBox[{"$MachineName", "===", "\"\<loan14127maclap\>\""}], ",", 
+        "\"\<~/WorkSpace-WRILoaner/reposhgmengmacloan/Library\>\"", ",", 
+        "\[IndentingNewLine]", 
+        RowBox[{"$MachineName", "===", "\"\<loanerpcdesk\>\""}], ",", 
+        "\"\<\\\\\\\\home1.wolfram.com\\\\meng\\\\WolframWorkspaces\\\\Base\\\
+\\mengmacsvn\\\\Library\\\\\>\"", ",", "\[IndentingNewLine]", 
+        RowBox[{"MatchQ", "[", 
+         RowBox[{"$MachineName", ",", "\"\<data-collector\>\""}], "]"}], ",", 
+        "\"\</Developer2/meng/WorkSpace-DataCollector/Alpha/Source/\>\"", ",",
+         "\[IndentingNewLine]", 
+        RowBox[{"MatchQ", "[", 
+         RowBox[{"$MachineName", ",", 
+          RowBox[{"\"\<mengmac\>\"", "|", "\"\<loanerdev1mac\>\""}]}], "]"}], 
+        ",", "\"\<~/hg/workingrepos/reposhgmengmac/Library\>\"", ",", 
+        "\[IndentingNewLine]", 
+        RowBox[{"$MachineName", "===", "\"\<x4260\>\""}], ",", 
+        "\"\</home/lumeng/WorkSpace-X3872/mengmacsvn/Library/\>\"", ",", 
+        "\[IndentingNewLine]", 
+        RowBox[{"$MachineName", "===", "\"\<x3872\>\""}], ",", 
+        "\"\</home/lumeng/WorkSpace-X3872/mengmacsvn/Library/\>\"", ",", 
+        "\[IndentingNewLine]", 
+        RowBox[{"$MachineName", "===", "\"\<x3872win\>\""}], ",", 
+        "\"\<D:\\\\WorkSpace-X3872\\\\repohgmengmac\\\\Library\\\\\>\""}], 
+       "\[IndentingNewLine]", "]"}]}], "\[IndentingNewLine]", "]"}], ";"}], 
+   "*)"}], "\[IndentingNewLine]", 
+  RowBox[{"<<", "meng`"}]}]], "Input"],
+
+Cell[BoxData["$mengLibraryMengDirectory"], "Input"],
+
+Cell[BoxData[
+ StyleBox["$mengDataPacletsDirectory", "MT"]], "Input"],
+
+Cell[BoxData["meng`Devel`Private`test"], "Input"],
+
+Cell[BoxData[
+ RowBox[{"ToFileName", "[", 
+  RowBox[{"{", 
+   RowBox[{"$mengLibraryMengDirectory", ",", "\"\<Notebook\>\""}], "}"}], 
+  "]"}]], "Input"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", " ", 
+   RowBox[{"find", " ", 
+    RowBox[{"files", ":", "\[IndentingNewLine]", 
+     RowBox[{"FileNames", "[", 
+      RowBox[{"\"\<*.nb\>\"", ",", 
+       RowBox[{"{", 
+        RowBox[{"dir1", ",", " ", "dir2", ",", " ", "..."}], "}"}]}], 
+      "]"}]}]}], "\[IndentingNewLine]", " ", "*)"}], "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"filesTemp", "=", 
+    RowBox[{"FileNames", "[", 
+     RowBox[{"\"\<*.nb\>\"", ",", 
+      RowBox[{
+      "{", "\"\</Volumes/storage/WolframWorkspaces/svn/Project/WRI/\
+WolframCalculateDevel\>\"", "}"}], ",", "Infinity"}], "]"}]}], 
+   ";"}]}]], "Input"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", " ", 
+   RowBox[{"delete", " ", "output", " ", "in", " ", "a", " ", 
+    RowBox[{"notebook", ":", "\[IndentingNewLine]", 
+     RowBox[{"mengDeleteNotebookOutput", "[", 
+      RowBox[{"{", 
+       RowBox[{"nb1", ",", "nb2", ",", "..."}], "}"}], "]"}]}]}], 
+   "\[IndentingNewLine]", "*)"}], "\[IndentingNewLine]", 
+  RowBox[{"mengDeleteNotebookOutput", "[", 
+   RowBox[{"{", 
+    RowBox[{"nb1", ",", "nb2", ",", "..."}], "}"}], "]"}]}]], "Input"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", " ", "Run", "\[IndentingNewLine]", "*)"}], 
+  "\[IndentingNewLine]", 
+  RowBox[{"Run", "[", 
+   RowBox[{
+   "\"\<cmd /c start \>\"", "<>", 
+    "\"\<D:\\\\WorkSpace-X3872\\\\Temp\\\\test.txt\>\""}], "]"}]}]], "Input"],
+
+Cell[BoxData[
+ RowBox[{"mengDeleteNotebookOutput", "[", "filesTemp", "]"}]], "Input"],
+
+Cell[BoxData[
+ RowBox[{"<<", "CalculateScan`GovernmentPositionScanner`"}]], "Input"],
+
+Cell[BoxData[
+ RowBox[{"CalculateSimple", "[", 
+  RowBox[{"\"\<south Korea prime minister\>\"", ",", 
+   RowBox[{"\"\<TotalScannerTime\>\"", "\[Rule]", " ", "100"}]}], 
+  "]"}]], "Input"],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ StyleBox["Mathematica",
+  FontSlant->"Italic"],
+ " system information"
+}], "Section"],
+
+Cell[BoxData[{"$Version", "\[IndentingNewLine]", 
+ RowBox[{"SystemInformation", "[", 
+  RowBox[{"\"\<Kernel\>\"", ",", "\"\<ReleaseID\>\""}], 
+  "]"}], "\[IndentingNewLine]", 
+ RowBox[{"SystemInformation", "[", 
+  RowBox[{"\"\<FrontEnd\>\"", ",", "\"\<ReleaseID\>\""}], "]"}]}], "Input"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["File system", "Section",
+ CellChangeTimes->{{3.6146030816847897`*^9, 3.614603083187242*^9}}],
+
+Cell[CellGroupData[{
+
+Cell["Open the parent directory of this notebook", "Subsection",
+ CellChangeTimes->{{3.614603084362966*^9, 3.61460309649934*^9}}],
+
+Cell[BoxData[
+ RowBox[{"SystemOpen", "[", 
+  RowBox[{"NotebookDirectory", "[", "]"}], "]"}]], "Input",
+ CellChangeTimes->{{3.6146030974357653`*^9, 3.614603107790904*^9}}]
+}, Open  ]]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["Front-end fine tuning", "Section"],
+
+Cell[BoxData[{
+ RowBox[{"SetOptions", "[", 
+  RowBox[{"$FrontEnd", ",", 
+   RowBox[{"\"\<DynamicEvaluationTimeout\>\"", "\[Rule]", "100"}]}], 
+  "]"}], "\[IndentingNewLine]", 
+ RowBox[{"SetOptions", "[", 
+  RowBox[{"$FrontEnd", ",", 
+   RowBox[{"\"\<DynamicUpdating\>\"", "\[Rule]", "True"}]}], "]"}]}], "Input"]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["Java", "Section"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"Needs", "[", "\"\<JLink`\>\"", "]"}], "\n", 
+  RowBox[{"(*", 
+   RowBox[{
+    RowBox[{
+    "Mac", " ", "only", " ", "and", " ", "only", " ", "if", " ", "W"}], "|", 
+    RowBox[{"A", " ", "is", " ", "NOT", " ", "loaded"}]}], "*)"}], 
+  RowBox[{"(*", 
+   RowBox[{"ReinstallJava", "[", 
+    RowBox[{"CommandLine", "\[Rule]", "\"\<java\>\""}], "]"}], "*)"}]}], "\n", 
+ RowBox[{"LoadJavaClass", "[", "\"\<java.lang.System\>\"", "]"}], "\n", 
+ RowBox[{"java`lang`System`getProperty", "[", "\"\<java.version\>\"", 
+  "]"}]}], "Code",
+ InitializationCell->False]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["Path initialization", "Section"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"PrependTo", "[", 
+   RowBox[{"$Path", ",", "$mengWolframWorkspaceDirectory"}], "]"}], 
+  ";"}]], "Code",
+ InitializationCell->False],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"PrependTo", "[", 
+   RowBox[{"$Path", ",", "$mengWolframCalculateDirectory"}], "]"}], 
+  ";"}]], "Code",
+ InitializationCell->False],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"PrependTo", "[", 
+   RowBox[{"$Path", ",", "$mengDataPacletsDirectory"}], "]"}], ";"}]], "Code",\
+
+ InitializationCell->False],
+
+Cell[BoxData["$mengWolframWorkspaceDirectory"], "Code",
+ InitializationCell->False],
+
+Cell[BoxData["$mengWolframCalculateDirectory"], "Code",
+ InitializationCell->False],
+
+Cell[BoxData["$mengDataPacletsDirectory"], "Code",
+ InitializationCell->False],
+
+Cell[BoxData["$mengCalculateUtilitiesDirectory"], "Code",
+ InitializationCell->False]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["mengLibrary", "Section"],
+
+Cell[CellGroupData[{
+
+Cell["Load meng`", "Subsection"],
+
+Cell[BoxData[
+ RowBox[{"$mengLibraryPath", "=", 
+  "\"\</Users/meng/WorkSpace-Mengmaclap/RepoGit-MengMathematicaLib/\>\""}]], \
+"Code",
+ InitializationCell->False],
+
+Cell[BoxData[
+ RowBox[{"PrependTo", "[", 
+  RowBox[{"$Path", ",", " ", "$mengLibraryPath"}], "]"}]], "Code",
+ InitializationCell->False],
+
+Cell[BoxData[
+ RowBox[{"<<", "meng`"}]], "Code",
+ InitializationCell->False]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Reload meng`", "Subsection"],
+
+Cell[BoxData["Quit"], "Input",
+ CellChangeTimes->{{3.5431402147019*^9, 3.543140215090522*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"meng`Test`$mengDebug", "=", "True"}], ";"}]], "Input"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"db", "=", 
+   RowBox[{"$mengWikipediaEnMySQLDatabaseConnection", "=", 
+    RowBox[{
+    "OpenSQLConnection", "[", 
+     "$mengWikipediaEnMySQLDatabaseConnectionConfiguration", "]"}]}]}], 
+  ";"}]], "Input"],
+
+Cell[BoxData["$mengWikipediaEnMySQLDatabaseConnection"], "Input"],
+
+Cell[BoxData["$mengWikipediaEnMySQLDatabaseConnectionConfiguration"], "Input"],
+
+Cell[BoxData[
+ RowBox[{"CloseSQLConnection", "[", "$mengWikipediaEnMySQLDatabaseConnection",
+   "]"}]], "Input"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", " ", 
+   RowBox[{"reload", " ", "meng`"}], " ", "*)"}], "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"mengReloadLibrary", "[", "]"}], "\n", 
+   RowBox[{"Speak", "[", "\"\<Done!\>\"", "]"}]}]}]], "Code",
+ InitializationCell->False]
+}, Closed]]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["Alpha", "Section"],
+
+Cell[BoxData[
+ RowBox[{"<<", "CalculateScan`WordsPagesScanner`"}]], "Input"],
+
+Cell[BoxData[
+ RowBox[{"<<", "CalculateScan`CommonFunctions`"}]], "Input"],
+
+Cell[BoxData[
+ RowBox[{"<<", "CalculateScan`DataScanner`"}]], "Input"],
+
+Cell[BoxData[
+ RowBox[{"<<", 
+  "CalculateData`SupportFunctions`SymptomDataFunctions`"}]], "Input"],
+
+Cell[BoxData[
+ RowBox[{"CalculateScan`CommonSymbols`UpdateGeneralData", "[", 
+  RowBox[{"{", "SymptomData", "}"}], "]"}]], "Input"],
+
+Cell[BoxData[
+ RowBox[{"CalculateUpdate", "[", 
+  RowBox[{"{", "WordData", "}"}], "]"}]], "Input"],
+
+Cell[BoxData[
+ RowBox[{"<<", "CalculateParse`Content`PeopleGovernmentLookup`"}]], "Input"],
+
+Cell[BoxData[
+ RowBox[{"<<", 
+  "CalculateUtilities`DataPaclets`CalculateSymptomData`"}]], "Input"],
+
+Cell[BoxData[{
+ RowBox[{"<<", "CalculateParse`Content`AllContent`"}], "\n", 
+ RowBox[{"<<", "CalculateParse`Content`Symptom`"}], "\[IndentingNewLine]", 
+ RowBox[{"CalculateUpdate", "[", 
+  RowBox[{"{", 
+   RowBox[{"\"\<Grammar\>\"", ",", "\"\<SymptomDomain\>\""}], "}"}], 
+  "]"}]}], "Input"],
+
+Cell[BoxData[
+ RowBox[{"FullEntityPart", "@", 
+  RowBox[{
+  "CalculateParsedExpression", "[", "\"\<devmode:skin rash\>\"", 
+   "]"}]}]], "Input"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"{", 
+   RowBox[{"\"\<ParsedExpression\>\"", ",", "\"\<Assumptions\>\""}], "}"}], "/.", 
+  RowBox[{
+   RowBox[{"CalculateParse", "[", "\"\<US president 1984\>\"", "]"}], "[", 
+   RowBox[{"[", "1", "]"}], "]"}]}]], "Input"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", 
+   RowBox[{
+   "*", " ", "set", " ", "MySQL", " ", "database", " ", "query", " ", "idle", 
+    " ", "timeout"}], " ", "**)"}], "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{
+   "CaculateUtilities`DataPaclets`CalculateXXXData`Private`Connection", "@", 
+    RowBox[{"setTimeout", "[", "0", "]"}]}], "\[IndentingNewLine]", 
+   RowBox[{
+   "CaculateUtilities`DataPaclets`CalculateXXXData`Private`Connection", "@", 
+    RowBox[{"setTimeout", "[", 
+     RowBox[{"3600", "*", "4"}], "]"}]}]}]}]], "Input"],
+
+Cell[BoxData[
+ RowBox[{"CalculateScan", "[", "\"\<1+1\>\"", "]"}]], "Input"],
+
+Cell[CellGroupData[{
+
+Cell["Controlled vocabulary", "Subsection"],
+
+Cell[BoxData[
+ RowBox[{"CalculateData`SupportFunctions`ControlledVocabularyFunctions`\
+Private`loadCVData", "[", "]"}]], "Input"],
+
+Cell[BoxData[
+ RowBox[{"ugd", "[", "ChemicalData", "]"}]], "Input",
+ CellChangeTimes->{{3.569962202110729*^9, 3.569962203303494*^9}}],
+
+Cell[BoxData[{
+ RowBox[{"GeneralData", "[", 
+  RowBox[{"ConstellationData", ",", 
+   RowBox[{"{", 
+    RowBox[{"\"\<Property\>\"", ",", "\"\<ObjectType\>\""}], "}"}], ",", 
+   "\"\<OutputType\>\""}], "]"}], "\[IndentingNewLine]", 
+ RowBox[{"GeneralData", "[", 
+  RowBox[{"ConstellationData", ",", 
+   RowBox[{"{", 
+    RowBox[{"\"\<Property\>\"", ",", "\"\<ObjectType\>\""}], "}"}], ",", 
+   "\"\<ControlledVocabulary\>\""}], "]"}]}], "Input",
+ CellChangeTimes->{{3.569962215849804*^9, 3.569962229124814*^9}, {
+  3.5699622604744673`*^9, 3.569962268915921*^9}}],
+
+Cell[BoxData[{
+ RowBox[{"GeneralData", "[", 
+  RowBox[{
+  "ConstellationData", ",", "\"\<Gemini\>\"", ",", "\"\<ObjectType\>\""}], 
+  "]"}], "\[IndentingNewLine]", 
+ RowBox[{"DisplayData", "[", 
+  RowBox[{
+  "ConstellationData", ",", "\"\<Gemini\>\"", ",", "\"\<ObjectType\>\""}], 
+  "]"}]}], "Input",
+ CellChangeTimes->{{3.569962239495473*^9, 3.5699622472881203`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"$ents", "=", 
+   RowBox[{"GeneralData", "[", 
+    RowBox[{"ConstellationData", ",", "\"\<Entity\>\""}], "]"}]}], 
+  ";"}]], "Input"],
+
+Cell[BoxData[
+ RowBox[{"mengDisplayDataGrid", "[", 
+  RowBox[{"ConstellationData", ",", "$ents", ",", 
+   RowBox[{"{", "\"\<ObjectType\>\"", "}"}]}], "]"}]], "Input"],
+
+Cell[CellGroupData[{
+
+Cell["temp", "Subsubsection",
+ CellChangeTimes->{{3.569962254365386*^9, 3.56996228055836*^9}}],
+
+Cell[BoxData[{
+ RowBox[{"GeneralData", "[", 
+  RowBox[{"ChemicalData", ",", 
+   RowBox[{"{", 
+    RowBox[{"\"\<Property\>\"", ",", "\"\<OdorType\>\""}], "}"}], ",", 
+   "\"\<OutputType\>\""}], "]"}], "\[IndentingNewLine]", 
+ RowBox[{"GeneralData", "[", 
+  RowBox[{"ChemicalData", ",", 
+   RowBox[{"{", 
+    RowBox[{"\"\<Property\>\"", ",", "\"\<OdorType\>\""}], "}"}], ",", 
+   "\"\<ControlledVocabulary\>\""}], "]"}]}], "Input"],
+
+Cell[BoxData[
+ RowBox[{"GeneralData", "[", 
+  RowBox[{
+  "ChemicalData", ",", "\"\<CarbonDioxide\>\"", ",", "\"\<OdorType\>\""}], 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.5699625143328123`*^9, 3.569962528581259*^9}}],
+
+Cell[BoxData[
+ RowBox[{"DisplayData", "[", 
+  RowBox[{
+  "ChemicalData", ",", "\"\<CarbonDioxide\>\"", ",", "\"\<OdorType\>\""}], 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.569962634517305*^9, 3.5699626364461517`*^9}}]
+}, Open  ]]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["GeneralData framework", "Subsection"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", 
+   RowBox[{"*", " ", "check", " ", "properties"}], " ", "**)"}], 
+  "\[IndentingNewLine]", 
+  RowBox[{"mengGrid", "[", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"#", ",", 
+       RowBox[{"ResultStyle", "@", 
+        RowBox[{"DisplayData", "[", 
+         RowBox[{"ParticleData", ",", "#", ",", "\"\<FormatName\>\""}], 
+         "]"}]}]}], "}"}], "&"}], "/@", 
+    RowBox[{"ParticleData", "[", "]"}]}], "]"}]}]], "Input"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"entities", "=", 
+   RowBox[{"LeaderData", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"\"\<UnitedStates\>\"", ",", "\"\<President\>\""}], "}"}], ",", 
+     "\"\<Leaders\>\""}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"properties", "=", 
+   RowBox[{"{", 
+    RowBox[{
+    "\"\<Name\>\"", ",", "\"\<RuleStart\>\"", ",", "\"\<RuleEnd\>\""}], 
+    "}"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{"mengGeneralDataGrid", "[", 
+  RowBox[{"LeaderData", ",", "entities", ",", "properties", ",", 
+   RowBox[{"\"\<SortFunction\>\"", "\[Rule]", " ", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"SortBy", "[", 
+       RowBox[{"#", ",", 
+        RowBox[{
+         RowBox[{"#", "[", 
+          RowBox[{"[", "3", "]"}], "]"}], "&"}]}], "]"}], "&"}], ")"}]}]}], 
+  "]"}]}], "Input"],
+
+Cell[BoxData[
+ RowBox[{"mengDisplayDataGrid", "[", 
+  RowBox[{"ElementData", ",", 
+   RowBox[{"ElementData", "[", "]"}], ",", 
+   RowBox[{"{", "\"\<AdiabaticIndex\>\"", "}"}]}], "]"}]], "Input"],
+
+Cell[BoxData[
+ RowBox[{"ParticleData", "[", 
+  RowBox[{"\"\<DStarZero\>\"", ",", "\"\<Excitations\>\""}], "]"}]], "Input"],
+
+Cell[BoxData[{
+ RowBox[{"GeneralData", "[", 
+  RowBox[{
+  "ParticleData", ",", "\"\<DStarMinus\>\"", ",", "\"\<Excitations\>\""}], 
+  "]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"DisplayData", "[", 
+   RowBox[{
+   "ParticleData", ",", "\"\<DStarMinus\>\"", ",", "\"\<Excitations\>\""}], 
+   "]"}], "//", "ResultStyle"}]}], "Input"],
+
+Cell[BoxData[
+ RowBox[{"CalculateParsedExpression", "[", "\"\<D*\>\"", "]"}]], "Input"],
+
+Cell[BoxData[
+ RowBox[{"Module", "[", "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"data", ",", 
+     RowBox[{"entities", "=", 
+      RowBox[{"ParticleData", "[", "]"}]}]}], 
+    RowBox[{"(*", 
+     RowBox[{"RandomSample", "[", 
+      RowBox[{
+       RowBox[{"ParticleData", "[", "]"}], ",", "30"}], "]"}], "*)"}], "}"}], 
+   ",", "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"data", "=", 
+     RowBox[{"Transpose", "[", 
+      RowBox[{"{", 
+       RowBox[{"entities", ",", 
+        RowBox[{"ParticleData", "[", 
+         RowBox[{
+          RowBox[{"DataList", "@@", "entities"}], ",", 
+          "\"\<Excitations\>\""}], "]"}]}], "}"}], "]"}]}], ";", 
+    "\[IndentingNewLine]", 
+    RowBox[{"(*", 
+     RowBox[{
+      RowBox[{"Print", "@", 
+       RowBox[{"Cases", "[", 
+        RowBox[{"data", ",", 
+         RowBox[{"{", 
+          RowBox[{"\"\<DStarZero\>\"", ",", "_"}], "}"}]}], "]"}]}], ";"}], 
+     "*)"}], "\[IndentingNewLine]", 
+    RowBox[{"Select", "[", 
+     RowBox[{"data", ",", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"!", 
+         RowBox[{"MatchQ", "[", 
+          RowBox[{
+           RowBox[{"#", "[", 
+            RowBox[{"[", "2", "]"}], "]"}], ",", "_Missing"}], "]"}]}], "&&", 
+        
+        RowBox[{"!", 
+         RowBox[{"MemberQ", "[", 
+          RowBox[{
+           RowBox[{"#", "[", 
+            RowBox[{"[", "2", "]"}], "]"}], ",", 
+           RowBox[{"#", "[", 
+            RowBox[{"[", "1", "]"}], "]"}]}], "]"}]}]}], "&"}]}], "]"}]}]}], 
+  "\[IndentingNewLine]", "]"}]], "Input"],
+
+Cell[BoxData[
+ RowBox[{"ParticleData", "[", 
+  RowBox[{"\"\<DStarZero\>\"", ",", "\"\<Excitations\>\""}], "]"}]], "Input"],
+
+Cell[BoxData[
+ RowBox[{"ParticleData", "[", 
+  RowBox[{
+   RowBox[{"DataList", "@@", 
+    RowBox[{"{", "}"}]}], ",", "\"\<Excitations\>\""}], "]"}]], "Input"],
+
+Cell[CellGroupData[{
+
+Cell["reinstall Java without reloading Alpha build", "Subsubsection"],
+
+Cell[BoxData[{
+ RowBox[{"<<", 
+  "CalculateParse`DeveloperFunctions`"}], "\[IndentingNewLine]", 
+ RowBox[{"ReinstallWolframAlphaJava", "[", "]"}], "\[IndentingNewLine]", 
+ RowBox[{"InitializeJavaMath", "[", "]"}]}], "Input"]
+}, Closed]]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["Datapaclet", "Subsection"],
+
+Cell[BoxData[
+ RowBox[{"ParticleData", "[", 
+  RowBox[{"\"\<Helion\>\"", ",", "\"\<Mass\>\""}], "]"}]], "Input"]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["Database connection", "Subsection"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", 
+   RowBox[{"refresh", " ", "a", " ", "database", " ", "connection"}], " ", 
+   "*)"}], 
+  RowBox[{"If", "[", 
+   RowBox[{
+    RowBox[{"!", 
+     RowBox[{
+     "JLink`JavaObjectQ", "[", "DataPaclets`Database`$Connection", "]"}]}], 
+    ",", "$Failed", ",", 
+    RowBox[{
+     RowBox[{"DataPaclets`Database`$Connection", "@", 
+      RowBox[{
+       RowBox[{"getConnection", "[", "]"}], "@", 
+       RowBox[{"close", "[", "]"}]}]}], ";", "\[IndentingNewLine]", 
+     RowBox[{"CalculateLoader`Private`setupMySQL", "[", "]"}]}]}], 
+   "]"}]}]], "Input"]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["Parser", "Subsection"],
+
+Cell[CellGroupData[{
+
+Cell["CalculateParse", "Subsubsection"],
+
+Cell[BoxData[
+ RowBox[{"CalculateUpdate", "[", "\"\<Grammars\>\"", "]"}]], "Input"],
+
+Cell[BoxData[
+ RowBox[{"CalculateSimple", "[", "\"\<devmode:equivalent dose\>\"", 
+  "]"}]], "Input"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"q", "=", "\"\<what is the meaning of manu\>\""}], ";"}]], "Input"],
+
+Cell[BoxData[
+ RowBox[{"CalculateParsedExpression", "[", "q", "]"}]], "Input"],
+
+Cell[BoxData[
+ RowBox[{"ChartPrint", "[", "]"}]], "Input"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", 
+   RowBox[{
+   "*", " ", "see", " ", "the", " ", "list", " ", "of", " ", "grammar", " ", 
+    "symbols"}], " ", "**)"}], "\[IndentingNewLine]", 
+  RowBox[{"GetSymbolName", "/@", 
+   RowBox[{"ChartListPosition", "[", "\"\<manu\>\"", "]"}]}]}]], "Input"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", 
+   RowBox[{
+   "*", " ", "Find", " ", "out", " ", "the", " ", "grammar", " ", "symbol", 
+    " ", "corresponding", " ", "to", " ", "a", " ", "parsed", " ", 
+    RowBox[{"query", "."}]}], " ", "**)"}], "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"CalculateTokenize", "[", "\"\<mercury\>\"", "]"}], ";", 
+   RowBox[{"LexiconLookupPos", "[", "1", "]"}]}]}]], "Code",
+ InitializationCell->False],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", 
+   RowBox[{"*", " ", "find", " ", "\"\<triggers\>\""}], " ", "**)"}], 
+  "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"SetupLexiconLookupPos", "[", "\"\<color 12FD34\>\"", "]"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{"LexiconLookupPos", "[", "1", "]"}]}]}]], "Input"]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["APICompute[\[OpenCurlyDoubleQuote]CalculateParse\[CloseCurlyDoubleQuote]\
+, CalculateParse[\[OpenCurlyDoubleQuote]and\[CloseCurlyDoubleQuote]]]", \
+"Subsubsection"],
+
+Cell[BoxData[
+ RowBox[{"APICompute", "[", 
+  RowBox[{"\"\<CalculateParse\>\"", ",", 
+   RowBox[{"CalculateParse", "[", "\"\<and\>\"", "]"}]}], "]"}]], "Input"]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["GrammarForm", "Subsubsection"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"spelling", "=", 
+   RowBox[{"AO", "[", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"FO", "[", 
+       RowBox[{"\"\<extremely\>\"", ",", "\"\<feeble\>\""}], "]"}], "|", 
+      RowBox[{"FO", "[", 
+       RowBox[{
+        RowBox[{"Opt", "[", "\"\<level\>\"", "]"}], ",", 
+        RowBox[{"\"\<II\>\"", "|", "\"\<2\>\"", "|", "\"\<two\>\""}]}], 
+       "]"}]}], ",", 
+     RowBox[{"Opt", "[", 
+      RowBox[{"\"\<earthquake's\>\"", "|", 
+       RowBox[{"FO", "[", 
+        RowBox[{
+         RowBox[{"Opt", "[", "\"\<seismic\>\"", "]"}], ",", 
+         "\"\<shock's\>\""}], "]"}]}], "]"}], ",", 
+     RowBox[{"FO", "[", 
+      RowBox[{
+       RowBox[{"Opt", "[", "\"\<on\>\"", "]"}], ",", "\"\<rossi\>\"", ",", 
+       RowBox[{"Opt", "[", "\"\<-\>\"", "]"}], ",", "\"\<forel\>\"", ",", 
+       RowBox[{"Opt", "[", 
+        RowBox[{"FO", "[", 
+         RowBox[{
+          RowBox[{"Opt", "[", "\"\<seismic\>\"", "]"}], ",", 
+          RowBox[{"Opt", "[", "\"\<intensity\>\"", "]"}], ",", 
+          "\"\<scale\>\""}], "]"}], "]"}]}], "]"}]}], "]"}]}], ";"}]], "Input"],
+
+Cell[BoxData[
+ RowBox[{"<<", "CalculateParse`ParseAnalysis`"}]], "Input"],
+
+Cell[BoxData[
+ RowBox[{"GrammarForm", "[", "spelling", "]"}]], "Input"]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["SpellingExplode", "Subsubsection"],
+
+Cell[BoxData[
+ RowBox[{"<<", "DataPacletTools`"}]], "Input"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"s0", "=", 
+   RowBox[{"SpellingExplode", "[", 
+    RowBox[{"AO", "[", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"FO", "[", 
+        RowBox[{"\"\<extremely\>\"", ",", "\"\<feeble\>\""}], "]"}], "|", 
+       RowBox[{"FO", "[", 
+        RowBox[{
+         RowBox[{"Opt", "[", "\"\<level\>\"", "]"}], ",", 
+         RowBox[{"\"\<II\>\"", "|", "\"\<2\>\"", "|", "\"\<two\>\""}]}], 
+        "]"}]}], ",", 
+      RowBox[{"Opt", "[", 
+       RowBox[{"\"\<earthquake's\>\"", "|", 
+        RowBox[{"FO", "[", 
+         RowBox[{
+          RowBox[{"Opt", "[", "\"\<seismic\>\"", "]"}], ",", 
+          "\"\<shock's\>\""}], "]"}]}], "]"}], ",", 
+      RowBox[{"FO", "[", 
+       RowBox[{
+        RowBox[{"Opt", "[", "\"\<on\>\"", "]"}], ",", "\"\<rossi\>\"", ",", 
+        RowBox[{"Opt", "[", "\"\<-\>\"", "]"}], ",", "\"\<forel\>\"", ",", 
+        RowBox[{"Opt", "[", 
+         RowBox[{"FO", "[", 
+          RowBox[{
+           RowBox[{"Opt", "[", "\"\<seismic\>\"", "]"}], ",", 
+           RowBox[{"Opt", "[", "\"\<intensity\>\"", "]"}], ",", 
+           "\"\<scale\>\""}], "]"}], "]"}]}], "]"}]}], "]"}], "]"}]}], 
+  ";"}]], "Input"],
+
+Cell[BoxData[
+ RowBox[{"s0", "//", "Length"}]], "Input"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"s0", "//", 
+   RowBox[{
+    RowBox[{"RandomSample", "[", 
+     RowBox[{"#", ",", "10"}], "]"}], "&"}]}], "//", "Column"}]], "Input"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"CalculateParse`BuildLexicon`LoadSynonymTable", "[", "]"}], ";"}], 
+  " ", 
+  RowBox[{"(*", 
+   RowBox[{"<", " ", 
+    RowBox[{"loads", " ", "information", " ", "about", " ", 
+     RowBox[{"Syn", "[", "]"}], " ", "expressions"}]}], " ", 
+   "*)"}]}]], "Input"]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["CanonicalLinguisticPattern", "Subsubsection"],
+
+Cell[BoxData[
+ RowBox[{"CalculateParse`LexiconLookup2`Private`CanonicalLinguisticPattern", 
+  "[", 
+  RowBox[{"NOIO", "[", 
+   RowBox[{"FO", "[", 
+    RowBox[{"\"\<foo\>\"", ",", "\"\<bar\>\""}], "]"}], "]"}], "]"}]], "Input"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+  "CalculateParse`LexiconLookup2`Private`CanonicalLinguisticPattern", "[", 
+   RowBox[{"NOIO", "[", 
+    RowBox[{"FO", "[", 
+     RowBox[{"\"\<foo\>\"", ",", "\"\<bar\>\""}], "]"}], "]"}], "]"}], "[", 
+  RowBox[{"[", "1", "]"}], "]"}]], "Input"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"s2", "=", 
+   RowBox[{"FO", "[", 
+    RowBox[{
+     RowBox[{"Opt", "[", "\"\<baz\>\"", "]"}], ",", 
+     RowBox[{"NOIO", "[", 
+      RowBox[{"FO", "[", 
+       RowBox[{"\"\<foo\>\"", ",", "\"\<bar\>\""}], "]"}], "]"}]}], "]"}]}], 
+  ";"}]], "Input"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+  "CalculateParse`LexiconLookup2`Private`CanonicalLinguisticPattern", "[", 
+   "s2", "]"}], "[", 
+  RowBox[{"[", "1", "]"}], "]"}]], "Input"],
+
+Cell[BoxData[
+ RowBox[{"SpellingExplode", "[", "s2", "]"}]], "Input"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+  "CalculateParse`LexiconLookup2`Private`CanonicalLinguisticPattern", "[", 
+   RowBox[{"FO", "[", 
+    RowBox[{"\"\<foo\>\"", ",", "\"\<bar\>\""}], "]"}], "]"}], "[", 
+  RowBox[{"[", "1", "]"}], "]"}]], "Input"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+  "CalculateParse`LexiconLookup2`Private`CanonicalLinguisticPattern", "[", 
+   RowBox[{"Subscript", "[", 
+    RowBox[{"\"\<m\>\"", ",", "\"\<1\>\""}], "]"}], "]"}], "[", 
+  RowBox[{"[", "1", "]"}], "]"}]], "Input"]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["Timing profiling", "Subsubsection"],
+
+Cell[BoxData[{
+ RowBox[{"<<", "CalculateParse`DebuggingLibrary`"}], "\n", 
+ RowBox[{"ProfileCalculateParse", "[", 
+  "\"\<time to cook a turkey weighing 20lbs\>\"", "]"}]}], "Input"]
+}, Closed]]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["GetScore", "Subsection"],
+
+Cell[BoxData[
+ RowBox[{"<<", "CalculateParse`Content`Disambiguation`"}]], "Input"],
+
+Cell[BoxData[
+ RowBox[{"cpe", "[", "\"\<a hundred\>\"", "]"}]], "Input"],
+
+Cell[BoxData[
+ RowBox[{"Select", "[", 
+  RowBox[{
+   RowBox[{"CalculateParse`Chart3`LongestElements", "[", "]"}], ",", 
+   "CalculateParse`Parser1`Private`ValidFinalExprQ"}], "]"}]], "Input"],
+
+Cell[BoxData[
+ RowBox[{"CalculateParse`Expr`GetScore", "/@", "%"}]], "Input"]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["Scanner", "Subsection"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"$pods", "=", 
+   RowBox[{"Cases", "[", 
+    RowBox[{
+     RowBox[{"GeneralData", "[", 
+      RowBox[{"SymptomData", ",", "\"\<PropertyClass\>\""}], "]"}], ",", 
+     "_String"}], "]"}]}], ";"}], "\[IndentingNewLine]", "$pods"}], "Input"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"$properties", "=", 
+   RowBox[{"DeleteDuplicates", "@", 
+    RowBox[{"Flatten", "[", 
+     RowBox[{
+      RowBox[{
+       RowBox[{
+        RowBox[{
+         RowBox[{"GeneralData", "[", 
+          RowBox[{"SymptomData", ",", 
+           RowBox[{"{", 
+            RowBox[{"\"\<PropertyClass\>\"", ",", "#"}], "}"}]}], "]"}], "[", 
+         
+         RowBox[{"[", 
+          RowBox[{"All", ",", "2"}], "]"}], "]"}], "&"}], "/@", "$pods"}], 
+      ",", "1"}], "]"}]}]}], ";"}]], "Input"],
+
+Cell[BoxData[{
+ RowBox[{"CalculateParsedExpression", "[", "\"\<cough fever female\>\"", 
+  "]"}], "\[IndentingNewLine]", 
+ RowBox[{"CalculateParsedExpression", "[", "\"\<fever cough female\>\"", 
+  "]"}]}], "Input"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"$entity1", "=", 
+   RowBox[{"{", 
+    RowBox[{"\"\<Symptom1440.0\>\"", ",", "\"\<Symptom1010.0\>\""}], "}"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"$entity2", "=", 
+   RowBox[{"{", 
+    RowBox[{"\"\<Symptom1010.0\>\"", ",", "\"\<Symptom1440.0\>\""}], "}"}]}], 
+  ";"}]}], "Input"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"(", "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{"Print", "@", 
+      RowBox[{"Style", "[", 
+       RowBox[{"#", ",", "Blue"}], "]"}]}], ";", "\[IndentingNewLine]", 
+     RowBox[{"GeneralData", "[", 
+      RowBox[{"SymptomData", ",", "$entity1", ",", "#"}], "]"}], ";", 
+     "\[IndentingNewLine]", 
+     RowBox[{"Print", "@", 
+      RowBox[{"DisplayData", "[", 
+       RowBox[{"SymptomData", ",", "$entity1", ",", "#"}], "]"}]}]}], 
+    "\[IndentingNewLine]", ")"}], "&"}], "/@", "$properties"}]], "Input"],
+
+Cell[BoxData[{
+ RowBox[{"$pods", "[", 
+  RowBox[{"[", "6", "]"}], "]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"GeneralData", "[", 
+   RowBox[{"SymptomData", ",", 
+    RowBox[{"{", 
+     RowBox[{"\"\<PropertyClass\>\"", ",", "%"}], "}"}]}], "]"}], "[", 
+  RowBox[{"[", 
+   RowBox[{"All", ",", "2"}], "]"}], "]"}], "\[IndentingNewLine]", 
+ RowBox[{"GeneralData", "[", 
+  RowBox[{"SymptomData", ",", "$entity1", ",", 
+   RowBox[{"{", 
+    RowBox[{"\"\<SymptomRankingVerbose\>\"", ",", "\"\<Ranking\>\""}], 
+    "}"}]}], "]"}]}], "Input"],
+
+Cell[BoxData[{"$entity2", "\[IndentingNewLine]", "$entity1"}], "Input"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Table", "[", "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"MatchQ", "[", 
+     RowBox[{
+      RowBox[{"Quiet", "@", 
+       RowBox[{"SymptomData", "[", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{"\"\<Symptom1010.0\>\"", ",", "\"\<Symptom1440.0\>\""}], 
+          "}"}], ",", 
+         RowBox[{"{", 
+          RowBox[{"\"\<SymptomRankingVerbose\>\"", ",", "\"\<Ranking\>\""}], 
+          "}"}]}], "]"}]}], ",", 
+      RowBox[{"{", "__Rule", "}"}]}], "]"}], ",", "\[IndentingNewLine]", 
+    RowBox[{"{", "10", "}"}]}], "\[IndentingNewLine]", "]"}], "//", 
+  "Tally"}]], "Input"],
+
+Cell[BoxData[
+ RowBox[{"GeneralData", "[", 
+  RowBox[{"SymptomData", ",", "$entity1", ",", 
+   RowBox[{"{", 
+    RowBox[{"\"\<SymptomRankingVerbose\>\"", ",", "\"\<Ranking\>\""}], 
+    "}"}]}], "]"}]], "Input"],
+
+Cell[BoxData[
+ RowBox[{"PropertyClassPod", "[", 
+  RowBox[{"SymptomData", ",", "$entity1", ",", 
+   RowBox[{"$pods", "[", 
+    RowBox[{"[", "6", "]"}], "]"}]}], "]"}]], "Input"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"(", "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{"Print", "@", 
+      RowBox[{"Style", "[", 
+       RowBox[{"#", ",", "Blue"}], "]"}]}], ";", "\[IndentingNewLine]", 
+     RowBox[{"PropertyClassPod", "[", 
+      RowBox[{"SymptomData", ",", "$entity2", ",", "#"}], "]"}], ";", 
+     "\[IndentingNewLine]", 
+     RowBox[{"Print", "@", 
+      RowBox[{"PropertyClassPod", "[", 
+       RowBox[{"SymptomData", ",", "$entity2", ",", "#"}], "]"}]}]}], 
+    "\[IndentingNewLine]", ")"}], "&"}], "/@", "$pods"}]], "Input"],
+
+Cell[CellGroupData[{
+
+Cell["PropertyClassPod", "Subsubsection"],
+
+Cell[BoxData[
+ RowBox[{"mengPropertyClassPod", "[", 
+  RowBox[{"WordData", ",", 
+   RowBox[{"{", 
+    RowBox[{"\"\<big\>\"", ",", "\"\<face\>\""}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\"\<Rhyme\>\"", ",", "\"\<Antonyms\>\""}], "}"}]}], 
+  "]"}]], "Code",
+ InitializationCell->False]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Demoing II", "Subsubsection"],
+
+Cell[BoxData[
+ RowBox[{"mengGrid", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{"#", ",", 
+      RowBox[{"With", "[", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{"x", "=", 
+          RowBox[{"cpe", "[", "#", "]"}]}], "}"}], ",", 
+        RowBox[{"ResultStyle", "@", 
+         RowBox[{"ReleaseHold", "@", 
+          RowBox[{"InputInterpretationForm", "[", "x", "]"}]}]}]}], "]"}]}], 
+     "}"}], "&"}], "/@", 
+   RowBox[{"{", 
+    RowBox[{"\"\<1+1\>\"", ",", "\"\<foobar\>\""}], "}"}]}], "]"}]], "Input"]
+}, Open  ]]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["String", "Subsection"],
+
+Cell[BoxData[
+ RowBox[{"ToString", "[", 
+  RowBox[{"\"\<\[ARing]bd\>\"", ",", "InputForm", ",", 
+   RowBox[{"CharacterEncoding", "\[Rule]", "\"\<ASCII\>\""}]}], 
+  "]"}]], "Input"]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["Update Fromula", "Subsection"],
+
+Cell[CellGroupData[{
+
+Cell["full update", "Subsubsection"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", 
+   RowBox[{
+   "*", " ", "did", " ", "spelling", " ", "changes", " ", "in", " ", 
+    "formula", " ", "tables"}], " ", "**)"}], "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"CalculateUpdate", "[", 
+    RowBox[{"{", "\"\<Formulas\>\"", "}"}], "]"}], "\[IndentingNewLine]", 
+   RowBox[{"Speak", "[", "\"\<Done updating\>\"", "]"}]}]}]], "Input"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["quick update", "Subsubsection"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", 
+   RowBox[{
+   "*", " ", "no", " ", "spelling", " ", "changes", " ", "in", " ", "formula",
+     " ", "tables"}], " ", "**)"}], "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"$SkipFormulaInit", "=", "False"}], ";"}], "\[IndentingNewLine]", 
+   
+   RowBox[{"<<", "CalculateParse`Content`Formulas`"}], "\[IndentingNewLine]", 
+   
+   RowBox[{
+    RowBox[{"$SkipFormulaInit", "=", "True"}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{"Speak", "[", "\"\<Done updating\>\"", "]"}]}]}]], "Input"]
+}, Open  ]]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["Update spellings", "Subsection"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", 
+   RowBox[{
+   "*", " ", "Update", " ", "spellings", " ", "for", " ", "specific", " ", 
+    "property", " ", "or", " ", "grammar", " ", "symbol"}], " ", "**)"}], 
+  "\[IndentingNewLine]", 
+  RowBox[{"CalculateUpdate", "[", 
+   RowBox[{"XXXData", ",", " ", 
+    RowBox[{"\"\<SpellingsFilter\>\"", "\[Rule]", " ", 
+     RowBox[{"\"\<Name\>\"", "|", "\"\<ElementPropertyClass\>\""}]}]}], 
+   RowBox[{"(*", 
+    RowBox[{
+    "*", " ", "property", " ", "standard", " ", "name", " ", "or", " ", 
+     "grammar", " ", "symbols"}], " ", "**)"}], "]"}]}]], "Code",
+ InitializationCell->False]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["Generate example page", "Subsection"],
+
+Cell[BoxData[
+ RowBox[{"mengExportExamplePage", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"\"\<devmode:\>\"", "<>", "#"}], "&"}], "/@", "$q"}], 
+  "]"}]], "Input"]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["CalculateSimple", "Subsection"],
+
+Cell[BoxData[{
+ RowBox[{"$cpe1", "=", 
+  RowBox[{
+  "cpe", "[", "\"\<devmode:-red\>\"", "]"}]}], "\[IndentingNewLine]", 
+ RowBox[{"CalculateSimple", "[", 
+  RowBox[{"\"\<foo bar\>\"", ",", 
+   RowBox[{"\"\<ParsedExpression\>\"", "\[Rule]", " ", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"\"\<ParsedExpression\>\"", "\[Rule]", " ", "$cpe1"}], ",", 
+      RowBox[{"\"\<DevMode\>\"", "\[Rule]", " ", "True"}]}], "}"}]}], ",", 
+   RowBox[{"\"\<TotalScannerTime\>\"", "\[Rule]", " ", "100"}]}], 
+  "]"}]}], "Input"]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["Timeout issues", "Subsection"],
+
+Cell["Scanner timeouts", "Subsubsection"],
+
+Cell[CellGroupData[{
+
+Cell["Database statement timeout", "Subsubsection"],
+
+Cell[TextData[StyleBox["Set a large database statement timeout, to prevent \
+errors like\n\nCalculateUtilities`DataPaclets`DataPaclets::dbexcp: A database\
+\noperation timed out: \[OpenCurlyDoubleQuote]CalculateCityData: Statement \
+cancelled due to\ntimeout or client request\nquery: SELECT  value FROM \
+CalculateCityData.names LEFT JOIN\nCalculateCityData.data ON \
+names.id=data.entity_id AND\ndata.property_id=? WHERE names.standardname=1 \
+ORDER BY names.id\[CloseCurlyDoubleQuote]\n",
+ FontSize->16]], "Text"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", 
+   RowBox[{
+   "*", " ", "before", " ", "loading", " ", "an", " ", "Alpha", " ", 
+    "build"}], " ", "*)"}], "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"DataPaclets`Database`$Timeout", "=", "1000"}], ";"}]}]], "Input"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", 
+   RowBox[{
+   "*", " ", "after", " ", "loading", " ", "an", " ", "Alpha", " ", "build"}],
+    " ", "**)"}], "\[IndentingNewLine]", 
+  RowBox[{"setSQLTimeouts", "[", "1000", "]"}]}]], "Input"]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["Database connection timeout", "Subsubsection"],
+
+Cell["\<\
+Run the following to clear out connection timeout errors like:
+
+CalculateUtilities`DataPaclets`DataPaclets::dbexcp:A database error
+occurred:\[CloseCurlyDoubleQuote]CalculateExpandedWordData: Communications \
+link failure
+\[OpenCurlyDoubleQuote]The last packet successfully received from the server \
+was 5,152,648
+milliseconds ago.The last packet sent successfully to the server
+was 9 milliseconds ago.\[CloseCurlyDoubleQuote]\
+\>", "Text",
+ FontSize->16],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"CalculateLoader`Private`setupMySQL", "[", "]"}], ";"}]], "Input"]
+}, Closed]]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["Check if Alpha is loaded", "Subsection"],
+
+Cell[BoxData[
+ RowBox[{"Names", "[", "\"\<CalculateScan`Private`$InproductCalculate\>\"", 
+  "]"}]], "Input"],
+
+Cell[BoxData[
+ RowBox[{"TrueQ", "[", "CalculateScan`Private`$InproductCalculate", 
+  "]"}]], "Input"]
+}, Closed]]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["Graph", "Section"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"With", "[", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{"g", "=", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{
+         "\"\<a\>\"", ",", "\"\<10\>\"", ",", "\"\<11\>\"", ",", "\"\<12\>\"",
+           ",", "\"\<b\>\""}], "}"}], ",", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"\"\<a\>\"", "\[Rule]", "\"\<10\>\""}], ",", 
+          RowBox[{"\"\<10\>\"", "\[Rule]", "\"\<11\>\""}], ",", 
+          RowBox[{"\"\<11\>\"", "\[Rule]", "\"\<12\>\""}], ",", 
+          RowBox[{"\"\<12\>\"", "\[Rule]", "\"\<10\>\""}], ",", 
+          RowBox[{"\"\<12\>\"", "\[Rule]", "\"\<b\>\""}]}], "}"}]}], "}"}]}], 
+     "}"}], ",", "\[IndentingNewLine]", 
+    RowBox[{"mengRunTest", "[", 
+     RowBox[{
+      RowBox[{"HoldComplete", "[", 
+       RowBox[{"mengFindShortestLoop", "[", 
+        RowBox[{"g", ",", "\"\<10\>\""}], "]"}], "]"}], "\[Rule]", " ", 
+      RowBox[{"{", 
+       RowBox[{
+       "\"\<10\>\"", ",", "\"\<11\>\"", ",", "\"\<12\>\"", ",", 
+        "\"\<l0\>\""}], "}"}]}], "]"}]}], "\[IndentingNewLine]", "]"}], 
+  "\[IndentingNewLine]"}]], "Input"]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["Date", "Section"],
+
+Cell[BoxData[{
+ RowBox[{"mengUnixTimeToDateList", "[", 
+  RowBox[{"mengDateListToUnixTime", "[", 
+   RowBox[{"DateList", "[", "]"}], "]"}], "]"}], "\n", 
+ RowBox[{"DateList", "[", "]"}]}], "Input"],
+
+Cell[CellGroupData[{
+
+Cell["list of dates", "Subsection"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{"dates1", "=", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"2011", ",", "5", ",", "1"}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"2011", ",", "12", ",", "1"}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"2011", ",", "12", ",", "5"}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"2011", ",", "12", ",", "6"}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"2011", ",", "12", ",", "8"}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"2011", ",", "12", ",", "9"}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"2011", ",", "12", ",", "10"}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"2011", ",", "12", ",", "30"}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"2011", ",", "12", ",", "31"}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"2012", ",", "1", ",", "1"}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"2012", ",", "1", ",", "6"}], "}"}]}], "}"}]}], ";"}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"dates2", "=", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"2011", ",", "5", ",", "1"}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"2011", ",", "12", ",", "1"}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"2011", ",", "12", ",", "5"}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"2011", ",", "12", ",", "6"}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"2011", ",", "12", ",", "8"}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"2011", ",", "12", ",", "9"}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"2011", ",", "12", ",", "10"}], "}"}]}], "}"}]}], ";"}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"dates3", "=", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"2011", ",", "12", ",", "30"}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"2011", ",", "12", ",", "31"}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"2012", ",", "1", ",", "1"}], "}"}]}], "}"}]}], ";"}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"dates4", "=", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"2011", ",", "12", ",", "4"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"2011", ",", "12", ",", "5"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"2011", ",", "12", ",", "6"}], "}"}]}], "}"}]}], 
+  ";"}]}], "Input"],
+
+Cell[BoxData[{
+ RowBox[{"mengFormatListOfDates", "[", 
+  RowBox[{"dates1", ",", 
+   RowBox[{"\"\<Style\>\"", "\[Rule]", " ", "\"\<Short\>\""}]}], 
+  "]"}], "\[IndentingNewLine]", 
+ RowBox[{"mengFormatListOfDates", "[", 
+  RowBox[{"dates1", ",", 
+   RowBox[{"\"\<Style\>\"", "\[Rule]", " ", "\"\<Long\>\""}]}], 
+  "]"}]}], "Input"],
+
+Cell[BoxData[{
+ RowBox[{"mengFormatListOfDates", "[", 
+  RowBox[{"dates2", ",", 
+   RowBox[{"\"\<Style\>\"", "\[Rule]", " ", "\"\<Short\>\""}]}], 
+  "]"}], "\[IndentingNewLine]", 
+ RowBox[{"mengFormatListOfDates", "[", 
+  RowBox[{"dates2", ",", 
+   RowBox[{"\"\<Style\>\"", "\[Rule]", " ", "\"\<Long\>\""}]}], 
+  "]"}]}], "Input"],
+
+Cell[BoxData[{
+ RowBox[{"mengFormatListOfDates", "[", 
+  RowBox[{"dates3", ",", 
+   RowBox[{"\"\<Style\>\"", "\[Rule]", " ", "\"\<Short\>\""}]}], 
+  "]"}], "\[IndentingNewLine]", 
+ RowBox[{"mengFormatListOfDates", "[", 
+  RowBox[{"dates3", ",", 
+   RowBox[{"\"\<Style\>\"", "\[Rule]", " ", "\"\<Long\>\""}]}], 
+  "]"}]}], "Input"],
+
+Cell[BoxData[{
+ RowBox[{"mengFormatListOfDates", "[", 
+  RowBox[{"dates4", ",", 
+   RowBox[{"\"\<Style\>\"", "\[Rule]", " ", "\"\<Short\>\""}]}], 
+  "]"}], "\[IndentingNewLine]", 
+ RowBox[{"mengFormatListOfDates", "[", 
+  RowBox[{"dates4", ",", 
+   RowBox[{"\"\<Style\>\"", "\[Rule]", " ", "\"\<Long\>\""}]}], 
+  "]"}]}], "Input"]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["Date", "Subsection"],
+
+Cell[BoxData[
+ RowBox[{"mengFormatDateList", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"2006", ",", "3", ",", "24"}], "}"}], ",", 
+   RowBox[{"\"\<ShowYearQ\>\"", "\[Rule]", " ", "True"}]}], "]"}]], "Input"]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["Timing", "Subsection"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{"t1", "=", 
+    RowBox[{"DateList", "[", "]"}]}], ";"}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"t2", "=", 
+   RowBox[{"DateList", "[", "]"}]}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{"DateDifference", "[", 
+   RowBox[{"t1", ",", "t2", ",", 
+    RowBox[{"{", 
+     RowBox[{"\"\<Minute\>\"", ",", "\"\<Second\>\""}], "}"}]}], "]"}], "//", 
+  
+  RowBox[{
+   RowBox[{"Cases", "[", 
+    RowBox[{"#", ",", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"x_", "/;", 
+        RowBox[{"x", ">", "0"}]}], ",", "_"}], "}"}]}], "]"}], 
+   "&"}]}]}], "Input"]
+}, Open  ]]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["DataTable", "Section"],
+
+Cell[CellGroupData[{
+
+Cell["DataTable display", "Subsection"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"$xxxDataTable", "=", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"\"\<ent1\>\"", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"\"\<a\>\"", "\[Rule]", "1"}], ",", 
+        RowBox[{"\"\<c\>\"", "\[Rule]", "2"}]}], "}"}]}], ",", 
+     RowBox[{"\"\<ent2\>\"", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"\"\<a\>\"", "\[Rule]", "3"}], ",", 
+        RowBox[{"\"\<b\>\"", "\[Rule]", "4"}]}], "}"}]}]}], "}"}]}], 
+  ";"}]], "Input"],
+
+Cell[BoxData[
+ RowBox[{"mengDataTableGrid", "[", "$xxxDataTable", "]"}]], "Input"]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["Data table computation", "Subsection"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"*", " ", "\[IndentingNewLine]", 
+      RowBox[{"datatable_temp", ".", "m", ".", "text"}], " ", "typically", 
+      " ", "has", " ", "expression", " ", "deliminated", " ", "by", " ", 
+      "newline", " ", "character", "\[IndentingNewLine]", " ", 
+      "\[IndentingNewLine]", "datatable1"}], "=", 
+     RowBox[{"ReadList", "[", 
+      RowBox[{"ToFileName", "[", 
+       RowBox[{
+        RowBox[{"{", "$mengTemporaryDirectory", "}"}], ",", 
+        "\"\<datatable_temp.m.txt\>\""}], "]"}], "]"}]}], ";"}], 
+   "\[IndentingNewLine]", "**)"}], "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"datatable1", "=", 
+    RowBox[{"ReadList", "[", 
+     RowBox[{"ToFileName", "[", 
+      RowBox[{
+       RowBox[{"{", "$mengTemporaryDirectory", "}"}], ",", 
+       "\"\<datatable_temp.m.txt\>\""}], "]"}], "]"}]}], ";"}]}]], "Input"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"datatable1", "=", 
+   RowBox[{"Import", "[", 
+    RowBox[{"\"\<~/temp/temp.m\>\"", ",", "\"\<ExpressionList\>\""}], "]"}]}],
+   ";"}]], "Input"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"datatable1", "[", 
+   RowBox[{"[", "1", "]"}], "]"}], "//", "Length"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"datatable1", "[", 
+   RowBox[{"[", "1", "]"}], "]"}], "//", 
+  "RandomChoice"}], "\[IndentingNewLine]"}], "Input"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"datatable", "=", 
+   RowBox[{
+    RowBox[{"Composition", "[", "\[IndentingNewLine]", 
+     RowBox[{"(*", 
+      RowBox[{
+       RowBox[{
+        RowBox[{
+         RowBox[{
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{"#", "[", 
+             RowBox[{"[", "1", "]"}], "]"}], "\[Rule]", " ", 
+            RowBox[{"Sort", "@", 
+             RowBox[{"#", "[", 
+              RowBox[{"[", 
+               RowBox[{"-", "1"}], "]"}], "]"}]}]}], ")"}], "&"}], "/@", 
+         "#"}], "&"}], ","}], "*)"}], "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"Replace", "[", 
+        RowBox[{"#", ",", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"HoldPattern", "[", 
+             RowBox[{"x_", "\[Rule]", " ", 
+              RowBox[{"{", 
+               RowBox[{"a___", ",", 
+                RowBox[{"b", ":", 
+                 RowBox[{"(", 
+                  RowBox[{"Spellings", "\[Rule]", " ", "_"}], ")"}]}], ",", 
+                "c___"}], "}"}]}], "]"}], "\[RuleDelayed]", " ", 
+            RowBox[{"(", 
+             RowBox[{"x", "\[Rule]", " ", 
+              RowBox[{"{", 
+               RowBox[{"a", ",", "c"}], "}"}]}], ")"}]}], ",", 
+           RowBox[{"y_", "\[RuleDelayed]", "  ", "y"}]}], "}"}], ",", "1"}], 
+        "]"}], "&"}], ",", "\[IndentingNewLine]", "Sort", ",", 
+      "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"#", "[", 
+        RowBox[{"[", "1", "]"}], "]"}], "&"}]}], "\[IndentingNewLine]", "]"}],
+     "[", "datatable1", "]"}]}], ";"}]], "Input"],
+
+Cell[BoxData[{
+ RowBox[{"datatable", "//", "Length"}], "\[IndentingNewLine]", 
+ RowBox[{"datatable", "//", "RandomChoice"}]}], "Input"],
+
+Cell[BoxData[
+ RowBox[{"file", "=", 
+  RowBox[{"ToFileName", "[", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{
+     "$mengWolframCalculateDirectory", ",", "\"\<CalculateData\>\"", ",", 
+      "\"\<DataPaclets\>\""}], "}"}], ",", "\"\<DiseaseDataEntity.m\>\""}], 
+   "]"}]}]], "Input"],
+
+Cell[BoxData[
+ RowBox[{"mengWriteDataTable", "[", 
+  RowBox[{"datatable", ",", " ", "file", ",", " ", "\"\<DiseaseData\>\""}], 
+  "]"}]], "Input"],
+
+Cell[BoxData[
+ RowBox[{"mengWriteDataTable", "[", "datatable", "]"}]], "Input"],
+
+Cell[BoxData[
+ RowBox[{"mengWriteRawDownValue", "[", 
+  RowBox[{"datatable", ",", " ", 
+   RowBox[{"ToFileName", "[", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"ParentDirectory", "[", "$mengWolframCalculateDirectory", "]"}],
+       ",", "\"\<ExtraSpellings\>\"", ",", "\"\<DataPaclets\>\"", ",", 
+      "\"\<DiseaseDataEntity\>\""}], "}"}], "]"}], ",", "\"\<XXX\>\""}], 
+  "]"}]], "Input"]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["Datatable create", "Subsection"],
+
+Cell[BoxData[
+ RowBox[{"data", "=", 
+  RowBox[{"{", 
+   RowBox[{
+    RowBox[{"1", "\[Rule]", " ", 
+     RowBox[{"{", 
+      RowBox[{"\"\<foo\>\"", "\[Rule]", " ", "\"\<s\>\""}], "}"}]}], ",", 
+    RowBox[{"\"\<foobar\>\"", "\[Rule]", " ", 
+     RowBox[{"{", 
+      RowBox[{"\"\<x\>\"", "\[Rule]", " ", "1"}], "}"}]}], ",", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"1", ",", "\"\<a\>\""}], "}"}], "\[Rule]", " ", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"\"\<x\>\"", "\[Rule]", " ", "\"\<X\>\""}], ",", 
+       RowBox[{"1", "\[Rule]", " ", "\"\<s\>\""}]}], "}"}]}]}], 
+   "}"}]}]], "Input"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"datatablefile", "=", "\"\<~/temp/datatable.m\>\""}], 
+  ";"}]], "Input"],
+
+Cell[BoxData[
+ RowBox[{"mengDataTableCreate", "[", 
+  RowBox[{
+  "datatablex", ",", " ", "datatablefile", ",", " ", "\"\<\>\"", ",", 
+   RowBox[{"\"\<WriteFunctionHeadQ\>\"", "\[Rule]", "False"}], ",", 
+   RowBox[{"\"\<MaxNumberOfElementsOnOneLine\>\"", "\[Rule]", " ", "1"}]}], 
+  "]"}]], "Input"],
+
+Cell[BoxData[
+ RowBox[{"FilePrint", "[", "datatablefile", "]"}]], "Input"]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["datatable update", "Subsection",
+ CellChangeTimes->{{3.54305890383805*^9, 3.5430589076356297`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"datatable0", "=", 
+   RowBox[{"Import", "[", "datatablefile", "]"}]}], ";"}]], "Input"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"change", "=", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"2", "\[Rule]", " ", 
+      RowBox[{"{", 
+       RowBox[{"\"\<x\>\"", "\[Rule]", " ", "\"\<t\>\""}], "}"}]}], ",", 
+     RowBox[{"1", "\[Rule]", " ", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"\"\<foo\>\"", "\[Rule]", " ", "\"\<ss\>\""}], ",", 
+        RowBox[{"\"\<bar\>\"", "\[Rule]", " ", "\"\<tt\>\""}]}], "}"}]}]}], 
+    "}"}]}], ";"}]], "Input"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"datatableNew", "=", 
+   RowBox[{"mengDataTableUpdate", "[", 
+    RowBox[{"change", ",", " ", "datatable0"}], "]"}]}], ";"}]], "Input"],
+
+Cell[BoxData["datatableNew"], "Input"],
+
+Cell[BoxData[
+ RowBox[{"mengDataTableUpdate", "[", 
+  RowBox[{"change", ",", " ", "datatablefile"}], "]"}]], "Input"],
+
+Cell[BoxData[
+ RowBox[{"FilePrint", "[", "datatablefile", "]"}]], "Input"]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["datatable insert", "Subsection"],
+
+Cell[BoxData[
+ RowBox[{"FilePrint", "[", "datatablefile", "]"}]], "Input"],
+
+Cell[BoxData[
+ RowBox[{"datatableInsert", "=", 
+  RowBox[{"mengDataTableInsert", "[", 
+   RowBox[{
+    RowBox[{"\"\<new\>\"", "\[Rule]", " ", 
+     RowBox[{"{", 
+      RowBox[{"\"\<k\>\"", "\[Rule]", " ", "\"\<v\>\""}], "}"}]}], ",", 
+    "datatablefile"}], "]"}]}]], "Input"],
+
+Cell[BoxData[
+ RowBox[{"FilePrint", "[", "datatablefile", "]"}]], "Input"]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["datatable delete", "Subsection"],
+
+Cell[BoxData[
+ RowBox[{"FilePrint", "[", "datatablefile", "]"}]], "Input"],
+
+Cell[BoxData[
+ RowBox[{"datatableDelete", "=", 
+  RowBox[{"mengDataTableDelete", "[", 
+   RowBox[{"\"\<new\>\"", ",", "datatablefile"}], "]"}]}]], "Input"],
+
+Cell[BoxData[
+ RowBox[{"FilePrint", "[", "datatablefile", "]"}]], "Input"]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["datatable select", "Subsection"],
+
+Cell[BoxData[
+ RowBox[{"FilePrint", "[", "datatablefile", "]"}]], "Input"],
+
+Cell[BoxData[
+ RowBox[{"mengDataTableSelect", "[", 
+  RowBox[{"datatablefile", ",", 
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"(", 
+       RowBox[{"\"\<x\>\"", "/.", 
+        RowBox[{"#", "[", 
+         RowBox[{"[", "2", "]"}], "]"}]}], ")"}], "=!=", "\"\<x\>\""}], "&"}],
+     ")"}]}], "]"}]], "Input"]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["Curation grids", "Subsection"],
+
+Cell[BoxData[{
+ RowBox[{"SetOptions", "[", 
+  RowBox[{"$FrontEnd", ",", 
+   RowBox[{"\"\<DynamicUpdating\>\"", "\[Rule]", "True"}]}], 
+  "]"}], "\[IndentingNewLine]", 
+ RowBox[{"SetOptions", "[", 
+  RowBox[{"$FrontEnd", ",", 
+   RowBox[{"\"\<DynamicEvaluationTimeout\>\"", "\[Rule]", "30"}]}], 
+  "]"}]}], "Input"],
+
+Cell[BoxData[
+ RowBox[{"<<", "DataPacletTools`"}]], "Input"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+  "$curationGridFile", "=", 
+   "\"\</Users/meng/WorkSpace-Mengmaclap/AlphaExtras/Localization/\
+WolframAlphaLocalization.git/DataPacletLocalization/ColorData/CVColorData-\
+Curation.nb\>\""}], ";"}]], "Input"],
+
+Cell[BoxData[
+ RowBox[{"data3", "//", "RandomChoice"}]], "Input"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"data", "=", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"Prepend", "[", 
+      RowBox[{
+       RowBox[{"#", "[", 
+        RowBox[{"[", "2", "]"}], "]"}], ",", 
+       RowBox[{"\"\<ColorProperty\>\"", "\[Rule]", " ", 
+        RowBox[{"#", "[", 
+         RowBox[{"[", "1", "]"}], "]"}]}]}], "]"}], "&"}], "/@", "data3"}]}], 
+  ";"}]], "Input"],
+
+Cell[BoxData[
+ RowBox[{"data", "//", "RandomChoice"}]], "Input"],
+
+Cell[BoxData[
+ RowBox[{"CurationGrid", "[", "data", "]"}]], "Input"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", 
+   RowBox[{"*", " ", "curation", " ", "grid"}], " ", "**)"}], 
+  "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"dataInit", "=", 
+    RowBox[{"ImportCurationGrid", "[", "$curationGridFile", "]"}]}], 
+   ";"}]}]], "Input"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"dataInit", "[", 
+   RowBox[{"[", "1", "]"}], "]"}], "//", "RandomChoice"}]], "Input"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"eptable1", "=", 
+   RowBox[{
+    RowBox[{"Composition", "[", "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"SortBy", "[", 
+        RowBox[{"#", ",", "First"}], "]"}], "&"}], ",", "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"Select", "[", 
+        RowBox[{"#", ",", 
+         RowBox[{
+          RowBox[{"!", 
+           RowBox[{"MatchQ", "[", 
+            RowBox[{"#", ",", 
+             RowBox[{"HoldPattern", "[", 
+              RowBox[{"_", "\[Rule]", " ", "_String"}], "]"}]}], "]"}]}], 
+          "&"}]}], "]"}], "&"}], ",", "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{
+        RowBox[{
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"(", 
+            RowBox[{
+            "\"\<Country\>\"", "\[Rule]", " ", 
+             "\"\<HeadOfGovernmentLeaderPosition\>\""}], ")"}], "/.", "#"}], 
+          ")"}], "&"}], "/@", "#"}], "&"}]}], "\[IndentingNewLine]", "]"}], 
+    "[", 
+    RowBox[{"dataInit", "[", 
+     RowBox[{"[", "1", "]"}], "]"}], "]"}]}], ";"}]], "Input"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"eptableF", "=", "eptable1"}], ";"}]], "Input"],
+
+Cell[BoxData[
+ RowBox[{"Export", "[", 
+  RowBox[{"\"\<~/temp/temp.m\>\"", ",", "eptableF"}], "]"}]], "Input"],
+
+Cell[BoxData[
+ RowBox[{"mengWriteDataTable", "[", "eptableF", "]"}]], "Input"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["curation grid to datatable", "Subsection"],
+
+Cell[BoxData[
+ RowBox[{"f", "=", 
+  RowBox[{"DataLocalizationCurationGridFile", "[", 
+   RowBox[{"\"\<OceanData\>\"", ",", "\"\<Name\>\""}], "]"}]}]], "Input"],
+
+Cell[BoxData[
+ RowBox[{"mengCurationGridToDataTable", "[", 
+  RowBox[{"curationGridFile_", ",", "keyProperty_", ",", "propertyPatt"}], 
+  "]"}]], "Input"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"data0", "=", 
+   RowBox[{
+   "DataPacletTools`ScraperTools`ScraperTools`ImportCurationGrid", "[", "f", 
+    "]"}]}], ";"}]], "Input"],
+
+Cell[BoxData[{
+ RowBox[{"data0", "//", "Length"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"data0", "[", 
+   RowBox[{"[", "1", "]"}], "]"}], "//", "Length"}]}], "Input"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"data0", "[", 
+   RowBox[{"[", "1", "]"}], "]"}], "//", "RandomChoice"}]], "Input"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"datatable0", "=", 
+   RowBox[{"devCurationGridToDataTable", "[", 
+    RowBox[{"f", ",", "\"\<WA$en\>\"", ",", 
+     RowBox[{"\"\<WA$zh-CN\>\"", "|", "\"\<WA$zh-TW\>\""}]}], "]"}]}], 
+  ";"}]], "Input"],
+
+Cell[BoxData[{
+ RowBox[{"datatable0", "//", "Length"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"datatable0", "//", "RandomChoice"}], "//", 
+  RowBox[{
+   RowBox[{"ToString", "[", 
+    RowBox[{"#", ",", "InputForm", ",", 
+     RowBox[{"CharacterEncoding", "\[Rule]", " ", "\"\<ASCII\>\""}]}], "]"}], 
+   "&"}]}]}], "Input"]
+}, Open  ]]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["Write file", "Section"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"table", "=", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"{", "#", "}"}], "&"}], "/@", 
+    RowBox[{"{", 
+     RowBox[{
+     "\"\<Antiparticle\>\"", ",", "\"\<BaryonNumber\>\"", ",", 
+      "\"\<Bottomness\>\"", ",", "\"\<Charge\>\"", ",", 
+      "\"\<ChargeStates\>\"", ",", "\"\<Charm\>\"", ",", "\"\<CParity\>\"", 
+      ",", "\"\<DecayType\>\"", ",", "\"\<Excitations\>\"", ",", 
+      "\"\<FullSymbol\>\"", ",", "\"\<GenericFullSymbol\>\"", ",", 
+      "\"\<GenericSymbol\>\"", ",", "\"\<GFactor\>\"", ",", "\"\<GParity\>\"",
+       ",", "\"\<HalfLife\>\"", ",", "\"\<Hypercharge\>\"", ",", 
+      "\"\<Isospin\>\"", ",", "\"\<IsospinMultiplet\>\"", ",", 
+      "\"\<IsospinProjection\>\"", ",", "\"\<LeptonNumber\>\"", ",", 
+      "\"\<Lifetime\>\"", ",", "\"\<Mass\>\"", ",", 
+      "\"\<MeanSquareChargeRadius\>\"", ",", "\"\<Memberships\>\"", ",", 
+      "\"\<Parity\>\"", ",", "\"\<PDGNumber\>\"", ",", "\"\<QuarkContent\>\"",
+       ",", "\"\<Spin\>\"", ",", "\"\<Strangeness\>\"", ",", "\"\<Symbol\>\"",
+       ",", "\"\<Topness\>\"", ",", "\"\<Width\>\""}], "}"}]}]}], 
+  ";"}]], "Input"],
+
+Cell[BoxData[
+ RowBox[{"data", "//", "Length"}]], "Input"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", " ", 
+   RowBox[{
+   "export", " ", "a", " ", "list", " ", "of", " ", "lists", " ", "to", " ", 
+    "a", " ", "HTML", " ", "file"}], "*)"}], "\[IndentingNewLine]", 
+  RowBox[{"mengExportHTMLTable", "[", "\n", "\t", "data", "\n", "\t", 
+   RowBox[{"(*", 
+    RowBox[{"Table", "[", 
+     RowBox[{
+      RowBox[{"RandomReal", "[", "]"}], ",", 
+      RowBox[{"{", "3", "}"}], ",", 
+      RowBox[{"{", "20", "}"}]}], "]"}], "*)"}], "\n", "\t", 
+   RowBox[{"(*", 
+    RowBox[{
+    "\"\<FilePath\>\"", "\[Rule]", " ", 
+     "\"\</home/usr1/meng/hg/workingrepos/reposhgwri/WolframCalculateDevel/\
+Project/LeaderData/\>\""}], "*)"}], "\n", "]"}]}]], "Code",
+ InitializationCell->False],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"array", "=", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"{", "#", "}"}], "&"}], "/@", "$RootCategoryTitle"}]}], 
+  ";"}]], "Input",
+ CellChangeTimes->{{3.5430542251229277`*^9, 3.543054232266385*^9}}],
+
+Cell[BoxData[
+ RowBox[{"mengExportPlaintextTable", "[", "\n", "\t", 
+  RowBox[{"array", ",", "\n", "\t", 
+   RowBox[{"\"\<ToStringFunction\>\"", "\[Rule]", " ", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"ToString", "[", 
+       RowBox[{"#", ",", "InputForm", ",", " ", 
+        RowBox[{"CharacterEncoding", "\[Rule]", " ", "\"\<ASCII\>\""}]}], 
+       "]"}], "&"}], ")"}]}], ",", "\n", "\t", 
+   RowBox[{"\"\<EndOfLineCharacter\>\"", "\[Rule]", " ", "\"\<,\>\""}]}], 
+  "\n", "\t", 
+  RowBox[{"(*", 
+   RowBox[{
+    RowBox[{"\"\<FilePath\>\"", "\[Rule]", " ", 
+     RowBox[{"ToFileName", "[", 
+      RowBox[{"{", 
+       RowBox[{
+       "$mengRepoHgWriDirectory", ",", "\"\<WolframCalculateDevel\>\"", ",", 
+        "\"\<Project\>\"", ",", "\"\<ColorData\>\"", ",", "\"\<Test\>\""}], 
+       "}"}], "]"}]}], ",", "\n", "\t", 
+    RowBox[{
+    "\"\<FileName\>\"", " ", "\[Rule]", " ", 
+     "\"\<ColorArithmeticNonParsingQueries.txt\>\""}]}], "*)"}], "\n", 
+  "]"}]], "Code",
+ InitializationCell->False],
+
+Cell[BoxData[
+ RowBox[{"ToString", "[", 
+  RowBox[{"\"\<\[ARing]afa\>\"", ",", "InputForm", ",", 
+   RowBox[{"CharacterEncoding", "\[Rule]", " ", "\"\<ASCII\>\""}]}], 
+  "]"}]], "Input"],
+
+Cell[BoxData[
+ RowBox[{"Options", "[", "ToString", "]"}]], "Input"],
+
+Cell[CellGroupData[{
+
+Cell["Export (nested) list", "Subsection",
+ CellChangeTimes->{{3.543327775508994*^9, 3.543327787249645*^9}}],
+
+Cell[BoxData[
+ RowBox[{"mengExportList", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"1", ",", "a", ",", "\"\<foo\>\""}], "}"}], ",", 
+   RowBox[{"\"\<FileName\>\"", "\[Rule]", " ", "\"\<XXX.txt\>\""}]}], 
+  "]"}]], "Input",
+ CellChangeTimes->{3.543330941643379*^9}],
+
+Cell[BoxData[{
+ RowBox[{"mengExportList", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"1", ",", 
+     RowBox[{"{", "2", "}"}], ",", "\"\<foo\>\""}], "}"}], ",", 
+   RowBox[{"\"\<FileName\>\"", "\[Rule]", " ", "\"\<XXX.txt\>\""}]}], 
+  "]"}], "\[IndentingNewLine]", 
+ RowBox[{"mengExportList", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"1", ",", 
+     RowBox[{"{", 
+      RowBox[{"2", ",", 
+       RowBox[{"{", 
+        RowBox[{"\"\<\:795e\>\"", ",", "x"}], "}"}]}], "}"}], ",", 
+     "\"\<foo\>\""}], "}"}], ",", 
+   RowBox[{"\"\<FileName\>\"", "\[Rule]", " ", "\"\<XXX.txt\>\""}]}], 
+  "]"}]}], "Input"],
+
+Cell[BoxData[
+ RowBox[{"mengExportList", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", "1", "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"{", 
+       RowBox[{"2", ",", "3"}], "}"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"\"\<foo\>\"", ",", 
+       RowBox[{"{", "1", "}"}]}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"\"\<\:795e\>\"", ",", "x"}], "}"}]}], "}"}], ",", 
+   RowBox[{"\"\<FileName\>\"", "\[Rule]", " ", "\"\<XXX.txt\>\""}]}], 
+  "]"}]], "Input"],
+
+Cell[BoxData[
+ RowBox[{"mengExportList", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"1", ",", 
+     RowBox[{"{", 
+      RowBox[{"2", ",", 
+       RowBox[{"{", 
+        RowBox[{"\"\<\:795e\>\"", ",", "x"}], "}"}]}], "}"}], ",", 
+     "\"\<foo\>\""}], "}"}], ",", 
+   RowBox[{"\"\<FileName\>\"", "\[Rule]", " ", "\"\<XXX.txt\>\""}]}], 
+  "]"}]], "Input"],
+
+Cell[BoxData[{
+ RowBox[{"mengExportList", "[", 
+  RowBox[{"graph1", ",", 
+   RowBox[{"\"\<FileName\>\"", "\[Rule]", " ", "\"\<graph1.txt\>\""}]}], 
+  "]"}], "\[IndentingNewLine]", 
+ RowBox[{"mengExportList", "[", 
+  RowBox[{"graph2", ",", 
+   RowBox[{"\"\<FileName\>\"", "\[Rule]", " ", "\"\<graph2.txt\>\""}]}], 
+  "]"}]}], "Input",
+ CellChangeTimes->{{3.543333485013987*^9, 3.543333485738124*^9}, {
+   3.543333670053566*^9, 3.543333676131699*^9}, {3.5433343636186857`*^9, 
+   3.5433343637277803`*^9}, 3.543334460579537*^9, {3.54333482502409*^9, 
+   3.543334825125444*^9}, {3.5433348962613173`*^9, 3.543334899009383*^9}, {
+   3.5433353155560637`*^9, 3.543335315935416*^9}, {3.543335686235021*^9, 
+   3.5433356877943077`*^9}}],
+
+Cell[BoxData["mengExportList"], "Input"]
+}, Open  ]]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["Image", "Section"],
+
+Cell[BoxData[{
+ RowBox[{"<<", "meng`Image`"}], "\[IndentingNewLine]", 
+ RowBox[{"<<", "meng`String`"}]}], "Input"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"mengDownloadImage", "[", "\[IndentingNewLine]", 
+  RowBox[{
+  "\"\<https://www.flickr.com/photos/britishlibrary/11193112854\>\"", ",", 
+   "\[IndentingNewLine]", 
+   RowBox[{"\"\<FileNameRenameRules\>\"", "\[Rule]", 
+    RowBox[{"{", "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{
+      "\"\<farm8.staticflickr.com\>\"", "\[Rule]", " ", 
+       "\"\<flickr.com\>\""}], ",", "\[IndentingNewLine]", 
+      RowBox[{"\"\<ppcdn.500px.org\>\"", "\[Rule]", "\"\<500px.com\>\""}], 
+      ",", " ", 
+      RowBox[{"(*", 
+       RowBox[{
+        RowBox[{"<", 
+         RowBox[{"500", 
+          RowBox[{"px", ".", "com"}], " ", "stores", " ", "photo", " ", 
+          "files", " ", "has", " ", "URLs", " ", "starting", " ", "with", " ",
+           "ppcdn", ".500", 
+          RowBox[{"px", ".", "org"}]}]}], ",", 
+        RowBox[{
+        "but", " ", "would", " ", "prefer", " ", "to", " ", "use", " ", "500", 
+         RowBox[{"px", ".", "com"}], " ", "in", " ", "file", " ", "name"}]}], 
+       "*)"}], "\[IndentingNewLine]", 
+      RowBox[{
+      "\"\<2048\>\"", "\[Rule]", " ", 
+       "\"\<Augustin_Gl__Crowd_on_Trolltunga\>\""}]}], "\[IndentingNewLine]", 
+     "}"}]}]}], "\[IndentingNewLine]", "]"}]], "Input",
+ CellChangeTimes->CompressedData["
+1:eJwdyE0ow3EYwPGlseHgYCszm5dCIhfCYcOyxEqkNZuDZl7T2tzMS142B63l
+wIHkLclLeRlGMRwmQqNcqKFpbPgrZiYWk9/zHL596puo0lY2hNBotAQS6Cqo
+n614pUQx0d2o2hZYAfVT7FVQKhjfnCZm9O+iNt3ipNdLibbKTlBrT/4S/Z0S
+MdmFyyBXPkgxiJ124QuoWrrxgcqCpg/wqW/6MJaoL9pHW+byjpKJVLMM9QzV
+/ICW3jbUVJ4VlkK8q1OGgx+X12xwZOcT1VyIEyXEAX4tKnz4ywHVnphckMs7
+KNMSWVW3aMnM+QJInb6g1UHGBmg3xqMWh8AKqhNk6LOLfwUmqXLRjnXDI0iX
+jKI2juUNVKafocfzrAD+kTTUPOwLbSW6x5hhID3SzQJNjiDaaFQ4dUTXXjfa
+5XT6wcztL9Qr5Ua1E3+d2SiT9sgBc/w/6IShPRUMmr/RB1+GGLznFKMRPE8p
+OKYJonFrPjnoV0crwH/q1ieV
+  "]],
+
+Cell[BoxData[
+ RowBox[{"{", "Null", "}"}]], "Output",
+ CellChangeTimes->{3.6146066328163433`*^9, 3.614606717548121*^9, 
+  3.614770612642365*^9, 3.6159828434175997`*^9, 3.616023917962351*^9, 
+  3.616024667455906*^9, 3.616030559134289*^9, 3.616030625690872*^9, 
+  3.616069171166266*^9, 3.616070327526857*^9, 3.6160917037695837`*^9, 
+  3.6160921308660583`*^9, 3.616092240355069*^9, 3.616166166079173*^9, 
+  3.616242301421976*^9, 3.6162430211077843`*^9, 3.616243102444058*^9, 
+  3.616243167743084*^9, 3.6162433910162563`*^9, 3.616243522713278*^9, 
+  3.61624358771931*^9, 3.616243662677211*^9, 3.6162437666458607`*^9, 
+  3.616261896060734*^9, 3.616262066864704*^9, 3.6162622751361*^9, 
+  3.616262362247365*^9, 3.616262468689795*^9, 3.616262694603127*^9, 
+  3.616262749914299*^9}]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Notebook", "Section",
+ CellChangeTimes->{{3.6146030435922937`*^9, 3.614603044539115*^9}}],
+
+Cell[CellGroupData[{
+
+Cell["Open system-set auto-open notebooks", "Subsection",
+ CellChangeTimes->{{3.6146030499647713`*^9, 3.614603062411325*^9}}],
+
+Cell[BoxData[
+ RowBox[{"Map", "[", 
+  RowBox[{"SystemOpen", ",", 
+   RowBox[{"CurrentValue", "[", 
+    RowBox[{"$FrontEnd", ",", "AutoOpenNotebooks"}], "]"}]}], "]"}]], "Input",\
+
+ CellChangeTimes->{{3.614603337033614*^9, 3.614603338897016*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"AutoOpenNotebooks", "/.", 
+  RowBox[{"Options", "[", "$FrontEnd", "]"}]}]], "Input"],
+
+Cell[BoxData[
+ RowBox[{"{", \
+"\<\"/Users/meng/Dropbox/WorkSpace-Dropbox/Computing/Programming/Mathematica/\
+Notebook/FrequentlyRunCommand-meng2maclap.nb\"\>", "}"}]], "Output",
+ CellChangeTimes->{3.614603341299264*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Options", "[", 
+  RowBox[{"$FrontEnd", ",", "AutoOpenNotebooks"}], "]"}]], "Input",
+ CellChangeTimes->{{3.614603308761314*^9, 3.614603308763167*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"AutoOpenNotebooks", "\[Rule]", 
+   RowBox[{
+   "{", "\<\"/Users/meng/Dropbox/WorkSpace-Dropbox/Computing/Programming/\
+Mathematica/Notebook/FrequentlyRunCommand-meng2maclap.nb\"\>", "}"}]}], 
+  "}"}]], "Output",
+ CellChangeTimes->{3.614603309211978*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"CurrentValue", "[", 
+  RowBox[{"$FrontEnd", ",", "AutoOpenNotebooks"}], "]"}]], "Input",
+ CellChangeTimes->{{3.614603316741626*^9, 3.614603316743703*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", \
+"\<\"/Users/meng/Dropbox/WorkSpace-Dropbox/Computing/Programming/Mathematica/\
+Notebook/FrequentlyRunCommand-meng2maclap.nb\"\>", "}"}]], "Output",
+ CellChangeTimes->{3.614603317708579*^9}]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Open this notebook\[CloseCurlyQuote]s directory", "Subsection",
+ CellChangeTimes->{{3.614689273441888*^9, 3.614689278663156*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"NotebookDirectory", "[", "]"}]], "Input",
+ CellChangeTimes->{{3.614689280668996*^9, 3.614689301720496*^9}, {
+  3.614689443805187*^9, 3.614689455050393*^9}}],
+
+Cell[BoxData["\<\"/Users/meng/Dropbox/WorkSpace-Dropbox/Computing/Programming/\
+Mathematica/Notebook/\"\>"], "Output",
+ CellChangeTimes->{{3.614689447471657*^9, 3.614689455749757*^9}}]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{"SystemOpen", "[", "%", "]"}]], "Input",
+ CellChangeTimes->{{3.614689457315856*^9, 3.614689458107088*^9}}]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Screenshot", "Section"],
+
+Cell[BoxData[
+ RowBox[{"CalculateSimple", "[", 
+  RowBox[{"\"\<Latino\>\"", ",", 
+   RowBox[{"\"\<TotalScannerTime\>\"", "\[Rule]", " ", "100"}]}], 
+  "]"}]], "Input"],
+
+Cell[BoxData[
+ RowBox[{"mengCalculateSimple", "[", 
+  RowBox[{"\"\<1+1\>\"", ",", 
+   RowBox[{"\"\<TotalScannerTime\>\"", "\[Rule]", " ", "100"}]}], 
+  "]"}]], "Input"],
+
+Cell[BoxData[
+ RowBox[{"Options", "[", "mengExportImage", "]"}]], "Input"],
+
+Cell[BoxData[
+ RowBox[{"mengExportImage", "[", 
+  RowBox[{"%", ",", 
+   RowBox[{"\"\<Path\>\"", "\[Rule]", 
+    RowBox[{
+    "{", "\"\</Users/meng/WorkSpace-Mengmaclap/RepoHg-WRI/\
+WolframCalculateDevel/Project/ColorData/Screenshot\>\"", "}"}]}], ",", 
+   RowBox[{
+   "\"\<FileName\>\"", "\[Rule]", " ", "\"\<ColorArithmeticChart\>\""}]}], 
+  "]"}]], "Input"],
+
+Cell[CellGroupData[{
+
+Cell["ImageAssembly", "Subsection"],
+
+Cell[BoxData["ImageTrim"], "Input",
+ CellChangeTimes->{{3.5432729320620813`*^9, 3.543272935987893*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"files", "=", 
+   RowBox[{"{", "\[IndentingNewLine]", 
+    RowBox[{"(*", 
+     RowBox[{
+      RowBox[{"*", " ", "black"}], " ", "+", " ", "white"}], " ", "**)"}], 
+    "\[IndentingNewLine]", 
+    RowBox[{
+    "\"\</Users/lumeng/Desktop/2.png\>\"", ",", "\[IndentingNewLine]", 
+     "\"\</Users/lumeng/Desktop/1.png\>\"", ",", "\[IndentingNewLine]", 
+     "\"\</Users/meng/WorkSpace-Mengmaclap/Temp/Screenshot/WRI/\
+201209131140Q10Pages.png\>\"", ",", "\[IndentingNewLine]", 
+     "\"\</Users/meng/WorkSpace-Mengmaclap/Temp/Screenshot/WRI/\
+201209131138Q2000Words.png\>\""}], "\[IndentingNewLine]", "}"}]}], 
+  ";"}]], "Input"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"file1", "=", "\"\</Users/meng/Desktop/less.png\>\""}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"file2", "=", "\"\</Users/meng/Desktop/more.png\>\""}], 
+  ";"}]}], "Input"],
+
+Cell[BoxData[
+ RowBox[{"mengImageFileAssemble", "[", 
+  RowBox[{"files", "[", 
+   RowBox[{"[", 
+    RowBox[{"3", ";;"}], "]"}], "]"}], "]"}]], "Input"]
+}, Open  ]]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["Diff", "Section"],
+
+Cell[CellGroupData[{
+
+Cell["Diff .nb files", "Subsection"],
+
+Cell[BoxData[
+ RowBox[{"<<", "AuthorTools`"}]], "Input"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"NotebookOpen", "@", 
+   RowBox[{"FileNameJoin", "[", 
+    RowBox[{"{", 
+     RowBox[{
+     "$InstallationDirectory", ",", "\"\<AddOns\>\"", ",", 
+      "\"\<Applications\>\"", ",", "\"\<AuthorTools\>\"", ",", 
+      "\"\<FrontEnd\>\"", ",", "\"\<TextResources\>\"", ",", 
+      "\"\<NotebookDiff.nb\>\""}], "}"}], "]"}]}], ";"}]], "Input"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"nb", "=", 
+   RowBox[{"NotebookOpen", "[", 
+    RowBox[{"FileNameJoin", "[", 
+     RowBox[{"{", 
+      RowBox[{
+      "$InstallationDirectory", ",", "\"\<AddOns\>\"", ",", 
+       "\"\<Applications\>\"", ",", "\"\<AuthorTools\>\"", ",", 
+       "\"\<Documentation\>\"", ",", "\"\<English\>\"", ",", 
+       "\"\<AuthorToolsGuide.nb\>\""}], "}"}], "]"}], "]"}]}], ";", 
+  RowBox[{"SelectionMove", "[", 
+   RowBox[{"nb", ",", "Before", ",", "Notebook"}], "]"}], ";", 
+  RowBox[{"NotebookFind", "[", 
+   RowBox[{
+   "nb", ",", "\"\<Finding Differences\>\"", ",", "Next", ",", "CellTags"}], 
+   "]"}], ";"}]], "Input"],
+
+Cell[BoxData[
+ RowBox[{"<<", "AuthorTools`"}]], "Input"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+  "oldFile", "=", 
+   "\"\</Users/lumeng/WorkSpace-X4430/AlphaExtras/Localization/Languages/zh/\
+RawCurationNotebooks/CalculateData/AdministrativeDivisionData/Data/DataTable-\
+Property-Description.old.nb\>\""}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+  "newFile", "=", 
+   "\"\</Users/lumeng/WorkSpace-X4430/AlphaExtras/Localization/Languages/zh/\
+RawCurationNotebooks/CalculateData/AdministrativeDivisionData/Data/DataTable-\
+Property-Description.new.nb\>\""}], ";"}]}], "Input"],
+
+Cell[BoxData[
+ RowBox[{"NotebookSave", "[", 
+  RowBox[{
+   RowBox[{"NotebookDiffAT", "[", 
+    RowBox[{"oldFile", ",", "newFile"}], "]"}], ",", 
+   RowBox[{"ToFileName", "[", 
+    RowBox[{
+     RowBox[{"{", "$mengTemporaryDirectory", "}"}], ",", 
+     "\"\<notebookdiff.nb\>\""}], "]"}]}], "]"}]], "Input"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Diff .m files", "Subsection"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+  "Get", "[", 
+   "\"\</Users/meng/WorkSpace-Mengmaclap/RepoGit-MengMathematicaLib/meng/meng/\
+MathematicaDiff.m\>\"", "]"}], ";"}]], "Input"],
+
+Cell[BoxData[
+ RowBox[{"<<", "meng`MathematicaDiff`"}]], "Input"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+  "oldFile", "=", 
+   "\"\</Users/meng/WorkSpace-Mengmaclap/AlphaExtras/Localization/Languages/\
+zh/RawCurationNotebooks/CalculateUnits/UnitFormattingExample.bak.m\>\""}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+  "newFile", "=", 
+   "\"\</Users/meng/WorkSpace-Mengmaclap/AlphaExtras/Localization/Languages/\
+zh/RawCurationNotebooks/CalculateUnits/UnitFormattingExample.m\>\""}], 
+  ";"}]}], "Input"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"str", "=", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"Import", "[", 
+      RowBox[{"#", ",", "\"\<String\>\""}], "]"}], "&"}], "/@", 
+    RowBox[{"{", 
+     RowBox[{"oldFile", ",", "newFile"}], "}"}]}]}], ";"}]], "Input"],
+
+Cell[BoxData[
+ RowBox[{"MathematicaDiff", "[", 
+  RowBox[{"oldFile", ",", "newFile"}], "]"}]], "Input"]
+}, Open  ]]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["Scrape", "Section"],
+
+Cell[CellGroupData[{
+
+Cell["Download", "Subsection"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+  "$baseUrl", "=", 
+   "\"\<http://www.matrixanalysis.com/DownloadChapters.html\>\""}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"$baseUrl", "=", 
+   RowBox[{
+   "$baseUrlDiestel", "=", 
+    "\"\<http://diestel-graph-theory.com/basic.html\>\""}]}], ";"}]}], "Input"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+  "$DestinationDir", "=", 
+   "\"\</Users/lumeng/DataSpace-Dropbox-lumengreader/Dropbox/Library/Schedule/\
+Schedule-Section-StudyRoom/Mathematics/MatrixAnalysisAndLinearAlgebra\>\""}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+  "$DestinationDir", "=", 
+   "\"\</Users/lumeng/DataSpace-Dropbox-lumengreader/Dropbox/Library/Schedule/\
+Schedule-Section-StudyRoom/Mathematics/Diestel-GraphTheoryEdition4\>\""}], 
+  ";"}]}], "Input"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Composition", "[", "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{
+     RowBox[{
+      RowBox[{
+       RowBox[{"URLSave", "[", 
+        RowBox[{"#", ",", 
+         RowBox[{"ToFileName", "[", 
+          RowBox[{
+           RowBox[{"{", "$DestinationDir", "}"}], ",", 
+           RowBox[{"FileNameTake", "[", 
+            RowBox[{"#", ",", 
+             RowBox[{"-", "1"}]}], "]"}]}], "]"}]}], "]"}], "&"}], "/@", 
+      "#"}], "&"}], ",", "\[IndentingNewLine]", "Flatten", ",", 
+    "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{"StringCases", "[", 
+      RowBox[{"#", ",", 
+       RowBox[{"RegularExpression", "[", "\"\<.*\\\\.pdf\>\"", "]"}]}], "]"}],
+      "&"}], ",", "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{"Import", "[", 
+      RowBox[{"#", ",", "\"\<Hyperlinks\>\""}], "]"}], "&"}]}], 
+   "\[IndentingNewLine]", "]"}], "[", "$baseUrl", "]"}]], "Input"]
+}, Open  ]]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["Code to use Wikipedia database quickly and throw away", "Section"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{"$dbconfig", "=", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{
+      "\"\<Host\>\"", "\[Rule]", "\"\<joshuamlx.wri.wolfram.com\>\""}], ",", 
+      RowBox[{"\"\<User\>\"", "\[Rule]", "\"\<wiki\>\""}], ",", 
+      RowBox[{"\"\<Password\>\"", "\[Rule]", "\"\<wiki\>\""}], ",", 
+      RowBox[{"\"\<Database\>\"", "\[Rule]", "\"\<wikipedia_en\>\""}]}], 
+     "}"}]}], ";"}], "\[IndentingNewLine]"}], "\n", 
+ RowBox[{
+  RowBox[{"$dbConnectionConfig", ":=", 
+   RowBox[{"With", "[", "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"h", "=", 
+        RowBox[{"\"\<Host\>\"", "/.", "$dbconfig"}]}], ",", 
+       RowBox[{"u", "=", 
+        RowBox[{"\"\<User\>\"", "/.", "$dbconfig"}]}], ",", 
+       RowBox[{"p", "=", 
+        RowBox[{"\"\<Password\>\"", "/.", "$dbconfig"}]}], ",", 
+       RowBox[{"db", "=", 
+        RowBox[{"\"\<Database\>\"", "/.", "$dbconfig"}]}]}], "}"}], ",", 
+     RowBox[{
+      RowBox[{"Needs", "[", "\"\<JLink`\>\"", "]"}], ";", 
+      "\[IndentingNewLine]", 
+      RowBox[{"JLink`ReinstallJava", "[", 
+       RowBox[{"JLink`JVMArguments", "\[Rule]", "\"\<-Xmx2048m\>\""}], "]"}], 
+      ";", "\[IndentingNewLine]", 
+      RowBox[{"Needs", "[", "\"\<DatabaseLink`\>\"", "]"}], ";", 
+      "\[IndentingNewLine]", 
+      RowBox[{"DatabaseLink`SQLConnection", "[", 
+       RowBox[{
+        RowBox[{"DatabaseLink`JDBC", "[", 
+         RowBox[{"\"\<MySQL(Connector/J)\>\"", ",", 
+          RowBox[{"h", "<>", "\"\<:3306/\>\""}]}], "]"}], ",", 
+        RowBox[{"\"\<Catalog\>\"", "\[Rule]", "db"}], ",", 
+        RowBox[{"\"\<Description\>\"", "\[Rule]", 
+         RowBox[{"h", "<>", "\"\<:\>\"", "<>", "db"}]}], ",", 
+        RowBox[{"\"\<Name\>\"", "\[Rule]", "db"}], ",", 
+        RowBox[{"\"\<Username\>\"", "\[Rule]", "u"}], ",", 
+        RowBox[{"\"\<Password\>\"", "\[Rule]", "p"}], ",", 
+        RowBox[{"\"\<Properties\>\"", "\[Rule]", 
+         RowBox[{"{", "}"}]}], ",", 
+        RowBox[{"\"\<ReadOnly\>\"", "\[Rule]", "True"}], ",", 
+        RowBox[{"\"\<RelativePath\>\"", "\[Rule]", "False"}], ",", 
+        RowBox[{"\"\<Version\>\"", "\[Rule]", "2."}], ",", 
+        RowBox[{
+        "\"\<TransactionIsolationLevel\>\"", "\[Rule]", 
+         "\"\<ReadUncommitted\>\""}]}], 
+       RowBox[{"(*", 
+        RowBox[{",", 
+         RowBox[{"\"\<UseConnectionPool\>\"", "\[Rule]", "True"}], ","}], 
+        "*)"}], "]"}]}]}], "\[IndentingNewLine]", "]"}]}], 
+  "\[IndentingNewLine]"}], "\n", 
+ RowBox[{"$conn", "=", 
+  RowBox[{
+  "DatabaseLink`OpenSQLConnection", "[", "$dbConnectionConfig", 
+   "]"}]}]}], "Input"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"findpage", "[", 
+   RowBox[{"db_DatabaseLink`SQLConnection", ",", "sourcePage_String"}], "]"}],
+   ":=", 
+  RowBox[{"Module", "[", 
+   RowBox[{
+    RowBox[{"{", "sql", "}"}], ",", 
+    RowBox[{
+     RowBox[{"sql", "=", 
+      RowBox[{
+      "\"\<SELECT pl_title FROM page, pagelinks WHERE \
+page.page_id=pagelinks.pl_from AND page.page_title='\>\"", "<>", 
+       RowBox[{"mengMySQLRealEscapeString", "[", "sourcePage", "]"}], "<>", 
+       "\"\<' AND pagelinks.pl_namespace=0\>\""}]}], ";", 
+     "\[IndentingNewLine]", 
+     RowBox[{"mengFromSQLBinaryToString", "[", 
+      RowBox[{"Flatten", "[", 
+       RowBox[{"{", 
+        RowBox[{"DatabaseLink`SQLExecute", "[", 
+         RowBox[{"db", ",", "sql"}], "]"}], "}"}], "]"}], "]"}]}]}], 
+   "]"}]}]], "Input"],
+
+Cell[BoxData[
+ RowBox[{"findpage", "[", 
+  RowBox[{"$conn", ",", "\"\<X(3872)\>\""}], "]"}]], "Input"]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["Temp", "Section"],
+
+Cell[BoxData[
+ RowBox[{"mengPrintDebug", "[", 
+  RowBox[{"\"\<foo\>\"", ",", "12234", ",", "\"\<bar\>\""}], "]"}]], "Input"],
+
+Cell[BoxData[
+ RowBox[{"Streams", "[", "]"}]], "Input"],
+
+Cell[BoxData[
+ RowBox[{"Close", "[", 
+  RowBox[{"%", "[", 
+   RowBox[{"[", "3", "]"}], "]"}], "]"}]], "Input"]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["Devel", "Section"],
+
+Cell[CellGroupData[{
+
+Cell["mengHoldFile[], mengReleaseFile[]", "Subsection"],
+
+Cell[CellGroupData[{
+
+Cell["approach using ReadList", "Subsubsection"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Composition", "[", "\[IndentingNewLine]", 
+   RowBox[{"(*", 
+    RowBox[{
+     RowBox[{"ReadList", "[", 
+      RowBox[{"#", ",", 
+       RowBox[{"Hold", "[", "Expression", "]"}]}], "]"}], "&"}], "*)"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"Import", "[", 
+     RowBox[{"#", ",", " ", "\"\<ExpressionList\>\""}], "]"}], "&"}], 
+   "\[IndentingNewLine]", "]"}], "[", "$file", "]"}]], "Input"],
+
+Cell[BoxData["\<\"Setting meng`Test`$mengDebug === True\"\>"], "Print"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"\<\"meng`Test`\"\>", ",", "\<\"mengRunTest  \"\>", ",", "False", 
+   ",", "\<\"meng`Test`Private`\"\>", ",", "Null", ",", "Null", ",", "Null", 
+   ",", "Null", ",", "\<\"meng`Test`Private`\"\>", ",", "Null"}], 
+  "}"}]], "Output"]
+}, Open  ]]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["Approach using HoldComplete", "Subsubsection"],
+
+Cell[BoxData["\"\<xxxx\>\""], "Input"],
+
+Cell["\"With[{myHold = System`HoldComplete}, myHold[xxxx]];\"", "Program"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"With", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"myHold", " ", "=", " ", "System`HoldComplete"}], "}"}], ",", " ", 
+   RowBox[{"myHold", "[", "xxxx", "]"}]}], "]"}]], "Input"],
+
+Cell[BoxData[
+ RowBox[{"HoldComplete", "[", "xxxx", "]"}]], "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Get", "[", "\"\<~/temp/null.m\>\"", "]"}], "//", 
+  "FullForm"}]], "Input"],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox["Null",
+   ShowSpecialCharacters->False,
+   ShowStringCharacters->True,
+   NumberMarks->True],
+  FullForm]], "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"FilePrint", "[", "\"\<~/temp/null.m\>\"", "]"}]], "Input"],
+
+Cell["(* dddd *)", "Print"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Get", "[", 
+  RowBox[{"HoldComplete", "[", 
+   RowBox[{"x", "=", "2"}], "]"}], "]"}]], "Input"],
+
+Cell[BoxData[
+ RowBox[{"Get", "[", 
+  RowBox[{"HoldComplete", "[", 
+   RowBox[{"x", "=", "2"}], "]"}], "]"}]], "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Context", "[", "HoldComplete", "]"}]], "Input"],
+
+Cell[BoxData["\<\"System`\"\>"], "Output"]
+}, Open  ]],
+
+Cell[BoxData[""], "Input"]
+}, Closed]]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{1440, 852},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+ShowSelection->True,
+Background->Opacity[0.98, 
+  RGBColor[1, 1, 0.85]],
+FrontEndVersion->"9.0 for Mac OS X x86 (32-bit, 64-bit Kernel) (May 19, 2013)",
+StyleDefinitions->"mengStyleSheet1.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[579, 22, 133, 2, 28, "Input"],
+Cell[715, 26, 118, 1, 28, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[870, 32, 39, 0, 92, "Title"],
+Cell[912, 34, 313, 7, 80, "Input"],
+Cell[1228, 43, 52, 1, 28, "Input"],
+Cell[1283, 46, 2312, 46, 268, "Input"],
+Cell[3598, 94, 51, 0, 28, "Input"],
+Cell[3652, 96, 69, 1, 28, "Input"],
+Cell[3724, 99, 49, 0, 28, "Input"],
+Cell[3776, 101, 152, 4, 28, "Input"],
+Cell[3931, 107, 634, 17, 80, "Input"],
+Cell[4568, 126, 485, 11, 80, "Input"],
+Cell[5056, 139, 257, 7, 63, "Input"],
+Cell[5316, 148, 85, 1, 28, "Input"],
+Cell[5404, 151, 84, 1, 28, "Input"],
+Cell[5491, 154, 187, 4, 28, "Input"],
+Cell[CellGroupData[{
+Cell[5703, 162, 102, 4, 80, "Section"],
+Cell[5808, 168, 287, 5, 63, "Input"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[6132, 178, 98, 1, 80, "Section"],
+Cell[CellGroupData[{
+Cell[6255, 183, 129, 1, 44, "Subsection"],
+Cell[6387, 186, 170, 3, 28, "Input"]
+}, Open  ]]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[6606, 195, 40, 0, 50, "Section"],
+Cell[6649, 197, 312, 7, 46, "Input"]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[6998, 209, 23, 0, 50, "Section"],
+Cell[7024, 211, 590, 14, 70, "Code",
+ InitializationCell->False]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[7651, 230, 38, 0, 50, "Section"],
+Cell[7692, 232, 167, 5, 70, "Code",
+ InitializationCell->False],
+Cell[7862, 239, 167, 5, 70, "Code",
+ InitializationCell->False],
+Cell[8032, 246, 161, 5, 70, "Code",
+ InitializationCell->False],
+Cell[8196, 253, 83, 1, 70, "Code",
+ InitializationCell->False],
+Cell[8282, 256, 83, 1, 70, "Code",
+ InitializationCell->False],
+Cell[8368, 259, 78, 1, 70, "Code",
+ InitializationCell->False],
+Cell[8449, 262, 85, 1, 70, "Code",
+ InitializationCell->False]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[8571, 268, 30, 0, 50, "Section"],
+Cell[CellGroupData[{
+Cell[8626, 272, 32, 0, 70, "Subsection"],
+Cell[8661, 274, 163, 4, 70, "Code",
+ InitializationCell->False],
+Cell[8827, 280, 136, 3, 70, "Code",
+ InitializationCell->False],
+Cell[8966, 285, 76, 2, 70, "Code",
+ InitializationCell->False]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[9079, 292, 34, 0, 70, "Subsection"],
+Cell[9116, 294, 94, 1, 70, "Input"],
+Cell[9213, 297, 89, 2, 70, "Input"],
+Cell[9305, 301, 241, 7, 70, "Input"],
+Cell[9549, 310, 65, 0, 70, "Input"],
+Cell[9617, 312, 78, 0, 70, "Input"],
+Cell[9698, 314, 112, 2, 70, "Input"],
+Cell[9813, 318, 271, 7, 70, "Code",
+ InitializationCell->False]
+}, Closed]]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[10133, 331, 24, 0, 50, "Section"],
+Cell[10160, 333, 76, 1, 70, "Input"],
+Cell[10239, 336, 74, 1, 70, "Input"],
+Cell[10316, 339, 70, 1, 70, "Input"],
+Cell[10389, 342, 99, 2, 70, "Input"],
+Cell[10491, 346, 131, 2, 70, "Input"],
+Cell[10625, 350, 98, 2, 70, "Input"],
+Cell[10726, 354, 90, 1, 70, "Input"],
+Cell[10819, 357, 99, 2, 70, "Input"],
+Cell[10921, 361, 292, 6, 70, "Input"],
+Cell[11216, 369, 145, 4, 70, "Input"],
+Cell[11364, 375, 256, 6, 70, "Input"],
+Cell[11623, 383, 539, 13, 70, "Input"],
+Cell[12165, 398, 76, 1, 70, "Input"],
+Cell[CellGroupData[{
+Cell[12266, 403, 43, 0, 70, "Subsection"],
+Cell[12312, 405, 129, 2, 70, "Input"],
+Cell[12444, 409, 133, 2, 70, "Input"],
+Cell[12580, 413, 560, 12, 70, "Input"],
+Cell[13143, 427, 369, 9, 70, "Input"],
+Cell[13515, 438, 167, 5, 70, "Input"],
+Cell[13685, 445, 166, 3, 70, "Input"],
+Cell[CellGroupData[{
+Cell[13876, 452, 94, 1, 70, "Subsubsection"],
+Cell[13973, 455, 429, 10, 70, "Input"],
+Cell[14405, 467, 217, 5, 70, "Input"],
+Cell[14625, 474, 217, 5, 70, "Input"]
+}, Open  ]]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[14891, 485, 43, 0, 70, "Subsection"],
+Cell[14937, 487, 477, 14, 70, "Input"],
+Cell[15417, 503, 833, 24, 70, "Input"],
+Cell[16253, 529, 194, 4, 70, "Input"],
+Cell[16450, 535, 122, 2, 70, "Input"],
+Cell[16575, 539, 338, 9, 70, "Input"],
+Cell[16916, 550, 87, 1, 70, "Input"],
+Cell[17006, 553, 1544, 47, 70, "Input"],
+Cell[18553, 602, 122, 2, 70, "Input"],
+Cell[18678, 606, 158, 4, 70, "Input"],
+Cell[CellGroupData[{
+Cell[18861, 614, 69, 0, 70, "Subsubsection"],
+Cell[18933, 616, 224, 4, 70, "Input"]
+}, Closed]]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[19206, 626, 32, 0, 70, "Subsection"],
+Cell[19241, 628, 112, 2, 70, "Input"]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[19390, 635, 41, 0, 70, "Subsection"],
+Cell[19434, 637, 589, 17, 70, "Input"]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[20060, 659, 28, 0, 70, "Subsection"],
+Cell[CellGroupData[{
+Cell[20113, 663, 39, 0, 70, "Subsubsection"],
+Cell[20155, 665, 83, 1, 70, "Input"],
+Cell[20241, 668, 101, 2, 70, "Input"],
+Cell[20345, 672, 101, 2, 70, "Input"],
+Cell[20449, 676, 78, 1, 70, "Input"],
+Cell[20530, 679, 58, 1, 70, "Input"],
+Cell[20591, 682, 293, 7, 70, "Input"],
+Cell[20887, 691, 434, 10, 70, "Code",
+ InitializationCell->False],
+Cell[21324, 703, 310, 8, 70, "Input"]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[21671, 716, 170, 2, 70, "Subsubsection"],
+Cell[21844, 720, 159, 3, 70, "Input"]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[22040, 728, 36, 0, 70, "Subsubsection"],
+Cell[22079, 730, 1094, 28, 70, "Input"],
+Cell[23176, 760, 73, 1, 70, "Input"],
+Cell[23252, 763, 71, 1, 70, "Input"]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[23360, 769, 40, 0, 70, "Subsubsection"],
+Cell[23403, 771, 60, 1, 70, "Input"],
+Cell[23466, 774, 1160, 30, 70, "Input"],
+Cell[24629, 806, 56, 1, 70, "Input"],
+Cell[24688, 809, 167, 5, 70, "Input"],
+Cell[24858, 816, 306, 9, 70, "Input"]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[25201, 830, 51, 0, 70, "Subsubsection"],
+Cell[25255, 832, 226, 5, 70, "Input"],
+Cell[25484, 839, 280, 7, 70, "Input"],
+Cell[25767, 848, 284, 9, 70, "Input"],
+Cell[26054, 859, 176, 5, 70, "Input"],
+Cell[26233, 866, 69, 1, 70, "Input"],
+Cell[26305, 869, 246, 6, 70, "Input"],
+Cell[26554, 877, 249, 6, 70, "Input"]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[26840, 888, 41, 0, 70, "Subsubsection"],
+Cell[26884, 890, 182, 3, 70, "Input"]
+}, Closed]]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[27115, 899, 30, 0, 70, "Subsection"],
+Cell[27148, 901, 82, 1, 70, "Input"],
+Cell[27233, 904, 72, 1, 70, "Input"],
+Cell[27308, 907, 191, 4, 70, "Input"],
+Cell[27502, 913, 77, 1, 70, "Input"]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[27616, 919, 29, 0, 70, "Subsection"],
+Cell[27648, 921, 273, 7, 70, "Input"],
+Cell[27924, 930, 518, 16, 70, "Input"],
+Cell[28445, 948, 215, 4, 70, "Input"],
+Cell[28663, 954, 335, 10, 70, "Input"],
+Cell[29001, 966, 559, 14, 70, "Input"],
+Cell[29563, 982, 541, 14, 70, "Input"],
+Cell[30107, 998, 71, 0, 70, "Input"],
+Cell[30181, 1000, 630, 17, 70, "Input"],
+Cell[30814, 1019, 210, 5, 70, "Input"],
+Cell[31027, 1026, 177, 4, 70, "Input"],
+Cell[31207, 1032, 563, 14, 70, "Input"],
+Cell[CellGroupData[{
+Cell[31795, 1050, 41, 0, 70, "Subsubsection"],
+Cell[31839, 1052, 289, 8, 70, "Code",
+ InitializationCell->False]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[32165, 1065, 35, 0, 70, "Subsubsection"],
+Cell[32203, 1067, 530, 16, 70, "Input"]
+}, Open  ]]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[32782, 1089, 28, 0, 70, "Subsection"],
+Cell[32813, 1091, 180, 4, 70, "Input"]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[33030, 1100, 36, 0, 70, "Subsection"],
+Cell[CellGroupData[{
+Cell[33091, 1104, 36, 0, 70, "Subsubsection"],
+Cell[33130, 1106, 385, 9, 70, "Input"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[33552, 1120, 37, 0, 70, "Subsubsection"],
+Cell[33592, 1122, 541, 14, 70, "Input"]
+}, Open  ]]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[34182, 1142, 38, 0, 70, "Subsection"],
+Cell[34223, 1144, 624, 15, 70, "Code",
+ InitializationCell->False]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[34884, 1164, 43, 0, 70, "Subsection"],
+Cell[34930, 1166, 162, 5, 70, "Input"]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[35129, 1176, 37, 0, 70, "Subsection"],
+Cell[35169, 1178, 515, 12, 70, "Input"]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[35721, 1195, 36, 0, 70, "Subsection"],
+Cell[35760, 1197, 41, 0, 70, "Subsubsection"],
+Cell[CellGroupData[{
+Cell[35826, 1201, 51, 0, 70, "Subsubsection"],
+Cell[35880, 1203, 516, 7, 70, "Text"],
+Cell[36399, 1212, 263, 7, 70, "Input"],
+Cell[36665, 1221, 233, 6, 70, "Input"]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[36935, 1232, 52, 0, 70, "Subsubsection"],
+Cell[36990, 1234, 466, 11, 70, "Text"],
+Cell[37459, 1247, 100, 2, 70, "Input"]
+}, Closed]]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[37608, 1255, 46, 0, 70, "Subsection"],
+Cell[37657, 1257, 109, 2, 70, "Input"],
+Cell[37769, 1261, 101, 2, 70, "Input"]
+}, Closed]]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[37919, 1269, 24, 0, 50, "Section"],
+Cell[37946, 1271, 1131, 29, 70, "Input"]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[39114, 1305, 23, 0, 50, "Section"],
+Cell[39140, 1307, 197, 4, 70, "Input"],
+Cell[CellGroupData[{
+Cell[39362, 1315, 35, 0, 70, "Subsection"],
+Cell[39400, 1317, 2429, 71, 70, "Input"],
+Cell[41832, 1390, 330, 8, 70, "Input"],
+Cell[42165, 1400, 330, 8, 70, "Input"],
+Cell[42498, 1410, 330, 8, 70, "Input"],
+Cell[42831, 1420, 330, 8, 70, "Input"]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[43198, 1433, 26, 0, 70, "Subsection"],
+Cell[43227, 1435, 211, 5, 70, "Input"]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[43475, 1445, 28, 0, 70, "Subsection"],
+Cell[43506, 1447, 625, 22, 70, "Input"]
+}, Open  ]]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[44180, 1475, 28, 0, 50, "Section"],
+Cell[CellGroupData[{
+Cell[44233, 1479, 39, 0, 70, "Subsection"],
+Cell[44275, 1481, 499, 15, 70, "Input"],
+Cell[44777, 1498, 82, 1, 70, "Input"]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[44896, 1504, 44, 0, 70, "Subsection"],
+Cell[44943, 1506, 900, 22, 70, "Input"],
+Cell[45846, 1530, 179, 5, 70, "Input"],
+Cell[46028, 1537, 267, 7, 70, "Input"],
+Cell[46298, 1546, 1585, 44, 70, "Input"],
+Cell[47886, 1592, 135, 2, 70, "Input"],
+Cell[48024, 1596, 284, 8, 70, "Input"],
+Cell[48311, 1606, 146, 3, 70, "Input"],
+Cell[48460, 1611, 79, 1, 70, "Input"],
+Cell[48542, 1614, 394, 9, 70, "Input"]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[48973, 1628, 38, 0, 70, "Subsection"],
+Cell[49014, 1630, 604, 17, 70, "Input"],
+Cell[49621, 1649, 107, 3, 70, "Input"],
+Cell[49731, 1654, 298, 6, 70, "Input"],
+Cell[50032, 1662, 74, 1, 70, "Input"]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[50143, 1668, 105, 1, 70, "Subsection"],
+Cell[50251, 1671, 122, 3, 70, "Input"],
+Cell[50376, 1676, 455, 13, 70, "Input"],
+Cell[50834, 1691, 169, 4, 70, "Input"],
+Cell[51006, 1697, 38, 0, 70, "Input"],
+Cell[51047, 1699, 117, 2, 70, "Input"],
+Cell[51167, 1703, 74, 1, 70, "Input"]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[51278, 1709, 38, 0, 70, "Subsection"],
+Cell[51319, 1711, 74, 1, 70, "Input"],
+Cell[51396, 1714, 276, 7, 70, "Input"],
+Cell[51675, 1723, 74, 1, 70, "Input"]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[51786, 1729, 38, 0, 70, "Subsection"],
+Cell[51827, 1731, 74, 1, 70, "Input"],
+Cell[51904, 1734, 155, 3, 70, "Input"],
+Cell[52062, 1739, 74, 1, 70, "Input"]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[52173, 1745, 38, 0, 70, "Subsection"],
+Cell[52214, 1747, 74, 1, 70, "Input"],
+Cell[52291, 1750, 320, 10, 70, "Input"]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[52648, 1765, 36, 0, 70, "Subsection"],
+Cell[52687, 1767, 314, 8, 70, "Input"],
+Cell[53004, 1777, 60, 1, 70, "Input"],
+Cell[53067, 1780, 244, 6, 70, "Input"],
+Cell[53314, 1788, 65, 1, 70, "Input"],
+Cell[53382, 1791, 371, 12, 70, "Input"],
+Cell[53756, 1805, 64, 1, 70, "Input"],
+Cell[53823, 1808, 68, 1, 70, "Input"],
+Cell[53894, 1811, 261, 8, 70, "Input"],
+Cell[54158, 1821, 120, 3, 70, "Input"],
+Cell[54281, 1826, 1061, 31, 70, "Input"],
+Cell[55345, 1859, 81, 2, 70, "Input"],
+Cell[55429, 1863, 109, 2, 70, "Input"],
+Cell[55541, 1867, 78, 1, 70, "Input"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[55656, 1873, 48, 0, 70, "Subsection"],
+Cell[55707, 1875, 159, 3, 70, "Input"],
+Cell[55869, 1880, 154, 3, 70, "Input"],
+Cell[56026, 1885, 168, 5, 70, "Input"],
+Cell[56197, 1892, 173, 4, 70, "Input"],
+Cell[56373, 1898, 117, 3, 70, "Input"],
+Cell[56493, 1903, 236, 6, 70, "Input"],
+Cell[56732, 1911, 327, 8, 70, "Input"]
+}, Open  ]]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[57108, 1925, 29, 0, 50, "Section"],
+Cell[57140, 1927, 1131, 22, 70, "Input"],
+Cell[58274, 1951, 58, 1, 70, "Input"],
+Cell[58335, 1954, 716, 18, 70, "Code",
+ InitializationCell->False],
+Cell[59054, 1974, 230, 7, 70, "Input"],
+Cell[59287, 1983, 1007, 25, 70, "Code",
+ InitializationCell->False],
+Cell[60297, 2010, 186, 4, 70, "Input"],
+Cell[60486, 2016, 67, 1, 70, "Input"],
+Cell[CellGroupData[{
+Cell[60578, 2021, 108, 1, 70, "Subsection"],
+Cell[60689, 2024, 268, 7, 70, "Input"],
+Cell[60960, 2033, 610, 18, 70, "Input"],
+Cell[61573, 2053, 490, 15, 70, "Input"],
+Cell[62066, 2070, 355, 11, 70, "Input"],
+Cell[62424, 2083, 726, 14, 70, "Input"],
+Cell[63153, 2099, 40, 0, 70, "Input"]
+}, Open  ]]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[63242, 2105, 24, 0, 50, "Section"],
+Cell[63269, 2107, 114, 2, 46, "Input"],
+Cell[CellGroupData[{
+Cell[63408, 2113, 1793, 39, 148, "Input"],
+Cell[65204, 2154, 774, 12, 28, "Output"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[66027, 2172, 95, 1, 80, "Section"],
+Cell[CellGroupData[{
+Cell[66147, 2177, 125, 1, 53, "Subsection"],
+Cell[66275, 2180, 245, 6, 28, "Input"],
+Cell[CellGroupData[{
+Cell[66545, 2190, 108, 2, 28, "Input"],
+Cell[66656, 2194, 219, 4, 28, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[66912, 2203, 173, 3, 28, "Input"],
+Cell[67088, 2208, 293, 7, 28, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[67418, 2220, 178, 3, 28, "Input"],
+Cell[67599, 2225, 219, 4, 28, "Output"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[67867, 2235, 135, 1, 53, "Subsection"],
+Cell[CellGroupData[{
+Cell[68027, 2240, 180, 3, 28, "Input"],
+Cell[68210, 2245, 184, 2, 28, "Output"]
+}, Open  ]],
+Cell[68409, 2250, 129, 2, 28, "Input"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[68587, 2258, 29, 0, 80, "Section"],
+Cell[68619, 2260, 167, 4, 70, "Input"],
+Cell[68789, 2266, 168, 4, 70, "Input"],
+Cell[68960, 2272, 74, 1, 70, "Input"],
+Cell[69037, 2275, 359, 9, 70, "Input"],
+Cell[CellGroupData[{
+Cell[69421, 2288, 35, 0, 70, "Subsection"],
+Cell[69459, 2290, 103, 1, 70, "Input"],
+Cell[69565, 2293, 660, 15, 70, "Input"],
+Cell[70228, 2310, 221, 6, 70, "Input"],
+Cell[70452, 2318, 151, 4, 70, "Input"]
+}, Open  ]]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[70652, 2328, 23, 0, 50, "Section"],
+Cell[CellGroupData[{
+Cell[70700, 2332, 36, 0, 70, "Subsection"],
+Cell[70739, 2334, 56, 1, 70, "Input"],
+Cell[70798, 2337, 374, 9, 70, "Input"],
+Cell[71175, 2348, 649, 16, 70, "Input"],
+Cell[71827, 2366, 56, 1, 70, "Input"],
+Cell[71886, 2369, 529, 12, 70, "Input"],
+Cell[72418, 2383, 306, 8, 70, "Input"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[72761, 2396, 35, 0, 70, "Subsection"],
+Cell[72799, 2398, 177, 5, 70, "Input"],
+Cell[72979, 2405, 65, 1, 70, "Input"],
+Cell[73047, 2408, 451, 12, 70, "Input"],
+Cell[73501, 2422, 253, 8, 70, "Input"],
+Cell[73757, 2432, 103, 2, 70, "Input"]
+}, Open  ]]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[73909, 2440, 25, 0, 50, "Section"],
+Cell[CellGroupData[{
+Cell[73959, 2444, 30, 0, 70, "Subsection"],
+Cell[73992, 2446, 315, 10, 70, "Input"],
+Cell[74310, 2458, 478, 12, 70, "Input"],
+Cell[74791, 2472, 908, 25, 70, "Input"]
+}, Open  ]]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[75748, 2503, 72, 0, 50, "Section"],
+Cell[75823, 2505, 2624, 61, 70, "Input"],
+Cell[78450, 2568, 797, 21, 70, "Input"],
+Cell[79250, 2591, 102, 2, 70, "Input"]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[79389, 2598, 23, 0, 50, "Section"],
+Cell[79415, 2600, 124, 2, 70, "Input"],
+Cell[79542, 2604, 55, 1, 70, "Input"],
+Cell[79600, 2607, 110, 3, 70, "Input"]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[79747, 2615, 24, 0, 50, "Section"],
+Cell[CellGroupData[{
+Cell[79796, 2619, 55, 0, 53, "Subsection"],
+Cell[CellGroupData[{
+Cell[79876, 2623, 48, 0, 35, "Subsubsection"],
+Cell[CellGroupData[{
+Cell[79949, 2627, 440, 12, 70, "Input"],
+Cell[80392, 2641, 71, 0, 70, "Print"],
+Cell[80466, 2643, 270, 5, 70, "Output"]
+}, Open  ]]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[80785, 2654, 52, 0, 29, "Subsubsection"],
+Cell[80840, 2656, 38, 0, 70, "Input"],
+Cell[80881, 2658, 74, 0, 70, "Program"],
+Cell[CellGroupData[{
+Cell[80980, 2662, 204, 5, 70, "Input"],
+Cell[81187, 2669, 69, 1, 70, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[81293, 2675, 110, 3, 70, "Input"],
+Cell[81406, 2680, 152, 6, 70, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[81595, 2691, 82, 1, 70, "Input"],
+Cell[81680, 2694, 27, 0, 70, "Print"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[81744, 2699, 119, 3, 70, "Input"],
+Cell[81866, 2704, 120, 3, 70, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[82023, 2712, 71, 1, 70, "Input"],
+Cell[82097, 2715, 42, 0, 70, "Output"]
+}, Open  ]],
+Cell[82154, 2718, 26, 0, 70, "Input"]
+}, Closed]]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)

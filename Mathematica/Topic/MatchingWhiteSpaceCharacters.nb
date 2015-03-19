@@ -1,0 +1,917 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 10.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     30789,        908]
+NotebookOptionsPosition[     29336,        853]
+NotebookOutlinePosition[     29692,        869]
+CellTagsIndexPosition[     29649,        866]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["Match escaped characters", "Title"],
+
+Cell["\<\
+Evaluate ?\[CloseCurlyDoubleQuote]\\[*Space]\[CloseCurlyDoubleQuote], select \
+the output cell, and press Ctrl+Shift+E:\
+\>", "Text"],
+
+Cell[BoxData[
+ RowBox[{"?", "\"\<\\[*Space]\>\""}]], "Input"],
+
+Cell[RawData["\<\
+Cell[BoxData[
+ DynamicModuleBox[{Typeset`open$$ = True}, 
+  PaneSelectorBox[{False->
+   RowBox[{
+    OpenerBox[Dynamic[Typeset`open$$],
+     ImageSize->Small], 
+    StyleBox[
+     RowBox[{\"Special\", \" \", \"Characters\"}], \"InfoHeading\"]}], \
+True->GridBox[{
+     {
+      RowBox[{
+       OpenerBox[Dynamic[Typeset`open$$],
+        ImageSize->Small], 
+       StyleBox[
+        RowBox[{\"Special\", \" \", \"Characters\"}], \"InfoHeading\"]}]},
+     {GridBox[{
+        {
+         TagBox[
+          TooltipBox[
+           StyleBox[
+            RowBox[{\" \", \" \"}],
+            StripOnInput->False,
+            ShowStringCharacters->True,
+            SpanMaxSize->1],
+           StyleBox[
+            StyleBox[
+            \" \\\\[AutoSpace] \", ShowStringCharacters -> True, SpanMaxSize \
+-> 1, StripOnInput -> False], 
+            72, StripOnInput -> False]],
+          Annotation[#, 
+           Style[
+            Style[
+             RawBoxes[\" \\\\[AutoSpace] \"], ShowStringCharacters -> True, \
+SpanMaxSize -> 1], 72], 
+           \"Tooltip\"]& ], 
+         TagBox[
+          ButtonBox[
+           PaneSelectorBox[{False->\"\\<\\\"\\[Backslash][AutoSpace]\\\"\\>\",\
+ True->
+            StyleBox[\"\\<\\\"\\[Backslash][AutoSpace]\\\"\\>\", \
+\"HyperlinkActive\"]}, Dynamic[
+             CurrentValue[\"MouseOver\"]],
+            BaseStyle->{\"Hyperlink\"},
+            FrameMargins->0,
+            ImageSize->Automatic],
+           BaseStyle->\"Link\",
+           ButtonData->\"paclet:ref/Characters/AutoSpace\",
+           ButtonNote->\"paclet:ref/Characters/AutoSpace\"],
+          Annotation[#, \"paclet:ref/Characters/AutoSpace\", \"Hyperlink\"]& \
+]},
+        {
+         TagBox[
+          TooltipBox[
+           StyleBox[
+            RowBox[{\" \", \"\\:3000 \"}],
+            StripOnInput->False,
+            ShowStringCharacters->True,
+            SpanMaxSize->1],
+           StyleBox[
+            StyleBox[
+            \" \\\\[COMPATIBILITYKanjiSpace] \", ShowStringCharacters -> \
+True, SpanMaxSize -> 1, 
+             StripOnInput -> False], 72, StripOnInput -> False]],
+          Annotation[#, 
+           Style[
+            Style[
+             RawBoxes[\" \\\\[COMPATIBILITYKanjiSpace] \"], \
+ShowStringCharacters -> True, SpanMaxSize -> 
+             1], 72], \"Tooltip\"]& ], 
+         TagBox[
+          ButtonBox[
+           PaneSelectorBox[{False->\"\\<\\\"\\[Backslash][\
+COMPATIBILITYKanjiSpace]\\\"\\>\", True->
+            StyleBox[\"\\<\\\"\\[Backslash][COMPATIBILITYKanjiSpace]\\\"\\>\",\
+ \"HyperlinkActive\"]}, Dynamic[
+             CurrentValue[\"MouseOver\"]],
+            BaseStyle->{\"Hyperlink\"},
+            FrameMargins->0,
+            ImageSize->Automatic],
+           BaseStyle->\"Link\",
+           ButtonData->\"paclet:ref/Characters/COMPATIBILITYKanjiSpace\",
+           ButtonNote->\"paclet:ref/Characters/COMPATIBILITYKanjiSpace\"],
+          Annotation[#, \"paclet:ref/Characters/COMPATIBILITYKanjiSpace\", \
+\"Hyperlink\"]& ]},
+        {
+         TagBox[
+          TooltipBox[
+           StyleBox[
+            RowBox[{\" \", \"\\[InvisibleSpace] \"}],
+            StripOnInput->False,
+            ShowStringCharacters->True,
+            SpanMaxSize->1],
+           StyleBox[
+            StyleBox[
+            \" \\\\[InvisibleSpace] \", ShowStringCharacters -> True, \
+SpanMaxSize -> 1, StripOnInput -> 
+             False], 72, StripOnInput -> False]],
+          Annotation[#, 
+           Style[
+            Style[
+             RawBoxes[\" \\\\[InvisibleSpace] \"], ShowStringCharacters -> \
+True, SpanMaxSize -> 1], 72], 
+           \"Tooltip\"]& ], 
+         TagBox[
+          ButtonBox[
+           PaneSelectorBox[{False->\"\\<\\\"\\[Backslash][InvisibleSpace]\\\"\
+\\>\", True->
+            StyleBox[\"\\<\\\"\\[Backslash][InvisibleSpace]\\\"\\>\", \
+\"HyperlinkActive\"]}, Dynamic[
+             CurrentValue[\"MouseOver\"]],
+            BaseStyle->{\"Hyperlink\"},
+            FrameMargins->0,
+            ImageSize->Automatic],
+           BaseStyle->\"Link\",
+           ButtonData->\"paclet:ref/Characters/InvisibleSpace\",
+           ButtonNote->\"paclet:ref/Characters/InvisibleSpace\"],
+          Annotation[#, \"paclet:ref/Characters/InvisibleSpace\", \"Hyperlink\
+\"]& ]},
+        {
+         TagBox[
+          TooltipBox[
+           StyleBox[
+            RowBox[{\" \", \"\\[LetterSpace]\", \" \"}],
+            StripOnInput->False,
+            ShowStringCharacters->True,
+            SpanMaxSize->1],
+           StyleBox[
+            StyleBox[
+            \" \\\\[LetterSpace] \", ShowStringCharacters -> True, \
+SpanMaxSize -> 1, StripOnInput -> 
+             False], 72, StripOnInput -> False]],
+          Annotation[#, 
+           Style[
+            Style[
+             RawBoxes[\" \\\\[LetterSpace] \"], ShowStringCharacters -> True, \
+SpanMaxSize -> 1], 72], 
+           \"Tooltip\"]& ], 
+         TagBox[
+          ButtonBox[
+           PaneSelectorBox[{False->\"\\<\\\"\\[Backslash][LetterSpace]\\\"\\>\
+\", True->
+            StyleBox[\"\\<\\\"\\[Backslash][LetterSpace]\\\"\\>\", \
+\"HyperlinkActive\"]}, Dynamic[
+             CurrentValue[\"MouseOver\"]],
+            BaseStyle->{\"Hyperlink\"},
+            FrameMargins->0,
+            ImageSize->Automatic],
+           BaseStyle->\"Link\",
+           ButtonData->\"paclet:ref/Characters/LetterSpace\",
+           ButtonNote->\"paclet:ref/Characters/LetterSpace\"],
+          Annotation[#, \"paclet:ref/Characters/LetterSpace\", \
+\"Hyperlink\"]& ]},
+        {
+         TagBox[
+          TooltipBox[
+           StyleBox[
+            RowBox[{\" \", \"\\[MediumSpace] \"}],
+            StripOnInput->False,
+            ShowStringCharacters->True,
+            SpanMaxSize->1],
+           StyleBox[
+            StyleBox[
+            \" \\\\[MediumSpace] \", ShowStringCharacters -> True, \
+SpanMaxSize -> 1, StripOnInput -> 
+             False], 72, StripOnInput -> False]],
+          Annotation[#, 
+           Style[
+            Style[
+             RawBoxes[\" \\\\[MediumSpace] \"], ShowStringCharacters -> True, \
+SpanMaxSize -> 1], 72], 
+           \"Tooltip\"]& ], 
+         TagBox[
+          ButtonBox[
+           PaneSelectorBox[{False->\"\\<\\\"\\[Backslash][MediumSpace]\\\"\\>\
+\", True->
+            StyleBox[\"\\<\\\"\\[Backslash][MediumSpace]\\\"\\>\", \
+\"HyperlinkActive\"]}, Dynamic[
+             CurrentValue[\"MouseOver\"]],
+            BaseStyle->{\"Hyperlink\"},
+            FrameMargins->0,
+            ImageSize->Automatic],
+           BaseStyle->\"Link\",
+           ButtonData->\"paclet:ref/Characters/MediumSpace\",
+           ButtonNote->\"paclet:ref/Characters/MediumSpace\"],
+          Annotation[#, \"paclet:ref/Characters/MediumSpace\", \
+\"Hyperlink\"]& ]},
+        {
+         TagBox[
+          TooltipBox[
+           StyleBox[
+            RowBox[{\" \", \"\\[NegativeMediumSpace] \"}],
+            StripOnInput->False,
+            ShowStringCharacters->True,
+            SpanMaxSize->1],
+           StyleBox[
+            StyleBox[
+            \" \\\\[NegativeMediumSpace] \", ShowStringCharacters -> True, \
+SpanMaxSize -> 1, StripOnInput -> 
+             False], 72, StripOnInput -> False]],
+          Annotation[#, 
+           Style[
+            Style[
+             RawBoxes[\" \\\\[NegativeMediumSpace] \"], ShowStringCharacters \
+-> True, SpanMaxSize -> 1], 
+            72], \"Tooltip\"]& ], 
+         TagBox[
+          ButtonBox[
+           PaneSelectorBox[{False->\"\\<\\\"\\[Backslash][NegativeMediumSpace]\
+\\\"\\>\", True->
+            StyleBox[\"\\<\\\"\\[Backslash][NegativeMediumSpace]\\\"\\>\", \
+\"HyperlinkActive\"]}, Dynamic[
+             CurrentValue[\"MouseOver\"]],
+            BaseStyle->{\"Hyperlink\"},
+            FrameMargins->0,
+            ImageSize->Automatic],
+           BaseStyle->\"Link\",
+           ButtonData->\"paclet:ref/Characters/NegativeMediumSpace\",
+           ButtonNote->\"paclet:ref/Characters/NegativeMediumSpace\"],
+          Annotation[#, \"paclet:ref/Characters/NegativeMediumSpace\", \
+\"Hyperlink\"]& ]},
+        {
+         TagBox[
+          TooltipBox[
+           StyleBox[
+            RowBox[{\" \", \"\\[NegativeThickSpace] \"}],
+            StripOnInput->False,
+            ShowStringCharacters->True,
+            SpanMaxSize->1],
+           StyleBox[
+            StyleBox[
+            \" \\\\[NegativeThickSpace] \", ShowStringCharacters -> True, \
+SpanMaxSize -> 1, StripOnInput -> 
+             False], 72, StripOnInput -> False]],
+          Annotation[#, 
+           Style[
+            Style[
+             RawBoxes[\" \\\\[NegativeThickSpace] \"], ShowStringCharacters \
+-> True, SpanMaxSize -> 1], 
+            72], \"Tooltip\"]& ], 
+         TagBox[
+          ButtonBox[
+           PaneSelectorBox[{False->\"\\<\\\"\\[Backslash][NegativeThickSpace]\
+\\\"\\>\", True->
+            StyleBox[\"\\<\\\"\\[Backslash][NegativeThickSpace]\\\"\\>\", \
+\"HyperlinkActive\"]}, Dynamic[
+             CurrentValue[\"MouseOver\"]],
+            BaseStyle->{\"Hyperlink\"},
+            FrameMargins->0,
+            ImageSize->Automatic],
+           BaseStyle->\"Link\",
+           ButtonData->\"paclet:ref/Characters/NegativeThickSpace\",
+           ButtonNote->\"paclet:ref/Characters/NegativeThickSpace\"],
+          Annotation[#, \"paclet:ref/Characters/NegativeThickSpace\", \
+\"Hyperlink\"]& ]},
+        {
+         TagBox[
+          TooltipBox[
+           StyleBox[
+            RowBox[{\" \", \"\\[NegativeThinSpace] \"}],
+            StripOnInput->False,
+            ShowStringCharacters->True,
+            SpanMaxSize->1],
+           StyleBox[
+            StyleBox[
+            \" \\\\[NegativeThinSpace] \", ShowStringCharacters -> True, \
+SpanMaxSize -> 1, StripOnInput -> 
+             False], 72, StripOnInput -> False]],
+          Annotation[#, 
+           Style[
+            Style[
+             RawBoxes[\" \\\\[NegativeThinSpace] \"], ShowStringCharacters -> \
+True, SpanMaxSize -> 1], 72],
+            \"Tooltip\"]& ], 
+         TagBox[
+          ButtonBox[
+           PaneSelectorBox[{False->\"\\<\\\"\\[Backslash][NegativeThinSpace]\\\
+\"\\>\", True->
+            StyleBox[\"\\<\\\"\\[Backslash][NegativeThinSpace]\\\"\\>\", \
+\"HyperlinkActive\"]}, Dynamic[
+             CurrentValue[\"MouseOver\"]],
+            BaseStyle->{\"Hyperlink\"},
+            FrameMargins->0,
+            ImageSize->Automatic],
+           BaseStyle->\"Link\",
+           ButtonData->\"paclet:ref/Characters/NegativeThinSpace\",
+           ButtonNote->\"paclet:ref/Characters/NegativeThinSpace\"],
+          Annotation[#, \"paclet:ref/Characters/NegativeThinSpace\", \
+\"Hyperlink\"]& ]},
+        {
+         TagBox[
+          TooltipBox[
+           StyleBox[
+            RowBox[{\" \", \"\\[NegativeVeryThinSpace] \"}],
+            StripOnInput->False,
+            ShowStringCharacters->True,
+            SpanMaxSize->1],
+           StyleBox[
+            StyleBox[
+            \" \\\\[NegativeVeryThinSpace] \", ShowStringCharacters -> True, \
+SpanMaxSize -> 1, 
+             StripOnInput -> False], 72, StripOnInput -> False]],
+          Annotation[#, 
+           Style[
+            Style[
+             RawBoxes[\" \\\\[NegativeVeryThinSpace] \"], \
+ShowStringCharacters -> True, SpanMaxSize -> 1], 
+            72], \"Tooltip\"]& ], 
+         TagBox[
+          ButtonBox[
+           PaneSelectorBox[{False->\"\\<\\\"\\[Backslash][\
+NegativeVeryThinSpace]\\\"\\>\", True->
+            StyleBox[\"\\<\\\"\\[Backslash][NegativeVeryThinSpace]\\\"\\>\", \
+\"HyperlinkActive\"]}, Dynamic[
+             CurrentValue[\"MouseOver\"]],
+            BaseStyle->{\"Hyperlink\"},
+            FrameMargins->0,
+            ImageSize->Automatic],
+           BaseStyle->\"Link\",
+           ButtonData->\"paclet:ref/Characters/NegativeVeryThinSpace\",
+           ButtonNote->\"paclet:ref/Characters/NegativeVeryThinSpace\"],
+          Annotation[#, \"paclet:ref/Characters/NegativeVeryThinSpace\", \
+\"Hyperlink\"]& ]},
+        {
+         TagBox[
+          TooltipBox[
+           StyleBox[
+            RowBox[{\" \", \"\\[NonBreakingSpace] \"}],
+            StripOnInput->False,
+            ShowStringCharacters->True,
+            SpanMaxSize->1],
+           StyleBox[
+            StyleBox[
+            \" \\\\[NonBreakingSpace] \", ShowStringCharacters -> True, \
+SpanMaxSize -> 1, StripOnInput -> 
+             False], 72, StripOnInput -> False]],
+          Annotation[#, 
+           Style[
+            Style[
+             RawBoxes[\" \\\\[NonBreakingSpace] \"], ShowStringCharacters -> \
+True, SpanMaxSize -> 1], 72], 
+           \"Tooltip\"]& ], 
+         TagBox[
+          ButtonBox[
+           PaneSelectorBox[{False->\"\\<\\\"\\[Backslash][NonBreakingSpace]\\\
+\"\\>\", True->
+            StyleBox[\"\\<\\\"\\[Backslash][NonBreakingSpace]\\\"\\>\", \
+\"HyperlinkActive\"]}, Dynamic[
+             CurrentValue[\"MouseOver\"]],
+            BaseStyle->{\"Hyperlink\"},
+            FrameMargins->0,
+            ImageSize->Automatic],
+           BaseStyle->\"Link\",
+           ButtonData->\"paclet:ref/Characters/NonBreakingSpace\",
+           ButtonNote->\"paclet:ref/Characters/NonBreakingSpace\"],
+          Annotation[#, \"paclet:ref/Characters/NonBreakingSpace\", \
+\"Hyperlink\"]& ]},
+        {
+         TagBox[
+          TooltipBox[
+           StyleBox[
+            RowBox[{\" \", \"  \"}],
+            StripOnInput->False,
+            ShowStringCharacters->True,
+            SpanMaxSize->1],
+           StyleBox[
+            StyleBox[
+            \" \\\\[RawSpace] \", ShowStringCharacters -> True, SpanMaxSize \
+-> 1, StripOnInput -> False], 
+            72, StripOnInput -> False]],
+          Annotation[#, 
+           Style[
+            Style[
+             RawBoxes[\" \\\\[RawSpace] \"], ShowStringCharacters -> True, \
+SpanMaxSize -> 1], 72], 
+           \"Tooltip\"]& ], 
+         TagBox[
+          ButtonBox[
+           PaneSelectorBox[{False->\"\\<\\\"\\[Backslash][RawSpace]\\\"\\>\", \
+True->
+            StyleBox[\"\\<\\\"\\[Backslash][RawSpace]\\\"\\>\", \
+\"HyperlinkActive\"]}, Dynamic[
+             CurrentValue[\"MouseOver\"]],
+            BaseStyle->{\"Hyperlink\"},
+            FrameMargins->0,
+            ImageSize->Automatic],
+           BaseStyle->\"Link\",
+           ButtonData->\"paclet:ref/Characters/RawSpace\",
+           ButtonNote->\"paclet:ref/Characters/RawSpace\"],
+          Annotation[#, \"paclet:ref/Characters/RawSpace\", \"Hyperlink\"]& ]},
+        {
+         TagBox[
+          TooltipBox[
+           StyleBox[
+            RowBox[{\" \", \"\\[ThickSpace] \"}],
+            StripOnInput->False,
+            ShowStringCharacters->True,
+            SpanMaxSize->1],
+           StyleBox[
+            StyleBox[
+            \" \\\\[ThickSpace] \", ShowStringCharacters -> True, SpanMaxSize \
+-> 1, StripOnInput -> False],
+             72, StripOnInput -> False]],
+          Annotation[#, 
+           Style[
+            Style[
+             RawBoxes[\" \\\\[ThickSpace] \"], ShowStringCharacters -> True, \
+SpanMaxSize -> 1], 72], 
+           \"Tooltip\"]& ], 
+         TagBox[
+          ButtonBox[
+           PaneSelectorBox[{False->\"\\<\\\"\\[Backslash][ThickSpace]\\\"\\>\"\
+, True->
+            StyleBox[\"\\<\\\"\\[Backslash][ThickSpace]\\\"\\>\", \
+\"HyperlinkActive\"]}, Dynamic[
+             CurrentValue[\"MouseOver\"]],
+            BaseStyle->{\"Hyperlink\"},
+            FrameMargins->0,
+            ImageSize->Automatic],
+           BaseStyle->\"Link\",
+           ButtonData->\"paclet:ref/Characters/ThickSpace\",
+           ButtonNote->\"paclet:ref/Characters/ThickSpace\"],
+          Annotation[#, \"paclet:ref/Characters/ThickSpace\", \"Hyperlink\"]& \
+]},
+        {
+         TagBox[
+          TooltipBox[
+           StyleBox[
+            RowBox[{\" \", \"\\[ThinSpace] \"}],
+            StripOnInput->False,
+            ShowStringCharacters->True,
+            SpanMaxSize->1],
+           StyleBox[
+            StyleBox[
+            \" \\\\[ThinSpace] \", ShowStringCharacters -> True, SpanMaxSize \
+-> 1, StripOnInput -> False], 
+            72, StripOnInput -> False]],
+          Annotation[#, 
+           Style[
+            Style[
+             RawBoxes[\" \\\\[ThinSpace] \"], ShowStringCharacters -> True, \
+SpanMaxSize -> 1], 72], 
+           \"Tooltip\"]& ], 
+         TagBox[
+          ButtonBox[
+           PaneSelectorBox[{False->\"\\<\\\"\\[Backslash][ThinSpace]\\\"\\>\",\
+ True->
+            StyleBox[\"\\<\\\"\\[Backslash][ThinSpace]\\\"\\>\", \
+\"HyperlinkActive\"]}, Dynamic[
+             CurrentValue[\"MouseOver\"]],
+            BaseStyle->{\"Hyperlink\"},
+            FrameMargins->0,
+            ImageSize->Automatic],
+           BaseStyle->\"Link\",
+           ButtonData->\"paclet:ref/Characters/ThinSpace\",
+           ButtonNote->\"paclet:ref/Characters/ThinSpace\"],
+          Annotation[#, \"paclet:ref/Characters/ThinSpace\", \"Hyperlink\"]& \
+]},
+        {
+         TagBox[
+          TooltipBox[
+           StyleBox[
+            RowBox[{\" \", \"\\[VeryThinSpace] \"}],
+            StripOnInput->False,
+            ShowStringCharacters->True,
+            SpanMaxSize->1],
+           StyleBox[
+            StyleBox[
+            \" \\\\[VeryThinSpace] \", ShowStringCharacters -> True, \
+SpanMaxSize -> 1, StripOnInput -> 
+             False], 72, StripOnInput -> False]],
+          Annotation[#, 
+           Style[
+            Style[
+             RawBoxes[\" \\\\[VeryThinSpace] \"], ShowStringCharacters -> \
+True, SpanMaxSize -> 1], 72], 
+           \"Tooltip\"]& ], 
+         TagBox[
+          ButtonBox[
+           PaneSelectorBox[{False->\"\\<\\\"\\[Backslash][VeryThinSpace]\\\"\\\
+>\", True->
+            StyleBox[\"\\<\\\"\\[Backslash][VeryThinSpace]\\\"\\>\", \
+\"HyperlinkActive\"]}, Dynamic[
+             CurrentValue[\"MouseOver\"]],
+            BaseStyle->{\"Hyperlink\"},
+            FrameMargins->0,
+            ImageSize->Automatic],
+           BaseStyle->\"Link\",
+           ButtonData->\"paclet:ref/Characters/VeryThinSpace\",
+           ButtonNote->\"paclet:ref/Characters/VeryThinSpace\"],
+          Annotation[#, \"paclet:ref/Characters/VeryThinSpace\", \
+\"Hyperlink\"]& ]}
+       },
+       DefaultBaseStyle->\"InfoGrid\",
+       GridBoxItemSize->{\"Columns\" -> {Automatic, Fit}}]}
+    },
+    GridBoxAlignment->{\"Columns\" -> {{Left}}, \"Rows\" -> {{Baseline}}}]}, \
+Dynamic[Typeset`open$$],
+   ImageSize->Automatic]]], \"Print\", \"InfoCell\"]\
+\>"], "Print", "InfoCell"],
+
+Cell["\<\
+Save the above text in a file and find all the characters:
+
+17:09:43 meng@meng2maclap:~/Temp$ ack -o \
+\[OpenCurlyDoubleQuote]\\\\\\\\\\\\\\\\\\[.*Space\\]\[CloseCurlyDoubleQuote] \
+WolframLanguage_space_characters.md | sort | uniq
+
+AutoSpace
+COMPATIBILITYKanjiSpace
+InvisibleSpace
+LetterSpace
+MediumSpace
+NegativeMediumSpace
+NegativeThickSpace
+NegativeThinSpace
+NegativeVeryThinSpace
+NonBreakingSpace
+RawSpace
+ThickSpace
+ThinSpace
+VeryThinSpace
+
+Edit the text into a valid expression:\
+\>", "Text"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"$WolframLanguageWhiteSpaceCharacters", "=", 
+   RowBox[{"{", 
+    RowBox[{
+    "\"\<\>\"", ",", "\"\<\:3000\>\"", ",", "\"\<\[InvisibleSpace]\>\"", ",", 
+     "\"\<\[LetterSpace]\>\"", ",", "\"\<\[MediumSpace]\>\"", ",", 
+     "\"\<\[NegativeMediumSpace]\>\"", ",", "\"\<\[NegativeThickSpace]\>\"", 
+     ",", "\"\<\[NegativeThinSpace]\>\"", ",", 
+     "\"\<\[NegativeVeryThinSpace]\>\"", ",", "\"\<\[NonBreakingSpace]\>\"", 
+     ",", "\"\< \>\"", ",", "\"\<\[ThickSpace]\>\"", ",", 
+     "\"\<\[ThinSpace]\>\"", ",", "\"\<\[VeryThinSpace]\>\""}], "}"}]}], 
+  ";"}]], "Input"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"experimentData", "=", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"{", "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"StringTake", "[", 
+        RowBox[{
+         RowBox[{"ToString", "[", 
+          RowBox[{"FullForm", "[", "#", "]"}], "]"}], ",", 
+         RowBox[{"{", 
+          RowBox[{"2", ",", 
+           RowBox[{"-", "2"}]}], "}"}]}], "]"}], ",", "\[IndentingNewLine]", 
+       "#", ",", "\[IndentingNewLine]", 
+       RowBox[{"ToCharacterCode", "[", "#", "]"}], ",", "\[IndentingNewLine]", 
+       RowBox[{"FullForm", "[", "#", "]"}], ",", "\[IndentingNewLine]", 
+       RowBox[{"ToString", "[", 
+        RowBox[{"#", ",", "InputForm", ",", 
+         RowBox[{"CharacterEncoding", "\[Rule]", "\"\<ASCII\>\""}]}], "]"}], 
+       ",", "\[IndentingNewLine]", 
+       RowBox[{"StringMatchQ", "[", 
+        RowBox[{"#", ",", 
+         RowBox[{"RegularExpression", "[", "\"\<[[:space:]]*\>\"", "]"}]}], 
+        "]"}]}], "\[IndentingNewLine]", "}"}], "&"}], "/@", 
+    "$WolframLanguageWhiteSpaceCharacters"}]}], ";"}]], "Input"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"experimentData", "//", 
+  RowBox[{
+   RowBox[{"Grid", "[", 
+    RowBox[{"#", ",", 
+     RowBox[{"Dividers", "\[Rule]", " ", "All"}], ",", 
+     RowBox[{"FrameStyle", "\[Rule]", "Gray"}]}], "]"}], "&"}]}]], "Input"],
+
+Cell[BoxData[
+ TagBox[GridBox[{
+    {"\<\"\"\>", "\<\"\"\>", 
+     RowBox[{"{", "}"}], 
+     TagBox[
+      StyleBox["\"\<\>\"",
+       ShowSpecialCharacters->False,
+       ShowStringCharacters->True,
+       NumberMarks->True],
+      FullForm], "\<\"\\\"\\\"\"\>", "True"},
+    {"\<\"\\\\:3000\"\>", "\<\"\:3000\"\>", 
+     RowBox[{"{", "12288", "}"}], 
+     TagBox[
+      StyleBox["\"\<\\[COMPATIBILITYKanjiSpace]\>\"",
+       ShowSpecialCharacters->False,
+       ShowStringCharacters->True,
+       NumberMarks->True],
+      FullForm], "\<\"\\\"\\\\:3000\\\"\"\>", "False"},
+    {"\<\"\\\\[InvisibleSpace]\"\>", "\<\"\[InvisibleSpace]\"\>", 
+     RowBox[{"{", "62304", "}"}], 
+     TagBox[
+      StyleBox["\"\<\\[InvisibleSpace]\>\"",
+       ShowSpecialCharacters->False,
+       ShowStringCharacters->True,
+       NumberMarks->True],
+      FullForm], "\<\"\\\"\\\\[InvisibleSpace]\\\"\"\>", "False"},
+    {"\<\"\\\\[LetterSpace]\"\>", "\<\"\[LetterSpace]\"\>", 
+     RowBox[{"{", "63316", "}"}], 
+     TagBox[
+      StyleBox["\"\<\\[LetterSpace]\>\"",
+       ShowSpecialCharacters->False,
+       ShowStringCharacters->True,
+       NumberMarks->True],
+      FullForm], "\<\"\\\"\\\\[LetterSpace]\\\"\"\>", "False"},
+    {"\<\"\\\\[MediumSpace]\"\>", "\<\"\[MediumSpace]\"\>", 
+     RowBox[{"{", "8287", "}"}], 
+     TagBox[
+      StyleBox["\"\<\\[MediumSpace]\>\"",
+       ShowSpecialCharacters->False,
+       ShowStringCharacters->True,
+       NumberMarks->True],
+      FullForm], "\<\"\\\"\\\\[MediumSpace]\\\"\"\>", "False"},
+    {"\<\"\\\\[NegativeMediumSpace]\"\>", "\<\"\[NegativeMediumSpace]\"\>", 
+     RowBox[{"{", "62339", "}"}], 
+     TagBox[
+      StyleBox["\"\<\\[NegativeMediumSpace]\>\"",
+       ShowSpecialCharacters->False,
+       ShowStringCharacters->True,
+       NumberMarks->True],
+      FullForm], "\<\"\\\"\\\\[NegativeMediumSpace]\\\"\"\>", "False"},
+    {"\<\"\\\\[NegativeThickSpace]\"\>", "\<\"\[NegativeThickSpace]\"\>", 
+     RowBox[{"{", "62340", "}"}], 
+     TagBox[
+      StyleBox["\"\<\\[NegativeThickSpace]\>\"",
+       ShowSpecialCharacters->False,
+       ShowStringCharacters->True,
+       NumberMarks->True],
+      FullForm], "\<\"\\\"\\\\[NegativeThickSpace]\\\"\"\>", "False"},
+    {"\<\"\\\\[NegativeThinSpace]\"\>", "\<\"\[NegativeThinSpace]\"\>", 
+     RowBox[{"{", "62338", "}"}], 
+     TagBox[
+      StyleBox["\"\<\\[NegativeThinSpace]\>\"",
+       ShowSpecialCharacters->False,
+       ShowStringCharacters->True,
+       NumberMarks->True],
+      FullForm], "\<\"\\\"\\\\[NegativeThinSpace]\\\"\"\>", "False"},
+    {"\<\"\\\\[NegativeVeryThinSpace]\"\>", \
+"\<\"\[NegativeVeryThinSpace]\"\>", 
+     RowBox[{"{", "62336", "}"}], 
+     TagBox[
+      StyleBox["\"\<\\[NegativeVeryThinSpace]\>\"",
+       ShowSpecialCharacters->False,
+       ShowStringCharacters->True,
+       NumberMarks->True],
+      FullForm], "\<\"\\\"\\\\[NegativeVeryThinSpace]\\\"\"\>", "False"},
+    {"\<\"\\\\[NonBreakingSpace]\"\>", "\<\"\[NonBreakingSpace]\"\>", 
+     RowBox[{"{", "160", "}"}], 
+     TagBox[
+      StyleBox["\"\<\\[NonBreakingSpace]\>\"",
+       ShowSpecialCharacters->False,
+       ShowStringCharacters->True,
+       NumberMarks->True],
+      FullForm], "\<\"\\\"\\\\[NonBreakingSpace]\\\"\"\>", "True"},
+    {"\<\" \"\>", "\<\" \"\>", 
+     RowBox[{"{", "32", "}"}], 
+     TagBox[
+      StyleBox["\"\< \>\"",
+       ShowSpecialCharacters->False,
+       ShowStringCharacters->True,
+       NumberMarks->True],
+      FullForm], "\<\"\\\" \\\"\"\>", "True"},
+    {"\<\"\\\\[ThickSpace]\"\>", "\<\"\[ThickSpace]\"\>", 
+     RowBox[{"{", "8197", "}"}], 
+     TagBox[
+      StyleBox["\"\<\\[ThickSpace]\>\"",
+       ShowSpecialCharacters->False,
+       ShowStringCharacters->True,
+       NumberMarks->True],
+      FullForm], "\<\"\\\"\\\\[ThickSpace]\\\"\"\>", "False"},
+    {"\<\"\\\\[ThinSpace]\"\>", "\<\"\[ThinSpace]\"\>", 
+     RowBox[{"{", "8201", "}"}], 
+     TagBox[
+      StyleBox["\"\<\\[ThinSpace]\>\"",
+       ShowSpecialCharacters->False,
+       ShowStringCharacters->True,
+       NumberMarks->True],
+      FullForm], "\<\"\\\"\\\\[ThinSpace]\\\"\"\>", "False"},
+    {"\<\"\\\\[VeryThinSpace]\"\>", "\<\"\[VeryThinSpace]\"\>", 
+     RowBox[{"{", "8202", "}"}], 
+     TagBox[
+      StyleBox["\"\<\\[VeryThinSpace]\>\"",
+       ShowSpecialCharacters->False,
+       ShowStringCharacters->True,
+       NumberMarks->True],
+      FullForm], "\<\"\\\"\\\\[VeryThinSpace]\\\"\"\>", "False"}
+   },
+   AutoDelete->False,
+   FrameStyle->GrayLevel[0.5],
+   GridBoxDividers->{"Columns" -> {{True}}, "Rows" -> {{True}}},
+   GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+  "Grid"]], "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"str", "=", 
+  RowBox[{"Import", "[", 
+   RowBox[{
+    RowBox[{"FileNameJoin", "[", 
+     RowBox[{"{", 
+      RowBox[{
+      "$HomeDirectory", ",", "\"\<Temp\>\"", ",", 
+       "\"\<text_with_escaped_chars.txt\>\""}], "}"}], "]"}], ",", 
+    "\"\<String\>\""}], "]"}]}]], "Input"],
+
+Cell[BoxData["\<\"\\\\[Alpha] foobar \\\\[Beta] baz\\n\\n\"\>"], "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"FullForm", "\[NegativeVeryThinSpace]", "[", 
+  "\"\<\[NegativeVeryThinSpace]\>\"", "]"}]], "Input"],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox["\"\<\\[NegativeVeryThinSpace]\>\"",
+   ShowSpecialCharacters->False,
+   ShowStringCharacters->True,
+   NumberMarks->True],
+  FullForm]], "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"ToString", "[", 
+  RowBox[{
+  "FullForm", "\[NegativeVeryThinSpace]", "[", 
+   "\"\<\[NegativeVeryThinSpace]\>\"", "]"}], "]"}]], "Input"],
+
+Cell[BoxData["\<\"\\\"\\\\[NegativeVeryThinSpace]\\\"\"\>"], "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"FullForm", "\[NegativeVeryThinSpace]", "[", 
+  RowBox[{"ToString", "[", 
+   RowBox[{
+   "FullForm", "\[NegativeVeryThinSpace]", "[", 
+    "\"\<\[NegativeVeryThinSpace]\>\"", "]"}], "]"}], "]"}]], "Input"],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox["\"\<\\\"\\\\[NegativeVeryThinSpace]\\\"\>\"",
+   ShowSpecialCharacters->False,
+   ShowStringCharacters->True,
+   NumberMarks->True],
+  FullForm]], "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"StringTake", "[", 
+   RowBox[{
+    RowBox[{"ToString", "[", 
+     RowBox[{
+     "FullForm", "\[NegativeVeryThinSpace]", "[", 
+      "\"\<\[NegativeVeryThinSpace]\>\"", "]"}], "]"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"2", ",", 
+      RowBox[{"-", "2"}]}], "}"}]}], "]"}], "===", 
+  "\"\<\[NegativeVeryThinSpace]\>\""}]], "Input"],
+
+Cell[BoxData["False"], "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"StringTake", "[", 
+   RowBox[{
+    RowBox[{"ToString", "[", 
+     RowBox[{
+     "FullForm", "\[NegativeVeryThinSpace]", "[", "\"\<foobar\>\"", "]"}], 
+     "]"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"2", ",", 
+      RowBox[{"-", "2"}]}], "}"}]}], "]"}], "===", 
+  "\"\<foobar\>\""}]], "Input"],
+
+Cell[BoxData["True"], "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"StringQ", "@", 
+  RowBox[{"SelectFirst", "[", 
+   RowBox[{
+    RowBox[{"StringCases", "[", 
+     RowBox[{"\"\<foobar\>\"", ",", 
+      RowBox[{
+      "RegularExpression", "[", "\"\<\\\\\\\\\\\\[[A-Z][A-Za-z]+\\\\]\>\"", 
+       "]"}]}], "]"}], ",", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"StringLength", "[", 
+       RowBox[{"ToExpression", "[", 
+        RowBox[{"\"\<\\\"\>\"", "<>", "#", "<>", "\"\<\\\"\>\""}], "]"}], 
+       "]"}], "\[Equal]", "1"}], "&"}]}], "]"}]}]], "Input"],
+
+Cell[BoxData["False"], "Output"]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{"StringMatchQ", "[", "\"\<\\\"]\>"}]], "Input"]
+}, Open  ]]
+},
+WindowSize->{1440, 851},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+FrontEndVersion->"10.0 for Mac OS X x86 (32-bit, 64-bit Kernel) (December 4, \
+2014)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 41, 0, 92, "Title"],
+Cell[624, 24, 143, 3, 30, "Text"],
+Cell[770, 29, 61, 1, 28, "Input"],
+Cell[834, 32, 18378, 499, 5985, "Print"],
+Cell[19215, 533, 509, 23, 391, "Text"],
+Cell[19727, 558, 612, 12, 28, "Input"],
+Cell[20342, 572, 1069, 25, 148, "Input"],
+Cell[CellGroupData[{
+Cell[21436, 601, 238, 6, 28, "Input"],
+Cell[21677, 609, 4647, 120, 273, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[26361, 734, 303, 9, 28, "Input"],
+Cell[26667, 745, 74, 0, 63, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[26778, 750, 123, 2, 28, "Input"],
+Cell[26904, 754, 181, 6, 28, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[27122, 765, 162, 4, 28, "Input"],
+Cell[27287, 771, 70, 0, 28, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[27394, 776, 228, 5, 28, "Input"],
+Cell[27625, 783, 191, 6, 28, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[27853, 794, 366, 11, 28, "Input"],
+Cell[28222, 807, 32, 0, 28, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[28291, 812, 329, 11, 28, "Input"],
+Cell[28623, 825, 31, 0, 28, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[28691, 830, 509, 14, 28, "Input"],
+Cell[29203, 846, 32, 0, 28, "Output"]
+}, Open  ]],
+Cell[29250, 849, 70, 1, 28, "Input"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)

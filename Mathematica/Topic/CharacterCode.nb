@@ -1,0 +1,96 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 10.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      2081,         87]
+NotebookOptionsPosition[      1547,         62]
+NotebookOutlinePosition[      1904,         78]
+CellTagsIndexPosition[      1861,         75]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["CharacterCode", "Title"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"replaceJavaUnicode", "[", "s_String", "]"}], ":=", 
+  RowBox[{"StringReplace", "[", 
+   RowBox[{"s", ",", 
+    RowBox[{
+     RowBox[{
+     "RegularExpression", "[", "\"\<(?i)\\\\\\\\u([0-9a-f]{4})\>\"", "]"}], 
+     "\[RuleDelayed]", 
+     RowBox[{"FromCharacterCode", "[", 
+      RowBox[{"FromDigits", "[", 
+       RowBox[{"\"\<$1\>\"", ",", "16"}], "]"}], "]"}]}]}], 
+   "]"}]}], "\[IndentingNewLine]", 
+ RowBox[{"replaceJavaUnicode", "[", "\"\<\\\\u5555\>\"", "]"}]}], "Input"],
+
+Cell[BoxData["\<\"\:5555\"\>"], "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"BaseForm", "[", 
+  RowBox[{"30000", ",", "16"}], "]"}]], "Input"],
+
+Cell[BoxData[
+ TagBox[
+  InterpretationBox[
+   SubscriptBox["\<\"7530\"\>", "\<\"16\"\>"],
+   30000,
+   Editable->False],
+  BaseForm[#, 16]& ]], "Output"]
+}, Open  ]]
+}, Open  ]],
+
+Cell["Related documentation", "Title"]
+},
+WindowSize->{808, 751},
+WindowMargins->{{148, Automatic}, {Automatic, 2}},
+FrontEndVersion->"10.0 for Mac OS X x86 (32-bit, 64-bit Kernel) (December 4, \
+2014)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 30, 0, 92, "Title"],
+Cell[CellGroupData[{
+Cell[635, 26, 516, 13, 80, "Input"],
+Cell[1154, 41, 41, 0, 31, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[1232, 46, 89, 2, 28, "Input"],
+Cell[1324, 50, 154, 6, 39, "Output"]
+}, Open  ]]
+}, Open  ]],
+Cell[1505, 60, 38, 0, 92, "Title"]
+}
+]
+*)
+
+(* End of internal cache information *)

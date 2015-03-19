@@ -1,0 +1,207 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 10.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      4960,        198]
+NotebookOptionsPosition[      3667,        145]
+NotebookOutlinePosition[      4024,        161]
+CellTagsIndexPosition[      3981,        158]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["ToCharacterCode and FromCharacterCode", "Title"],
+
+Cell[BoxData[
+ RowBox[{" ", 
+  RowBox[{
+   RowBox[{"str", "=", "\"\<foobar\:4e4b\:4e4e\:8005\:4e5f\>\""}], 
+   ";"}]}]], "Input"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"ToCharacterCode", "[", 
+  RowBox[{"str", ",", "\"\<ISO8859-15\>\""}], "]"}]], "Input"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+  "102", ",", "111", ",", "111", ",", "98", ",", "97", ",", "114", ",", 
+   "None", ",", "None", ",", "None", ",", "None"}], "}"}]], "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"ToCharacterCode", "[", 
+  RowBox[{"str", ",", "\"\<koi8-r\>\""}], "]"}]], "Input"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+  "102", ",", "111", ",", "111", ",", "98", ",", "97", ",", "114", ",", 
+   "None", ",", "None", ",", "None", ",", "None"}], "}"}]], "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"ToCharacterCode", "[", 
+  RowBox[{"str", ",", "\"\<Unicode\>\""}], "]"}]], "Input"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+  "102", ",", "111", ",", "111", ",", "98", ",", "97", ",", "114", ",", 
+   "20043", ",", "20046", ",", "32773", ",", "20063"}], "}"}]], "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"ToCharacterCode", "[", 
+  RowBox[{"str", ",", "\"\<UTF8\>\""}], "]"}]], "Input"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+  "102", ",", "111", ",", "111", ",", "98", ",", "97", ",", "114", ",", "228",
+    ",", "185", ",", "139", ",", "228", ",", "185", ",", "142", ",", "232", 
+   ",", "128", ",", "133", ",", "228", ",", "185", ",", "159"}], 
+  "}"}]], "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"FromCharacterCode", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"102", ",", "111", ",", "111", ",", "98", ",", "97", ",", "114"}],
+     "}"}], ",", "\"\<koi8-r\>\""}], "]"}]], "Input"],
+
+Cell[BoxData["\<\"foobar\"\>"], "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"FromCharacterCode", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"102", ",", "111", ",", "111", ",", "98", ",", "97", ",", "114"}],
+     "}"}], ",", "\"\<Unicode\>\""}], "]"}]], "Input"],
+
+Cell[BoxData["\<\"foobar\"\>"], "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"FromCharacterCode", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"102", ",", "111", ",", "111", ",", "98", ",", "97", ",", "114"}],
+     "}"}], ",", "\"\<UTF8\>\""}], "]"}]], "Input"],
+
+Cell[BoxData["\<\"foobar\"\>"], "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"FromCharacterCode", "[", 
+  RowBox[{
+   RowBox[{"ToCharacterCode", "[", 
+    RowBox[{"str", ",", "\"\<Unicode\>\""}], "]"}], ",", "\"\<Unicode\>\""}], 
+  "]"}]], "Input"],
+
+Cell[BoxData["\<\"foobar\:4e4b\:4e4e\:8005\:4e5f\"\>"], "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"FromCharacterCode", "[", 
+  RowBox[{
+   RowBox[{"ToCharacterCode", "[", 
+    RowBox[{"str", ",", "\"\<Unicode\>\""}], "]"}], ",", "\"\<UTF8\>\""}], 
+  "]"}]], "Input"],
+
+Cell[BoxData["\<\"foobar\:4e4b\:4e4e\:8005\:4e5f\"\>"], "Output"]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{808, 751},
+WindowMargins->{{20, Automatic}, {Automatic, 44}},
+FrontEndVersion->"10.0 for Mac OS X x86 (32-bit, 64-bit Kernel) (December 4, \
+2014)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 54, 0, 148, "Title"],
+Cell[637, 24, 129, 4, 31, "Input"],
+Cell[CellGroupData[{
+Cell[791, 32, 110, 2, 28, "Input"],
+Cell[904, 36, 182, 4, 28, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[1123, 45, 106, 2, 28, "Input"],
+Cell[1232, 49, 182, 4, 28, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[1451, 58, 107, 2, 28, "Input"],
+Cell[1561, 62, 186, 4, 28, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[1784, 71, 104, 2, 28, "Input"],
+Cell[1891, 75, 281, 6, 28, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[2209, 86, 210, 5, 28, "Input"],
+Cell[2422, 93, 41, 0, 28, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[2500, 98, 211, 5, 28, "Input"],
+Cell[2714, 105, 41, 0, 28, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[2792, 110, 208, 5, 28, "Input"],
+Cell[3003, 117, 41, 0, 28, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[3081, 122, 194, 5, 28, "Input"],
+Cell[3278, 129, 65, 0, 31, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[3380, 134, 191, 5, 28, "Input"],
+Cell[3574, 141, 65, 0, 31, "Output"]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)

@@ -1,0 +1,55 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 9.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       157,          7]
+NotebookDataLength[      1215,         46]
+NotebookOptionsPosition[       963,         32]
+NotebookOutlinePosition[      1318,         48]
+CellTagsIndexPosition[      1275,         45]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{"GeoGraphics", "[", 
+  RowBox[{
+   RowBox[{"Point", "[", 
+    RowBox[{"GeoPosition", "[", 
+     RowBox[{"{", 
+      RowBox[{"6.7", ",", "105.63"}], "}"}], "]"}], "]"}], ",", 
+   RowBox[{"GeoBackground", "\[Rule]", "\"\<ReliefMap\>\""}], ",", 
+   RowBox[{"GeoRange", "\[Rule]", 
+    RowBox[{"Quantity", "[", 
+     RowBox[{"250", ",", "\"\<Miles\>\""}], "]"}]}]}], "]"}]], "Input"]
+},
+WindowSize->{1440, 852},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+FrontEndVersion->"9.0 for Mac OS X x86 (32-bit, 64-bit Kernel) (January 25, \
+2013)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[557, 20, 402, 10, 28, "Input"]
+}
+]
+*)
+
+(* End of internal cache information *)

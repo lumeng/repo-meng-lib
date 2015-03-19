@@ -1,0 +1,186 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 10.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      4627,        177]
+NotebookOptionsPosition[      3539,        132]
+NotebookOutlinePosition[      4049,        154]
+CellTagsIndexPosition[      3965,        149]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["Trott-Strzebonski idiom", "Title"],
+
+Cell["\<\
+Block cannot be used to replace a variable inside a held expression, but With \
+can
+\
+\>", "Text"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{"Block", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"h", "=", "g"}], "}"}], ",", 
+   RowBox[{"Hold", "[", 
+    RowBox[{"h", "[", "x", "]"}], "]"}]}], "]"}], "\n", 
+ RowBox[{"With", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"h", "=", "g"}], "}"}], ",", 
+   RowBox[{"Hold", "[", 
+    RowBox[{"h", "[", "x", "]"}], "]"}]}], "]"}]}], "Input"],
+
+Cell[BoxData[
+ RowBox[{"Hold", "[", 
+  RowBox[{"h", "[", "x", "]"}], "]"}]], "Output"],
+
+Cell[BoxData[
+ RowBox[{"Hold", "[", 
+  RowBox[{"g", "[", "x", "]"}], "]"}]], "Output"]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"f", "[", "x_Real", "]"}], ":=", 
+   RowBox[{"x", "^", "2"}]}], "\[IndentingNewLine]"}]], "Input"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Hold", "[", 
+   RowBox[{"{", 
+    RowBox[{"2.", ",", "3."}], "}"}], "]"}], "/.", 
+  RowBox[{"x_Real", "\[RuleDelayed]", 
+   RowBox[{"With", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"eval", "=", 
+       RowBox[{"f", "[", "x", "]"}]}], "}"}], ",", 
+     RowBox[{"eval", "/;", "True"}]}], "]"}]}]}]], "Input"],
+
+Cell[BoxData[
+ RowBox[{"Hold", "[", 
+  RowBox[{"{", 
+   RowBox[{"4.`", ",", "9.`"}], "}"}], "]"}]], "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"FullForm", "[", 
+  RowBox[{"eval", "/;", "True"}], "]"}]], "Input"],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   RowBox[{"Condition", "[", 
+    RowBox[{"eval", ",", "True"}], "]"}],
+   ShowSpecialCharacters->False,
+   ShowStringCharacters->True,
+   NumberMarks->True],
+  FullForm]], "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["References", "Section"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"?", "Condition"}]], "Input"],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox["\<\"\\!\\(\\*RowBox[{StyleBox[\\\"patt\\\", \\\"TI\\\"], \\\"/;\\\
+\", StyleBox[\\\"test\\\", \\\"TI\\\"]}]\\) is a pattern which matches only \
+if the evaluation of \\!\\(\\*StyleBox[\\\"test\\\", \\\"TI\\\"]\\) yields \
+True. \\n\\!\\(\\*RowBox[{StyleBox[\\\"lhs\\\", \\\"TI\\\"], \\\":>\\\", \
+RowBox[{StyleBox[\\\"rhs\\\", \\\"TI\\\"], \\\"/;\\\", StyleBox[\\\"test\\\", \
+\\\"TI\\\"]}]}]\\) represents a rule which applies only if the evaluation of \
+\\!\\(\\*StyleBox[\\\"test\\\", \\\"TI\\\"]\\) yields True. \
+\\n\\!\\(\\*RowBox[{StyleBox[\\\"lhs\\\", \\\"TI\\\"], \\\":=\\\", \
+RowBox[{StyleBox[\\\"rhs\\\", \\\"TI\\\"], \\\"/;\\\", StyleBox[\\\"test\\\", \
+\\\"TI\\\"]}]}]\\) is a definition to be used only if \
+\\!\\(\\*StyleBox[\\\"test\\\", \\\"TI\\\"]\\) yields True. \"\>", "MSG"], 
+  "\[NonBreakingSpace]", 
+  ButtonBox[
+   StyleBox["\[RightSkeleton]", "SR"],
+   Active->True,
+   BaseStyle->"Link",
+   ButtonData->"paclet:ref/Condition"]}]], "Print", "PrintUsage",
+ CellTags->"Info3623480016-2731034"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{808, 752},
+WindowMargins->{{Automatic, 74}, {Automatic, 0}},
+FrontEndVersion->"10.0 for Mac OS X x86 (32-bit, 64-bit Kernel) (September 9, \
+2014)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{
+ "Info3623480016-2731034"->{
+  Cell[2445, 108, 1054, 19, 74, "Print",
+   CellTags->"Info3623480016-2731034"]}
+ }
+*)
+(*CellTagsIndex
+CellTagsIndex->{
+ {"Info3623480016-2731034", 3860, 143}
+ }
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 40, 0, 92, "Title"],
+Cell[623, 24, 108, 4, 49, "Text"],
+Cell[CellGroupData[{
+Cell[756, 32, 369, 12, 46, "Input"],
+Cell[1128, 46, 86, 2, 28, "Output"],
+Cell[1217, 50, 86, 2, 28, "Output"]
+}, Open  ]],
+Cell[1318, 55, 144, 4, 46, "Input"],
+Cell[CellGroupData[{
+Cell[1487, 63, 352, 11, 28, "Input"],
+Cell[1842, 76, 109, 3, 28, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[1988, 84, 91, 2, 28, "Input"],
+Cell[2082, 88, 217, 8, 39, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[2336, 101, 29, 0, 64, "Section"],
+Cell[CellGroupData[{
+Cell[2390, 105, 52, 1, 28, "Input"],
+Cell[2445, 108, 1054, 19, 74, "Print",
+ CellTags->"Info3623480016-2731034"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)

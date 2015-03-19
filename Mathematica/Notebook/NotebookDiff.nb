@@ -1,0 +1,37 @@
+Notebook[{
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"NotebookOpen", "@", 
+   RowBox[{"FileNameJoin", "[", 
+    RowBox[{"{", 
+     RowBox[{
+     "$InstallationDirectory", ",", "\"\<AddOns\>\"", ",", 
+      "\"\<Applications\>\"", ",", "\"\<AuthorTools\>\"", ",", 
+      "\"\<FrontEnd\>\"", ",", "\"\<TextResources\>\"", ",", 
+      "\"\<NotebookDiff.nb\>\""}], "}"}], "]"}]}], ";"}]], "Input"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"nb", "=", 
+   RowBox[{"NotebookOpen", "[", 
+    RowBox[{"FileNameJoin", "[", 
+     RowBox[{"{", 
+      RowBox[{
+      "$InstallationDirectory", ",", "\"\<AddOns\>\"", ",", 
+       "\"\<Applications\>\"", ",", "\"\<AuthorTools\>\"", ",", 
+       "\"\<Documentation\>\"", ",", "\"\<English\>\"", ",", 
+       "\"\<AuthorToolsGuide.nb\>\""}], "}"}], "]"}], "]"}]}], ";", 
+  RowBox[{"SelectionMove", "[", 
+   RowBox[{"nb", ",", "Before", ",", "Notebook"}], "]"}], ";", 
+  RowBox[{"NotebookFind", "[", 
+   RowBox[{
+   "nb", ",", "\"\<Finding Differences\>\"", ",", "Next", ",", "CellTags"}], 
+   "]"}], ";"}]], "Input"]
+},
+WindowSize->{740, 752},
+WindowMargins->{{4, Automatic}, {Automatic, 4}},
+FrontEndVersion->"8.0 for Mac OS X x86 (32-bit, 64-bit Kernel) (October 5, \
+2011)",
+StyleDefinitions->"Default.nb"
+]
+
