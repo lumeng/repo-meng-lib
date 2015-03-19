@@ -7,7 +7,7 @@
 #+
 #+ ## History:
 #+
-#+ ## Repository: https://github.com/lumeng/repogit-mengapps/blob/master/file-system/add-filename-extension-to-image-files.sh
+#+ ## Repository: https://github.com/lumeng/repo-meng-lib/blob/master/Bash/mengLog.sh
 #+
 #+ ## Example:
 #+ $ ./logging_example.sh
@@ -34,7 +34,7 @@ set -e
 #+ 7. SEVERE                   ERROR
 #+ 6. WARNING                  WARN
 #+ 5. INFO                     INFO
-#+ 4. CONFIG                   
+#+ 4. CONFIG
 #+ 3. FINE                     DEBUG
 #+ 2. FINER                    TRACE
 #+ 1. FINEST                   ALL
@@ -59,26 +59,26 @@ mengLOGGING_LEVEL=$mengLOGGING_LEVEL_DEFAULT
 
 
 function mengLog () {
-	local level
-	case "$1" in
-		"FINEST") level=1;;
-		"ALL") level=1;;
-		"FINER") level=2;;
-		"TRACE") level=2;;
-		"FINE") level=3;;
-		"DEBUG") level=3;;
-		"CONFIG") level=4;;
-		"INFO") level=5;;
-		"WARNING") level=6;;
-		"WARN") level=6;;
-		"SEVERE") level=7;;
-		"ERROR") level=7;;
-		"FATAL") level=8;;
-		"OFF") level=9;;
-		*) level=$mengLOGGING_LEVEL_DEFAULT;;
+    local level
+    case "$1" in
+	"FINEST") level=1;;
+	"ALL") level=1;;
+	"FINER") level=2;;
+	"TRACE") level=2;;
+	"FINE") level=3;;
+	"DEBUG") level=3;;
+	"CONFIG") level=4;;
+	"INFO") level=5;;
+	"WARNING") level=6;;
+	"WARN") level=6;;
+	"SEVERE") level=7;;
+	"ERROR") level=7;;
+	"FATAL") level=8;;
+	"OFF") level=9;;
+	*) level=$mengLOGGING_LEVEL_DEFAULT;;
     esac
     if [[ "$level" -ge "$mengLOGGING_LEVEL" ]]; then
-        echo "[$1] $(date '+%H:%m:%S'): $2" 
+	echo "[$1] $(date '+%H:%m:%S'): $2"
     fi
 }
 
