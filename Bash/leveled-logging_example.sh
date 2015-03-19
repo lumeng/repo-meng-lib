@@ -16,7 +16,10 @@
 #+ [XXX] 00:03:10: level=9, an message.
 ##
 
-source "$DROPBOX_PATH/WorkSpace-Dropbox/Computing/repo-meng-lib/Bash/mengLog.sh"
+## Idiom for getting this Bash script's directory path.
+THIS_DIR=$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )
+
+source "$THIS_DIR/mengLog.sh"
 
 mengLog "FINEST" "level=1, an message."
 mengLog "ALL" "level=1, an message."
