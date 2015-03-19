@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 ##
-#+ ## Summary: a naive way to do logging with various levels in Bash.
+#+ ## Summary: a naive way to do leveled logging in Bash.
 #+
 #+ ## Author: Meng Lu <lumeng.dev@gmail.com>
 #+
