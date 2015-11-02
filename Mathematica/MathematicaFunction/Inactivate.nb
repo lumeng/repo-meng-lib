@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[      3171,        133]
-NotebookOptionsPosition[      2353,         97]
-NotebookOutlinePosition[      2708,        113]
-CellTagsIndexPosition[      2665,        110]
+NotebookDataLength[     26694,        911]
+NotebookOptionsPosition[     23284,        790]
+NotebookOutlinePosition[     23888,        814]
+CellTagsIndexPosition[     23803,        809]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -21,6 +21,129 @@ Notebook[{
 
 Cell[CellGroupData[{
 Cell["Inactivate", "Title"],
+
+Cell[CellGroupData[{
+
+Cell["Basic usage", "Section",
+ CellChangeTimes->{{3.6373323017700453`*^9, 3.6373323031291647`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{"ClearAll", "[", 
+  RowBox[{"f", ",", "g", ",", "h", ",", "x"}], "]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Inactivate", "[", 
+   RowBox[{
+    RowBox[{"f", "[", "x", "]"}], "+", 
+    RowBox[{"g", "[", "x", "]"}], "+", 
+    RowBox[{"h", "[", "x", "]"}]}], "]"}], "//", 
+  "FullForm"}], "\[IndentingNewLine]", 
+ RowBox[{"Inactivate", "[", 
+  RowBox[{
+   RowBox[{"f", "[", "x", "]"}], "+", 
+   RowBox[{"g", "[", "x", "]"}], "+", 
+   RowBox[{"h", "[", "x", "]"}]}], "]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Inactivate", "[", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"f", "[", "x", "]"}], "+", 
+     RowBox[{"g", "[", "x", "]"}], "+", 
+     RowBox[{"h", "[", "x", "]"}]}], ",", 
+    RowBox[{"f", "|", "g"}]}], "]"}], "//", 
+  "FullForm"}], "\[IndentingNewLine]", 
+ RowBox[{"Inactivate", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"f", "[", "x", "]"}], "+", 
+    RowBox[{"g", "[", "x", "]"}], "+", 
+    RowBox[{"h", "[", "x", "]"}]}], ",", 
+   RowBox[{"f", "|", "g"}]}], "]"}]}], "Input",
+ CellChangeTimes->{{3.6373321932980127`*^9, 3.637332283231965*^9}}],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   RowBox[{
+    RowBox[{"Inactive", "[", "Plus", "]"}], "[", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"Inactive", "[", "f", "]"}], "[", "x", "]"}], ",", 
+     RowBox[{
+      RowBox[{"Inactive", "[", "g", "]"}], "[", "x", "]"}], ",", 
+     RowBox[{
+      RowBox[{"Inactive", "[", "h", "]"}], "[", "x", "]"}]}], "]"}],
+   ShowSpecialCharacters->False,
+   ShowStringCharacters->True,
+   NumberMarks->True],
+  FullForm]], "Output",
+ CellChangeTimes->{{3.6373322491056957`*^9, 3.63733230649631*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   TemplateBox[{"f"},
+    "InactiveHead",
+    BaseStyle->"Inactive",
+    SyntaxForm->"Symbol",
+    Tooltip->"Inactive[f]"], "[", "x", "]"}], 
+  TagBox["+",
+   "InactiveToken",
+   BaseStyle->"Inactive",
+   SyntaxForm->"+"], 
+  RowBox[{
+   TemplateBox[{"g"},
+    "InactiveHead",
+    BaseStyle->"Inactive",
+    SyntaxForm->"Symbol",
+    Tooltip->"Inactive[g]"], "[", "x", "]"}], 
+  TagBox["+",
+   "InactiveToken",
+   BaseStyle->"Inactive",
+   SyntaxForm->"+"], 
+  RowBox[{
+   TemplateBox[{"h"},
+    "InactiveHead",
+    BaseStyle->"Inactive",
+    SyntaxForm->"Symbol",
+    Tooltip->"Inactive[h]"], "[", "x", "]"}]}]], "Output",
+ CellChangeTimes->{{3.6373322491056957`*^9, 3.6373323065059834`*^9}}],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   RowBox[{"Plus", "[", 
+    RowBox[{
+     RowBox[{"h", "[", "x", "]"}], ",", 
+     RowBox[{
+      RowBox[{"Inactive", "[", "f", "]"}], "[", "x", "]"}], ",", 
+     RowBox[{
+      RowBox[{"Inactive", "[", "g", "]"}], "[", "x", "]"}]}], "]"}],
+   ShowSpecialCharacters->False,
+   ShowStringCharacters->True,
+   NumberMarks->True],
+  FullForm]], "Output",
+ CellChangeTimes->{{3.6373322491056957`*^9, 3.6373323065116777`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"h", "[", "x", "]"}], "+", 
+  RowBox[{
+   TemplateBox[{"f"},
+    "InactiveHead",
+    BaseStyle->"Inactive",
+    SyntaxForm->"Symbol",
+    Tooltip->"Inactive[f]"], "[", "x", "]"}], "+", 
+  RowBox[{
+   TemplateBox[{"g"},
+    "InactiveHead",
+    BaseStyle->"Inactive",
+    SyntaxForm->"Symbol",
+    Tooltip->"Inactive[g]"], "[", "x", "]"}]}]], "Output",
+ CellChangeTimes->{{3.6373322491056957`*^9, 3.63733230651908*^9}}]
+}, Open  ]]
+}, Open  ]],
 
 Cell[CellGroupData[{
 
@@ -52,6 +175,138 @@ Cell[BoxData[
 
 Cell[CellGroupData[{
 
+Cell[BoxData[
+ RowBox[{"\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"Inactivate", "[", 
+    RowBox[{"Entity", "[", 
+     RowBox[{"\"\<Word\>\"", ",", "\"\<dog\>\""}], "]"}], "]"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"Inactivate", "[", 
+     RowBox[{"Entity", "[", 
+      RowBox[{"\"\<Word\>\"", ",", "\"\<dog\>\""}], "]"}], "]"}], "//", 
+    "FullForm"}]}]}]], "Input",
+ CellChangeTimes->{{3.637332973575603*^9, 3.637332974452093*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  TemplateBox[{"Entity"},
+   "InactiveHead",
+   BaseStyle->"Inactive",
+   SyntaxForm->"Symbol",
+   Tooltip->"Inactive[Entity]"], "[", 
+  RowBox[{"\<\"Word\"\>", ",", "\<\"dog\"\>"}], "]"}]], "Output",
+ CellChangeTimes->{3.637332503447945*^9, 3.637332974999516*^9, 
+  3.637333942643572*^9}],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   RowBox[{
+    RowBox[{"Inactive", "[", "Entity", "]"}], "[", 
+    RowBox[{"\"\<Word\>\"", ",", "\"\<dog\>\""}], "]"}],
+   ShowSpecialCharacters->False,
+   ShowStringCharacters->True,
+   NumberMarks->True],
+  FullForm]], "Output",
+ CellChangeTimes->{3.637332503447945*^9, 3.637332974999516*^9, 
+  3.6373339426511717`*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"x", "=", 
+   RowBox[{"Entity", "[", 
+    RowBox[{"\"\<Word\>\"", ",", "\"\<dog\>\""}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Inactivate", "[", "x", "]"}], "//", "FullForm"}]}], "Input",
+ CellChangeTimes->{{3.6373318684991302`*^9, 3.637331869799954*^9}, {
+   3.637332491414508*^9, 3.6373325019235563`*^9}, 3.637332977728222*^9}],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   RowBox[{"Entity", "[", 
+    RowBox[{"\"\<Word\>\"", ",", "\"\<dog\>\""}], "]"}],
+   ShowSpecialCharacters->False,
+   ShowStringCharacters->True,
+   NumberMarks->True],
+  FullForm]], "Output",
+ CellChangeTimes->{3.637331817742141*^9, 3.637331870104476*^9, 
+  3.6373324862233257`*^9, 3.637332530468327*^9, 3.63733297874587*^9, 
+  3.637333177646236*^9, 3.6373339452111673`*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{"Depth", "[", "xx", "]"}], "\[IndentingNewLine]", 
+ RowBox[{"Length", "[", "xx", "]"}], "\[IndentingNewLine]", 
+ RowBox[{"Depth", "[", 
+  RowBox[{"h", "[", "xx", "]"}], "]"}], "\[IndentingNewLine]", 
+ RowBox[{"Length", "[", 
+  RowBox[{"h", "[", "xx", "]"}], "]"}]}], "Input",
+ CellChangeTimes->{{3.637334169164357*^9, 3.6373341927786827`*^9}}],
+
+Cell[BoxData["1"], "Output",
+ CellChangeTimes->{{3.637334179684622*^9, 3.637334193195767*^9}}],
+
+Cell[BoxData["0"], "Output",
+ CellChangeTimes->{{3.637334179684622*^9, 3.63733419320299*^9}}],
+
+Cell[BoxData["2"], "Output",
+ CellChangeTimes->{{3.637334179684622*^9, 3.637334193208929*^9}}],
+
+Cell[BoxData["1"], "Output",
+ CellChangeTimes->{{3.637334179684622*^9, 3.6373341932145576`*^9}}]
+}, Open  ]],
+
+Cell[TextData[{
+ "Inactivate has ",
+ StyleBox["HoldFirst", "Code"],
+ " expression, so ",
+ StyleBox["x", "Code"],
+ " is not evaluated to ",
+ StyleBox["Entity[\[OpenCurlyDoubleQuote]Word\[CloseCurlyDoubleQuote],\
+\[CloseCurlyDoubleQuote]dog\[CloseCurlyDoubleQuote]]", "Code"],
+ ". Inactivate will wrap the heads with ",
+ StyleBox["Inactivate", "Code"],
+ ", but ",
+ StyleBox["x", "Code"],
+ " is of depth 1 and does not have a head, hence ",
+ StyleBox["Inactivate[x]", "Code"],
+ " will return ",
+ StyleBox["x", "Code"],
+ " which then evaluate to ",
+ StyleBox["Entity[\[OpenCurlyDoubleQuote]Word\[CloseCurlyDoubleQuote],\
+\[CloseCurlyDoubleQuote]dog\[CloseCurlyDoubleQuote]]", "Code"],
+ ".  But if one temporarily removes the ",
+ StyleBox["HoldFirst", "Code"],
+ " attribute, ",
+ StyleBox["x", "Code"],
+ " evaluates to ",
+ StyleBox["Entity[\[OpenCurlyDoubleQuote]Word\[CloseCurlyDoubleQuote],\
+\[CloseCurlyDoubleQuote]dog\[CloseCurlyDoubleQuote]]", "Code"],
+ " and ",
+ StyleBox["Inactivate", "Code"],
+ " applies ",
+ StyleBox["Inactivate", "Code"],
+ " to the head ",
+ StyleBox["Entity", "Code"],
+ "."
+}], "Text",
+ CellChangeTimes->{{3.637333949356842*^9, 3.63733396688311*^9}, {
+  3.637334037352807*^9, 3.63733404032126*^9}, {3.637334091287238*^9, 
+  3.6373341473575*^9}, {3.637334197228156*^9, 3.637334226742097*^9}, {
+  3.6373343729851513`*^9, 3.637334385966281*^9}, {3.637335740801362*^9, 
+  3.6373357677814703`*^9}}],
+
+Cell[CellGroupData[{
+
 Cell[BoxData[{
  RowBox[{"Unprotect", "[", "Inactivate", "]"}], "\[IndentingNewLine]", 
  RowBox[{
@@ -61,7 +316,7 @@ Cell[BoxData[{
  RowBox[{
   RowBox[{"x", "=", 
    RowBox[{"Entity", "[", 
-    RowBox[{"\"\<Word\>\"", ",", "\"\<fauna\>\""}], "]"}]}], 
+    RowBox[{"\"\<Word\>\"", ",", "\"\<dog\>\""}], "]"}]}], 
   ";"}], "\[IndentingNewLine]", 
  RowBox[{
   RowBox[{"Inactivate", "[", "x", "]"}], "//", 
@@ -72,65 +327,588 @@ Cell[BoxData[{
    RowBox[{"{", 
     RowBox[{"HoldFirst", ",", "Protected"}], "}"}]}], 
   ";"}], "\[IndentingNewLine]", 
- RowBox[{"Protect", "[", "Inactivate", "]"}], "\[IndentingNewLine]"}], "Input"],
+ RowBox[{"Protect", "[", "Inactivate", "]"}], "\[IndentingNewLine]"}], "Input",\
+
+ CellChangeTimes->{{3.6373329692057734`*^9, 3.6373329694759407`*^9}}],
 
 Cell[BoxData[
- RowBox[{"{", "\<\"Inactivate\"\>", "}"}]], "Output"],
+ RowBox[{"{", "\<\"Inactivate\"\>", "}"}]], "Output",
+ CellChangeTimes->{3.637331994264378*^9, 3.6373327766185293`*^9, 
+  3.637332969852334*^9}],
 
 Cell[BoxData[
  TagBox[
   StyleBox[
    RowBox[{
     RowBox[{"Inactive", "[", "Entity", "]"}], "[", 
-    RowBox[{"\"\<Word\>\"", ",", "\"\<fauna\>\""}], "]"}],
+    RowBox[{"\"\<Word\>\"", ",", "\"\<dog\>\""}], "]"}],
+   ShowSpecialCharacters->False,
+   ShowStringCharacters->True,
+   NumberMarks->True],
+  FullForm]], "Output",
+ CellChangeTimes->{3.637331994264378*^9, 3.6373327766185293`*^9, 
+  3.637332969859602*^9}],
+
+Cell[BoxData[
+ RowBox[{"{", "}"}]], "Output",
+ CellChangeTimes->{3.637331994264378*^9, 3.6373327766185293`*^9, 
+  3.6373329698664913`*^9}]
+}, Open  ]],
+
+Cell[TextData[{
+ "Or if one applies Evaluate to ",
+ StyleBox["x", "Code"],
+ " so it evaluates to ",
+ StyleBox["Entity[\[OpenCurlyDoubleQuote]Word\[CloseCurlyDoubleQuote],\
+\[CloseCurlyDoubleQuote]dog\[CloseCurlyDoubleQuote]]", "Code"],
+ " and ",
+ StyleBox["Inactivate", "Code"],
+ " applies ",
+ StyleBox["Inactivate", "Code"],
+ " to the head ",
+ StyleBox["Entity", "Code"],
+ "."
+}], "Text",
+ CellChangeTimes->{{3.637335880077278*^9, 3.637335914244458*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Avoid nested With by using Inactivate", "Subsection",
+ CellChangeTimes->{{3.637331652031948*^9, 3.637331660406435*^9}}],
+
+Cell[CellGroupData[{
+
+Cell["IteratedWith", "Subsubsection",
+ CellChangeTimes->{{3.637463176358005*^9, 3.637463178364979*^9}}],
+
+Cell[BoxData[{
+ RowBox[{"ClearAll", "[", "IteratedWith", "]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"SetAttributes", "[", 
+    RowBox[{"IteratedWith", ",", "HoldAll"}], "]"}], ";"}], 
+  "\[IndentingNewLine]", 
+  RowBox[{"(*", 
+   RowBox[{
+    RowBox[{"IterateWith", "[", "withExpr_", "]"}], ":=", 
+    RowBox[{
+     RowBox[{"Inactivate", "[", "withExpr", "]"}], "//.", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"Inactive", "[", "With", "]"}], "[", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{"first_", ",", "rest__"}], "}"}], ",", "body_"}], "]"}], 
+      "\[RuleDelayed]", " ", 
+      RowBox[{
+       RowBox[{"Inactive", "[", "With", "]"}], "[", 
+       RowBox[{
+        RowBox[{"{", "first", "}"}], ",", 
+        RowBox[{
+         RowBox[{"Inactive", "[", "With", "]"}], "[", 
+         RowBox[{
+          RowBox[{"{", "rest", "}"}], ",", "body"}], "]"}]}], "]"}]}]}]}], 
+   "*)"}], "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"IteratedWith", "[", 
+   RowBox[{"args_", ",", "expr__"}], "]"}], ":=", 
+  RowBox[{"Activate", "[", 
+   RowBox[{
+    RowBox[{"Inactivate", "[", 
+     RowBox[{"With", "[", 
+      RowBox[{"args", ",", "expr"}], "]"}], "]"}], "//.", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"Inactive", "[", "With", "]"}], "[", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"first_", ",", "rest__"}], "}"}], ",", "body_"}], "]"}], 
+     "\[RuleDelayed]", " ", 
+     RowBox[{
+      RowBox[{"Inactive", "[", "With", "]"}], "[", 
+      RowBox[{
+       RowBox[{"{", "first", "}"}], ",", 
+       RowBox[{
+        RowBox[{"Inactive", "[", "With", "]"}], "[", 
+        RowBox[{
+         RowBox[{"{", "rest", "}"}], ",", "body"}], "]"}]}], "]"}]}]}], 
+   "]"}]}]}], "Input",
+ CellChangeTimes->{{3.6373423383224916`*^9, 3.637342486927903*^9}, {
+   3.637342646115176*^9, 3.6373426478029203`*^9}, {3.637342775311854*^9, 
+   3.6373427995267344`*^9}, {3.6373428490509367`*^9, 3.637342854176626*^9}, {
+   3.6374537677349157`*^9, 3.637453774972095*^9}, {3.637453852931611*^9, 
+   3.637453854911111*^9}, 3.637454019260318*^9, {3.637456733343985*^9, 
+   3.637456734359164*^9}, {3.6374572783235407`*^9, 3.637457300681551*^9}, {
+   3.6374573360726433`*^9, 3.637457401289838*^9}, {3.637463123181096*^9, 
+   3.637463130716569*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"IteratedWith", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"a", "=", "1"}], ",", 
+     RowBox[{"b", "=", 
+      RowBox[{"a", "+", "2"}]}], ",", 
+     RowBox[{"c", "=", 
+      RowBox[{"b", "+", "3"}]}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"a", ",", "b", ",", "c"}], "}"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.637457442527767*^9, 3.6374574434645643`*^9}, 
+   3.6374631350775957`*^9}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"1", ",", "3", ",", "6"}], "}"}]], "Output",
+ CellChangeTimes->{3.63745744448302*^9, 3.637463135642416*^9}]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["shifrinLet", "Subsubsection",
+ CellChangeTimes->{{3.637463181605875*^9, 3.637463184326874*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"ClearAll", "[", "shifrinLet", "]"}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{"SetAttributes", "[", 
+   RowBox[{"shifrinLet", ",", "HoldAll"}], "]"}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    RowBox[{"SyntaxInformation", "[", "shifrinLet", "]"}], "=", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"\"\<ArgumentsPattern\>\"", "\[Rule]", 
+       RowBox[{"{", 
+        RowBox[{"_", ",", "_"}], "}"}]}], ",", 
+      RowBox[{"\"\<LocalVariables\>\"", "\[Rule]", 
+       RowBox[{"{", 
+        RowBox[{"\"\<Solve\>\"", ",", 
+         RowBox[{"{", 
+          RowBox[{"1", ",", "Infinity"}], "}"}]}], "}"}]}]}], "}"}]}], ";"}], 
+  "\n"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"shifrinLet", "/:", 
+   RowBox[{
+    RowBox[{"Verbatim", "[", "SetDelayed", "]"}], "[", 
+    RowBox[{"lhs_", ",", 
+     RowBox[{"rhs", ":", 
+      RowBox[{"HoldPattern", "[", 
+       RowBox[{"shifrinLet", "[", 
+        RowBox[{
+         RowBox[{"{", "__", "}"}], ",", "_"}], "]"}], "]"}]}]}], "]"}], ":=", 
+   
+   RowBox[{"Block", "[", 
+    RowBox[{
+     RowBox[{"{", "With", "}"}], ",", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"Attributes", "[", "With", "]"}], "=", 
+       RowBox[{"{", "HoldAll", "}"}]}], ";", "\[IndentingNewLine]", 
+      RowBox[{"lhs", ":=", 
+       RowBox[{"Evaluate", "[", "rhs", "]"}]}]}]}], "]"}]}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"shifrinLet", "[", 
+    RowBox[{
+     RowBox[{"{", "}"}], ",", "expr_"}], "]"}], ":=", "expr"}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"shifrinLet", "[", 
+    RowBox[{
+     RowBox[{"{", "head_", "}"}], ",", "expr_"}], "]"}], ":=", 
+   RowBox[{"With", "[", 
+    RowBox[{
+     RowBox[{"{", "head", "}"}], ",", "expr"}], "]"}]}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"shifrinLet", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"head_", ",", "tail__"}], "}"}], ",", "expr_"}], "]"}], ":=", 
+   RowBox[{"Block", "[", 
+    RowBox[{
+     RowBox[{"{", "With", "}"}], ",", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"Attributes", "[", "With", "]"}], "=", 
+       RowBox[{"{", "HoldAll", "}"}]}], ";", "\[IndentingNewLine]", 
+      RowBox[{"With", "[", 
+       RowBox[{
+        RowBox[{"{", "head", "}"}], ",", 
+        RowBox[{"Evaluate", "[", 
+         RowBox[{"shifrinLet", "[", 
+          RowBox[{
+           RowBox[{"{", "tail", "}"}], ",", "expr"}], "]"}], "]"}]}], 
+       "]"}]}]}], "]"}]}], ";"}]}], "Input",
+ CellChangeTimes->{{3.637455916966115*^9, 3.637455946894885*^9}, {
+  3.6374563738042383`*^9, 3.637456399030477*^9}, {3.637463150764792*^9, 
+  3.637463158764502*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{"shifrinLet", "[", 
+  RowBox[{
+   RowBox[{"{", "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"a", ",", "b", ",", "c"}], "}"}]}], 
+  "]"}], "\[IndentingNewLine]", 
+ RowBox[{"shifrinLet", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"a", "=", "1"}], "}"}], ",", 
+   RowBox[{"{", "a", "}"}]}], "]"}], "\[IndentingNewLine]", 
+ RowBox[{"shifrinLet", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"a", "=", "1"}], ",", 
+     RowBox[{"b", "=", 
+      RowBox[{"a", "+", "1"}]}], ",", 
+     RowBox[{"c", "=", 
+      RowBox[{"b", "+", "1"}]}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"a", ",", "b", ",", "c"}], "}"}]}], "]"}]}], "Input",
+ CellChangeTimes->{{3.63745640859944*^9, 3.637456425618763*^9}, {
+  3.637457485784315*^9, 3.637457498205996*^9}, {3.637463159653201*^9, 
+  3.637463161626655*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"a", ",", "b", ",", "c"}], "}"}]], "Output",
+ CellChangeTimes->{3.637456425928987*^9, 3.6374568991494637`*^9, 
+  3.637457500057952*^9, 3.6374632130186243`*^9}],
+
+Cell[BoxData[
+ RowBox[{"{", "1", "}"}]], "Output",
+ CellChangeTimes->{3.637456425928987*^9, 3.6374568991494637`*^9, 
+  3.637457500057952*^9, 3.6374632130258303`*^9}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"1", ",", "2", ",", "3"}], "}"}]], "Output",
+ CellChangeTimes->{3.637456425928987*^9, 3.6374568991494637`*^9, 
+  3.637457500057952*^9, 3.637463213036515*^9}]
+}, Open  ]],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"Clear", "[", "ff", "]"}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"ff", "[", 
+    RowBox[{"x_", ",", "y_"}], "]"}], ":=", 
+   RowBox[{"shifrinLet", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"xl", "=", "x"}], ",", 
+       RowBox[{"yl", "=", 
+        RowBox[{"y", "+", "xl", "+", "1"}]}]}], "}"}], ",", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"xl", "^", "2"}], "+", 
+       RowBox[{"yl", "^", "2"}]}], "/;", 
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"xl", "+", "yl"}], "<", "15"}], ")"}]}]}], "]"}]}], 
+  ";"}], "\n", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"ff", "[", 
+    RowBox[{"x_", ",", "y_"}], "]"}], ":=", 
+   RowBox[{"x", "+", "y"}]}], ";"}]}], "Input",
+ CellChangeTimes->{{3.637460317101549*^9, 3.637460322947516*^9}, 
+   3.637463165575693*^9}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"?", "ff"}]], "Input",
+ CellChangeTimes->{{3.63746032722164*^9, 3.6374603276322517`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell["Global`ff", "Print", "PrintUsage",
+ CellChangeTimes->{3.6374632185158577`*^9},
+ CellTags->"Info3637438018-7075610"],
+
+Cell[BoxData[
+ InterpretationBox[GridBox[{
+    {GridBox[{
+       {
+        RowBox[{
+         RowBox[{"ff", "[", 
+          RowBox[{"x_", ",", "y_"}], "]"}], ":=", 
+         RowBox[{"With", "[", 
+          RowBox[{
+           RowBox[{"{", 
+            RowBox[{"xl", "=", "x"}], "}"}], ",", 
+           RowBox[{"With", "[", 
+            RowBox[{
+             RowBox[{"{", 
+              RowBox[{"yl", "=", 
+               RowBox[{"y", "+", "xl", "+", "1"}]}], "}"}], ",", 
+             RowBox[{
+              RowBox[{
+               SuperscriptBox["xl", "2"], "+", 
+               SuperscriptBox["yl", "2"]}], "/;", 
+              RowBox[{
+               RowBox[{"xl", "+", "yl"}], "<", "15"}]}]}], "]"}]}], "]"}]}]},
+       {" "},
+       {
+        RowBox[{
+         RowBox[{"ff", "[", 
+          RowBox[{"x_", ",", "y_"}], "]"}], ":=", 
+         RowBox[{"x", "+", "y"}]}]}
+      },
+      BaselinePosition->{Baseline, {1, 1}},
+      GridBoxAlignment->{
+       "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+        "RowsIndexed" -> {}},
+      GridBoxItemSize->{"Columns" -> {{
+           Scaled[0.999]}}, "ColumnsIndexed" -> {}, "Rows" -> {{1.}}, 
+        "RowsIndexed" -> {}}]}
+   },
+   BaselinePosition->{Baseline, {1, 1}},
+   GridBoxAlignment->{
+    "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+     "RowsIndexed" -> {}}],
+  Definition[$CellContext`ff],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.637463218535647*^9},
+ CellTags->"Info3637438018-7075610"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["\<\
+Inactivate on Alternatives and Hold\
+\>", "Subsection"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"Inactivate", "[", 
+   RowBox[{"f", "[", 
+    RowBox[{"a", ",", "b"}], "]"}], "]"}], "//", 
+  "InputForm"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Inactivate", "[", 
+   RowBox[{"f", "[", 
+    RowBox[{"a", ",", "b"}], "]"}], "]"}], "//", "FullForm"}]}], "Input",
+ CellChangeTimes->{
+  3.638122036756551*^9, {3.638122123763598*^9, 3.6381221277833014`*^9}}],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   RowBox[{
+    RowBox[{"Inactive", "[", "f", "]"}], "[", 
+    RowBox[{"a", ",", "b"}], "]"}],
+   ShowSpecialCharacters->False,
+   ShowStringCharacters->True,
+   NumberMarks->True],
+  FullForm]], "Output",
+ CellChangeTimes->{3.638122037197743*^9, 3.6381221282357283`*^9}],
+
+Cell["Inactive[f][a, b]", "Output",
+ CellChangeTimes->{3.638122037197743*^9, 3.638122128241507*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"Inactivate", "[", 
+   RowBox[{"Alternatives", "[", 
+    RowBox[{"a", ",", "b"}], "]"}], "]"}], "//", 
+  "InputForm"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Inactivate", "[", 
+   RowBox[{"Alternatives", "[", 
+    RowBox[{"a", ",", "b"}], "]"}], "]"}], "//", "FullForm"}]}], "Input",
+ CellChangeTimes->{{3.638122091506072*^9, 3.638122091759121*^9}}],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   RowBox[{"Alternatives", "[", 
+    RowBox[{"a", ",", "b"}], "]"}],
+   ShowSpecialCharacters->False,
+   ShowStringCharacters->True,
+   NumberMarks->True],
+  FullForm]], "Output",
+ CellChangeTimes->{3.638122005953231*^9, 3.6381220921525097`*^9, 
+  3.638122164448141*^9}],
+
+Cell["a | b", "Output",
+ CellChangeTimes->{3.638122005953231*^9, 3.6381220921525097`*^9, 
+  3.6381221644571733`*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"Inactivate", "[", 
+   RowBox[{"Hold", "[", 
+    RowBox[{"a", ",", "b"}], "]"}], "]"}], "//", 
+  "InputForm"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Inactivate", "[", 
+   RowBox[{"Hold", "[", 
+    RowBox[{"a", ",", "b"}], "]"}], "]"}], "//", "FullForm"}]}], "Input"],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   RowBox[{"Inactivate", "[", 
+    RowBox[{"Hold", "[", 
+     RowBox[{"a", ",", "b"}], "]"}], "]"}],
    ShowSpecialCharacters->False,
    ShowStringCharacters->True,
    NumberMarks->True],
   FullForm]], "Output"],
 
-Cell[BoxData[
- RowBox[{"{", "}"}]], "Output"]
+Cell["Inactivate[Hold[a, b]]", "Output"]
 }, Open  ]]
 }, Open  ]]
 }, Open  ]]
 }, Open  ]]
 },
 WindowSize->{808, 751},
-WindowMargins->{{4, Automatic}, {Automatic, 4}},
-FrontEndVersion->"10.0 for Mac OS X x86 (32-bit, 64-bit Kernel) (December 4, \
-2014)",
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+ShowSelection->True,
+FrontEndVersion->"9.0 for Mac OS X x86 (32-bit, 64-bit Kernel) (May 19, 2013)",
 StyleDefinitions->"Default.nb"
 ]
 (* End of Notebook Content *)
 
 (* Internal cache information *)
 (*CellTagsOutline
-CellTagsIndex->{}
+CellTagsIndex->{
+ "Info3637438018-7075610"->{
+  Cell[19130, 638, 121, 2, 40, "Print",
+   CellTags->"Info3637438018-7075610"],
+  Cell[19254, 642, 1515, 44, 57, "Print",
+   CellTags->"Info3637438018-7075610"]}
+ }
 *)
 (*CellTagsIndex
-CellTagsIndex->{}
+CellTagsIndex->{
+ {"Info3637438018-7075610", 23617, 801}
+ }
 *)
 (*NotebookFileOutline
 Notebook[{
 Cell[CellGroupData[{
 Cell[580, 22, 27, 0, 92, "Title"],
 Cell[CellGroupData[{
-Cell[632, 26, 25, 0, 64, "Section"],
+Cell[632, 26, 100, 1, 80, "Section"],
 Cell[CellGroupData[{
-Cell[682, 30, 56, 0, 44, "Subsection"],
-Cell[CellGroupData[{
-Cell[763, 34, 68, 1, 28, "Input"],
-Cell[834, 37, 93, 2, 28, "Output"]
+Cell[757, 31, 1090, 31, 100, "Input"],
+Cell[1850, 64, 530, 16, 28, "Output"],
+Cell[2383, 82, 728, 28, 28, "Output"],
+Cell[3114, 112, 457, 14, 28, "Output"],
+Cell[3574, 128, 451, 15, 28, "Output"]
+}, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[964, 44, 72, 1, 28, "Input"],
-Cell[1039, 47, 89, 2, 28, "Output"]
+Cell[4074, 149, 25, 0, 80, "Section"],
+Cell[CellGroupData[{
+Cell[4124, 153, 56, 0, 44, "Subsection"],
+Cell[CellGroupData[{
+Cell[4205, 157, 68, 1, 28, "Input"],
+Cell[4276, 160, 93, 2, 28, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[1165, 54, 747, 20, 131, "Input"],
-Cell[1915, 76, 67, 1, 28, "Output"],
-Cell[1985, 79, 268, 9, 39, "Output"],
-Cell[2256, 90, 45, 1, 28, "Output"]
+Cell[4406, 167, 72, 1, 28, "Input"],
+Cell[4481, 170, 89, 2, 28, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[4607, 177, 453, 12, 63, "Input"],
+Cell[5063, 191, 313, 9, 28, "Output"],
+Cell[5379, 202, 357, 11, 28, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[5773, 218, 389, 9, 46, "Input"],
+Cell[6165, 229, 412, 11, 28, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[6614, 245, 367, 7, 80, "Input"],
+Cell[6984, 254, 94, 1, 28, "Output"],
+Cell[7081, 257, 93, 1, 28, "Output"],
+Cell[7177, 260, 94, 1, 28, "Output"],
+Cell[7274, 263, 96, 1, 28, "Output"]
+}, Open  ]],
+Cell[7385, 267, 1413, 38, 87, "Text"],
+Cell[CellGroupData[{
+Cell[8823, 309, 817, 22, 131, "Input"],
+Cell[9643, 333, 158, 3, 28, "Output"],
+Cell[9804, 338, 357, 11, 28, "Output"],
+Cell[10164, 351, 138, 3, 28, "Output"]
+}, Open  ]],
+Cell[10317, 357, 455, 14, 49, "Text"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[10809, 376, 125, 1, 44, "Subsection"],
+Cell[CellGroupData[{
+Cell[10959, 381, 103, 1, 35, "Subsubsection"],
+Cell[11065, 384, 2286, 59, 182, "Input"],
+Cell[CellGroupData[{
+Cell[13376, 447, 434, 13, 28, "Input"],
+Cell[13813, 462, 146, 3, 28, "Output"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[14008, 471, 101, 1, 35, "Subsubsection"],
+Cell[14112, 474, 2590, 77, 216, "Input"],
+Cell[CellGroupData[{
+Cell[16727, 555, 829, 25, 63, "Input"],
+Cell[17559, 582, 198, 4, 28, "Output"],
+Cell[17760, 588, 165, 3, 28, "Output"],
+Cell[17928, 593, 196, 4, 28, "Output"]
+}, Open  ]],
+Cell[18139, 600, 829, 28, 63, "Input"],
+Cell[CellGroupData[{
+Cell[18993, 632, 112, 2, 28, "Input"],
+Cell[CellGroupData[{
+Cell[19130, 638, 121, 2, 40, "Print",
+ CellTags->"Info3637438018-7075610"],
+Cell[19254, 642, 1515, 44, 57, "Print",
+ CellTags->"Info3637438018-7075610"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[20842, 694, 65, 2, 44, "Subsection"],
+Cell[CellGroupData[{
+Cell[20932, 700, 396, 11, 46, "Input"],
+Cell[21331, 713, 306, 10, 28, "Output"],
+Cell[21640, 725, 99, 1, 29, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[21776, 731, 391, 10, 46, "Input"],
+Cell[22170, 743, 305, 10, 28, "Output"],
+Cell[22478, 755, 116, 2, 29, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[22631, 762, 309, 9, 46, "Input"],
+Cell[22943, 773, 246, 9, 39, "Output"],
+Cell[23192, 784, 40, 0, 29, "Output"]
 }, Open  ]]
 }, Open  ]]
 }, Open  ]]

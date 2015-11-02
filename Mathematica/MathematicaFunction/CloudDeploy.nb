@@ -1,0 +1,358 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 10.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     10272,        349]
+NotebookOptionsPosition[      8628,        283]
+NotebookOutlinePosition[      9138,        305]
+CellTagsIndexPosition[      9054,        300]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["CloudDeploy", "Title"],
+
+Cell[CellGroupData[{
+
+Cell["Log in Wolfram Cloud", "Subsection"],
+
+Cell[TextData[{
+ "In ",
+ StyleBox["Mathematica",
+  FontSlant->"Italic"],
+ " menu Help, sign in Woflram Cloud if not already."
+}], "Text"],
+
+Cell[TextData[{
+ "Check that ",
+ StyleBox["$CloudBase", "Code"],
+ " points to right URI."
+}], "Text"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData["$CloudBase"], "Input"],
+
+Cell[BoxData["\<\"https://www.test.wolframcloud.com/\"\>"], "Output"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Example: private", "Subsection"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"CloudDeploy", "[", 
+  RowBox[{
+   RowBox[{"42", "!"}], ",", 
+   RowBox[{"Permissions", "\[Rule]", "\"\<Private\>\""}]}], "]"}]], "Input"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"CloudObject", "[", 
+   TagBox[
+    ButtonBox[
+     PaneSelectorBox[{
+      False->"\<\"https://www.wolframcloud.com/objects/6c4e2fd7-8f46-4175-\
+ae9f-ffc32f964ffe\"\>", True->
+      StyleBox["\<\"https://www.wolframcloud.com/objects/6c4e2fd7-8f46-4175-\
+ae9f-ffc32f964ffe\"\>", "HyperlinkActive"]}, Dynamic[
+       CurrentValue["MouseOver"]],
+      BaseStyle->{"Hyperlink"},
+      FrameMargins->0,
+      ImageSize->Automatic],
+     BaseStyle->"Hyperlink",
+     ButtonData->{
+       URL[
+       "https://www.wolframcloud.com/objects/6c4e2fd7-8f46-4175-ae9f-\
+ffc32f964ffe"], None},
+     ButtonNote->
+      "https://www.wolframcloud.com/objects/6c4e2fd7-8f46-4175-ae9f-\
+ffc32f964ffe"],
+    Annotation[#, 
+     "https://www.wolframcloud.com/objects/6c4e2fd7-8f46-4175-ae9f-\
+ffc32f964ffe", "Hyperlink"]& ], "]"}],
+  CloudObject[
+  "https://www.wolframcloud.com/objects/6c4e2fd7-8f46-4175-ae9f-ffc32f964ffe"],
+  SelectWithContents->True]], "Output"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Example: public", "Subsection"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"CloudDeploy", "[", 
+  RowBox[{
+   RowBox[{"42", "!"}], ",", 
+   RowBox[{"Permissions", "\[Rule]", "\"\<Public\>\""}]}], "]"}]], "Input"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"CloudObject", "[", 
+   TagBox[
+    ButtonBox[
+     PaneSelectorBox[{
+      False->"\<\"https://www.wolframcloud.com/objects/92a3d486-551a-4dd5-\
+85f4-d99bcc524718\"\>", True->
+      StyleBox["\<\"https://www.wolframcloud.com/objects/92a3d486-551a-4dd5-\
+85f4-d99bcc524718\"\>", "HyperlinkActive"]}, Dynamic[
+       CurrentValue["MouseOver"]],
+      BaseStyle->{"Hyperlink"},
+      FrameMargins->0,
+      ImageSize->Automatic],
+     BaseStyle->"Hyperlink",
+     ButtonData->{
+       URL[
+       "https://www.wolframcloud.com/objects/92a3d486-551a-4dd5-85f4-\
+d99bcc524718"], None},
+     ButtonNote->
+      "https://www.wolframcloud.com/objects/92a3d486-551a-4dd5-85f4-\
+d99bcc524718"],
+    Annotation[#, 
+     "https://www.wolframcloud.com/objects/92a3d486-551a-4dd5-85f4-\
+d99bcc524718", "Hyperlink"]& ], "]"}],
+  CloudObject[
+  "https://www.wolframcloud.com/objects/92a3d486-551a-4dd5-85f4-d99bcc524718"],
+  SelectWithContents->True]], "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"CloudDeploy", "[", 
+  RowBox[{
+   RowBox[{"APIFunction", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"\"\<x\>\"", "\[Rule]", "\"\<Integer\>\""}], "}"}], ",", 
+     RowBox[{
+      RowBox[{"#x", "^", "2"}], "&"}]}], "]"}], ",", 
+   RowBox[{"Permissions", "\[Rule]", "\"\<Public\>\""}]}], "]"}]], "Input"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"CloudObject", "[", 
+   TagBox[
+    ButtonBox[
+     PaneSelectorBox[{
+      False->"\<\"https://www.wolframcloud.com/objects/b869f344-cf42-4e4c-\
+8bb6-1f1db9ecf81b\"\>", True->
+      StyleBox["\<\"https://www.wolframcloud.com/objects/b869f344-cf42-4e4c-\
+8bb6-1f1db9ecf81b\"\>", "HyperlinkActive"]}, Dynamic[
+       CurrentValue["MouseOver"]],
+      BaseStyle->{"Hyperlink"},
+      FrameMargins->0,
+      ImageSize->Automatic],
+     BaseStyle->"Hyperlink",
+     ButtonData->{
+       URL[
+       "https://www.wolframcloud.com/objects/b869f344-cf42-4e4c-8bb6-\
+1f1db9ecf81b"], None},
+     ButtonNote->
+      "https://www.wolframcloud.com/objects/b869f344-cf42-4e4c-8bb6-\
+1f1db9ecf81b"],
+    Annotation[#, 
+     "https://www.wolframcloud.com/objects/b869f344-cf42-4e4c-8bb6-\
+1f1db9ecf81b", "Hyperlink"]& ], "]"}],
+  CloudObject[
+  "https://www.wolframcloud.com/objects/b869f344-cf42-4e4c-8bb6-1f1db9ecf81b"],
+  SelectWithContents->True]], "Output"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Example: Share with other users", "Subsection"],
+
+Cell[TextData[{
+ "In ",
+ StyleBox["Mathematica",
+  FontSlant->"Italic"],
+ ", log in wolframcloud.com as user X (Xxx@example.com), and deploy the \
+following onto Cloud and share it to user Y identified by email \
+(Yyy@example.com).  Note X and Y should be two different users, otherwise an \
+error will be generated:\n\nCloudObject::selfperm: The currently \
+authenticated user xiaofeng@wolfram.com cannot be assigned specific \
+permissions. Owners always have full permissions on their objects. >>"
+}], "Text"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"CloudDeploy", "[", 
+  RowBox[{
+   RowBox[{"APIFunction", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"\"\<x\>\"", "\[Rule]", "\"\<Integer\>\""}], "}"}], ",", 
+     RowBox[{
+      RowBox[{"#x", "^", "#x"}], "&"}]}], "]"}], ",", 
+   RowBox[{"Permissions", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"{", "\"\<Yyy@example.com\>\"", "}"}], "\[Rule]", 
+      "\"\<Execute\>\""}], "}"}]}]}], "]"}]], "Input"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"CloudObject", "[", 
+   TagBox[
+    ButtonBox[
+     PaneSelectorBox[{
+      False->"\<\"https://www.wolframcloud.com/objects/1a2de9e3-3755-4827-\
+a624-4e823c5a908e\"\>", True->
+      StyleBox["\<\"https://www.wolframcloud.com/objects/1a2de9e3-3755-4827-\
+a624-4e823c5a908e\"\>", "HyperlinkActive"]}, Dynamic[
+       CurrentValue["MouseOver"]],
+      BaseStyle->{"Hyperlink"},
+      FrameMargins->0,
+      ImageSize->Automatic],
+     BaseStyle->"Hyperlink",
+     ButtonData->{
+       URL[
+       "https://www.wolframcloud.com/objects/1a2de9e3-3755-4827-a624-\
+4e823c5a908e"], None},
+     ButtonNote->
+      "https://www.wolframcloud.com/objects/1a2de9e3-3755-4827-a624-\
+4e823c5a908e"],
+    Annotation[#, 
+     "https://www.wolframcloud.com/objects/1a2de9e3-3755-4827-a624-\
+4e823c5a908e", "Hyperlink"]& ], "]"}],
+  CloudObject[
+  "https://www.wolframcloud.com/objects/1a2de9e3-3755-4827-a624-4e823c5a908e"],
+  SelectWithContents->True]], "Output"]
+}, Open  ]],
+
+Cell["\<\
+Now in Web browser, log in wolframcloud.com as user B, verify the above \
+CloudObject URI can be open and the function can be executed on the page.\
+\>", "Text"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["References", "Section"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"?", "CloudDeploy"}]], "Input"],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox["\<\"\\!\\(\\*RowBox[{\\\"CloudDeploy\\\", \\\"[\\\", \
+StyleBox[\\\"expr\\\", \\\"TI\\\"], \\\"]\\\"}]\\) deploys \\!\\(\\*StyleBox[\
+\\\"expr\\\", \\\"TI\\\"]\\) to a new anonymous cloud \
+object.\\n\\!\\(\\*RowBox[{\\\"CloudDeploy\\\", \\\"[\\\", \
+RowBox[{StyleBox[\\\"expr\\\", \\\"TI\\\"], \\\",\\\", \
+StyleBox[\\\"\\\\\\\"\\\\!\\\\(\\\\*StyleBox[\\\\\\\"uri\\\\\\\",\\\\\\\"TI\\\
+\\\\\"]\\\\)\\\\\\\"\\\", ShowStringCharacters->True]}], \\\"]\\\"}]\\) \
+deploys \\!\\(\\*StyleBox[\\\"expr\\\", \\\"TI\\\"]\\) to a cloud object at a \
+given URI.\\n\\!\\(\\*RowBox[{\\\"CloudDeploy\\\", \\\"[\\\", \
+RowBox[{StyleBox[\\\"expr\\\", \\\"TI\\\"], \\\",\\\", \
+RowBox[{\\\"CloudObject\\\", \\\"[\\\", \
+StyleBox[\\\"\\\\\\\"\\\\!\\\\(\\\\*StyleBox[\\\\\\\"uri\\\\\\\",\\\\\\\"TI\\\
+\\\\\"]\\\\)\\\\\\\"\\\", ShowStringCharacters->True], \\\"]\\\"}]}], \\\"]\\\
+\"}]\\) deploys \\!\\(\\*StyleBox[\\\"expr\\\", \\\"TI\\\"]\\) to a given \
+cloud object.\"\>", "MSG"], "\[NonBreakingSpace]", 
+  ButtonBox[
+   StyleBox["\[RightSkeleton]", "SR"],
+   Active->True,
+   BaseStyle->"Link",
+   ButtonData->"paclet:ref/CloudDeploy"]}]], "Print", "PrintUsage",
+ CellTags->"Info3636192727-6405231"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{808, 751},
+WindowMargins->{{100, Automatic}, {Automatic, 4}},
+FrontEndVersion->"10.0 for Mac OS X x86 (32-bit, 64-bit Kernel) (December 4, \
+2014)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{
+ "Info3636192727-6405231"->{
+  Cell[7367, 256, 1221, 22, 74, "Print",
+   CellTags->"Info3636192727-6405231"]}
+ }
+*)
+(*CellTagsIndex
+CellTagsIndex->{
+ {"Info3636192727-6405231", 8949, 294}
+ }
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 28, 0, 92, "Title"],
+Cell[CellGroupData[{
+Cell[633, 26, 42, 0, 44, "Subsection"],
+Cell[678, 28, 137, 5, 30, "Text"],
+Cell[818, 35, 101, 4, 30, "Text"],
+Cell[CellGroupData[{
+Cell[944, 43, 36, 0, 28, "Input"],
+Cell[983, 45, 69, 0, 28, "Output"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[1101, 51, 38, 0, 44, "Subsection"],
+Cell[CellGroupData[{
+Cell[1164, 55, 161, 4, 28, "Input"],
+Cell[1328, 61, 991, 27, 31, "Output"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[2368, 94, 37, 0, 44, "Subsection"],
+Cell[CellGroupData[{
+Cell[2430, 98, 160, 4, 28, "Input"],
+Cell[2593, 104, 991, 27, 31, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[3621, 136, 334, 9, 28, "Input"],
+Cell[3958, 147, 991, 27, 31, "Output"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[4998, 180, 53, 0, 44, "Subsection"],
+Cell[5054, 182, 511, 10, 125, "Text"],
+Cell[CellGroupData[{
+Cell[5590, 196, 449, 13, 46, "Input"],
+Cell[6042, 211, 991, 27, 31, "Output"]
+}, Open  ]],
+Cell[7048, 241, 171, 3, 49, "Text"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[7256, 249, 29, 0, 64, "Section"],
+Cell[CellGroupData[{
+Cell[7310, 253, 54, 1, 28, "Input"],
+Cell[7367, 256, 1221, 22, 74, "Print",
+ CellTags->"Info3636192727-6405231"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)

@@ -1,0 +1,114 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 9.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       157,          7]
+NotebookDataLength[      3361,        105]
+NotebookOptionsPosition[      2805,         80]
+NotebookOutlinePosition[      3139,         95]
+CellTagsIndexPosition[      3096,         92]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["SendMail", "Title",
+ CellChangeTimes->{{3.648330525918263*^9, 3.6483305320633287`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell["SendMail ", "Subsection",
+ CellChangeTimes->{{3.648330534564598*^9, 3.648330538975561*^9}}],
+
+Cell["\<\
+You will need to provide your password via a dialog. 
+If you are doing this for the first time, you may need to accept some SSL \
+certificates via popup dialogs.\
+\>", "Text",
+ CellChangeTimes->{{3.648330562974774*^9, 3.648330594983658*^9}, {
+   3.648330653952381*^9, 3.6483306717120953`*^9}, 3.648334219828169*^9}],
+
+Cell[BoxData[
+ RowBox[{"SendMail", "[", 
+  RowBox[{
+   RowBox[{"\"\<To\>\"", "\[Rule]", "\"\<XXX@XXX.com\>\""}], ",", 
+   RowBox[{"\"\<Subject\>\"", "\[Rule]", "\"\<XXX\>\""}], ",", 
+   RowBox[{"\"\<Body\>\"", "\[Rule]", "\"\<XXX\>\""}], ",", 
+   RowBox[{"\"\<Password\>\"", "\[Rule]", "Automatic"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.648330540877079*^9, 3.648330540880659*^9}, {
+  3.6483342502412357`*^9, 3.648334267359264*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["\<\
+SendMail automatically without setting front-end preferences\
+\>", "Subsection",
+ CellChangeTimes->{{3.648330736352147*^9, 3.64833074107168*^9}, {
+  3.648334224019153*^9, 3.648334231578682*^9}}],
+
+Cell["\<\
+Send emails programmatically in a notebook without setting front-end \
+preferences from menu Edit > Preferences > Internet Connectivity > Mail \
+Settings beforehand.\
+\>", "Text",
+ CellChangeTimes->{{3.648330750680964*^9, 3.648330830351757*^9}}],
+
+Cell[BoxData[
+ RowBox[{"SendMail", "[", 
+  RowBox[{
+   RowBox[{"\"\<From\>\"", "\[Rule]", "\"\<XXX@XXX.com\>\""}], ",", 
+   RowBox[{"\"\<To\>\"", "\[Rule]", "\"\<YYY@YYY.com\>\""}], ",", 
+   RowBox[{"\"\<Subject\>\"", "\[Rule]", "\"\<XXX\>\""}], ",", 
+   RowBox[{"\"\<Body\>\"", "\[Rule]", "\"\<XXX\>\""}], ",", 
+   RowBox[{"\"\<Server\>\"", "\[Rule]", "\"\<smtp.gmail.com\>\""}], ",", 
+   RowBox[{"\"\<EncryptionProtocol\>\"", "\[Rule]", "\"\<SSL\>\""}], ",", 
+   RowBox[{"\"\<PortNumber\>\"", "\[Rule]", "465"}], ",", 
+   RowBox[{"\"\<Password\>\"", "\[Rule]", "Automatic"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.6483307432879667`*^9, 3.648330748313696*^9}, {
+  3.64833426928627*^9, 3.6483343003409348`*^9}}]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{740, 867},
+WindowMargins->{{140, Automatic}, {Automatic, 42}},
+FrontEndVersion->"9.0 for Linux x86 (64-bit) (June 11, 2013)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[579, 22, 93, 1, 96, "Title"],
+Cell[CellGroupData[{
+Cell[697, 27, 97, 1, 47, "Subsection"],
+Cell[797, 30, 325, 6, 77, "Text"],
+Cell[1125, 38, 436, 8, 55, "Input"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[1598, 51, 204, 4, 47, "Subsection"],
+Cell[1805, 57, 255, 5, 55, "Text"],
+Cell[2063, 64, 714, 12, 99, "Input"]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)

@@ -1,0 +1,223 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 10.1' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      9659,        214]
+NotebookOptionsPosition[      9054,        188]
+NotebookOutlinePosition[      9392,        203]
+CellTagsIndexPosition[      9349,        200]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[
+ RowBox[{"imglinks", "=", 
+  RowBox[{"Import", "[", 
+   RowBox[{
+   "\"\<http://media.wolfram.com/logos/#corporate_logos\>\"", ",", 
+    "\"\<ImageLinks\>\""}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.640617183823111*^9, 3.640617231118285*^9}, {
+  3.64061742436127*^9, 3.6406174505816603`*^9}, {3.64061753678353*^9, 
+  3.640617552985738*^9}, {3.640617906961253*^9, 3.6406179208239202`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"\<\"http://media.wolfram.com/images/row1.gif\"\>", 
+   ",", "\<\"http://media.wolfram.com/common/images2003/btn_wolfram.gif\"\>", 
+   ",", "\<\"http://media.wolfram.com/images/mid-backangle.gif\"\>", 
+   ",", "\<\"http://media.wolfram.com/images/btn_products.gif\"\>", 
+   ",", "\<\"http://media.wolfram.com/images/row2_backangle.gif\"\>", 
+   ",", "\<\"http://media.wolfram.com/images/btn_webresource.gif\"\>", 
+   ",", "\<\"http://media.wolfram.com/images/btn_pressrelease.gif\"\>", 
+   ",", "\<\"http://media.wolfram.com/images/btn_productsnew.gif\"\>", 
+   ",", "\<\"http://media.wolfram.com/images/btn_companyback.gif\"\>", 
+   ",", "\<\"http://media.wolfram.com/images/btn_contact.gif\"\>", 
+   ",", "\<\"http://media.wolfram.com/common/images/spacer.gif\"\>", 
+   ",", "\<\"http://media.wolfram.com/images/row3_frontangle.gif\"\>", 
+   ",", "\<\"http://media.wolfram.com/images/btn_search.gif\"\>", 
+   ",", "\<\"http://media.wolfram.com/common/images2003/spacer.gif\"\>", 
+   ",", "\<\"http://media.wolfram.com/images/row3_backangle.gif\"\>", 
+   ",", "\<\"http://media.wolfram.com/common/images/spacer.gif\"\>", 
+   ",", "\<\"http://media.wolfram.com/common/images/spacer.gif\"\>", 
+   ",", "\<\"http://media.wolfram.com/common/images/spacer.gif\"\>", 
+   ",", "\<\"http://media.wolfram.com/logos/images/mathematica-10-spikey-th.\
+png\"\>", 
+   ",", "\<\"http://media.wolfram.com/logos/images/wolfram-cloud-th.png\"\>", 
+   ",", "\<\"http://media.wolfram.com/logos/images/wolfram-language-logo-th.\
+png\"\>", 
+   ",", "\<\"http://media.wolfram.com/logos/images/webM8_logo_stacked_th.gif\"\
+\>", ",", \
+"\<\"http://media.wolfram.com/logos/images/gridM8_logo_stacked_th.gif\"\>", 
+   ",", "\<\"http://media.wolfram.com/logos/images/gridM8_logo_th.gif\"\>", 
+   ",", "\<\"http://media.wolfram.com/logos/images/lwgm_logo.gif\"\>", 
+   ",", "\<\"http://media.wolfram.com/logos/images/wolfram_workbench8_logo_th.\
+gif\"\>", 
+   ",", "\<\"http://media.wolfram.com/logos/images/cdf_logo_th.png\"\>", 
+   ",", "\<\"http://media.wolfram.com/logos/images/WSM_gears_th.png\"\>", 
+   ",", "\<\"http://media.wolfram.com/logos/images/WSM_logo-type_nogear_th.\
+png\"\>", 
+   ",", "\<\"http://media.wolfram.com/logos/images/WSM_logo-type_th.png\"\>", 
+   ",", "\<\"http://media.wolfram.com/logos/images/Wolfram-Finance-Platform-\
+logo-white-th.png\"\>", 
+   ",", "\<\"http://media.wolfram.com/logos/images/Wolfram-Finance-Platform-\
+logo-blue-th.png\"\>", 
+   ",", "\<\"http://media.wolfram.com/logos/images/wolfram-corporate-logo-\
+horizontal-md.png\"\>", 
+   ",", "\<\"http://media.wolfram.com/logos/images/wolfram-corporate-logo-\
+stacked-sm.png\"\>", 
+   ",", "\<\"http://media.wolfram.com/common/images/spacer.gif\"\>", 
+   ",", "\<\"http://media.wolfram.com/common/images/spacer.gif\"\>", 
+   ",", "\<\"http://media.wolfram.com/common/images/spacer.gif\"\>", 
+   ",", "\<\"http://media.wolfram.com/common/images2003/spacer.gif\"\>", 
+   ",", "\<\"http://media.wolfram.com/common/images2003/footer-separator.gif\"\
+\>", ",", \
+"\<\"http://media.wolfram.com/common/images2003/lang_bottom_ja.gif\"\>", 
+   ",", "\<\"http://media.wolfram.com/common/images2003/footer-separator.gif\"\
+\>", ",", "\<\"http://media.wolfram.com/common/images2003/spacer.gif\"\>", 
+   ",", "\<\"http://media.wolfram.com/common/images2003/spacer.gif\"\>"}], 
+  "}"}]], "Output",
+ CellChangeTimes->{{3.640617199971499*^9, 3.640617209650918*^9}, {
+  3.6406174283977947`*^9, 3.6406174528041553`*^9}, {3.640617539607273*^9, 
+  3.640617554899255*^9}, {3.640617910827653*^9, 3.64061792315598*^9}}]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"tmpdir", "=", 
+   RowBox[{"FileNameJoin", "[", 
+    RowBox[{"{", 
+     RowBox[{"$TemporaryDirectory", ",", "\"\<Wolfram_corporate_logos\>\""}], 
+     "}"}], "]"}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.640617977260167*^9, 3.6406179795430803`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"CreateDirectory", "[", "tmpdir", "]"}]], "Input",
+ CellChangeTimes->{{3.640617646040855*^9, 3.640617667367378*^9}, {
+   3.6406178725360603`*^9, 3.640617881558823*^9}, 3.64061798508407*^9}],
+
+Cell[BoxData["\<\"/tmp/Wolfram_corporate_logos\"\>"], "Output",
+ CellChangeTimes->{3.6406178821225767`*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"URLSave", "[", 
+    RowBox[{"#", ",", 
+     RowBox[{"FileNameJoin", "[", 
+      RowBox[{"{", 
+       RowBox[{
+       "$TemporaryDirectory", ",", "\"\<Wolfram_corporate_logos\>\"", ",", 
+        RowBox[{"FileNameTake", "[", 
+         RowBox[{"#", ",", 
+          RowBox[{"-", "1"}]}], "]"}]}], "}"}], "]"}]}], "]"}], "&"}], "/@", 
+  "imglinks"}]], "Input",
+ CellChangeTimes->{{3.640617608376248*^9, 3.640617637487956*^9}, {
+  3.640617892473114*^9, 3.6406179279058723`*^9}},
+ NumberMarks->False],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"\<\"/tmp/Wolfram_corporate_logos/row1.gif\"\>", 
+   ",", "\<\"/tmp/Wolfram_corporate_logos/btn_wolfram.gif\"\>", 
+   ",", "\<\"/tmp/Wolfram_corporate_logos/mid-backangle.gif\"\>", 
+   ",", "\<\"/tmp/Wolfram_corporate_logos/btn_products.gif\"\>", 
+   ",", "\<\"/tmp/Wolfram_corporate_logos/row2_backangle.gif\"\>", 
+   ",", "\<\"/tmp/Wolfram_corporate_logos/btn_webresource.gif\"\>", 
+   ",", "\<\"/tmp/Wolfram_corporate_logos/btn_pressrelease.gif\"\>", 
+   ",", "\<\"/tmp/Wolfram_corporate_logos/btn_productsnew.gif\"\>", 
+   ",", "\<\"/tmp/Wolfram_corporate_logos/btn_companyback.gif\"\>", 
+   ",", "\<\"/tmp/Wolfram_corporate_logos/btn_contact.gif\"\>", 
+   ",", "\<\"/tmp/Wolfram_corporate_logos/spacer.gif\"\>", 
+   ",", "\<\"/tmp/Wolfram_corporate_logos/row3_frontangle.gif\"\>", 
+   ",", "\<\"/tmp/Wolfram_corporate_logos/btn_search.gif\"\>", 
+   ",", "\<\"/tmp/Wolfram_corporate_logos/spacer.gif\"\>", 
+   ",", "\<\"/tmp/Wolfram_corporate_logos/row3_backangle.gif\"\>", 
+   ",", "\<\"/tmp/Wolfram_corporate_logos/spacer.gif\"\>", 
+   ",", "\<\"/tmp/Wolfram_corporate_logos/spacer.gif\"\>", 
+   ",", "\<\"/tmp/Wolfram_corporate_logos/spacer.gif\"\>", 
+   ",", "\<\"/tmp/Wolfram_corporate_logos/mathematica-10-spikey-th.png\"\>", 
+   ",", "\<\"/tmp/Wolfram_corporate_logos/wolfram-cloud-th.png\"\>", 
+   ",", "\<\"/tmp/Wolfram_corporate_logos/wolfram-language-logo-th.png\"\>", 
+   ",", "\<\"/tmp/Wolfram_corporate_logos/webM8_logo_stacked_th.gif\"\>", 
+   ",", "\<\"/tmp/Wolfram_corporate_logos/gridM8_logo_stacked_th.gif\"\>", 
+   ",", "\<\"/tmp/Wolfram_corporate_logos/gridM8_logo_th.gif\"\>", 
+   ",", "\<\"/tmp/Wolfram_corporate_logos/lwgm_logo.gif\"\>", 
+   ",", "\<\"/tmp/Wolfram_corporate_logos/wolfram_workbench8_logo_th.gif\"\>",
+    ",", "\<\"/tmp/Wolfram_corporate_logos/cdf_logo_th.png\"\>", 
+   ",", "\<\"/tmp/Wolfram_corporate_logos/WSM_gears_th.png\"\>", 
+   ",", "\<\"/tmp/Wolfram_corporate_logos/WSM_logo-type_nogear_th.png\"\>", 
+   ",", "\<\"/tmp/Wolfram_corporate_logos/WSM_logo-type_th.png\"\>", 
+   ",", "\<\"/tmp/Wolfram_corporate_logos/Wolfram-Finance-Platform-logo-white-\
+th.png\"\>", 
+   ",", "\<\"/tmp/Wolfram_corporate_logos/Wolfram-Finance-Platform-logo-blue-\
+th.png\"\>", 
+   ",", "\<\"/tmp/Wolfram_corporate_logos/wolfram-corporate-logo-horizontal-\
+md.png\"\>", 
+   ",", "\<\"/tmp/Wolfram_corporate_logos/wolfram-corporate-logo-stacked-sm.\
+png\"\>", ",", "\<\"/tmp/Wolfram_corporate_logos/spacer.gif\"\>", 
+   ",", "\<\"/tmp/Wolfram_corporate_logos/spacer.gif\"\>", 
+   ",", "\<\"/tmp/Wolfram_corporate_logos/spacer.gif\"\>", 
+   ",", "\<\"/tmp/Wolfram_corporate_logos/spacer.gif\"\>", 
+   ",", "\<\"/tmp/Wolfram_corporate_logos/footer-separator.gif\"\>", 
+   ",", "\<\"/tmp/Wolfram_corporate_logos/lang_bottom_ja.gif\"\>", 
+   ",", "\<\"/tmp/Wolfram_corporate_logos/footer-separator.gif\"\>", 
+   ",", "\<\"/tmp/Wolfram_corporate_logos/spacer.gif\"\>", 
+   ",", "\<\"/tmp/Wolfram_corporate_logos/spacer.gif\"\>"}], "}"}]], "Output",\
+
+ CellChangeTimes->{3.6406176058633223`*^9, 3.640617954582033*^9}]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{"SystemOpen", "[", "tmpdir", "]"}]], "Input",
+ CellChangeTimes->{{3.640617968808463*^9, 3.6406179739598923`*^9}}]
+},
+WindowSize->{1205, 911},
+WindowMargins->{{Automatic, 149}, {107, Automatic}},
+FrontEndVersion->"10.1 for Linux x86 (64-bit) (March 23, 2015)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 405, 8, 32, "Input"],
+Cell[988, 32, 3602, 58, 649, "Output"]
+}, Open  ]],
+Cell[4605, 93, 285, 7, 32, "Input"],
+Cell[CellGroupData[{
+Cell[4915, 104, 212, 3, 32, "Input"],
+Cell[5130, 109, 107, 1, 32, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[5274, 115, 540, 15, 55, "Input"],
+Cell[5817, 132, 3082, 49, 550, "Output"]
+}, Open  ]],
+Cell[8914, 184, 136, 2, 32, "Input"]
+}
+]
+*)
+
+(* End of internal cache information *)

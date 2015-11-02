@@ -1,0 +1,139 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 9.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       157,          7]
+NotebookDataLength[      3255,        130]
+NotebookOptionsPosition[      2538,        100]
+NotebookOutlinePosition[      2888,        115]
+CellTagsIndexPosition[      2845,        112]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["StringForm", "Title"],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ StyleBox["\[OpenCurlyDoubleQuote]foo \[OpenCurlyDoubleQuote] ~~ \
+\[OpenCurlyDoubleQuote] bar\[CloseCurlyDoubleQuote]", "Code"],
+ " and ",
+ StyleBox["\[OpenCurlyDoubleQuote]foo\[CloseCurlyDoubleQuote]  <> \
+\[OpenCurlyDoubleQuote] bar\[CloseCurlyDoubleQuote]", "Code"]
+}], "Subsection"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"Hold", "[", 
+   RowBox[{"\"\<foo\>\"", " ", "<>", "\"\< bar\>\""}], "]"}], "//", 
+  "FullForm"}], "\[IndentingNewLine]", 
+ RowBox[{"ReleaseHold", "[", "%", "]"}], "\[IndentingNewLine]", 
+ RowBox[{"%", "//", "FullForm"}]}], "Input"],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   RowBox[{"Hold", "[", 
+    RowBox[{"StringJoin", "[", 
+     RowBox[{"\"\<foo\>\"", ",", "\"\< bar\>\""}], "]"}], "]"}],
+   ShowSpecialCharacters->False,
+   ShowStringCharacters->True,
+   NumberMarks->True],
+  FullForm]], "Output"],
+
+Cell[BoxData["\<\"foo bar\"\>"], "Output"],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox["\"\<foo bar\>\"",
+   ShowSpecialCharacters->False,
+   ShowStringCharacters->True,
+   NumberMarks->True],
+  FullForm]], "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"Hold", "[", 
+   RowBox[{"\"\<foo\>\"", " ", "~~", "\"\< bar\>\""}], "]"}], "//", 
+  "FullForm"}], "\[IndentingNewLine]", 
+ RowBox[{"ReleaseHold", "[", "%", "]"}], "\[IndentingNewLine]", 
+ RowBox[{"%", "//", "FullForm"}]}], "Input"],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   RowBox[{"Hold", "[", 
+    RowBox[{"StringExpression", "[", 
+     RowBox[{"\"\<foo\>\"", ",", "\"\< bar\>\""}], "]"}], "]"}],
+   ShowSpecialCharacters->False,
+   ShowStringCharacters->True,
+   NumberMarks->True],
+  FullForm]], "Output"],
+
+Cell[BoxData["\<\"foo bar\"\>"], "Output"],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox["\"\<foo bar\>\"",
+   ShowSpecialCharacters->False,
+   ShowStringCharacters->True,
+   NumberMarks->True],
+  FullForm]], "Output"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{740, 751},
+WindowMargins->{{12, Automatic}, {Automatic, 24}},
+FrontEndVersion->"9.0 for Mac OS X x86 (32-bit, 64-bit Kernel) (May 19, 2013)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[579, 22, 27, 0, 92, "Title"],
+Cell[CellGroupData[{
+Cell[631, 26, 303, 6, 44, "Subsection"],
+Cell[CellGroupData[{
+Cell[959, 36, 267, 6, 63, "Input"],
+Cell[1229, 44, 267, 9, 39, "Output"],
+Cell[1499, 55, 42, 0, 28, "Output"],
+Cell[1544, 57, 163, 6, 39, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[1744, 68, 267, 6, 63, "Input"],
+Cell[2014, 76, 273, 9, 39, "Output"],
+Cell[2290, 87, 42, 0, 28, "Output"],
+Cell[2335, 89, 163, 6, 39, "Output"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
