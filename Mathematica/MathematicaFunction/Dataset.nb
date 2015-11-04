@@ -1,0 +1,211 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 10.2' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      6642,        202]
+NotebookOptionsPosition[      5956,        171]
+NotebookOutlinePosition[      6310,        187]
+CellTagsIndexPosition[      6267,        184]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["Dataset", "Title"],
+
+Cell[CellGroupData[{
+
+Cell["\<\
+Select tuple by condition on some columns and extract value of other column\
+\>", "Subsection"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"data", "=", 
+  RowBox[{"{", 
+   RowBox[{
+    RowBox[{"<|", 
+     RowBox[{
+      RowBox[{"\"\<k1\>\"", "\[Rule]", " ", "\"\<v11\>\""}], ",", 
+      RowBox[{"\"\<k2\>\"", "\[Rule]", " ", "\"\<v21\>\""}]}], "|>"}], ",", 
+    RowBox[{"<|", 
+     RowBox[{
+      RowBox[{"\"\<k1\>\"", "\[Rule]", " ", "\"\<v21\>\""}], ",", 
+      RowBox[{"\"\<k2\>\"", "\[Rule]", " ", "\"\<v22\>\""}]}], "|>"}]}], 
+   "}"}]}]], "Input"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"\[LeftAssociation]", 
+    RowBox[{
+     RowBox[{"\<\"k1\"\>", "\[Rule]", "\<\"v11\"\>"}], ",", 
+     RowBox[{"\<\"k2\"\>", "\[Rule]", "\<\"v21\"\>"}]}], 
+    "\[RightAssociation]"}], ",", 
+   RowBox[{"\[LeftAssociation]", 
+    RowBox[{
+     RowBox[{"\<\"k1\"\>", "\[Rule]", "\<\"v21\"\>"}], ",", 
+     RowBox[{"\<\"k2\"\>", "\[Rule]", "\<\"v22\"\>"}]}], 
+    "\[RightAssociation]"}]}], "}"}]], "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"dataset", "=", 
+  RowBox[{"Dataset", "[", "data", "]"}]}]], "Input"],
+
+Cell[BoxData[
+ TagBox[
+  TemplateBox[{GridBox[{{
+       StyleBox["\"k1\"", 
+        GrayLevel[0.3]], 
+       StyleBox["\"k2\"", 
+        GrayLevel[0.3]]}, {
+       StyleBox["\"v11\"", FontColor -> GrayLevel[0.4]], 
+       StyleBox["\"v21\"", FontColor -> GrayLevel[0.4]]}, {
+       StyleBox["\"v21\"", FontColor -> GrayLevel[0.4]], 
+       StyleBox["\"v22\"", FontColor -> GrayLevel[0.4]]}, {
+       ItemBox[
+        RowBox[{"2 levels", 
+          AdjustmentBox[" | ", BoxBaselineShift -> -0.3], 
+          RowBox[{"2", "rows"}]}], 
+        BaseStyle -> {
+         FontFamily -> "Helvetica", FontSize -> 10, FontColor -> 
+          GrayLevel[0.4], Editable -> False, Selectable -> False}, 
+        ItemSize -> {Automatic, Automatic}, Alignment -> {Left, Center}, 
+        Background -> RGBColor[0.92, 0.92, 0.9]], "\[SpanFromLeft]"}}, 
+     GridBoxFrame -> {"ColumnsIndexed" -> {{{1, -1}, {1, -1}} -> True}}, 
+     FrameStyle -> RGBColor[0, 0, 0, 0.4], GridBoxDividers -> {"Columns" -> {
+         RGBColor[0, 0, 0, 0.4], {
+          RGBColor[0, 0, 0, 0.09]}, 
+         RGBColor[0, 0, 0, 0.4]}, "Rows" -> {
+         RGBColor[0, 0, 0, 0.4], 
+         RGBColor[0, 0, 0, 0.3], {
+          RGBColor[0, 0, 0, 0.08]}, 
+         RGBColor[0, 0, 0, 0.4]}}, RowSpacings -> {1.5, 1.2}, 
+     GridBoxBackground -> {"Columns" -> {}, "Rows" -> {
+         RGBColor[0.92, 0.92, 0.9]}}, 
+     GridBoxAlignment -> {"Columns" -> {{Left}}}, ColumnSpacings -> 2.5, 
+     GridFrameMargins -> {{2, 3}, {1, 3}}, 
+     GridBoxItemSize -> {"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}},
+      RowMinHeight -> 1.3],"Dataset[{__Association}]"},
+   "Dataset",
+   DisplayFunction->(TagBox[
+     StyleBox[#, {
+      ShowAutoStyles -> False, LineBreakWithin -> False, FontWeight -> 
+       "Light", FontFamily -> "Helvetica Neue", NumberMarks -> False, 
+       SpanMaxSize -> 3, SpanMinSize -> 1., Editable -> False, Selectable -> 
+       True, Background -> RGBColor[0.985, 0.98, 0.973], 
+       LinebreakAdjustments -> {0.4, 5, 100, 0, 0.5}, LineIndent -> 0, 
+       LineSpacing -> {1.1, 5}}], Deploy]& ),
+   InterpretationFunction->(#2& )],
+  False,
+  Editable->False,
+  SelectWithContents->True,
+  Selectable->False]], "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"dataset", "[", 
+  RowBox[{
+   RowBox[{"Select", "[", 
+    RowBox[{
+     RowBox[{"#k1", "===", "\"\<v21\>\""}], "&"}], "]"}], ",", "\"\<k2\>\""}],
+   "]"}]], "Input"],
+
+Cell[BoxData[
+ TagBox[
+  TemplateBox[{StyleBox[
+     StyleBox[
+      GridBox[{{
+         RowBox[{"{", "\[ThinSpace]", 
+           StyleBox["\"v22\"", FontColor -> GrayLevel[0.4]], "\[ThinSpace]", 
+           "}"}]}, {
+         ItemBox[
+          RowBox[{"1 level", 
+            AdjustmentBox[" | ", BoxBaselineShift -> -0.3], 
+            RowBox[{"1", "elements"}]}], 
+          BaseStyle -> {
+           FontFamily -> "Helvetica", FontSize -> 10, FontColor -> 
+            GrayLevel[0.4], Editable -> False, Selectable -> False}, 
+          ItemSize -> {Automatic, Automatic}, Alignment -> {Left, Center}, 
+          Background -> RGBColor[0.92, 0.92, 0.9]]}}, 
+       GridBoxAlignment -> {{{Left}}}, 
+       GridBoxItemSize -> {
+        "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+       GridBoxSpacings -> {"Rows" -> {{0, 0}}, "Columns" -> {{0}}}, 
+       GridBoxFrame -> {"ColumnsIndexed" -> {{{1, -1}, {1, -1}} -> True}}, 
+       FrameStyle -> RGBColor[0, 0, 0, 0.4], 
+       GridFrameMargins -> {{2, 1}, {0, 2}}], LineBreakWithin -> Automatic], 
+     SpanMinSize -> 1.3],"Dataset[{__String}]"},
+   "Dataset",
+   DisplayFunction->(TagBox[
+     StyleBox[#, {
+      ShowAutoStyles -> False, LineBreakWithin -> False, FontWeight -> 
+       "Light", FontFamily -> "Helvetica Neue", NumberMarks -> False, 
+       SpanMaxSize -> 3, SpanMinSize -> 1., Editable -> False, Selectable -> 
+       True, Background -> RGBColor[0.985, 0.98, 0.973], 
+       LinebreakAdjustments -> {0.4, 5, 100, 0, 0.5}, LineIndent -> 0, 
+       LineSpacing -> {1.1, 5}}], Deploy]& ),
+   InterpretationFunction->(#2& )],
+  False,
+  Editable->False,
+  SelectWithContents->True,
+  Selectable->False]], "Output"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{808, 751},
+WindowMargins->{{28, Automatic}, {36, Automatic}},
+FrontEndVersion->"10.2 for Mac OS X x86 (32-bit, 64-bit Kernel) (July 29, \
+2015)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 24, 0, 92, "Title"],
+Cell[CellGroupData[{
+Cell[629, 26, 105, 2, 44, "Subsection"],
+Cell[CellGroupData[{
+Cell[759, 32, 437, 12, 28, "Input"],
+Cell[1199, 46, 455, 12, 28, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[1691, 63, 92, 2, 28, "Input"],
+Cell[1786, 67, 2206, 48, 114, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[4029, 120, 189, 6, 28, "Input"],
+Cell[4221, 128, 1695, 38, 60, "Output"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
