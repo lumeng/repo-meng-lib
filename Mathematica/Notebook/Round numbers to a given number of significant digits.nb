@@ -1,0 +1,203 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      5197,        195]
+NotebookOptionsPosition[      4100,        150]
+NotebookOutlinePosition[      4611,        172]
+CellTagsIndexPosition[      4525,        167]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["Round numbers to a given number of significant digits", "Title"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"roundNumber", "[", 
+   RowBox[{"num_", ",", "numberOfSigDigits_"}], "]"}], ":=", 
+  RowBox[{"SetPrecision", "[", 
+   RowBox[{
+    RowBox[{"Round", "[", 
+     RowBox[{"num", ",", 
+      RowBox[{"10", "^", 
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{"Floor", "[", 
+          RowBox[{"Log10", "[", 
+           RowBox[{"Abs", "[", "num", "]"}], "]"}], "]"}], "+", "1", "-", 
+         "numberOfSigDigits"}], ")"}]}]}], "]"}], ",", "numberOfSigDigits"}], 
+   "]"}]}]], "Input"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{"Table", "[", 
+  RowBox[{
+   RowBox[{"roundNumber", "[", 
+    RowBox[{
+     RowBox[{"x", "*", "Pi"}], ",", "4"}], "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"x", ",", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"1", "/", "100"}], ",", 
+       RowBox[{"1", "/", "10"}], ",", "1", ",", "10", ",", "100"}], "}"}]}], 
+    "}"}]}], "]"}], "\n", 
+ RowBox[{"%", "//", "FullForm"}]}], "Input"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+  "0.03142`4.", ",", "0.3142`4.", ",", "3.142`4.", ",", "31.42`4.", ",", 
+   "314.2`4."}], "}"}]], "Output"],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   RowBox[{"List", "[", 
+    RowBox[{
+    "0.03142`4.", ",", "0.3142`4.", ",", "3.142`4.", ",", "31.42`4.", ",", 
+     "314.2`4."}], "]"}],
+   ShowSpecialCharacters->False,
+   ShowStringCharacters->True,
+   NumberMarks->True],
+  FullForm]], "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{"Table", "[", 
+  RowBox[{
+   RowBox[{"roundNumber", "[", 
+    RowBox[{"100", ",", "4"}], "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"x", ",", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"1", "/", "100"}], ",", 
+       RowBox[{"1", "/", "10"}], ",", "1", ",", "10", ",", "100"}], "}"}]}], 
+    "}"}]}], "]"}], "\n", 
+ RowBox[{"%", "//", "FullForm"}]}], "Input"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+  "100.`4.", ",", "100.`4.", ",", "100.`4.", ",", "100.`4.", ",", "100.`4."}],
+   "}"}]], "Output"],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   RowBox[{"List", "[", 
+    RowBox[{
+    "100.`4.", ",", "100.`4.", ",", "100.`4.", ",", "100.`4.", ",", 
+     "100.`4."}], "]"}],
+   ShowSpecialCharacters->False,
+   ShowStringCharacters->True,
+   NumberMarks->True],
+  FullForm]], "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["References", "Section"],
+
+Cell[CellGroupData[{
+
+Cell[TextData[StyleBox["Permanently rounding numbers/values to a given number \
+of significant figures, \
+http://mathematica.stackexchange.com/questions/72454/permanently-rounding-\
+numbers-values-to-a-given-number-of-significant-figures.", "Item"]], "Item"],
+
+Cell[TextData[StyleBox["Round", "Item"]], "Item"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"?", "Round"}]], "Input"],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox["\<\"\\!\\(\\*RowBox[{\\\"Round\\\", \\\"[\\\", \
+StyleBox[\\\"x\\\", \\\"TI\\\"], \\\"]\\\"}]\\) gives the integer closest to \
+\\!\\(\\*StyleBox[\\\"x\\\", \\\"TI\\\"]\\). \
+\\n\\!\\(\\*RowBox[{\\\"Round\\\", \\\"[\\\", RowBox[{StyleBox[\\\"x\\\", \
+\\\"TI\\\"], \\\",\\\", StyleBox[\\\"a\\\", \\\"TI\\\"]}], \\\"]\\\"}]\\) \
+rounds to the nearest multiple of \\!\\(\\*StyleBox[\\\"a\\\", \
+\\\"TI\\\"]\\). \"\>", "MSG"], "\[NonBreakingSpace]", 
+  ButtonBox[
+   StyleBox["\[RightSkeleton]", "SR"],
+   Active->True,
+   BaseStyle->"Link",
+   ButtonData->"paclet:ref/Round"]}]], "Print", "PrintUsage",
+ CellTags->"Info283681129919-4062059"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{1440, 851},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+FrontEndVersion->"11.0 for Mac OS X x86 (32-bit, 64-bit Kernel) (July 28, \
+2016)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{
+ "Info283681129919-4062059"->{
+  Cell[3386, 131, 674, 14, 63, "Print",
+   CellTags->"Info283681129919-4062059"]}
+ }
+*)
+(*CellTagsIndex
+CellTagsIndex->{
+ {"Info283681129919-4062059", 4419, 161}
+ }
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 70, 0, 92, "Title"],
+Cell[653, 24, 518, 15, 32, "Input"],
+Cell[CellGroupData[{
+Cell[1196, 43, 414, 13, 54, "Input"],
+Cell[1613, 58, 148, 4, 32, "Output"],
+Cell[1764, 64, 285, 10, 43, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[2086, 79, 389, 12, 54, "Input"],
+Cell[2478, 93, 139, 4, 66, "Output"],
+Cell[2620, 99, 277, 10, 43, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[2934, 114, 29, 0, 64, "Section"],
+Cell[CellGroupData[{
+Cell[2988, 118, 258, 3, 45, "Item"],
+Cell[3249, 123, 49, 0, 30, "Item"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[3335, 128, 48, 1, 32, "Input"],
+Cell[3386, 131, 674, 14, 63, "Print",
+ CellTags->"Info283681129919-4062059"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+
