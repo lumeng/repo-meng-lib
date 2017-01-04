@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[      6642,        202]
-NotebookOptionsPosition[      5956,        171]
-NotebookOutlinePosition[      6310,        187]
-CellTagsIndexPosition[      6267,        184]
+NotebookDataLength[    193804,       4503]
+NotebookOptionsPosition[    190732,       4390]
+NotebookOutlinePosition[    191092,       4406]
+CellTagsIndexPosition[    191049,       4403]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -24,8 +24,4224 @@ Cell["Dataset", "Title"],
 
 Cell[CellGroupData[{
 
+Cell["Basics", "Section"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"exampleDataset", "=", 
+  RowBox[{"Dataset", "@", 
+   RowBox[{"With", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"rowCount", "=", "10"}], ",", 
+       RowBox[{"colCount", "=", "10"}]}], "}"}], ",", 
+     RowBox[{"Association", "@", 
+      RowBox[{"Table", "[", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"\"\<r\>\"", "<>", 
+          RowBox[{"ToString", "[", "i", "]"}]}], "\[Rule]", " ", 
+         RowBox[{"Association", "[", 
+          RowBox[{"Table", "[", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"\"\<c\>\"", "<>", 
+              RowBox[{"ToString", "[", "j", "]"}]}], "\[Rule]", " ", 
+             RowBox[{"i", "+", "j", "-", "1"}]}], ",", 
+            RowBox[{"{", 
+             RowBox[{"j", ",", "colCount"}], "}"}]}], "]"}], "]"}]}], ",", 
+        RowBox[{"{", 
+         RowBox[{"i", ",", "rowCount"}], "}"}]}], "]"}]}]}], 
+    "]"}]}]}]], "Input"],
+
+Cell[BoxData[
+ TagBox[
+  TemplateBox[{GridBox[{{
+       ItemBox["", Frame -> {False, True, True, False}], 
+       StyleBox["\"c1\"", 
+        GrayLevel[0.3]], 
+       StyleBox["\"c2\"", 
+        GrayLevel[0.3]], 
+       StyleBox["\"c3\"", 
+        GrayLevel[0.3]], 
+       StyleBox["\"c4\"", 
+        GrayLevel[0.3]], 
+       StyleBox["\"c5\"", 
+        GrayLevel[0.3]], 
+       StyleBox["\"c6\"", 
+        GrayLevel[0.3]], 
+       StyleBox["\"c7\"", 
+        GrayLevel[0.3]], 
+       StyleBox["\"c8\"", 
+        GrayLevel[0.3]], 
+       StyleBox["\"c9\"", 
+        GrayLevel[0.3]], 
+       StyleBox["\"c10\"", 
+        GrayLevel[0.3]]}, {
+       StyleBox[
+        StyleBox["\"r1\"", FontColor -> GrayLevel[0.4]], 
+        GrayLevel[0.3]], 1, 2, 3, 4, 5, 6, 7, 8, 9, 10}, {
+       StyleBox[
+        StyleBox["\"r2\"", FontColor -> GrayLevel[0.4]], 
+        GrayLevel[0.3]], 2, 3, 4, 5, 6, 7, 8, 9, 10, 11}, {
+       StyleBox[
+        StyleBox["\"r3\"", FontColor -> GrayLevel[0.4]], 
+        GrayLevel[0.3]], 3, 4, 5, 6, 7, 8, 9, 10, 11, 12}, {
+       StyleBox[
+        StyleBox["\"r4\"", FontColor -> GrayLevel[0.4]], 
+        GrayLevel[0.3]], 4, 5, 6, 7, 8, 9, 10, 11, 12, 13}, {
+       StyleBox[
+        StyleBox["\"r5\"", FontColor -> GrayLevel[0.4]], 
+        GrayLevel[0.3]], 5, 6, 7, 8, 9, 10, 11, 12, 13, 14}, {
+       StyleBox[
+        StyleBox["\"r6\"", FontColor -> GrayLevel[0.4]], 
+        GrayLevel[0.3]], 6, 7, 8, 9, 10, 11, 12, 13, 14, 15}, {
+       StyleBox[
+        StyleBox["\"r7\"", FontColor -> GrayLevel[0.4]], 
+        GrayLevel[0.3]], 7, 8, 9, 10, 11, 12, 13, 14, 15, 16}, {
+       StyleBox[
+        StyleBox["\"r8\"", FontColor -> GrayLevel[0.4]], 
+        GrayLevel[0.3]], 8, 9, 10, 11, 12, 13, 14, 15, 16, 17}, {
+       StyleBox[
+        StyleBox["\"r9\"", FontColor -> GrayLevel[0.4]], 
+        GrayLevel[0.3]], 9, 10, 11, 12, 13, 14, 15, 16, 17, 18}, {
+       StyleBox[
+        StyleBox["\"r10\"", FontColor -> GrayLevel[0.4]], 
+        GrayLevel[0.3]], 10, 11, 12, 13, 14, 15, 16, 17, 18, 19}, {
+       ItemBox[
+        RowBox[{
+          TagBox[
+           TooltipBox["2 levels", 
+            InterpretationBox[
+             TagBox[
+              TagBox[
+               StyleBox[
+                TagBox[
+                 TooltipBox[
+                  SubscriptBox[
+                   RowBox[{"\[LeftAssociation]", 
+                    RowBox[{
+                    RowBox[{
+                    TagBox[
+                    TooltipBox[
+                    FrameBox[
+                    StyleBox["Str", FontColor -> RGBColor[0, 
+                    Rational[2, 3], 0], FontFamily -> "Monaco"], FrameStyle -> 
+                    Dynamic[
+                    If[
+                    CurrentValue["MouseOver"], 
+                    GrayLevel[0.9], None]], BaselinePosition -> Baseline, 
+                    FrameMargins -> {{0, 0}, {2, 2}}, ContentPadding -> 
+                    False], 
+                    Cell[
+                    BoxData[
+                    InterpretationBox[
+                    StyleBox[
+                    "TypeSystem`Atom[String]", ShowStringCharacters -> True, 
+                    NumberMarks -> True], 
+                    InputForm[
+                    TypeSystem`Atom[String]], Editable -> True, AutoDelete -> 
+                    True]], "Input", FontTracking -> "Plain"], TooltipDelay -> 
+                    0.25], 
+                    EventHandlerTag[{"MouseClicked" :> CellPrint[
+                    Cell[
+                    ToString[
+                    TypeSystem`Atom[String], InputForm], "Input"]], Method -> 
+                    "Preemptive", PassEventsDown -> True, PassEventsUp -> 
+                    False}]], 
+                    StyleBox[
+                    "\[Rule]", FontColor -> GrayLevel[0.65], FontWeight -> 
+                    "Thin"], 
+                    TagBox[
+                    TooltipBox[
+                    FrameBox[
+                    RowBox[{"\[LeftAssociation]", 
+                    RowBox[{
+                    RowBox[{
+                    StyleBox[
+                    "c1", FontColor -> RGBColor[0.6, 0.4, 0.2], FontFamily -> 
+                    "Verdana", FontWeight -> Normal], 
+                    StyleBox[
+                    "\[Rule]", FontColor -> GrayLevel[0.65], FontWeight -> 
+                    "Thin"], 
+                    TagBox[
+                    TooltipBox[
+                    FrameBox[
+                    StyleBox["Int", FontColor -> RGBColor[0, 
+                    Rational[2, 3], 0], FontFamily -> "Monaco"], FrameStyle -> 
+                    Dynamic[
+                    If[
+                    CurrentValue["MouseOver"], 
+                    GrayLevel[0.9], None]], BaselinePosition -> Baseline, 
+                    FrameMargins -> {{0, 0}, {2, 2}}, ContentPadding -> 
+                    False], 
+                    Cell[
+                    BoxData[
+                    InterpretationBox[
+                    StyleBox[
+                    "TypeSystem`Atom[Integer]", ShowStringCharacters -> True, 
+                    NumberMarks -> True], 
+                    InputForm[
+                    TypeSystem`Atom[Integer]], Editable -> True, AutoDelete -> 
+                    True]], "Input", FontTracking -> "Plain"], TooltipDelay -> 
+                    0.25], 
+                    EventHandlerTag[{"MouseClicked" :> CellPrint[
+                    Cell[
+                    ToString[
+                    TypeSystem`Atom[Integer], InputForm], "Input"]], Method -> 
+                    "Preemptive", PassEventsDown -> True, PassEventsUp -> 
+                    False}]]}], 
+                    StyleBox[
+                    ",", FontColor -> GrayLevel[0.65], FontWeight -> "Thin"], 
+                    
+                    RowBox[{
+                    StyleBox[
+                    "c2", FontColor -> RGBColor[0.6, 0.4, 0.2], FontFamily -> 
+                    "Verdana", FontWeight -> Normal], 
+                    StyleBox[
+                    "\[Rule]", FontColor -> GrayLevel[0.65], FontWeight -> 
+                    "Thin"], 
+                    TagBox[
+                    TooltipBox[
+                    FrameBox[
+                    StyleBox["Int", FontColor -> RGBColor[0, 
+                    Rational[2, 3], 0], FontFamily -> "Monaco"], FrameStyle -> 
+                    Dynamic[
+                    If[
+                    CurrentValue["MouseOver"], 
+                    GrayLevel[0.9], None]], BaselinePosition -> Baseline, 
+                    FrameMargins -> {{0, 0}, {2, 2}}, ContentPadding -> 
+                    False], 
+                    Cell[
+                    BoxData[
+                    InterpretationBox[
+                    StyleBox[
+                    "TypeSystem`Atom[Integer]", ShowStringCharacters -> True, 
+                    NumberMarks -> True], 
+                    InputForm[
+                    TypeSystem`Atom[Integer]], Editable -> True, AutoDelete -> 
+                    True]], "Input", FontTracking -> "Plain"], TooltipDelay -> 
+                    0.25], 
+                    EventHandlerTag[{"MouseClicked" :> CellPrint[
+                    Cell[
+                    ToString[
+                    TypeSystem`Atom[Integer], InputForm], "Input"]], Method -> 
+                    "Preemptive", PassEventsDown -> True, PassEventsUp -> 
+                    False}]]}], 
+                    StyleBox[
+                    ",", FontColor -> GrayLevel[0.65], FontWeight -> "Thin"], 
+                    
+                    RowBox[{
+                    StyleBox[
+                    "c3", FontColor -> RGBColor[0.6, 0.4, 0.2], FontFamily -> 
+                    "Verdana", FontWeight -> Normal], 
+                    StyleBox[
+                    "\[Rule]", FontColor -> GrayLevel[0.65], FontWeight -> 
+                    "Thin"], 
+                    TagBox[
+                    TooltipBox[
+                    FrameBox[
+                    StyleBox["Int", FontColor -> RGBColor[0, 
+                    Rational[2, 3], 0], FontFamily -> "Monaco"], FrameStyle -> 
+                    Dynamic[
+                    If[
+                    CurrentValue["MouseOver"], 
+                    GrayLevel[0.9], None]], BaselinePosition -> Baseline, 
+                    FrameMargins -> {{0, 0}, {2, 2}}, ContentPadding -> 
+                    False], 
+                    Cell[
+                    BoxData[
+                    InterpretationBox[
+                    StyleBox[
+                    "TypeSystem`Atom[Integer]", ShowStringCharacters -> True, 
+                    NumberMarks -> True], 
+                    InputForm[
+                    TypeSystem`Atom[Integer]], Editable -> True, AutoDelete -> 
+                    True]], "Input", FontTracking -> "Plain"], TooltipDelay -> 
+                    0.25], 
+                    EventHandlerTag[{"MouseClicked" :> CellPrint[
+                    Cell[
+                    ToString[
+                    TypeSystem`Atom[Integer], InputForm], "Input"]], Method -> 
+                    "Preemptive", PassEventsDown -> True, PassEventsUp -> 
+                    False}]]}], 
+                    StyleBox[
+                    ",", FontColor -> GrayLevel[0.65], FontWeight -> "Thin"], 
+                    
+                    RowBox[{
+                    StyleBox[
+                    "c4", FontColor -> RGBColor[0.6, 0.4, 0.2], FontFamily -> 
+                    "Verdana", FontWeight -> Normal], 
+                    StyleBox[
+                    "\[Rule]", FontColor -> GrayLevel[0.65], FontWeight -> 
+                    "Thin"], 
+                    TagBox[
+                    TooltipBox[
+                    FrameBox[
+                    StyleBox["Int", FontColor -> RGBColor[0, 
+                    Rational[2, 3], 0], FontFamily -> "Monaco"], FrameStyle -> 
+                    Dynamic[
+                    If[
+                    CurrentValue["MouseOver"], 
+                    GrayLevel[0.9], None]], BaselinePosition -> Baseline, 
+                    FrameMargins -> {{0, 0}, {2, 2}}, ContentPadding -> 
+                    False], 
+                    Cell[
+                    BoxData[
+                    InterpretationBox[
+                    StyleBox[
+                    "TypeSystem`Atom[Integer]", ShowStringCharacters -> True, 
+                    NumberMarks -> True], 
+                    InputForm[
+                    TypeSystem`Atom[Integer]], Editable -> True, AutoDelete -> 
+                    True]], "Input", FontTracking -> "Plain"], TooltipDelay -> 
+                    0.25], 
+                    EventHandlerTag[{"MouseClicked" :> CellPrint[
+                    Cell[
+                    ToString[
+                    TypeSystem`Atom[Integer], InputForm], "Input"]], Method -> 
+                    "Preemptive", PassEventsDown -> True, PassEventsUp -> 
+                    False}]]}], 
+                    StyleBox[
+                    ",", FontColor -> GrayLevel[0.65], FontWeight -> "Thin"], 
+                    
+                    RowBox[{
+                    StyleBox[
+                    "c5", FontColor -> RGBColor[0.6, 0.4, 0.2], FontFamily -> 
+                    "Verdana", FontWeight -> Normal], 
+                    StyleBox[
+                    "\[Rule]", FontColor -> GrayLevel[0.65], FontWeight -> 
+                    "Thin"], 
+                    TagBox[
+                    TooltipBox[
+                    FrameBox[
+                    StyleBox["Int", FontColor -> RGBColor[0, 
+                    Rational[2, 3], 0], FontFamily -> "Monaco"], FrameStyle -> 
+                    Dynamic[
+                    If[
+                    CurrentValue["MouseOver"], 
+                    GrayLevel[0.9], None]], BaselinePosition -> Baseline, 
+                    FrameMargins -> {{0, 0}, {2, 2}}, ContentPadding -> 
+                    False], 
+                    Cell[
+                    BoxData[
+                    InterpretationBox[
+                    StyleBox[
+                    "TypeSystem`Atom[Integer]", ShowStringCharacters -> True, 
+                    NumberMarks -> True], 
+                    InputForm[
+                    TypeSystem`Atom[Integer]], Editable -> True, AutoDelete -> 
+                    True]], "Input", FontTracking -> "Plain"], TooltipDelay -> 
+                    0.25], 
+                    EventHandlerTag[{"MouseClicked" :> CellPrint[
+                    Cell[
+                    ToString[
+                    TypeSystem`Atom[Integer], InputForm], "Input"]], Method -> 
+                    "Preemptive", PassEventsDown -> True, PassEventsUp -> 
+                    False}]]}], 
+                    StyleBox[
+                    ",", FontColor -> GrayLevel[0.65], FontWeight -> "Thin"], 
+                    
+                    RowBox[{
+                    StyleBox[
+                    "c6", FontColor -> RGBColor[0.6, 0.4, 0.2], FontFamily -> 
+                    "Verdana", FontWeight -> Normal], 
+                    StyleBox[
+                    "\[Rule]", FontColor -> GrayLevel[0.65], FontWeight -> 
+                    "Thin"], 
+                    TagBox[
+                    TooltipBox[
+                    FrameBox[
+                    StyleBox["Int", FontColor -> RGBColor[0, 
+                    Rational[2, 3], 0], FontFamily -> "Monaco"], FrameStyle -> 
+                    Dynamic[
+                    If[
+                    CurrentValue["MouseOver"], 
+                    GrayLevel[0.9], None]], BaselinePosition -> Baseline, 
+                    FrameMargins -> {{0, 0}, {2, 2}}, ContentPadding -> 
+                    False], 
+                    Cell[
+                    BoxData[
+                    InterpretationBox[
+                    StyleBox[
+                    "TypeSystem`Atom[Integer]", ShowStringCharacters -> True, 
+                    NumberMarks -> True], 
+                    InputForm[
+                    TypeSystem`Atom[Integer]], Editable -> True, AutoDelete -> 
+                    True]], "Input", FontTracking -> "Plain"], TooltipDelay -> 
+                    0.25], 
+                    EventHandlerTag[{"MouseClicked" :> CellPrint[
+                    Cell[
+                    ToString[
+                    TypeSystem`Atom[Integer], InputForm], "Input"]], Method -> 
+                    "Preemptive", PassEventsDown -> True, PassEventsUp -> 
+                    False}]]}], 
+                    StyleBox[
+                    ",", FontColor -> GrayLevel[0.65], FontWeight -> "Thin"], 
+                    
+                    RowBox[{
+                    StyleBox[
+                    "c7", FontColor -> RGBColor[0.6, 0.4, 0.2], FontFamily -> 
+                    "Verdana", FontWeight -> Normal], 
+                    StyleBox[
+                    "\[Rule]", FontColor -> GrayLevel[0.65], FontWeight -> 
+                    "Thin"], 
+                    TagBox[
+                    TooltipBox[
+                    FrameBox[
+                    StyleBox["Int", FontColor -> RGBColor[0, 
+                    Rational[2, 3], 0], FontFamily -> "Monaco"], FrameStyle -> 
+                    Dynamic[
+                    If[
+                    CurrentValue["MouseOver"], 
+                    GrayLevel[0.9], None]], BaselinePosition -> Baseline, 
+                    FrameMargins -> {{0, 0}, {2, 2}}, ContentPadding -> 
+                    False], 
+                    Cell[
+                    BoxData[
+                    InterpretationBox[
+                    StyleBox[
+                    "TypeSystem`Atom[Integer]", ShowStringCharacters -> True, 
+                    NumberMarks -> True], 
+                    InputForm[
+                    TypeSystem`Atom[Integer]], Editable -> True, AutoDelete -> 
+                    True]], "Input", FontTracking -> "Plain"], TooltipDelay -> 
+                    0.25], 
+                    EventHandlerTag[{"MouseClicked" :> CellPrint[
+                    Cell[
+                    ToString[
+                    TypeSystem`Atom[Integer], InputForm], "Input"]], Method -> 
+                    "Preemptive", PassEventsDown -> True, PassEventsUp -> 
+                    False}]]}], 
+                    StyleBox[
+                    ",", FontColor -> GrayLevel[0.65], FontWeight -> "Thin"], 
+                    
+                    RowBox[{
+                    StyleBox[
+                    "c8", FontColor -> RGBColor[0.6, 0.4, 0.2], FontFamily -> 
+                    "Verdana", FontWeight -> Normal], 
+                    StyleBox[
+                    "\[Rule]", FontColor -> GrayLevel[0.65], FontWeight -> 
+                    "Thin"], 
+                    TagBox[
+                    TooltipBox[
+                    FrameBox[
+                    StyleBox["Int", FontColor -> RGBColor[0, 
+                    Rational[2, 3], 0], FontFamily -> "Monaco"], FrameStyle -> 
+                    Dynamic[
+                    If[
+                    CurrentValue["MouseOver"], 
+                    GrayLevel[0.9], None]], BaselinePosition -> Baseline, 
+                    FrameMargins -> {{0, 0}, {2, 2}}, ContentPadding -> 
+                    False], 
+                    Cell[
+                    BoxData[
+                    InterpretationBox[
+                    StyleBox[
+                    "TypeSystem`Atom[Integer]", ShowStringCharacters -> True, 
+                    NumberMarks -> True], 
+                    InputForm[
+                    TypeSystem`Atom[Integer]], Editable -> True, AutoDelete -> 
+                    True]], "Input", FontTracking -> "Plain"], TooltipDelay -> 
+                    0.25], 
+                    EventHandlerTag[{"MouseClicked" :> CellPrint[
+                    Cell[
+                    ToString[
+                    TypeSystem`Atom[Integer], InputForm], "Input"]], Method -> 
+                    "Preemptive", PassEventsDown -> True, PassEventsUp -> 
+                    False}]]}], 
+                    StyleBox[
+                    ",", FontColor -> GrayLevel[0.65], FontWeight -> "Thin"], 
+                    
+                    RowBox[{
+                    StyleBox[
+                    "c9", FontColor -> RGBColor[0.6, 0.4, 0.2], FontFamily -> 
+                    "Verdana", FontWeight -> Normal], 
+                    StyleBox[
+                    "\[Rule]", FontColor -> GrayLevel[0.65], FontWeight -> 
+                    "Thin"], 
+                    TagBox[
+                    TooltipBox[
+                    FrameBox[
+                    StyleBox["Int", FontColor -> RGBColor[0, 
+                    Rational[2, 3], 0], FontFamily -> "Monaco"], FrameStyle -> 
+                    Dynamic[
+                    If[
+                    CurrentValue["MouseOver"], 
+                    GrayLevel[0.9], None]], BaselinePosition -> Baseline, 
+                    FrameMargins -> {{0, 0}, {2, 2}}, ContentPadding -> 
+                    False], 
+                    Cell[
+                    BoxData[
+                    InterpretationBox[
+                    StyleBox[
+                    "TypeSystem`Atom[Integer]", ShowStringCharacters -> True, 
+                    NumberMarks -> True], 
+                    InputForm[
+                    TypeSystem`Atom[Integer]], Editable -> True, AutoDelete -> 
+                    True]], "Input", FontTracking -> "Plain"], TooltipDelay -> 
+                    0.25], 
+                    EventHandlerTag[{"MouseClicked" :> CellPrint[
+                    Cell[
+                    ToString[
+                    TypeSystem`Atom[Integer], InputForm], "Input"]], Method -> 
+                    "Preemptive", PassEventsDown -> True, PassEventsUp -> 
+                    False}]]}], 
+                    StyleBox[
+                    ",", FontColor -> GrayLevel[0.65], FontWeight -> "Thin"], 
+                    
+                    RowBox[{
+                    StyleBox[
+                    "c10", FontColor -> RGBColor[0.6, 0.4, 0.2], FontFamily -> 
+                    "Verdana", FontWeight -> Normal], 
+                    StyleBox[
+                    "\[Rule]", FontColor -> GrayLevel[0.65], FontWeight -> 
+                    "Thin"], 
+                    TagBox[
+                    TooltipBox[
+                    FrameBox[
+                    StyleBox["Int", FontColor -> RGBColor[0, 
+                    Rational[2, 3], 0], FontFamily -> "Monaco"], FrameStyle -> 
+                    Dynamic[
+                    If[
+                    CurrentValue["MouseOver"], 
+                    GrayLevel[0.9], None]], BaselinePosition -> Baseline, 
+                    FrameMargins -> {{0, 0}, {2, 2}}, ContentPadding -> 
+                    False], 
+                    Cell[
+                    BoxData[
+                    InterpretationBox[
+                    StyleBox[
+                    "TypeSystem`Atom[Integer]", ShowStringCharacters -> True, 
+                    NumberMarks -> True], 
+                    InputForm[
+                    TypeSystem`Atom[Integer]], Editable -> True, AutoDelete -> 
+                    True]], "Input", FontTracking -> "Plain"], TooltipDelay -> 
+                    0.25], 
+                    EventHandlerTag[{"MouseClicked" :> CellPrint[
+                    Cell[
+                    ToString[
+                    TypeSystem`Atom[Integer], InputForm], "Input"]], Method -> 
+                    "Preemptive", PassEventsDown -> True, PassEventsUp -> 
+                    False}]]}]}], "\[RightAssociation]"}], FrameStyle -> 
+                    Dynamic[
+                    If[
+                    CurrentValue["MouseOver"], 
+                    GrayLevel[0.9], None]], BaselinePosition -> Baseline, 
+                    FrameMargins -> {{0, 0}, {2, 2}}, ContentPadding -> 
+                    False], 
+                    Cell[
+                    BoxData[
+                    InterpretationBox[
+                    StyleBox[
+                    "TypeSystem`Struct[{\"c1\", \"c2\", \"c3\", \"c4\", \
+\"c5\", \"c6\", \"c7\", \"c8\", \"c9\", \"c10\"}, {TypeSystem`Atom[Integer], \
+TypeSystem`Atom[Integer], TypeSystem`Atom[Integer], TypeSystem`Atom[Integer], \
+TypeSystem`Atom[Integer], TypeSystem`Atom[Integer], TypeSystem`Atom[Integer], \
+TypeSystem`Atom[Integer], TypeSystem`Atom[Integer], \
+TypeSystem`Atom[Integer]}]", ShowStringCharacters -> True, NumberMarks -> 
+                    True], 
+                    InputForm[
+                    
+                    TypeSystem`Struct[{
+                    "c1", "c2", "c3", "c4", "c5", "c6", "c7", "c8", "c9", 
+                    "c10"}, {
+                    TypeSystem`Atom[Integer], 
+                    TypeSystem`Atom[Integer], 
+                    TypeSystem`Atom[Integer], 
+                    TypeSystem`Atom[Integer], 
+                    TypeSystem`Atom[Integer], 
+                    TypeSystem`Atom[Integer], 
+                    TypeSystem`Atom[Integer], 
+                    TypeSystem`Atom[Integer], 
+                    TypeSystem`Atom[Integer], 
+                    TypeSystem`Atom[Integer]}]], Editable -> True, AutoDelete -> 
+                    True]], "Input", FontTracking -> "Plain"], TooltipDelay -> 
+                    0.25], 
+                    EventHandlerTag[{"MouseClicked" :> CellPrint[
+                    Cell[
+                    ToString[
+                    
+                    TypeSystem`Struct[{
+                    "c1", "c2", "c3", "c4", "c5", "c6", "c7", "c8", "c9", 
+                    "c10"}, {
+                    TypeSystem`Atom[Integer], 
+                    TypeSystem`Atom[Integer], 
+                    TypeSystem`Atom[Integer], 
+                    TypeSystem`Atom[Integer], 
+                    TypeSystem`Atom[Integer], 
+                    TypeSystem`Atom[Integer], 
+                    TypeSystem`Atom[Integer], 
+                    TypeSystem`Atom[Integer], 
+                    TypeSystem`Atom[Integer], 
+                    TypeSystem`Atom[Integer]}], InputForm], "Input"]], Method -> 
+                    "Preemptive", PassEventsDown -> True, PassEventsUp -> 
+                    False}]]}]}], "\[RightAssociation]"}], 
+                   StyleBox[
+                   "10", FontFamily -> "Arial", FontWeight -> Normal]], 
+                  Cell[
+                   BoxData[
+                    InterpretationBox[
+                    StyleBox[
+                    "TypeSystem`Assoc[TypeSystem`Atom[String], \
+TypeSystem`Struct[{\"c1\", \"c2\", \"c3\", \"c4\", \"c5\", \"c6\", \"c7\", \
+\"c8\", \"c9\", \"c10\"}, {TypeSystem`Atom[Integer], \
+TypeSystem`Atom[Integer], TypeSystem`Atom[Integer], TypeSystem`Atom[Integer], \
+TypeSystem`Atom[Integer], TypeSystem`Atom[Integer], TypeSystem`Atom[Integer], \
+TypeSystem`Atom[Integer], TypeSystem`Atom[Integer], \
+TypeSystem`Atom[Integer]}], 10]", ShowStringCharacters -> True, NumberMarks -> 
+                    True], 
+                    InputForm[
+                    TypeSystem`Assoc[
+                    TypeSystem`Atom[String], 
+                    
+                    TypeSystem`Struct[{
+                    "c1", "c2", "c3", "c4", "c5", "c6", "c7", "c8", "c9", 
+                    "c10"}, {
+                    TypeSystem`Atom[Integer], 
+                    TypeSystem`Atom[Integer], 
+                    TypeSystem`Atom[Integer], 
+                    TypeSystem`Atom[Integer], 
+                    TypeSystem`Atom[Integer], 
+                    TypeSystem`Atom[Integer], 
+                    TypeSystem`Atom[Integer], 
+                    TypeSystem`Atom[Integer], 
+                    TypeSystem`Atom[Integer], 
+                    TypeSystem`Atom[Integer]}], 10]], Editable -> True, 
+                    AutoDelete -> True]], "Input", FontTracking -> "Plain"], 
+                  TooltipDelay -> 0.25], 
+                 EventHandlerTag[{"MouseClicked" :> CellPrint[
+                    Cell[
+                    ToString[
+                    TypeSystem`Assoc[
+                    TypeSystem`Atom[String], 
+                    
+                    TypeSystem`Struct[{
+                    "c1", "c2", "c3", "c4", "c5", "c6", "c7", "c8", "c9", 
+                    "c10"}, {
+                    TypeSystem`Atom[Integer], 
+                    TypeSystem`Atom[Integer], 
+                    TypeSystem`Atom[Integer], 
+                    TypeSystem`Atom[Integer], 
+                    TypeSystem`Atom[Integer], 
+                    TypeSystem`Atom[Integer], 
+                    TypeSystem`Atom[Integer], 
+                    TypeSystem`Atom[Integer], 
+                    TypeSystem`Atom[Integer], 
+                    TypeSystem`Atom[Integer]}], 10], InputForm], "Input"]], 
+                   Method -> "Preemptive", PassEventsDown -> True, 
+                   PassEventsUp -> False}]], FontTracking -> "Condensed", 
+                FontWeight -> "Bold", SpanMinSize -> 1.3, SpanMaxSize -> 3.], 
+               Deploy, DefaultBaseStyle -> "Deploy"], 
+              MouseAppearanceTag["LinkHand"]], 
+             TypeSystem`Assoc[
+              TypeSystem`Atom[String], 
+              
+              TypeSystem`Struct[{
+               "c1", "c2", "c3", "c4", "c5", "c6", "c7", "c8", "c9", "c10"}, {
+               
+                TypeSystem`Atom[Integer], 
+                TypeSystem`Atom[Integer], 
+                TypeSystem`Atom[Integer], 
+                TypeSystem`Atom[Integer], 
+                TypeSystem`Atom[Integer], 
+                TypeSystem`Atom[Integer], 
+                TypeSystem`Atom[Integer], 
+                TypeSystem`Atom[Integer], 
+                TypeSystem`Atom[Integer], 
+                TypeSystem`Atom[Integer]}], 10]], TooltipDelay -> 1.5], 
+           EventHandlerTag[{"MouseClicked" :> Print[
+               InputForm[
+                TypeSystem`Assoc[
+                 TypeSystem`Atom[String], 
+                 
+                 TypeSystem`Struct[{
+                  "c1", "c2", "c3", "c4", "c5", "c6", "c7", "c8", "c9", 
+                   "c10"}, {
+                   TypeSystem`Atom[Integer], 
+                   TypeSystem`Atom[Integer], 
+                   TypeSystem`Atom[Integer], 
+                   TypeSystem`Atom[Integer], 
+                   TypeSystem`Atom[Integer], 
+                   TypeSystem`Atom[Integer], 
+                   TypeSystem`Atom[Integer], 
+                   TypeSystem`Atom[Integer], 
+                   TypeSystem`Atom[Integer], 
+                   TypeSystem`Atom[Integer]}], 10]]]}]], 
+          AdjustmentBox[" | ", BoxBaselineShift -> -0.3], 
+          RowBox[{"10", "rows"}]}], 
+        BaseStyle -> {
+         FontFamily -> "Helvetica", FontSize -> 10, FontColor -> 
+          GrayLevel[0.4], Editable -> False, Selectable -> False}, 
+        ItemSize -> {Automatic, Automatic}, Alignment -> {Left, Center}, 
+        Background -> RGBColor[0.92, 0.92, 0.9]], "\[SpanFromLeft]", 
+       "\[SpanFromLeft]", "\[SpanFromLeft]", "\[SpanFromLeft]", 
+       "\[SpanFromLeft]", "\[SpanFromLeft]", "\[SpanFromLeft]", 
+       "\[SpanFromLeft]", "\[SpanFromLeft]", "\[SpanFromLeft]"}}, 
+     GridBoxFrame -> {"ColumnsIndexed" -> {{{1, -1}, {1, -1}} -> True}}, 
+     FrameStyle -> RGBColor[0, 0, 0, 0.4], GridBoxDividers -> {"Columns" -> {
+         RGBColor[0, 0, 0, 0.4], 
+         RGBColor[0, 0, 0, 0.3], {
+          RGBColor[0, 0, 0, 0.09]}, 
+         RGBColor[0, 0, 0, 0.4]}, "Rows" -> {
+         RGBColor[0, 0, 0, 0.4], 
+         RGBColor[0, 0, 0, 0.3], {
+          RGBColor[0, 0, 0, 0.08]}, 
+         RGBColor[0, 0, 0, 0.4]}}, RowSpacings -> {1.5, 1.2}, 
+     GridBoxBackground -> {"Columns" -> {
+         RGBColor[0.92, 0.92, 0.9]}, "Rows" -> {
+         RGBColor[0.92, 0.92, 0.9]}}, 
+     GridBoxAlignment -> {"Columns" -> {{Left}}}, ColumnSpacings -> 2.5, 
+     GridFrameMargins -> {{2, 3}, {1, 3}}, 
+     GridBoxItemSize -> {"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}},
+      RowMinHeight -> 1.3],
+    "Dataset[Association[(_String -> _Association)..]]"},
+   "Dataset",
+   DisplayFunction->(TagBox[
+     StyleBox[#, {
+      ShowAutoStyles -> False, LineBreakWithin -> False, FontWeight -> 
+       "Light", FontFamily -> "Helvetica Neue", NumberMarks -> False, 
+       SpanMaxSize -> 3, SpanMinSize -> 1., Editable -> False, Selectable -> 
+       True, Background -> RGBColor[0.985, 0.98, 0.973], 
+       LinebreakAdjustments -> {0.4, 5, 100, 0, 0.5}, LineIndent -> 0, 
+       LineSpacing -> {1.1, 5}}], Deploy]& ),
+   InterpretationFunction->(#2& )],
+  False,
+  Editable->False,
+  SelectWithContents->True,
+  Selectable->False]], "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Query syntax", "Subsection"],
+
+Cell[CellGroupData[{
+
+Cell["Select", "Subsubsection"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"exampleDataset", "[", 
+  RowBox[{"Select", "[", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"#", "[", "\"\<c1\>\"", "]"}], ">", "4"}], "&"}], "]"}], 
+  "]"}]], "Input"],
+
+Cell[BoxData[
+ TagBox[
+  TemplateBox[{GridBox[{{
+       ItemBox["", Frame -> {False, True, True, False}], 
+       StyleBox["\"c1\"", 
+        GrayLevel[0.3]], 
+       StyleBox["\"c2\"", 
+        GrayLevel[0.3]], 
+       StyleBox["\"c3\"", 
+        GrayLevel[0.3]], 
+       StyleBox["\"c4\"", 
+        GrayLevel[0.3]], 
+       StyleBox["\"c5\"", 
+        GrayLevel[0.3]], 
+       StyleBox["\"c6\"", 
+        GrayLevel[0.3]], 
+       StyleBox["\"c7\"", 
+        GrayLevel[0.3]], 
+       StyleBox["\"c8\"", 
+        GrayLevel[0.3]], 
+       StyleBox["\"c9\"", 
+        GrayLevel[0.3]], 
+       StyleBox["\"c10\"", 
+        GrayLevel[0.3]]}, {
+       StyleBox[
+        StyleBox["\"r5\"", FontColor -> GrayLevel[0.4]], 
+        GrayLevel[0.3]], 5, 6, 7, 8, 9, 10, 11, 12, 13, 14}, {
+       StyleBox[
+        StyleBox["\"r6\"", FontColor -> GrayLevel[0.4]], 
+        GrayLevel[0.3]], 6, 7, 8, 9, 10, 11, 12, 13, 14, 15}, {
+       StyleBox[
+        StyleBox["\"r7\"", FontColor -> GrayLevel[0.4]], 
+        GrayLevel[0.3]], 7, 8, 9, 10, 11, 12, 13, 14, 15, 16}, {
+       StyleBox[
+        StyleBox["\"r8\"", FontColor -> GrayLevel[0.4]], 
+        GrayLevel[0.3]], 8, 9, 10, 11, 12, 13, 14, 15, 16, 17}, {
+       StyleBox[
+        StyleBox["\"r9\"", FontColor -> GrayLevel[0.4]], 
+        GrayLevel[0.3]], 9, 10, 11, 12, 13, 14, 15, 16, 17, 18}, {
+       StyleBox[
+        StyleBox["\"r10\"", FontColor -> GrayLevel[0.4]], 
+        GrayLevel[0.3]], 10, 11, 12, 13, 14, 15, 16, 17, 18, 19}, {
+       ItemBox[
+        RowBox[{
+          TagBox[
+           TooltipBox["2 levels", 
+            InterpretationBox[
+             TagBox[
+              TagBox[
+               StyleBox[
+                TagBox[
+                 TooltipBox[
+                  RowBox[{"\[LeftAssociation]", 
+                    RowBox[{
+                    RowBox[{
+                    TagBox[
+                    TooltipBox[
+                    FrameBox[
+                    StyleBox["Str", FontColor -> RGBColor[0, 
+                    Rational[2, 3], 0], FontFamily -> "Monaco"], FrameStyle -> 
+                    Dynamic[
+                    If[
+                    CurrentValue["MouseOver"], 
+                    GrayLevel[0.9], None]], BaselinePosition -> Baseline, 
+                    FrameMargins -> {{0, 0}, {2, 2}}, ContentPadding -> 
+                    False], 
+                    Cell[
+                    BoxData[
+                    InterpretationBox[
+                    StyleBox[
+                    "TypeSystem`Atom[String]", ShowStringCharacters -> True, 
+                    NumberMarks -> True], 
+                    InputForm[
+                    TypeSystem`Atom[String]], Editable -> True, AutoDelete -> 
+                    True]], "Input", FontTracking -> "Plain"], TooltipDelay -> 
+                    0.25], 
+                    EventHandlerTag[{"MouseClicked" :> CellPrint[
+                    Cell[
+                    ToString[
+                    TypeSystem`Atom[String], InputForm], "Input"]], Method -> 
+                    "Preemptive", PassEventsDown -> True, PassEventsUp -> 
+                    False}]], 
+                    StyleBox[
+                    "\[Rule]", FontColor -> GrayLevel[0.65], FontWeight -> 
+                    "Thin"], 
+                    TagBox[
+                    TooltipBox[
+                    FrameBox[
+                    RowBox[{"\[LeftAssociation]", 
+                    RowBox[{
+                    RowBox[{
+                    StyleBox[
+                    "c1", FontColor -> RGBColor[0.6, 0.4, 0.2], FontFamily -> 
+                    "Verdana", FontWeight -> Normal], 
+                    StyleBox[
+                    "\[Rule]", FontColor -> GrayLevel[0.65], FontWeight -> 
+                    "Thin"], 
+                    TagBox[
+                    TooltipBox[
+                    FrameBox[
+                    StyleBox["Int", FontColor -> RGBColor[0, 
+                    Rational[2, 3], 0], FontFamily -> "Monaco"], FrameStyle -> 
+                    Dynamic[
+                    If[
+                    CurrentValue["MouseOver"], 
+                    GrayLevel[0.9], None]], BaselinePosition -> Baseline, 
+                    FrameMargins -> {{0, 0}, {2, 2}}, ContentPadding -> 
+                    False], 
+                    Cell[
+                    BoxData[
+                    InterpretationBox[
+                    StyleBox[
+                    "TypeSystem`Atom[Integer]", ShowStringCharacters -> True, 
+                    NumberMarks -> True], 
+                    InputForm[
+                    TypeSystem`Atom[Integer]], Editable -> True, AutoDelete -> 
+                    True]], "Input", FontTracking -> "Plain"], TooltipDelay -> 
+                    0.25], 
+                    EventHandlerTag[{"MouseClicked" :> CellPrint[
+                    Cell[
+                    ToString[
+                    TypeSystem`Atom[Integer], InputForm], "Input"]], Method -> 
+                    "Preemptive", PassEventsDown -> True, PassEventsUp -> 
+                    False}]]}], 
+                    StyleBox[
+                    ",", FontColor -> GrayLevel[0.65], FontWeight -> "Thin"], 
+                    
+                    RowBox[{
+                    StyleBox[
+                    "c2", FontColor -> RGBColor[0.6, 0.4, 0.2], FontFamily -> 
+                    "Verdana", FontWeight -> Normal], 
+                    StyleBox[
+                    "\[Rule]", FontColor -> GrayLevel[0.65], FontWeight -> 
+                    "Thin"], 
+                    TagBox[
+                    TooltipBox[
+                    FrameBox[
+                    StyleBox["Int", FontColor -> RGBColor[0, 
+                    Rational[2, 3], 0], FontFamily -> "Monaco"], FrameStyle -> 
+                    Dynamic[
+                    If[
+                    CurrentValue["MouseOver"], 
+                    GrayLevel[0.9], None]], BaselinePosition -> Baseline, 
+                    FrameMargins -> {{0, 0}, {2, 2}}, ContentPadding -> 
+                    False], 
+                    Cell[
+                    BoxData[
+                    InterpretationBox[
+                    StyleBox[
+                    "TypeSystem`Atom[Integer]", ShowStringCharacters -> True, 
+                    NumberMarks -> True], 
+                    InputForm[
+                    TypeSystem`Atom[Integer]], Editable -> True, AutoDelete -> 
+                    True]], "Input", FontTracking -> "Plain"], TooltipDelay -> 
+                    0.25], 
+                    EventHandlerTag[{"MouseClicked" :> CellPrint[
+                    Cell[
+                    ToString[
+                    TypeSystem`Atom[Integer], InputForm], "Input"]], Method -> 
+                    "Preemptive", PassEventsDown -> True, PassEventsUp -> 
+                    False}]]}], 
+                    StyleBox[
+                    ",", FontColor -> GrayLevel[0.65], FontWeight -> "Thin"], 
+                    
+                    RowBox[{
+                    StyleBox[
+                    "c3", FontColor -> RGBColor[0.6, 0.4, 0.2], FontFamily -> 
+                    "Verdana", FontWeight -> Normal], 
+                    StyleBox[
+                    "\[Rule]", FontColor -> GrayLevel[0.65], FontWeight -> 
+                    "Thin"], 
+                    TagBox[
+                    TooltipBox[
+                    FrameBox[
+                    StyleBox["Int", FontColor -> RGBColor[0, 
+                    Rational[2, 3], 0], FontFamily -> "Monaco"], FrameStyle -> 
+                    Dynamic[
+                    If[
+                    CurrentValue["MouseOver"], 
+                    GrayLevel[0.9], None]], BaselinePosition -> Baseline, 
+                    FrameMargins -> {{0, 0}, {2, 2}}, ContentPadding -> 
+                    False], 
+                    Cell[
+                    BoxData[
+                    InterpretationBox[
+                    StyleBox[
+                    "TypeSystem`Atom[Integer]", ShowStringCharacters -> True, 
+                    NumberMarks -> True], 
+                    InputForm[
+                    TypeSystem`Atom[Integer]], Editable -> True, AutoDelete -> 
+                    True]], "Input", FontTracking -> "Plain"], TooltipDelay -> 
+                    0.25], 
+                    EventHandlerTag[{"MouseClicked" :> CellPrint[
+                    Cell[
+                    ToString[
+                    TypeSystem`Atom[Integer], InputForm], "Input"]], Method -> 
+                    "Preemptive", PassEventsDown -> True, PassEventsUp -> 
+                    False}]]}], 
+                    StyleBox[
+                    ",", FontColor -> GrayLevel[0.65], FontWeight -> "Thin"], 
+                    
+                    RowBox[{
+                    StyleBox[
+                    "c4", FontColor -> RGBColor[0.6, 0.4, 0.2], FontFamily -> 
+                    "Verdana", FontWeight -> Normal], 
+                    StyleBox[
+                    "\[Rule]", FontColor -> GrayLevel[0.65], FontWeight -> 
+                    "Thin"], 
+                    TagBox[
+                    TooltipBox[
+                    FrameBox[
+                    StyleBox["Int", FontColor -> RGBColor[0, 
+                    Rational[2, 3], 0], FontFamily -> "Monaco"], FrameStyle -> 
+                    Dynamic[
+                    If[
+                    CurrentValue["MouseOver"], 
+                    GrayLevel[0.9], None]], BaselinePosition -> Baseline, 
+                    FrameMargins -> {{0, 0}, {2, 2}}, ContentPadding -> 
+                    False], 
+                    Cell[
+                    BoxData[
+                    InterpretationBox[
+                    StyleBox[
+                    "TypeSystem`Atom[Integer]", ShowStringCharacters -> True, 
+                    NumberMarks -> True], 
+                    InputForm[
+                    TypeSystem`Atom[Integer]], Editable -> True, AutoDelete -> 
+                    True]], "Input", FontTracking -> "Plain"], TooltipDelay -> 
+                    0.25], 
+                    EventHandlerTag[{"MouseClicked" :> CellPrint[
+                    Cell[
+                    ToString[
+                    TypeSystem`Atom[Integer], InputForm], "Input"]], Method -> 
+                    "Preemptive", PassEventsDown -> True, PassEventsUp -> 
+                    False}]]}], 
+                    StyleBox[
+                    ",", FontColor -> GrayLevel[0.65], FontWeight -> "Thin"], 
+                    
+                    RowBox[{
+                    StyleBox[
+                    "c5", FontColor -> RGBColor[0.6, 0.4, 0.2], FontFamily -> 
+                    "Verdana", FontWeight -> Normal], 
+                    StyleBox[
+                    "\[Rule]", FontColor -> GrayLevel[0.65], FontWeight -> 
+                    "Thin"], 
+                    TagBox[
+                    TooltipBox[
+                    FrameBox[
+                    StyleBox["Int", FontColor -> RGBColor[0, 
+                    Rational[2, 3], 0], FontFamily -> "Monaco"], FrameStyle -> D\
+ynamic[
+                    If[
+                    CurrentValue["MouseOver"], 
+                    GrayLevel[0.9], None]], BaselinePosition -> Baseline, 
+                    FrameMargins -> {{0, 0}, {2, 2}}, ContentPadding -> 
+                    False], 
+                    Cell[
+                    BoxData[
+                    InterpretationBox[
+                    StyleBox[
+                    "TypeSystem`Atom[Integer]", ShowStringCharacters -> True, 
+                    NumberMarks -> True], 
+                    InputForm[
+                    TypeSystem`Atom[Integer]], Editable -> True, AutoDelete -> 
+                    True]], "Input", FontTracking -> "Plain"], TooltipDelay -> 
+                    0.25], 
+                    EventHandlerTag[{"MouseClicked" :> CellPrint[
+                    Cell[
+                    ToString[
+                    TypeSystem`Atom[Integer], InputForm], "Input"]], Method -> 
+                    "Preemptive", PassEventsDown -> True, PassEventsUp -> 
+                    False}]]}], 
+                    StyleBox[
+                    ",", FontColor -> GrayLevel[0.65], FontWeight -> "Thin"], 
+                    
+                    RowBox[{
+                    StyleBox[
+                    "c6", FontColor -> RGBColor[0.6, 0.4, 0.2], FontFamily -> 
+                    "Verdana", FontWeight -> Normal], 
+                    StyleBox[
+                    "\[Rule]", FontColor -> GrayLevel[0.65], FontWeight -> 
+                    "Thin"], 
+                    TagBox[
+                    TooltipBox[
+                    FrameBox[
+                    StyleBox["Int", FontColor -> RGBColor[0, 
+                    Rational[2, 3], 0], FontFamily -> "Monaco"], FrameStyle -> 
+                    Dynamic[
+                    If[
+                    CurrentValue["MouseOver"], 
+                    GrayLevel[0.9], None]], BaselinePosition -> Baseline, 
+                    FrameMargins -> {{0, 0}, {2, 2}}, ContentPadding -> 
+                    False], 
+                    Cell[
+                    BoxData[
+                    InterpretationBox[
+                    StyleBox[
+                    "TypeSystem`Atom[Integer]", ShowStringCharacters -> True, 
+                    NumberMarks -> True], 
+                    InputForm[
+                    TypeSystem`Atom[Integer]], Editable -> True, AutoDelete -> 
+                    True]], "Input", FontTracking -> "Plain"], TooltipDelay -> 
+                    0.25], 
+                    EventHandlerTag[{"MouseClicked" :> CellPrint[
+                    Cell[
+                    ToString[
+                    TypeSystem`Atom[Integer], InputForm], "Input"]], Method -> 
+                    "Preemptive", PassEventsDown -> True, PassEventsUp -> 
+                    False}]]}], 
+                    StyleBox[
+                    ",", FontColor -> GrayLevel[0.65], FontWeight -> "Thin"], 
+                    
+                    RowBox[{
+                    StyleBox[
+                    "c7", FontColor -> RGBColor[0.6, 0.4, 0.2], FontFamily -> 
+                    "Verdana", FontWeight -> Normal], 
+                    StyleBox[
+                    "\[Rule]", FontColor -> GrayLevel[0.65], FontWeight -> 
+                    "Thin"], 
+                    TagBox[
+                    TooltipBox[
+                    FrameBox[
+                    StyleBox["Int", FontColor -> RGBColor[0, 
+                    Rational[2, 3], 0], FontFamily -> "Monaco"], FrameStyle -> 
+                    Dynamic[
+                    If[
+                    CurrentValue["MouseOver"], 
+                    GrayLevel[0.9], None]], BaselinePosition -> Baseline, 
+                    FrameMargins -> {{0, 0}, {2, 2}}, ContentPadding -> 
+                    False], 
+                    Cell[
+                    BoxData[
+                    InterpretationBox[
+                    StyleBox[
+                    "TypeSystem`Atom[Integer]", ShowStringCharacters -> True, 
+                    NumberMarks -> True], 
+                    InputForm[
+                    TypeSystem`Atom[Integer]], Editable -> True, AutoDelete -> 
+                    True]], "Input", FontTracking -> "Plain"], TooltipDelay -> 
+                    0.25], 
+                    EventHandlerTag[{"MouseClicked" :> CellPrint[
+                    Cell[
+                    ToString[
+                    TypeSystem`Atom[Integer], InputForm], "Input"]], Method -> 
+                    "Preemptive", PassEventsDown -> True, PassEventsUp -> 
+                    False}]]}], 
+                    StyleBox[",", FontColor -> GrayLevel[0.65], FontWeight -> 
+                    "Thin"], 
+                    RowBox[{
+                    StyleBox[
+                    "c8", FontColor -> RGBColor[0.6, 0.4, 0.2], FontFamily -> 
+                    "Verdana", FontWeight -> Normal], 
+                    StyleBox[
+                    "\[Rule]", FontColor -> GrayLevel[0.65], FontWeight -> 
+                    "Thin"], 
+                    TagBox[
+                    TooltipBox[
+                    FrameBox[
+                    StyleBox["Int", FontColor -> RGBColor[0, 
+                    Rational[2, 3], 0], FontFamily -> "Monaco"], FrameStyle -> 
+                    Dynamic[
+                    If[
+                    CurrentValue["MouseOver"], 
+                    GrayLevel[0.9], None]], BaselinePosition -> Baseline, 
+                    FrameMargins -> {{0, 0}, {2, 2}}, ContentPadding -> 
+                    False], 
+                    Cell[
+                    BoxData[
+                    InterpretationBox[
+                    StyleBox[
+                    "TypeSystem`Atom[Integer]", ShowStringCharacters -> True, 
+                    NumberMarks -> True], 
+                    InputForm[
+                    TypeSystem`Atom[Integer]], Editable -> True, AutoDelete -> 
+                    True]], "Input", FontTracking -> "Plain"], TooltipDelay -> 
+                    0.25], 
+                    EventHandlerTag[{"MouseClicked" :> CellPrint[
+                    Cell[
+                    ToString[
+                    TypeSystem`Atom[Integer], InputForm], "Input"]], Method -> 
+                    "Preemptive", PassEventsDown -> True, PassEventsUp -> 
+                    False}]]}], 
+                    StyleBox[
+                    ",", FontColor -> GrayLevel[0.65], FontWeight -> "Thin"], 
+                    
+                    RowBox[{
+                    StyleBox[
+                    "c9", FontColor -> RGBColor[0.6, 0.4, 0.2], FontFamily -> 
+                    "Verdana", FontWeight -> Normal], 
+                    StyleBox[
+                    "\[Rule]", FontColor -> GrayLevel[0.65], FontWeight -> 
+                    "Thin"], 
+                    TagBox[
+                    TooltipBox[
+                    FrameBox[
+                    StyleBox["Int", FontColor -> RGBColor[0, 
+                    Rational[2, 3], 0], FontFamily -> "Monaco"], FrameStyle -> 
+                    Dynamic[
+                    If[
+                    CurrentValue["MouseOver"], 
+                    GrayLevel[0.9], None]], BaselinePosition -> Baseline, 
+                    FrameMargins -> {{0, 0}, {2, 2}}, ContentPadding -> 
+                    False], 
+                    Cell[
+                    BoxData[
+                    InterpretationBox[
+                    StyleBox[
+                    "TypeSystem`Atom[Integer]", ShowStringCharacters -> True, 
+                    NumberMarks -> True], 
+                    InputForm[
+                    TypeSystem`Atom[Integer]], Editable -> True, AutoDelete -> 
+                    True]], "Input", FontTracking -> "Plain"], TooltipDelay -> 
+                    0.25], 
+                    EventHandlerTag[{"MouseClicked" :> CellPrint[
+                    Cell[
+                    ToString[
+                    TypeSystem`Atom[Integer], InputForm], "Input"]], Method -> 
+                    "Preemptive", PassEventsDown -> True, PassEventsUp -> 
+                    False}]]}], 
+                    StyleBox[
+                    ",", FontColor -> GrayLevel[0.65], FontWeight -> "Thin"], 
+                    
+                    RowBox[{
+                    StyleBox[
+                    "c10", FontColor -> RGBColor[0.6, 0.4, 0.2], FontFamily -> 
+                    "Verdana", FontWeight -> Normal], 
+                    StyleBox[
+                    "\[Rule]", FontColor -> GrayLevel[0.65], FontWeight -> 
+                    "Thin"], 
+                    TagBox[
+                    TooltipBox[
+                    FrameBox[
+                    StyleBox["Int", FontColor -> RGBColor[0, 
+                    Rational[2, 3], 0], FontFamily -> "Monaco"], FrameStyle -> 
+                    Dynamic[
+                    If[
+                    CurrentValue["MouseOver"], 
+                    GrayLevel[0.9], None]], BaselinePosition -> Baseline, 
+                    FrameMargins -> {{0, 0}, {2, 2}}, ContentPadding -> 
+                    False], 
+                    Cell[
+                    BoxData[
+                    InterpretationBox[
+                    StyleBox[
+                    "TypeSystem`Atom[Integer]", ShowStringCharacters -> True, 
+                    NumberMarks -> True], 
+                    InputForm[
+                    TypeSystem`Atom[Integer]], Editable -> True, AutoDelete -> 
+                    True]], "Input", FontTracking -> "Plain"], TooltipDelay -> 
+                    0.25], 
+                    EventHandlerTag[{"MouseClicked" :> CellPrint[
+                    Cell[
+                    ToString[
+                    TypeSystem`Atom[Integer], InputForm], "Input"]], Method -> 
+                    "Preemptive", PassEventsDown -> True, PassEventsUp -> 
+                    False}]]}]}], "\[RightAssociation]"}], FrameStyle -> 
+                    Dynamic[
+                    If[
+                    CurrentValue["MouseOver"], 
+                    GrayLevel[0.9], None]], BaselinePosition -> Baseline, 
+                    FrameMargins -> {{0, 0}, {2, 2}}, ContentPadding -> 
+                    False], 
+                    Cell[
+                    BoxData[
+                    InterpretationBox[
+                    StyleBox[
+                    "TypeSystem`Struct[{\"c1\", \"c2\", \"c3\", \"c4\", \
+\"c5\", \"c6\", \"c7\", \"c8\", \"c9\", \"c10\"}, {TypeSystem`Atom[Integer], \
+TypeSystem`Atom[Integer], TypeSystem`Atom[Integer], TypeSystem`Atom[Integer], \
+TypeSystem`Atom[Integer], TypeSystem`Atom[Integer], TypeSystem`Atom[Integer], \
+TypeSystem`Atom[Integer], TypeSystem`Atom[Integer], \
+TypeSystem`Atom[Integer]}]", ShowStringCharacters -> True, NumberMarks -> 
+                    True], 
+                    InputForm[
+                    
+                    TypeSystem`Struct[{
+                    "c1", "c2", "c3", "c4", "c5", "c6", "c7", "c8", "c9", 
+                    "c10"}, {
+                    TypeSystem`Atom[Integer], 
+                    TypeSystem`Atom[Integer], 
+                    TypeSystem`Atom[Integer], 
+                    TypeSystem`Atom[Integer], 
+                    TypeSystem`Atom[Integer], 
+                    TypeSystem`Atom[Integer], 
+                    TypeSystem`Atom[Integer], 
+                    TypeSystem`Atom[Integer], 
+                    TypeSystem`Atom[Integer], 
+                    TypeSystem`Atom[Integer]}]], Editable -> True, AutoDelete -> 
+                    True]], "Input", FontTracking -> "Plain"], TooltipDelay -> 
+                    0.25], 
+                    EventHandlerTag[{"MouseClicked" :> CellPrint[
+                    Cell[
+                    ToString[
+                    
+                    TypeSystem`Struct[{
+                    "c1", "c2", "c3", "c4", "c5", "c6", "c7", "c8", "c9", 
+                    "c10"}, {
+                    TypeSystem`Atom[Integer], 
+                    TypeSystem`Atom[Integer], 
+                    TypeSystem`Atom[Integer], 
+                    TypeSystem`Atom[Integer], 
+                    TypeSystem`Atom[Integer], 
+                    TypeSystem`Atom[Integer], 
+                    TypeSystem`Atom[Integer], 
+                    TypeSystem`Atom[Integer], 
+                    TypeSystem`Atom[Integer], 
+                    TypeSystem`Atom[Integer]}], InputForm], "Input"]], Method -> 
+                    "Preemptive", PassEventsDown -> True, PassEventsUp -> 
+                    False}]]}]}], "\[RightAssociation]"}], 
+                  Cell[
+                   BoxData[
+                    InterpretationBox[
+                    StyleBox[
+                    "TypeSystem`Assoc[TypeSystem`Atom[String], \
+TypeSystem`Struct[{\"c1\", \"c2\", \"c3\", \"c4\", \"c5\", \"c6\", \"c7\", \
+\"c8\", \"c9\", \"c10\"}, {TypeSystem`Atom[Integer], \
+TypeSystem`Atom[Integer], TypeSystem`Atom[Integer], TypeSystem`Atom[Integer], \
+TypeSystem`Atom[Integer], TypeSystem`Atom[Integer], TypeSystem`Atom[Integer], \
+TypeSystem`Atom[Integer], TypeSystem`Atom[Integer], \
+TypeSystem`Atom[Integer]}], TypeSystem`AnyLength]", ShowStringCharacters -> 
+                    True, NumberMarks -> True], 
+                    InputForm[
+                    TypeSystem`Assoc[
+                    TypeSystem`Atom[String], 
+                    
+                    TypeSystem`Struct[{
+                    "c1", "c2", "c3", "c4", "c5", "c6", "c7", "c8", "c9", 
+                    "c10"}, {
+                    TypeSystem`Atom[Integer], 
+                    TypeSystem`Atom[Integer], 
+                    TypeSystem`Atom[Integer], 
+                    TypeSystem`Atom[Integer], 
+                    TypeSystem`Atom[Integer], 
+                    TypeSystem`Atom[Integer], 
+                    TypeSystem`Atom[Integer], 
+                    TypeSystem`Atom[Integer], 
+                    TypeSystem`Atom[Integer], 
+                    TypeSystem`Atom[Integer]}], TypeSystem`AnyLength]], 
+                    Editable -> True, AutoDelete -> True]], "Input", 
+                   FontTracking -> "Plain"], TooltipDelay -> 0.25], 
+                 EventHandlerTag[{"MouseClicked" :> CellPrint[
+                    Cell[
+                    ToString[
+                    TypeSystem`Assoc[
+                    TypeSystem`Atom[String], 
+                    
+                    TypeSystem`Struct[{
+                    "c1", "c2", "c3", "c4", "c5", "c6", "c7", "c8", "c9", 
+                    "c10"}, {
+                    TypeSystem`Atom[Integer], 
+                    TypeSystem`Atom[Integer], 
+                    TypeSystem`Atom[Integer], 
+                    TypeSystem`Atom[Integer], 
+                    TypeSystem`Atom[Integer], 
+                    TypeSystem`Atom[Integer], 
+                    TypeSystem`Atom[Integer], 
+                    TypeSystem`Atom[Integer], 
+                    TypeSystem`Atom[Integer], 
+                    TypeSystem`Atom[Integer]}], TypeSystem`AnyLength], 
+                    InputForm], "Input"]], Method -> "Preemptive", 
+                   PassEventsDown -> True, PassEventsUp -> False}]], 
+                FontTracking -> "Condensed", FontWeight -> "Bold", 
+                SpanMinSize -> 1.3, SpanMaxSize -> 3.], Deploy, 
+               DefaultBaseStyle -> "Deploy"], 
+              MouseAppearanceTag["LinkHand"]], 
+             TypeSystem`Assoc[
+              TypeSystem`Atom[String], 
+              
+              TypeSystem`Struct[{
+               "c1", "c2", "c3", "c4", "c5", "c6", "c7", "c8", "c9", "c10"}, {
+               
+                TypeSystem`Atom[Integer], 
+                TypeSystem`Atom[Integer], 
+                TypeSystem`Atom[Integer], 
+                TypeSystem`Atom[Integer], 
+                TypeSystem`Atom[Integer], 
+                TypeSystem`Atom[Integer], 
+                TypeSystem`Atom[Integer], 
+                TypeSystem`Atom[Integer], 
+                TypeSystem`Atom[Integer], 
+                TypeSystem`Atom[Integer]}], TypeSystem`AnyLength]], 
+            TooltipDelay -> 1.5], 
+           EventHandlerTag[{"MouseClicked" :> Print[
+               InputForm[
+                TypeSystem`Assoc[
+                 TypeSystem`Atom[String], 
+                 
+                 TypeSystem`Struct[{
+                  "c1", "c2", "c3", "c4", "c5", "c6", "c7", "c8", "c9", 
+                   "c10"}, {
+                   TypeSystem`Atom[Integer], 
+                   TypeSystem`Atom[Integer], 
+                   TypeSystem`Atom[Integer], 
+                   TypeSystem`Atom[Integer], 
+                   TypeSystem`Atom[Integer], 
+                   TypeSystem`Atom[Integer], 
+                   TypeSystem`Atom[Integer], 
+                   TypeSystem`Atom[Integer], 
+                   TypeSystem`Atom[Integer], 
+                   TypeSystem`Atom[Integer]}], TypeSystem`AnyLength]]]}]], 
+          AdjustmentBox[" | ", BoxBaselineShift -> -0.3], 
+          RowBox[{"6", "rows"}]}], 
+        BaseStyle -> {
+         FontFamily -> "Helvetica", FontSize -> 10, FontColor -> 
+          GrayLevel[0.4], Editable -> False, Selectable -> False}, 
+        ItemSize -> {Automatic, Automatic}, Alignment -> {Left, Center}, 
+        Background -> RGBColor[0.92, 0.92, 0.9]], "\[SpanFromLeft]", 
+       "\[SpanFromLeft]", "\[SpanFromLeft]", "\[SpanFromLeft]", 
+       "\[SpanFromLeft]", "\[SpanFromLeft]", "\[SpanFromLeft]", 
+       "\[SpanFromLeft]", "\[SpanFromLeft]", "\[SpanFromLeft]"}}, 
+     GridBoxFrame -> {"ColumnsIndexed" -> {{{1, -1}, {1, -1}} -> True}}, 
+     FrameStyle -> RGBColor[0, 0, 0, 0.4], GridBoxDividers -> {"Columns" -> {
+         RGBColor[0, 0, 0, 0.4], 
+         RGBColor[0, 0, 0, 0.3], {
+          RGBColor[0, 0, 0, 0.09]}, 
+         RGBColor[0, 0, 0, 0.4]}, "Rows" -> {
+         RGBColor[0, 0, 0, 0.4], 
+         RGBColor[0, 0, 0, 0.3], {
+          RGBColor[0, 0, 0, 0.08]}, 
+         RGBColor[0, 0, 0, 0.4]}}, RowSpacings -> {1.5, 1.2}, 
+     GridBoxBackground -> {"Columns" -> {
+         RGBColor[0.92, 0.92, 0.9]}, "Rows" -> {
+         RGBColor[0.92, 0.92, 0.9]}}, 
+     GridBoxAlignment -> {"Columns" -> {{Left}}}, ColumnSpacings -> 2.5, 
+     GridFrameMargins -> {{2, 3}, {1, 3}}, 
+     GridBoxItemSize -> {"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}},
+      RowMinHeight -> 1.3],
+    "Dataset[Association[(_String -> _Association)..]]"},
+   "Dataset",
+   DisplayFunction->(TagBox[
+     StyleBox[#, {
+      ShowAutoStyles -> False, LineBreakWithin -> False, FontWeight -> 
+       "Light", FontFamily -> "Helvetica Neue", NumberMarks -> False, 
+       SpanMaxSize -> 3, SpanMinSize -> 1., Editable -> False, Selectable -> 
+       True, Background -> RGBColor[0.985, 0.98, 0.973], 
+       LinebreakAdjustments -> {0.4, 5, 100, 0, 0.5}, LineIndent -> 0, 
+       LineSpacing -> {1.1, 5}}], Deploy]& ),
+   InterpretationFunction->(#2& )],
+  False,
+  Editable->False,
+  SelectWithContents->True,
+  Selectable->False]], "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"exampleDataset", "[", 
+  RowBox[{
+   RowBox[{"Select", "[", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"#", "[", "\"\<c1\>\"", "]"}], ">", "5"}], "&"}], "]"}], "/*", 
+   "Length"}], "]"}]], "Input"],
+
+Cell[BoxData["5"], "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"exampleDataset", "[", 
+  RowBox[{
+   RowBox[{"Select", "[", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"#", "[", "\"\<c1\>\"", "]"}], ">", "1"}], "&"}], "]"}], ",", 
+   "\"\<c2\>\""}], "]"}]], "Input"],
+
+Cell[BoxData[
+ TagBox[
+  TemplateBox[{GridBox[{{
+       StyleBox[
+        StyleBox["\"r2\"", FontColor -> GrayLevel[0.4]], 
+        GrayLevel[0.3]], 3}, {
+       StyleBox[
+        StyleBox["\"r3\"", FontColor -> GrayLevel[0.4]], 
+        GrayLevel[0.3]], 4}, {
+       StyleBox[
+        StyleBox["\"r4\"", FontColor -> GrayLevel[0.4]], 
+        GrayLevel[0.3]], 5}, {
+       StyleBox[
+        StyleBox["\"r5\"", FontColor -> GrayLevel[0.4]], 
+        GrayLevel[0.3]], 6}, {
+       StyleBox[
+        StyleBox["\"r6\"", FontColor -> GrayLevel[0.4]], 
+        GrayLevel[0.3]], 7}, {
+       StyleBox[
+        StyleBox["\"r7\"", FontColor -> GrayLevel[0.4]], 
+        GrayLevel[0.3]], 8}, {
+       StyleBox[
+        StyleBox["\"r8\"", FontColor -> GrayLevel[0.4]], 
+        GrayLevel[0.3]], 9}, {
+       StyleBox[
+        StyleBox["\"r9\"", FontColor -> GrayLevel[0.4]], 
+        GrayLevel[0.3]], 10}, {
+       StyleBox[
+        StyleBox["\"r10\"", FontColor -> GrayLevel[0.4]], 
+        GrayLevel[0.3]], 11}, {
+       ItemBox[
+        RowBox[{
+          TagBox[
+           TooltipBox["1 level", 
+            InterpretationBox[
+             TagBox[
+              TagBox[
+               StyleBox[
+                TagBox[
+                 TooltipBox[
+                  RowBox[{"\[LeftAssociation]", 
+                    RowBox[{
+                    RowBox[{
+                    TagBox[
+                    TooltipBox[
+                    FrameBox[
+                    StyleBox["Str", FontColor -> RGBColor[0, 
+                    Rational[2, 3], 0], FontFamily -> "Monaco"], FrameStyle -> 
+                    Dynamic[
+                    If[
+                    CurrentValue["MouseOver"], 
+                    GrayLevel[0.9], None]], BaselinePosition -> Baseline, 
+                    FrameMargins -> {{0, 0}, {2, 2}}, ContentPadding -> 
+                    False], 
+                    Cell[
+                    BoxData[
+                    InterpretationBox[
+                    StyleBox[
+                    "TypeSystem`Atom[String]", ShowStringCharacters -> True, 
+                    NumberMarks -> True], 
+                    InputForm[
+                    TypeSystem`Atom[String]], Editable -> True, AutoDelete -> 
+                    True]], "Input", FontTracking -> "Plain"], TooltipDelay -> 
+                    0.25], 
+                    EventHandlerTag[{"MouseClicked" :> CellPrint[
+                    Cell[
+                    ToString[
+                    TypeSystem`Atom[String], InputForm], "Input"]], Method -> 
+                    "Preemptive", PassEventsDown -> True, PassEventsUp -> 
+                    False}]], 
+                    StyleBox[
+                    "\[Rule]", FontColor -> GrayLevel[0.65], FontWeight -> 
+                    "Thin"], 
+                    TagBox[
+                    TooltipBox[
+                    FrameBox[
+                    StyleBox["Int", FontColor -> RGBColor[0, 
+                    Rational[2, 3], 0], FontFamily -> "Monaco"], FrameStyle -> 
+                    Dynamic[
+                    If[
+                    CurrentValue["MouseOver"], 
+                    GrayLevel[0.9], None]], BaselinePosition -> Baseline, 
+                    FrameMargins -> {{0, 0}, {2, 2}}, ContentPadding -> 
+                    False], 
+                    Cell[
+                    BoxData[
+                    InterpretationBox[
+                    StyleBox[
+                    "TypeSystem`Atom[Integer]", ShowStringCharacters -> True, 
+                    NumberMarks -> True], 
+                    InputForm[
+                    TypeSystem`Atom[Integer]], Editable -> True, AutoDelete -> 
+                    True]], "Input", FontTracking -> "Plain"], TooltipDelay -> 
+                    0.25], 
+                    EventHandlerTag[{"MouseClicked" :> CellPrint[
+                    Cell[
+                    ToString[
+                    TypeSystem`Atom[Integer], InputForm], "Input"]], Method -> 
+                    "Preemptive", PassEventsDown -> True, PassEventsUp -> 
+                    False}]]}]}], "\[RightAssociation]"}], 
+                  Cell[
+                   BoxData[
+                    InterpretationBox[
+                    StyleBox[
+                    "TypeSystem`Assoc[TypeSystem`Atom[String], \
+TypeSystem`Atom[Integer], TypeSystem`AnyLength]", ShowStringCharacters -> 
+                    True, NumberMarks -> True], 
+                    InputForm[
+                    TypeSystem`Assoc[
+                    TypeSystem`Atom[String], 
+                    TypeSystem`Atom[Integer], TypeSystem`AnyLength]], 
+                    Editable -> True, AutoDelete -> True]], "Input", 
+                   FontTracking -> "Plain"], TooltipDelay -> 0.25], 
+                 EventHandlerTag[{"MouseClicked" :> CellPrint[
+                    Cell[
+                    ToString[
+                    TypeSystem`Assoc[
+                    TypeSystem`Atom[String], 
+                    TypeSystem`Atom[Integer], TypeSystem`AnyLength], 
+                    InputForm], "Input"]], Method -> "Preemptive", 
+                   PassEventsDown -> True, PassEventsUp -> False}]], 
+                FontTracking -> "Condensed", FontWeight -> "Bold", 
+                SpanMinSize -> 1.3, SpanMaxSize -> 3.], Deploy, 
+               DefaultBaseStyle -> "Deploy"], 
+              MouseAppearanceTag["LinkHand"]], 
+             TypeSystem`Assoc[
+              TypeSystem`Atom[String], 
+              TypeSystem`Atom[Integer], TypeSystem`AnyLength]], TooltipDelay -> 
+            1.5], 
+           EventHandlerTag[{"MouseClicked" :> Print[
+               InputForm[
+                TypeSystem`Assoc[
+                 TypeSystem`Atom[String], 
+                 TypeSystem`Atom[Integer], TypeSystem`AnyLength]]]}]], 
+          AdjustmentBox[" | ", BoxBaselineShift -> -0.3], 
+          RowBox[{"9", "elements"}]}], 
+        BaseStyle -> {
+         FontFamily -> "Helvetica", FontSize -> 10, FontColor -> 
+          GrayLevel[0.4], Editable -> False, Selectable -> False}, 
+        ItemSize -> {Automatic, Automatic}, Alignment -> {Left, Center}, 
+        Background -> RGBColor[0.92, 0.92, 0.9]], "\[SpanFromLeft]"}}, 
+     GridBoxFrame -> {"ColumnsIndexed" -> {{{1, -1}, {1, -1}} -> True}}, 
+     FrameStyle -> RGBColor[0, 0, 0, 0.4], GridBoxDividers -> {"Columns" -> {
+         RGBColor[0, 0, 0, 0.4], 
+         RGBColor[0, 0, 0, 0.3], {
+          RGBColor[0, 0, 0, 0.09]}, 
+         RGBColor[0, 0, 0, 0.4]}, "Rows" -> {
+         RGBColor[0, 0, 0, 0.4], {
+          RGBColor[0, 0, 0, 0.08]}, 
+         RGBColor[0, 0, 0, 0.4]}}, RowSpacings -> 1.2, 
+     GridBoxBackground -> {"Columns" -> {
+         RGBColor[0.92, 0.92, 0.9]}}, 
+     GridBoxAlignment -> {"Columns" -> {{Left}}}, ColumnSpacings -> 2.5, 
+     GridFrameMargins -> {{2, 3}, {1, 3}}, 
+     GridBoxItemSize -> {"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}},
+      RowMinHeight -> 1.3],"Dataset[Association[(_String -> _Integer)..]]"},
+   "Dataset",
+   DisplayFunction->(TagBox[
+     StyleBox[#, {
+      ShowAutoStyles -> False, LineBreakWithin -> False, FontWeight -> 
+       "Light", FontFamily -> "Helvetica Neue", NumberMarks -> False, 
+       SpanMaxSize -> 3, SpanMinSize -> 1., Editable -> False, Selectable -> 
+       True, Background -> RGBColor[0.985, 0.98, 0.973], 
+       LinebreakAdjustments -> {0.4, 5, 100, 0, 0.5}, LineIndent -> 0, 
+       LineSpacing -> {1.1, 5}}], Deploy]& ),
+   InterpretationFunction->(#2& )],
+  False,
+  Editable->False,
+  SelectWithContents->True,
+  Selectable->False]], "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"exampleDataset", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"Select", "[", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"#", "[", "\"\<c1\>\"", "]"}], ">", "1"}], "&"}], "]"}], "/*", 
+    
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"#", "^", "2"}], "&"}], ")"}]}], ",", "\"\<c2\>\""}], 
+  "]"}]], "Input"],
+
+Cell[BoxData[
+ TagBox[
+  TemplateBox[{GridBox[{{
+       StyleBox[
+        InterpretationBox[
+         StyleBox["\"r2\"", 
+          GrayLevel[0.45]], "r2"], 
+        GrayLevel[0.3]], 9}, {
+       StyleBox[
+        InterpretationBox[
+         StyleBox["\"r3\"", 
+          GrayLevel[0.45]], "r3"], 
+        GrayLevel[0.3]], 16}, {
+       StyleBox[
+        InterpretationBox[
+         StyleBox["\"r4\"", 
+          GrayLevel[0.45]], "r4"], 
+        GrayLevel[0.3]], 25}, {
+       StyleBox[
+        InterpretationBox[
+         StyleBox["\"r5\"", 
+          GrayLevel[0.45]], "r5"], 
+        GrayLevel[0.3]], 36}, {
+       StyleBox[
+        InterpretationBox[
+         StyleBox["\"r6\"", 
+          GrayLevel[0.45]], "r6"], 
+        GrayLevel[0.3]], 49}, {
+       StyleBox[
+        InterpretationBox[
+         StyleBox["\"r7\"", 
+          GrayLevel[0.45]], "r7"], 
+        GrayLevel[0.3]], 64}, {
+       StyleBox[
+        InterpretationBox[
+         StyleBox["\"r8\"", 
+          GrayLevel[0.45]], "r8"], 
+        GrayLevel[0.3]], 81}, {
+       StyleBox[
+        InterpretationBox[
+         StyleBox["\"r9\"", 
+          GrayLevel[0.45]], "r9"], 
+        GrayLevel[0.3]], 100}, {
+       StyleBox[
+        InterpretationBox[
+         StyleBox["\"r10\"", 
+          GrayLevel[0.45]], "r10"], 
+        GrayLevel[0.3]], 121}, {
+       ItemBox[
+        RowBox[{
+          TagBox[
+           TooltipBox["1 level", 
+            InterpretationBox[
+             TagBox[
+              TagBox[
+               StyleBox[
+                TagBox[
+                 TooltipBox[
+                  SubscriptBox[
+                   RowBox[{"\[LeftAssociation]", 
+                    RowBox[{
+                    RowBox[{
+                    TagBox[
+                    TooltipBox[
+                    FrameBox[
+                    StyleBox[
+                    SubscriptBox["Enum\[MediumSpace]", 
+                    StyleBox["9", FontFamily -> "Arial", FontWeight -> 
+                    Normal]], FontColor -> RGBColor[0, 
+                    Rational[2, 3], 0], FontFamily -> "Monaco"], FrameStyle -> 
+                    Dynamic[
+                    If[
+                    CurrentValue["MouseOver"], 
+                    GrayLevel[0.9], None]], BaselinePosition -> Baseline, 
+                    FrameMargins -> {{0, 0}, {2, 2}}, ContentPadding -> 
+                    False], 
+                    Cell[
+                    BoxData[
+                    InterpretationBox[
+                    StyleBox[
+                    "TypeSystem`Atom[TypeSystem`Enumeration[\"r10\", \"r2\", \
+\"r3\", \"r4\", \"r5\", \"r6\", \"r7\", \"r8\", \"r9\"]]", 
+                    ShowStringCharacters -> True, NumberMarks -> True], 
+                    InputForm[
+                    TypeSystem`Atom[
+                    TypeSystem`Enumeration[
+                    "r10", "r2", "r3", "r4", "r5", "r6", "r7", "r8", "r9"]]], 
+                    Editable -> True, AutoDelete -> True]], "Input", 
+                    FontTracking -> "Plain"], TooltipDelay -> 0.25], 
+                    EventHandlerTag[{"MouseClicked" :> CellPrint[
+                    Cell[
+                    ToString[
+                    TypeSystem`Atom[
+                    TypeSystem`Enumeration[
+                    "r10", "r2", "r3", "r4", "r5", "r6", "r7", "r8", "r9"]], 
+                    InputForm], "Input"]], Method -> "Preemptive", 
+                    PassEventsDown -> True, PassEventsUp -> False}]], 
+                    StyleBox[
+                    "\[Rule]", FontColor -> GrayLevel[0.65], FontWeight -> 
+                    "Thin"], 
+                    TagBox[
+                    TooltipBox[
+                    FrameBox[
+                    StyleBox["Int", FontColor -> RGBColor[0, 
+                    Rational[2, 3], 0], FontFamily -> "Monaco"], FrameStyle -> 
+                    Dynamic[
+                    If[
+                    CurrentValue["MouseOver"], 
+                    GrayLevel[0.9], None]], BaselinePosition -> Baseline, 
+                    FrameMargins -> {{0, 0}, {2, 2}}, ContentPadding -> 
+                    False], 
+                    Cell[
+                    BoxData[
+                    InterpretationBox[
+                    StyleBox[
+                    "TypeSystem`Atom[Integer]", ShowStringCharacters -> True, 
+                    NumberMarks -> True], 
+                    InputForm[
+                    TypeSystem`Atom[Integer]], Editable -> True, AutoDelete -> 
+                    True]], "Input", FontTracking -> "Plain"], TooltipDelay -> 
+                    0.25], 
+                    EventHandlerTag[{"MouseClicked" :> CellPrint[
+                    Cell[
+                    ToString[
+                    TypeSystem`Atom[Integer], InputForm], "Input"]], Method -> 
+                    "Preemptive", PassEventsDown -> True, PassEventsUp -> 
+                    False}]]}]}], "\[RightAssociation]"}], 
+                   StyleBox[
+                   "9", FontFamily -> "Arial", FontWeight -> Normal]], 
+                  Cell[
+                   BoxData[
+                    InterpretationBox[
+                    StyleBox[
+                    "TypeSystem`Assoc[TypeSystem`Atom[TypeSystem`Enumeration[\
+\"r10\", \"r2\", \"r3\", \"r4\", \"r5\", \"r6\", \"r7\", \"r8\", \"r9\"]], \
+TypeSystem`Atom[Integer], 9]", ShowStringCharacters -> True, NumberMarks -> 
+                    True], 
+                    InputForm[
+                    TypeSystem`Assoc[
+                    TypeSystem`Atom[
+                    TypeSystem`Enumeration[
+                    "r10", "r2", "r3", "r4", "r5", "r6", "r7", "r8", "r9"]], 
+                    TypeSystem`Atom[Integer], 9]], Editable -> True, 
+                    AutoDelete -> True]], "Input", FontTracking -> "Plain"], 
+                  TooltipDelay -> 0.25], 
+                 EventHandlerTag[{"MouseClicked" :> CellPrint[
+                    Cell[
+                    ToString[
+                    TypeSystem`Assoc[
+                    TypeSystem`Atom[
+                    TypeSystem`Enumeration[
+                    "r10", "r2", "r3", "r4", "r5", "r6", "r7", "r8", "r9"]], 
+                    TypeSystem`Atom[Integer], 9], InputForm], "Input"]], 
+                   Method -> "Preemptive", PassEventsDown -> True, 
+                   PassEventsUp -> False}]], FontTracking -> "Condensed", 
+                FontWeight -> "Bold", SpanMinSize -> 1.3, SpanMaxSize -> 3.], 
+               Deploy, DefaultBaseStyle -> "Deploy"], 
+              MouseAppearanceTag["LinkHand"]], 
+             TypeSystem`Assoc[
+              TypeSystem`Atom[
+               TypeSystem`Enumeration[
+               "r10", "r2", "r3", "r4", "r5", "r6", "r7", "r8", "r9"]], 
+              TypeSystem`Atom[Integer], 9]], TooltipDelay -> 1.5], 
+           EventHandlerTag[{"MouseClicked" :> Print[
+               InputForm[
+                TypeSystem`Assoc[
+                 TypeSystem`Atom[
+                  TypeSystem`Enumeration[
+                  "r10", "r2", "r3", "r4", "r5", "r6", "r7", "r8", "r9"]], 
+                 TypeSystem`Atom[Integer], 9]]]}]], 
+          AdjustmentBox[" | ", BoxBaselineShift -> -0.3], 
+          RowBox[{"9", "elements"}]}], 
+        BaseStyle -> {
+         FontFamily -> "Helvetica", FontSize -> 10, FontColor -> 
+          GrayLevel[0.4], Editable -> False, Selectable -> False}, 
+        ItemSize -> {Automatic, Automatic}, Alignment -> {Left, Center}, 
+        Background -> RGBColor[0.92, 0.92, 0.9]], "\[SpanFromLeft]"}}, 
+     GridBoxFrame -> {"ColumnsIndexed" -> {{{1, -1}, {1, -1}} -> True}}, 
+     FrameStyle -> RGBColor[0, 0, 0, 0.4], GridBoxDividers -> {"Columns" -> {
+         RGBColor[0, 0, 0, 0.4], 
+         RGBColor[0, 0, 0, 0.3], {
+          RGBColor[0, 0, 0, 0.09]}, 
+         RGBColor[0, 0, 0, 0.4]}, "Rows" -> {
+         RGBColor[0, 0, 0, 0.4], {
+          RGBColor[0, 0, 0, 0.08]}, 
+         RGBColor[0, 0, 0, 0.4]}}, RowSpacings -> 1.2, 
+     GridBoxBackground -> {"Columns" -> {
+         RGBColor[0.92, 0.92, 0.9]}}, 
+     GridBoxAlignment -> {"Columns" -> {{Left}}}, ColumnSpacings -> 2.5, 
+     GridFrameMargins -> {{2, 3}, {1, 3}}, 
+     GridBoxItemSize -> {"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}},
+      RowMinHeight -> 1.3],
+    "Dataset[Association[(\"r10\" | \"r2\" | \"r3\" | \"r4\" | \"r5\" | \
+\"r6\" | \"r7\" | \"r8\" | \"r9\" -> _Integer)..]]"},
+   "Dataset",
+   DisplayFunction->(TagBox[
+     StyleBox[#, {
+      ShowAutoStyles -> False, LineBreakWithin -> False, FontWeight -> 
+       "Light", FontFamily -> "Helvetica Neue", NumberMarks -> False, 
+       SpanMaxSize -> 3, SpanMinSize -> 1., Editable -> False, Selectable -> 
+       True, Background -> RGBColor[0.985, 0.98, 0.973], 
+       LinebreakAdjustments -> {0.4, 5, 100, 0, 0.5}, LineIndent -> 0, 
+       LineSpacing -> {1.1, 5}}], Deploy]& ),
+   InterpretationFunction->(#2& )],
+  False,
+  Editable->False,
+  SelectWithContents->True,
+  Selectable->False]], "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"exampleDataset", "[", 
+  RowBox[{
+   RowBox[{"Select", "[", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"#", "[", "\"\<c1\>\"", "]"}], ">", "1"}], "&"}], "]"}], ",", 
+   "\"\<c2\>\"", ",", 
+   RowBox[{
+    RowBox[{"#", "&"}], "/*", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"#", "^", "2"}], "&"}], ")"}]}]}], "]"}]], "Input"],
+
+Cell[BoxData[
+ TagBox[
+  TemplateBox[{GridBox[{{
+       StyleBox[
+        StyleBox["\"r2\"", FontColor -> GrayLevel[0.4]], 
+        GrayLevel[0.3]], 9}, {
+       StyleBox[
+        StyleBox["\"r3\"", FontColor -> GrayLevel[0.4]], 
+        GrayLevel[0.3]], 16}, {
+       StyleBox[
+        StyleBox["\"r4\"", FontColor -> GrayLevel[0.4]], 
+        GrayLevel[0.3]], 25}, {
+       StyleBox[
+        StyleBox["\"r5\"", FontColor -> GrayLevel[0.4]], 
+        GrayLevel[0.3]], 36}, {
+       StyleBox[
+        StyleBox["\"r6\"", FontColor -> GrayLevel[0.4]], 
+        GrayLevel[0.3]], 49}, {
+       StyleBox[
+        StyleBox["\"r7\"", FontColor -> GrayLevel[0.4]], 
+        GrayLevel[0.3]], 64}, {
+       StyleBox[
+        StyleBox["\"r8\"", FontColor -> GrayLevel[0.4]], 
+        GrayLevel[0.3]], 81}, {
+       StyleBox[
+        StyleBox["\"r9\"", FontColor -> GrayLevel[0.4]], 
+        GrayLevel[0.3]], 100}, {
+       StyleBox[
+        StyleBox["\"r10\"", FontColor -> GrayLevel[0.4]], 
+        GrayLevel[0.3]], 121}, {
+       ItemBox[
+        RowBox[{
+          TagBox[
+           TooltipBox["1 level", 
+            InterpretationBox[
+             TagBox[
+              TagBox[
+               StyleBox[
+                TagBox[
+                 TooltipBox[
+                  RowBox[{"\[LeftAssociation]", 
+                    RowBox[{
+                    RowBox[{
+                    TagBox[
+                    TooltipBox[
+                    FrameBox[
+                    StyleBox["Str", FontColor -> RGBColor[0, 
+                    Rational[2, 3], 0], FontFamily -> "Monaco"], FrameStyle -> 
+                    Dynamic[
+                    If[
+                    CurrentValue["MouseOver"], 
+                    GrayLevel[0.9], None]], BaselinePosition -> Baseline, 
+                    FrameMargins -> {{0, 0}, {2, 2}}, ContentPadding -> 
+                    False], 
+                    Cell[
+                    BoxData[
+                    InterpretationBox[
+                    StyleBox[
+                    "TypeSystem`Atom[String]", ShowStringCharacters -> True, 
+                    NumberMarks -> True], 
+                    InputForm[
+                    TypeSystem`Atom[String]], Editable -> True, AutoDelete -> 
+                    True]], "Input", FontTracking -> "Plain"], TooltipDelay -> 
+                    0.25], 
+                    EventHandlerTag[{"MouseClicked" :> CellPrint[
+                    Cell[
+                    ToString[
+                    TypeSystem`Atom[String], InputForm], "Input"]], Method -> 
+                    "Preemptive", PassEventsDown -> True, PassEventsUp -> 
+                    False}]], 
+                    StyleBox[
+                    "\[Rule]", FontColor -> GrayLevel[0.65], FontWeight -> 
+                    "Thin"], 
+                    TagBox[
+                    TooltipBox[
+                    FrameBox[
+                    StyleBox["Rat", FontColor -> RGBColor[0, 
+                    Rational[2, 3], 0], FontFamily -> "Monaco"], FrameStyle -> 
+                    Dynamic[
+                    If[
+                    CurrentValue["MouseOver"], 
+                    GrayLevel[0.9], None]], BaselinePosition -> Baseline, 
+                    FrameMargins -> {{0, 0}, {2, 2}}, ContentPadding -> 
+                    False], 
+                    Cell[
+                    BoxData[
+                    InterpretationBox[
+                    StyleBox[
+                    "TypeSystem`Atom[Rational]", ShowStringCharacters -> True,
+                     NumberMarks -> True], 
+                    InputForm[
+                    TypeSystem`Atom[Rational]], Editable -> True, AutoDelete -> 
+                    True]], "Input", FontTracking -> "Plain"], TooltipDelay -> 
+                    0.25], 
+                    EventHandlerTag[{"MouseClicked" :> CellPrint[
+                    Cell[
+                    ToString[
+                    TypeSystem`Atom[Rational], InputForm], "Input"]], Method -> 
+                    "Preemptive", PassEventsDown -> True, PassEventsUp -> 
+                    False}]]}]}], "\[RightAssociation]"}], 
+                  Cell[
+                   BoxData[
+                    InterpretationBox[
+                    StyleBox[
+                    "TypeSystem`Assoc[TypeSystem`Atom[String], \
+TypeSystem`Atom[Rational], TypeSystem`AnyLength]", ShowStringCharacters -> 
+                    True, NumberMarks -> True], 
+                    InputForm[
+                    TypeSystem`Assoc[
+                    TypeSystem`Atom[String], 
+                    TypeSystem`Atom[Rational], TypeSystem`AnyLength]], 
+                    Editable -> True, AutoDelete -> True]], "Input", 
+                   FontTracking -> "Plain"], TooltipDelay -> 0.25], 
+                 EventHandlerTag[{"MouseClicked" :> CellPrint[
+                    Cell[
+                    ToString[
+                    TypeSystem`Assoc[
+                    TypeSystem`Atom[String], 
+                    TypeSystem`Atom[Rational], TypeSystem`AnyLength], 
+                    InputForm], "Input"]], Method -> "Preemptive", 
+                   PassEventsDown -> True, PassEventsUp -> False}]], 
+                FontTracking -> "Condensed", FontWeight -> "Bold", 
+                SpanMinSize -> 1.3, SpanMaxSize -> 3.], Deploy, 
+               DefaultBaseStyle -> "Deploy"], 
+              MouseAppearanceTag["LinkHand"]], 
+             TypeSystem`Assoc[
+              TypeSystem`Atom[String], 
+              TypeSystem`Atom[Rational], TypeSystem`AnyLength]], TooltipDelay -> 
+            1.5], 
+           EventHandlerTag[{"MouseClicked" :> Print[
+               InputForm[
+                TypeSystem`Assoc[
+                 TypeSystem`Atom[String], 
+                 TypeSystem`Atom[Rational], TypeSystem`AnyLength]]]}]], 
+          AdjustmentBox[" | ", BoxBaselineShift -> -0.3], 
+          RowBox[{"9", "elements"}]}], 
+        BaseStyle -> {
+         FontFamily -> "Helvetica", FontSize -> 10, FontColor -> 
+          GrayLevel[0.4], Editable -> False, Selectable -> False}, 
+        ItemSize -> {Automatic, Automatic}, Alignment -> {Left, Center}, 
+        Background -> RGBColor[0.92, 0.92, 0.9]], "\[SpanFromLeft]"}}, 
+     GridBoxFrame -> {"ColumnsIndexed" -> {{{1, -1}, {1, -1}} -> True}}, 
+     FrameStyle -> RGBColor[0, 0, 0, 0.4], GridBoxDividers -> {"Columns" -> {
+         RGBColor[0, 0, 0, 0.4], 
+         RGBColor[0, 0, 0, 0.3], {
+          RGBColor[0, 0, 0, 0.09]}, 
+         RGBColor[0, 0, 0, 0.4]}, "Rows" -> {
+         RGBColor[0, 0, 0, 0.4], {
+          RGBColor[0, 0, 0, 0.08]}, 
+         RGBColor[0, 0, 0, 0.4]}}, RowSpacings -> 1.2, 
+     GridBoxBackground -> {"Columns" -> {
+         RGBColor[0.92, 0.92, 0.9]}}, 
+     GridBoxAlignment -> {"Columns" -> {{Left}}}, ColumnSpacings -> 2.5, 
+     GridFrameMargins -> {{2, 3}, {1, 3}}, 
+     GridBoxItemSize -> {"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}},
+      RowMinHeight -> 1.3],"Dataset[Association[(_String -> _Rational)..]]"},
+   "Dataset",
+   DisplayFunction->(TagBox[
+     StyleBox[#, {
+      ShowAutoStyles -> False, LineBreakWithin -> False, FontWeight -> 
+       "Light", FontFamily -> "Helvetica Neue", NumberMarks -> False, 
+       SpanMaxSize -> 3, SpanMinSize -> 1., Editable -> False, Selectable -> 
+       True, Background -> RGBColor[0.985, 0.98, 0.973], 
+       LinebreakAdjustments -> {0.4, 5, 100, 0, 0.5}, LineIndent -> 0, 
+       LineSpacing -> {1.1, 5}}], Deploy]& ),
+   InterpretationFunction->(#2& )],
+  False,
+  Editable->False,
+  SelectWithContents->True,
+  Selectable->False]], "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"exampleDataset", "[", 
+  RowBox[{"TakeLargestBy", "[", 
+   RowBox[{"\"\<c1\>\"", ",", "1"}], "]"}], "]"}]], "Input"],
+
+Cell[BoxData[
+ TagBox[
+  TemplateBox[{GridBox[{{
+       StyleBox[
+        StyleBox["\"r10\"", FontColor -> GrayLevel[0.4]], 
+        GrayLevel[0.3]], 
+       StyleBox[
+        RowBox[{
+          StyleBox["\[LeftAssociation]", 
+           GrayLevel[0.45]], "\[ThinSpace]", 
+          RowBox[{
+            StyleBox[
+             InterpretationBox[
+              StyleBox["\"c1\"", 
+               GrayLevel[0.45]], "c1"], 
+             GrayLevel[0.3]], 
+            StyleBox["\[Rule]", 
+             GrayLevel[0.5]], 10}], ",", 
+          RowBox[{
+            StyleBox[
+             InterpretationBox[
+              StyleBox["\"c2\"", 
+               GrayLevel[0.45]], "c2"], 
+             GrayLevel[0.3]], 
+            StyleBox["\[Rule]", 
+             GrayLevel[0.5]], 11}], ",", 
+          RowBox[{
+            StyleBox[
+             InterpretationBox[
+              StyleBox["\"c3\"", 
+               GrayLevel[0.45]], "c3"], 
+             GrayLevel[0.3]], 
+            StyleBox["\[Rule]", 
+             GrayLevel[0.5]], 12}], ",", 
+          RowBox[{
+            StyleBox[
+             InterpretationBox[
+              StyleBox["\"c4\"", 
+               GrayLevel[0.45]], "c4"], 
+             GrayLevel[0.3]], 
+            StyleBox["\[Rule]", 
+             GrayLevel[0.5]], 13}], ",", 
+          RowBox[{
+            StyleBox[
+             InterpretationBox[
+              StyleBox["\"c5\"", 
+               GrayLevel[0.45]], "c5"], 
+             GrayLevel[0.3]], 
+            StyleBox["\[Rule]", 
+             GrayLevel[0.5]], 14}], ",", 
+          RowBox[{
+            StyleBox[
+             InterpretationBox[
+              StyleBox["\"c6\"", 
+               GrayLevel[0.45]], "c6"], 
+             GrayLevel[0.3]], 
+            StyleBox["\[Rule]", 
+             GrayLevel[0.5]], 15}], ",", 
+          RowBox[{
+            StyleBox[
+             InterpretationBox[
+              StyleBox["\"c7\"", 
+               GrayLevel[0.45]], "c7"], 
+             GrayLevel[0.3]], 
+            StyleBox["\[Rule]", 
+             GrayLevel[0.5]], 16}], ",", 
+          RowBox[{
+            StyleBox[
+             InterpretationBox[
+              StyleBox["\"c8\"", 
+               GrayLevel[0.45]], "c8"], 
+             GrayLevel[0.3]], 
+            StyleBox["\[Rule]", 
+             GrayLevel[0.5]], 17}], ",", 
+          RowBox[{
+            StyleBox[
+             InterpretationBox[
+              StyleBox["\"c9\"", 
+               GrayLevel[0.45]], "c9"], 
+             GrayLevel[0.3]], 
+            StyleBox["\[Rule]", 
+             GrayLevel[0.5]], 18}], ",", 
+          RowBox[{
+            StyleBox[
+             InterpretationBox[
+              StyleBox["\"c10\"", 
+               GrayLevel[0.45]], "c10"], 
+             GrayLevel[0.3]], 
+            StyleBox["\[Rule]", 
+             GrayLevel[0.5]], 19}], "\[ThinSpace]", 
+          StyleBox["\[RightAssociation]", 
+           GrayLevel[0.45]]}], LineBreakWithin -> Automatic]}, {
+       ItemBox[
+        RowBox[{
+          TagBox[
+           TooltipBox["2 levels", 
+            InterpretationBox[
+             TagBox[
+              TagBox[
+               StyleBox[
+                TagBox[
+                 TooltipBox[
+                  SubscriptBox[
+                   RowBox[{"\[LeftAssociation]", 
+                    RowBox[{
+                    RowBox[{
+                    TagBox[
+                    TooltipBox[
+                    FrameBox[
+                    StyleBox["Str", FontColor -> RGBColor[0, 
+                    Rational[2, 3], 0], FontFamily -> "Monaco"], FrameStyle -> 
+                    Dynamic[
+                    If[
+                    CurrentValue["MouseOver"], 
+                    GrayLevel[0.9], None]], BaselinePosition -> Baseline, 
+                    FrameMargins -> {{0, 0}, {2, 2}}, ContentPadding -> 
+                    False], 
+                    Cell[
+                    BoxData[
+                    InterpretationBox[
+                    StyleBox[
+                    "TypeSystem`Atom[String]", ShowStringCharacters -> True, 
+                    NumberMarks -> True], 
+                    InputForm[
+                    TypeSystem`Atom[String]], Editable -> True, AutoDelete -> 
+                    True]], "Input", FontTracking -> "Plain"], TooltipDelay -> 
+                    0.25], 
+                    EventHandlerTag[{"MouseClicked" :> CellPrint[
+                    Cell[
+                    ToString[
+                    TypeSystem`Atom[String], InputForm], "Input"]], Method -> 
+                    "Preemptive", PassEventsDown -> True, PassEventsUp -> 
+                    False}]], 
+                    StyleBox[
+                    "\[Rule]", FontColor -> GrayLevel[0.65], FontWeight -> 
+                    "Thin"], 
+                    TagBox[
+                    TooltipBox[
+                    FrameBox[
+                    SubscriptBox[
+                    RowBox[{"\[LeftAssociation]", 
+                    RowBox[{
+                    RowBox[{
+                    TagBox[
+                    TooltipBox[
+                    FrameBox[
+                    StyleBox[
+                    SubscriptBox["Enum\[MediumSpace]", 
+                    StyleBox[
+                    "10", FontFamily -> "Arial", FontWeight -> Normal]], 
+                    FontColor -> RGBColor[0, 
+                    Rational[2, 3], 0], FontFamily -> "Monaco"], FrameStyle -> 
+                    Dynamic[
+                    If[
+                    CurrentValue["MouseOver"], 
+                    GrayLevel[0.9], None]], BaselinePosition -> Baseline, 
+                    FrameMargins -> {{0, 0}, {2, 2}}, ContentPadding -> 
+                    False], 
+                    Cell[
+                    BoxData[
+                    InterpretationBox[
+                    StyleBox[
+                    "TypeSystem`Atom[TypeSystem`Enumeration[\"c1\", \"c10\", \
+\"c2\", \"c3\", \"c4\", \"c5\", \"c6\", \"c7\", \"c8\", \"c9\"]]", 
+                    ShowStringCharacters -> True, NumberMarks -> True], 
+                    InputForm[
+                    TypeSystem`Atom[
+                    TypeSystem`Enumeration[
+                    "c1", "c10", "c2", "c3", "c4", "c5", "c6", "c7", "c8", 
+                    "c9"]]], Editable -> True, AutoDelete -> True]], "Input", 
+                    FontTracking -> "Plain"], TooltipDelay -> 0.25], 
+                    EventHandlerTag[{"MouseClicked" :> CellPrint[
+                    Cell[
+                    ToString[
+                    TypeSystem`Atom[
+                    TypeSystem`Enumeration[
+                    "c1", "c10", "c2", "c3", "c4", "c5", "c6", "c7", "c8", 
+                    "c9"]], InputForm], "Input"]], Method -> "Preemptive", 
+                    PassEventsDown -> True, PassEventsUp -> False}]], 
+                    StyleBox[
+                    "\[Rule]", FontColor -> GrayLevel[0.65], FontWeight -> 
+                    "Thin"], 
+                    TagBox[
+                    TooltipBox[
+                    FrameBox[
+                    StyleBox["Int", FontColor -> RGBColor[0, 
+                    Rational[2, 3], 0], FontFamily -> "Monaco"], FrameStyle -> 
+                    Dynamic[
+                    If[
+                    CurrentValue["MouseOver"], 
+                    GrayLevel[0.9], None]], BaselinePosition -> Baseline, 
+                    FrameMargins -> {{0, 0}, {2, 2}}, ContentPadding -> 
+                    False], 
+                    Cell[
+                    BoxData[
+                    InterpretationBox[
+                    StyleBox[
+                    "TypeSystem`Atom[Integer]", ShowStringCharacters -> True, 
+                    NumberMarks -> True], 
+                    InputForm[
+                    TypeSystem`Atom[Integer]], Editable -> True, AutoDelete -> 
+                    True]], "Input", FontTracking -> "Plain"], TooltipDelay -> 
+                    0.25], 
+                    EventHandlerTag[{"MouseClicked" :> CellPrint[
+                    Cell[
+                    ToString[
+                    TypeSystem`Atom[Integer], InputForm], "Input"]], Method -> 
+                    "Preemptive", PassEventsDown -> True, PassEventsUp -> 
+                    False}]]}]}], "\[RightAssociation]"}], 
+                    StyleBox["10", FontFamily -> "Arial", FontWeight -> 
+                    Normal]], FrameStyle -> Dynamic[
+                    If[
+                    CurrentValue["MouseOver"], 
+                    GrayLevel[0.9], None]], BaselinePosition -> Baseline, 
+                    FrameMargins -> {{0, 0}, {2, 2}}, ContentPadding -> 
+                    False], 
+                    Cell[
+                    BoxData[
+                    InterpretationBox[
+                    StyleBox[
+                    "TypeSystem`Assoc[TypeSystem`Atom[TypeSystem`Enumeration[\
+\"c1\", \"c10\", \"c2\", \"c3\", \"c4\", \"c5\", \"c6\", \"c7\", \"c8\", \"c9\
+\"]], TypeSystem`Atom[Integer], 10]", ShowStringCharacters -> True, 
+                    NumberMarks -> True], 
+                    InputForm[
+                    TypeSystem`Assoc[
+                    TypeSystem`Atom[
+                    TypeSystem`Enumeration[
+                    "c1", "c10", "c2", "c3", "c4", "c5", "c6", "c7", "c8", 
+                    "c9"]], 
+                    TypeSystem`Atom[Integer], 10]], Editable -> True, 
+                    AutoDelete -> True]], "Input", FontTracking -> "Plain"], 
+                    TooltipDelay -> 0.25], 
+                    EventHandlerTag[{"MouseClicked" :> CellPrint[
+                    Cell[
+                    ToString[
+                    TypeSystem`Assoc[
+                    TypeSystem`Atom[
+                    TypeSystem`Enumeration[
+                    "c1", "c10", "c2", "c3", "c4", "c5", "c6", "c7", "c8", 
+                    "c9"]], 
+                    TypeSystem`Atom[Integer], 10], InputForm], "Input"]], 
+                    Method -> "Preemptive", PassEventsDown -> True, 
+                    PassEventsUp -> False}]]}]}], "\[RightAssociation]"}], 
+                   StyleBox[
+                   "1", FontFamily -> "Arial", FontWeight -> Normal]], 
+                  Cell[
+                   BoxData[
+                    InterpretationBox[
+                    StyleBox[
+                    "TypeSystem`Assoc[TypeSystem`Atom[String], \
+TypeSystem`Assoc[TypeSystem`Atom[TypeSystem`Enumeration[\"c1\", \"c10\", \"c2\
+\", \"c3\", \"c4\", \"c5\", \"c6\", \"c7\", \"c8\", \"c9\"]], \
+TypeSystem`Atom[Integer], 10], 1]", ShowStringCharacters -> True, NumberMarks -> 
+                    True], 
+                    InputForm[
+                    TypeSystem`Assoc[
+                    TypeSystem`Atom[String], 
+                    TypeSystem`Assoc[
+                    TypeSystem`Atom[
+                    TypeSystem`Enumeration[
+                    "c1", "c10", "c2", "c3", "c4", "c5", "c6", "c7", "c8", 
+                    "c9"]], 
+                    TypeSystem`Atom[Integer], 10], 1]], Editable -> True, 
+                    AutoDelete -> True]], "Input", FontTracking -> "Plain"], 
+                  TooltipDelay -> 0.25], 
+                 EventHandlerTag[{"MouseClicked" :> CellPrint[
+                    Cell[
+                    ToString[
+                    TypeSystem`Assoc[
+                    TypeSystem`Atom[String], 
+                    TypeSystem`Assoc[
+                    TypeSystem`Atom[
+                    TypeSystem`Enumeration[
+                    "c1", "c10", "c2", "c3", "c4", "c5", "c6", "c7", "c8", 
+                    "c9"]], 
+                    TypeSystem`Atom[Integer], 10], 1], InputForm], "Input"]], 
+                   Method -> "Preemptive", PassEventsDown -> True, 
+                   PassEventsUp -> False}]], FontTracking -> "Condensed", 
+                FontWeight -> "Bold", SpanMinSize -> 1.3, SpanMaxSize -> 3.], 
+               Deploy, DefaultBaseStyle -> "Deploy"], 
+              MouseAppearanceTag["LinkHand"]], 
+             TypeSystem`Assoc[
+              TypeSystem`Atom[String], 
+              TypeSystem`Assoc[
+               TypeSystem`Atom[
+                TypeSystem`Enumeration[
+                "c1", "c10", "c2", "c3", "c4", "c5", "c6", "c7", "c8", "c9"]], 
+               TypeSystem`Atom[Integer], 10], 1]], TooltipDelay -> 1.5], 
+           EventHandlerTag[{"MouseClicked" :> Print[
+               InputForm[
+                TypeSystem`Assoc[
+                 TypeSystem`Atom[String], 
+                 TypeSystem`Assoc[
+                  TypeSystem`Atom[
+                   TypeSystem`Enumeration[
+                   "c1", "c10", "c2", "c3", "c4", "c5", "c6", "c7", "c8", 
+                    "c9"]], 
+                  TypeSystem`Atom[Integer], 10], 1]]]}]], 
+          AdjustmentBox[" | ", BoxBaselineShift -> -0.3], 
+          RowBox[{"1", "rows"}]}], 
+        BaseStyle -> {
+         FontFamily -> "Helvetica", FontSize -> 10, FontColor -> 
+          GrayLevel[0.4], Editable -> False, Selectable -> False}, 
+        ItemSize -> {Automatic, Automatic}, Alignment -> {Left, Center}, 
+        Background -> RGBColor[0.92, 0.92, 0.9]], "\[SpanFromLeft]"}}, 
+     GridBoxFrame -> {"ColumnsIndexed" -> {{{1, -1}, {1, -1}} -> True}}, 
+     FrameStyle -> RGBColor[0, 0, 0, 0.4], GridBoxDividers -> {"Columns" -> {
+         RGBColor[0, 0, 0, 0.4], 
+         RGBColor[0, 0, 0, 0.3], {
+          RGBColor[0, 0, 0, 0.09]}, 
+         RGBColor[0, 0, 0, 0.4]}, "Rows" -> {
+         RGBColor[0, 0, 0, 0.4], {
+          RGBColor[0, 0, 0, 0.08]}, 
+         RGBColor[0, 0, 0, 0.4]}}, RowSpacings -> 1.2, 
+     GridBoxBackground -> {"Columns" -> {
+         RGBColor[0.92, 0.92, 0.9]}}, 
+     GridBoxAlignment -> {"Columns" -> {{Left}}}, ColumnSpacings -> 2.5, 
+     GridFrameMargins -> {{2, 3}, {1, 3}}, 
+     GridBoxItemSize -> {"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}},
+      RowMinHeight -> 1.3],
+    "Dataset[Association[(_String -> _Association)..]]"},
+   "Dataset",
+   DisplayFunction->(TagBox[
+     StyleBox[#, {
+      ShowAutoStyles -> False, LineBreakWithin -> False, FontWeight -> 
+       "Light", FontFamily -> "Helvetica Neue", NumberMarks -> False, 
+       SpanMaxSize -> 3, SpanMinSize -> 1., Editable -> False, Selectable -> 
+       True, Background -> RGBColor[0.985, 0.98, 0.973], 
+       LinebreakAdjustments -> {0.4, 5, 100, 0, 0.5}, LineIndent -> 0, 
+       LineSpacing -> {1.1, 5}}], Deploy]& ),
+   InterpretationFunction->(#2& )],
+  False,
+  Editable->False,
+  SelectWithContents->True,
+  Selectable->False]], "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"exampleDataset", "[", 
+  RowBox[{
+   RowBox[{"TakeLargest", "[", "2", "]"}], ",", "\"\<c1\>\""}], 
+  "]"}]], "Input"],
+
+Cell[BoxData[
+ TagBox[
+  TemplateBox[{GridBox[{{
+       StyleBox[
+        StyleBox["\"r10\"", FontColor -> GrayLevel[0.4]], 
+        GrayLevel[0.3]], 10}, {
+       StyleBox[
+        StyleBox["\"r9\"", FontColor -> GrayLevel[0.4]], 
+        GrayLevel[0.3]], 9}, {
+       ItemBox[
+        RowBox[{
+          TagBox[
+           TooltipBox["1 level", 
+            InterpretationBox[
+             TagBox[
+              TagBox[
+               StyleBox[
+                TagBox[
+                 TooltipBox[
+                  SubscriptBox[
+                   RowBox[{"\[LeftAssociation]", 
+                    RowBox[{
+                    RowBox[{
+                    TagBox[
+                    TooltipBox[
+                    FrameBox[
+                    StyleBox["Str", FontColor -> RGBColor[0, 
+                    Rational[2, 3], 0], FontFamily -> "Monaco"], FrameStyle -> 
+                    Dynamic[
+                    If[
+                    CurrentValue["MouseOver"], 
+                    GrayLevel[0.9], None]], BaselinePosition -> Baseline, 
+                    FrameMargins -> {{0, 0}, {2, 2}}, ContentPadding -> 
+                    False], 
+                    Cell[
+                    BoxData[
+                    InterpretationBox[
+                    StyleBox[
+                    "TypeSystem`Atom[String]", ShowStringCharacters -> True, 
+                    NumberMarks -> True], 
+                    InputForm[
+                    TypeSystem`Atom[String]], Editable -> True, AutoDelete -> 
+                    True]], "Input", FontTracking -> "Plain"], TooltipDelay -> 
+                    0.25], 
+                    EventHandlerTag[{"MouseClicked" :> CellPrint[
+                    Cell[
+                    ToString[
+                    TypeSystem`Atom[String], InputForm], "Input"]], Method -> 
+                    "Preemptive", PassEventsDown -> True, PassEventsUp -> 
+                    False}]], 
+                    StyleBox[
+                    "\[Rule]", FontColor -> GrayLevel[0.65], FontWeight -> 
+                    "Thin"], 
+                    TagBox[
+                    TooltipBox[
+                    FrameBox[
+                    StyleBox["Int", FontColor -> RGBColor[0, 
+                    Rational[2, 3], 0], FontFamily -> "Monaco"], FrameStyle -> 
+                    Dynamic[
+                    If[
+                    CurrentValue["MouseOver"], 
+                    GrayLevel[0.9], None]], BaselinePosition -> Baseline, 
+                    FrameMargins -> {{0, 0}, {2, 2}}, ContentPadding -> 
+                    False], 
+                    Cell[
+                    BoxData[
+                    InterpretationBox[
+                    StyleBox[
+                    "TypeSystem`Atom[Integer]", ShowStringCharacters -> True, 
+                    NumberMarks -> True], 
+                    InputForm[
+                    TypeSystem`Atom[Integer]], Editable -> True, AutoDelete -> 
+                    True]], "Input", FontTracking -> "Plain"], TooltipDelay -> 
+                    0.25], 
+                    EventHandlerTag[{"MouseClicked" :> CellPrint[
+                    Cell[
+                    ToString[
+                    TypeSystem`Atom[Integer], InputForm], "Input"]], Method -> 
+                    "Preemptive", PassEventsDown -> True, PassEventsUp -> 
+                    False}]]}]}], "\[RightAssociation]"}], 
+                   StyleBox[
+                   "2", FontFamily -> "Arial", FontWeight -> Normal]], 
+                  Cell[
+                   BoxData[
+                    InterpretationBox[
+                    StyleBox[
+                    "TypeSystem`Assoc[TypeSystem`Atom[String], \
+TypeSystem`Atom[Integer], 2]", ShowStringCharacters -> True, NumberMarks -> 
+                    True], 
+                    InputForm[
+                    TypeSystem`Assoc[
+                    TypeSystem`Atom[String], 
+                    TypeSystem`Atom[Integer], 2]], Editable -> True, 
+                    AutoDelete -> True]], "Input", FontTracking -> "Plain"], 
+                  TooltipDelay -> 0.25], 
+                 EventHandlerTag[{"MouseClicked" :> CellPrint[
+                    Cell[
+                    ToString[
+                    TypeSystem`Assoc[
+                    TypeSystem`Atom[String], 
+                    TypeSystem`Atom[Integer], 2], InputForm], "Input"]], 
+                   Method -> "Preemptive", PassEventsDown -> True, 
+                   PassEventsUp -> False}]], FontTracking -> "Condensed", 
+                FontWeight -> "Bold", SpanMinSize -> 1.3, SpanMaxSize -> 3.], 
+               Deploy, DefaultBaseStyle -> "Deploy"], 
+              MouseAppearanceTag["LinkHand"]], 
+             TypeSystem`Assoc[
+              TypeSystem`Atom[String], 
+              TypeSystem`Atom[Integer], 2]], TooltipDelay -> 1.5], 
+           EventHandlerTag[{"MouseClicked" :> Print[
+               InputForm[
+                TypeSystem`Assoc[
+                 TypeSystem`Atom[String], 
+                 TypeSystem`Atom[Integer], 2]]]}]], 
+          AdjustmentBox[" | ", BoxBaselineShift -> -0.3], 
+          RowBox[{"2", "elements"}]}], 
+        BaseStyle -> {
+         FontFamily -> "Helvetica", FontSize -> 10, FontColor -> 
+          GrayLevel[0.4], Editable -> False, Selectable -> False}, 
+        ItemSize -> {Automatic, Automatic}, Alignment -> {Left, Center}, 
+        Background -> RGBColor[0.92, 0.92, 0.9]], "\[SpanFromLeft]"}}, 
+     GridBoxFrame -> {"ColumnsIndexed" -> {{{1, -1}, {1, -1}} -> True}}, 
+     FrameStyle -> RGBColor[0, 0, 0, 0.4], GridBoxDividers -> {"Columns" -> {
+         RGBColor[0, 0, 0, 0.4], 
+         RGBColor[0, 0, 0, 0.3], {
+          RGBColor[0, 0, 0, 0.09]}, 
+         RGBColor[0, 0, 0, 0.4]}, "Rows" -> {
+         RGBColor[0, 0, 0, 0.4], {
+          RGBColor[0, 0, 0, 0.08]}, 
+         RGBColor[0, 0, 0, 0.4]}}, RowSpacings -> 1.2, 
+     GridBoxBackground -> {"Columns" -> {
+         RGBColor[0.92, 0.92, 0.9]}}, 
+     GridBoxAlignment -> {"Columns" -> {{Left}}}, ColumnSpacings -> 2.5, 
+     GridFrameMargins -> {{2, 3}, {1, 3}}, 
+     GridBoxItemSize -> {"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}},
+      RowMinHeight -> 1.3],"Dataset[Association[(_String -> _Integer)..]]"},
+   "Dataset",
+   DisplayFunction->(TagBox[
+     StyleBox[#, {
+      ShowAutoStyles -> False, LineBreakWithin -> False, FontWeight -> 
+       "Light", FontFamily -> "Helvetica Neue", NumberMarks -> False, 
+       SpanMaxSize -> 3, SpanMinSize -> 1., Editable -> False, Selectable -> 
+       True, Background -> RGBColor[0.985, 0.98, 0.973], 
+       LinebreakAdjustments -> {0.4, 5, 100, 0, 0.5}, LineIndent -> 0, 
+       LineSpacing -> {1.1, 5}}], Deploy]& ),
+   InterpretationFunction->(#2& )],
+  False,
+  Editable->False,
+  SelectWithContents->True,
+  Selectable->False]], "Output"]
+}, Open  ]]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["Descending and ascending query operators", "Subsubsection"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"exampleDataset", "[", 
+  RowBox[{"Query", "[", 
+   RowBox[{"All", ",", "2"}], "]"}], "]"}]], "Input"],
+
+Cell[BoxData[
+ TagBox[
+  TemplateBox[{GridBox[{{
+       StyleBox[
+        StyleBox["\"r1\"", FontColor -> GrayLevel[0.4]], 
+        GrayLevel[0.3]], 2}, {
+       StyleBox[
+        StyleBox["\"r2\"", FontColor -> GrayLevel[0.4]], 
+        GrayLevel[0.3]], 3}, {
+       StyleBox[
+        StyleBox["\"r3\"", FontColor -> GrayLevel[0.4]], 
+        GrayLevel[0.3]], 4}, {
+       StyleBox[
+        StyleBox["\"r4\"", FontColor -> GrayLevel[0.4]], 
+        GrayLevel[0.3]], 5}, {
+       StyleBox[
+        StyleBox["\"r5\"", FontColor -> GrayLevel[0.4]], 
+        GrayLevel[0.3]], 6}, {
+       StyleBox[
+        StyleBox["\"r6\"", FontColor -> GrayLevel[0.4]], 
+        GrayLevel[0.3]], 7}, {
+       StyleBox[
+        StyleBox["\"r7\"", FontColor -> GrayLevel[0.4]], 
+        GrayLevel[0.3]], 8}, {
+       StyleBox[
+        StyleBox["\"r8\"", FontColor -> GrayLevel[0.4]], 
+        GrayLevel[0.3]], 9}, {
+       StyleBox[
+        StyleBox["\"r9\"", FontColor -> GrayLevel[0.4]], 
+        GrayLevel[0.3]], 10}, {
+       StyleBox[
+        StyleBox["\"r10\"", FontColor -> GrayLevel[0.4]], 
+        GrayLevel[0.3]], 11}, {
+       ItemBox[
+        RowBox[{
+          TagBox[
+           TooltipBox["1 level", 
+            InterpretationBox[
+             TagBox[
+              TagBox[
+               StyleBox[
+                TagBox[
+                 TooltipBox[
+                  SubscriptBox[
+                   RowBox[{"\[LeftAssociation]", 
+                    RowBox[{
+                    RowBox[{
+                    TagBox[
+                    TooltipBox[
+                    FrameBox[
+                    StyleBox["Str", FontColor -> RGBColor[0, 
+                    Rational[2, 3], 0], FontFamily -> "Monaco"], FrameStyle -> 
+                    Dynamic[
+                    If[
+                    CurrentValue["MouseOver"], 
+                    GrayLevel[0.9], None]], BaselinePosition -> Baseline, 
+                    FrameMargins -> {{0, 0}, {2, 2}}, ContentPadding -> 
+                    False], 
+                    Cell[
+                    BoxData[
+                    InterpretationBox[
+                    StyleBox[
+                    "TypeSystem`Atom[String]", ShowStringCharacters -> True, 
+                    NumberMarks -> True], 
+                    InputForm[
+                    TypeSystem`Atom[String]], Editable -> True, AutoDelete -> 
+                    True]], "Input", FontTracking -> "Plain"], TooltipDelay -> 
+                    0.25], 
+                    EventHandlerTag[{"MouseClicked" :> CellPrint[
+                    Cell[
+                    ToString[
+                    TypeSystem`Atom[String], InputForm], "Input"]], Method -> 
+                    "Preemptive", PassEventsDown -> True, PassEventsUp -> 
+                    False}]], 
+                    StyleBox[
+                    "\[Rule]", FontColor -> GrayLevel[0.65], FontWeight -> 
+                    "Thin"], 
+                    TagBox[
+                    TooltipBox[
+                    FrameBox[
+                    StyleBox["Int", FontColor -> RGBColor[0, 
+                    Rational[2, 3], 0], FontFamily -> "Monaco"], FrameStyle -> 
+                    Dynamic[
+                    If[
+                    CurrentValue["MouseOver"], 
+                    GrayLevel[0.9], None]], BaselinePosition -> Baseline, 
+                    FrameMargins -> {{0, 0}, {2, 2}}, ContentPadding -> 
+                    False], 
+                    Cell[
+                    BoxData[
+                    InterpretationBox[
+                    StyleBox[
+                    "TypeSystem`Atom[Integer]", ShowStringCharacters -> True, 
+                    NumberMarks -> True], 
+                    InputForm[
+                    TypeSystem`Atom[Integer]], Editable -> True, AutoDelete -> 
+                    True]], "Input", FontTracking -> "Plain"], TooltipDelay -> 
+                    0.25], 
+                    EventHandlerTag[{"MouseClicked" :> CellPrint[
+                    Cell[
+                    ToString[
+                    TypeSystem`Atom[Integer], InputForm], "Input"]], Method -> 
+                    "Preemptive", PassEventsDown -> True, PassEventsUp -> 
+                    False}]]}]}], "\[RightAssociation]"}], 
+                   StyleBox[
+                   "10", FontFamily -> "Arial", FontWeight -> Normal]], 
+                  Cell[
+                   BoxData[
+                    InterpretationBox[
+                    StyleBox[
+                    "TypeSystem`Assoc[TypeSystem`Atom[String], \
+TypeSystem`Atom[Integer], 10]", ShowStringCharacters -> True, NumberMarks -> 
+                    True], 
+                    InputForm[
+                    TypeSystem`Assoc[
+                    TypeSystem`Atom[String], 
+                    TypeSystem`Atom[Integer], 10]], Editable -> True, 
+                    AutoDelete -> True]], "Input", FontTracking -> "Plain"], 
+                  TooltipDelay -> 0.25], 
+                 EventHandlerTag[{"MouseClicked" :> CellPrint[
+                    Cell[
+                    ToString[
+                    TypeSystem`Assoc[
+                    TypeSystem`Atom[String], 
+                    TypeSystem`Atom[Integer], 10], InputForm], "Input"]], 
+                   Method -> "Preemptive", PassEventsDown -> True, 
+                   PassEventsUp -> False}]], FontTracking -> "Condensed", 
+                FontWeight -> "Bold", SpanMinSize -> 1.3, SpanMaxSize -> 3.], 
+               Deploy, DefaultBaseStyle -> "Deploy"], 
+              MouseAppearanceTag["LinkHand"]], 
+             TypeSystem`Assoc[
+              TypeSystem`Atom[String], 
+              TypeSystem`Atom[Integer], 10]], TooltipDelay -> 1.5], 
+           EventHandlerTag[{"MouseClicked" :> Print[
+               InputForm[
+                TypeSystem`Assoc[
+                 TypeSystem`Atom[String], 
+                 TypeSystem`Atom[Integer], 10]]]}]], 
+          AdjustmentBox[" | ", BoxBaselineShift -> -0.3], 
+          RowBox[{"10", "elements"}]}], 
+        BaseStyle -> {
+         FontFamily -> "Helvetica", FontSize -> 10, FontColor -> 
+          GrayLevel[0.4], Editable -> False, Selectable -> False}, 
+        ItemSize -> {Automatic, Automatic}, Alignment -> {Left, Center}, 
+        Background -> RGBColor[0.92, 0.92, 0.9]], "\[SpanFromLeft]"}}, 
+     GridBoxFrame -> {"ColumnsIndexed" -> {{{1, -1}, {1, -1}} -> True}}, 
+     FrameStyle -> RGBColor[0, 0, 0, 0.4], GridBoxDividers -> {"Columns" -> {
+         RGBColor[0, 0, 0, 0.4], 
+         RGBColor[0, 0, 0, 0.3], {
+          RGBColor[0, 0, 0, 0.09]}, 
+         RGBColor[0, 0, 0, 0.4]}, "Rows" -> {
+         RGBColor[0, 0, 0, 0.4], {
+          RGBColor[0, 0, 0, 0.08]}, 
+         RGBColor[0, 0, 0, 0.4]}}, RowSpacings -> 1.2, 
+     GridBoxBackground -> {"Columns" -> {
+         RGBColor[0.92, 0.92, 0.9]}}, 
+     GridBoxAlignment -> {"Columns" -> {{Left}}}, ColumnSpacings -> 2.5, 
+     GridFrameMargins -> {{2, 3}, {1, 3}}, 
+     GridBoxItemSize -> {"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}},
+      RowMinHeight -> 1.3],"Dataset[Association[(_String -> _Integer)..]]"},
+   "Dataset",
+   DisplayFunction->(TagBox[
+     StyleBox[#, {
+      ShowAutoStyles -> False, LineBreakWithin -> False, FontWeight -> 
+       "Light", FontFamily -> "Helvetica Neue", NumberMarks -> False, 
+       SpanMaxSize -> 3, SpanMinSize -> 1., Editable -> False, Selectable -> 
+       True, Background -> RGBColor[0.985, 0.98, 0.973], 
+       LinebreakAdjustments -> {0.4, 5, 100, 0, 0.5}, LineIndent -> 0, 
+       LineSpacing -> {1.1, 5}}], Deploy]& ),
+   InterpretationFunction->(#2& )],
+  False,
+  Editable->False,
+  SelectWithContents->True,
+  Selectable->False]], "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"exampleDataset", "[", 
+  RowBox[{
+   RowBox[{"Query", "[", 
+    RowBox[{"All", ",", "2"}], "]"}], ",", 
+   RowBox[{
+    RowBox[{"#", "^", "2"}], "&"}]}], "]"}]], "Input"],
+
+Cell[BoxData[
+ TagBox[
+  TemplateBox[{GridBox[{{
+       StyleBox[
+        InterpretationBox[
+         StyleBox["\"r1\"", 
+          GrayLevel[0.45]], "r1"], 
+        GrayLevel[0.3]], 4}, {
+       StyleBox[
+        InterpretationBox[
+         StyleBox["\"r2\"", 
+          GrayLevel[0.45]], "r2"], 
+        GrayLevel[0.3]], 9}, {
+       StyleBox[
+        InterpretationBox[
+         StyleBox["\"r3\"", 
+          GrayLevel[0.45]], "r3"], 
+        GrayLevel[0.3]], 16}, {
+       StyleBox[
+        InterpretationBox[
+         StyleBox["\"r4\"", 
+          GrayLevel[0.45]], "r4"], 
+        GrayLevel[0.3]], 25}, {
+       StyleBox[
+        InterpretationBox[
+         StyleBox["\"r5\"", 
+          GrayLevel[0.45]], "r5"], 
+        GrayLevel[0.3]], 36}, {
+       StyleBox[
+        InterpretationBox[
+         StyleBox["\"r6\"", 
+          GrayLevel[0.45]], "r6"], 
+        GrayLevel[0.3]], 49}, {
+       StyleBox[
+        InterpretationBox[
+         StyleBox["\"r7\"", 
+          GrayLevel[0.45]], "r7"], 
+        GrayLevel[0.3]], 64}, {
+       StyleBox[
+        InterpretationBox[
+         StyleBox["\"r8\"", 
+          GrayLevel[0.45]], "r8"], 
+        GrayLevel[0.3]], 81}, {
+       StyleBox[
+        InterpretationBox[
+         StyleBox["\"r9\"", 
+          GrayLevel[0.45]], "r9"], 
+        GrayLevel[0.3]], 100}, {
+       StyleBox[
+        InterpretationBox[
+         StyleBox["\"r10\"", 
+          GrayLevel[0.45]], "r10"], 
+        GrayLevel[0.3]], 121}, {
+       ItemBox[
+        RowBox[{
+          TagBox[
+           TooltipBox["1 level", 
+            InterpretationBox[
+             TagBox[
+              TagBox[
+               StyleBox[
+                TagBox[
+                 TooltipBox[
+                  SubscriptBox[
+                   RowBox[{"\[LeftAssociation]", 
+                    RowBox[{
+                    RowBox[{
+                    TagBox[
+                    TooltipBox[
+                    FrameBox[
+                    StyleBox[
+                    SubscriptBox["Enum\[MediumSpace]", 
+                    StyleBox[
+                    "10", FontFamily -> "Arial", FontWeight -> Normal]], 
+                    FontColor -> RGBColor[0, 
+                    Rational[2, 3], 0], FontFamily -> "Monaco"], FrameStyle -> 
+                    Dynamic[
+                    If[
+                    CurrentValue["MouseOver"], 
+                    GrayLevel[0.9], None]], BaselinePosition -> Baseline, 
+                    FrameMargins -> {{0, 0}, {2, 2}}, ContentPadding -> 
+                    False], 
+                    Cell[
+                    BoxData[
+                    InterpretationBox[
+                    StyleBox[
+                    "TypeSystem`Atom[TypeSystem`Enumeration[\"r1\", \"r10\", \
+\"r2\", \"r3\", \"r4\", \"r5\", \"r6\", \"r7\", \"r8\", \"r9\"]]", 
+                    ShowStringCharacters -> True, NumberMarks -> True], 
+                    InputForm[
+                    TypeSystem`Atom[
+                    TypeSystem`Enumeration[
+                    "r1", "r10", "r2", "r3", "r4", "r5", "r6", "r7", "r8", 
+                    "r9"]]], Editable -> True, AutoDelete -> True]], "Input", 
+                    FontTracking -> "Plain"], TooltipDelay -> 0.25], 
+                    EventHandlerTag[{"MouseClicked" :> CellPrint[
+                    Cell[
+                    ToString[
+                    TypeSystem`Atom[
+                    TypeSystem`Enumeration[
+                    "r1", "r10", "r2", "r3", "r4", "r5", "r6", "r7", "r8", 
+                    "r9"]], InputForm], "Input"]], Method -> "Preemptive", 
+                    PassEventsDown -> True, PassEventsUp -> False}]], 
+                    StyleBox[
+                    "\[Rule]", FontColor -> GrayLevel[0.65], FontWeight -> 
+                    "Thin"], 
+                    TagBox[
+                    TooltipBox[
+                    FrameBox[
+                    StyleBox["Int", FontColor -> RGBColor[0, 
+                    Rational[2, 3], 0], FontFamily -> "Monaco"], FrameStyle -> 
+                    Dynamic[
+                    If[
+                    CurrentValue["MouseOver"], 
+                    GrayLevel[0.9], None]], BaselinePosition -> Baseline, 
+                    FrameMargins -> {{0, 0}, {2, 2}}, ContentPadding -> 
+                    False], 
+                    Cell[
+                    BoxData[
+                    InterpretationBox[
+                    StyleBox[
+                    "TypeSystem`Atom[Integer]", ShowStringCharacters -> True, 
+                    NumberMarks -> True], 
+                    InputForm[
+                    TypeSystem`Atom[Integer]], Editable -> True, AutoDelete -> 
+                    True]], "Input", FontTracking -> "Plain"], TooltipDelay -> 
+                    0.25], 
+                    EventHandlerTag[{"MouseClicked" :> CellPrint[
+                    Cell[
+                    ToString[
+                    TypeSystem`Atom[Integer], InputForm], "Input"]], Method -> 
+                    "Preemptive", PassEventsDown -> True, PassEventsUp -> 
+                    False}]]}]}], "\[RightAssociation]"}], 
+                   StyleBox[
+                   "10", FontFamily -> "Arial", FontWeight -> Normal]], 
+                  Cell[
+                   BoxData[
+                    InterpretationBox[
+                    StyleBox[
+                    "TypeSystem`Assoc[TypeSystem`Atom[TypeSystem`Enumeration[\
+\"r1\", \"r10\", \"r2\", \"r3\", \"r4\", \"r5\", \"r6\", \"r7\", \"r8\", \"r9\
+\"]], TypeSystem`Atom[Integer], 10]", ShowStringCharacters -> True, 
+                    NumberMarks -> True], 
+                    InputForm[
+                    TypeSystem`Assoc[
+                    TypeSystem`Atom[
+                    TypeSystem`Enumeration[
+                    "r1", "r10", "r2", "r3", "r4", "r5", "r6", "r7", "r8", 
+                    "r9"]], 
+                    TypeSystem`Atom[Integer], 10]], Editable -> True, 
+                    AutoDelete -> True]], "Input", FontTracking -> "Plain"], 
+                  TooltipDelay -> 0.25], 
+                 EventHandlerTag[{"MouseClicked" :> CellPrint[
+                    Cell[
+                    ToString[
+                    TypeSystem`Assoc[
+                    TypeSystem`Atom[
+                    TypeSystem`Enumeration[
+                    "r1", "r10", "r2", "r3", "r4", "r5", "r6", "r7", "r8", 
+                    "r9"]], 
+                    TypeSystem`Atom[Integer], 10], InputForm], "Input"]], 
+                   Method -> "Preemptive", PassEventsDown -> True, 
+                   PassEventsUp -> False}]], FontTracking -> "Condensed", 
+                FontWeight -> "Bold", SpanMinSize -> 1.3, SpanMaxSize -> 3.], 
+               Deploy, DefaultBaseStyle -> "Deploy"], 
+              MouseAppearanceTag["LinkHand"]], 
+             TypeSystem`Assoc[
+              TypeSystem`Atom[
+               TypeSystem`Enumeration[
+               "r1", "r10", "r2", "r3", "r4", "r5", "r6", "r7", "r8", "r9"]], 
+              
+              TypeSystem`Atom[Integer], 10]], TooltipDelay -> 1.5], 
+           EventHandlerTag[{"MouseClicked" :> Print[
+               InputForm[
+                TypeSystem`Assoc[
+                 TypeSystem`Atom[
+                  TypeSystem`Enumeration[
+                  "r1", "r10", "r2", "r3", "r4", "r5", "r6", "r7", "r8", 
+                   "r9"]], 
+                 TypeSystem`Atom[Integer], 10]]]}]], 
+          AdjustmentBox[" | ", BoxBaselineShift -> -0.3], 
+          RowBox[{"10", "elements"}]}], 
+        BaseStyle -> {
+         FontFamily -> "Helvetica", FontSize -> 10, FontColor -> 
+          GrayLevel[0.4], Editable -> False, Selectable -> False}, 
+        ItemSize -> {Automatic, Automatic}, Alignment -> {Left, Center}, 
+        Background -> RGBColor[0.92, 0.92, 0.9]], "\[SpanFromLeft]"}}, 
+     GridBoxFrame -> {"ColumnsIndexed" -> {{{1, -1}, {1, -1}} -> True}}, 
+     FrameStyle -> RGBColor[0, 0, 0, 0.4], GridBoxDividers -> {"Columns" -> {
+         RGBColor[0, 0, 0, 0.4], 
+         RGBColor[0, 0, 0, 0.3], {
+          RGBColor[0, 0, 0, 0.09]}, 
+         RGBColor[0, 0, 0, 0.4]}, "Rows" -> {
+         RGBColor[0, 0, 0, 0.4], {
+          RGBColor[0, 0, 0, 0.08]}, 
+         RGBColor[0, 0, 0, 0.4]}}, RowSpacings -> 1.2, 
+     GridBoxBackground -> {"Columns" -> {
+         RGBColor[0.92, 0.92, 0.9]}}, 
+     GridBoxAlignment -> {"Columns" -> {{Left}}}, ColumnSpacings -> 2.5, 
+     GridFrameMargins -> {{2, 3}, {1, 3}}, 
+     GridBoxItemSize -> {"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}},
+      RowMinHeight -> 1.3],
+    "Dataset[Association[(\"r1\" | \"r10\" | \"r2\" | \"r3\" | \"r4\" | \
+\"r5\" | \"r6\" | \"r7\" | \"r8\" | \"r9\" -> _Integer)..]]"},
+   "Dataset",
+   DisplayFunction->(TagBox[
+     StyleBox[#, {
+      ShowAutoStyles -> False, LineBreakWithin -> False, FontWeight -> 
+       "Light", FontFamily -> "Helvetica Neue", NumberMarks -> False, 
+       SpanMaxSize -> 3, SpanMinSize -> 1., Editable -> False, Selectable -> 
+       True, Background -> RGBColor[0.985, 0.98, 0.973], 
+       LinebreakAdjustments -> {0.4, 5, 100, 0, 0.5}, LineIndent -> 0, 
+       LineSpacing -> {1.1, 5}}], Deploy]& ),
+   InterpretationFunction->(#2& )],
+  False,
+  Editable->False,
+  SelectWithContents->True,
+  Selectable->False]], "Output"]
+}, Open  ]]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["Filtering", "Subsubsection"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"exampleDataset", "[", 
+  RowBox[{"Select", "[", 
+   RowBox[{
+    RowBox[{"EvenQ", "[", 
+     RowBox[{"#", "[", "\"\<c3\>\"", "]"}], "]"}], "&"}], "]"}], 
+  "]"}]], "Input"],
+
+Cell[BoxData[
+ TagBox[
+  TemplateBox[{GridBox[{{
+       ItemBox["", Frame -> {False, True, True, False}], 
+       StyleBox["\"c1\"", 
+        GrayLevel[0.3]], 
+       StyleBox["\"c2\"", 
+        GrayLevel[0.3]], 
+       StyleBox["\"c3\"", 
+        GrayLevel[0.3]], 
+       StyleBox["\"c4\"", 
+        GrayLevel[0.3]], 
+       StyleBox["\"c5\"", 
+        GrayLevel[0.3]], 
+       StyleBox["\"c6\"", 
+        GrayLevel[0.3]], 
+       StyleBox["\"c7\"", 
+        GrayLevel[0.3]], 
+       StyleBox["\"c8\"", 
+        GrayLevel[0.3]], 
+       StyleBox["\"c9\"", 
+        GrayLevel[0.3]], 
+       StyleBox["\"c10\"", 
+        GrayLevel[0.3]]}, {
+       StyleBox[
+        StyleBox["\"r2\"", FontColor -> GrayLevel[0.4]], 
+        GrayLevel[0.3]], 2, 3, 4, 5, 6, 7, 8, 9, 10, 11}, {
+       StyleBox[
+        StyleBox["\"r4\"", FontColor -> GrayLevel[0.4]], 
+        GrayLevel[0.3]], 4, 5, 6, 7, 8, 9, 10, 11, 12, 13}, {
+       StyleBox[
+        StyleBox["\"r6\"", FontColor -> GrayLevel[0.4]], 
+        GrayLevel[0.3]], 6, 7, 8, 9, 10, 11, 12, 13, 14, 15}, {
+       StyleBox[
+        StyleBox["\"r8\"", FontColor -> GrayLevel[0.4]], 
+        GrayLevel[0.3]], 8, 9, 10, 11, 12, 13, 14, 15, 16, 17}, {
+       StyleBox[
+        StyleBox["\"r10\"", FontColor -> GrayLevel[0.4]], 
+        GrayLevel[0.3]], 10, 11, 12, 13, 14, 15, 16, 17, 18, 19}, {
+       ItemBox[
+        RowBox[{
+          TagBox[
+           TooltipBox["2 levels", 
+            InterpretationBox[
+             TagBox[
+              TagBox[
+               StyleBox[
+                TagBox[
+                 TooltipBox[
+                  RowBox[{"\[LeftAssociation]", 
+                    RowBox[{
+                    RowBox[{
+                    TagBox[
+                    TooltipBox[
+                    FrameBox[
+                    StyleBox["Str", FontColor -> RGBColor[0, 
+                    Rational[2, 3], 0], FontFamily -> "Monaco"], FrameStyle -> 
+                    Dynamic[
+                    If[
+                    CurrentValue["MouseOver"], 
+                    GrayLevel[0.9], None]], BaselinePosition -> Baseline, 
+                    FrameMargins -> {{0, 0}, {2, 2}}, ContentPadding -> 
+                    False], 
+                    Cell[
+                    BoxData[
+                    InterpretationBox[
+                    StyleBox[
+                    "TypeSystem`Atom[String]", ShowStringCharacters -> True, 
+                    NumberMarks -> True], 
+                    InputForm[
+                    TypeSystem`Atom[String]], Editable -> True, AutoDelete -> 
+                    True]], "Input", FontTracking -> "Plain"], TooltipDelay -> 
+                    0.25], 
+                    EventHandlerTag[{"MouseClicked" :> CellPrint[
+                    Cell[
+                    ToString[
+                    TypeSystem`Atom[String], InputForm], "Input"]], Method -> 
+                    "Preemptive", PassEventsDown -> True, PassEventsUp -> 
+                    False}]], 
+                    StyleBox[
+                    "\[Rule]", FontColor -> GrayLevel[0.65], FontWeight -> 
+                    "Thin"], 
+                    TagBox[
+                    TooltipBox[
+                    FrameBox[
+                    RowBox[{"\[LeftAssociation]", 
+                    RowBox[{
+                    RowBox[{
+                    StyleBox[
+                    "c1", FontColor -> RGBColor[0.6, 0.4, 0.2], FontFamily -> 
+                    "Verdana", FontWeight -> Normal], 
+                    StyleBox[
+                    "\[Rule]", FontColor -> GrayLevel[0.65], FontWeight -> 
+                    "Thin"], 
+                    TagBox[
+                    TooltipBox[
+                    FrameBox[
+                    StyleBox["Int", FontColor -> RGBColor[0, 
+                    Rational[2, 3], 0], FontFamily -> "Monaco"], FrameStyle -> 
+                    Dynamic[
+                    If[
+                    CurrentValue["MouseOver"], 
+                    GrayLevel[0.9], None]], BaselinePosition -> Baseline, 
+                    FrameMargins -> {{0, 0}, {2, 2}}, ContentPadding -> 
+                    False], 
+                    Cell[
+                    BoxData[
+                    InterpretationBox[
+                    StyleBox[
+                    "TypeSystem`Atom[Integer]", ShowStringCharacters -> True, 
+                    NumberMarks -> True], 
+                    InputForm[
+                    TypeSystem`Atom[Integer]], Editable -> True, AutoDelete -> 
+                    True]], "Input", FontTracking -> "Plain"], TooltipDelay -> 
+                    0.25], 
+                    EventHandlerTag[{"MouseClicked" :> CellPrint[
+                    Cell[
+                    ToString[
+                    TypeSystem`Atom[Integer], InputForm], "Input"]], Method -> 
+                    "Preemptive", PassEventsDown -> True, PassEventsUp -> 
+                    False}]]}], 
+                    StyleBox[
+                    ",", FontColor -> GrayLevel[0.65], FontWeight -> "Thin"], 
+                    
+                    RowBox[{
+                    StyleBox[
+                    "c2", FontColor -> RGBColor[0.6, 0.4, 0.2], FontFamily -> 
+                    "Verdana", FontWeight -> Normal], 
+                    StyleBox[
+                    "\[Rule]", FontColor -> GrayLevel[0.65], FontWeight -> 
+                    "Thin"], 
+                    TagBox[
+                    TooltipBox[
+                    FrameBox[
+                    StyleBox["Int", FontColor -> RGBColor[0, 
+                    Rational[2, 3], 0], FontFamily -> "Monaco"], FrameStyle -> 
+                    Dynamic[
+                    If[
+                    CurrentValue["MouseOver"], 
+                    GrayLevel[0.9], None]], BaselinePosition -> Baseline, 
+                    FrameMargins -> {{0, 0}, {2, 2}}, ContentPadding -> 
+                    False], 
+                    Cell[
+                    BoxData[
+                    InterpretationBox[
+                    StyleBox[
+                    "TypeSystem`Atom[Integer]", ShowStringCharacters -> True, 
+                    NumberMarks -> True], 
+                    InputForm[
+                    TypeSystem`Atom[Integer]], Editable -> True, AutoDelete -> 
+                    True]], "Input", FontTracking -> "Plain"], TooltipDelay -> 
+                    0.25], 
+                    EventHandlerTag[{"MouseClicked" :> CellPrint[
+                    Cell[
+                    ToString[
+                    TypeSystem`Atom[Integer], InputForm], "Input"]], Method -> 
+                    "Preemptive", PassEventsDown -> True, PassEventsUp -> 
+                    False}]]}], 
+                    StyleBox[
+                    ",", FontColor -> GrayLevel[0.65], FontWeight -> "Thin"], 
+                    
+                    RowBox[{
+                    StyleBox[
+                    "c3", FontColor -> RGBColor[0.6, 0.4, 0.2], FontFamily -> 
+                    "Verdana", FontWeight -> Normal], 
+                    StyleBox[
+                    "\[Rule]", FontColor -> GrayLevel[0.65], FontWeight -> 
+                    "Thin"], 
+                    TagBox[
+                    TooltipBox[
+                    FrameBox[
+                    StyleBox["Int", FontColor -> RGBColor[0, 
+                    Rational[2, 3], 0], FontFamily -> "Monaco"], FrameStyle -> 
+                    Dynamic[
+                    If[
+                    CurrentValue["MouseOver"], 
+                    GrayLevel[0.9], None]], BaselinePosition -> Baseline, 
+                    FrameMargins -> {{0, 0}, {2, 2}}, ContentPadding -> 
+                    False], 
+                    Cell[
+                    BoxData[
+                    InterpretationBox[
+                    StyleBox[
+                    "TypeSystem`Atom[Integer]", ShowStringCharacters -> True, 
+                    NumberMarks -> True], 
+                    InputForm[
+                    TypeSystem`Atom[Integer]], Editable -> True, AutoDelete -> 
+                    True]], "Input", FontTracking -> "Plain"], TooltipDelay -> 
+                    0.25], 
+                    EventHandlerTag[{"MouseClicked" :> CellPrint[
+                    Cell[
+                    ToString[
+                    TypeSystem`Atom[Integer], InputForm], "Input"]], Method -> 
+                    "Preemptive", PassEventsDown -> True, PassEventsUp -> 
+                    False}]]}], 
+                    StyleBox[
+                    ",", FontColor -> GrayLevel[0.65], FontWeight -> "Thin"], 
+                    
+                    RowBox[{
+                    StyleBox[
+                    "c4", FontColor -> RGBColor[0.6, 0.4, 0.2], FontFamily -> 
+                    "Verdana", FontWeight -> Normal], 
+                    StyleBox["\[Rule]", FontColor -> GrayLevel[0.65], 
+                    FontWeight -> "Thin"], 
+                    TagBox[
+                    TooltipBox[
+                    FrameBox[
+                    StyleBox["Int", FontColor -> RGBColor[0, 
+                    Rational[2, 3], 0], FontFamily -> "Monaco"], FrameStyle -> 
+                    Dynamic[
+                    If[
+                    CurrentValue["MouseOver"], 
+                    GrayLevel[0.9], None]], BaselinePosition -> Baseline, 
+                    FrameMargins -> {{0, 0}, {2, 2}}, ContentPadding -> 
+                    False], 
+                    Cell[
+                    BoxData[
+                    InterpretationBox[
+                    StyleBox[
+                    "TypeSystem`Atom[Integer]", ShowStringCharacters -> True, 
+                    NumberMarks -> True], 
+                    InputForm[
+                    TypeSystem`Atom[Integer]], Editable -> True, AutoDelete -> 
+                    True]], "Input", FontTracking -> "Plain"], TooltipDelay -> 
+                    0.25], 
+                    EventHandlerTag[{"MouseClicked" :> CellPrint[
+                    Cell[
+                    ToString[
+                    TypeSystem`Atom[Integer], InputForm], "Input"]], Method -> 
+                    "Preemptive", PassEventsDown -> True, PassEventsUp -> 
+                    False}]]}], 
+                    StyleBox[
+                    ",", FontColor -> GrayLevel[0.65], FontWeight -> "Thin"], 
+                    
+                    RowBox[{
+                    StyleBox[
+                    "c5", FontColor -> RGBColor[0.6, 0.4, 0.2], FontFamily -> 
+                    "Verdana", FontWeight -> Normal], 
+                    StyleBox[
+                    "\[Rule]", FontColor -> GrayLevel[0.65], FontWeight -> 
+                    "Thin"], 
+                    TagBox[
+                    TooltipBox[
+                    FrameBox[
+                    StyleBox["Int", FontColor -> RGBColor[0, 
+                    Rational[2, 3], 0], FontFamily -> "Monaco"], FrameStyle -> 
+                    Dynamic[
+                    If[
+                    CurrentValue["MouseOver"], 
+                    GrayLevel[0.9], None]], BaselinePosition -> Baseline, 
+                    FrameMargins -> {{0, 0}, {2, 2}}, ContentPadding -> 
+                    False], 
+                    Cell[
+                    BoxData[
+                    InterpretationBox[
+                    StyleBox[
+                    "TypeSystem`Atom[Integer]", ShowStringCharacters -> True, 
+                    NumberMarks -> True], 
+                    InputForm[
+                    TypeSystem`Atom[Integer]], Editable -> True, AutoDelete -> 
+                    True]], "Input", FontTracking -> "Plain"], TooltipDelay -> 
+                    0.25], 
+                    EventHandlerTag[{"MouseClicked" :> CellPrint[
+                    Cell[
+                    ToString[
+                    TypeSystem`Atom[Integer], InputForm], "Input"]], Method -> 
+                    "Preemptive", PassEventsDown -> True, PassEventsUp -> 
+                    False}]]}], 
+                    StyleBox[
+                    ",", FontColor -> GrayLevel[0.65], FontWeight -> "Thin"], 
+                    
+                    RowBox[{
+                    StyleBox[
+                    "c6", FontColor -> RGBColor[0.6, 0.4, 0.2], FontFamily -> 
+                    "Verdana", FontWeight -> Normal], 
+                    StyleBox[
+                    "\[Rule]", FontColor -> GrayLevel[0.65], FontWeight -> 
+                    "Thin"], 
+                    TagBox[
+                    TooltipBox[
+                    FrameBox[
+                    StyleBox["Int", FontColor -> RGBColor[0, 
+                    Rational[2, 3], 0], FontFamily -> "Monaco"], FrameStyle -> 
+                    Dynamic[
+                    If[
+                    CurrentValue["MouseOver"], 
+                    GrayLevel[0.9], None]], BaselinePosition -> Baseline, 
+                    FrameMargins -> {{0, 0}, {2, 2}}, ContentPadding -> 
+                    False], 
+                    Cell[
+                    BoxData[
+                    InterpretationBox[
+                    StyleBox[
+                    "TypeSystem`Atom[Integer]", ShowStringCharacters -> True, 
+                    NumberMarks -> True], 
+                    InputForm[
+                    TypeSystem`Atom[Integer]], Editable -> True, AutoDelete -> 
+                    True]], "Input", FontTracking -> "Plain"], TooltipDelay -> 
+                    0.25], 
+                    EventHandlerTag[{"MouseClicked" :> CellPrint[
+                    Cell[
+                    ToString[
+                    TypeSystem`Atom[Integer], InputForm], "Input"]], Method -> 
+                    "Preemptive", PassEventsDown -> True, PassEventsUp -> 
+                    False}]]}], 
+                    StyleBox[
+                    ",", FontColor -> GrayLevel[0.65], FontWeight -> "Thin"], 
+                    
+                    RowBox[{
+                    StyleBox[
+                    "c7", FontColor -> RGBColor[0.6, 0.4, 0.2], FontFamily -> 
+                    "Verdana", FontWeight -> Normal], 
+                    StyleBox[
+                    "\[Rule]", FontColor -> GrayLevel[0.65], FontWeight -> 
+                    "Thin"], 
+                    TagBox[
+                    TooltipBox[
+                    FrameBox[
+                    StyleBox["Int", FontColor -> RGBColor[0, 
+                    Rational[2, 3], 0], FontFamily -> "Monaco"], FrameStyle -> 
+                    Dynamic[
+                    If[
+                    CurrentValue["MouseOver"], 
+                    GrayLevel[0.9], None]], BaselinePosition -> Baseline, 
+                    FrameMargins -> {{0, 0}, {2, 2}}, ContentPadding -> 
+                    False], 
+                    Cell[
+                    BoxData[
+                    InterpretationBox[
+                    StyleBox[
+                    "TypeSystem`Atom[Integer]", ShowStringCharacters -> True, 
+                    NumberMarks -> True], 
+                    InputForm[
+                    TypeSystem`Atom[Integer]], Editable -> True, AutoDelete -> 
+                    True]], "Input", FontTracking -> "Plain"], TooltipDelay -> 
+                    0.25], 
+                    EventHandlerTag[{"MouseClicked" :> CellPrint[
+                    Cell[
+                    ToString[
+                    TypeSystem`Atom[Integer], InputForm], "Input"]], Method -> 
+                    "Preemptive", PassEventsDown -> True, PassEventsUp -> 
+                    False}]]}], 
+                    StyleBox[
+                    ",", FontColor -> GrayLevel[0.65], FontWeight -> "Thin"], 
+                    
+                    RowBox[{
+                    StyleBox[
+                    "c8", FontColor -> RGBColor[0.6, 0.4, 0.2], FontFamily -> 
+                    "Verdana", FontWeight -> Normal], 
+                    StyleBox[
+                    "\[Rule]", FontColor -> GrayLevel[0.65], FontWeight -> 
+                    "Thin"], 
+                    TagBox[
+                    TooltipBox[
+                    FrameBox[
+                    StyleBox["Int", FontColor -> RGBColor[0, 
+                    Rational[2, 3], 0], FontFamily -> "Monaco"], FrameStyle -> 
+                    Dynamic[
+                    If[
+                    CurrentValue["MouseOver"], 
+                    GrayLevel[0.9], None]], BaselinePosition -> Baseline, 
+                    FrameMargins -> {{0, 0}, {2, 2}}, ContentPadding -> 
+                    False], 
+                    Cell[
+                    BoxData[
+                    InterpretationBox[
+                    StyleBox[
+                    "TypeSystem`Atom[Integer]", ShowStringCharacters -> True, 
+                    NumberMarks -> True], 
+                    InputForm[
+                    TypeSystem`Atom[Integer]], Editable -> True, AutoDelete -> 
+                    True]], "Input", FontTracking -> "Plain"], TooltipDelay -> 
+                    0.25], 
+                    EventHandlerTag[{"MouseClicked" :> CellPrint[
+                    Cell[
+                    ToString[
+                    TypeSystem`Atom[Integer], InputForm], "Input"]], Method -> 
+                    "Preemptive", PassEventsDown -> True, PassEventsUp -> 
+                    False}]]}], 
+                    StyleBox[
+                    ",", FontColor -> GrayLevel[0.65], FontWeight -> "Thin"], 
+                    
+                    RowBox[{
+                    StyleBox[
+                    "c9", FontColor -> RGBColor[0.6, 0.4, 0.2], FontFamily -> 
+                    "Verdana", FontWeight -> Normal], 
+                    StyleBox[
+                    "\[Rule]", FontColor -> GrayLevel[0.65], FontWeight -> 
+                    "Thin"], 
+                    TagBox[
+                    TooltipBox[
+                    FrameBox[
+                    StyleBox["Int", FontColor -> RGBColor[0, 
+                    Rational[2, 3], 0], FontFamily -> "Monaco"], FrameStyle -> 
+                    Dynamic[
+                    If[
+                    CurrentValue["MouseOver"], 
+                    GrayLevel[0.9], None]], BaselinePosition -> Baseline, 
+                    FrameMargins -> {{0, 0}, {2, 2}}, ContentPadding -> 
+                    False], 
+                    Cell[
+                    BoxData[
+                    InterpretationBox[
+                    StyleBox[
+                    "TypeSystem`Atom[Integer]", ShowStringCharacters -> True, 
+                    NumberMarks -> True], 
+                    InputForm[
+                    TypeSystem`Atom[Integer]], Editable -> True, AutoDelete -> 
+                    True]], "Input", FontTracking -> "Plain"], TooltipDelay -> 
+                    0.25], 
+                    EventHandlerTag[{"MouseClicked" :> CellPrint[
+                    Cell[
+                    ToString[
+                    TypeSystem`Atom[Integer], InputForm], "Input"]], Method -> 
+                    "Preemptive", PassEventsDown -> True, PassEventsUp -> 
+                    False}]]}], 
+                    StyleBox[
+                    ",", FontColor -> GrayLevel[0.65], FontWeight -> "Thin"], 
+                    
+                    RowBox[{
+                    StyleBox[
+                    "c10", FontColor -> RGBColor[0.6, 0.4, 0.2], FontFamily -> 
+                    "Verdana", FontWeight -> Normal], 
+                    StyleBox[
+                    "\[Rule]", FontColor -> GrayLevel[0.65], FontWeight -> 
+                    "Thin"], 
+                    TagBox[
+                    TooltipBox[
+                    FrameBox[
+                    StyleBox["Int", FontColor -> RGBColor[0, 
+                    Rational[2, 3], 0], FontFamily -> "Monaco"], FrameStyle -> 
+                    Dynamic[
+                    If[
+                    CurrentValue["MouseOver"], 
+                    GrayLevel[0.9], None]], BaselinePosition -> Baseline, 
+                    FrameMargins -> {{0, 0}, {2, 2}}, ContentPadding -> 
+                    False], 
+                    Cell[
+                    BoxData[
+                    InterpretationBox[
+                    StyleBox[
+                    "TypeSystem`Atom[Integer]", ShowStringCharacters -> True, 
+                    NumberMarks -> True], 
+                    InputForm[
+                    TypeSystem`Atom[Integer]], Editable -> True, AutoDelete -> 
+                    True]], "Input", FontTracking -> "Plain"], TooltipDelay -> 
+                    0.25], 
+                    EventHandlerTag[{"MouseClicked" :> CellPrint[
+                    Cell[
+                    ToString[
+                    TypeSystem`Atom[Integer], InputForm], "Input"]], Method -> 
+                    "Preemptive", PassEventsDown -> True, PassEventsUp -> 
+                    False}]]}]}], "\[RightAssociation]"}], FrameStyle -> 
+                    Dynamic[
+                    If[
+                    CurrentValue["MouseOver"], 
+                    GrayLevel[0.9], None]], BaselinePosition -> Baseline, 
+                    FrameMargins -> {{0, 0}, {2, 2}}, ContentPadding -> 
+                    False], 
+                    Cell[
+                    BoxData[
+                    InterpretationBox[
+                    StyleBox[
+                    "TypeSystem`Struct[{\"c1\", \"c2\", \"c3\", \"c4\", \
+\"c5\", \"c6\", \"c7\", \"c8\", \"c9\", \"c10\"}, {TypeSystem`Atom[Integer], \
+TypeSystem`Atom[Integer], TypeSystem`Atom[Integer], TypeSystem`Atom[Integer], \
+TypeSystem`Atom[Integer], TypeSystem`Atom[Integer], TypeSystem`Atom[Integer], \
+TypeSystem`Atom[Integer], TypeSystem`Atom[Integer], \
+TypeSystem`Atom[Integer]}]", ShowStringCharacters -> True, NumberMarks -> 
+                    True], 
+                    InputForm[
+                    
+                    TypeSystem`Struct[{
+                    "c1", "c2", "c3", "c4", "c5", "c6", "c7", "c8", "c9", 
+                    "c10"}, {
+                    TypeSystem`Atom[Integer], 
+                    TypeSystem`Atom[Integer], 
+                    TypeSystem`Atom[Integer], 
+                    TypeSystem`Atom[Integer], 
+                    TypeSystem`Atom[Integer], 
+                    TypeSystem`Atom[Integer], 
+                    TypeSystem`Atom[Integer], 
+                    TypeSystem`Atom[Integer], 
+                    TypeSystem`Atom[Integer], 
+                    TypeSystem`Atom[Integer]}]], Editable -> True, AutoDelete -> 
+                    True]], "Input", FontTracking -> "Plain"], TooltipDelay -> 
+                    0.25], 
+                    EventHandlerTag[{"MouseClicked" :> CellPrint[
+                    Cell[
+                    ToString[
+                    
+                    TypeSystem`Struct[{
+                    "c1", "c2", "c3", "c4", "c5", "c6", "c7", "c8", "c9", 
+                    "c10"}, {
+                    TypeSystem`Atom[Integer], 
+                    TypeSystem`Atom[Integer], 
+                    TypeSystem`Atom[Integer], 
+                    TypeSystem`Atom[Integer], 
+                    TypeSystem`Atom[Integer], 
+                    TypeSystem`Atom[Integer], 
+                    TypeSystem`Atom[Integer], 
+                    TypeSystem`Atom[Integer], 
+                    TypeSystem`Atom[Integer], 
+                    TypeSystem`Atom[Integer]}], InputForm], "Input"]], Method -> 
+                    "Preemptive", PassEventsDown -> True, PassEventsUp -> 
+                    False}]]}]}], "\[RightAssociation]"}], 
+                  Cell[
+                   BoxData[
+                    InterpretationBox[
+                    StyleBox[
+                    "TypeSystem`Assoc[TypeSystem`Atom[String], \
+TypeSystem`Struct[{\"c1\", \"c2\", \"c3\", \"c4\", \"c5\", \"c6\", \"c7\", \
+\"c8\", \"c9\", \"c10\"}, {TypeSystem`Atom[Integer], \
+TypeSystem`Atom[Integer], TypeSystem`Atom[Integer], TypeSystem`Atom[Integer], \
+TypeSystem`Atom[Integer], TypeSystem`Atom[Integer], TypeSystem`Atom[Integer], \
+TypeSystem`Atom[Integer], TypeSystem`Atom[Integer], \
+TypeSystem`Atom[Integer]}], TypeSystem`AnyLength]", ShowStringCharacters -> 
+                    True, NumberMarks -> True], 
+                    InputForm[
+                    TypeSystem`Assoc[
+                    TypeSystem`Atom[String], 
+                    
+                    TypeSystem`Struct[{
+                    "c1", "c2", "c3", "c4", "c5", "c6", "c7", "c8", "c9", 
+                    "c10"}, {
+                    TypeSystem`Atom[Integer], 
+                    TypeSystem`Atom[Integer], 
+                    TypeSystem`Atom[Integer], 
+                    TypeSystem`Atom[Integer], 
+                    TypeSystem`Atom[Integer], 
+                    TypeSystem`Atom[Integer], 
+                    TypeSystem`Atom[Integer], 
+                    TypeSystem`Atom[Integer], 
+                    TypeSystem`Atom[Integer], 
+                    TypeSystem`Atom[Integer]}], TypeSystem`AnyLength]], 
+                    Editable -> True, AutoDelete -> True]], "Input", 
+                   FontTracking -> "Plain"], TooltipDelay -> 0.25], 
+                 EventHandlerTag[{"MouseClicked" :> CellPrint[
+                    Cell[
+                    ToString[
+                    TypeSystem`Assoc[
+                    TypeSystem`Atom[String], 
+                    
+                    TypeSystem`Struct[{
+                    "c1", "c2", "c3", "c4", "c5", "c6", "c7", "c8", "c9", 
+                    "c10"}, {
+                    TypeSystem`Atom[Integer], 
+                    TypeSystem`Atom[Integer], 
+                    TypeSystem`Atom[Integer], 
+                    TypeSystem`Atom[Integer], 
+                    TypeSystem`Atom[Integer], 
+                    TypeSystem`Atom[Integer], 
+                    TypeSystem`Atom[Integer], 
+                    TypeSystem`Atom[Integer], 
+                    TypeSystem`Atom[Integer], 
+                    TypeSystem`Atom[Integer]}], TypeSystem`AnyLength], 
+                    InputForm], "Input"]], Method -> "Preemptive", 
+                   PassEventsDown -> True, PassEventsUp -> False}]], 
+                FontTracking -> "Condensed", FontWeight -> "Bold", 
+                SpanMinSize -> 1.3, SpanMaxSize -> 3.], Deploy, 
+               DefaultBaseStyle -> "Deploy"], 
+              MouseAppearanceTag["LinkHand"]], 
+             TypeSystem`Assoc[
+              TypeSystem`Atom[String], 
+              
+              TypeSystem`Struct[{
+               "c1", "c2", "c3", "c4", "c5", "c6", "c7", "c8", "c9", "c10"}, {
+               
+                TypeSystem`Atom[Integer], 
+                TypeSystem`Atom[Integer], 
+                TypeSystem`Atom[Integer], 
+                TypeSystem`Atom[Integer], 
+                TypeSystem`Atom[Integer], 
+                TypeSystem`Atom[Integer], 
+                TypeSystem`Atom[Integer], 
+                TypeSystem`Atom[Integer], 
+                TypeSystem`Atom[Integer], 
+                TypeSystem`Atom[Integer]}], TypeSystem`AnyLength]], 
+            TooltipDelay -> 1.5], 
+           EventHandlerTag[{"MouseClicked" :> Print[
+               InputForm[
+                TypeSystem`Assoc[
+                 TypeSystem`Atom[String], 
+                 
+                 TypeSystem`Struct[{
+                  "c1", "c2", "c3", "c4", "c5", "c6", "c7", "c8", "c9", 
+                   "c10"}, {
+                   TypeSystem`Atom[Integer], 
+                   TypeSystem`Atom[Integer], 
+                   TypeSystem`Atom[Integer], 
+                   TypeSystem`Atom[Integer], 
+                   TypeSystem`Atom[Integer], 
+                   TypeSystem`Atom[Integer], 
+                   TypeSystem`Atom[Integer], 
+                   TypeSystem`Atom[Integer], 
+                   TypeSystem`Atom[Integer], 
+                   TypeSystem`Atom[Integer]}], TypeSystem`AnyLength]]]}]], 
+          AdjustmentBox[" | ", BoxBaselineShift -> -0.3], 
+          RowBox[{"5", "rows"}]}], 
+        BaseStyle -> {
+         FontFamily -> "Helvetica", FontSize -> 10, FontColor -> 
+          GrayLevel[0.4], Editable -> False, Selectable -> False}, 
+        ItemSize -> {Automatic, Automatic}, Alignment -> {Left, Center}, 
+        Background -> RGBColor[0.92, 0.92, 0.9]], "\[SpanFromLeft]", 
+       "\[SpanFromLeft]", "\[SpanFromLeft]", "\[SpanFromLeft]", 
+       "\[SpanFromLeft]", "\[SpanFromLeft]", "\[SpanFromLeft]", 
+       "\[SpanFromLeft]", "\[SpanFromLeft]", "\[SpanFromLeft]"}}, 
+     GridBoxFrame -> {"ColumnsIndexed" -> {{{1, -1}, {1, -1}} -> True}}, 
+     FrameStyle -> RGBColor[0, 0, 0, 0.4], GridBoxDividers -> {"Columns" -> {
+         RGBColor[0, 0, 0, 0.4], 
+         RGBColor[0, 0, 0, 0.3], {
+          RGBColor[0, 0, 0, 0.09]}, 
+         RGBColor[0, 0, 0, 0.4]}, "Rows" -> {
+         RGBColor[0, 0, 0, 0.4], 
+         RGBColor[0, 0, 0, 0.3], {
+          RGBColor[0, 0, 0, 0.08]}, 
+         RGBColor[0, 0, 0, 0.4]}}, RowSpacings -> {1.5, 1.2}, 
+     GridBoxBackground -> {"Columns" -> {
+         RGBColor[0.92, 0.92, 0.9]}, "Rows" -> {
+         RGBColor[0.92, 0.92, 0.9]}}, 
+     GridBoxAlignment -> {"Columns" -> {{Left}}}, ColumnSpacings -> 2.5, 
+     GridFrameMargins -> {{2, 3}, {1, 3}}, 
+     GridBoxItemSize -> {"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}},
+      RowMinHeight -> 1.3],
+    "Dataset[Association[(_String -> _Association)..]]"},
+   "Dataset",
+   DisplayFunction->(TagBox[
+     StyleBox[#, {
+      ShowAutoStyles -> False, LineBreakWithin -> False, FontWeight -> 
+       "Light", FontFamily -> "Helvetica Neue", NumberMarks -> False, 
+       SpanMaxSize -> 3, SpanMinSize -> 1., Editable -> False, Selectable -> 
+       True, Background -> RGBColor[0.985, 0.98, 0.973], 
+       LinebreakAdjustments -> {0.4, 5, 100, 0, 0.5}, LineIndent -> 0, 
+       LineSpacing -> {1.1, 5}}], Deploy]& ),
+   InterpretationFunction->(#2& )],
+  False,
+  Editable->False,
+  SelectWithContents->True,
+  Selectable->False]], "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"exampleDataset", "[", 
+  RowBox[{
+   RowBox[{"Select", "[", 
+    RowBox[{
+     RowBox[{"EvenQ", "[", 
+      RowBox[{"#", "[", "\"\<c3\>\"", "]"}], "]"}], "&"}], "]"}], ",", 
+   RowBox[{"Query", "[", 
+    RowBox[{"{", 
+     RowBox[{"\"\<c1\>\"", ",", "\"\<c3\>\""}], "}"}], "]"}]}], 
+  "]"}]], "Input"],
+
+Cell[BoxData[
+ TagBox[
+  TemplateBox[{GridBox[{{
+       ItemBox["", Frame -> {False, True, True, False}], 
+       StyleBox["\"c1\"", 
+        GrayLevel[0.3]], 
+       StyleBox["\"c3\"", 
+        GrayLevel[0.3]]}, {
+       StyleBox[
+        StyleBox["\"r2\"", FontColor -> GrayLevel[0.4]], 
+        GrayLevel[0.3]], 2, 4}, {
+       StyleBox[
+        StyleBox["\"r4\"", FontColor -> GrayLevel[0.4]], 
+        GrayLevel[0.3]], 4, 6}, {
+       StyleBox[
+        StyleBox["\"r6\"", FontColor -> GrayLevel[0.4]], 
+        GrayLevel[0.3]], 6, 8}, {
+       StyleBox[
+        StyleBox["\"r8\"", FontColor -> GrayLevel[0.4]], 
+        GrayLevel[0.3]], 8, 10}, {
+       StyleBox[
+        StyleBox["\"r10\"", FontColor -> GrayLevel[0.4]], 
+        GrayLevel[0.3]], 10, 12}, {
+       ItemBox[
+        RowBox[{
+          TagBox[
+           TooltipBox["2 levels", 
+            InterpretationBox[
+             TagBox[
+              TagBox[
+               StyleBox[
+                TagBox[
+                 TooltipBox[
+                  RowBox[{"\[LeftAssociation]", 
+                    RowBox[{
+                    RowBox[{
+                    TagBox[
+                    TooltipBox[
+                    FrameBox[
+                    StyleBox["Str", FontColor -> RGBColor[0, 
+                    Rational[2, 3], 0], FontFamily -> "Monaco"], FrameStyle -> 
+                    Dynamic[
+                    If[
+                    CurrentValue["MouseOver"], 
+                    GrayLevel[0.9], None]], BaselinePosition -> Baseline, 
+                    FrameMargins -> {{0, 0}, {2, 2}}, ContentPadding -> 
+                    False], 
+                    Cell[
+                    BoxData[
+                    InterpretationBox[
+                    StyleBox[
+                    "TypeSystem`Atom[String]", ShowStringCharacters -> True, 
+                    NumberMarks -> True], 
+                    InputForm[
+                    TypeSystem`Atom[String]], Editable -> True, AutoDelete -> 
+                    True]], "Input", FontTracking -> "Plain"], TooltipDelay -> 
+                    0.25], 
+                    EventHandlerTag[{"MouseClicked" :> CellPrint[
+                    Cell[
+                    ToString[
+                    TypeSystem`Atom[String], InputForm], "Input"]], Method -> 
+                    "Preemptive", PassEventsDown -> True, PassEventsUp -> 
+                    False}]], 
+                    StyleBox[
+                    "\[Rule]", FontColor -> GrayLevel[0.65], FontWeight -> 
+                    "Thin"], 
+                    TagBox[
+                    TooltipBox[
+                    FrameBox[
+                    RowBox[{"\[LeftAssociation]", 
+                    RowBox[{
+                    RowBox[{
+                    StyleBox[
+                    "c1", FontColor -> RGBColor[0.6, 0.4, 0.2], FontFamily -> 
+                    "Verdana", FontWeight -> Normal], 
+                    StyleBox[
+                    "\[Rule]", FontColor -> GrayLevel[0.65], FontWeight -> 
+                    "Thin"], 
+                    TagBox[
+                    TooltipBox[
+                    FrameBox[
+                    StyleBox["Int", FontColor -> RGBColor[0, 
+                    Rational[2, 3], 0], FontFamily -> "Monaco"], FrameStyle -> 
+                    Dynamic[
+                    If[
+                    CurrentValue["MouseOver"], 
+                    GrayLevel[0.9], None]], BaselinePosition -> Baseline, 
+                    FrameMargins -> {{0, 0}, {2, 2}}, ContentPadding -> 
+                    False], 
+                    Cell[
+                    BoxData[
+                    InterpretationBox[
+                    StyleBox[
+                    "TypeSystem`Atom[Integer]", ShowStringCharacters -> True, 
+                    NumberMarks -> True], 
+                    InputForm[
+                    TypeSystem`Atom[Integer]], Editable -> True, AutoDelete -> 
+                    True]], "Input", FontTracking -> "Plain"], TooltipDelay -> 
+                    0.25], 
+                    EventHandlerTag[{"MouseClicked" :> CellPrint[
+                    Cell[
+                    ToString[
+                    TypeSystem`Atom[Integer], InputForm], "Input"]], Method -> 
+                    "Preemptive", PassEventsDown -> True, PassEventsUp -> 
+                    False}]]}], 
+                    StyleBox[
+                    ",", FontColor -> GrayLevel[0.65], FontWeight -> "Thin"], 
+                    
+                    RowBox[{
+                    StyleBox[
+                    "c3", FontColor -> RGBColor[0.6, 0.4, 0.2], FontFamily -> 
+                    "Verdana", FontWeight -> Normal], 
+                    StyleBox[
+                    "\[Rule]", FontColor -> GrayLevel[0.65], FontWeight -> 
+                    "Thin"], 
+                    TagBox[
+                    TooltipBox[
+                    FrameBox[
+                    StyleBox["Int", FontColor -> RGBColor[0, 
+                    Rational[2, 3], 0], FontFamily -> "Monaco"], FrameStyle -> 
+                    Dynamic[
+                    If[
+                    CurrentValue["MouseOver"], 
+                    GrayLevel[0.9], None]], BaselinePosition -> Baseline, 
+                    FrameMargins -> {{0, 0}, {2, 2}}, ContentPadding -> 
+                    False], 
+                    Cell[
+                    BoxData[
+                    InterpretationBox[
+                    StyleBox[
+                    "TypeSystem`Atom[Integer]", ShowStringCharacters -> True, 
+                    NumberMarks -> True], 
+                    InputForm[
+                    TypeSystem`Atom[Integer]], Editable -> True, AutoDelete -> 
+                    True]], "Input", FontTracking -> "Plain"], TooltipDelay -> 
+                    0.25], 
+                    EventHandlerTag[{"MouseClicked" :> CellPrint[
+                    Cell[
+                    ToString[
+                    TypeSystem`Atom[Integer], InputForm], "Input"]], Method -> 
+                    "Preemptive", PassEventsDown -> True, PassEventsUp -> 
+                    False}]]}]}], "\[RightAssociation]"}], FrameStyle -> 
+                    Dynamic[
+                    If[
+                    CurrentValue["MouseOver"], 
+                    GrayLevel[0.9], None]], BaselinePosition -> Baseline, 
+                    FrameMargins -> {{0, 0}, {2, 2}}, ContentPadding -> 
+                    False], 
+                    Cell[
+                    BoxData[
+                    InterpretationBox[
+                    StyleBox[
+                    "TypeSystem`Struct[{\"c1\", \"c3\"}, \
+{TypeSystem`Atom[Integer], TypeSystem`Atom[Integer]}]", ShowStringCharacters -> 
+                    True, NumberMarks -> True], 
+                    InputForm[
+                    TypeSystem`Struct[{"c1", "c3"}, {
+                    TypeSystem`Atom[Integer], 
+                    TypeSystem`Atom[Integer]}]], Editable -> True, AutoDelete -> 
+                    True]], "Input", FontTracking -> "Plain"], TooltipDelay -> 
+                    0.25], 
+                    EventHandlerTag[{"MouseClicked" :> CellPrint[
+                    Cell[
+                    ToString[
+                    TypeSystem`Struct[{"c1", "c3"}, {
+                    TypeSystem`Atom[Integer], 
+                    TypeSystem`Atom[Integer]}], InputForm], "Input"]], Method -> 
+                    "Preemptive", PassEventsDown -> True, PassEventsUp -> 
+                    False}]]}]}], "\[RightAssociation]"}], 
+                  Cell[
+                   BoxData[
+                    InterpretationBox[
+                    StyleBox[
+                    "TypeSystem`Assoc[TypeSystem`Atom[String], \
+TypeSystem`Struct[{\"c1\", \"c3\"}, {TypeSystem`Atom[Integer], \
+TypeSystem`Atom[Integer]}], TypeSystem`AnyLength]", ShowStringCharacters -> 
+                    True, NumberMarks -> True], 
+                    InputForm[
+                    TypeSystem`Assoc[
+                    TypeSystem`Atom[String], 
+                    TypeSystem`Struct[{"c1", "c3"}, {
+                    TypeSystem`Atom[Integer], 
+                    TypeSystem`Atom[Integer]}], TypeSystem`AnyLength]], 
+                    Editable -> True, AutoDelete -> True]], "Input", 
+                   FontTracking -> "Plain"], TooltipDelay -> 0.25], 
+                 EventHandlerTag[{"MouseClicked" :> CellPrint[
+                    Cell[
+                    ToString[
+                    TypeSystem`Assoc[
+                    TypeSystem`Atom[String], 
+                    TypeSystem`Struct[{"c1", "c3"}, {
+                    TypeSystem`Atom[Integer], 
+                    TypeSystem`Atom[Integer]}], TypeSystem`AnyLength], 
+                    InputForm], "Input"]], Method -> "Preemptive", 
+                   PassEventsDown -> True, PassEventsUp -> False}]], 
+                FontTracking -> "Condensed", FontWeight -> "Bold", 
+                SpanMinSize -> 1.3, SpanMaxSize -> 3.], Deploy, 
+               DefaultBaseStyle -> "Deploy"], 
+              MouseAppearanceTag["LinkHand"]], 
+             TypeSystem`Assoc[
+              TypeSystem`Atom[String], 
+              TypeSystem`Struct[{"c1", "c3"}, {
+                TypeSystem`Atom[Integer], 
+                TypeSystem`Atom[Integer]}], TypeSystem`AnyLength]], 
+            TooltipDelay -> 1.5], 
+           EventHandlerTag[{"MouseClicked" :> Print[
+               InputForm[
+                TypeSystem`Assoc[
+                 TypeSystem`Atom[String], 
+                 TypeSystem`Struct[{"c1", "c3"}, {
+                   TypeSystem`Atom[Integer], 
+                   TypeSystem`Atom[Integer]}], TypeSystem`AnyLength]]]}]], 
+          AdjustmentBox[" | ", BoxBaselineShift -> -0.3], 
+          RowBox[{"5", "rows"}]}], 
+        BaseStyle -> {
+         FontFamily -> "Helvetica", FontSize -> 10, FontColor -> 
+          GrayLevel[0.4], Editable -> False, Selectable -> False}, 
+        ItemSize -> {Automatic, Automatic}, Alignment -> {Left, Center}, 
+        Background -> RGBColor[0.92, 0.92, 0.9]], "\[SpanFromLeft]", 
+       "\[SpanFromLeft]"}}, 
+     GridBoxFrame -> {"ColumnsIndexed" -> {{{1, -1}, {1, -1}} -> True}}, 
+     FrameStyle -> RGBColor[0, 0, 0, 0.4], GridBoxDividers -> {"Columns" -> {
+         RGBColor[0, 0, 0, 0.4], 
+         RGBColor[0, 0, 0, 0.3], {
+          RGBColor[0, 0, 0, 0.09]}, 
+         RGBColor[0, 0, 0, 0.4]}, "Rows" -> {
+         RGBColor[0, 0, 0, 0.4], 
+         RGBColor[0, 0, 0, 0.3], {
+          RGBColor[0, 0, 0, 0.08]}, 
+         RGBColor[0, 0, 0, 0.4]}}, RowSpacings -> {1.5, 1.2}, 
+     GridBoxBackground -> {"Columns" -> {
+         RGBColor[0.92, 0.92, 0.9]}, "Rows" -> {
+         RGBColor[0.92, 0.92, 0.9]}}, 
+     GridBoxAlignment -> {"Columns" -> {{Left}}}, ColumnSpacings -> 2.5, 
+     GridFrameMargins -> {{2, 3}, {1, 3}}, 
+     GridBoxItemSize -> {"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}},
+      RowMinHeight -> 1.3],
+    "Dataset[Association[(_String -> _Association)..]]"},
+   "Dataset",
+   DisplayFunction->(TagBox[
+     StyleBox[#, {
+      ShowAutoStyles -> False, LineBreakWithin -> False, FontWeight -> 
+       "Light", FontFamily -> "Helvetica Neue", NumberMarks -> False, 
+       SpanMaxSize -> 3, SpanMinSize -> 1., Editable -> False, Selectable -> 
+       True, Background -> RGBColor[0.985, 0.98, 0.973], 
+       LinebreakAdjustments -> {0.4, 5, 100, 0, 0.5}, LineIndent -> 0, 
+       LineSpacing -> {1.1, 5}}], Deploy]& ),
+   InterpretationFunction->(#2& )],
+  False,
+  Editable->False,
+  SelectWithContents->True,
+  Selectable->False]], "Output"]
+}, Open  ]]
+}, Closed]]
+}, Open  ]]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["Topics", "Section"],
+
+Cell[CellGroupData[{
+
+Cell["Count vs. CountDistinct", "Subsection"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"ds", "=", 
+  RowBox[{"Dataset", "[", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"<|", 
+      RowBox[{
+       RowBox[{"\"\<c1\>\"", "\[Rule]", " ", "\"\<v11\>\""}], ",", 
+       RowBox[{"\"\<c2\>\"", "\[Rule]", " ", "\"\<v12\>\""}]}], "|>"}], ",", 
+     RowBox[{"<|", 
+      RowBox[{
+       RowBox[{"\"\<c1\>\"", "\[Rule]", " ", "\"\<v21\>\""}], ",", 
+       RowBox[{"\"\<c2\>\"", "\[Rule]", " ", "\"\<v22\>\""}]}], "|>"}], ",", 
+     RowBox[{"<|", 
+      RowBox[{
+       RowBox[{"\"\<c1\>\"", "\[Rule]", " ", "\"\<v31\>\""}], ",", 
+       RowBox[{"\"\<c2\>\"", "\[Rule]", " ", "\"\<v22\>\""}]}], "|>"}]}], 
+    "}"}], "]"}]}]], "Input"],
+
+Cell[BoxData[
+ TagBox[
+  TemplateBox[{GridBox[{{
+       StyleBox["\"c1\"", 
+        GrayLevel[0.3]], 
+       StyleBox["\"c2\"", 
+        GrayLevel[0.3]]}, {
+       StyleBox["\"v11\"", FontColor -> GrayLevel[0.4]], 
+       StyleBox["\"v12\"", FontColor -> GrayLevel[0.4]]}, {
+       StyleBox["\"v21\"", FontColor -> GrayLevel[0.4]], 
+       StyleBox["\"v22\"", FontColor -> GrayLevel[0.4]]}, {
+       StyleBox["\"v31\"", FontColor -> GrayLevel[0.4]], 
+       StyleBox["\"v22\"", FontColor -> GrayLevel[0.4]]}, {
+       ItemBox[
+        RowBox[{
+          TagBox[
+           TooltipBox["2 levels", 
+            InterpretationBox[
+             TagBox[
+              TagBox[
+               StyleBox[
+                TagBox[
+                 TooltipBox[
+                  SubscriptBox[
+                   RowBox[{"{", 
+                    RowBox[{
+                    TagBox[
+                    TooltipBox[
+                    FrameBox[
+                    RowBox[{"\[LeftAssociation]", 
+                    RowBox[{
+                    RowBox[{
+                    StyleBox[
+                    "c1", FontColor -> RGBColor[0.6, 0.4, 0.2], FontFamily -> 
+                    "Verdana", FontWeight -> Normal], 
+                    StyleBox[
+                    "\[Rule]", FontColor -> GrayLevel[0.65], FontWeight -> 
+                    "Thin"], 
+                    TagBox[
+                    TooltipBox[
+                    FrameBox[
+                    StyleBox["Str", FontColor -> RGBColor[0, 
+                    Rational[2, 3], 0], FontFamily -> "Monaco"], FrameStyle -> 
+                    Dynamic[
+                    If[
+                    CurrentValue["MouseOver"], 
+                    GrayLevel[0.9], None]], BaselinePosition -> Baseline, 
+                    FrameMargins -> {{0, 0}, {2, 2}}, ContentPadding -> 
+                    False], 
+                    Cell[
+                    BoxData[
+                    InterpretationBox[
+                    StyleBox[
+                    "TypeSystem`Atom[String]", ShowStringCharacters -> True, 
+                    NumberMarks -> True], 
+                    InputForm[
+                    TypeSystem`Atom[String]], Editable -> True, AutoDelete -> 
+                    True]], "Input", FontTracking -> "Plain"], TooltipDelay -> 
+                    0.25], 
+                    EventHandlerTag[{"MouseClicked" :> CellPrint[
+                    Cell[
+                    ToString[
+                    TypeSystem`Atom[String], InputForm], "Input"]], Method -> 
+                    "Preemptive", PassEventsDown -> True, PassEventsUp -> 
+                    False}]]}], 
+                    StyleBox[
+                    ",", FontColor -> GrayLevel[0.65], FontWeight -> "Thin"], 
+                    
+                    RowBox[{
+                    StyleBox[
+                    "c2", FontColor -> RGBColor[0.6, 0.4, 0.2], FontFamily -> 
+                    "Verdana", FontWeight -> Normal], 
+                    StyleBox[
+                    "\[Rule]", FontColor -> GrayLevel[0.65], FontWeight -> 
+                    "Thin"], 
+                    TagBox[
+                    TooltipBox[
+                    FrameBox[
+                    StyleBox["Str", FontColor -> RGBColor[0, 
+                    Rational[2, 3], 0], FontFamily -> "Monaco"], FrameStyle -> 
+                    Dynamic[
+                    If[
+                    CurrentValue["MouseOver"], 
+                    GrayLevel[0.9], None]], BaselinePosition -> Baseline, 
+                    FrameMargins -> {{0, 0}, {2, 2}}, ContentPadding -> 
+                    False], 
+                    Cell[
+                    BoxData[
+                    InterpretationBox[
+                    StyleBox[
+                    "TypeSystem`Atom[String]", ShowStringCharacters -> True, 
+                    NumberMarks -> True], 
+                    InputForm[
+                    TypeSystem`Atom[String]], Editable -> True, AutoDelete -> 
+                    True]], "Input", FontTracking -> "Plain"], TooltipDelay -> 
+                    0.25], 
+                    EventHandlerTag[{"MouseClicked" :> CellPrint[
+                    Cell[
+                    ToString[
+                    TypeSystem`Atom[String], InputForm], "Input"]], Method -> 
+                    "Preemptive", PassEventsDown -> True, PassEventsUp -> 
+                    False}]]}]}], "\[RightAssociation]"}], FrameStyle -> 
+                    Dynamic[
+                    If[
+                    CurrentValue["MouseOver"], 
+                    GrayLevel[0.9], None]], BaselinePosition -> Baseline, 
+                    FrameMargins -> {{0, 0}, {2, 2}}, ContentPadding -> 
+                    False], 
+                    Cell[
+                    BoxData[
+                    InterpretationBox[
+                    StyleBox[
+                    "TypeSystem`Struct[{\"c1\", \"c2\"}, \
+{TypeSystem`Atom[String], TypeSystem`Atom[String]}]", ShowStringCharacters -> 
+                    True, NumberMarks -> True], 
+                    InputForm[
+                    TypeSystem`Struct[{"c1", "c2"}, {
+                    TypeSystem`Atom[String], 
+                    TypeSystem`Atom[String]}]], Editable -> True, AutoDelete -> 
+                    True]], "Input", FontTracking -> "Plain"], TooltipDelay -> 
+                    0.25], 
+                    EventHandlerTag[{"MouseClicked" :> CellPrint[
+                    Cell[
+                    ToString[
+                    TypeSystem`Struct[{"c1", "c2"}, {
+                    TypeSystem`Atom[String], 
+                    TypeSystem`Atom[String]}], InputForm], "Input"]], Method -> 
+                    "Preemptive", PassEventsDown -> True, PassEventsUp -> 
+                    False}]]}], "}"}], 
+                   StyleBox[
+                   "3", FontFamily -> "Arial", FontWeight -> Normal]], 
+                  Cell[
+                   BoxData[
+                    InterpretationBox[
+                    StyleBox[
+                    "TypeSystem`Vector[TypeSystem`Struct[{\"c1\", \"c2\"}, \
+{TypeSystem`Atom[String], TypeSystem`Atom[String]}], 3]", 
+                    ShowStringCharacters -> True, NumberMarks -> True], 
+                    InputForm[
+                    TypeSystem`Vector[
+                    TypeSystem`Struct[{"c1", "c2"}, {
+                    TypeSystem`Atom[String], 
+                    TypeSystem`Atom[String]}], 3]], Editable -> True, 
+                    AutoDelete -> True]], "Input", FontTracking -> "Plain"], 
+                  TooltipDelay -> 0.25], 
+                 EventHandlerTag[{"MouseClicked" :> CellPrint[
+                    Cell[
+                    ToString[
+                    TypeSystem`Vector[
+                    TypeSystem`Struct[{"c1", "c2"}, {
+                    TypeSystem`Atom[String], 
+                    TypeSystem`Atom[String]}], 3], InputForm], "Input"]], 
+                   Method -> "Preemptive", PassEventsDown -> True, 
+                   PassEventsUp -> False}]], FontTracking -> "Condensed", 
+                FontWeight -> "Bold", SpanMinSize -> 1.3, SpanMaxSize -> 3.], 
+               Deploy, DefaultBaseStyle -> "Deploy"], 
+              MouseAppearanceTag["LinkHand"]], 
+             TypeSystem`Vector[
+              TypeSystem`Struct[{"c1", "c2"}, {
+                TypeSystem`Atom[String], 
+                TypeSystem`Atom[String]}], 3]], TooltipDelay -> 1.5], 
+           EventHandlerTag[{"MouseClicked" :> Print[
+               InputForm[
+                TypeSystem`Vector[
+                 TypeSystem`Struct[{"c1", "c2"}, {
+                   TypeSystem`Atom[String], 
+                   TypeSystem`Atom[String]}], 3]]]}]], 
+          AdjustmentBox[" | ", BoxBaselineShift -> -0.3], 
+          RowBox[{"3", "rows"}]}], 
+        BaseStyle -> {
+         FontFamily -> "Helvetica", FontSize -> 10, FontColor -> 
+          GrayLevel[0.4], Editable -> False, Selectable -> False}, 
+        ItemSize -> {Automatic, Automatic}, Alignment -> {Left, Center}, 
+        Background -> RGBColor[0.92, 0.92, 0.9]], "\[SpanFromLeft]"}}, 
+     GridBoxFrame -> {"ColumnsIndexed" -> {{{1, -1}, {1, -1}} -> True}}, 
+     FrameStyle -> RGBColor[0, 0, 0, 0.4], GridBoxDividers -> {"Columns" -> {
+         RGBColor[0, 0, 0, 0.4], {
+          RGBColor[0, 0, 0, 0.09]}, 
+         RGBColor[0, 0, 0, 0.4]}, "Rows" -> {
+         RGBColor[0, 0, 0, 0.4], 
+         RGBColor[0, 0, 0, 0.3], {
+          RGBColor[0, 0, 0, 0.08]}, 
+         RGBColor[0, 0, 0, 0.4]}}, RowSpacings -> {1.5, 1.2}, 
+     GridBoxBackground -> {"Columns" -> {}, "Rows" -> {
+         RGBColor[0.92, 0.92, 0.9]}}, 
+     GridBoxAlignment -> {"Columns" -> {{Left}}}, ColumnSpacings -> 2.5, 
+     GridFrameMargins -> {{2, 3}, {1, 3}}, 
+     GridBoxItemSize -> {"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}},
+      RowMinHeight -> 1.3],"Dataset[{__Association}]"},
+   "Dataset",
+   DisplayFunction->(TagBox[
+     StyleBox[#, {
+      ShowAutoStyles -> False, LineBreakWithin -> False, FontWeight -> 
+       "Light", FontFamily -> "Helvetica Neue", NumberMarks -> False, 
+       SpanMaxSize -> 3, SpanMinSize -> 1., Editable -> False, Selectable -> 
+       True, Background -> RGBColor[0.985, 0.98, 0.973], 
+       LinebreakAdjustments -> {0.4, 5, 100, 0, 0.5}, LineIndent -> 0, 
+       LineSpacing -> {1.1, 5}}], Deploy]& ),
+   InterpretationFunction->(#2& )],
+  False,
+  Editable->False,
+  SelectWithContents->True,
+  Selectable->False]], "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"ds", "[", 
+  RowBox[{"Counts", ",", "\"\<c2\>\""}], "]"}]], "Input"],
+
+Cell[BoxData[
+ TagBox[
+  TemplateBox[{GridBox[{{
+       StyleBox[
+        StyleBox["\"v12\"", FontColor -> GrayLevel[0.4]], 
+        GrayLevel[0.3]], 1}, {
+       StyleBox[
+        StyleBox["\"v22\"", FontColor -> GrayLevel[0.4]], 
+        GrayLevel[0.3]], 2}, {
+       ItemBox[
+        RowBox[{
+          TagBox[
+           TooltipBox["1 level", 
+            InterpretationBox[
+             TagBox[
+              TagBox[
+               StyleBox[
+                TagBox[
+                 TooltipBox[
+                  RowBox[{"\[LeftAssociation]", 
+                    RowBox[{
+                    RowBox[{
+                    TagBox[
+                    TooltipBox[
+                    FrameBox[
+                    StyleBox["Str", FontColor -> RGBColor[0, 
+                    Rational[2, 3], 0], FontFamily -> "Monaco"], FrameStyle -> 
+                    Dynamic[
+                    If[
+                    CurrentValue["MouseOver"], 
+                    GrayLevel[0.9], None]], BaselinePosition -> Baseline, 
+                    FrameMargins -> {{0, 0}, {2, 2}}, ContentPadding -> 
+                    False], 
+                    Cell[
+                    BoxData[
+                    InterpretationBox[
+                    StyleBox[
+                    "TypeSystem`Atom[String]", ShowStringCharacters -> True, 
+                    NumberMarks -> True], 
+                    InputForm[
+                    TypeSystem`Atom[String]], Editable -> True, AutoDelete -> 
+                    True]], "Input", FontTracking -> "Plain"], TooltipDelay -> 
+                    0.25], 
+                    EventHandlerTag[{"MouseClicked" :> CellPrint[
+                    Cell[
+                    ToString[
+                    TypeSystem`Atom[String], InputForm], "Input"]], Method -> 
+                    "Preemptive", PassEventsDown -> True, PassEventsUp -> 
+                    False}]], 
+                    StyleBox[
+                    "\[Rule]", FontColor -> GrayLevel[0.65], FontWeight -> 
+                    "Thin"], 
+                    TagBox[
+                    TooltipBox[
+                    FrameBox[
+                    StyleBox["Int", FontColor -> RGBColor[0, 
+                    Rational[2, 3], 0], FontFamily -> "Monaco"], FrameStyle -> 
+                    Dynamic[
+                    If[
+                    CurrentValue["MouseOver"], 
+                    GrayLevel[0.9], None]], BaselinePosition -> Baseline, 
+                    FrameMargins -> {{0, 0}, {2, 2}}, ContentPadding -> 
+                    False], 
+                    Cell[
+                    BoxData[
+                    InterpretationBox[
+                    StyleBox[
+                    "TypeSystem`Atom[Integer]", ShowStringCharacters -> True, 
+                    NumberMarks -> True], 
+                    InputForm[
+                    TypeSystem`Atom[Integer]], Editable -> True, AutoDelete -> 
+                    True]], "Input", FontTracking -> "Plain"], TooltipDelay -> 
+                    0.25], 
+                    EventHandlerTag[{"MouseClicked" :> CellPrint[
+                    Cell[
+                    ToString[
+                    TypeSystem`Atom[Integer], InputForm], "Input"]], Method -> 
+                    "Preemptive", PassEventsDown -> True, PassEventsUp -> 
+                    False}]]}]}], "\[RightAssociation]"}], 
+                  Cell[
+                   BoxData[
+                    InterpretationBox[
+                    StyleBox[
+                    "TypeSystem`Assoc[TypeSystem`Atom[String], \
+TypeSystem`Atom[Integer], TypeSystem`AnyLength]", ShowStringCharacters -> 
+                    True, NumberMarks -> True], 
+                    InputForm[
+                    TypeSystem`Assoc[
+                    TypeSystem`Atom[String], 
+                    TypeSystem`Atom[Integer], TypeSystem`AnyLength]], 
+                    Editable -> True, AutoDelete -> True]], "Input", 
+                   FontTracking -> "Plain"], TooltipDelay -> 0.25], 
+                 EventHandlerTag[{"MouseClicked" :> CellPrint[
+                    Cell[
+                    ToString[
+                    TypeSystem`Assoc[
+                    TypeSystem`Atom[String], 
+                    TypeSystem`Atom[Integer], TypeSystem`AnyLength], 
+                    InputForm], "Input"]], Method -> "Preemptive", 
+                   PassEventsDown -> True, PassEventsUp -> False}]], 
+                FontTracking -> "Condensed", FontWeight -> "Bold", 
+                SpanMinSize -> 1.3, SpanMaxSize -> 3.], Deploy, 
+               DefaultBaseStyle -> "Deploy"], 
+              MouseAppearanceTag["LinkHand"]], 
+             TypeSystem`Assoc[
+              TypeSystem`Atom[String], 
+              TypeSystem`Atom[Integer], TypeSystem`AnyLength]], TooltipDelay -> 
+            1.5], 
+           EventHandlerTag[{"MouseClicked" :> Print[
+               InputForm[
+                TypeSystem`Assoc[
+                 TypeSystem`Atom[String], 
+                 TypeSystem`Atom[Integer], TypeSystem`AnyLength]]]}]], 
+          AdjustmentBox[" | ", BoxBaselineShift -> -0.3], 
+          RowBox[{"2", "elements"}]}], 
+        BaseStyle -> {
+         FontFamily -> "Helvetica", FontSize -> 10, FontColor -> 
+          GrayLevel[0.4], Editable -> False, Selectable -> False}, 
+        ItemSize -> {Automatic, Automatic}, Alignment -> {Left, Center}, 
+        Background -> RGBColor[0.92, 0.92, 0.9]], "\[SpanFromLeft]"}}, 
+     GridBoxFrame -> {"ColumnsIndexed" -> {{{1, -1}, {1, -1}} -> True}}, 
+     FrameStyle -> RGBColor[0, 0, 0, 0.4], GridBoxDividers -> {"Columns" -> {
+         RGBColor[0, 0, 0, 0.4], 
+         RGBColor[0, 0, 0, 0.3], {
+          RGBColor[0, 0, 0, 0.09]}, 
+         RGBColor[0, 0, 0, 0.4]}, "Rows" -> {
+         RGBColor[0, 0, 0, 0.4], {
+          RGBColor[0, 0, 0, 0.08]}, 
+         RGBColor[0, 0, 0, 0.4]}}, RowSpacings -> 1.2, 
+     GridBoxBackground -> {"Columns" -> {
+         RGBColor[0.92, 0.92, 0.9]}}, 
+     GridBoxAlignment -> {"Columns" -> {{Left}}}, ColumnSpacings -> 2.5, 
+     GridFrameMargins -> {{2, 3}, {1, 3}}, 
+     GridBoxItemSize -> {"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}},
+      RowMinHeight -> 1.3],"Dataset[Association[(_String -> _Integer)..]]"},
+   "Dataset",
+   DisplayFunction->(TagBox[
+     StyleBox[#, {
+      ShowAutoStyles -> False, LineBreakWithin -> False, FontWeight -> 
+       "Light", FontFamily -> "Helvetica Neue", NumberMarks -> False, 
+       SpanMaxSize -> 3, SpanMinSize -> 1., Editable -> False, Selectable -> 
+       True, Background -> RGBColor[0.985, 0.98, 0.973], 
+       LinebreakAdjustments -> {0.4, 5, 100, 0, 0.5}, LineIndent -> 0, 
+       LineSpacing -> {1.1, 5}}], Deploy]& ),
+   InterpretationFunction->(#2& )],
+  False,
+  Editable->False,
+  SelectWithContents->True,
+  Selectable->False]], "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"ds", "[", 
+  RowBox[{"CountDistinct", ",", "\"\<c2\>\""}], "]"}]], "Input"],
+
+Cell[BoxData["2"], "Output"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
 Cell["\<\
-Select tuple by condition on some columns and extract value of other column\
+Select rows by condition on some columns and extract value of other column\
 \>", "Subsection"],
 
 Cell[CellGroupData[{
@@ -165,14 +4381,17 @@ Cell[BoxData[
   Editable->False,
   SelectWithContents->True,
   Selectable->False]], "Output"]
+}, Open  ]],
+
+Cell[BoxData["\"\<\>"], "Input"]
 }, Open  ]]
 }, Open  ]]
 }, Open  ]]
 },
-WindowSize->{808, 751},
-WindowMargins->{{28, Automatic}, {36, Automatic}},
-FrontEndVersion->"10.2 for Mac OS X x86 (32-bit, 64-bit Kernel) (July 29, \
-2015)",
+WindowSize->{1440, 851},
+WindowMargins->{{2011, Automatic}, {Automatic, 0}},
+FrontEndVersion->"10.4 for Mac OS X x86 (32-bit, 64-bit Kernel) (February 25, \
+2016)",
 StyleDefinitions->"Default.nb"
 ]
 (* End of Notebook Content *)
@@ -189,18 +4408,100 @@ Notebook[{
 Cell[CellGroupData[{
 Cell[580, 22, 24, 0, 92, "Title"],
 Cell[CellGroupData[{
-Cell[629, 26, 105, 2, 44, "Subsection"],
+Cell[629, 26, 25, 0, 64, "Section"],
 Cell[CellGroupData[{
-Cell[759, 32, 437, 12, 28, "Input"],
-Cell[1199, 46, 455, 12, 28, "Output"]
+Cell[679, 30, 935, 26, 46, "Input"],
+Cell[1617, 58, 30308, 655, 298, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[1691, 63, 92, 2, 28, "Input"],
-Cell[1786, 67, 2206, 48, 114, "Output"]
+Cell[31962, 718, 34, 0, 44, "Subsection"],
+Cell[CellGroupData[{
+Cell[32021, 722, 31, 0, 35, "Subsubsection"],
+Cell[CellGroupData[{
+Cell[32077, 726, 187, 6, 28, "Input"],
+Cell[32267, 734, 29712, 641, 206, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[4029, 120, 189, 6, 28, "Input"],
-Cell[4221, 128, 1695, 38, 60, "Output"]
+Cell[62016, 1380, 221, 7, 28, "Input"],
+Cell[62240, 1389, 28, 0, 28, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[62305, 1394, 224, 7, 28, "Input"],
+Cell[62532, 1403, 7523, 169, 250, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[70092, 1577, 330, 12, 28, "Input"],
+Cell[70425, 1591, 8922, 207, 250, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[79384, 1803, 352, 12, 28, "Input"],
+Cell[79739, 1817, 7540, 169, 250, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[87316, 1991, 140, 3, 28, "Input"],
+Cell[87459, 1996, 14426, 335, 66, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[101922, 2336, 141, 4, 28, "Input"],
+Cell[102066, 2342, 6787, 149, 90, "Output"]
+}, Open  ]]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[108902, 2497, 65, 0, 29, "Subsubsection"],
+Cell[CellGroupData[{
+Cell[108992, 2501, 125, 3, 28, "Input"],
+Cell[109120, 2506, 7643, 173, 274, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[116800, 2684, 194, 6, 28, "Input"],
+Cell[116997, 2692, 9229, 217, 274, "Output"]
+}, Open  ]]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[126275, 2915, 34, 0, 29, "Subsubsection"],
+Cell[CellGroupData[{
+Cell[126334, 2919, 196, 6, 28, "Input"],
+Cell[126533, 2927, 29583, 638, 184, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[156153, 3570, 325, 10, 28, "Input"],
+Cell[156481, 3582, 11483, 251, 184, "Output"]
+}, Open  ]]
+}, Closed]]
+}, Open  ]]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[168037, 3841, 25, 0, 50, "Section"],
+Cell[CellGroupData[{
+Cell[168087, 3845, 45, 0, 44, "Subsection"],
+Cell[CellGroupData[{
+Cell[168157, 3849, 661, 17, 28, "Input"],
+Cell[168821, 3868, 9410, 202, 138, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[178268, 4075, 92, 2, 28, "Input"],
+Cell[178363, 4079, 6780, 148, 90, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[185180, 4232, 99, 2, 28, "Input"],
+Cell[185282, 4236, 28, 0, 28, "Output"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[185359, 4242, 104, 2, 44, "Subsection"],
+Cell[CellGroupData[{
+Cell[185488, 4248, 437, 12, 28, "Input"],
+Cell[185928, 4262, 455, 12, 28, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[186420, 4279, 92, 2, 28, "Input"],
+Cell[186515, 4283, 2206, 48, 114, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[188758, 4336, 189, 6, 28, "Input"],
+Cell[188950, 4344, 1695, 38, 60, "Output"]
+}, Open  ]],
+Cell[190660, 4385, 32, 0, 28, "Input"]
 }, Open  ]]
 }, Open  ]]
 }, Open  ]]
@@ -208,4 +4509,3 @@ Cell[4221, 128, 1695, 38, 60, "Output"]
 ]
 *)
 
-(* End of internal cache information *)

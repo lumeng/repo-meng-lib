@@ -10,16 +10,37 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       161,          7]
-NotebookDataLength[      3763,        118]
-NotebookOptionsPosition[      3022,         85]
-NotebookOutlinePosition[      3546,        108]
-CellTagsIndexPosition[      3463,        103]
+NotebookDataLength[      5419,        183]
+NotebookOptionsPosition[      4306,        137]
+NotebookOutlinePosition[      4836,        160]
+CellTagsIndexPosition[      4752,        155]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
 Notebook[{
 
 Cell[CellGroupData[{
+Cell["Interpreter", "Title"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Interpreter", "[", "\"\<CurrencyAmount\>\"", "]"}], "[", 
+  "\"\<\[Euro] 12.3\>\"", "]"}]], "Input"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Count", "[", 
+   RowBox[{
+    RowBox[{"Table", "[", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"Interpreter", "[", "\"\<CurrencyAmount\>\"", "]"}], "[", 
+       "\"\<\[Euro] 12.3\>\"", "]"}], ",", 
+      RowBox[{"{", "100", "}"}]}], "]"}], ",", "_Failure"}], "]"}], "//", 
+  "AbsoluteTiming"}]], "Input"],
+
+Cell[CellGroupData[{
+
 Cell[BoxData[
  RowBox[{"?", "Interpreter"}]], "Input",
  CellChangeTimes->{{3.604660543018676*^9, 3.604660543469666*^9}}],
@@ -81,13 +102,44 @@ Cell[BoxData[
    "\"color\""},
   "Entity"]], "Output",
  CellChangeTimes->{3.604660623904723*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Interpreter[\[OpenCurlyDoubleQuote]CurrencyAmount\
+\[CloseCurlyDoubleQuote]]", "Subsection"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Interpreter", "[", "\"\<CurrencyAmount\>\"", "]"}], "[", 
+  "\"\<\[Euro] 12.3\>\"", "]"}]], "Input"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Count", "[", 
+   RowBox[{
+    RowBox[{"Table", "[", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"Interpreter", "[", "\"\<CurrencyAmount\>\"", "]"}], "[", 
+       "\"\<\[Euro] 12.3\>\"", "]"}], ",", 
+      RowBox[{"{", "100", "}"}]}], "]"}], ",", "_Failure"}], "]"}], "//", 
+  "AbsoluteTiming"}]], "Input"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"138.288889`", ",", "0"}], "}"}]], "Output"]
+}, Open  ]]
+}, Open  ]]
 }, Open  ]]
 },
 WindowSize->{808, 752},
-WindowMargins->{{4, Automatic}, {Automatic, 4}},
+WindowMargins->{{Automatic, 79}, {Automatic, 44}},
 ShowSelection->True,
-FrontEndVersion->"10.0 for Mac OS X x86 (32-bit, 64-bit Kernel) (March 6, \
-2014)",
+FrontEndVersion->"10.3 for Mac OS X x86 (32-bit, 64-bit Kernel) (October 9, \
+2015)",
 StyleDefinitions->"Default.nb"
 ]
 (* End of Notebook Content *)
@@ -96,29 +148,42 @@ StyleDefinitions->"Default.nb"
 (*CellTagsOutline
 CellTagsIndex->{
  "Info3604635343-1541220"->{
-  Cell[706, 26, 1203, 21, 106, "Print",
+  Cell[1241, 47, 1203, 21, 106, "Print",
    CellTags->"Info3604635343-1541220"]}
  }
 *)
 (*CellTagsIndex
 CellTagsIndex->{
- {"Info3604635343-1541220", 3359, 97}
+ {"Info3604635343-1541220", 4647, 149}
  }
 *)
 (*NotebookFileOutline
 Notebook[{
 Cell[CellGroupData[{
-Cell[583, 22, 120, 2, 28, "Input"],
-Cell[706, 26, 1203, 21, 106, "Print",
+Cell[583, 22, 28, 0, 92, "Title"],
+Cell[614, 24, 135, 3, 28, "Input"],
+Cell[752, 29, 341, 10, 46, "Input"],
+Cell[CellGroupData[{
+Cell[1118, 43, 120, 2, 28, "Input"],
+Cell[1241, 47, 1203, 21, 106, "Print",
  CellTags->"Info3604635343-1541220"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[1946, 52, 184, 4, 28, "Input"],
-Cell[2133, 58, 294, 5, 41, "Output"]
+Cell[2481, 73, 184, 4, 28, "Input"],
+Cell[2668, 79, 294, 5, 41, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[2464, 68, 192, 4, 28, "Input"],
-Cell[2659, 74, 347, 8, 41, "Output"]
+Cell[2999, 89, 192, 4, 28, "Input"],
+Cell[3194, 95, 347, 8, 41, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[3578, 108, 98, 1, 44, "Subsection"],
+Cell[3679, 111, 135, 3, 28, "Input"],
+Cell[CellGroupData[{
+Cell[3839, 118, 341, 10, 46, "Input"],
+Cell[4183, 130, 83, 2, 28, "Output"]
+}, Open  ]]
+}, Open  ]]
 }, Open  ]]
 }
 ]

@@ -1,0 +1,694 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 9.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       157,          7]
+NotebookDataLength[     24576,        685]
+NotebookOptionsPosition[     23746,        650]
+NotebookOutlinePosition[     24122,        667]
+CellTagsIndexPosition[     24079,        664]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["Chiense word cloud", "Title"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"SystemInformation", "[", "\"\<Small\>\"", "]"}]], "Input"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"\<\"Kernel\"\>", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"\<\"SystemID\"\>", "\[Rule]", "\<\"MacOSX-x86-64\"\>"}], ",", 
+      RowBox[{"\<\"ReleaseID\"\>", 
+       "\[Rule]", "\<\"10.3.0.0 (5416302, 2015100902)\"\>"}], ",", 
+      RowBox[{"\<\"CreationDate\"\>", "\[Rule]", 
+       TemplateBox[{RowBox[{"\"Fri 9 Oct 2015 18:38:23\"", 
+           StyleBox[
+            RowBox[{"\"GMT\"", "\[InvisibleSpace]", 
+              RowBox[{"-", "8.`"}]}], FontColor -> GrayLevel[0.5]]}],
+         RowBox[{"DateObject", "[", 
+           RowBox[{
+             RowBox[{"{", 
+               RowBox[{"2015", ",", "10", ",", "9"}], "}"}], ",", 
+             RowBox[{"TimeObject", "[", 
+               RowBox[{
+                 RowBox[{"{", 
+                   RowBox[{"18", ",", "38", ",", "23.`"}], "}"}], ",", 
+                 RowBox[{"TimeZone", "\[Rule]", 
+                   RowBox[{"-", "8.`"}]}]}], "]"}], ",", 
+             RowBox[{"TimeZone", "\[Rule]", 
+               RowBox[{"-", "8.`"}]}]}], "]"}]},
+        "DateObject",
+        Editable->False]}]}], "}"}]}], ",", 
+   RowBox[{"\<\"FrontEnd\"\>", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"\<\"OperatingSystem\"\>", "\[Rule]", "\<\"MacOSX\"\>"}], ",", 
+      RowBox[{"\<\"ReleaseID\"\>", 
+       "\[Rule]", "\<\"10.3.0.0 (5416302, 2015100903)\"\>"}], ",", 
+      RowBox[{"\<\"CreationDate\"\>", "\[Rule]", 
+       TemplateBox[{RowBox[{"\"Fri 9 Oct 2015 19:32:00\"", 
+           StyleBox[
+            RowBox[{"\"GMT\"", "\[InvisibleSpace]", 
+              RowBox[{"-", "8.`"}]}], FontColor -> GrayLevel[0.5]]}],
+         RowBox[{"DateObject", "[", 
+           RowBox[{
+             RowBox[{"{", 
+               RowBox[{"2015", ",", "10", ",", "9"}], "}"}], ",", 
+             RowBox[{"TimeObject", "[", 
+               RowBox[{
+                 RowBox[{"{", 
+                   RowBox[{"19", ",", "32", ",", "0.`"}], "}"}], ",", 
+                 RowBox[{"TimeZone", "\[Rule]", 
+                   RowBox[{"-", "8.`"}]}]}], "]"}], ",", 
+             RowBox[{"TimeZone", "\[Rule]", 
+               RowBox[{"-", "8.`"}]}]}], "]"}]},
+        "DateObject",
+        Editable->False]}]}], "}"}]}]}], "}"}]], "Output"]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+  "myChineseStr", "=", 
+   "\"\<\:8bcd\:4e91\:5728\:5916\:8bed\:5b66\:4e60\:4e2d\:6709\:7740\:5f00\
+\:62d3\:5f0f\:7684\:5e94\:7528\:3002\:5728\:4f18\:79c0\:7684\:6700\:65b0\:7535\
+\:5b50\:5b66\:4e60\:7f51\:7ad9\:4e2d\:3002\:7ecf\:6709\:4f7f\:7528\n\:4eba\
+\:5de5\:667a\:80fd\:65b9\:5f0f\:8f85\:52a9\:7528\:6237\:8fdb\:884c\:5916\:8bed\
+\:5355\:8bcd\:7684\:5b66\:4e60\:3002\:91c7\:7528\:81ea\:52a8\:5206\:6790\:7684\
+\:65b9\:6cd5\:ff0c \:8fdb\:884c\:6982\:7387\:7edf\:8ba1\:4e0e\:4e0e\:5206\
+\:6790\:540e\:ff0c\:63d0\:4f9b\:7ed9\:5916\:8bed\:5b66\:4e60\:8005\:76f8\:5e94\
+\:7684\:8bcd\:6c47\:8868\:4e0e\:8bcd\:4e91\:56fe\:3002\n  \:6559\:80b2\:5de5\
+\:4f5c\:8005\:ff0c\:53ef\:4ee5\:5229\:7528Wordle\:5de5\:5177\:ff0c\:4ee5\:52a0\
+\:5f3a\:5b66\:4e60\:3002 \:63d0\:4f9b\:9605\:8bfb\:6574\:4e2a\:4fe1\:606f\
+\:7684\:65b0\:91cd\:70b9\:ff0c\:63d0\:4f9b\:7ed9\:5b66\:751f\:ff0c\:63ed\:793a\
+\:5173\:952e\:6982\:5ff5\:5e76\:4f7f\:7528\:65b0\:7684\:6a21\:5f0f\:770b\:5230\
+\:4ee5\:524d\n\:770b\:4e0d\:5230\:7684\:65b0\:9896\:6750\:6599\:ff0c\:9884\
+\:8ba1\:8fd9\:79cd\:5de5\:5177\:4f1a\:5f97\:5230\:5e7f\:6cdb\:7684\:5e94\:7528\
+\:3002\:8bcd\:4e91\:6709\:53ef\:80fd\:6210 \:4e3a\:6700\:65b0\:7684\:8ba1\
+\:7b97\:673a\:8f85\:52a9\:5916\:8bed\:5b66\:4e60\:7684\:65b0\:5f62\:5f0f\:3002\
+\:6587\:5316\:5728\:5c0f\:8bf4\:9605\:8bfb\:4e2d\:ff0c\:8bcd\:4e91\:56fe\:4f1a\
+\:63d0\:793a\:5173\:952e\:8bcd\:548c\:4e3b\:9898\:7d22\n\:5f15\:3002\:65b9\
+\:4fbf\:7528\:6237\:5728\:4e92\:8054\:7f51\:4e0a\:5feb\:901f\:9605\:8bfb\:3002\
+\:5728\:5a31\:4e50\:4e2d\:ff0c\:53d8\:5e7b\:83ab\:6d4b\:7684\:8bcd\:4e91\:56fe\
+\:7ed9 \:7528\:6237\:63d0\:4f9b\:5145\:5206\:7684\:60f3\:8c61\:7a7a\:95f4\
+\:548c\:5a31\:4e50\:8da3\:5473\:3002\:53ef\:4ee5\:76f8\:4e92\:91c7\:7528\:5f69\
+\:4e91\:56fe\:5361\:7247\:8fdb\:884c\:6559\:80b2\:4e0e\:5a31\:4e50\:3002\:4e5f\
+\:53ef\:4ee5\:5c06\n\:8fd9\:4e9b\:8bcd\:4e91\:56fe\:4fdd\:5b58\:6253\:5370\
+\:4e0b\:6765\:ff0c\:6216\:8005\:5370\:5728 T-Shirt \:3001\:660e\:4fe1\:7247\
+\:4e0a\:ff0c\:751a\:81f3\:662f\:653e\:5230\:81ea\:5df1\:7684\:7f51\:7edc\:76f8\
+\:7c3f\:5185\:ff0c\:90fd\:662f\:5c55\:73b0\:81ea\:5df1\:6781\:4f73\:7684\:65b9\
+\:5f0f\:3002\n  \:8ba1\:7b97\:673a\:8f6f\:4ef6\:56fd\:5916\:5df2\:7ecf\:7814\
+\:7a76\:5e76\:5f00\:53d1\:4e86\:76f8\:5e94\:7684\:8f6f\:4ef6-Wordle\:3002\
+Wordle\:662f\:4e00\:4e2a\:7528\:4e8e\:4ece\:6587\:672c\:751f\:6210\:8bcd\:4e91\
+\:56fe\:800c\:63d0\:4f9b\:7684\:6e38\:620f\:5de5\:5177\:3002\:56fe\:4f1a\:66f4\
+\:52a0\:7a81\:51fa\:8bdd\n\:9898\:5e76\:9891\:7e41\:5730\:51fa\:73b0\:5728\
+\:6e90\:6587\:672c\:3002\:53ef\:4ee5\:8c03\:6574\:4e0d\:540c\:7684\:5b57\:4f53\
+\:ff0c\:5e03\:5c40 \:548c\:914d\:8272\:65b9\:6848\:3002\:7528\:56fe\:50cf\
+\:4e0eWordle\:521b\:5efa\:559c\:6b22\:7684\:6a21\:5f0f\:3002\:53ef\:4ee5\:6253\
+\:5370\:51fa\:6765\:6216\:50a8\:5b58\:4e0e\:670b\:53cb\:4e00\:8d77\:6b23\:8d4f\
+\:3002\>\""}], ";"}]], "Input"],
+
+Cell[BoxData[{
+ RowBox[{"Clear", "[", "segmentedChineseWords", 
+  "]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"segmentedChineseWords", "[", "ChineseStr_String", "]"}], ":=", 
+   RowBox[{"Import", "[", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"If", "[", 
+       RowBox[{
+        RowBox[{"$VersionNumber", "\[GreaterEqual]", "10"}], ",", 
+        "\"\<!curl -A Mozilla/4.0 \>\"", ",", "\"\<\>\""}], "]"}], "<>", 
+      "\"\<http://alphalocalizationvm.wolfram.com:11200/?key=\>\"", "<>", 
+      RowBox[{"URLEncode", "[", "ChineseStr", "]"}]}], ",", "\"\<JSON\>\""}], 
+    "]"}]}], ";"}]}], "Input"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"segmentedChineseWords", "[", 
+  "\"\<\:82f9\:679c\:6a58\:5b50\:5927\:5934\>\"", "]"}]], "Input"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"\<\"\:82f9\:679c\"\>", ",", "\<\"\:6a58\:5b50\"\>", 
+   ",", "\<\"\:5927\:5934\"\>"}], "}"}]], "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"WordCloud", "[", 
+  RowBox[{"segmentedChineseWords", "[", 
+   RowBox[{"StringTake", "[", 
+    RowBox[{"myChineseStr", ",", "100"}], "]"}], "]"}], "]"}]], "Input"],
+
+Cell[BoxData[
+ GraphicsBox[{{}, {InsetBox[
+     StyleBox["\<\"\:7684\"\>",
+      StripOnInput->False,
+      FontFamily->"Helvetica",
+      FontSize->Scaled[0.3825136612021858],
+      FontWeight->Plain,
+      FontSlant->Plain,
+      FontTracking->"Plain",
+      FontColor->RGBColor[0.368417, 0.506779, 0.709798]], {0, 0}], InsetBox[
+     StyleBox["\<\"\:5916\:8bed\"\>",
+      StripOnInput->False,
+      FontFamily->"Helvetica",
+      FontSize->Scaled[0.2185792349726776],
+      FontWeight->Plain,
+      FontSlant->Plain,
+      FontTracking->"Plain",
+      FontColor->RGBColor[0.922526, 0.385626, 0.209179]], {-0.5, -50.5}], 
+    InsetBox[
+     StyleBox["\<\"\:5b66\:4e60\"\>",
+      StripOnInput->False,
+      FontFamily->"Helvetica",
+      FontSize->Scaled[0.2185792349726776],
+      FontWeight->Plain,
+      FontSlant->Plain,
+      FontTracking->"Plain",
+      FontColor->RGBColor[0.528488, 0.470624, 0.701351]], {-0.5, 56.5}], 
+    InsetBox[
+     StyleBox["\<\"\:3002\"\>",
+      StripOnInput->False,
+      FontFamily->"Helvetica",
+      FontSize->Scaled[0.3005464480874317],
+      FontWeight->Plain,
+      FontSlant->Plain,
+      FontTracking->"Plain",
+      FontColor->RGBColor[0.880722, 0.611041, 0.142051]], {-27.5, 0.5}], 
+    InsetBox[
+     StyleBox["\<\"\:4e0e\"\>",
+      StripOnInput->False,
+      FontFamily->"Helvetica",
+      FontSize->Scaled[0.2185792349726776],
+      FontWeight->Plain,
+      FontSlant->Plain,
+      FontTracking->"Plain",
+      FontColor->RGBColor[0.560181, 0.691569, 0.194885]], {-48.5, 12.5}], 
+    InsetBox[
+     StyleBox["\<\"\:8fdb\:884c\"\>",
+      StripOnInput->False,
+      FontFamily->"Helvetica",
+      FontSize->Scaled[0.1366120218579235],
+      FontWeight->Plain,
+      FontSlant->Plain,
+      FontTracking->"Plain",
+      FontColor->RGBColor[
+       0.40082222609352647`, 0.5220066643438841, 0.85]], {58.5, 0.5}], 
+    InsetBox[
+     StyleBox["\<\"\:5206\:6790\"\>",
+      StripOnInput->False,
+      FontFamily->"Helvetica",
+      FontSize->Scaled[0.1366120218579235],
+      FontWeight->Plain,
+      FontSlant->Plain,
+      FontTracking->"Plain",
+      FontColor->RGBColor[0.915, 0.3325, 0.2125]], {58.5, 27.5}], InsetBox[
+     StyleBox["\<\"\:5728\"\>",
+      StripOnInput->False,
+      FontFamily->"Helvetica",
+      FontSize->Scaled[0.1366120218579235],
+      FontWeight->Plain,
+      FontSlant->Plain,
+      FontTracking->"Plain",
+      FontColor->RGBColor[0.647624, 0.37816, 0.614037]], {52.5, -27.5}], 
+    InsetBox[
+     StyleBox["\<\"\:4e2d\"\>",
+      StripOnInput->False,
+      FontFamily->"Helvetica",
+      FontSize->Scaled[0.1366120218579235],
+      FontWeight->Plain,
+      FontSlant->Plain,
+      FontTracking->"Plain",
+      FontColor->RGBColor[1, 0.75, 0]], {-53.5, -33.5}], InsetBox[
+     StyleBox["\<\"\:4eba\:5de5\:667a\:80fd\"\>",
+      StripOnInput->False,
+      FontFamily->"Helvetica",
+      FontSize->Scaled[0.0546448087431694],
+      FontWeight->Plain,
+      FontSlant->Plain,
+      FontTracking->"Plain",
+      FontColor->RGBColor[
+       0.23716678280579248`, 0.645266573755366, 
+        0.699600139366951]], {-61.5, 41.5}], InsetBox[
+     StyleBox["\<\"\:ff0c\"\>",
+      StripOnInput->False,
+      FontFamily->"Helvetica",
+      FontSize->Scaled[0.1366120218579235],
+      FontWeight->Plain,
+      FontSlant->Plain,
+      FontTracking->"Plain",
+      FontColor->RGBColor[0.571589, 0.586483, 0.]], {7.5, -1.5}], InsetBox[
+     StyleBox["\<\"\:8bcd\:6c47\:8868\"\>",
+      StripOnInput->False,
+      FontFamily->"Helvetica",
+      FontSize->Scaled[0.0546448087431694],
+      FontWeight->Plain,
+      FontSlant->Plain,
+      FontTracking->"Plain",
+      FontColor->RGBColor[
+       0.8168067340273636, 0.3521386531945273, 
+        0.3761554432877274]], {-68.5, -2.5}], InsetBox[
+     StyleBox["\<\"\:5b66\:4e60\:8005\"\>",
+      StripOnInput->False,
+      FontFamily->"Helvetica",
+      FontSize->Scaled[0.0546448087431694],
+      FontWeight->Plain,
+      FontSlant->Plain,
+      FontTracking->"Plain",
+      FontColor->RGBColor[
+       0.9810598048862722, 0.7553955338762525, 0.]], {52.5, 47.5}], InsetBox[
+     StyleBox["\<\"\:91c7\:7528\"\>",
+      StripOnInput->False,
+      FontFamily->"Helvetica",
+      FontSize->Scaled[0.0546448087431694],
+      FontWeight->Plain,
+      FontSlant->Plain,
+      FontTracking->"Plain",
+      FontColor->RGBColor[
+       0.5472001045252132, 0.43417993728487203`, 0.85]], {-67.5, -15.5}], 
+    InsetBox[
+     StyleBox["\<\"\:8bcd\:4e91\"\>",
+      StripOnInput->False,
+      FontFamily->"Helvetica",
+      FontSize->Scaled[0.0546448087431694],
+      FontWeight->Plain,
+      FontSlant->Plain,
+      FontTracking->"Plain",
+      FontColor->RGBColor[
+       0.37977756485605163`, 0.715, 0.3025558265468435]], {51.5, -47.5}], 
+    InsetBox[
+     StyleBox["\<\"\:5f00\:62d3\"\>",
+      StripOnInput->False,
+      FontFamily->"Helvetica",
+      FontSize->Scaled[0.0546448087431694],
+      FontWeight->Plain,
+      FontSlant->Plain,
+      FontTracking->"Plain",
+      FontColor->RGBColor[
+       0.6753413537738198, 0.3589675436319385, 
+        0.5991466155654507]], {-51.5, 53.5}], InsetBox[
+     StyleBox["\<\"\:4f18\:79c0\"\>",
+      StripOnInput->False,
+      FontFamily->"Helvetica",
+      FontSize->Scaled[0.0546448087431694],
+      FontWeight->Plain,
+      FontSlant->Plain,
+      FontTracking->"Plain",
+      FontColor->RGBColor[
+       0.8996399512215667, 0.7463488834690629, 0.]], {-0.5, -74.5}], 
+    InsetBox[
+     StyleBox["\<\"\:8f85\:52a9\"\>",
+      StripOnInput->False,
+      FontFamily->"Helvetica",
+      FontSize->Scaled[0.0546448087431694],
+      FontWeight->Plain,
+      FontSlant->Plain,
+      FontTracking->"Plain",
+      FontColor->RGBColor[
+       0.8564488486273256, 0.42032672705901153`, 
+        0.06612212156831418]], {-52.5, -53.5}], InsetBox[
+     StyleBox["\<\"\:81ea\:52a8\"\>",
+      StripOnInput->False,
+      FontFamily->"Helvetica",
+      FontSize->Scaled[0.0546448087431694],
+      FontWeight->Plain,
+      FontSlant->Plain,
+      FontTracking->"Plain",
+      FontColor->RGBColor[
+       0.7132613816472081, 0.358, 0.5392132590042952]], {46.5, 59.5}], 
+    InsetBox[
+     StyleBox["\<\"\:7f51\:7ad9\"\>",
+      StripOnInput->False,
+      FontFamily->"Helvetica",
+      FontSize->Scaled[0.0546448087431694],
+      FontWeight->Plain,
+      FontSlant->Plain,
+      FontTracking->"Plain",
+      FontColor->RGBColor[
+       0.9637822400302223, 0.5764112001511111, 
+        0.0977879519184]], {-73.5, 17.5}], InsetBox[
+     StyleBox["\<\"\:7edf\:8ba1\"\>",
+      StripOnInput->False,
+      FontFamily->"Helvetica",
+      FontSize->Scaled[0.0546448087431694],
+      FontWeight->Plain,
+      FontSlant->Plain,
+      FontTracking->"Plain",
+      FontColor->RGBColor[
+       0.35558897405758294`, 0.5505288207539337, 
+        0.8417067688690995]], {49.5, -60.5}], InsetBox[
+     StyleBox["\<\"\:7ecf\:6709\"\>",
+      StripOnInput->False,
+      FontFamily->"Helvetica",
+      FontSize->Scaled[0.0546448087431694],
+      FontWeight->Plain,
+      FontSlant->Plain,
+      FontTracking->"Plain",
+      FontColor->RGBColor[
+       0.8878600487784333, 0.33792799024431336`, 
+        0.2577332520359445]], {-25.5, -74.5}], InsetBox[
+     StyleBox["\<\"\:76f8\:5e94\"\>",
+      StripOnInput->False,
+      FontFamily->"Helvetica",
+      FontSize->Scaled[0.0546448087431694],
+      FontWeight->Plain,
+      FontSlant->Plain,
+      FontTracking->"Plain",
+      FontColor->RGBColor[
+       0.7678998606330495, 0.7317110956258943, 0.]], {22.5, -76.5}], 
+    InsetBox[
+     StyleBox["\<\"\:7535\:5b50\"\>",
+      StripOnInput->False,
+      FontFamily->"Helvetica",
+      FontSize->Scaled[0.0546448087431694],
+      FontWeight->Plain,
+      FontSlant->Plain,
+      FontTracking->"Plain",
+      FontColor->RGBColor[
+       0.6184987019729621, 0.39212575718243875`, 
+        0.7412532450675947]], {78.5, -19.5}], InsetBox[
+     StyleBox["\<\"\:7528\:6237\"\>",
+      StripOnInput->False,
+      FontFamily->"Helvetica",
+      FontSize->Scaled[0.0546448087431694],
+      FontWeight->Plain,
+      FontSlant->Plain,
+      FontTracking->"Plain",
+      FontColor->RGBColor[
+       0.8613800418100862, 0.48092002787339083`, 
+        0.02824203762907758]], {-76.5, -28.5}], InsetBox[
+     StyleBox["\<\"\:6982\:7387\"\>",
+      StripOnInput->False,
+      FontFamily->"Helvetica",
+      FontSize->Scaled[0.0546448087431694],
+      FontWeight->Plain,
+      FontSlant->Plain,
+      FontTracking->"Plain",
+      FontColor->RGBColor[
+       0.16397784358994957`, 0.7038177251280403, 
+        0.6117734123079395]], {6.5, 82.5}], InsetBox[
+     StyleBox["\<\"\:6709\:7740\"\>",
+      StripOnInput->False,
+      FontFamily->"Helvetica",
+      FontSize->Scaled[0.0546448087431694],
+      FontWeight->Plain,
+      FontSlant->Plain,
+      FontTracking->"Plain",
+      FontColor->RGBColor[
+       0.7748409210981391, 0.358, 0.4444755060028629]], {-51.5, 66.5}], 
+    InsetBox[
+     StyleBox["\<\"\:6700\:65b0\"\>",
+      StripOnInput->False,
+      FontFamily->"Helvetica",
+      FontSize->Scaled[0.0546448087431694],
+      FontWeight->Plain,
+      FontSlant->Plain,
+      FontTracking->"Plain",
+      FontColor->RGBColor[
+       0.9874666782805795, 0.6948333914028977, 
+        0.033839968642435214`]], {78.5, -33.5}], InsetBox[
+     StyleBox["\<\"\:65b9\:6cd5\"\>",
+      StripOnInput->False,
+      FontFamily->"Helvetica",
+      FontSize->Scaled[0.0546448087431694],
+      FontWeight->Plain,
+      FontSlant->Plain,
+      FontTracking->"Plain",
+      FontColor->RGBColor[
+       0.47401116530937026`, 0.47809330081437784`, 0.85]], {-52.5, -67.5}], 
+    InsetBox[
+     StyleBox["\<\"\:65b9\:5f0f\"\>",
+      StripOnInput->False,
+      FontFamily->"Helvetica",
+      FontSize->Scaled[0.0546448087431694],
+      FontWeight->Plain,
+      FontSlant->Plain,
+      FontTracking->"Plain",
+      FontColor->RGBColor[
+       0.8857244243136628, 0.3764133635295058, 
+        0.1393110607841571]], {47.5, 71.5}], InsetBox[
+     StyleBox["\<\"\:63d0\:4f9b\"\>",
+      StripOnInput->False,
+      FontFamily->"Helvetica",
+      FontSize->Scaled[0.0546448087431694],
+      FontWeight->Plain,
+      FontSlant->Plain,
+      FontTracking->"Plain",
+      FontColor->RGBColor[
+       0.5407932311309059, 0.715, 0.09762679674248334]], {-16.5, 85.5}], 
+    InsetBox[
+     StyleBox["\<\"\:5e94\:7528\"\>",
+      StripOnInput->False,
+      FontFamily->"Helvetica",
+      FontSize->Scaled[0.0546448087431694],
+      FontWeight->Plain,
+      FontSlant->Plain,
+      FontTracking->"Plain",
+      FontColor->RGBColor[
+       0.9324333565611593, 0.5282889043741062, 
+        0.0921900209050434]], {-76.5, -42.5}], InsetBox[
+     StyleBox["\<\"\:5355\:8bcd\"\>",
+      StripOnInput->False,
+      FontFamily->"Helvetica",
+      FontSize->Scaled[0.0546448087431694],
+      FontWeight->Plain,
+      FontSlant->Plain,
+      FontTracking->"Plain",
+      FontColor->RGBColor[
+       0.28240003484173815`, 0.6090799721266095, 
+        0.7538800418100857]], {74.5, -47.5}], InsetBox[
+     StyleBox["\<\"\:4f7f\:7528\"\>",
+      StripOnInput->False,
+      FontFamily->"Helvetica",
+      FontSize->Scaled[0.0546448087431694],
+      FontWeight->Plain,
+      FontSlant->Plain,
+      FontTracking->"Plain",
+      FontColor->RGBColor[
+       0.8439466852489265, 0.3467106629502147, 
+        0.3309221912517893]], {47.5, -74.5}], InsetBox[
+     StyleBox["\<\"\:4e91\:56fe\"\>",
+      StripOnInput->False,
+      FontFamily->"Helvetica",
+      FontSize->Scaled[0.0546448087431694],
+      FontWeight->Plain,
+      FontSlant->Plain,
+      FontTracking->"Plain",
+      FontColor->RGBColor[
+       0.5833680111493557, 0.4126186601628758, 
+        0.8290799721266107]], {-0.5, -86.5}], InsetBox[
+     StyleBox["\<\"\:8bcd\"\>",
+      StripOnInput->False,
+      FontFamily->"Helvetica",
+      FontSize->Scaled[0.0546448087431694],
+      FontWeight->Plain,
+      FontSlant->Plain,
+      FontTracking->"Plain",
+      FontColor->RGBColor[
+       0.838355547812947, 0.44746667828057946`, 
+        0.0208888695323676]], {24.5, 82.5}], InsetBox[
+     StyleBox["\<\"\:540e\"\>",
+      StripOnInput->False,
+      FontFamily->"Helvetica",
+      FontSize->Scaled[0.0546448087431694],
+      FontWeight->Plain,
+      FontSlant->Plain,
+      FontTracking->"Plain",
+      FontColor->RGBColor[
+       0.9728288904374106, 0.621644452187053, 
+        0.07336199581899142]], {87.5, -5.5}], InsetBox[
+     StyleBox["\<\"\:7ed9\"\>",
+      StripOnInput->False,
+      FontFamily->"Helvetica",
+      FontSize->Scaled[0.0546448087431694],
+      FontWeight->Plain,
+      FontSlant->Plain,
+      FontTracking->"Plain",
+      FontColor->RGBColor[
+       0.28026441037696703`, 0.715, 0.4292089322474965]], {-69.5, 53.5}], 
+    InsetBox[
+     StyleBox["\<\"\:5f0f\"\>",
+      StripOnInput->False,
+      FontFamily->"Helvetica",
+      FontSize->Scaled[0.0546448087431694],
+      FontWeight->Plain,
+      FontSlant->Plain,
+      FontTracking->"Plain",
+      FontColor->RGBColor[
+       0.736782672705901, 0.358, 0.5030266573755369]], {65.5, 59.5}], InsetBox[
+     StyleBox["\<\" \"\>",
+      StripOnInput->False,
+      FontFamily->"Helvetica",
+      FontSize->Scaled[0.1366120218579235],
+      FontWeight->Plain,
+      FontSlant->Plain,
+      FontTracking->"Plain",
+      FontColor->RGBColor[0.363898, 0.618501, 0.782349]], {1.5, 0.5}], 
+    InsetBox[
+     StyleBox["\<\"\"\>",
+      StripOnInput->False,
+      FontFamily->"Helvetica",
+      FontSize->Scaled[0.1366120218579235],
+      FontWeight->Plain,
+      FontSlant->Plain,
+      FontTracking->"Plain",
+      FontColor->RGBColor[0.772079, 0.431554, 0.102387]], {1.5, 0.5}]}},
+  Method->{
+   "DefaultBoundaryStyle" -> Automatic, "DefaultPlotStyle" -> Automatic},
+  PlotRange->{{-89., 94.}, {-92., 93.}}]], "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"WordCloud", "[", 
+  RowBox[{"StringTake", "[", 
+   RowBox[{"myChineseStr", ",", "100"}], "]"}], "]"}]], "Input"],
+
+Cell[BoxData[
+ GraphicsBox[{{}, {InsetBox[
+     StyleBox["\<\"\:4eba\:5de5\:667a\:80fd\:65b9\:5f0f\:8f85\:52a9\:7528\
+\:6237\:8fdb\:884c\:5916\:8bed\:5355\:8bcd\:7684\:5b66\:4e60\"\>",
+      StripOnInput->False,
+      FontFamily->"Helvetica",
+      FontSize->Scaled[
+        Rational[10, 189]],
+      FontWeight->Plain,
+      FontSlant->Plain,
+      FontTracking->"Plain",
+      FontColor->RGBColor[0.363898, 0.618501, 0.782349]], {0, 0}], InsetBox[
+     StyleBox["\<\"\:63d0\:4f9b\:7ed9\:5916\:8bed\:5b66\:4e60\:8005\:76f8\
+\:5e94\:7684\:8bcd\:6c47\:8868\:4e0e\:8bcd\:4e91\:56fe\"\>",
+      StripOnInput->False,
+      FontFamily->"Helvetica",
+      FontSize->Scaled[
+        Rational[10, 189]],
+      FontWeight->Plain,
+      FontSlant->Plain,
+      FontTracking->"Plain",
+      FontColor->RGBColor[0.772079, 0.431554, 0.102387]], {-7., -68.5}], 
+    InsetBox[
+     StyleBox["\<\"\:8bcd\:4e91\:5728\:5916\:8bed\:5b66\:4e60\:4e2d\:6709\
+\:7740\:5f00\:62d3\:5f0f\:7684\:5e94\:7528\"\>",
+      StripOnInput->False,
+      FontFamily->"Helvetica",
+      FontSize->Scaled[
+        Rational[10, 189]],
+      FontWeight->Plain,
+      FontSlant->Plain,
+      FontTracking->"Plain",
+      FontColor->RGBColor[0.528488, 0.470624, 0.701351]], {0., 69.5}], 
+    InsetBox[
+     StyleBox["\<\"\:5728\:4f18\:79c0\:7684\:6700\:65b0\:7535\:5b50\:5b66\
+\:4e60\:7f51\:7ad9\:4e2d\"\>",
+      StripOnInput->False,
+      FontFamily->"Helvetica",
+      FontSize->Scaled[
+        Rational[10, 189]],
+      FontWeight->Plain,
+      FontSlant->Plain,
+      FontTracking->"Plain",
+      FontColor->RGBColor[0.922526, 0.385626, 0.209179]], {0., 136.5}], 
+    InsetBox[
+     StyleBox["\<\"\:8fdb\:884c\:6982\:7387\:7edf\:8ba1\:4e0e\:4e0e\:5206\
+\:6790\:540e\"\>",
+      StripOnInput->False,
+      FontFamily->"Helvetica",
+      FontSize->Scaled[
+        Rational[10, 189]],
+      FontWeight->Plain,
+      FontSlant->Plain,
+      FontTracking->"Plain",
+      FontColor->RGBColor[0.560181, 0.691569, 0.194885]], {-11., -136.5}], 
+    InsetBox[
+     StyleBox["\<\"\:91c7\:7528\:81ea\:52a8\:5206\:6790\:7684\:65b9\:6cd5\"\>",
+      StripOnInput->False,
+      FontFamily->"Helvetica",
+      FontSize->Scaled[
+        Rational[10, 189]],
+      FontWeight->Plain,
+      FontSlant->Plain,
+      FontTracking->"Plain",
+      FontColor->RGBColor[0.880722, 0.611041, 0.142051]], {1., -204.5}], 
+    InsetBox[
+     StyleBox["\<\"\:7ecf\:6709\:4f7f\:7528\"\>",
+      StripOnInput->False,
+      FontFamily->"Helvetica",
+      FontSize->Scaled[
+        Rational[10, 189]],
+      FontWeight->Plain,
+      FontSlant->Plain,
+      FontTracking->"Plain",
+      FontColor->RGBColor[0.368417, 0.506779, 0.709798]], {-2., 203.5}]}},
+  Method->{
+   "DefaultBoundaryStyle" -> Automatic, "DefaultPlotStyle" -> Automatic},
+  PlotRange->{{-665.5, 657.5}, {-235., 244.}}]], "Output"]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{1440, 851},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+ShowSelection->True,
+FrontEndVersion->"10.3 for Mac OS X x86 (32-bit, 64-bit Kernel) (October 9, \
+2015)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[579, 22, 35, 0, 92, "Title"],
+Cell[CellGroupData[{
+Cell[639, 26, 82, 1, 28, "Input"],
+Cell[724, 29, 2246, 52, 73, "Output"]
+}, Open  ]],
+Cell[2985, 84, 2909, 40, 158, "Input"],
+Cell[5897, 126, 615, 15, 63, "Input"],
+Cell[CellGroupData[{
+Cell[6537, 145, 120, 2, 35, "Input"],
+Cell[6660, 149, 144, 3, 35, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[6841, 157, 186, 4, 28, "Input"],
+Cell[7030, 163, 13686, 396, 379, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[20753, 564, 136, 3, 28, "Input"],
+Cell[20892, 569, 2826, 77, 145, "Output"]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)

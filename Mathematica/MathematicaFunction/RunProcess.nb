@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[      1440,         64]
-NotebookOptionsPosition[      1018,         43]
-NotebookOutlinePosition[      1373,         59]
-CellTagsIndexPosition[      1330,         56]
+NotebookDataLength[      2688,        104]
+NotebookOptionsPosition[      2051,         75]
+NotebookOutlinePosition[      2405,         91]
+CellTagsIndexPosition[      2362,         88]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -38,13 +38,45 @@ Cell[BoxData[
     "}"}], ",", "\"\<ExitCode\>\""}], "]"}]], "Input"],
 
 Cell[BoxData["0"], "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"RunProcess", "[", "\"\<ls\>\"", "]"}]], "Input"],
+
+Cell[BoxData[
+ RowBox[{"\[LeftAssociation]", 
+  RowBox[{
+   RowBox[{"\<\"ExitCode\"\>", "\[Rule]", "0"}], ",", 
+   RowBox[{"\<\"StandardOutput\"\>", 
+    "\[Rule]", "\<\"$outFile\\nApplications\\nBitTorrent Sync\\nCalibre \
+Library\\nDataSpace-meng2maclap\\nDesktop\\nDocuments\\nDownloads\\nDropbox\\\
+nLibrary\\nMovies\\nMusic\\nOneDrive\\nPictures\\nPublic\\nWorkSpace-\
+meng2maclap\\nbin\\nrsyncexclude.txt\\ntemp\\n\[CCedilla]\.99\.be\[ARing]\.ba\
+\.a6\[ADoubleDot]\.ba\.91\[ARing]\.90\.8c\[AE]\[DiscretionaryHyphen]\[Yen]\
+\[CCedilla]\.9b\.98\\n\"\>"}], ",", 
+   RowBox[{"\<\"StandardError\"\>", "\[Rule]", "\<\"\"\>"}]}], 
+  "\[RightAssociation]"}]], "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"Import", "[", 
+    RowBox[{"\"\<! ls | wc -l\>\"", ",", "\"\<Text\>\""}], "]"}], "//", 
+   "StringTrim"}], "//", "FromDigits"}]], "Input"],
+
+Cell[BoxData["20"], "Output"]
 }, Open  ]]
 }, Open  ]]
 },
 WindowSize->{808, 752},
 WindowMargins->{{4, Automatic}, {Automatic, 4}},
-FrontEndVersion->"10.0 for Mac OS X x86 (32-bit, 64-bit Kernel) (December 4, \
-2014)",
+FrontEndVersion->"10.3 for Mac OS X x86 (32-bit, 64-bit Kernel) (October 9, \
+2015)",
 StyleDefinitions->"Default.nb"
 ]
 (* End of Notebook Content *)
@@ -64,6 +96,14 @@ Cell[610, 24, 110, 3, 30, "Text"],
 Cell[CellGroupData[{
 Cell[745, 31, 214, 6, 28, "Input"],
 Cell[962, 39, 28, 0, 28, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[1027, 44, 72, 1, 28, "Input"],
+Cell[1102, 47, 667, 12, 377, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[1806, 64, 185, 5, 28, "Input"],
+Cell[1994, 71, 29, 0, 28, "Output"]
 }, Open  ]]
 }, Open  ]]
 }

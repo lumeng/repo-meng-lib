@@ -1,0 +1,20 @@
+Configuring aeson-better-errors-0.9.0...
+Building aeson-better-errors-0.9.0...
+Preprocessing library aeson-better-errors-0.9.0...
+[1 of 3] Compiling Data.Aeson.BetterErrors.Utils ( src/Data/Aeson/BetterErrors/Utils.hs, .stack-work/dist/x86_64-osx/Cabal-1.22.5.0/build/Data/Aeson/BetterErrors/Utils.o )
+[2 of 3] Compiling Data.Aeson.BetterErrors.Internal ( src/Data/Aeson/BetterErrors/Internal.hs, .stack-work/dist/x86_64-osx/Cabal-1.22.5.0/build/Data/Aeson/BetterErrors/Internal.o )
+
+src/Data/Aeson/BetterErrors/Internal.hs:8:1: Warning:
+    The import of ‘Control.Applicative’ is redundant
+      except perhaps to import instances from ‘Control.Applicative’
+    To import instances alone, use: import Control.Applicative()
+
+src/Data/Aeson/BetterErrors/Internal.hs:16:1: Warning:
+    The import of ‘Data.Foldable’ is redundant
+      except perhaps to import instances from ‘Data.Foldable’
+    To import instances alone, use: import Data.Foldable()
+[3 of 3] Compiling Data.Aeson.BetterErrors ( src/Data/Aeson/BetterErrors.hs, .stack-work/dist/x86_64-osx/Cabal-1.22.5.0/build/Data/Aeson/BetterErrors.o )
+In-place registering aeson-better-errors-0.9.0...
+Installing library in
+/Users/meng/.stack/snapshots/x86_64-osx/lts-5.5/7.10.3/lib/x86_64-osx-ghc-7.10.3/aeson-better-errors-0.9.0-Cg3VXluk4MKIahE6RmVzXJ
+Registering aeson-better-errors-0.9.0...

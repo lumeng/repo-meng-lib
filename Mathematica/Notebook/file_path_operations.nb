@@ -1,0 +1,360 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 10.4' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      8222,        352]
+NotebookOptionsPosition[      5613,        250]
+NotebookOutlinePosition[      5969,        266]
+CellTagsIndexPosition[      5926,        263]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData["$PathnameSeparator"], "Input"],
+
+Cell[BoxData["\<\"/\"\>"], "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["\<\
+Constructing a file path using DirectoryName, FileBaseName, FileExtension\
+\>", "Subsection"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"path", "=", 
+  RowBox[{"FindFile", "[", "\"\<JLink`\>\"", "]"}]}]], "Input"],
+
+Cell[BoxData["\<\"/Applications/Mathematica.app/Contents/SystemFiles/Links/\
+JLink/JLink.m\"\>"], "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"path", "===", 
+  RowBox[{
+   RowBox[{"DirectoryName", "[", "path", "]"}], "<>", 
+   RowBox[{"FileBaseName", "[", "path", "]"}], "<>", "\"\<.\>\"", "<>", 
+   RowBox[{"FileExtension", "[", "path", "]"}]}]}]], "Input"],
+
+Cell[BoxData["True"], "Output"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["FileBaseName", "Subsection"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{"FileBaseName", "[", "\"\</etc\>\"", "]"}], "\[IndentingNewLine]", 
+ RowBox[{"FileBaseName", "[", "\"\</etc/\>\"", "]"}]}], "Input"],
+
+Cell[BoxData["\<\"etc\"\>"], "Output"],
+
+Cell[BoxData["\<\"etc\"\>"], "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"DirectoryName", "[", "\"\</etc\>\"", "]"}]], "Input"],
+
+Cell[BoxData["\<\"/\"\>"], "Output"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["$PathnameSeparator", "Subsection"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData["$PathnameSeparator"], "Input"],
+
+Cell[BoxData["\<\"/\"\>"], "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"DirectoryName", "[", "$PathnameSeparator", "]"}], "//", 
+  "InputForm"}]], "Input"],
+
+Cell["\"\"", "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"FileBaseName", "[", "$PathnameSeparator", "]"}], "//", 
+   "InputForm"}], "\n"}]], "Input"],
+
+Cell["\".\"", "Output"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["DirectoryName", "Subsection"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"DirectoryName", "[", "path", "]"}]], "Input"],
+
+Cell[BoxData["\<\"/Applications/Mathematica.app/Contents/SystemFiles/Links/\
+JLink/\"\>"], "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"FileNameDrop", "[", 
+  RowBox[{"path", ",", 
+   RowBox[{"-", "1"}]}], "]"}]], "Input"],
+
+Cell[BoxData["\<\"/Applications/Mathematica.app/Contents/SystemFiles/Links/\
+JLink\"\>"], "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"FileNameDrop", "[", 
+   RowBox[{"path", ",", 
+    RowBox[{"-", "1"}]}], "]"}], "===", 
+  RowBox[{"DirectoryName", "[", "path", "]"}]}]], "Input"],
+
+Cell[BoxData["False"], "Output"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["FileNameJoin", "Subsection"],
+
+Cell["\<\
+The null file name components are ignored except at the first position:\
+\>", "Text"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"FileNameJoin", "[", 
+  RowBox[{"{", 
+   RowBox[{"\"\<\>\"", ",", "\"\<a\>\""}], "}"}], "]"}]], "Input"],
+
+Cell[BoxData["\<\"/a\"\>"], "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"FileNameJoin", "[", 
+  RowBox[{"{", 
+   RowBox[{
+   "\"\<\>\"", ",", "\"\<\>\"", ",", "\"\<a\>\"", ",", "\"\<\>\"", ",", 
+    "\"\<\>\"", ",", "\"\<b\>\"", ",", "\"\<\>\"", ",", "\"\<\>\""}], "}"}], 
+  "]"}]], "Input"],
+
+Cell[BoxData["\<\"/a/b\"\>"], "Output"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["$RootDirectory", "Subsection"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData["$RootDirectory"], "Input"],
+
+Cell[BoxData["\<\"/\"\>"], "Output"]
+}, Open  ]],
+
+Cell["On Windows, $RootDirectory is \[OpenCurlyDoubleQuote]\
+\[CloseCurlyDoubleQuote]:", "Text"],
+
+Cell[BoxData[{
+ RowBox[{"ToFileName", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"$RootDirectory", ",", "\"\<C:\>\"", ",", "\"\<foo\>\""}], "}"}], 
+   ",", "\"\<bar.m\>\""}], "]"}], "\[IndentingNewLine]", 
+ RowBox[{"ToFileName", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{
+    "$RootDirectory", ",", "\"\<\\\\\\\\images\\\\images\>\"", ",", 
+     "\"\<foo\>\""}], "}"}], ",", "\"\<bar.m\>\""}], 
+  "]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"(*", " ", 
+   RowBox[{"\[Equal]", ">", "\[IndentingNewLine]", 
+    RowBox[{
+    "\"\</C:/foo/bar.m\>\"", "\[IndentingNewLine]", 
+     "\"\<\\\\images\\images\\foo\\bar.m\>\""}]}], "\[IndentingNewLine]", 
+   "*)"}]}]}], "Input"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Topics", "Section"],
+
+Cell[CellGroupData[{
+
+Cell["FileNameJoin parts of a path obtained by FileNameTake", "Subsection"],
+
+Cell["\<\
+Note as of Mathematica 10.4.0.0 it does not return the original path:\
+\>", "Text"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"FileNameJoin", "[", 
+  RowBox[{"{", 
+   RowBox[{
+    RowBox[{"FileNameTake", "[", 
+     RowBox[{"\"\<a\>\"", ",", 
+      RowBox[{"{", 
+       RowBox[{"1", ",", 
+        RowBox[{"-", "2"}]}], "}"}]}], "]"}], ",", 
+    RowBox[{"FileNameTake", "[", 
+     RowBox[{"\"\<a\>\"", ",", 
+      RowBox[{"-", "1"}]}], "]"}]}], "}"}], "]"}]], "Input"],
+
+Cell[BoxData["\<\"/a\"\>"], "Output"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{808, 751},
+WindowMargins->{{4, Automatic}, {Automatic, 4}},
+FrontEndVersion->"10.4 for Mac OS X x86 (32-bit, 64-bit Kernel) (February 25, \
+2016)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 44, 0, 28, "Input"],
+Cell[627, 24, 36, 0, 28, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[700, 29, 103, 2, 44, "Subsection"],
+Cell[CellGroupData[{
+Cell[828, 35, 100, 2, 28, "Input"],
+Cell[931, 39, 107, 1, 28, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[1075, 45, 239, 5, 28, "Input"],
+Cell[1317, 52, 31, 0, 28, "Output"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[1397, 58, 34, 0, 44, "Subsection"],
+Cell[CellGroupData[{
+Cell[1456, 62, 156, 2, 46, "Input"],
+Cell[1615, 66, 38, 0, 28, "Output"],
+Cell[1656, 68, 38, 0, 28, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[1731, 73, 77, 1, 28, "Input"],
+Cell[1811, 76, 36, 0, 28, "Output"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[1896, 82, 40, 0, 44, "Subsection"],
+Cell[CellGroupData[{
+Cell[1961, 86, 44, 0, 28, "Input"],
+Cell[2008, 88, 36, 0, 28, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[2081, 93, 118, 3, 28, "Input"],
+Cell[2202, 98, 22, 0, 40, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[2261, 103, 138, 4, 46, "Input"],
+Cell[2402, 109, 23, 0, 40, "Output"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[2474, 115, 35, 0, 44, "Subsection"],
+Cell[CellGroupData[{
+Cell[2534, 119, 69, 1, 28, "Input"],
+Cell[2606, 122, 100, 1, 28, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[2743, 128, 110, 3, 28, "Input"],
+Cell[2856, 133, 99, 1, 28, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[2992, 139, 180, 5, 28, "Input"],
+Cell[3175, 146, 32, 0, 62, "Output"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[3256, 152, 34, 0, 44, "Subsection"],
+Cell[3293, 154, 95, 2, 30, "Text"],
+Cell[CellGroupData[{
+Cell[3413, 160, 127, 3, 28, "Input"],
+Cell[3543, 165, 37, 0, 28, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[3617, 170, 242, 6, 28, "Input"],
+Cell[3862, 178, 39, 0, 28, "Output"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[3950, 184, 36, 0, 44, "Subsection"],
+Cell[CellGroupData[{
+Cell[4011, 188, 40, 0, 28, "Input"],
+Cell[4054, 190, 36, 0, 28, "Output"]
+}, Open  ]],
+Cell[4105, 193, 96, 1, 30, "Text"],
+Cell[4204, 196, 683, 19, 114, "Input"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[4924, 220, 25, 0, 64, "Section"],
+Cell[CellGroupData[{
+Cell[4974, 224, 75, 0, 44, "Subsection"],
+Cell[5052, 226, 93, 2, 30, "Text"],
+Cell[CellGroupData[{
+Cell[5170, 232, 363, 11, 28, "Input"],
+Cell[5536, 245, 37, 0, 28, "Output"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+

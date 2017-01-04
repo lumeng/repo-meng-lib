@@ -1,0 +1,195 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      6640,        187]
+NotebookOptionsPosition[      6247,        167]
+NotebookOutlinePosition[      6604,        183]
+CellTagsIndexPosition[      6561,        180]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["EntityClass", "Title"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"EntityClass", "[", 
+   RowBox[{"\"\<City\>\"", ",", 
+    RowBox[{"\"\<Population\>\"", "\[Rule]", 
+     RowBox[{"GreaterThan", "[", 
+      RowBox[{"10", "^", "7"}], "]"}]}]}], "]"}], "//", 
+  "EntityList"}]], "Input"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   TemplateBox[{"\"Shanghai\"",RowBox[{"Entity", "[", 
+       RowBox[{"\"City\"", ",", 
+         RowBox[{"{", 
+           RowBox[{"\"Shanghai\"", ",", "\"Shanghai\"", ",", "\"China\""}], 
+           "}"}]}], "]"}],
+     "\"Entity[\\\"City\\\", {\\\"Shanghai\\\", \\\"Shanghai\\\", \\\"China\\\
+\"}]\"","\"city\""},
+    "Entity"], ",", 
+   TemplateBox[{"\"Istanbul\"",RowBox[{"Entity", "[", 
+       RowBox[{"\"City\"", ",", 
+         RowBox[{"{", 
+           RowBox[{"\"Istanbul\"", ",", "\"Istanbul\"", ",", "\"Turkey\""}], 
+           "}"}]}], "]"}],
+     "\"Entity[\\\"City\\\", {\\\"Istanbul\\\", \\\"Istanbul\\\", \
+\\\"Turkey\\\"}]\"","\"city\""},
+    "Entity"], ",", 
+   TemplateBox[{"\"Tokyo\"",RowBox[{"Entity", "[", 
+       RowBox[{"\"City\"", ",", 
+         RowBox[{"{", 
+           RowBox[{"\"Tokyo\"", ",", "\"Tokyo\"", ",", "\"Japan\""}], "}"}]}],
+        "]"}],"\"Entity[\\\"City\\\", {\\\"Tokyo\\\", \\\"Tokyo\\\", \
+\\\"Japan\\\"}]\"","\"city\""},
+    "Entity"], ",", 
+   TemplateBox[{"\"Mumbai\"",RowBox[{"Entity", "[", 
+       RowBox[{"\"City\"", ",", 
+         RowBox[{"{", 
+           RowBox[{"\"Bombay\"", ",", "\"Maharashtra\"", ",", "\"India\""}], 
+           "}"}]}], "]"}],
+     "\"Entity[\\\"City\\\", {\\\"Bombay\\\", \\\"Maharashtra\\\", \
+\\\"India\\\"}]\"","\"city\""},
+    "Entity"], ",", 
+   TemplateBox[{"\"Beijing\"",RowBox[{"Entity", "[", 
+       RowBox[{"\"City\"", ",", 
+         RowBox[{"{", 
+           RowBox[{"\"Beijing\"", ",", "\"Beijing\"", ",", "\"China\""}], 
+           "}"}]}], "]"}],
+     "\"Entity[\\\"City\\\", {\\\"Beijing\\\", \\\"Beijing\\\", \
+\\\"China\\\"}]\"","\"city\""},
+    "Entity"], ",", 
+   TemplateBox[{"\"Zhoukou\"",RowBox[{"Entity", "[", 
+       RowBox[{"\"City\"", ",", 
+         RowBox[{"{", 
+           RowBox[{"\"Zhoukou\"", ",", "\"Henan\"", ",", "\"China\""}], 
+           "}"}]}], "]"}],
+     "\"Entity[\\\"City\\\", {\\\"Zhoukou\\\", \\\"Henan\\\", \\\"China\\\"}]\
+\"","\"city\""},
+    "Entity"], ",", 
+   TemplateBox[{"\"Dhaka\"",RowBox[{"Entity", "[", 
+       RowBox[{"\"City\"", ",", 
+         RowBox[{"{", 
+           RowBox[{"\"Dhaka\"", ",", "\"Dhaka\"", ",", "\"Bangladesh\""}], 
+           "}"}]}], "]"}],
+     "\"Entity[\\\"City\\\", {\\\"Dhaka\\\", \\\"Dhaka\\\", \
+\\\"Bangladesh\\\"}]\"","\"city\""},
+    "Entity"], ",", 
+   TemplateBox[{"\"Nanyang\"",RowBox[{"Entity", "[", 
+       RowBox[{"\"City\"", ",", 
+         RowBox[{"{", 
+           RowBox[{"\"Nanyang\"", ",", "\"Henan\"", ",", "\"China\""}], 
+           "}"}]}], "]"}],
+     "\"Entity[\\\"City\\\", {\\\"Nanyang\\\", \\\"Henan\\\", \\\"China\\\"}]\
+\"","\"city\""},
+    "Entity"], ",", 
+   TemplateBox[{"\"Karachi\"",RowBox[{"Entity", "[", 
+       RowBox[{"\"City\"", ",", 
+         RowBox[{"{", 
+           RowBox[{"\"Karachi\"", ",", "\"Sind\"", ",", "\"Pakistan\""}], 
+           "}"}]}], "]"}],
+     "\"Entity[\\\"City\\\", {\\\"Karachi\\\", \\\"Sind\\\", \
+\\\"Pakistan\\\"}]\"","\"city\""},
+    "Entity"], ",", 
+   TemplateBox[{"\"Baoding\"",RowBox[{"Entity", "[", 
+       RowBox[{"\"City\"", ",", 
+         RowBox[{"{", 
+           RowBox[{"\"Baoding\"", ",", "\"Hebei\"", ",", "\"China\""}], 
+           "}"}]}], "]"}],
+     "\"Entity[\\\"City\\\", {\\\"Baoding\\\", \\\"Hebei\\\", \\\"China\\\"}]\
+\"","\"city\""},
+    "Entity"], ",", 
+   TemplateBox[{"\"Chengdu\"",RowBox[{"Entity", "[", 
+       RowBox[{"\"City\"", ",", 
+         RowBox[{"{", 
+           RowBox[{"\"Chengdu\"", ",", "\"Sichuan\"", ",", "\"China\""}], 
+           "}"}]}], "]"}],
+     "\"Entity[\\\"City\\\", {\\\"Chengdu\\\", \\\"Sichuan\\\", \
+\\\"China\\\"}]\"","\"city\""},
+    "Entity"], ",", 
+   TemplateBox[{"\"Delhi\"",RowBox[{"Entity", "[", 
+       RowBox[{"\"City\"", ",", 
+         RowBox[{"{", 
+           RowBox[{"\"Delhi\"", ",", "\"Delhi\"", ",", "\"India\""}], "}"}]}],
+        "]"}],"\"Entity[\\\"City\\\", {\\\"Delhi\\\", \\\"Delhi\\\", \
+\\\"India\\\"}]\"","\"city\""},
+    "Entity"], ",", 
+   TemplateBox[{"\"S\[ATilde]o Paulo\"",RowBox[{"Entity", "[", 
+       RowBox[{"\"City\"", ",", 
+         RowBox[{"{", 
+           RowBox[{"\"SaoPaulo\"", ",", "\"SaoPaulo\"", ",", "\"Brazil\""}], 
+           "}"}]}], "]"}],
+     "\"Entity[\\\"City\\\", {\\\"SaoPaulo\\\", \\\"SaoPaulo\\\", \
+\\\"Brazil\\\"}]\"","\"city\""},
+    "Entity"], ",", 
+   TemplateBox[{"\"Moscow\"",RowBox[{"Entity", "[", 
+       RowBox[{"\"City\"", ",", 
+         RowBox[{"{", 
+           RowBox[{"\"Moscow\"", ",", "\"Moscow\"", ",", "\"Russia\""}], 
+           "}"}]}], "]"}],
+     "\"Entity[\\\"City\\\", {\\\"Moscow\\\", \\\"Moscow\\\", \
+\\\"Russia\\\"}]\"","\"city\""},
+    "Entity"], ",", 
+   TemplateBox[{"\"Linyi\"",RowBox[{"Entity", "[", 
+       RowBox[{"\"City\"", ",", 
+         RowBox[{"{", 
+           RowBox[{"\"Linyi\"", ",", "\"Shandong\"", ",", "\"China\""}], 
+           "}"}]}], "]"}],
+     "\"Entity[\\\"City\\\", {\\\"Linyi\\\", \\\"Shandong\\\", \
+\\\"China\\\"}]\"","\"city\""},
+    "Entity"], ",", 
+   TemplateBox[{"\"Jakarta\"",RowBox[{"Entity", "[", 
+       RowBox[{"\"City\"", ",", 
+         RowBox[{"{", 
+           RowBox[{"\"Jakarta\"", ",", "\"Jakarta\"", ",", "\"Indonesia\""}], 
+           "}"}]}], "]"}],
+     "\"Entity[\\\"City\\\", {\\\"Jakarta\\\", \\\"Jakarta\\\", \\\"Indonesia\
+\\\"}]\"","\"city\""},
+    "Entity"]}], "}"}]], "Output"]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{808, 751},
+WindowMargins->{{4, Automatic}, {Automatic, 4}},
+FrontEndVersion->"11.0 for Mac OS X x86 (32-bit, 64-bit Kernel) (September \
+21, 2016)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 28, 0, 92, "Title"],
+Cell[CellGroupData[{
+Cell[633, 26, 252, 7, 32, "Input"],
+Cell[888, 35, 5331, 128, 73, "Output"]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+

@@ -1,0 +1,140 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 10.4' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      4135,        132]
+NotebookOptionsPosition[      3558,        106]
+NotebookOutlinePosition[      3916,        122]
+CellTagsIndexPosition[      3873,        119]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["Wolfram Language code to get all US counties", "Title"],
+
+Cell[BoxData["Quit"], "Input"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"Clear", "[", 
+   RowBox[{"$allUSCounties", ",", "count"}], "]"}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"count", "=", "0"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{"While", "[", 
+  RowBox[{
+   RowBox[{"!", 
+    RowBox[{"MatchQ", "[", 
+     RowBox[{"$allUSCounties", ",", "_EntityList"}], "]"}]}], ",", 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"count", "++"}], ";", "\[IndentingNewLine]", 
+    RowBox[{"$allUSCounties", "=", 
+     RowBox[{"EntityList", "[", 
+      RowBox[{"EntityClass", "[", 
+       RowBox[{"\"\<AdministrativeDivision\>\"", ",", 
+        RowBox[{"\"\<ParentRegion\>\"", "\[Rule]", 
+         RowBox[{"EntityClass", "[", 
+          RowBox[{
+          "\"\<AdministrativeDivision\>\"", ",", 
+           "\"\<AllUSStatesPlusDC\>\""}], "]"}]}]}], "]"}], "]"}]}]}]}], 
+  "]"}], "\[IndentingNewLine]", "count"}], "Input"],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"EntityValue", "::", "ctimeout"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"A computation timed out. \\!\\(\\*ButtonBox[\\\"\
+\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/EntityValue\\\", ButtonNote -> \
+\\\"EntityValue::ctimeout\\\"]\\)\"\>"}]], "Message", "MSG"],
+
+Cell[BoxData["1"], "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData["$allUSCounties"], "Input"],
+
+Cell[BoxData[
+ RowBox[{"EntityList", "[", 
+  InterpretationBox[
+   DynamicModuleBox[{EntityFramework`Private`open = False}, 
+    TemplateBox[{
+     TemplateBox[{"\"administrative divisions\""}, 
+       "GeneralizedEntityClassBase"],TagBox[
+       GridBox[{{
+          TemplateBox[{"\"ParentRegion\"", 
+            StyleBox["\":\"", "GeneralizedEntityInfoItem"], 
+            TemplateBox[{"\"all US states with District of Columbia\"", 
+              RowBox[{"EntityClass", "[", 
+                
+                RowBox[{
+                 "\"AdministrativeDivision\"", ",", "\"AllUSStatesPlusDC\""}],
+                 "]"}], 
+              "\"EntityClass[\\\"AdministrativeDivision\\\", \
+\\\"AllUSStatesPlusDC\\\"]\"", "\"administrative divisions\""}, 
+             "EntityClass"]}, "GeneralizedEntityInfoRow"]}}, 
+        GridBoxAlignment -> {"Columns" -> {{Left}}}, DefaultBaseStyle -> 
+        "GeneralizedEntityInfoGrid", 
+        GridBoxItemSize -> {
+         "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], "Column"],
+      Dynamic[EntityFramework`Private`open],
+      "\"EntityClass[\\\"AdministrativeDivision\\\", {\\\"ParentRegion\\\" -> \
+EntityClass[\\\"AdministrativeDivision\\\", \\\"AllUSStatesPlusDC\\\"]}]\""},
+     "GeneralizedEntityToggle"]],
+   EntityClass[
+   "AdministrativeDivision", {
+    "ParentRegion" -> 
+     EntityClass["AdministrativeDivision", "AllUSStatesPlusDC"]}],
+   SelectWithContents->True], "]"}]], "Output"]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{808, 751},
+WindowMargins->{{36, Automatic}, {16, Automatic}},
+FrontEndVersion->"10.4 for Mac OS X x86 (32-bit, 64-bit Kernel) (February 25, \
+2016)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 61, 0, 148, "Title"],
+Cell[644, 24, 30, 0, 28, "Input"],
+Cell[CellGroupData[{
+Cell[699, 28, 896, 24, 148, "Input"],
+Cell[1598, 54, 369, 8, 24, "Message"],
+Cell[1970, 64, 28, 0, 28, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[2035, 69, 40, 0, 28, "Input"],
+Cell[2078, 71, 1452, 31, 41, "Output"]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+
