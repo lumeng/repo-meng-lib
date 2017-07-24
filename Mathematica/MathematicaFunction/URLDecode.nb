@@ -1,0 +1,2459 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 10.3' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[    115725,       2451]
+NotebookOptionsPosition[    111844,       2346]
+NotebookOutlinePosition[    112198,       2362]
+CellTagsIndexPosition[    112155,       2359]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["URLDecode", "Title",ExpressionUUID->"c6cd6e5e-1c68-4331-99ec-62b060f4e449"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"URLDecode", "[", "\"\<Hello%2C+World%21\>\"", "]"}]], "Input",Expres\
+sionUUID->"a45ae5dc-dbf6-4d40-ae14-9b90e4099d59"],
+
+Cell[BoxData["\<\"Hello, World!\"\>"], "Output",ExpressionUUID->"cddf6239-e5eb-4241-a8b8-436fc82c769d"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Topics", "Section",ExpressionUUID->"0958797a-d3ce-4351-abce-2cec5591f59e"],
+
+Cell[CellGroupData[{
+
+Cell["Queries", "Subsection",ExpressionUUID->"01dd9e04-a9d5-43e8-b854-9315f8e9bd74"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"data", "[", "0", "]"}], "=", 
+  RowBox[{"Import", "[", "\"\<~/temp/datatemp.m\>\"", "]"}]}]], "Input",Expres\
+sionUUID->"48a0733e-4c3a-4080-b74d-4f4a95b7fb6a"],
+
+Cell[BoxData[
+ InterpretationBox[
+  TagBox[
+   FrameBox[GridBox[{
+      {
+       ItemBox[
+        TagBox[
+         RowBox[{"{", 
+          
+          RowBox[{"\<\"revolve+region+between+y%3Dx%5E2+and+y%3Dx%2C+0%3Cx%\
+3C1%2C+about+the+y-axis\"\>", ",", "\<\"rotate+solid\"\>", 
+           ",", "\<\"rotate+the+region\"\>", 
+           ",", "\<\"rotate+the+region+between+0+and+sin+x+with+0%3Cx%3Cpi+\
+around+the+x-axis\"\>", ",", "\<\"rotate+the+shape\"\>", ",", 
+           TemplateBox[{"136072"},
+            "OutputSizeLimit`Skeleton",
+            DisplayFunction->(FrameBox[
+              RowBox[{"\" \[CenterEllipsis]\"", #, "\"\[CenterEllipsis] \""}],
+               Background -> GrayLevel[0.75], 
+              BaseStyle -> {
+               "Deploy", FontColor -> GrayLevel[1], FontSize -> Smaller, 
+                ShowStringCharacters -> False}, BaselinePosition -> Baseline, 
+              ContentPadding -> False, FrameMargins -> 1, FrameStyle -> 
+              GrayLevel[0.75], RoundingRadius -> 7]& )], ",", "\<\"del+x\"\>",
+            ",", "\<\"del%28x%5E2%2By%5E2%29\"\>", 
+           ",", "\<\"del+z+e%5E%28x%5E2%2By%5E2%29\"\>", 
+           ",", "\<\"nabla+1%2Fr\"\>", ",", "\<\"nabla+1%2Fr%5E2\"\>"}], "}"}],
+         Short[#, 5]& ],
+        BaseStyle->{Deployed -> False},
+        StripOnInput->False]},
+      {GridBox[{
+         {
+          TagBox[
+           TooltipBox[
+            StyleBox[
+             StyleBox[
+              DynamicBox[ToBoxes[
+                FEPrivate`FrontEndResource[
+                "FEStrings", "sizeBriefExplanation"], StandardForm],
+               ImageSizeCache->{58., {2., 8.}}],
+              StripOnInput->False,
+              DynamicUpdating->True], "SuggestionsBarCategory",
+             StripOnInput->False],
+            StyleBox[
+             DynamicBox[
+              ToBoxes[
+               FEPrivate`FrontEndResource["FEStrings", "sizeExplanation"], 
+               StandardForm]], DynamicUpdating -> True, StripOnInput -> 
+             False]],
+           Annotation[#, 
+            Style[
+             Dynamic[
+              FEPrivate`FrontEndResource["FEStrings", "sizeExplanation"]], 
+             DynamicUpdating -> True], "Tooltip"]& ], 
+          ButtonBox[
+           PaneSelectorBox[{False->
+            StyleBox[
+             StyleBox[
+              DynamicBox[ToBoxes[
+                FEPrivate`FrontEndResource["FEStrings", "sizeShowLess"], 
+                StandardForm],
+               ImageSizeCache->{50., {0., 8.}}],
+              StripOnInput->False,
+              DynamicUpdating->True], "SuggestionsBarControl",
+             StripOnInput->False], True->
+            StyleBox[
+             StyleBox[
+              DynamicBox[ToBoxes[
+                FEPrivate`FrontEndResource["FEStrings", "sizeShowLess"], 
+                StandardForm],
+               ImageSizeCache->{50., {0., 8.}}],
+              StripOnInput->False,
+              DynamicUpdating->True], "SuggestionsBarControlActive",
+             StripOnInput->False]}, Dynamic[
+             CurrentValue["MouseOver"]],
+            Alignment->Center,
+            FrameMargins->0,
+            ImageSize->{Automatic, 25}],
+           Appearance->None,
+           
+           ButtonFunction:>OutputSizeLimit`ButtonFunction[
+            Identity, 4, 21784452987928306302, 5/2],
+           Enabled->True,
+           Evaluator->Automatic,
+           Method->"Queued"], 
+          ButtonBox[
+           PaneSelectorBox[{False->
+            StyleBox[
+             StyleBox[
+              DynamicBox[ToBoxes[
+                FEPrivate`FrontEndResource["FEStrings", "sizeShowMore"], 
+                StandardForm],
+               ImageSizeCache->{56., {0., 8.}}],
+              StripOnInput->False,
+              DynamicUpdating->True], "SuggestionsBarControl",
+             StripOnInput->False], True->
+            StyleBox[
+             StyleBox[
+              DynamicBox[ToBoxes[
+                FEPrivate`FrontEndResource["FEStrings", "sizeShowMore"], 
+                StandardForm]],
+              StripOnInput->False,
+              DynamicUpdating->True], "SuggestionsBarControlActive",
+             StripOnInput->False]}, Dynamic[
+             CurrentValue["MouseOver"]],
+            Alignment->Center,
+            FrameMargins->0,
+            ImageSize->{Automatic, 25}],
+           Appearance->None,
+           
+           ButtonFunction:>OutputSizeLimit`ButtonFunction[
+            Identity, 4, 21784452987928306302, 5 2],
+           Enabled->True,
+           Evaluator->Automatic,
+           Method->"Queued"], 
+          ButtonBox[
+           PaneSelectorBox[{False->
+            StyleBox[
+             StyleBox[
+              DynamicBox[ToBoxes[
+                FEPrivate`FrontEndResource["FEStrings", "sizeShowAll"], 
+                StandardForm],
+               ImageSizeCache->{42., {0., 8.}}],
+              StripOnInput->False,
+              DynamicUpdating->True], "SuggestionsBarControl",
+             StripOnInput->False], True->
+            StyleBox[
+             StyleBox[
+              DynamicBox[ToBoxes[
+                FEPrivate`FrontEndResource["FEStrings", "sizeShowAll"], 
+                StandardForm],
+               ImageSizeCache->{42., {0., 8.}}],
+              StripOnInput->False,
+              DynamicUpdating->True], "SuggestionsBarControlActive",
+             StripOnInput->False]}, Dynamic[
+             CurrentValue["MouseOver"]],
+            Alignment->Center,
+            FrameMargins->0,
+            ImageSize->{Automatic, 25}],
+           Appearance->None,
+           
+           ButtonFunction:>OutputSizeLimit`ButtonFunction[
+            Identity, 4, 21784452987928306302, Infinity],
+           Enabled->True,
+           Evaluator->Automatic,
+           Method->"Queued"], 
+          ButtonBox[
+           PaneSelectorBox[{False->
+            StyleBox[
+             StyleBox[
+              DynamicBox[ToBoxes[
+                FEPrivate`FrontEndResource["FEStrings", "sizeChangeLimit"], 
+                StandardForm],
+               ImageSizeCache->{74., {0., 8.}}],
+              StripOnInput->False,
+              DynamicUpdating->True], "SuggestionsBarControl",
+             StripOnInput->False], True->
+            StyleBox[
+             StyleBox[
+              DynamicBox[ToBoxes[
+                FEPrivate`FrontEndResource["FEStrings", "sizeChangeLimit"], 
+                StandardForm]],
+              StripOnInput->False,
+              DynamicUpdating->True], "SuggestionsBarControlActive",
+             StripOnInput->False]}, Dynamic[
+             CurrentValue["MouseOver"]],
+            Alignment->Center,
+            FrameMargins->0,
+            ImageSize->{Automatic, 25}],
+           Appearance->None,
+           ButtonFunction:>FrontEndExecute[{
+              FrontEnd`SetOptions[
+              FrontEnd`$FrontEnd, 
+               FrontEnd`PreferencesSettings -> {"Page" -> "Evaluation"}], 
+              FrontEnd`FrontEndToken["PreferencesDialog"]}],
+           Evaluator->None,
+           Method->"Preemptive"]}
+        },
+        AutoDelete->False,
+        FrameStyle->GrayLevel[0.85],
+        GridBoxDividers->{"Columns" -> {False, {True}}},
+        GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}},
+        GridBoxSpacings->{"Columns" -> {{2}}}]}
+     },
+     DefaultBaseStyle->"Column",
+     GridBoxAlignment->{
+      "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+       "RowsIndexed" -> {}},
+     GridBoxDividers->{
+      "Columns" -> {{False}}, "ColumnsIndexed" -> {}, "Rows" -> {{False}}, 
+       "RowsIndexed" -> {}},
+     GridBoxItemSize->{
+      "Columns" -> {{Automatic}}, "ColumnsIndexed" -> {}, "Rows" -> {{1.}}, 
+       "RowsIndexed" -> {}},
+     GridBoxSpacings->{"Columns" -> {
+         Offset[0.27999999999999997`], {
+          Offset[0.5599999999999999]}, 
+         Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+         Offset[0.2], 
+         Offset[1.2], {
+          Offset[0.4]}, 
+         Offset[0.2]}, "RowsIndexed" -> {}}],
+    Background->RGBColor[0.9657, 0.9753, 0.9802],
+    FrameMargins->{{12, 12}, {0, 15}},
+    FrameStyle->GrayLevel[0.85],
+    RoundingRadius->5,
+    StripOnInput->False],
+   Deploy,
+   DefaultBaseStyle->"Deploy"],
+  Out[4]]], "Output",ExpressionUUID->"d920163a-ce2f-4744-b923-9271b7f5d01b"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Length", "[", "%4", "]"}]], "Input",
+ NumberMarks->False,ExpressionUUID->"7f4d43d6-92d0-4c4a-a81c-6ad79d183879"],
+
+Cell[BoxData["136082"], "Output",ExpressionUUID->"8131b99d-c6ee-43c5-a825-5927c01f13a9"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"data", "[", "\"\<examplesUsed\>\"", "]"}], "=", 
+  RowBox[{"URLDecode", "/@", 
+   RowBox[{"data", "[", "0", "]"}]}]}]], "Input",ExpressionUUID->"35d15ad0-\
+1ad6-4d49-a19d-893e7ed2982b"],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"$CharacterEncoding", "::", "utf8"}], "MessageName"], ":", 
+  " ", "\<\"The byte sequence \[NoBreak]\\!\\(\\*RowBox[{\\\"{\\\", \\\"150\\\
+\", \\\"}\\\"}]\\)\[NoBreak] could not be interpreted as a character in the \
+UTF-8 character encoding. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
+ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/$CharacterEncoding\\\", ButtonNote -> \
+\\\"$CharacterEncoding::utf8\\\"]\\)\"\>"}]], "Message", \
+"MSG",ExpressionUUID->"b4ed4f50-e5b7-4351-b312-7a6b303331df"],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"$CharacterEncoding", "::", "utf8"}], "MessageName"], ":", 
+  " ", "\<\"The byte sequence \[NoBreak]\\!\\(\\*RowBox[{\\\"{\\\", \\\"150\\\
+\", \\\"}\\\"}]\\)\[NoBreak] could not be interpreted as a character in the \
+UTF-8 character encoding. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
+ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/$CharacterEncoding\\\", ButtonNote -> \
+\\\"$CharacterEncoding::utf8\\\"]\\)\"\>"}]], "Message", \
+"MSG",ExpressionUUID->"9c2282ed-b3f0-4cbc-9896-808ac0b4b4a8"],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"$CharacterEncoding", "::", "utf8"}], "MessageName"], ":", 
+  " ", "\<\"The byte sequence \[NoBreak]\\!\\(\\*RowBox[{\\\"{\\\", \\\"150\\\
+\", \\\"}\\\"}]\\)\[NoBreak] could not be interpreted as a character in the \
+UTF-8 character encoding. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
+ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/$CharacterEncoding\\\", ButtonNote -> \
+\\\"$CharacterEncoding::utf8\\\"]\\)\"\>"}]], "Message", \
+"MSG",ExpressionUUID->"044b3818-bcbf-4568-8598-0713cb077c75"],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"General", "::", "stop"}], "MessageName"], ":", 
+  " ", "\<\"Further output of \
+\[NoBreak]\\!\\(\\*StyleBox[RowBox[{\\\"$CharacterEncoding\\\", \\\"::\\\", \
+\\\"utf8\\\"}], \\\"MessageName\\\"]\\)\[NoBreak] will be suppressed during \
+this calculation. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
+ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/message/General/stop\\\", ButtonNote -> \
+\\\"General::stop\\\"]\\)\"\>"}]], "Message", \
+"MSG",ExpressionUUID->"c0ac9926-5ab5-4b49-a5f3-c10588f5a644"],
+
+Cell[BoxData[
+ InterpretationBox[
+  TagBox[
+   FrameBox[GridBox[{
+      {
+       ItemBox[
+        TagBox[
+         RowBox[{"{", 
+          
+          RowBox[{"\<\"revolve region between y=x^2 and y=x, 0<x<1, about the \
+y-axis\"\>", ",", "\<\"rotate solid\"\>", ",", "\<\"rotate the region\"\>", 
+           ",", "\<\"rotate the region between 0 and sin x with 0<x<pi around \
+the x-axis\"\>", ",", "\<\"rotate the shape\"\>", ",", 
+           TemplateBox[{"136072"},
+            "OutputSizeLimit`Skeleton",
+            DisplayFunction->(FrameBox[
+              RowBox[{"\" \[CenterEllipsis]\"", #, "\"\[CenterEllipsis] \""}],
+               Background -> GrayLevel[0.75], 
+              BaseStyle -> {
+               "Deploy", FontColor -> GrayLevel[1], FontSize -> Smaller, 
+                ShowStringCharacters -> False}, BaselinePosition -> Baseline, 
+              ContentPadding -> False, FrameMargins -> 1, FrameStyle -> 
+              GrayLevel[0.75], RoundingRadius -> 7]& )], ",", "\<\"del x\"\>",
+            ",", "\<\"del(x^2+y^2)\"\>", ",", "\<\"del z e^(x^2+y^2)\"\>", 
+           ",", "\<\"nabla 1/r\"\>", ",", "\<\"nabla 1/r^2\"\>"}], "}"}],
+         Short[#, 5]& ],
+        BaseStyle->{Deployed -> False},
+        StripOnInput->False]},
+      {GridBox[{
+         {
+          TagBox[
+           TooltipBox[
+            StyleBox[
+             StyleBox[
+              DynamicBox[ToBoxes[
+                FEPrivate`FrontEndResource[
+                "FEStrings", "sizeBriefExplanation"], StandardForm],
+               ImageSizeCache->{58., {2., 8.}}],
+              StripOnInput->False,
+              DynamicUpdating->True], "SuggestionsBarCategory",
+             StripOnInput->False],
+            StyleBox[
+             DynamicBox[
+              ToBoxes[
+               FEPrivate`FrontEndResource["FEStrings", "sizeExplanation"], 
+               StandardForm]], DynamicUpdating -> True, StripOnInput -> 
+             False]],
+           Annotation[#, 
+            Style[
+             Dynamic[
+              FEPrivate`FrontEndResource["FEStrings", "sizeExplanation"]], 
+             DynamicUpdating -> True], "Tooltip"]& ], 
+          ButtonBox[
+           PaneSelectorBox[{False->
+            StyleBox[
+             StyleBox[
+              DynamicBox[ToBoxes[
+                FEPrivate`FrontEndResource["FEStrings", "sizeShowLess"], 
+                StandardForm],
+               ImageSizeCache->{50., {0., 8.}}],
+              StripOnInput->False,
+              DynamicUpdating->True], "SuggestionsBarControl",
+             StripOnInput->False], True->
+            StyleBox[
+             StyleBox[
+              DynamicBox[ToBoxes[
+                FEPrivate`FrontEndResource["FEStrings", "sizeShowLess"], 
+                StandardForm]],
+              StripOnInput->False,
+              DynamicUpdating->True], "SuggestionsBarControlActive",
+             StripOnInput->False]}, Dynamic[
+             CurrentValue["MouseOver"]],
+            Alignment->Center,
+            FrameMargins->0,
+            ImageSize->{Automatic, 25}],
+           Appearance->None,
+           
+           ButtonFunction:>OutputSizeLimit`ButtonFunction[
+            Identity, 5, 21784452987928306302, 5/2],
+           Enabled->True,
+           Evaluator->Automatic,
+           Method->"Queued"], 
+          ButtonBox[
+           PaneSelectorBox[{False->
+            StyleBox[
+             StyleBox[
+              DynamicBox[ToBoxes[
+                FEPrivate`FrontEndResource["FEStrings", "sizeShowMore"], 
+                StandardForm],
+               ImageSizeCache->{56., {0., 8.}}],
+              StripOnInput->False,
+              DynamicUpdating->True], "SuggestionsBarControl",
+             StripOnInput->False], True->
+            StyleBox[
+             StyleBox[
+              DynamicBox[ToBoxes[
+                FEPrivate`FrontEndResource["FEStrings", "sizeShowMore"], 
+                StandardForm]],
+              StripOnInput->False,
+              DynamicUpdating->True], "SuggestionsBarControlActive",
+             StripOnInput->False]}, Dynamic[
+             CurrentValue["MouseOver"]],
+            Alignment->Center,
+            FrameMargins->0,
+            ImageSize->{Automatic, 25}],
+           Appearance->None,
+           
+           ButtonFunction:>OutputSizeLimit`ButtonFunction[
+            Identity, 5, 21784452987928306302, 5 2],
+           Enabled->True,
+           Evaluator->Automatic,
+           Method->"Queued"], 
+          ButtonBox[
+           PaneSelectorBox[{False->
+            StyleBox[
+             StyleBox[
+              DynamicBox[ToBoxes[
+                FEPrivate`FrontEndResource["FEStrings", "sizeShowAll"], 
+                StandardForm],
+               ImageSizeCache->{42., {0., 8.}}],
+              StripOnInput->False,
+              DynamicUpdating->True], "SuggestionsBarControl",
+             StripOnInput->False], True->
+            StyleBox[
+             StyleBox[
+              DynamicBox[ToBoxes[
+                FEPrivate`FrontEndResource["FEStrings", "sizeShowAll"], 
+                StandardForm],
+               ImageSizeCache->{42., {0., 8.}}],
+              StripOnInput->False,
+              DynamicUpdating->True], "SuggestionsBarControlActive",
+             StripOnInput->False]}, Dynamic[
+             CurrentValue["MouseOver"]],
+            Alignment->Center,
+            FrameMargins->0,
+            ImageSize->{Automatic, 25}],
+           Appearance->None,
+           
+           ButtonFunction:>OutputSizeLimit`ButtonFunction[
+            Identity, 5, 21784452987928306302, Infinity],
+           Enabled->True,
+           Evaluator->Automatic,
+           Method->"Queued"], 
+          ButtonBox[
+           PaneSelectorBox[{False->
+            StyleBox[
+             StyleBox[
+              DynamicBox[ToBoxes[
+                FEPrivate`FrontEndResource["FEStrings", "sizeChangeLimit"], 
+                StandardForm],
+               ImageSizeCache->{74., {0., 8.}}],
+              StripOnInput->False,
+              DynamicUpdating->True], "SuggestionsBarControl",
+             StripOnInput->False], True->
+            StyleBox[
+             StyleBox[
+              DynamicBox[ToBoxes[
+                FEPrivate`FrontEndResource["FEStrings", "sizeChangeLimit"], 
+                StandardForm],
+               ImageSizeCache->{74., {0., 8.}}],
+              StripOnInput->False,
+              DynamicUpdating->True], "SuggestionsBarControlActive",
+             StripOnInput->False]}, Dynamic[
+             CurrentValue["MouseOver"]],
+            Alignment->Center,
+            FrameMargins->0,
+            ImageSize->{Automatic, 25}],
+           Appearance->None,
+           ButtonFunction:>FrontEndExecute[{
+              FrontEnd`SetOptions[
+              FrontEnd`$FrontEnd, 
+               FrontEnd`PreferencesSettings -> {"Page" -> "Evaluation"}], 
+              FrontEnd`FrontEndToken["PreferencesDialog"]}],
+           Evaluator->None,
+           Method->"Preemptive"]}
+        },
+        AutoDelete->False,
+        FrameStyle->GrayLevel[0.85],
+        GridBoxDividers->{"Columns" -> {False, {True}}},
+        GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}},
+        GridBoxSpacings->{"Columns" -> {{2}}}]}
+     },
+     DefaultBaseStyle->"Column",
+     GridBoxAlignment->{
+      "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+       "RowsIndexed" -> {}},
+     GridBoxDividers->{
+      "Columns" -> {{False}}, "ColumnsIndexed" -> {}, "Rows" -> {{False}}, 
+       "RowsIndexed" -> {}},
+     GridBoxItemSize->{
+      "Columns" -> {{Automatic}}, "ColumnsIndexed" -> {}, "Rows" -> {{1.}}, 
+       "RowsIndexed" -> {}},
+     GridBoxSpacings->{"Columns" -> {
+         Offset[0.27999999999999997`], {
+          Offset[0.5599999999999999]}, 
+         Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+         Offset[0.2], 
+         Offset[1.2], {
+          Offset[0.4]}, 
+         Offset[0.2]}, "RowsIndexed" -> {}}],
+    Background->RGBColor[0.9657, 0.9753, 0.9802],
+    FrameMargins->{{12, 12}, {0, 15}},
+    FrameStyle->GrayLevel[0.85],
+    RoundingRadius->5,
+    StripOnInput->False],
+   Deploy,
+   DefaultBaseStyle->"Deploy"],
+  Out[5]]], "Output",ExpressionUUID->"a59dce99-3950-4194-8460-24dd09dc6806"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"data", "[", "\"\<mtrott0\>\"", "]"}], "=", 
+  RowBox[{
+   RowBox[{"Composition", "[", "\[IndentingNewLine]", 
+    RowBox[{"(*", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"Join", "@@", "#"}], "&"}], ","}], "*)"}], 
+    "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"Import", "/@", "#"}], "&"}], ",", "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{"FileNames", "[", 
+       RowBox[{"\"\<*.m\>\"", ",", 
+        RowBox[{"{", "#", "}"}]}], "]"}], "&"}]}], "\[IndentingNewLine]", 
+    "]"}], "[", "\"\</Users/meng/WorkSpace-meng2maclap/Temp/MathQueries2\>\"",
+    "]"}]}]], "Input",ExpressionUUID->"0d117c4f-a394-4fc1-9a4f-ac32c0dc08b6"],
+
+Cell[BoxData[
+ InterpretationBox[
+  TagBox[
+   FrameBox[GridBox[{
+      {
+       ItemBox[
+        TagBox[
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"{", 
+            RowBox[{
+             
+             RowBox[{"\<\"Formulas\"\>", 
+              "\[Rule]", "\<\"Formulas/3DPlot\"\>"}], ",", 
+             RowBox[{"{", 
+              TemplateBox[{"1"},
+               "OutputSizeLimit`Skeleton",
+               DisplayFunction->(FrameBox[
+                 
+                 RowBox[{
+                  "\" \[CenterEllipsis]\"", #, "\"\[CenterEllipsis] \""}], 
+                 Background -> GrayLevel[0.75], 
+                 BaseStyle -> {
+                  "Deploy", FontColor -> GrayLevel[1], FontSize -> Smaller, 
+                   ShowStringCharacters -> False}, BaselinePosition -> 
+                 Baseline, ContentPadding -> False, FrameMargins -> 1, 
+                 FrameStyle -> GrayLevel[0.75], RoundingRadius -> 7]& )], 
+              "}"}]}], "}"}], ",", 
+           TemplateBox[{"2197"},
+            "OutputSizeLimit`Skeleton",
+            DisplayFunction->(FrameBox[
+              RowBox[{"\" \[CenterEllipsis]\"", #, "\"\[CenterEllipsis] \""}],
+               Background -> GrayLevel[0.75], 
+              BaseStyle -> {
+               "Deploy", FontColor -> GrayLevel[1], FontSize -> Smaller, 
+                ShowStringCharacters -> False}, BaselinePosition -> Baseline, 
+              ContentPadding -> False, FrameMargins -> 1, FrameStyle -> 
+              GrayLevel[0.75], RoundingRadius -> 7]& )], ",", 
+           RowBox[{"{", 
+            RowBox[{
+             
+             RowBox[{"\<\"WLBuiltInFunctions\"\>", 
+              "\[Rule]", "\<\"BuiltInFunctions/ZTransform\"\>"}], ",", 
+             RowBox[{"{", 
+              RowBox[{
+               RowBox[{"{", 
+                RowBox[{
+                 RowBox[{"Hold", "[", 
+                  RowBox[{"ZTransform", "[", 
+                   RowBox[{
+                    FractionBox[
+                    SuperscriptBox["n", "2"], 
+                    SuperscriptBox["2", "n"]], ",", "n", ",", "z"}], "]"}], 
+                  "]"}], ",", "17103", ",", 
+                 RowBox[{"{", 
+                  RowBox[{
+                   RowBox[{"{", 
+                    RowBox[{"\<\"z transform\"\>", ",", "7333"}], "}"}], ",", 
+                   
+                   RowBox[{"{", 
+                    RowBox[{"\<\"Z transform calculator\"\>", ",", "5744"}], 
+                    "}"}], ",", 
+                   TemplateBox[{"6"},
+                    "OutputSizeLimit`Skeleton",
+                    DisplayFunction->(FrameBox[
+                    
+                    RowBox[{
+                    "\" \[CenterEllipsis]\"", #, "\"\[CenterEllipsis] \""}], 
+                    Background -> GrayLevel[0.75], 
+                    BaseStyle -> {
+                    "Deploy", FontColor -> GrayLevel[1], FontSize -> Smaller, 
+                    ShowStringCharacters -> False}, BaselinePosition -> 
+                    Baseline, ContentPadding -> False, FrameMargins -> 1, 
+                    FrameStyle -> GrayLevel[0.75], RoundingRadius -> 7]& )], 
+                   ",", 
+                   RowBox[{"{", 
+                    RowBox[{"\<\"z tranform\"\>", ",", "60"}], "}"}], ",", 
+                   RowBox[{"{", 
+                    
+                    RowBox[{"\<\"ZTransform[n^2 2^(-n), n, z]\"\>", ",", 
+                    "48"}], "}"}]}], "}"}]}], "}"}], ",", 
+               TemplateBox[{"8"},
+                "OutputSizeLimit`Skeleton",
+                DisplayFunction->(FrameBox[
+                  
+                  RowBox[{
+                   "\" \[CenterEllipsis]\"", #, "\"\[CenterEllipsis] \""}], 
+                  Background -> GrayLevel[0.75], 
+                  BaseStyle -> {
+                   "Deploy", FontColor -> GrayLevel[1], FontSize -> Smaller, 
+                    ShowStringCharacters -> False}, BaselinePosition -> 
+                  Baseline, ContentPadding -> False, FrameMargins -> 1, 
+                  FrameStyle -> GrayLevel[0.75], RoundingRadius -> 7]& )], 
+               ",", 
+               RowBox[{"{", 
+                TemplateBox[{"1"},
+                 "OutputSizeLimit`Skeleton",
+                 DisplayFunction->(FrameBox[
+                   
+                   RowBox[{
+                    "\" \[CenterEllipsis]\"", #, "\"\[CenterEllipsis] \""}], 
+                   Background -> GrayLevel[0.75], 
+                   BaseStyle -> {
+                    "Deploy", FontColor -> GrayLevel[1], FontSize -> Smaller, 
+                    ShowStringCharacters -> False}, BaselinePosition -> 
+                   Baseline, ContentPadding -> False, FrameMargins -> 1, 
+                   FrameStyle -> GrayLevel[0.75], RoundingRadius -> 7]& )], 
+                "}"}]}], "}"}]}], "}"}]}], "}"}],
+         Short[#, 5]& ],
+        BaseStyle->{Deployed -> False},
+        StripOnInput->False]},
+      {GridBox[{
+         {
+          TagBox[
+           TooltipBox[
+            StyleBox[
+             StyleBox[
+              DynamicBox[ToBoxes[
+                FEPrivate`FrontEndResource[
+                "FEStrings", "sizeBriefExplanation"], StandardForm],
+               ImageSizeCache->{58., {2., 8.}}],
+              StripOnInput->False,
+              DynamicUpdating->True], "SuggestionsBarCategory",
+             StripOnInput->False],
+            StyleBox[
+             DynamicBox[
+              ToBoxes[
+               FEPrivate`FrontEndResource["FEStrings", "sizeExplanation"], 
+               StandardForm]], DynamicUpdating -> True, StripOnInput -> 
+             False]],
+           Annotation[#, 
+            Style[
+             Dynamic[
+              FEPrivate`FrontEndResource["FEStrings", "sizeExplanation"]], 
+             DynamicUpdating -> True], "Tooltip"]& ], 
+          ButtonBox[
+           PaneSelectorBox[{False->
+            StyleBox[
+             StyleBox[
+              DynamicBox[ToBoxes[
+                FEPrivate`FrontEndResource["FEStrings", "sizeShowLess"], 
+                StandardForm],
+               ImageSizeCache->{50., {0., 8.}}],
+              StripOnInput->False,
+              DynamicUpdating->True], "SuggestionsBarControl",
+             StripOnInput->False], True->
+            StyleBox[
+             StyleBox[
+              DynamicBox[ToBoxes[
+                FEPrivate`FrontEndResource["FEStrings", "sizeShowLess"], 
+                StandardForm],
+               ImageSizeCache->{50., {0., 8.}}],
+              StripOnInput->False,
+              DynamicUpdating->True], "SuggestionsBarControlActive",
+             StripOnInput->False]}, Dynamic[
+             CurrentValue["MouseOver"]],
+            Alignment->Center,
+            FrameMargins->0,
+            ImageSize->{Automatic, 25}],
+           Appearance->None,
+           
+           ButtonFunction:>OutputSizeLimit`ButtonFunction[
+            Identity, 8, 21784452987928306302, 5/2],
+           Enabled->True,
+           Evaluator->Automatic,
+           Method->"Queued"], 
+          ButtonBox[
+           PaneSelectorBox[{False->
+            StyleBox[
+             StyleBox[
+              DynamicBox[ToBoxes[
+                FEPrivate`FrontEndResource["FEStrings", "sizeShowMore"], 
+                StandardForm],
+               ImageSizeCache->{56., {0., 8.}}],
+              StripOnInput->False,
+              DynamicUpdating->True], "SuggestionsBarControl",
+             StripOnInput->False], True->
+            StyleBox[
+             StyleBox[
+              DynamicBox[ToBoxes[
+                FEPrivate`FrontEndResource["FEStrings", "sizeShowMore"], 
+                StandardForm],
+               ImageSizeCache->{56., {0., 8.}}],
+              StripOnInput->False,
+              DynamicUpdating->True], "SuggestionsBarControlActive",
+             StripOnInput->False]}, Dynamic[
+             CurrentValue["MouseOver"]],
+            Alignment->Center,
+            FrameMargins->0,
+            ImageSize->{Automatic, 25}],
+           Appearance->None,
+           
+           ButtonFunction:>OutputSizeLimit`ButtonFunction[
+            Identity, 8, 21784452987928306302, 5 2],
+           Enabled->True,
+           Evaluator->Automatic,
+           Method->"Queued"], 
+          ButtonBox[
+           PaneSelectorBox[{False->
+            StyleBox[
+             StyleBox[
+              DynamicBox[ToBoxes[
+                FEPrivate`FrontEndResource["FEStrings", "sizeShowAll"], 
+                StandardForm],
+               ImageSizeCache->{42., {0., 8.}}],
+              StripOnInput->False,
+              DynamicUpdating->True], "SuggestionsBarControl",
+             StripOnInput->False], True->
+            StyleBox[
+             StyleBox[
+              DynamicBox[ToBoxes[
+                FEPrivate`FrontEndResource["FEStrings", "sizeShowAll"], 
+                StandardForm]],
+              StripOnInput->False,
+              DynamicUpdating->True], "SuggestionsBarControlActive",
+             StripOnInput->False]}, Dynamic[
+             CurrentValue["MouseOver"]],
+            Alignment->Center,
+            FrameMargins->0,
+            ImageSize->{Automatic, 25}],
+           Appearance->None,
+           
+           ButtonFunction:>OutputSizeLimit`ButtonFunction[
+            Identity, 8, 21784452987928306302, Infinity],
+           Enabled->True,
+           Evaluator->Automatic,
+           Method->"Queued"], 
+          ButtonBox[
+           PaneSelectorBox[{False->
+            StyleBox[
+             StyleBox[
+              DynamicBox[ToBoxes[
+                FEPrivate`FrontEndResource["FEStrings", "sizeChangeLimit"], 
+                StandardForm],
+               ImageSizeCache->{74., {0., 8.}}],
+              StripOnInput->False,
+              DynamicUpdating->True], "SuggestionsBarControl",
+             StripOnInput->False], True->
+            StyleBox[
+             StyleBox[
+              DynamicBox[ToBoxes[
+                FEPrivate`FrontEndResource["FEStrings", "sizeChangeLimit"], 
+                StandardForm],
+               ImageSizeCache->{74., {0., 8.}}],
+              StripOnInput->False,
+              DynamicUpdating->True], "SuggestionsBarControlActive",
+             StripOnInput->False]}, Dynamic[
+             CurrentValue["MouseOver"]],
+            Alignment->Center,
+            FrameMargins->0,
+            ImageSize->{Automatic, 25}],
+           Appearance->None,
+           ButtonFunction:>FrontEndExecute[{
+              FrontEnd`SetOptions[
+              FrontEnd`$FrontEnd, 
+               FrontEnd`PreferencesSettings -> {"Page" -> "Evaluation"}], 
+              FrontEnd`FrontEndToken["PreferencesDialog"]}],
+           Evaluator->None,
+           Method->"Preemptive"]}
+        },
+        AutoDelete->False,
+        FrameStyle->GrayLevel[0.85],
+        GridBoxDividers->{"Columns" -> {False, {True}}},
+        GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}},
+        GridBoxSpacings->{"Columns" -> {{2}}}]}
+     },
+     DefaultBaseStyle->"Column",
+     GridBoxAlignment->{
+      "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+       "RowsIndexed" -> {}},
+     GridBoxDividers->{
+      "Columns" -> {{False}}, "ColumnsIndexed" -> {}, "Rows" -> {{False}}, 
+       "RowsIndexed" -> {}},
+     GridBoxItemSize->{
+      "Columns" -> {{Automatic}}, "ColumnsIndexed" -> {}, "Rows" -> {{1.}}, 
+       "RowsIndexed" -> {}},
+     GridBoxSpacings->{"Columns" -> {
+         Offset[0.27999999999999997`], {
+          Offset[0.5599999999999999]}, 
+         Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+         Offset[0.2], 
+         Offset[1.2], {
+          Offset[0.4]}, 
+         Offset[0.2]}, "RowsIndexed" -> {}}],
+    Background->RGBColor[0.9657, 0.9753, 0.9802],
+    FrameMargins->{{12, 12}, {0, 15}},
+    FrameStyle->GrayLevel[0.85],
+    RoundingRadius->5,
+    StripOnInput->False],
+   Deploy,
+   DefaultBaseStyle->"Deploy"],
+  Out[8]]], "Output",ExpressionUUID->"bd588b55-65ea-4177-816c-86f9ace2d576"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    RowBox[{
+     RowBox[{
+      RowBox[{
+       RowBox[{"data", "[", "\"\<mtrott0\>\"", "]"}], "[", 
+       RowBox[{"[", 
+        RowBox[{"All", ",", "2", ",", "All", ",", "3"}], "]"}], "]"}], "//", 
+      RowBox[{
+       RowBox[{"Join", "@@", "#"}], "&"}]}], "//", 
+     RowBox[{
+      RowBox[{"Join", "@@", "#"}], "&"}]}], "//", 
+    RowBox[{
+     RowBox[{"#", "[", 
+      RowBox[{"[", 
+       RowBox[{"All", ",", "1"}], "]"}], "]"}], "&"}]}], "//", 
+   "DeleteDuplicates"}], "//", "Length"}]], "Input",ExpressionUUID->"896f4755-\
+b1da-4071-b57a-c23e7ab9d156"],
+
+Cell[BoxData["80617"], "Output",ExpressionUUID->"ba425dba-9ddc-45f9-93d8-6031ba13f2a2"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"data", "[", "\"\<mtrott1\>\"", "]"}], "=", 
+  RowBox[{
+   RowBox[{"Composition", "[", "\[IndentingNewLine]", "\[IndentingNewLine]", 
+    RowBox[{"(*", 
+     RowBox[{"DeleteDuplicates", ",", "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"#", "[", 
+        RowBox[{"[", 
+         RowBox[{"All", ",", "1"}], "]"}], "]"}], "&"}], ",", 
+      "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"Flatten", "[", 
+        RowBox[{"#", ",", "2"}], "]"}], "&"}], ","}], "*)"}], 
+    "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{"#", "[", 
+      RowBox[{"[", 
+       RowBox[{"All", ",", "2", ",", "All", ",", "3"}], "]"}], "]"}], "&"}], 
+    "\[IndentingNewLine]", "]"}], "[", 
+   RowBox[{"data", "[", "\"\<mtrott0\>\"", "]"}], "]"}]}]], "Input",Expression\
+UUID->"477317fe-a306-426a-95b8-6a03f136039a"],
+
+Cell[BoxData[
+ InterpretationBox[
+  TagBox[
+   FrameBox[GridBox[{
+      {
+       ItemBox[
+        TagBox[
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"{", 
+              RowBox[{
+               RowBox[{"{", 
+                RowBox[{"\<\"3d plot\"\>", ",", "11089"}], "}"}], ",", 
+               RowBox[{"{", 
+                RowBox[{"\<\"3d graph\"\>", ",", "181"}], "}"}], ",", 
+               RowBox[{"{", 
+                RowBox[{"\<\"3d graphing\"\>", ",", "27"}], "}"}], ",", 
+               RowBox[{"{", 
+                RowBox[{"\<\"3D plot\"\>", ",", "22"}], "}"}], ",", 
+               RowBox[{"{", 
+                RowBox[{"\<\"3d plot calculator\"\>", ",", "22"}], "}"}], ",", 
+               RowBox[{"{", 
+                RowBox[{"\<\"three dimensional graph\"\>", ",", "17"}], "}"}],
+                ",", 
+               RowBox[{"{", 
+                RowBox[{"\<\"plot surface\"\>", ",", "14"}], "}"}], ",", 
+               RowBox[{"{", 
+                RowBox[{"\<\"3d plots\"\>", ",", "11"}], "}"}], ",", 
+               RowBox[{"{", 
+                RowBox[{"\<\"3 dimensional graph\"\>", ",", "10"}], "}"}], 
+               ",", 
+               RowBox[{"{", 
+                RowBox[{"\<\"3 dimensional plot\"\>", ",", "9"}], "}"}]}], 
+              "}"}], ",", 
+             TemplateBox[{"8"},
+              "OutputSizeLimit`Skeleton",
+              DisplayFunction->(FrameBox[
+                
+                RowBox[{
+                 "\" \[CenterEllipsis]\"", #, "\"\[CenterEllipsis] \""}], 
+                Background -> GrayLevel[0.75], 
+                BaseStyle -> {
+                 "Deploy", FontColor -> GrayLevel[1], FontSize -> Smaller, 
+                  ShowStringCharacters -> False}, BaselinePosition -> 
+                Baseline, ContentPadding -> False, FrameMargins -> 1, 
+                FrameStyle -> GrayLevel[0.75], RoundingRadius -> 7]& )], ",", 
+             
+             RowBox[{"{", 
+              RowBox[{
+               RowBox[{"{", 
+                RowBox[{"\<\"3d plot\"\>", ",", "15"}], "}"}], ",", 
+               RowBox[{"{", 
+                RowBox[{
+                 RowBox[{"\<\"thre\"\>", "\[Ellipsis]", "\<\"graph\"\>"}], 
+                 ",", "1"}], "}"}], ",", 
+               RowBox[{"{", 
+                TemplateBox[{"1"},
+                 "OutputSizeLimit`Skeleton",
+                 DisplayFunction->(FrameBox[
+                   
+                   RowBox[{
+                    "\" \[CenterEllipsis]\"", #, "\"\[CenterEllipsis] \""}], 
+                   Background -> GrayLevel[0.75], 
+                   BaseStyle -> {
+                    "Deploy", FontColor -> GrayLevel[1], FontSize -> Smaller, 
+                    ShowStringCharacters -> False}, BaselinePosition -> 
+                   Baseline, ContentPadding -> False, FrameMargins -> 1, 
+                   FrameStyle -> GrayLevel[0.75], RoundingRadius -> 7]& )], 
+                "}"}], ",", 
+               RowBox[{"{", 
+                RowBox[{"\<\"3d graph\"\>", ",", "1"}], "}"}]}], "}"}]}], 
+            "}"}], ",", 
+           TemplateBox[{"2197"},
+            "OutputSizeLimit`Skeleton",
+            DisplayFunction->(FrameBox[
+              RowBox[{"\" \[CenterEllipsis]\"", #, "\"\[CenterEllipsis] \""}],
+               Background -> GrayLevel[0.75], 
+              BaseStyle -> {
+               "Deploy", FontColor -> GrayLevel[1], FontSize -> Smaller, 
+                ShowStringCharacters -> False}, BaselinePosition -> Baseline, 
+              ContentPadding -> False, FrameMargins -> 1, FrameStyle -> 
+              GrayLevel[0.75], RoundingRadius -> 7]& )], ",", 
+           RowBox[{"{", 
+            TemplateBox[{"1"},
+             "OutputSizeLimit`Skeleton",
+             DisplayFunction->(FrameBox[
+               
+               RowBox[{
+                "\" \[CenterEllipsis]\"", #, "\"\[CenterEllipsis] \""}], 
+               Background -> GrayLevel[0.75], 
+               BaseStyle -> {
+                "Deploy", FontColor -> GrayLevel[1], FontSize -> Smaller, 
+                 ShowStringCharacters -> False}, BaselinePosition -> Baseline,
+                ContentPadding -> False, FrameMargins -> 1, FrameStyle -> 
+               GrayLevel[0.75], RoundingRadius -> 7]& )], "}"}]}], "}"}],
+         Short[#, 5]& ],
+        BaseStyle->{Deployed -> False},
+        StripOnInput->False]},
+      {GridBox[{
+         {
+          TagBox[
+           TooltipBox[
+            StyleBox[
+             StyleBox[
+              DynamicBox[ToBoxes[
+                FEPrivate`FrontEndResource[
+                "FEStrings", "sizeBriefExplanation"], StandardForm],
+               ImageSizeCache->{58., {2., 8.}}],
+              StripOnInput->False,
+              DynamicUpdating->True], "SuggestionsBarCategory",
+             StripOnInput->False],
+            StyleBox[
+             DynamicBox[
+              ToBoxes[
+               FEPrivate`FrontEndResource["FEStrings", "sizeExplanation"], 
+               StandardForm]], DynamicUpdating -> True, StripOnInput -> 
+             False]],
+           Annotation[#, 
+            Style[
+             Dynamic[
+              FEPrivate`FrontEndResource["FEStrings", "sizeExplanation"]], 
+             DynamicUpdating -> True], "Tooltip"]& ], 
+          ButtonBox[
+           PaneSelectorBox[{False->
+            StyleBox[
+             StyleBox[
+              DynamicBox[ToBoxes[
+                FEPrivate`FrontEndResource["FEStrings", "sizeShowLess"], 
+                StandardForm],
+               ImageSizeCache->{50., {0., 8.}}],
+              StripOnInput->False,
+              DynamicUpdating->True], "SuggestionsBarControl",
+             StripOnInput->False], True->
+            StyleBox[
+             StyleBox[
+              DynamicBox[ToBoxes[
+                FEPrivate`FrontEndResource["FEStrings", "sizeShowLess"], 
+                StandardForm]],
+              StripOnInput->False,
+              DynamicUpdating->True], "SuggestionsBarControlActive",
+             StripOnInput->False]}, Dynamic[
+             CurrentValue["MouseOver"]],
+            Alignment->Center,
+            FrameMargins->0,
+            ImageSize->{Automatic, 25}],
+           Appearance->None,
+           
+           ButtonFunction:>OutputSizeLimit`ButtonFunction[
+            Identity, 33, 21784452987928306302, 5/2],
+           Enabled->True,
+           Evaluator->Automatic,
+           Method->"Queued"], 
+          ButtonBox[
+           PaneSelectorBox[{False->
+            StyleBox[
+             StyleBox[
+              DynamicBox[ToBoxes[
+                FEPrivate`FrontEndResource["FEStrings", "sizeShowMore"], 
+                StandardForm],
+               ImageSizeCache->{56., {0., 8.}}],
+              StripOnInput->False,
+              DynamicUpdating->True], "SuggestionsBarControl",
+             StripOnInput->False], True->
+            StyleBox[
+             StyleBox[
+              DynamicBox[ToBoxes[
+                FEPrivate`FrontEndResource["FEStrings", "sizeShowMore"], 
+                StandardForm]],
+              StripOnInput->False,
+              DynamicUpdating->True], "SuggestionsBarControlActive",
+             StripOnInput->False]}, Dynamic[
+             CurrentValue["MouseOver"]],
+            Alignment->Center,
+            FrameMargins->0,
+            ImageSize->{Automatic, 25}],
+           Appearance->None,
+           
+           ButtonFunction:>OutputSizeLimit`ButtonFunction[
+            Identity, 33, 21784452987928306302, 5 2],
+           Enabled->True,
+           Evaluator->Automatic,
+           Method->"Queued"], 
+          ButtonBox[
+           PaneSelectorBox[{False->
+            StyleBox[
+             StyleBox[
+              DynamicBox[ToBoxes[
+                FEPrivate`FrontEndResource["FEStrings", "sizeShowAll"], 
+                StandardForm],
+               ImageSizeCache->{42., {0., 8.}}],
+              StripOnInput->False,
+              DynamicUpdating->True], "SuggestionsBarControl",
+             StripOnInput->False], True->
+            StyleBox[
+             StyleBox[
+              DynamicBox[ToBoxes[
+                FEPrivate`FrontEndResource["FEStrings", "sizeShowAll"], 
+                StandardForm]],
+              StripOnInput->False,
+              DynamicUpdating->True], "SuggestionsBarControlActive",
+             StripOnInput->False]}, Dynamic[
+             CurrentValue["MouseOver"]],
+            Alignment->Center,
+            FrameMargins->0,
+            ImageSize->{Automatic, 25}],
+           Appearance->None,
+           
+           ButtonFunction:>OutputSizeLimit`ButtonFunction[
+            Identity, 33, 21784452987928306302, Infinity],
+           Enabled->True,
+           Evaluator->Automatic,
+           Method->"Queued"], 
+          ButtonBox[
+           PaneSelectorBox[{False->
+            StyleBox[
+             StyleBox[
+              DynamicBox[ToBoxes[
+                FEPrivate`FrontEndResource["FEStrings", "sizeChangeLimit"], 
+                StandardForm],
+               ImageSizeCache->{74., {0., 8.}}],
+              StripOnInput->False,
+              DynamicUpdating->True], "SuggestionsBarControl",
+             StripOnInput->False], True->
+            StyleBox[
+             StyleBox[
+              DynamicBox[ToBoxes[
+                FEPrivate`FrontEndResource["FEStrings", "sizeChangeLimit"], 
+                StandardForm]],
+              StripOnInput->False,
+              DynamicUpdating->True], "SuggestionsBarControlActive",
+             StripOnInput->False]}, Dynamic[
+             CurrentValue["MouseOver"]],
+            Alignment->Center,
+            FrameMargins->0,
+            ImageSize->{Automatic, 25}],
+           Appearance->None,
+           ButtonFunction:>FrontEndExecute[{
+              FrontEnd`SetOptions[
+              FrontEnd`$FrontEnd, 
+               FrontEnd`PreferencesSettings -> {"Page" -> "Evaluation"}], 
+              FrontEnd`FrontEndToken["PreferencesDialog"]}],
+           Evaluator->None,
+           Method->"Preemptive"]}
+        },
+        AutoDelete->False,
+        FrameStyle->GrayLevel[0.85],
+        GridBoxDividers->{"Columns" -> {False, {True}}},
+        GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}},
+        GridBoxSpacings->{"Columns" -> {{2}}}]}
+     },
+     DefaultBaseStyle->"Column",
+     GridBoxAlignment->{
+      "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+       "RowsIndexed" -> {}},
+     GridBoxDividers->{
+      "Columns" -> {{False}}, "ColumnsIndexed" -> {}, "Rows" -> {{False}}, 
+       "RowsIndexed" -> {}},
+     GridBoxItemSize->{
+      "Columns" -> {{Automatic}}, "ColumnsIndexed" -> {}, "Rows" -> {{1.}}, 
+       "RowsIndexed" -> {}},
+     GridBoxSpacings->{"Columns" -> {
+         Offset[0.27999999999999997`], {
+          Offset[0.5599999999999999]}, 
+         Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+         Offset[0.2], 
+         Offset[1.2], {
+          Offset[0.4]}, 
+         Offset[0.2]}, "RowsIndexed" -> {}}],
+    Background->RGBColor[0.9657, 0.9753, 0.9802],
+    FrameMargins->{{12, 12}, {0, 15}},
+    FrameStyle->GrayLevel[0.85],
+    RoundingRadius->5,
+    StripOnInput->False],
+   Deploy,
+   DefaultBaseStyle->"Deploy"],
+  Out[33]]], "Output",ExpressionUUID->"9860f344-ca50-4798-8078-de17b73ab7e6"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"data", "[", "\"\<mtrott1\>\"", "]"}], "//", "DeleteDuplicates"}], 
+  "//", "Length"}]], "Input",ExpressionUUID->"61b901cc-f470-4314-836f-\
+7ac11789af9c"],
+
+Cell[BoxData["80617"], "Output",ExpressionUUID->"5d8698a2-08ca-4755-8920-a617e5d48e31"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"data", "[", "\"\<examplesUsed\>\"", "]"}], "//", 
+   "DeleteDuplicates"}], "//", "Length"}]], "Input",ExpressionUUID->"9dc017cf-\
+3d6b-4f02-b072-ac79ed75e2d2"],
+
+Cell[BoxData["15776"], "Output",ExpressionUUID->"95d71511-f814-4fbc-835b-ad817624af20"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Complement", "[", 
+   RowBox[{
+    RowBox[{"data", "[", "\"\<examplesUsed\>\"", "]"}], ",", 
+    RowBox[{"data", "[", "\"\<mtrott1\>\"", "]"}]}], "]"}], "//", 
+  "Length"}]], "Input",ExpressionUUID->"f929cf79-df1c-4728-9237-8e882c9f25ae"],
+
+Cell[BoxData["1290"], "Output",ExpressionUUID->"cb95f589-4afd-4482-84bc-82dc5bd6e7e7"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Position", "[", 
+  RowBox[{
+   RowBox[{"data", "[", "\"\<mtrott0\>\"", "]"}], ",", 
+   "\"\<3x^2 - x y + y^2\>\""}], "]"}]], "Input",ExpressionUUID->"2c684aca-\
+7115-48d5-ac14-09e2512d5c3b"],
+
+Cell[BoxData[
+ RowBox[{"{", "}"}]], "Output",ExpressionUUID->"d3af8187-4596-4e00-acd7-97ffc95ee7ce"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Complement", "[", 
+   RowBox[{
+    RowBox[{"data", "[", "\"\<examplesUsed\>\"", "]"}], ",", 
+    RowBox[{"data", "[", "\"\<mtrott1\>\"", "]"}]}], "]"}], "//", 
+  "RandomSample"}]], "Input",ExpressionUUID->"c686c870-3b98-40d9-88c5-\
+3f02d69074d5"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"\<\"3x^2 - x y + y^2\"\>", 
+   ",", "\<\"apply majority filter to Saturn image radius 3\"\>", 
+   ",", "\<\"fit regression line to {(1,2), (2,3), (3,4)}\"\>", 
+   ",", "\<\"harmonic mean filter\"\>", 
+   ",", "\<\"the limit as (x) approaches (0) of (x^4)/(x^2)\"\>", 
+   ",", "\<\"tan (x+y)\"\>", 
+   ",", "\<\" arclength of the curve (x[t],z[t])=(2sin(t),t) from  0 to \
+Pi/3\"\>", ",", "\<\"shift of ?4cos(5x)+?12sin(5x)\"\>", 
+   ",", "\<\"factoradic form of the permutation (3 1 2 5 4)\"\>", 
+   ",", "\<\"completely factor the problem, x^2 - 4\"\>", 
+   ",", "\<\"tallest building in France\"\>", 
+   ",", "\<\"plot x^(3/2) + y^(3/2)\"\>", 
+   ",", "\<\"expand BesselJ[0,x] for x->infinity\"\>", 
+   ",", "\<\"how much did it cost to build Cinergy Field?\"\>", 
+   ",", "\<\"edge detect image of Einstein\"\>", 
+   ",", "\<\"crop image of Jupiter\"\>", 
+   ",", "\<\"svd{{1, 2, 3}, {4, 5, 6}, {7, 8, 9}}\"\>", 
+   ",", "\<\"linear regression X={3,4,5,6} Y={6,3,1,3}\"\>", 
+   ",", "\<\"1000 / 65\"\>", 
+   ",", "\<\"julia set z -> z^3 + c, where c -> .5 + i\"\>", 
+   ",", "\<\"snell?s law\"\>", 
+   ",", "\<\"cyclic code 24,2 golay code 23 golay code 24 cordano-wagner code \
+17\"\>", ",", "\<\"rigid body rotation 20 degrees, -10 degrees, 15 \
+degrees\"\>", ",", "\<\"factor 1,000,000,001\"\>", 
+   ",", "\<\"US hydroelectric vs wind electricity generation\"\>", 
+   ",", "\<\"is 76 a centered perfect pentagonal number?\"\>", 
+   ",", "\<\"rigid body attitude reorientation maneuver 20 degrees, -10 \
+degrees, 15 degrees\"\>", ",", "\<\"prime factors of (2^100-7)\"\>", 
+   ",", "\<\"plot x=23, y=13,x=-1\"\>", ",", "\<\"Seebeck coefficient\"\>", 
+   ",", "\<\"? = 0, ? = 0\"\>", ",", "\<\"residuum 1/(x^2+1)\"\>", 
+   ",", "\<\"d ? 47?1 (mod ?(403))\"\>", 
+   ",", "\<\"energy in a 3.7 ?F capacitor with a charge of 2.9 ?C\"\>", 
+   ",", "\<\"focal parameter of an ellipse with semiaxes 4,3\"\>", 
+   ",", "\<\"permeability of vacuum\"\>", 
+   ",", "\<\"isosceles right triangle with area 1\"\>", 
+   ",", "\<\"sharpen\"\>", ",", "\<\"plot x=23, y=13/3, y=1/2,x=-1,x=14\"\>", 
+   ",", "\<\"values of the chi?squared PDF\"\>", 
+   ",", "\<\"morphological erosion\"\>", ",", "\<\"simp sqrt61\"\>", 
+   ",", "\<\" arc length of polar curve r=t from t=2 to t=6\"\>", 
+   ",", "\<\"Gamma(z)*Gamma(1-z)\"\>", 
+   ",", "\<\" curve-length of the curve (x^2,x^3) from (1,1) to (3,oo)\"\>", 
+   ",", "\<\"letter K\"\>", ",", "\<\"plot x Sqrt[y]-y Sqrt[x]\"\>", 
+   ",", "\<\"is 16 deficient?\"\>", 
+   ",", "\<\"protein?bound serum calcium\"\>", 
+   ",", "\<\"tallest glaciers\"\>", ",", "\<\"?y?x x\"\>", 
+   ",", "\<\"final\"\>", ",", "\<\"$38,000/yr\"\>", 
+   ",", "\<\"6.022141?10^23\"\>", 
+   ",", "\<\"the distance from 90?N, 0?E to 80.06?N, 16.25?E\"\>", 
+   ",", "\<\"pack circles of diameter 3 in a circle of area 160\"\>", 
+   ",", "\<\"roll a 7 in craps\"\>", 
+   ",", "\<\"length of the part of the curve y=x^2 between x=0 and x=1\"\>", 
+   ",", "\<\"most points scored by a safety\"\>", 
+   ",", "\<\"?erenkov radiation\"\>", 
+   ",", "\<\"limit of 1/x as x approaches 0 from above\"\>", 
+   ",", "\<\"a factor of 18x^2 - 32\"\>", ",", "\<\"derivate cost\"\>", 
+   ",", "\<\"residues (e^(1/(z^2)))/(z-1)\"\>", 
+   ",", "\<\"interpolating polynomial for \
+{{-86,-28},{-97,-24},{46,-71},{75,59},{-20,93},{4,49},{13,93},{-80,-96},{-11,\
+62},{-25,95},{39,91}}\"\>", 
+   ",", "\<\"plot y=Sin[Pi/x] for x=-0.5 to x=0.5, y=-0.2 to y=0.2\"\>", 
+   ",", "\<\"golden ratio - 1/(golden ratio)\"\>", 
+   ",", "\<\"20 cp viskosit?t\"\>", 
+   ",", "\<\"polynomial of degree 4 fit \
+20.9,23.2,26.2,26.4,16.3,-12.2,-60.6,-128.9\"\>", 
+   ",", "\<\"directrix of parabola x^2+3y=16\"\>", 
+   ",", "\<\"HornerForm(?3.21x^7 + 2.15x^5 + 1.03x^4 ? 7.23x^3 + 0.21x^2 ? \
+5.23,(3.25))\"\>", ",", "\<\"sum x^n, n=0 to +oo\"\>", 
+   ",", "\<\"arc length r = cos(phi) from phi = 0 to 2pi\"\>", 
+   ",", "\<\"$1200 in euros\"\>", ",", "\<\"19-gon\"\>", 
+   ",", "\<\"max filter\"\>", 
+   ",", "\<\"compute the 2d volume between y=|x|and y=x^2-6\"\>", 
+   ",", "\<\"least squares linear fit to (0,1), (2,0), (3,1), (3,2), \
+(4,3)\"\>", ",", "\<\"Euler axis\"\>", ",", "\<\"A minor scale\"\>", 
+   ",", "\<\"10? in radius\"\>", ",", "\<\"barcode WolframAlpha\"\>", 
+   ",", "\<\"sqrt |x| + sqrt |y| = 1\"\>", ",", "\<\"75th roots of 1\"\>", 
+   ",", "\<\"order of permutation (2 1 3 4)^-1\"\>", 
+   ",", "\<\"triangle with vertices (0,0), (3,4), (4,3)\"\>", 
+   ",", "\<\"limit(sin(x)/x, x->0)\"\>", 
+   ",", "\<\" residue of cot(z) in pi\"\>", 
+   ",", "\<\"fit a curve through (1,2) and (2,4) and (3,8)\"\>", 
+   ",", "\<\"0.511 ??\.95m to conductivity\"\>", ",", "\<\"plot y=1/2\"\>", 
+   ",", "\<\"limit Tan[x]^n as x-> Pi/2\"\>", ",", "\<\"?(-1)\"\>", 
+   ",", "\<\"prove by induction (1+x)^n?1+nx\"\>", 
+   ",", "\<\" rectify the curve x^2 between 1 to 2\"\>", 
+   ",", "\<\" arclength of (t,sin(t)) from (1,sin(1)) to (2,sin(2))\"\>", 
+   ",", "\<\"Joule?s first law\"\>", ",", "\<\"primes 123721683176\"\>", 
+   ",", "\<\"Hallmark revenue\"\>", 
+   ",", "\<\"70215 watt / m? temperature\"\>", ",", "\<\"?({a,b,c,d})\"\>", 
+   ",", "\<\"16,000 gauss\"\>", 
+   ",", "\<\"complete factorization of x^4+1\"\>", 
+   ",", "\<\"morphological opening\"\>", 
+   ",", "\<\" arc-length of the curve (x,y,z)=(2cos(t), 2sin(t),t) from 0 to \
+Pi/3\"\>", ",", "\<\"T?square fractal\"\>", 
+   ",", "\<\"curve length of z=ln(sec(x)) on the interval x=0 to x=pi/4\"\>", 
+   ",", "\<\"H?fractal\"\>", ",", "\<\"julia set z->z4+1\"\>", 
+   ",", "\<\"time to hack the password qwerty12#$5\"\>", 
+   ",", "\<\"P xor Q xor R\"\>", 
+   ",", "\<\"geomagnetism Oslo on 12 Feb 2007\"\>", 
+   ",", "\<\"SAS 3 60deg 4\"\>", 
+   ",", "\<\"Which pitcher had the most strikeouts thrown in 2005?\"\>", 
+   ",", "\<\"self?capacitance of two identical spheres in contact\"\>", 
+   ",", "\<\"highest US military bases in Germany\"\>", 
+   ",", "\<\"e^(-(x-?)^2/(2 ?^2))/(sqrt(2 ?) ?)\"\>", 
+   ",", "\<\"factors 185-341x+183*y*x2-27x3*y3\"\>", 
+   ",", "\<\"?y ?x (not L(x,y)\"\>", 
+   ",", "\<\"5-bead necklaces with red, green, blue\"\>", 
+   ",", "\<\"the area under the straight line y=3x+1 from 1 to 2\"\>", 
+   ",", "\<\"charcoal effect\"\>", 
+   ",", "\<\"SphericalHankelH2[1, 3+i] to 50 digits\"\>", 
+   ",", "\<\"20? Vertical\"\>", ",", "\<\"&#42;\"\>", 
+   ",", "\<\"convert 1/6 to percent\"\>", ",", "\<\"plot x=3, y=3/2\"\>", 
+   ",", "\<\"geogravity in Seattle\"\>", ",", "\<\"earthquakes Asia\"\>", 
+   ",", "\<\"3?dimensional random walk\"\>", 
+   ",", "\<\"earthquakes near Tokyo\"\>", ",", "\<\"EGF(n?,n,x)\"\>", 
+   ",", "\<\"ExponentialPowerDistribution[2,?,?]\"\>", 
+   ",", "\<\"a=40? B=40? solve\"\>", 
+   ",", "\<\"roll strictly between 20 and 30 with 4 octahedral dice\"\>", 
+   ",", "\<\"residue z^-1\"\>", ",", "\<\"integrate x^2 sin(x) dx\"\>", 
+   ",", "\<\"x^1 fit {{1.3, 2.2}, {2.1, 5.8}, {3.7, 10.2}, {4.2, 11.8}}\"\>", 
+   ",", "\<\"? of [1,3,0.2;1/3,1,1/7;5,7,1]\"\>", 
+   ",", "\<\"plot (((x+3 pi)mod 2 pi)-pi)\"\>", 
+   ",", "\<\"magnetizable spherical shell in a magnetic field\"\>", 
+   ",", "\<\"2x^3-10x^2-12x factor completely\"\>", ",", "\<\"1/(12+7i)\"\>", 
+   ",", "\<\"factor 10000 as gaussian integer\"\>", 
+   ",", "\<\"simplifing square root of 144\"\>", 
+   ",", "\<\"Longest NFL game in 2011\"\>", 
+   ",", "\<\"(1/2 - 1/3) / (1/4 + 1/5)\"\>", 
+   ",", "\<\"diameter of an N drill\"\>", 
+   ",", "\<\"probabilities for the chi?squared distribution\"\>", 
+   ",", "\<\"residues of 1/sin(pi*x) at x = 1\"\>", 
+   ",", "\<\"E augmented\"\>", ",", "\<\"GACTAGCGATC\"\>", 
+   ",", "\<\"number of derangements on n elements\"\>", 
+   ",", "\<\"differentiate erf(t)^2 wrt t\"\>", 
+   ",", "\<\"Refine [(x^3 ? 1)/(x^2 ? 1) , x = 10]\"\>", 
+   ",", "\<\"earthquakes Mexico\"\>", ",", "\<\"-2 < x ? 5\"\>", 
+   ",", "\<\"trigonal Sch?nflies\"\>", ",", "\<\"plot x^2+y^2=1, x=y+1\"\>", 
+   ",", "\<\"parsons code a a# b c c# d e\"\>", 
+   ",", "\<\"heaviest vacuum sealers\"\>", ",", "\<\"earthquakes CA 1994\"\>",
+    ",", "\<\"20? slope\"\>", 
+   ",", "\<\"total debt per student in US states\"\>", 
+   ",", "\<\"top-hat transform\"\>", ",", "\<\"6x^(3/5)?7x^(6/5) cusp\"\>", 
+   ",", "\<\"plot xy=1 and plot xy=2\"\>", 
+   ",", "\<\"gravity acceleration at 61?29?53?N, 023?45?39?E\"\>", 
+   ",", "\<\"area under x2^(x+2) for-4?x?0\"\>", 
+   ",", "\<\"21.80144366645\"\>", ",", "\<\"residuum of tan at pi/2\"\>", 
+   ",", "\<\"Koch anti?snowflake\"\>", 
+   ",", "\<\"price of electricity in Illinois\"\>", 
+   ",", "\<\"can 56 things make a tetrahedral shape?\"\>", 
+   ",", "\<\"Euler axis 20 degrees, -10 degrees, 15 degrees\"\>", 
+   ",", "\<\"most expensive shredders\"\>", 
+   ",", "\<\"plot squarewave[x] from 0 to 10\"\>", 
+   ",", "\<\" arc-length of the curve {y(t)=sin(t),x(t)=cos(t)}\"\>", 
+   ",", "\<\"u umlaut\"\>", ",", "\<\"6-letter key\"\>", 
+   ",", "\<\" length of the curve segment y=x^2 between x=0 and x=1\"\>", 
+   ",", "\<\"3?x\"\>", ",", "\<\"integrate 1/sqrt(1-u^4)\"\>", 
+   ",", "\<\"factor the equation x^6-6x+1, modulus 3\"\>", 
+   ",", "\<\"{2,2,4,5,6,7,9} as doubles\"\>", ",", "\<\"height near NYC\"\>", 
+   ",", "\<\"exponential equation that plots the coordinates (6,6) (12,24) \
+(18,48)\"\>", ",", "\<\"random permutation on 15 elements\"\>", 
+   ",", "\<\"x^y graph\"\>", ",", "\<\"d^4/dt^4(Ai(t))\"\>", 
+   ",", "\<\"orthorhombic Hermann?Mauguin\"\>", 
+   ",", "\<\"343 to Roman numerals\"\>", ",", "\<\"seven?segment display\"\>",
+    ",", "\<\"normal to 3x^2-2xy+y^2=1 at x=0, y=1\"\>", 
+   ",", "\<\"third cousin's great-grandson\"\>", 
+   ",", "\<\"PartitionsP[x] from 0 to 100\"\>", 
+   ",", "\<\"which first baseman had the most home runs in 1998\"\>", 
+   ",", "\<\"pack 12 triangles of side 5mm in a triangle\"\>", 
+   ",", "\<\"magnetic memristance\"\>", 
+   ",", "\<\"limit of x^2+2 as x goes to 4\"\>", ",", "\<\"3tuples\"\>", 
+   ",", "\<\" arclength of (x=t,z=t^2) from 2 to 6\"\>", 
+   ",", "\<\"Simplify[x^5 + 2 x^3 y + x y^2, x^2 + y == z]\"\>", 
+   ",", "\<\"1/2 ?m to wavelength\"\>", ",", "\<\"MRK\"\>", 
+   ",", "\<\"hexagonal Hermann?Mauguin\"\>", 
+   ",", "\<\"quintic fit {1.1, 1.3,1.4,1.2,1.1}\"\>", 
+   ",", "\<\"generate 12 length-8 simple passwords\"\>", 
+   ",", "\<\"Which NFL team had the most dropped passes in 2010?\"\>", 
+   ",", "\<\"pitch set class midi 61 62 64 68 69 70\"\>", 
+   ",", "\<\"residuum (1/(1+z^2))\"\>", ",", "\<\"8.19073?10^-13 in fg\"\>", 
+   ",", "\<\"Sierpi?ski curve\"\>", 
+   ",", "\<\"julia set z -> z^3 + c, c -> 3 + 2i\"\>", 
+   ",", "\<\"Gamma(2, 3.0)\"\>", 
+   ",", "\<\"curvature of {x(t)=t, y(t)=t^4, z(t)=t^2, w(t)=t} at t=1\"\>", 
+   ",", "\<\"factor: 27y^3+18y^2-81y\"\>", 
+   ",", "\<\"5th hexagonal number\"\>", ",", "\<\"3-tuples (22,2,234)\"\>", 
+   ",", "\<\"sqrt 1801\"\>", ",", "\<\"Avatar box office receipts\"\>", 
+   ",", "\<\"probability that x^2>2 given that x>1, x~standard normal\"\>", 
+   ",", "\<\"21? 25? 21? N, 39? 49? 34.25? E antipode\"\>", 
+   ",", "\<\"20 character passwords\"\>", ",", "\<\"?(120)\"\>", 
+   ",", "\<\"antipode of 77?51?S 166?40?E\"\>", ",", "\<\"GE directors\"\>", 
+   ",", "\<\"graph 4x + y^2 = 12\"\>", 
+   ",", "\<\"1927508279017230597 + 278789278723478925\"\>", 
+   ",", "\<\"53.3478? N, 6.2597? W\"\>", ",", "\<\"tallest dog breeds\"\>", 
+   ",", "\<\"champerowne number[?]\"\>", 
+   ",", "\<\"julia set z -> z^3 + c, c -> -1 + i\"\>", 
+   ",", "\<\"1000th digit of cos(30?)+cos(50?)+2 cos(40?)\"\>", 
+   ",", "\<\"graph sqrt(x^2 + y^2)\"\>", ",", "\<\"residuum 1/(x^2(x-1)\"\>", 
+   ",", "\<\"in factor form polynomial x^3-5x^2+16-30\"\>", 
+   ",", "\<\"factor 8 x^5+2x^3-x^2-11 complex\"\>", 
+   ",", "\<\"time for 90? at 10000rad/s^2\"\>", ",", "\<\"20\.89 slope\"\>", 
+   ",", "\<\"residues of 1/(x^2+1)\"\>", 
+   ",", "\<\"r=sqrt(sin(2theta)) from 0 to pi/2\"\>", 
+   ",", "\<\"$10.25/hr\"\>", ",", "\<\"d(x^2)/dx\\\" \"\>", 
+   ",", "\<\"detect zero crossings\"\>", 
+   ",", "\<\"sound speed 300?k 2atm\"\>", 
+   ",", "\<\"plot y+1=x^2, 3y-1=-2x+5, y^2<=x+3\"\>", 
+   ",", "\<\"darker image\"\>", ",", "\<\"largest exoplanets by radius\"\>", 
+   ",", "\<\"ocr\"\>", 
+   ",", "\<\"radius of curv. of {a sin(t), a t} at t=1\"\>", 
+   ",", "\<\"french keyboard, arabic keyboard\"\>", 
+   ",", "\<\"(t^3+10t^2+32t+32)/(t^2+2t-15)\"\>", 
+   ",", "\<\"pairs of (2,3,5,6)\"\>", ",", "\<\"MMXVII\"\>", 
+   ",", "\<\"MIDI notes 69 70 71\"\>", ",", "\<\"speed of sound at 30?C\"\>", 
+   ",", "\<\"?(7)\"\>", ",", "\<\"7 {1, 0, -2, 1} - 4 {2, -1, 1, -1}\"\>", 
+   ",", "\<\"invent some passwords\"\>", 
+   ",", "\<\"InverseBetaRegularized(0.9, ?, ?)\"\>", 
+   ",", "\<\"poster effect\"\>", 
+   ",", "\<\"(0.8333...)(0.1111...)/(0.22111111...)\"\>", 
+   ",", "\<\"?x?y x\"\>", ",", "\<\"derivative of x^4 + 9x^3 + 7x \.96 2\"\>",
+    ",", "\<\"cross?stitch curve\"\>", ",", "\<\"DCXCV - 25\"\>", 
+   ",", "\<\"period of f(x,y)=sin(x)*cos(3y)\"\>", 
+   ",", "\<\"int e^t sin(5t) dt\"\>", 
+   ",", "\<\"8 character password with symbols\"\>", ",", "\<\"2009!\"\>", 
+   ",", "\<\"residuum(tan, pi/2)\"\>", 
+   ",", "\<\" rectify the curve y=x^2 from (1,1) to (2,4)\"\>", 
+   ",", "\<\"trefoil Alexander?Briggs notation\"\>", 
+   ",", "\<\"embossing effect\"\>", ",", "\<\"uncle's uncle's son\"\>", 
+   ",", "\<\"?x, y\"\>", 
+   ",", "\<\"Determine the length of the curve segment (2/3)((y-1)^(3/2)) \
+between 1<y<4\"\>", ",", "\<\"graph 5y = 2x\"\>", 
+   ",", "\<\"add up the digits of 2567345\"\>", 
+   ",", "\<\"(1 + tan(x))/(1 ? tan(x)) = (cos(x) + sin(x))/(cos(x) ? \
+sin(x))\"\>", ",", "\<\"3tuples 1,2,3,4\"\>", 
+   ",", "\<\"Julia set of the function f(z)=z3-1\"\>", 
+   ",", "\<\"Peano?Gosper curve\"\>", ",", "\<\"sum x^k/k!, k=0 to +oo\"\>", 
+   ",", "\<\"humidity ratio at 90? and 70%\"\>", ",", "\<\"action\"\>", 
+   ",", "\<\"fuel cost 50 km, 10 kmpl, \.80 1.3/l\"\>", 
+   ",", "\<\"?(x^2+2)dx from 2 to 4\"\>", 
+   ",", "\<\"skew normal distribution ?=0 ?=1 ?=2\"\>", 
+   ",", "\<\"CylindricalDecomposition[x^3  -x + y^3 + y^2 > 2 ? x^2 + y^2  < \
+1, {x,y}]\"\>", 
+   ",", "\<\"regress 12,11,14,16,17,12,13,14,15 on 3,4,6,7,2,5,3,7,8\"\>", 
+   ",", "\<\"min filter\"\>", 
+   ",", "\<\"english keyboard vs chinese keyboard\"\>", 
+   ",", "\<\"x^2+0.667x+0.994 residue\"\>", 
+   ",", "\<\"44/(1+m)+27/?(1+m)?^2 +19/?(1+m)?^3 +15/?(1+m)?^4 =80\"\>", 
+   ",", "\<\"linear codes 31,26,3\"\>", 
+   ",", "\<\"Is sqrt(1-1/5+1/9) a rational number?\"\>", 
+   ",", "\<\"odd compositions of 24\"\>", ",", "\<\"Mohs 6.5\"\>", 
+   ",", "\<\"l=1km d=1.2mm ?=?\"\>", ",", "\<\"d/dz am(z, m)\"\>", 
+   ",", "\<\"Euler parameters 20 degrees, -10 degrees, 15 degrees\"\>", 
+   ",", "\<\"fuel cost 50 km, 10 kmpl, ? 1.3/l\"\>", 
+   ",", "\<\"length of the graph of y=x^(1/3)-x between x=-1 and x=1\"\>", 
+   ",", "\<\"cyclic code 36,4\"\>", 
+   ",", "\<\"cylinder, radius=3, height=4\"\>", 
+   ",", "\<\"8.91?10^-9 ton/mm^3 weight\"\>", 
+   ",", "\<\"NFL team with the most sacks in 1990\"\>", 
+   ",", "\<\"Johnson?Nyquist noise voltage\"\>", 
+   ",", "\<\"50,000 euros/year\"\>", 
+   ",", "\<\"sum (3/4)^j, j=0..infinity\"\>", ",", "\<\"?x ?x P(x)\"\>", 
+   ",", "\<\"granddaughter\"\>", 
+   ",", "\<\"SphericalHarmonicY[4, 4, ?, ?]\"\>", 
+   ",", "\<\"expand (x^5 - x^11) * [?(n = 0 to 25) C(n+2, n) x^n] * [?(n = 0 \
+to 25) x^(5n)]\"\>", 
+   ",", "\<\"Hardy?Weinberg Law given dominant homozygote frequency\"\>", 
+   ",", "\<\"residues of 36\"\>", ",", "\<\"silver ratio\"\>", 
+   ",", "\<\"residue of z*sin[z]/(z^2 + 4) at 2i with respect to z\"\>", 
+   ",", "\<\"p?\[Not]q\"\>", 
+   ",", "\<\" arclength of {x(t),y(t)}={2cos(t), 2sin(t)} from 0 to 3 Pi\"\>",
+    ",", "\<\"speed of sound at 15?C\"\>", 
+   ",", "\<\"10 shares msft + 20 shares google\"\>", 
+   ",", "\<\"distance between 70?06'52.2\\\"N 22?06'36.0\\\"W and \
+70?09'30.9\\\"N 54?50'56.2\\\"W\"\>", ",", "\<\"987 in hex\"\>", 
+   ",", "\<\"lim  (x, y)?(1, 0)  ln  1 + y2 x2 + xy\"\>", 
+   ",", "\<\"satellites over Chicago\"\>", 
+   ",", "\<\"(2*3 + 3*4 + 4*5) / (10 - 5)\"\>", 
+   ",", "\<\"(1 + tan(x))/(1 \.96 tan(x)) = (cos(x) + sin(x))/(cos(x) \.96 \
+sin(x))\"\>", ",", "\<\"electric charge density of a charged ellipsoid\"\>", 
+   ",", "\<\"anti?triangle ice fractal\"\>", 
+   ",", "\<\"factor x^12 - y^12\"\>", 
+   ",", "\<\"plane through (0, 1, 0), (5, 6, 7), and (6, 7, 8)\"\>", 
+   ",", "\<\"greedy code 3,3\"\>", ",", "\<\"Hardy?Weinberg law\"\>", 
+   ",", "\<\"48b2 \.97 16b\"\>", 
+   ",", "\<\" Determine the length of the curve given by the following 1 + x \
+from 0 to 1\"\>", ",", "\<\"julia set z -> z^3 + c, c -> .5 - i\"\>", 
+   ",", "\<\"Fidelity Magellan\"\>", 
+   ",", "\<\"duration?based hedge ratio\"\>", ",", "\<\"sqrt(13)\"\>", 
+   ",", "\<\"shift cot (3 x - 3/8 ?) -9\"\>", ",", "\<\"log?(z)\"\>", 
+   ",", "\<\"waning moon\"\>", ",", "\<\"5^5^5\"\>", 
+   ",", "\<\"area between the graphs of x=8y^2-8y^3 and x=6y^2-6y from 0 to 1\
+\"\>", ",", \
+"\<\"NMaximize[{.180x+.200y+.300z,2500x+3000y+4000z?70&&x?8000&&y?12000&&z?\
+6000},{x,y,z}]\"\>", ",", "\<\"(110110 base 2) / (11 base 2)\"\>", 
+   ",", "\<\"Dbmin6\"\>", ",", "\<\"Julia set associated to z?z3-z2+z-1\"\>", 
+   ",", "\<\"earthquakes Mexico 1985\"\>", ",", "\<\"dgeom( 2 ? 1, 0.6)\"\>", 
+   ",", "\<\"hexagon, perimeter=100\"\>", ",", "\<\"Dow Jones\"\>", 
+   ",", "\<\"find the area of the region bounded by the line y=1/(2x) and by \
+the parabola y^2=8-x.\"\>", 
+   ",", "\<\"170141183460469231731687303715884105727\"\>", 
+   ",", "\<\"Intel vs AMD\"\>", ",", "\<\"Lienard-Wiechert potential\"\>", 
+   ",", "\<\"16! ?-1 (mod17)\"\>", 
+   ",", "\<\"gaussian blur monkey image radius x\"\>", 
+   ",", "\<\"Mass\.96luminosity relation\"\>", ",", "\<\"XLVIII + LXXII\"\>", 
+   ",", "\<\"2nd derivative sin(x)\\\"\"\>", 
+   ",", "\<\" arc length of polar curve r=t+sin(t-2)/t from t=.2 to t=6\"\>", 
+   ",", "\<\"length of the graph of y=sqrt(x) between x=-1 and x=1\"\>", 
+   ",", "\<\"(3+(1-sqrt(2))/(1+sqrt(2)))^(1/3)\"\>", 
+   ",", "\<\"ExponentialPowerDistribution[5, ?, ?]\"\>", 
+   ",", "\<\"line, slope=1/5, y-intercept=3\"\>", ",", "\<\"3.14159265\"\>", 
+   ",", "\<\"squarefree factorisation of x^5-x^3-x^2+1\"\>", 
+   ",", "\<\"ellipse with equation (x-2)^2/25 + (y+1)^2/10 = 1\"\>", 
+   ",", "\<\"Pascal's triangle mod 3\"\>", 
+   ",", "\<\"quintuplet {1,2,4,5,7,22,55,66}\"\>", ",", "\<\"diff(?x)\"\>", 
+   ",", "\<\"solve x^2=13-x\"\>", ",", "\<\"7^3\"\>", ",", "\<\"?(3)\"\>", 
+   ",", "\<\"simplify Sqrt[x^2+1] where x = sinh[t]\"\>", 
+   ",", "\<\"total of 8 dice between 28 and 35\"\>", 
+   ",", "\<\"speed of sound at 25?C\"\>", ",", "\<\"residuum sin(pi*z)\"\>", 
+   ",", "\<\"plot y=e^x and y=x+1 and y=log[x]\"\>", 
+   ",", "\<\"julia set z -> z^3 + c, c = .5 + i\"\>", ",", "\<\"binarize\"\>",
+    ",", "\<\"morphological closing\"\>", 
+   ",", "\<\"plot (1/(1+x))^(1/x)=0.6 between zero and 3\"\>", 
+   ",", "\<\"factors 4 5 6 7 1 2 4 5 6\"\>", ",", "\<\"13 * 0.076923..\"\>", 
+   ",", "\<\"? = 58\[Degree] what is ?\"\>", ",", "\<\"solve x^3=-1\"\>", 
+   ",", "\<\"derivative of x^4 + 9x^3 + 7x ? 2\"\>", 
+   ",", "\<\"magnitude of 16 ?m/s\"\>", ",", "\<\"New Mexico lottery\"\>", 
+   ",", "\<\"Schwinger electric field strength\"\>", 
+   ",", "\<\"LogicalExpand  ?(p ^ q)\"\>", 
+   ",", "\<\"julia set z -> z^3 + c where c -> .5 + i\"\>", 
+   ",", "\<\"topography near boston, MA\"\>", 
+   ",", "\<\"rigid body attitude reorientation maneuver\"\>", 
+   ",", "\<\" arclength of (t^2,sin(t)) from (1,sin(1)) to (2^2,sin(2))\"\>", 
+   ",", "\<\"expand (sinx + 1)^2\"\>", 
+   ",", "\<\"make up a pronounceable password\"\>", 
+   ",", "\<\"cos*2?x//6 = 2root(3)/2\"\>", ",", "\<\"2^28 ? 1 (mod 29)\"\>", 
+   ",", "\<\"CGTAGCTGATCG\"\>", ",", "\<\"MLB team with the most walks\"\>", 
+   ",", "\<\"area between x=y^2-4y and x=2y-y^2\"\>", 
+   ",", "\<\"Butler County OH population as a percent of OH population\"\>", 
+   ",", "\<\"electric field of a point charge\"\>", 
+   ",", "\<\"US average price monthly mortgage payment\"\>", 
+   ",", "\<\"last pro baseball game with more than 9 stolen bases\"\>", 
+   ",", "\<\"simplify((x-1)(x+1)(x^2+1)+1)\"\>", 
+   ",", "\<\" rectify the curve x^2 from z=1 to 2\"\>", 
+   ",", "\<\"150 USD + 80 EUR\"\>", 
+   ",", "\<\"convert tiger image to grayscale\"\>", 
+   ",", "\<\"fit to {1.1, 1.3,1.4,1.2,1.1} with a quadratic polynomial\"\>", 
+   ",", "\<\"second cousin once removed\"\>", 
+   ",", "\<\"area between the curves y = x^2 -9 x^2 + 21 x and y = -x^3 + 10 \
+x^2 - 21 x\"\>", ",", "\<\"color separate Camelotia borealis image\"\>", 
+   ",", "\<\"earthquakes near Lima\"\>", 
+   ",", "\<\"length of the graph of (x,v)=(sqrt(x),x) between x=-1 and \
+x=1\"\>", ",", "\<\"B=50?;b=48?\"\>", 
+   ",", "\<\"Hardy?Weinberg Law given recessive allele frequency\"\>", 
+   ",", "\<\"ISBN 978-0-691-11880-2\"\>", 
+   ",", "\<\"quartic fit {{1.1, 1.3,1.4,1.2,1.1}\"\>", 
+   ",", "\<\"circle radius 3 cm\"\>", 
+   ",", "\<\"Raoult?s law benzene, toluene\"\>", 
+   ",", "\<\"expand (x-1)^6\"\>", ",", "\<\"plot x/sin(y)\"\>", 
+   ",", "\<\"magnetic flux quantum\"\>", 
+   ",", "\<\"(1 - 1/3 + 1/5) / (1/2 - 1/4 + 1/6)\"\>", 
+   ",", "\<\"cyclic code 31,11,10\"\>", ",", "\<\"A factor of 18x^2 - 32\"\>",
+    ",", "\<\"curvilinear distance y=x^2/(1+x) between x=0 and 4?\"\>", 
+   ",", "\<\"right limit of x^2 as x? 0\"\>", 
+   ",", "\<\"1?dimensional random walk\"\>", ",", "\<\"-3?43(mod 23)\"\>", 
+   ",", "\<\"normalized latin squares of size 4\"\>", 
+   ",", "\<\"alpha == QBinomial[n, m, q] ~~ -1.602177?10^-19\"\>", 
+   ",", "\<\"plot y=x^2, y=-2x+5, y=x^3+1\"\>", 
+   ",", "\<\" arc-length of the curve (y(t)=cos(t),x(t)=sin(t))\"\>", 
+   ",", "\<\"top grossing movies by Wes Anderson\"\>", ",", "\<\"C, Eb\"\>", 
+   ",", "\<\"135/216 - 12/25\"\>", 
+   ",", "\<\"self?inductance of two parallel wires\"\>", 
+   ",", "\<\"deepest oil rig\"\>", 
+   ",", "\<\"lim (sin x - x)/x^3 as x tends to 0\"\>", 
+   ",", "\<\" arclength of (y(t)=sin(t),x(t)=cos(t)) from 2 to 3\"\>", 
+   ",", "\<\"10 49 combinations\"\>", ",", "\<\"albanian keyboard\"\>", 
+   ",", "\<\"last new moon\"\>", ",", "\<\"$2400 + 15%\"\>", 
+   ",", "\<\"-10?sqrt(125)/5\"\>", ",", "\<\"plot sqrt(x* y)\"\>", 
+   ",", "\<\" arclength of (x(t),y(t))=(t,t^2) from 2 to 6\"\>", 
+   ",", "\<\"common multiples of 10, 25\"\>", 
+   ",", "\<\"triplets in {2,3,5,44,54}\"\>", 
+   ",", "\<\"cost of 300 kWh of electricity in Minnesota\"\>", 
+   ",", "\<\"(((x + 4)^6 + y) * (x + y + z))//Expand\"\>", 
+   ",", "\<\"the moon\"\>", ",", "\<\"qcos(?q/4)\"\>", 
+   ",", "\<\"fit 7,8,1,1,4,6,7,1\"\>", 
+   ",", "\<\"golay code 23 errors detectable\"\>", 
+   ",", "\<\"12! / (4! * 6! * 2!)\"\>", 
+   ",", "\<\"number of involutions on n elements\"\>", 
+   ",", "\<\"FourierSequenceTransform[(((sin((pi/4)*n))/(pi*n))*((-1)^n)),n,?]\
+\"\>", ",", "\<\"residue of -1/(z-2)^3 at 2\"\>", 
+   ",", "\<\"solve x Exp[x]+Sin[-Cos[x]]\"\>", 
+   ",", "\<\"order 6 latin square\"\>", 
+   ",", "\<\" arc-length of the curve (x(t),y(t),z(t),w(t),v(t))=(t,t,t,t,t) \
+from 0 to 1\"\>", ",", "\<\"plot 2(x-2)=y^4+2 and 3(x^2-3)=y+3\"\>", 
+   ",", "\<\"using Newton's method find (53)^(1/3)\"\>", 
+   ",", "\<\"?12 ? ?108 / 12\"\>", 
+   ",", "\<\"find the area enclosed by the curves y=3-x^2, y = e^(-x),x=0 and \
+x =1\"\>", ",", "\<\"parabola with focus (3,4) and vertex (-4,5)\"\>", 
+   ",", "\<\"Rudin?Shapiro curve\"\>", 
+   ",", "\<\"university with the largest enrollment\"\>", 
+   ",", "\<\"((z^2-1)/(2*i*z))^2*(1/(i*z))*1/(5+2*(z+1/z)) residues\"\>", 
+   ",", "\<\" arc length of y=x^2 from y=1 to y=3\"\>", 
+   ",", "\<\"invent 2 15 character printable ascii pwds\"\>", 
+   ",", "\<\"3rd row of gaelic keyboard\"\>", ",", "\<\"200 statV\"\>", 
+   ",", "\<\" arclength of (x,y)=(Sqrt[t],Sin[t]) from (1,sin(1)) to \
+(Sqrt[2],sin(2))\"\>", ",", "\<\"quadratic 7,8,9,2,1,1,2\"\>", 
+   ",", "\<\"?(1)\"\>", 
+   ",", "\<\"Does the set of perfect numbers contain 18?\"\>", 
+   ",", "\<\"Which QB had the most passing yards in 2005?\"\>", 
+   ",", "\<\"eccentricity of an ellipse with semiaxes 12,1\"\>", 
+   ",", "\<\"roll 10 the hard way in craps\"\>", 
+   ",", "\<\"energy, momentum\"\>", 
+   ",", "\<\"largest nuclear bomb detonated by the US\"\>", 
+   ",", "\<\"factor x^6-1\"\>", 
+   ",", "\<\"what are the residues of f(z)=z/(1-cos(z))?\"\>", 
+   ",", "\<\"x+y?0\"\>", 
+   ",", "\<\" arclength of (y=sint,x=t^2) from -4 to 6\"\>", 
+   ",", "\<\"?(0)\"\>", ",", "\<\"cross polytope\"\>", 
+   ",", "\<\" arclength of {z(t),x(t)}={t^2,cos(t)} from 5 to 6\"\>", 
+   ",", "\<\"circle of radius 2 with center (0,-2)\"\>", 
+   ",", "\<\"Merck, GSK\"\>", ",", "\<\"angle 120? is\"\>", 
+   ",", "\<\"B?spline\"\>", 
+   ",", "\<\"center of curvature of y=e^(-x^2) at x=0\"\>", 
+   ",", "\<\"80 wheatstones\"\>", ",", "\<\"length 8 passwords\"\>", 
+   ",", "\<\"at least 3 eights in 10 cards\"\>", 
+   ",", "\<\"Worst kicker by extra points percentage in 1985\"\>", 
+   ",", "\<\"Titanic box office with inflation\"\>", 
+   ",", "\<\"arclength of y=ln(sec(x)) on x=0 to x=pi/4\"\>", 
+   ",", "\<\"?????512\"\>", ",", "\<\"allocations 20GHz Japan\"\>", 
+   ",", "\<\"?(2)\"\>", ",", "\<\"periodic fit to {1.1, 1.3,1.4,1.2,1.1}\"\>",
+    ",", "\<\"Rockwell c hardness number 70\"\>", 
+   ",", "\<\"Exists[x,ForAll[y,(Implies(?P(y,y),P(x,y)))]]\"\>", 
+   ",", "\<\"length of the graph of (y,z)=(sqrt(x),t) between x=-1 and \
+x=1\"\>", ",", "\<\"the square root of sixty-four\"\>", 
+   ",", "\<\"50% relative humidity at 17?C; heat moist air to 21?C\"\>", 
+   ",", "\<\"3-tuples 1,2,3,4\"\>", 
+   ",", "\<\"factor 2 x^5-19 x^4+58 x^3-67 x^2+56 x-48 complex\"\>", 
+   ",", "\<\"#20 drill bit\"\>", 
+   ",", "\<\"distance  between x=0 and 4 along y=x^2/(1+x)\"\>", 
+   ",", "\<\"Prove that  d/dx (csc x) = ?csc x cot x.\"\>", 
+   ",", "\<\"time-dependent charge distribution: electric potential\"\>", 
+   ",", "\<\"p ? q ? \[Not]q\"\>", 
+   ",", "\<\"binomial expansion of (x+1/2x)^6+(x-1/2x)^6\"\>", 
+   ",", "\<\"2500 euros\"\>", ",", "\<\"circle, diameter=10\"\>", 
+   ",", "\<\"simplify tan^2 x + 1 assuming x is complex\"\>", 
+   ",", "\<\" arclength of the curve {y=sin(t),x=cos(t)} from 0 to 3\"\>", 
+   ",", "\<\" arc length of x=y^2 from x=2 to x=55\"\>", 
+   ",", "\<\"UPC 02190850973\"\>", 
+   ",", "\<\"logfit to {1.1, 1.3,1.4,1.2,1.1}\"\>", 
+   ",", "\<\"Determine the length of y=ln(sec(x)) between 0<x<Pi/4\"\>", 
+   ",", "\<\"factor x^4+1 over the real numbers\"\>", 
+   ",", "\<\"antipode of 44?45'19.03\\\"N 108?45'20.27\\\"W\"\>", 
+   ",", "\<\"lottery\"\>", ",", "\<\"sum 1/(1+n^2), n=-oo to +oo\"\>", 
+   ",", "\<\"biggest libraries in Texas\"\>", 
+   ",", "\<\"distance between 78\[Degree] 11? 0? N, 73\[Degree] 3? 0? W and \
+81\[Degree] 26? 25? N, 11\[Degree] 29? 22? W\"\>", 
+   ",", "\<\"plot x=sin 2t, y=sin 3t\"\>", 
+   ",", "\<\"quadratic fit {1.1, 1.3,1.4,1.2,1.1}\"\>", 
+   ",", "\<\"solve residue(2/(z-2))\"\>", 
+   ",", "\<\"pack 18 triangles in a circle of radius 10\"\>", 
+   ",", "\<\"165 million\"\>", ",", "\<\"plot x=3\"\>", ",", "\<\"p??q\"\>", 
+   ",", "\<\"vibration strain gauge factor\"\>", 
+   ",", "\<\"simplify fully (x+1)(x+1)\"\>", 
+   ",", "\<\"standard deviation filter\"\>", 
+   ",", "\<\"Heisenberg uncertainty principle ?x=(0.0954929659)nm\"\>", 
+   ",", "\<\"graph f(x,y)=x+y+1/x+4/y\"\>", 
+   ",", "\<\"plot y+1=x^2, 3y-1=-2x+5, y^2=x^3+1\"\>", 
+   ",", "\<\"15% of 80\"\>", 
+   ",", "\<\"factor the following polynomial:x2-20x+36\"\>", 
+   ",", "\<\"cyclic code 24,2 golay code 23\"\>", 
+   ",", "\<\" curve-length of the curve x^2 from (1,1) to (3,9)\"\>", 
+   ",", "\<\"is a&&?a satisfyable?\"\>", 
+   ",", "\<\"the area between x^2+10 and 4-x^2 between x=-5 and x=5\"\>", 
+   ",", "\<\"expand (a+b^6\"\>", ",", "\<\"Julia set J(z?z3-1)\"\>", 
+   ",", "\<\"bilateral filter\"\>", 
+   ",", "\<\"write 340 as a product of prime numbers\"\>", 
+   ",", "\<\"Find the area between y=x and y=-x and y=4\"\>", 
+   ",", "\<\"cubic Hermann?Mauguin\"\>", 
+   ",", "\<\"invent a password with no special characters\"\>", 
+   ",", "\<\"Where am I?\"\>", ",", "\<\"?(8)\"\>", 
+   ",", "\<\"one?sheeted hyperboloid\"\>", 
+   ",", "\<\"clustering components\"\>", ",", "\<\"e^x cos(x^2)\"\>", 
+   ",", "\<\"solve (x=y^5-3y^3+5y+1,y)\"\>", 
+   ",", "\<\"chance 3 people share a birthday\"\>", 
+   ",", "\<\"2400 oersted\"\>", 
+   ",", "\<\"plot log(x)/log(y), x=0..1,y=0..1\"\>", 
+   ",", "\<\"julia set z -> z^3 + c, c -> 1 + 4*I\"\>", 
+   ",", "\<\"solve A = 51?, b = 11, c = 7\"\>", 
+   ",", "\<\" arclength of (y=sint,x=t^2) from 2 to 6\"\>", 
+   ",", "\<\"is the 6th Bernoulli number rational?\"\>", 
+   ",", "\<\"40.15?N, 76.72?W antipode\"\>", 
+   ",", "\<\"plot y=x+i,y=x^2+i^3\"\>", 
+   ",", "\<\"factor square free x^5-x^3-x^2+1\"\>", 
+   ",", "\<\"factor x^4-1 over Z\"\>", ",", "\<\"F# A C D\"\>", 
+   ",", "\<\"c=6? ft\"\>", 
+   ",", "\<\"Hardy?Weinberg Law given heterozygote frequency\"\>", 
+   ",", "\<\"partitions of 138 into 6 parts\"\>", 
+   ",", "\<\"factor the expression. 8x^2+24x\"\>", 
+   ",", "\<\"force, mass, acceleration\"\>", 
+   ",", "\<\"separate color channels\"\>", 
+   ",", "\<\"best fit 7,8,1,1,4,6,7,1\"\>", 
+   ",", "\<\"Refine [(x^3 \.96 1)/(x^2 \.96 1) , x = 10]\"\>", 
+   ",", "\<\"nine point circle of triangle (1,1)(2,4)(3,3)\"\>", 
+   ",", "\<\"?(5)\"\>", 
+   ",", "\<\"path length along y=x^2/(1+x) between x=0 and 4?\"\>", 
+   ",", "\<\"energy, time, length, density\"\>", 
+   ",", "\<\"46? 47? 58?N, 019? 41? 02?E\"\>", 
+   ",", "\<\"divide((?x)-(1/(3?x))/((?x))\"\>", 
+   ",", "\<\"find the area between e^x and x axis between x=-1 and x=2\"\>", 
+   ",", "\<\"topography around nashville, TN\"\>", 
+   ",", "\<\"stationary points of  (0.5x??3xy+y?+0.5) ? z(3x?y?1)\"\>", 
+   ",", "\<\"-0.283882181415\"\>", ",", "\<\"least squares (1,2)\"\>", 
+   ",", "\<\"generate 12 length 8 passwords\"\>", 
+   ",", "\<\"derangements of  n\"\>", 
+   ",", "\<\"saddle points of 4xy?-2x?y-x\"\>", 
+   ",", "\<\"b2 \.96 12b = 7\"\>", ",", "\<\"gcd(36,10) * lcm(36,10)\"\>", 
+   ",", "\<\"create 10 word-based passwords\"\>", 
+   ",", "\<\"residue of (z^2-pi^2)/(cos(z)-1) in 0\"\>", 
+   ",", "\<\"plot (sin (sqrt(x^2+y^2)))/ sqrt(x^2+y^2)\"\>", 
+   ",", "\<\"invent an 8-symbol password with special characters\"\>", 
+   ",", "\<\"plot -x^2 plot x+1\"\>", 
+   ",", "\<\"Euler-Mascheroni constant to 1000 digits\"\>", 
+   ",", "\<\"create a word-based password\"\>", 
+   ",", "\<\"greek keyboard \\\"????\\\"\"\>", 
+   ",", "\<\"zeta(1/2 + 14.1347 i)\"\>", 
+   ",", "\<\"lim x->1 (x/(x-1))-(1/lnx)\"\>", 
+   ",", "\<\"?8 greater than or equal to ?5x + 2 > ?38\"\>", 
+   ",", "\<\"polynomialquotient [6x2 ? 3x ? 11,  3x ? 1]\"\>", 
+   ",", "\<\"limit (p sqrt(x+h) - p sqrt(x))/h as h goes to zero\"\>", 
+   ",", "\<\"poker hands\"\>", ",", "\<\"elevation around 48?E 14?N\"\>", 
+   ",", "\<\"P?pentomino 2 tiling\"\>", ",", "\<\"height at JFK\"\>", 
+   ",", "\<\"simplify e^(2 Pi x i) where x is an integer\"\>", 
+   ",", "\<\"length of the part of the curve y=x^2\"\>", 
+   ",", "\<\"invent 2 non-numeric passwords\"\>", 
+   ",", "\<\"tiffany blue sphere\"\>", 
+   ",", "\<\"unemployment rate of country with largest population\"\>", 
+   ",", "\<\"6 of 45 combinations\"\>", ",", "\<\"curvature of sin(x)\"\>", 
+   ",", "\<\"how far is it along y=x^2/(1+x) between x=0 and 4?\"\>", 
+   ",", "\<\"Prisoner?s Dilemma Payoff Matrix\"\>", 
+   ",", "\<\"? (-1.38629+1.38629 log(?))\"\>", 
+   ",", "\<\"Heisenberg uncertainty principle ?x=1nm\"\>", 
+   ",", "\<\"area between y=x^2 and x=y^2\"\>", 
+   ",", "\<\"partitions of 20, parts greater than 2\"\>", 
+   ",", "\<\"distinct permutations of {a,b,c,d}\"\>", 
+   ",", "\<\"plot sin(x)*e^y\"\>", ",", "\<\"MMVIII - 25\"\>", 
+   ",", "\<\"altitude near boston, MA\"\>", 
+   ",", "\<\"France electricity generation\"\>", ",", "\<\"?x?y(x+y?y+x)\"\>",
+    ",", "\<\"log (1+x^2)\"\>", ",", "\<\"major seventh\"\>", 
+   ",", "\<\"y\\\"(z) + sin(y(z)) = 0\"\>", 
+   ",", "\<\"What keys are on the top row of a Czech programmers \
+keyboard?\"\>", ",", "\<\"residuum of cos(z)/((z^2+1)(z^2+4)) at i\"\>", 
+   ",", "\<\"generator matrix of cyclic code 24,2\"\>", 
+   ",", "\<\"generate 12 length 8 simple passwords\"\>", 
+   ",", "\<\"derivative of cosx * sinx\"\>", ",", "\<\"cheapest guitars\"\>", 
+   ",", "\<\"movies with the highest production budget\"\>", 
+   ",", "\<\"connected components\"\>", 
+   ",", "\<\"index of (1 4 5)(2 3 6 7)\"\>", ",", "\<\"sqrt (3^2 + 4^2)\"\>", 
+   ",", "\<\"fifth root of 59049\"\>", 
+   ",", "\<\"2?dimensional random walk\"\>", 
+   ",", "\<\"topography near CDG\"\>", 
+   ",", "\<\" Determine the length of the curve given by the following \
+equations x = 3 sint, y = 3 cost , 0 < t < 2\"\>", 
+   ",", "\<\"African country with highest life expectancy\"\>", 
+   ",", "\<\"R = 3300 ?, L = 15 mH\"\>", 
+   ",", "\<\"compute the area btween y=|       x    | and y   =   x2  - \
+6\"\>", ",", "\<\"enthalpy\"\>", ",", "\<\"5x^2-11x+6 factored\"\>", 
+   ",", "\<\"d/dx-cos\"\>", ",", "\<\"ascii password\"\>", 
+   ",", "\<\"PolynomialQuotient [2x5 ? 7x4 ? 6,4x2 ? 6x + 8,x]\"\>", 
+   ",", "\<\" arclength of x=y=z from x=1 to x=2\"\>", 
+   ",", "\<\"Sierpi?ski arrowhead curve\"\>", 
+   ",", "\<\"sum of digits of 29225 in base 2\"\>", 
+   ",", "\<\"prime factors of 2^100\"\>", 
+   ",", "\<\" Determine the length of the curve given by the following \
+equation 1 + x from 0 to 1\"\>", ",", "\<\"plot e^x and x , -20<x<20\"\>", 
+   ",", "\<\"US congressional district with largest water area fraction\"\>", 
+   ",", "\<\"CLXX to Babylonian\"\>", 
+   ",", "\<\"is 4 a member of the superperfect numbers?\"\>", 
+   ",", "\<\"61.52?S, 156.2?W\"\>", 
+   ",", "\<\" arc length x(t)=cos t, y(t)=sin t, z(t)=2t for t=0 to 2pi\"\>", 
+   ",", "\<\"corn moon\"\>", ",", "\<\"differentiate -sin x\\\"\"\>", 
+   ",", "\<\"osmotic pressure 0.2M 25?c\"\>", 
+   ",", "\<\"one hundred ninety-six times nineteen\"\>", 
+   ",", "\<\"extract alpha channel\"\>", ",", "\<\" arclength of (t,t^2)\"\>",
+    ",", "\<\"3-tuples\"\>", 
+   ",", "\<\"recently released movies starring Brad Pitt\"\>", 
+   ",", "\<\"apply image dilation to The Office image\"\>", 
+   ",", "\<\"solve x^x = 1-x\"\>", 
+   ",", "\<\"express as a single fraction (m-n)?/m?-n?+m?-mn/n?-mn\"\>", 
+   ",", "\<\" arc length of y=x^2 to 0\"\>", 
+   ",", "\<\"2nd derivative sin(x)\"\>", 
+   ",", "\<\" arclength of (t,sin(t)) from [1,sin(1)] to [2,sin(2)]\"\>", 
+   ",", "\<\"smooth image of world\"\>", ",", "\<\"optimal code 31,16\"\>", 
+   ",", "\<\"given b=23.5? and c=9'\"\>", ",", "\<\"Chan-Vese binarize\"\>", 
+   ",", "\<\"perm (1 2 3 4)^3(1 2 3)^-1\"\>", 
+   ",", "\<\"julia set z^2-5/2\"\>", 
+   ",", "\<\"3000*{(1+x)*[(1+x)^360-1]}?[(1+x)-1]=100000000\"\>", 
+   ",", "\<\"julia set of z -> 2 z^2 - 4\"\>", 
+   ",", "\<\"length of the graph of y=1/x between x=0 and 1\"\>", 
+   ",", "\<\"XII + XVII + XXIX\"\>", ",", "\<\"?x, y(P(x) ? Q(y))\"\>", 
+   ",", "\<\"plot x^2 - 3y^2 - z^2 = 1\"\>", 
+   ",", "\<\" curve-length of the curve (x^2,x^3) from (1,1) to (3,12)\"\>", 
+   ",", "\<\"prime factors of 6789\"\>", 
+   ",", "\<\"length 9 alphanumeric passwords\"\>", 
+   ",", "\<\"magnetic scalar potential of a rectangular bar magnet\"\>", 
+   ",", "\<\"plot g(x) = e^(x-1) and f(x)=e^(1-x)\"\>", 
+   ",", "\<\" arclength of (y(t)=sint,x(t)=t^2) from -4 to 6\"\>", 
+   ",", "\<\"P(8,?/4,?/6)\"\>", ",", "\<\"factor:2x3+16x2+30x\"\>", 
+   ",", "\<\"Warren Buffett net worth\"\>", ",", "\<\"melt sodium\"\>", 
+   ",", "\<\"plot 2(x-2)=y+2 and 3(x-3)=y+3\"\>", 
+   ",", "\<\"-(-6)?sqrt((-6)^2-4?(-6)?4)/(2?(-6))\"\>", 
+   ",", "\<\"factor x^5+1 over the complex numbers\"\>", 
+   ",", "\<\"circle with area 30cm^2\"\>", 
+   ",", "\<\"distance along the curve y=x^2/(1+x) between x=0 and 4?\"\>", 
+   ",", "\<\"Last Steelers game vs the Broncos with a combined score over \
+50\"\>", ",", "\<\"y'(t) = a t y(t)\"\>", ",", "\<\"plot z=(y-2)/(x-3)\"\>", 
+   ",", "\<\"two 12-sided dice\"\>", ",", "\<\"TTACGACGGCCAG\"\>", 
+   ",", "\<\"pack 41 circles in a circle of diameter 30 inches\"\>", 
+   ",", "\<\" residue of cot(z)*coth(z) in i*pi\"\>", 
+   ",", "\<\"largest cut opal\"\>", ",", "\<\"charged disk\"\>", 
+   ",", "\<\"Domain of ?(x + 2) / (x - 1)\"\>", 
+   ",", "\<\"(x^2+y^2 - x)^2=2x^2/(2x-1) solve for x\"\>", 
+   ",", "\<\"distance between 78? 11? 0? N, 73? 3? 0? W and 81? 26? 25? N, \
+11? 29? 22? W\"\>", ",", "\<\"?(4)\"\>", ",", "\<\"bottom-hat transform\"\>", 
+   ",", "\<\"d/dt log (4+t^4)\"\>", 
+   ",", "\<\"Conway constant to 200 digits\"\>", 
+   ",", "\<\"{4,6,7,8,2,33} as quadruplets\"\>", 
+   ",", "\<\"What is the radius of a cone with volume v and height 7\"\>", 
+   ",", "\<\"(15/9) / (3/4)\"\>", ",", "\<\"yaw-pitch-roll\"\>", 
+   ",", "\<\"residue[f, {0}] where f(z) = 1/z\"\>", 
+   ",", "\<\"generate 12 secure passwords\"\>", 
+   ",", "\<\"(28 base 16) + (30 base 5)\"\>", 
+   ",", "\<\"earthquakes near Tokyo last ten years on local map\"\>", 
+   ",", "\<\"mass density, length, dynamic viscosity\"\>", 
+   ",", "\<\"grandmother's aunt\"\>", ",", "\<\"?(10)\"\>", 
+   ",", "\<\"incircle of regular 7-gon\"\>", ",", "\<\"b2 \.96 25b = 0\"\>", 
+   ",", "\<\" arc-length of the curve {x=2cos(t), y=2t sin(t), z=E^t} from \
+0.1 to 17\"\>", ",", "\<\"1/6 + 5/12 + 3/4\"\>", 
+   ",", "\<\"what is the fourth term of (a-?2)^8\"\>", 
+   ",", "\<\"fac x^2-1\"\>", ",", "\<\"quantize colors\"\>", 
+   ",", "\<\"d/dx(SUM (n,n=1,3))\"\>", 
+   ",", "\<\"humidity ratio at 16.9? and 19%\"\>", 
+   ",", "\<\"area of y=x^2 from x= 0 to 1 and y=0\"\>", 
+   ",", "\<\"msft officers\"\>", ",", "\<\"1?m to Ra value\"\>", 
+   ",", "\<\"geometric mean filter\"\>", 
+   ",", "\<\"234.85?1.96*95.23/sqrt(100)\"\>", 
+   ",", "\<\"residues of (log x)/(1+x^4) \"\>", 
+   ",", "\<\"5 most popular girl's names\"\>", 
+   ",", "\<\"arity of cyclic code 24,2\"\>", 
+   ",", "\<\"simplify (x+1)(x+2) with x->3\"\>", 
+   ",", "\<\"Rayleigh distribution ?=6.54\"\>", ",", "\<\"y''(x)\\\"\"\>", 
+   ",", "\<\"second derivative of sin(x)\\\" \"\>", 
+   ",", "\<\"value of Mexican peso\"\>", ",", "\<\"$50 + 10% + 8%\"\>", 
+   ",", "\<\"hough transform of t-rex image\"\>", 
+   ",", "\<\"expand (x+1)^10\"\>", ",", "\<\"141(2^141) + 1\"\>", 
+   ",", "\<\"?(100)\"\>", ",", "\<\"int e^(-t^2) dt\"\>", 
+   ",", "\<\"circumference of a circle with radius 3 miles\"\>", 
+   ",", "\<\"QSinLC(q(?), 2 ? t)\"\>", 
+   ",", "\<\"hyperbola semimajor axis 10, focal parameter 2\"\>", 
+   ",", "\<\"isodd(?x^3 + 1 )\"\>", ",", "\<\"factorizations 4x^2+4x+1\"\>", 
+   ",", "\<\"48b2 ? 16b\"\>", ",", "\<\"magnetized ball\"\>", 
+   ",", "\<\"expand log(x y)\"\>", 
+   ",", "\<\" arclength of the curve (x,z)=(2sin(t),t) from (0,0) to (0,Pi)\"\
+\>", ",", "\<\"fit to {1.1, 1.3,1.4,1.2,1.1} with a cubic polynomial\"\>", 
+   ",", "\<\"specific heat at 738 ?C\"\>", ",", "\<\"General Electric\"\>", 
+   ",", "\<\"Perona-Malik filter\"\>", 
+   ",", "\<\"residue ln(x)^2/(1+x^2) in i\"\>", ",", "\<\"factor 21+6I\"\>", 
+   ",", "\<\"compositions of 9\"\>", ",", "\<\"hexagonal Sch?nflies\"\>", 
+   ",", "\<\"B? major scale\"\>", ",", "\<\"VWELX\"\>", 
+   ",", "\<\"1275 to Greek numerals\"\>", 
+   ",", "\<\"length of  y=x^2 between x=0 and x=1\"\>", 
+   ",", "\<\"foresting components\"\>", 
+   ",", "\<\"Hardy?Weinberg Law given dominant allele frequency\"\>", 
+   ",", "\<\"1 ?K in velocity\"\>", ",", "\<\"speed 300?K and 2 atm\"\>", 
+   ",", "\<\" arclength of (x(t)=t,y(t)=t^2) from 2 to 6\"\>", 
+   ",", "\<\"sine of the complement of 72 degrees\"\>", 
+   ",", "\<\"(1+e)/2\"\>", 
+   ",", "\<\"signature of permutation (1 2 3 4 5)(6 7 8 9)\"\>", 
+   ",", "\<\"354 hex to decimal\"\>", 
+   ",", "\<\"express 2548 as the product of prime factors\"\>", 
+   ",", "\<\"length of the graph of y=sqrt(x+1) between x=-1 and x=1\"\>", 
+   ",", "\<\"partition 23 into more than 5 parts\"\>", 
+   ",", "\<\"probability 5 people were born on the same day of the week\"\>", 
+   ",", "\<\"sun\"\>", ",", "\<\"splitting factorization of x^4+1\"\>", 
+   ",", "\<\" arc-length of the curve (x(t)=t, y(t)=t, z(t)=t)\"\>", 
+   ",", "\<\"convert Rockwell c 44 to Brinell\"\>", 
+   ",", "\<\"residuum(1/(2*z^2-z^3))\"\>", 
+   ",", "\<\"elevation at  56?11'26.28\\\"N  10?11'5.13\\\"E\"\>", 
+   ",", "\<\"fit to {1.1, 1.3,1.4,1.2,1.1} with a linear polynomial\"\>", 
+   ",", "\<\"kepler?s equation\"\>", ",", "\<\"gd(?/2)\"\>", 
+   ",", "\<\"simplify: i to the power of 5 where i is an imaginary \
+number\"\>", ",", "\<\"absolute humidity at 30?C\"\>", 
+   ",", "\<\"Residues[1/Sin[x],{x,0}]\"\>", ",", "\<\"b2 ? 12b = 7\"\>", 
+   ",", "\<\"2 longest dams in Russia\"\>", 
+   ",", "\<\"what is the residue of -(z-2)^(-3) when z equals 2\"\>", 
+   ",", "\<\"golay code 23 errors correctable\"\>", 
+   ",", "\<\"exponential fit to {1.1, 1.3,1.4,1.2,1.1}\"\>", 
+   ",", "\<\"1200 - 450\"\>", ",", "\<\"residues (z/z-sinz,0)\"\>", 
+   ",", "\<\"{{-2, 1}, {3/2, ?1/2}}*{{1,2},{3,4}}\"\>", 
+   ",", "\<\"1 ? 10^-5\"\>", ",", "\<\"lim(x)(x->?)+lim(-x)(x->?)\"\>", 
+   ",", "\<\"terms x? and (x or (x and y?) or (y and z?))\"\>", 
+   ",", "\<\"13.5 / 18.27\"\>", ",", "\<\"residue of -(z-2)^(-3) at 2\"\>", 
+   ",", "\<\" arclength of (t,t^2) from t=2 to 6\"\>", 
+   ",", "\<\"Stern?Stolz divergence theorem concepts involved\"\>", 
+   ",", "\<\"limiting value of x^2 where x=0\"\>", 
+   ",", "\<\"yule distribution ?=1\"\>", ",", "\<\" arc length of x^2\"\>", 
+   ",", "\<\"$45,000 + 18%\"\>", 
+   ",", "\<\"antipode 28? 44.20? N, 88? 23.23? W\"\>", 
+   ",", "\<\"which AL East team has the worst OBP\"\>", 
+   ",", "\<\"plot sin(x)^2=cos(x)^2\"\>", 
+   ",", "\<\"Laplacian Gaussian filter\"\>", 
+   ",", "\<\"US dvorak for left hand keyboard, us English keyboard \
+\\\"Danger, Will Robinson!\\\"\"\>", 
+   ",", "\<\"What is 4752 as a product of primes\"\>", 
+   ",", "\<\"x^2+0.667x+0.994 residues\"\>", ",", "\<\"?(-2)\"\>", 
+   ",", "\<\"plot x^2 y^3, x=-1..1,y=0..3\"\>", ",", "\<\"?3?4\"\>", 
+   ",", "\<\"factor 2x+2y+px+py\"\>", ",", "\<\"lim(x?0^+)(xlnx)\"\>", 
+   ",", "\<\"??0.1?\"\>", ",", "\<\"factor[x^2+1,2]\"\>", 
+   ",", "\<\"2-tuples of {a,b,c}\"\>", 
+   ",", "\<\"fit | data | {{20.9, 23.2}, {26.2, 26.4}, {16.3, -12.2}, {-60.6, \
+-128.9}}\"\>", 
+   ",", "\<\"is z=UnitStep[x-9]+UnitStep[x-2]+1/(x^2-1) discont. at x=9?\"\>",
+    ",", "\<\"logarithmic sound pressure level\"\>", 
+   ",", "\<\"charged cuboid\"\>", 
+   ",", "\<\"arclength of y=ln(sec(x)) on y=0 to y=pi/4\"\>", 
+   ",", "\<\"trigonal Hermann?Mauguin\"\>", 
+   ",", "\<\"limit sinx/x as x -> 0\"\>", 
+   ",", "\<\"detect regions of Saturn image\"\>", 
+   ",", "\<\"arclength y = exp(x) from x = -1 to 1\"\>", 
+   ",", "\<\"english keyboard layout\"\>", 
+   ",", "\<\"Mass?luminosity relation\"\>", ",", "\<\"fac 5\"\>", 
+   ",", "\<\"earthquakes in Italy\"\>", ",", "\<\"sqrt(z)\"\>", 
+   ",", "\<\"value of x^2 at x=0 as a removable singularity\"\>", 
+   ",", "\<\"factors of x^2+1 mod 2\"\>", ",", "\<\"$3995 - 20%\"\>", 
+   ",", "\<\"euler\.92s number 1264056\"\>", 
+   ",", "\<\"invent a password with no numbers\"\>", 
+   ",", "\<\"factors 185 - 341x + 183*y*x^2 - 27x^3*y^3\"\>", 
+   ",", "\<\"5 largest countries by area\"\>", 
+   ",", "\<\"code 93 CHAMPAIGN IL 61820\"\>", 
+   ",", "\<\"mean shift filter\"\>", 
+   ",", "\<\"prime factorisation of 234767829456123849\"\>", 
+   ",", "\<\"18x^2+14x-9,factor\"\>", ",", "\<\"prime decomposition 49\"\>", 
+   ",", "\<\"do the algebraic units contain Sqrt[2]+Sqrt[3]?\"\>", 
+   ",", "\<\"3 tuples 1,2,3,4\"\>", 
+   ",", "\<\" what are the points of discontinuity on \
+{y=sin[t],r=tan[t],z=1/(t-2)}?\"\>", 
+   ",", "\<\"find the area between the curves y=x and y=x^3 between 0 and 2\"\
+\>", ",", "\<\"eigenvals matrix {{0,1,0},{0,0,1},{1,0,1}}\"\>", 
+   ",", "\<\"choose 2 from n\"\>", 
+   ",", "\<\"plot sin[x y] between x=-3 to 3 and y=-5 to 5\"\>", 
+   ",", "\<\"Newton?s method\"\>", 
+   ",", "\<\"german speaking country with the largest land area\"\>", 
+   ",", "\<\"sin(z)\"\>", ",", "\<\"Factor[x^10-1, Modulus -> 2]\"\>", 
+   ",", "\<\"10^n?1(mod2^2*3^21*61^39)\"\>", 
+   ",", "\<\"morphological erosion of plot sin x with radius 1\"\>", 
+   ",", "\<\"Gr?tz number formula\"\>", 
+   ",", "\<\"length of the graph of e^(-1/x) between x=-0 and 1\"\>", 
+   ",", "\<\"Raoult\.92s law benzene, toluene\"\>", 
+   ",", "\<\"\\\"length-8 keys\\\"\"\>", 
+   ",", "\<\"irreducible factorization of x^4+1\"\>", ",", "\<\"10^39\"\>", 
+   ",", "\<\"plot (x+1)/( x^2 + y^2)\"\>", 
+   ",", "\<\"lower-case alphabetic pwd\"\>", 
+   ",", "\<\"parabola (y-2)^2=4x\"\>", ",", "\<\"x^2 y''' - 2 y' = x\"\>", 
+   ",", "\<\"Determine the arclength of (2/3)((y-1)^(3/2)) on 1<y<4\"\>", 
+   ",", "\<\"elevation around google\"\>", 
+   ",", "\<\"apply bilateral filter to dog image\"\>", 
+   ",", "\<\"binarize grey wolf image with threshold x\"\>", 
+   ",", "\<\"plot x*y = 20\"\>", ",", "\<\"P ? Q\"\>", 
+   ",", "\<\"quotient and remainder (x^7 - 6x^4 - 19x + 13)/(\\n1 + 7x - x^4)\
+\"\>", ",", "\<\"factor this trinomial completely 48x^2 + 24x + 3\"\>", 
+   ",", "\<\"Wiener filter\"\>", 
+   ",", "\<\"probabilities for the f?ratio distribution\"\>", 
+   ",", "\<\"sepia effect\"\>", 
+   ",", "\<\"fit [(5,2), (8,3.5), (12,5), (20,18), (25,40)] \
+[exponential]\"\>", ",", "\<\"How many 5 x 5 Latin squares are there?\"\>", 
+   ",", "\<\"morphological dilation\"\>", 
+   ",", "\<\"speed of sound at 0?C\"\>", ",", "\<\"500 MHz\"\>", 
+   ",", "\<\" area between x+1, -x/2, for 0<x<4\"\>", 
+   ",", "\<\"Euler angles 20 degrees, -10 degrees, 15 degrees\"\>", 
+   ",", "\<\"CoefficientList[(3+x+x^2+x^3)^3(2+x+2x^2+x^3)?^2(2+x+x^2+x^3+x^4)\
+,x]\"\>", ",", "\<\"tallest boomboxes\"\>", 
+   ",", "\<\"lim(x->1)1/(x-1)-2/(x^2-1)\"\>", 
+   ",", "\<\"cos(x) + 1/2 cos(2x) + 1/4 cos(4x)\"\>", 
+   ",", "\<\"?2(5/10^(n-1))\"\>", 
+   ",", "\<\"number of compositions of integer n into k parts\"\>", 
+   ",", "\<\"graph 0.9375*(x+1)^2/x-x\"\>", 
+   ",", "\<\"plot (x^4)e^(-x),0<y<10\"\>", 
+   ",", "\<\"Reissner?Nordstrom black hole\"\>", 
+   ",", "\<\"log 2 log (Khinchin's constant)\"\>", 
+   ",", "\<\"residue of -(z-2)^-3 at 2\"\>", 
+   ",", "\<\"factor: 2x^3+16x^2+30x\"\>", ",", "\<\"limit of x^2 at 0\"\>", 
+   ",", "\<\"length of the graph of Log[x] between x=0 and 1\"\>", 
+   ",", "\<\"Avogadro?s law\"\>", 
+   ",", "\<\" arclength of (t,t,t) from {1,1,1} to {2,2,2}\"\>", 
+   ",", "\<\"curvature of the polar curve r=t^3+2 near t=1/10\"\>", 
+   ",", "\<\"Julia set for the map z?z3-z2+z-1\"\>", 
+   ",", "\<\"Ai(3) to 100 places\"\>", 
+   ",", "\<\"completely factor the problem,2x^2-8\"\>", 
+   ",", "\<\"crescent moon\"\>", 
+   ",", "\<\" arc length of x^2 from 2 to 3\"\>", 
+   ",", "\<\"distance along y=x^2/(1+x) between x=0 and 4?\"\>", 
+   ",", "\<\"x+1//3 -x-2//2 -5 ?0\"\>", ",", "\<\"A ? B\"\>", 
+   ",", "\<\"3 tuples\"\>", ",", "\<\"largest nuclear explosions\"\>", 
+   ",", "\<\"residue of (exp(2*z)/(z*(z+1))) where z=-1\"\>", 
+   ",", "\<\"common divisors of 360 and 96\"\>", ",", "\<\"?(28)\"\>", 
+   ",", "\<\"125 * 216 * 343\"\>", ",", "\<\"C Eb G C\"\>", 
+   ",", "\<\"34 symbol ascii passwords\"\>", 
+   ",", "\<\"values of the f?ratio PDF\"\>", 
+   ",", "\<\"3rd cousin once removed\"\>", 
+   ",", "\<\"InverseBetaRegularized(0.5, ?, ?)\"\>", 
+   ",", "\<\" arc-length of the curve {y=cos(t),x=sin(t)}\"\>", 
+   ",", "\<\"Gamma(11/2)\"\>", ",", "\<\"ADM vs Monsanto\"\>", 
+   ",", "\<\"1250th decagonal number\"\>", 
+   ",", "\<\"combination of 54 taken by 6\"\>", 
+   ",", "\<\"if you know 79 is prime, what are the factors for 79\"\>", 
+   ",", "\<\"apply bottom-hat transform to trumpet image\"\>", 
+   ",", "\<\"distance traveled in 0.75 seconds at 9.8m/s?\"\>", 
+   ",", "\<\"best-fit line through (5, 5) and (-8, 6) and (10,10)\"\>", 
+   ",", "\<\"3-tuples {1,2,3,4}\"\>", 
+   ",", "\<\"plot f(x)=-2x-3 and g(x)=2x-5\"\>", 
+   ",", "\<\"$100 2001 dollars in 1801\"\>", 
+   ",", "\<\"generate an 8 character digits-only password\"\>", 
+   ",", "\<\"detect maxima\"\>", ",", "\<\"20%\"\>", 
+   ",", "\<\"InverseBetaRegularized(0.25, ?, ?)\"\>", 
+   ",", "\<\" arc length of y==-sinx\"\>", ",", "\<\"D=30(14?G)\"\>", 
+   ",", "\<\"2d self?avoiding random walk\"\>", 
+   ",", "\<\"graph g(x, y) = (x^2+y^2-x^3*y^3)/(x^2+y^2)\"\>", 
+   ",", "\<\"t cos(t)\"\>", ",", "\<\"$60 + 10% + 5%\"\>", 
+   ",", "\<\"factor x^2+x+1 complex field\"\>", 
+   ",", "\<\" residue of cot(z)*coth(z) in pi\"\>", 
+   ",", "\<\"euler axis 20 degrees, -10 degrees, 15 degrees\"\>", 
+   ",", "\<\"invert colors of Apatasaurus image\"\>", 
+   ",", "\<\"earthquakes in Alaska\"\>", ",", "\<\"solarization effect\"\>", 
+   ",", "\<\"fit to {1.1, 1.3,1.4,1.2,1.1} with a quartic polynomial\"\>", 
+   ",", "\<\"plot | log(x-3 y)\"\>", ",", "\<\"3/8 * 2/7\"\>", 
+   ",", "\<\"prime factorization of 234767829456123849\"\>", 
+   ",", "\<\"cot^-1(?3/3)\"\>", ",", "\<\"?22 > ?5x ? 7 ? ?3\"\>", 
+   ",", "\<\"What is the prime factorization of 67, ordered from least to \
+greatest?\"\>", ",", "\<\"glome of radius 2\"\>", 
+   ",", "\<\"3?dimensional self?avoiding random walk\"\>", 
+   ",", "\<\"inflection points (x-1)(x-2)(x-3)(x-3.2)\"\>", 
+   ",", "\<\" arclength of parametric (y=sint,x=t^2) from 2 to 6\"\>", 
+   ",", "\<\"12/17\"\>", ",", "\<\"(ln(x^2+(cosx)^2))'\"\>", 
+   ",", "\<\" arclength of (x,y)=(Sqrt[t],t) from (0,0) to (Sqrt[2],2)\"\>", 
+   ",", "\<\"solve f(n)=f(n-1)+f(n-2),f(1)=1,f(2)=1\"\>", 
+   ",", "\<\"northwestern university undergrad students as percent of \
+northwestern students\"\>", ",", "\<\"A A# B\"\>", ",", "\<\"$100,000\"\>", 
+   ",", "\<\"NDSolve[u[?]'' == -u[?] + u[?]^(-0.2), u, {?, 0, 2?}]\"\>", 
+   ",", "\<\"earthquakes near Krakatau\"\>", 
+   ",", "\<\"monoclinic Hermann?Mauguin\"\>", ",", "\<\"detect minima\"\>", 
+   ",", "\<\"mean filter\"\>", ",", "\<\"invent a password with numbers\"\>", 
+   ",", "\<\"earthquakes near Taipei 101\"\>", 
+   ",", "\<\"normalized latin squares\"\>", 
+   ",", "\<\"divide[?(8x^9)/?(2x)\"\>", 
+   ",", "\<\"total cash and securities per student in MI\"\>", 
+   ",", "\<\"InverseBetaRegularized(0.75, ?, ?)\"\>", 
+   ",", "\<\"fixed necklaces with 5 beads and 3 colors\"\>", 
+   ",", "\<\"stationary points of  (0.5x\.b2?3xy+y\.b2+0.5) ? z(3x?y?1)\"\>", 
+   ",", "\<\"MSFT AAPL GOOG\"\>", 
+   ",", "\<\"speed of sound in dry air at 20 ?c and 1 atmosphere \
+pressure\"\>", 
+   ",", "\<\"length of the arc segment of y=x^2 between x=0 and x=1\"\>", 
+   ",", "\<\"MSFT, AAPL, GOOG\"\>", ",", "\<\"kepler\.92s equation\"\>", 
+   ",", "\<\"reducible factorization of -3x^2+x-2\"\>", 
+   ",", "\<\"LogicalExpand  ?(p AND q)\"\>", ",", "\<\"Eb major scale\"\>", 
+   ",", "\<\"factor completely x^3+x+1\"\>", ",", "\<\"?x((?x)^2 = x^2)\"\>", 
+   ",", "\<\"julia set z->z^2+1\"\>", 
+   ",", "\<\"least squares fit \
+{{0.43,-0.46},{6.72,4.51},{1.01,-1.73},{3.43,-3.15},{7.98,10.1}}\"\>", 
+   ",", "\<\"plot x log(y)\"\>", 
+   ",", "\<\"generate 6 alphanumeric passwords\"\>", 
+   ",", "\<\"qcos(x+90?)\"\>", 
+   ",", "\<\"short?period body wave magnitude definition\"\>", 
+   ",", "\<\"A = 48?, a = 32, b = 27\"\>", ",", "\<\"100 GBP to USD\"\>", 
+   ",", "\<\"number of necklaces with 12 beads and 3 colors\"\>", 
+   ",", "\<\"70% relative humidity at 15?C; heat moist air to 22?C\"\>", 
+   ",", "\<\" Determine the length of the curve given by the following x = 3 \
+sint, y = 3 cost from t=0 to  2 Pi\"\>", ",", "\<\"Euler rotation\"\>", 
+   ",", "\<\"domain and range of z = x^2 + y^2\"\>", 
+   ",", "\<\"password qwerty12#$5\"\>", 
+   ",", "\<\" arc length on y=x^2/(1+x) from y = 1 to y= 6\"\>", 
+   ",", "\<\"ec(-300?)\"\>", ",", "\<\"(ln(x^2+(cosx)^2))'\\\"\"\>", 
+   ",", "\<\"find features of shark image with radius 0.5\"\>", 
+   ",", "\<\"Gaussian filter\"\>", 
+   ",", "\<\"father's mother's sister's son\"\>", ",", "\<\"Q(?, 0, x/?)\"\>",
+    ",", "\<\"Julia set for the iteration z?z3-1\"\>", 
+   ",", "\<\"permutation (1 3 5)(2 4)(6 7 8)\"\>", 
+   ",", "\<\"plot y=2.697*e^(-250*t)*sin(370.8099*t), t from 0 to .04 y \
+from-.0015 to .0025\"\>", 
+   ",", "\<\"limit x^(1/(1-x)) as limit approaches one\"\>", 
+   ",", "\<\"largest cat breeds\"\>", 
+   ",", "\<\"simplify sin(x)^2+cos(x)^2\"\>", 
+   ",", "\<\"(?x^2+9-3)/x^2 +-0.005xx\"\>", 
+   ",", "\<\"rigid body attitude\"\>", ",", "\<\"D# Ab G C#\"\>", 
+   ",", "\<\"47? 34' 47.20\\\" N 111? 13 '34.50\\\" W\"\>", 
+   ",", "\<\"Newton's method sin z = 4\"\>", ",", "\<\"median filter\"\>", 
+   ",", "\<\"10 densest elements\"\>", 
+   ",", "\<\"second derivative of sin(2x)\"\>", 
+   ",", "\<\"code 506119 k=4\"\>", ",", "\<\"arc length r=sin^2(3 theta)\"\>",
+    ",", "\<\" curve length of 8cos[t] between 8 <t< 129\"\>", 
+   ",", "\<\"factorization of the integer \
+23827438901238473829934834045567567567\"\>", 
+   ",", "\<\"Sin[.123451234...]\"\>", 
+   ",", "\<\"lim x->o ((x^3)/((e^x)-1))\"\>", 
+   ",", "\<\"residuum 1/(x^2-1)\"\>", 
+   ",", "\<\"0.511 ???m to conductivity\"\>", 
+   ",", "\<\"what are the residues of z/(1-cos(z))?\"\>", 
+   ",", "\<\"allocations 30 cm\"\>", ",", "\<\"prime factorization 25\"\>", 
+   ",", "\<\"residue -(z-2)^(-3) at 2\"\>", ",", "\<\"blur\"\>", 
+   ",", "\<\"commonest filter\"\>", 
+   ",", "\<\"what is the strength of the password qwerty12#$5\"\>", 
+   ",", "\<\"tan(60 deg)\"\>", ",", "\<\"plot x^2/y\"\>", 
+   ",", "\<\"3?dimensional random walk 2 steps\"\>", 
+   ",", "\<\"differentiate -sin x\"\>", ",", "\<\"Sierpi?ski carpet\"\>", 
+   ",", "\<\"factors of expression 2x square - 4\"\>", 
+   ",", "\<\"geomagnetism Oklahoma City\"\>", 
+   ",", "\<\"3 tuples of 1,2,3,4\"\>", 
+   ",", "\<\"acceleration of gravity 7? North 158? East\"\>", 
+   ",", "\<\"generate 12 passwords\"\>", ",", "\<\"d/dx(e^(ax))\"\>", 
+   ",", "\<\"conductivity of copper\"\>", 
+   ",", "\<\"total variation filter\"\>", 
+   ",", "\<\" residue of cot(z)*coth(z) in z=pi\"\>", 
+   ",", "\<\"julia set z -> z^3 + c, c -> .5 + i\"\>", 
+   ",", "\<\"InverseBetaRegularized(0.1, ?, ?)\"\>", 
+   ",", "\<\"slope for 60?\"\>", ",", "\<\"calculate graham?s number\"\>", 
+   ",", "\<\"Julia set J(f) where f(z)=z3-1\"\>", 
+   ",", "\<\"simplify by factoring x^4-16/x+3\"\>", 
+   ",", "\<\"area between y=x^2 and y=4\"\>", 
+   ",", "\<\"retroreflection coefficient\"\>", 
+   ",", "\<\"invent 2 passwords with no letters\"\>", 
+   ",", "\<\"FourierSequenceTransform[2*cos(13*t+8),t,?]\"\>", 
+   ",", "\<\"vary a in x^3+y^3=a^3\"\>", 
+   ",", "\<\"find the first derivative: f(x)=7(8x^9-9x^1.6+10)^10\"\>", 
+   ",", "\<\"little joe in craps\"\>", ",", "\<\"z?1/(z2-1)\"\>", 
+   ",", "\<\"-5 ? ?(81)\"\>", ",", "\<\"expand (3x-9)^5 mod 23\"\>", 
+   ",", "\<\"1/2 sqrt(?) erf(x)\"\>", ",", "\<\"products of 10877\"\>", 
+   ",", "\<\"osculating circle to (2cos[t], sin[t]) at t=pi/3\"\>", 
+   ",", "\<\"write 75 as a product of prime factors\"\>", 
+   ",", "\<\"PA:FP\"\>", ",", "\<\"5 combinations out of 29\"\>", 
+   ",", "\<\"zipf distribution with n=50 and ?=2\"\>", 
+   ",", "\<\"solve sqrt(x-1) sqrt(x+1)==1\"\>", 
+   ",", "\<\"Heisenberg uncertainty principle ?x=1mm\"\>", 
+   ",", "\<\"factor the integer 29345827349837\"\>", 
+   ",", "\<\"altitude in 02155\"\>", 
+   ",", "\<\"plot 2y^2-x^3=1-x y and y^5=1-x^2\"\>", 
+   ",", "\<\"plot 2*sqrt(x^2+y^2)\"\>", 
+   ",", "\<\"residues of e^z/(z^3(z-1))\"\>", ",", "\<\"expand (x+1)^200\"\>",
+    ",", "\<\"solve for regression line with the points  (1,1) , (-3,9) , \
+(2,0)\"\>", ",", "\<\"StringTrim\"\>", 
+   ",", "\<\"NFC East team with the most rushing touchdowns in 2010\"\>", 
+   ",", "\<\"largest nuclear test in the US\"\>", 
+   ",", "\<\" rectify the curve xy^2 from 1 to 2\"\>", 
+   ",", "\<\"plot sin(10*x*x + 10*y*y)\"\>", 
+   ",", "\<\"IntervalIntersection[Interval[{-?, -2.09317}], \
+Interval[{-2,03249, ?}]]\"\>", ",", "\<\"90?m aperture diameter\"\>", 
+   ",", "\<\"residuum cos(z/(1-z))\"\>", 
+   ",", "\<\"logarithmic to {1.1, 1.3,1.4,1.2,1.1}\"\>", 
+   ",", "\<\"8 character alphabetic passwords\"\>", 
+   ",", "\<\" curve-length of the curve x^2 from (1,1) to (3,12)\"\>", 
+   ",", "\<\"d/dx tan^4(x)\"\>", 
+   ",", "\<\"area under the curve y = x! and x-axis from x = 0 to 2\"\>", 
+   ",", "\<\"FTSE 100\"\>", ",", "\<\"limit_{x->0} sin(x)/x\"\>", 
+   ",", "\<\"x?2(mod 3) x?1(mod 4)  x?3(mod 5)\"\>", 
+   ",", "\<\" arclength of r=sin(theta)-theta from 2 to 26\"\>", 
+   ",", "\<\"colorize image of Poe\"\>", 
+   ",", "\<\"straight line fit {1.1, 1.3,1.4,1.2,1.1}\"\>", 
+   ",", "\<\"distance along y=x^2/(1+x) between x=0 and 4 \"\>", 
+   ",", "\<\"factor (53 + 62i) into gaussian primes\"\>", 
+   ",", "\<\"Sierpi?ski square\"\>", ",", "\<\"((3+4i)/5)^10\"\>", 
+   ",", "\<\"5-character password with only digits\"\>", 
+   ",", "\<\"what is the area between the graphs x+ 3 y = 1 and x + 9 = y^2. \
+\"\>", ",", "\<\"p ? q ? ?q\"\>", 
+   ",", "\<\"polar plot r=(2 cos (2*theta))^(1/2)\"\>", 
+   ",", "\<\"using secant method find root of 7\"\>", 
+   ",", "\<\"father's mother's sister\"\>", 
+   ",", "\<\"simplify the following:sin?cos2?+cos?sin2?\"\>", 
+   ",", "\<\"earthquakes in the US in the last week\"\>", 
+   ",", "\<\"simplify Sinx cosx where x is positive\"\>", 
+   ",", "\<\"theta(70?)\"\>", ",", "\<\"sc(?)\"\>", 
+   ",", "\<\"x^2-4 factor\"\>", 
+   ",", "\<\"distance between 51? 49.490 N, 000? 58.964 E and 51?49.000 N, \
+000? 59.335 E\"\>", ",", "\<\"letter A drill\"\>", 
+   ",", "\<\"draw 6 numbers from 49 balls\"\>", 
+   ",", "\<\"intervals C3 Eb3 Bb3 D4 G4\"\>", 
+   ",", "\<\"von mises distribution for ?=0 | ?=1\"\>", 
+   ",", "\<\"integrate spherical Bessel j3(x)\"\>", 
+   ",", "\<\"GroebnerBasis[{x^2*y ? z^3 , 2*x*y ? 4*z ? 1, z ? y^2 , x^3 ? \
+4*z*y}, {x,y,z}]\"\>", ",", "\<\"factors of 2^100-7\"\>", 
+   ",", "\<\"$250 + 15%\"\>", 
+   ",", "\<\"electric potential of a charged square sheet\"\>", 
+   ",", "\<\"hyperbola with center (100, 200) and focus (110, 180)\"\>", 
+   ",", "\<\"frequency allocations 900MHz\"\>", 
+   ",", "\<\"make up a 9-letter pronounceable password\"\>", 
+   ",", "\<\"$29.95 - 15%\"\>", ",", "\<\"raga gandharavam\"\>", 
+   ",", "\<\"TCAGCTACTCTA\"\>", ",", "\<\"eps_0\"\>", 
+   ",", "\<\"simplify completely (x+1)(x+1)\"\>", 
+   ",", "\<\"quadratic fit 7,8,1,1,4,6,7,1\"\>", 
+   ",", "\<\"watershed components\"\>", 
+   ",", "\<\"plot (y^2*x) / (x^2 + y^6)\"\>", 
+   ",", "\<\"face?transitive tiling\"\>", ",", "\<\"?14k2\"\>", 
+   ",", "\<\"p?clet number\"\>", 
+   ",", "\<\"InverseFourierSequenceTransform[{-(((1 - E^((-2 I) ?)) Pi ((4 I) \
+DiracDelta[-Pi + 4 ?] - (4 I) DiracDelta[Pi + 4 ?]))/(1 + 1/(2 E^((4 I) \
+?))))},?,n]\"\>", 
+   ",", "\<\"tangent to (x+y)^2 e^(y-3z) sin(x+z) at (x,y,z)=(2,1,-1)\"\>", 
+   ",", "\<\"(1+i)^(1/5)\"\>", 
+   ",", "\<\"BirnbaumSaundersDistribution[?, 3]\"\>", 
+   ",", "\<\"sphere, surface area=1\"\>", 
+   ",", "\<\"residues z/(1-cos(z))\"\>", ",", "\<\"Euler parameters\"\>", 
+   ",", "\<\"plot (sqr(x^2+y^2)+sqr((x-5)^2+(y-8)^2)) mod 2<1 from x=-10 to \
+10 from y=-5 to 15\"\>", ",", "\<\"{???++++\"\>", 
+   ",", "\<\"linear fit {1.1, 1.3,1.4,1.2,1.1}\"\>", 
+   ",", "\<\"1/2 sqrt(?) erfi(x)\"\>", 
+   ",", "\<\"length of the graph of y=x^2 between x=-oo and oo\"\>", 
+   ",", "\<\"5-character passwords with only digits\"\>", 
+   ",", "\<\"probability 2 people born in same month\"\>", 
+   ",", "\<\"largest diamond\"\>", ",", "\<\"50000 yen in euros\"\>", 
+   ",", "\<\"1/4 + 2/3\"\>", 
+   ",", "\<\"area of an equilateral triangle with side length a\"\>", 
+   ",", "\<\" arclength of the parametric curve (x,y)=(t,t^2) from 2 to \
+5\"\>", ",", "\<\"tuples 3\"\>", ",", "\<\"plot y=5x\"\>", 
+   ",", "\<\"studio apartment rent in Indianapolis\"\>", 
+   ",", "\<\"degree symbol\"\>", 
+   ",", "\<\" Determine the length of the curve given by the following \
+equations x = 3 sint, y = 3 cost from t=0 to  2 Pi\"\>", 
+   ",", "\<\"diameter of a nonagon with apothem 4\"\>", 
+   ",", "\<\"simplify, ((1/8x)+(1/4x)/(1/3y)+(3/6y))\"\>", 
+   ",", "\<\"generator polynomial of cyclic code 24,2\"\>", 
+   ",", "\<\"700 THz light\"\>", ",", "\<\"?x?P(x, x)\"\>", 
+   ",", "\<\"circle through (0,0), (1,0), (0,1)\"\>", 
+   ",", "\<\" arclength of r=sin(theta) from 2 to 6\"\>", 
+   ",", "\<\"Residue of 1/(tan(z) - z) at the origin\"\>", 
+   ",", "\<\"log fit to {1.1, 1.3,1.4,1.2,1.1}\"\>", 
+   ",", "\<\"lim_(x->0) 1/x\"\>", ",", "\<\"factor x^4+4 over complex\"\>", 
+   ",", "\<\"reluctivity\"\>", ",", "\<\" is e^(x/Pi) discontinuous\"\>", 
+   ",", "\<\"plot y=1/2,y=12\"\>", 
+   ",", "\<\"lexicographic rank of (1 2 6)^2\"\>", 
+   ",", "\<\"four thousand three hundred twelve\"\>", 
+   ",", "\<\"bet the corner at roulette\"\>", 
+   ",", "\<\"Heisenberg uncertainty principle ?x=1pm\"\>", 
+   ",", "\<\"sin(pi/5)\"\>", 
+   ",", "\<\"Euler rotation 20 degrees, -10 degrees, 15 degrees\"\>", 
+   ",", "\<\"cyclic codes 31,26, 3\"\>", 
+   ",", "\<\"factor with complex numbers (x^3)-343\"\>", 
+   ",", "\<\"15.25 + 7.90 + 3.12\"\>", 
+   ",", "\<\"model [(0,0), (1,3.3), (2,13.3), (3,29.9), \
+(4,53.2),(5,83.2)]\"\>", ",", "\<\"note c5\"\>", 
+   ",", "\<\"generate 12 simple passwords\"\>", 
+   ",", "\<\"matrix of the permutation (3 1 2 5)\"\>", ",", "\<\"A?B=B\"\>", 
+   ",", "\<\"rule 1,388,968,789 r=2\"\>", 
+   ",", "\<\"antipode of 45?17'27\\\"N 4?16'36\\\"E\"\>", 
+   ",", "\<\"plot y/(x^2+y^2)\"\>", ",", "\<\"log fit 7,8,1,1,4,6,7,1\"\>", 
+   ",", "\<\"earthquakes Japan\"\>", ",", "\<\"longest MLB game in 2002\"\>", 
+   ",", "\<\"1,000 yuan + 20,000 yen in dollars\"\>", 
+   ",", "\<\"rigid body attitude 20 degrees, -10 degrees, 15 degrees\"\>", 
+   ",", "\<\"Can you factor 2x^2-5x-6\"\>", 
+   ",", "\<\"polynomial through the points (0,1), (2,2), and (3,8)\"\>", 
+   ",", "\<\"cheapest toaster\"\>", ",", "\<\"deconvolve image\"\>", 
+   ",", "\<\"(7.61736 ? 10^6)/25\"\>", 
+   ",", "\<\"limit x tends to 0 (1/x)-(1/sinx)\"\>", 
+   ",", "\<\"keys used typing \\\"valley forge\\\"\"\>", 
+   ",", "\<\"posterize galena image using 4 levels\"\>", 
+   ",", "\<\"arc length : y=tan[x] from x = 1 to 2\"\>", 
+   ",", "\<\"euler?s number 1264056\"\>", 
+   ",", "\<\"number of integer partitions on 15\"\>", 
+   ",", "\<\"area between y = sinx and y = sin2x, in the domain ?/3 < x < ?\"\
+\>", ",", "\<\"tallest MLB player\"\>", ",", "\<\"d/dx d/dy x^2 y^4\"\>", 
+   ",", "\<\"factorisation 4x^2+4x+1\"\>", 
+   ",", "\<\"make up 20 pronounceable passwords\"\>", 
+   ",", "\<\"total solar eclipse NYC\"\>", 
+   ",", "\<\"When was the last time the Brewers won an away game against the \
+Royals?\"\>", 
+   ",", "\<\"plot x = Re[(I*GoldenRatio)^n] and y = Im[(I*GoldenRatio)^n], \
+{n, -8,1}\"\>", ",", "\<\"P?pentomino tiling\"\>", 
+   ",", "\<\"1/d(a(x-c)+b(x-c)^2) Polynomial expansion\"\>", 
+   ",", "\<\"4BR apt rent in alabama counties\"\>", 
+   ",", "\<\"2?dimensional self?avoiding random walk\"\>", 
+   ",", "\<\"find the quotient and remainder of (x^3-3x^2-8)/\\n(x+2)\"\>", 
+   ",", "\<\"arc length of y^2 from 2 to 55\"\>", 
+   ",", "\<\"speed of sound in dry air at 25 ?C\"\>", 
+   ",", "\<\"velocity ?=4.80nm\"\>", ",", "\<\"28\"\>", 
+   ",", "\<\"ellipse with eccentricity 1/2\"\>", 
+   ",", "\<\"factor in R: w(x)=x^3 - x^2 - 5x +3\"\>", 
+   ",", "\<\"Gamma(1, 5, 2.0)\"\>", ",", "\<\"anti?square ice fractal\"\>", 
+   ",", "\<\"4x^2-5xy+2y^2=4\"\>", 
+   ",", "\<\"sharpen map of London with radius r\"\>", 
+   ",", "\<\"tangent to x e^-x^2 at x=1/3\"\>", ",", "\<\"A=34?, b=10.5\"\>", 
+   ",", "\<\"generate an 8-symbol password\"\>", 
+   ",", "\<\" rectify the curve {x^2} from 1 to 2\"\>", 
+   ",", "\<\"b2 ? 25b = 0\"\>", ",", "\<\"plot e^x+e^y\"\>", 
+   ",", "\<\"MCMLXXXIV\"\>", ",", "\<\"plot 1/(1+e^(-(x-y)/0.5))\"\>", 
+   ",", "\<\"ExponentialPowerDistribution[1, ?, ?]\"\>", 
+   ",", "\<\"IBM Apple\"\>", ",", "\<\"julia set z->z2+1\"\>", 
+   ",", "\<\"image adjust\"\>", 
+   ",", "\<\"fit to {1.1, 1.3,1.4,1.2,1.1} with a quintic polynomial\"\>"}], 
+  "}"}]], "Output",ExpressionUUID->"54ed0eb2-886e-4096-b913-658b571802bb"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{1440, 851},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+FrontEndVersion->"11.1 for Mac OS X x86 (32-bit, 64-bit Kernel) (March 13, \
+2017)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 81, 0, 92, "Title", "ExpressionUUID" -> \
+"c6cd6e5e-1c68-4331-99ec-62b060f4e449"],
+Cell[CellGroupData[{
+Cell[686, 26, 143, 2, 32, "Input", "ExpressionUUID" -> \
+"a45ae5dc-dbf6-4d40-ae14-9b90e4099d59"],
+Cell[832, 30, 103, 0, 32, "Output", "ExpressionUUID" -> \
+"cddf6239-e5eb-4241-a8b8-436fc82c769d"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[972, 35, 80, 0, 64, "Section", "ExpressionUUID" -> \
+"0958797a-d3ce-4351-abce-2cec5591f59e"],
+Cell[CellGroupData[{
+Cell[1077, 39, 84, 0, 44, "Subsection", "ExpressionUUID" -> \
+"01dd9e04-a9d5-43e8-b854-9315f8e9bd74"],
+Cell[CellGroupData[{
+Cell[1186, 43, 194, 4, 32, "Input", "ExpressionUUID" -> \
+"48a0733e-4c3a-4080-b74d-4f4a95b7fb6a"],
+Cell[1383, 49, 8302, 209, 136, "Output", "ExpressionUUID" -> \
+"d920163a-ce2f-4744-b923-9271b7f5d01b"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[9722, 263, 136, 2, 32, "Input", "ExpressionUUID" -> \
+"7f4d43d6-92d0-4c4a-a81c-6ad79d183879"],
+Cell[9861, 267, 88, 0, 32, "Output", "ExpressionUUID" -> \
+"8131b99d-c6ee-43c5-a825-5927c01f13a9"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[9986, 272, 220, 5, 32, "Input", "ExpressionUUID" -> \
+"35d15ad0-1ad6-4d49-a19d-893e7ed2982b"],
+Cell[10209, 279, 572, 10, 24, "Message", "ExpressionUUID" -> \
+"b4ed4f50-e5b7-4351-b312-7a6b303331df"],
+Cell[10784, 291, 572, 10, 24, "Message", "ExpressionUUID" -> \
+"9c2282ed-b3f0-4cbc-9896-808ac0b4b4a8"],
+Cell[11359, 303, 572, 10, 24, "Message", "ExpressionUUID" -> \
+"044b3818-bcbf-4568-8598-0713cb077c75"],
+Cell[11934, 315, 575, 11, 24, "Message", "ExpressionUUID" -> \
+"c0ac9926-5ab5-4b49-a5f3-c10588f5a644"],
+Cell[12512, 328, 8232, 207, 115, "Output", "ExpressionUUID" -> \
+"a59dce99-3950-4194-8460-24dd09dc6806"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[20781, 540, 694, 18, 117, "Input", "ExpressionUUID" -> \
+"0d117c4f-a394-4fc1-9a4f-ac32c0dc08b6"],
+Cell[21478, 560, 11947, 291, 130, "Output", "ExpressionUUID" -> \
+"bd588b55-65ea-4177-816c-86f9ace2d576"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[33462, 856, 610, 19, 32, "Input", "ExpressionUUID" -> \
+"896f4755-b1da-4071-b57a-c23e7ab9d156"],
+Cell[34075, 877, 87, 0, 32, "Output", "ExpressionUUID" -> \
+"ba425dba-9ddc-45f9-93d8-6031ba13f2a2"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[34199, 882, 843, 22, 159, "Input", "ExpressionUUID" -> \
+"477317fe-a306-426a-95b8-6a03f136039a"],
+Cell[35045, 906, 11284, 277, 115, "Output", "ExpressionUUID" -> \
+"9860f344-ca50-4798-8078-de17b73ab7e6"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[46366, 1188, 200, 5, 32, "Input", "ExpressionUUID" -> \
+"61b901cc-f470-4314-836f-7ac11789af9c"],
+Cell[46569, 1195, 87, 0, 32, "Output", "ExpressionUUID" -> \
+"5d8698a2-08ca-4755-8920-a617e5d48e31"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[46693, 1200, 206, 5, 32, "Input", "ExpressionUUID" -> \
+"9dc017cf-3d6b-4f02-b072-ac79ed75e2d2"],
+Cell[46902, 1207, 87, 0, 32, "Output", "ExpressionUUID" -> \
+"95d71511-f814-4fbc-835b-ad817624af20"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[47026, 1212, 273, 6, 32, "Input", "ExpressionUUID" -> \
+"f929cf79-df1c-4728-9237-8e882c9f25ae"],
+Cell[47302, 1220, 86, 0, 32, "Output", "ExpressionUUID" -> \
+"cb95f589-4afd-4482-84bc-82dc5bd6e7e7"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[47425, 1225, 214, 5, 32, "Input", "ExpressionUUID" -> \
+"2c684aca-7115-48d5-ac14-09e2512d5c3b"],
+Cell[47642, 1232, 100, 1, 32, "Output", "ExpressionUUID" -> \
+"d3af8187-4596-4e00-acd7-97ffc95ee7ce"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[47779, 1238, 281, 7, 32, "Input", "ExpressionUUID" -> \
+"c686c870-3b98-40d9-88c5-3f02d69074d5"],
+Cell[48063, 1247, 63729, 1093, 5728, "Output", "ExpressionUUID" -> \
+"54ed0eb2-886e-4096-b913-658b571802bb"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+

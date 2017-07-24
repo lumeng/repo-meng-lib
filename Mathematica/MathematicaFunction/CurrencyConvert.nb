@@ -1,0 +1,3500 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[    138234,       3492]
+NotebookOptionsPosition[    136493,       3431]
+NotebookOutlinePosition[    137333,       3461]
+CellTagsIndexPosition[    137157,       3454]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["CurrencyConvert", "Title",
+ CellChangeTimes->{{3.6976771836206017`*^9, 3.697677186309857*^9}}],
+
+Cell["\<\
+\[OpenCurlyDoubleQuote]CurrencyConvert calls InflationAdjust under the hood \
+for such conversions.InflationAdjust in turn calls Alpha API to get the data \
+from CalculateFinancialData, but the API only returns a single value, not a \
+time series.\[CloseCurlyDoubleQuote]\
+\>", "Text",
+ CellChangeTimes->{{3.6976772243682213`*^9, 3.697677233784298*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"data", "=", 
+  RowBox[{"Table", "[", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{"date", ",", 
+      RowBox[{"QuantityMagnitude", "@", 
+       RowBox[{"CurrencyConvert", "[", 
+        RowBox[{
+         RowBox[{"Quantity", "[", 
+          RowBox[{"1", ",", 
+           RowBox[{"DatedUnit", "[", 
+            RowBox[{"\"\<USDollars\>\"", ",", "date"}], "]"}]}], "]"}], ",", 
+         RowBox[{"DatedUnit", "[", 
+          RowBox[{"\"\<SwissFrancs\>\"", ",", "date"}], "]"}]}], "]"}]}]}], 
+     "}"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"date", ",", 
+      RowBox[{"DateRange", "[", 
+       RowBox[{
+        RowBox[{"Today", "-", 
+         RowBox[{"Quantity", "[", 
+          RowBox[{"1", ",", "\"\<Years\>\""}], "]"}]}], ",", "Today"}], 
+       "]"}]}], "}"}]}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.697677187162633*^9, 3.697677194757115*^9}, {
+  3.6976772472200727`*^9, 3.69767733159262*^9}, {3.6976790226313133`*^9, 
+  3.697679035295003*^9}}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "InflationAdjust","insfferd",
+   "\"Cannot fetch exchange rate conversion data for \
+\\!\\(\\*RowBox[{\\\"\\\\\\\"USDollars\\\\\\\"\\\"}]\\) to \
+\\!\\(\\*RowBox[{\\\"\\\\\\\"SwissFrancs\\\\\\\"\\\"}]\\) for \
+\\!\\(\\*RowBox[{\\\"{\\\", RowBox[{\\\"2016\\\", \\\",\\\", \\\"3\\\", \\\",\
+\\\", \\\"5\\\"}], \\\"}\\\"}]\\).\"",2,9,10,20304797726243827598,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.697677368362699*^9, 3.6976790272413673`*^9, 
+  3.697679134254053*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "InflationAdjust","insfferd",
+   "\"Cannot fetch exchange rate conversion data for \
+\\!\\(\\*RowBox[{\\\"\\\\\\\"USDollars\\\\\\\"\\\"}]\\) to \
+\\!\\(\\*RowBox[{\\\"\\\\\\\"SwissFrancs\\\\\\\"\\\"}]\\) for \
+\\!\\(\\*RowBox[{\\\"{\\\", RowBox[{\\\"2016\\\", \\\",\\\", \\\"3\\\", \\\",\
+\\\", \\\"6\\\"}], \\\"}\\\"}]\\).\"",2,9,11,20304797726243827598,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.697677368362699*^9, 3.6976790272413673`*^9, 
+  3.697679134818707*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "InflationAdjust","insfferd",
+   "\"Cannot fetch exchange rate conversion data for \
+\\!\\(\\*RowBox[{\\\"\\\\\\\"USDollars\\\\\\\"\\\"}]\\) to \
+\\!\\(\\*RowBox[{\\\"\\\\\\\"SwissFrancs\\\\\\\"\\\"}]\\) for \
+\\!\\(\\*RowBox[{\\\"{\\\", RowBox[{\\\"2016\\\", \\\",\\\", \\\"3\\\", \\\",\
+\\\", \\\"12\\\"}], \\\"}\\\"}]\\).\"",2,9,12,20304797726243827598,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.697677368362699*^9, 3.6976790272413673`*^9, 
+  3.697679136379871*^9}],
+
+Cell[BoxData[
+ TemplateBox[{
+  "General","stop",
+   "\"Further output of \\!\\(\\*StyleBox[RowBox[{\\\"InflationAdjust\\\", \\\
+\"::\\\", \\\"insfferd\\\"}], \\\"MessageName\\\"]\\) will be suppressed \
+during this calculation.\"",2,9,13,20304797726243827598,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.697677368362699*^9, 3.6976790272413673`*^9, 
+  3.697679136403759*^9}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Fri 4 Mar 2016\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2016", ",", "3", ",", "4"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "0.9934304285533938`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Sat 5 Mar 2016\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2016", ",", "3", ",", "5"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", 
+     RowBox[{"QuantityMagnitude", "[", 
+      RowBox[{"Missing", "[", "\<\"NotAvailable\"\>", "]"}], "]"}]}], "}"}], 
+   ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Sun 6 Mar 2016\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2016", ",", "3", ",", "6"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", 
+     RowBox[{"QuantityMagnitude", "[", 
+      RowBox[{"Missing", "[", "\<\"NotAvailable\"\>", "]"}], "]"}]}], "}"}], 
+   ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Mon 7 Mar 2016\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2016", ",", "3", ",", "7"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "0.9953496760720473`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Tue 8 Mar 2016\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2016", ",", "3", ",", "8"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "0.9957947695599009`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Wed 9 Mar 2016\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2016", ",", "3", ",", "9"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "0.9973052833613553`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Thu 10 Mar 2016\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2016", ",", "3", ",", "10"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "0.9850498865536814`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Fri 11 Mar 2016\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2016", ",", "3", ",", "11"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "0.9827498200824217`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Sat 12 Mar 2016\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2016", ",", "3", ",", "12"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", 
+     RowBox[{"QuantityMagnitude", "[", 
+      RowBox[{"Missing", "[", "\<\"NotAvailable\"\>", "]"}], "]"}]}], "}"}], 
+   ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Sun 13 Mar 2016\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2016", ",", "3", ",", "13"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "0.9830492544871223`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Mon 14 Mar 2016\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2016", ",", "3", ",", "14"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "0.9873997943654726`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Tue 15 Mar 2016\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2016", ",", "3", ",", "15"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "0.9870100164607407`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Wed 16 Mar 2016\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2016", ",", "3", ",", "16"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "0.9781500521280743`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Thu 17 Mar 2016\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2016", ",", "3", ",", "17"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "0.9673500358636212`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Fri 18 Mar 2016\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2016", ",", "3", ",", "18"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "0.9696301663047192`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Sat 19 Mar 2016\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2016", ",", "3", ",", "19"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", 
+     RowBox[{"QuantityMagnitude", "[", 
+      RowBox[{"Missing", "[", "\<\"NotAvailable\"\>", "]"}], "]"}]}], "}"}], 
+   ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Sun 20 Mar 2016\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2016", ",", "3", ",", "20"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "0.9698502263455724`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Mon 21 Mar 2016\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2016", ",", "3", ",", "21"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "0.9706099369230262`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Tue 22 Mar 2016\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2016", ",", "3", ",", "22"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "0.973000271534161`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Wed 23 Mar 2016\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2016", ",", "3", ",", "23"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "0.9755497594330033`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Thu 24 Mar 2016\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2016", ",", "3", ",", "24"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "0.9757753525006326`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Fri 25 Mar 2016\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2016", ",", "3", ",", "25"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "0.9772496052200079`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Sat 26 Mar 2016\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2016", ",", "3", ",", "26"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", 
+     RowBox[{"QuantityMagnitude", "[", 
+      RowBox[{"Missing", "[", "\<\"NotAvailable\"\>", "]"}], "]"}]}], "}"}], 
+   ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Sun 27 Mar 2016\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2016", ",", "3", ",", "27"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "0.9776490293912117`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Mon 28 Mar 2016\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2016", ",", "3", ",", "28"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "0.9738501640205627`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Tue 29 Mar 2016\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2016", ",", "3", ",", "29"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "0.9666000957772731`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Wed 30 Mar 2016\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2016", ",", "3", ",", "30"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "0.9649501622340036`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Thu 31 Mar 2016\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2016", ",", "3", ",", "31"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "0.9619001402612032`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Fri 1 Apr 2016\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2016", ",", "4", ",", "1"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "0.9587497748449973`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Sat 2 Apr 2016\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2016", ",", "4", ",", "2"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", 
+     RowBox[{"QuantityMagnitude", "[", 
+      RowBox[{"Missing", "[", "\<\"NotAvailable\"\>", "]"}], "]"}]}], "}"}], 
+   ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Sun 3 Apr 2016\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2016", ",", "4", ",", "3"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "0.9580489926367598`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Mon 4 Apr 2016\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2016", ",", "4", ",", "4"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "0.9588499389731904`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Tue 5 Apr 2016\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2016", ",", "4", ",", "5"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "0.9561298377626359`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Wed 6 Apr 2016\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2016", ",", "4", ",", "6"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "0.9562999846556212`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Thu 7 Apr 2016\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2016", ",", "4", ",", "7"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "0.9556401179813303`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Fri 8 Apr 2016\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2016", ",", "4", ",", "8"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "0.9537298331969202`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Sat 9 Apr 2016\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2016", ",", "4", ",", "9"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", 
+     RowBox[{"QuantityMagnitude", "[", 
+      RowBox[{"Missing", "[", "\<\"NotAvailable\"\>", "]"}], "]"}]}], "}"}], 
+   ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Sun 10 Apr 2016\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2016", ",", "4", ",", "10"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "0.952650414562548`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Mon 11 Apr 2016\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2016", ",", "4", ",", "11"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "0.9549702896897551`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Tue 12 Apr 2016\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2016", ",", "4", ",", "12"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "0.9554000162866356`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Wed 13 Apr 2016\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2016", ",", "4", ",", "13"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "0.9667804522125486`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Thu 14 Apr 2016\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2016", ",", "4", ",", "14"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "0.967149841442964`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Fri 15 Apr 2016\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2016", ",", "4", ",", "15"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "0.9680345568366351`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Sat 16 Apr 2016\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2016", ",", "4", ",", "16"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", 
+     RowBox[{"QuantityMagnitude", "[", 
+      RowBox[{"Missing", "[", "\<\"NotAvailable\"\>", "]"}], "]"}]}], "}"}], 
+   ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Sun 17 Apr 2016\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2016", ",", "4", ",", "17"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "0.9667495896682842`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Mon 18 Apr 2016\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2016", ",", "4", ",", "18"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "0.9646000867939168`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Tue 19 Apr 2016\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2016", ",", "4", ",", "19"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "0.9620047147199906`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Wed 20 Apr 2016\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2016", ",", "4", ",", "20"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "0.9718852628244683`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Thu 21 Apr 2016\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2016", ",", "4", ",", "21"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "0.974949631834424`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Fri 22 Apr 2016\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2016", ",", "4", ",", "22"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "0.97884994867478`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Sat 23 Apr 2016\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2016", ",", "4", ",", "23"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", 
+     RowBox[{"QuantityMagnitude", "[", 
+      RowBox[{"Missing", "[", "\<\"NotAvailable\"\>", "]"}], "]"}]}], "}"}], 
+   ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Sun 24 Apr 2016\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2016", ",", "4", ",", "24"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "0.9792496535577584`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Mon 25 Apr 2016\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2016", ",", "4", ",", "25"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "0.9751996613786729`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Tue 26 Apr 2016\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2016", ",", "4", ",", "26"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "0.9737496674307825`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Wed 27 Apr 2016\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2016", ",", "4", ",", "27"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "0.9711802202942041`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Thu 28 Apr 2016\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2016", ",", "4", ",", "28"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "0.9665253661682338`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Fri 29 Apr 2016\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2016", ",", "4", ",", "29"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "0.9592004589375213`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Sat 30 Apr 2016\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2016", ",", "4", ",", "30"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", 
+     RowBox[{"QuantityMagnitude", "[", 
+      RowBox[{"Missing", "[", "\<\"NotAvailable\"\>", "]"}], "]"}]}], "}"}], 
+   ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Sun 1 May 2016\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2016", ",", "5", ",", "1"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "0.9582490490170319`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Mon 2 May 2016\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2016", ",", "5", ",", "2"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "0.9548946299835216`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Tue 3 May 2016\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2016", ",", "5", ",", "3"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "0.9549201746644163`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Wed 4 May 2016\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2016", ",", "5", ",", "4"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "0.9576498956513539`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Thu 5 May 2016\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2016", ",", "5", ",", "5"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "0.9684000980335907`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Fri 6 May 2016\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2016", ",", "5", ",", "6"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "0.9717502736469608`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Sat 7 May 2016\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2016", ",", "5", ",", "7"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", 
+     RowBox[{"QuantityMagnitude", "[", 
+      RowBox[{"Missing", "[", "\<\"NotAvailable\"\>", "]"}], "]"}]}], "}"}], 
+   ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Sun 8 May 2016\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2016", ",", "5", ",", "8"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "0.9727494507518084`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Mon 9 May 2016\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2016", ",", "5", ",", "9"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "0.9713651021272142`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Tue 10 May 2016\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2016", ",", "5", ",", "10"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "0.9759554024895996`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Wed 11 May 2016\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2016", ",", "5", ",", "11"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "0.9710500355493384`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Thu 12 May 2016\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2016", ",", "5", ",", "12"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "0.9710246322342921`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Fri 13 May 2016\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2016", ",", "5", ",", "13"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "0.9749002304702576`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Sat 14 May 2016\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2016", ",", "5", ",", "14"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", 
+     RowBox[{"QuantityMagnitude", "[", 
+      RowBox[{"Missing", "[", "\<\"NotAvailable\"\>", "]"}], "]"}]}], "}"}], 
+   ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Sun 15 May 2016\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2016", ",", "5", ",", "15"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "0.9750494695966554`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Mon 16 May 2016\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2016", ",", "5", ",", "16"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "0.977690049496342`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Tue 17 May 2016\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2016", ",", "5", ",", "17"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "0.9805498629807771`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Wed 18 May 2016\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2016", ",", "5", ",", "18"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "0.9877498691809052`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Thu 19 May 2016\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2016", ",", "5", ",", "19"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "0.9907601891614817`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Fri 20 May 2016\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2016", ",", "5", ",", "20"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "0.9910302198597369`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Sat 21 May 2016\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2016", ",", "5", ",", "21"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", 
+     RowBox[{"QuantityMagnitude", "[", 
+      RowBox[{"Missing", "[", "\<\"NotAvailable\"\>", "]"}], "]"}]}], "}"}], 
+   ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Sun 22 May 2016\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2016", ",", "5", ",", "22"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "0.9906492699155905`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Mon 23 May 2016\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2016", ",", "5", ",", "23"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "0.9892997555587765`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Tue 24 May 2016\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2016", ",", "5", ",", "24"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "0.9933998409822814`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Wed 25 May 2016\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2016", ",", "5", ",", "25"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "0.991300397791314`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Thu 26 May 2016\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2016", ",", "5", ",", "26"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "0.9892596220872878`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Fri 27 May 2016\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2016", ",", "5", ",", "27"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "0.9945301250956609`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Sat 28 May 2016\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2016", ",", "5", ",", "28"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", 
+     RowBox[{"QuantityMagnitude", "[", 
+      RowBox[{"Missing", "[", "\<\"NotAvailable\"\>", "]"}], "]"}]}], "}"}], 
+   ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Sun 29 May 2016\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2016", ",", "5", ",", "29"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "0.9945498162445116`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Mon 30 May 2016\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2016", ",", "5", ",", "30"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "0.9922495878050624`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Tue 31 May 2016\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2016", ",", "5", ",", "31"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "0.9937898559275008`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Wed 1 Jun 2016\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2016", ",", "6", ",", "1"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "0.988600452757504`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Thu 2 Jun 2016\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2016", ",", "6", ",", "2"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "0.9904500754531765`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Fri 3 Jun 2016\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2016", ",", "6", ",", "3"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "0.9762250340513521`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Sat 4 Jun 2016\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2016", ",", "6", ",", "4"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", 
+     RowBox[{"QuantityMagnitude", "[", 
+      RowBox[{"Missing", "[", "\<\"NotAvailable\"\>", "]"}], "]"}]}], "}"}], 
+   ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Sun 5 Jun 2016\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2016", ",", "6", ",", "5"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "0.975949725246087`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Mon 6 Jun 2016\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2016", ",", "6", ",", "6"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "0.9706504807657816`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Tue 7 Jun 2016\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2016", ",", "6", ",", "7"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "0.9654000296458063`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Wed 8 Jun 2016\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2016", ",", "6", ",", "8"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "0.9590900235341895`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Thu 9 Jun 2016\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2016", ",", "6", ",", "9"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "0.9646503355734798`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Fri 10 Jun 2016\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2016", ",", "6", ",", "10"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "0.9643499191490056`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Sat 11 Jun 2016\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2016", ",", "6", ",", "11"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", 
+     RowBox[{"QuantityMagnitude", "[", 
+      RowBox[{"Missing", "[", "\<\"NotAvailable\"\>", "]"}], "]"}]}], "}"}], 
+   ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Sun 12 Jun 2016\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2016", ",", "6", ",", "12"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "0.9649501622340035`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Mon 13 Jun 2016\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2016", ",", "6", ",", "13"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "0.9643499191490056`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Tue 14 Jun 2016\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2016", ",", "6", ",", "14"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "0.9637002672845175`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Wed 15 Jun 2016\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2016", ",", "6", ",", "15"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "0.9616503787570916`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Thu 16 Jun 2016\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2016", ",", "6", ",", "16"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "0.9651503353159592`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Fri 17 Jun 2016\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2016", ",", "6", ",", "17"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "0.9598504261401831`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Sat 18 Jun 2016\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2016", ",", "6", ",", "18"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", 
+     RowBox[{"QuantityMagnitude", "[", 
+      RowBox[{"Missing", "[", "\<\"NotAvailable\"\>", "]"}], "]"}]}], "}"}], 
+   ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Sun 19 Jun 2016\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2016", ",", "6", ",", "19"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "0.9632501019101698`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Mon 20 Jun 2016\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2016", ",", "6", ",", "20"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "0.9623203408854174`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Tue 21 Jun 2016\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2016", ",", "6", ",", "21"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "0.9626500933317328`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Wed 22 Jun 2016\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2016", ",", "6", ",", "22"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "0.9585347228260875`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Thu 23 Jun 2016\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2016", ",", "6", ",", "23"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "0.9630098097504678`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Fri 24 Jun 2016\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2016", ",", "6", ",", "24"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "0.9739251260507714`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Sat 25 Jun 2016\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2016", ",", "6", ",", "25"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", 
+     RowBox[{"QuantityMagnitude", "[", 
+      RowBox[{"Missing", "[", "\<\"NotAvailable\"\>", "]"}], "]"}]}], "}"}], 
+   ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Sun 26 Jun 2016\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2016", ",", "6", ",", "26"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "0.9733999563463851`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Mon 27 Jun 2016\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2016", ",", "6", ",", "27"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "0.977730275330942`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Tue 28 Jun 2016\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2016", ",", "6", ",", "28"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "0.9802855125868394`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Wed 29 Jun 2016\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2016", ",", "6", ",", "29"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "0.9798003818935548`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Thu 30 Jun 2016\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2016", ",", "6", ",", "30"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "0.9760496543815264`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Fri 1 Jul 2016\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2016", ",", "7", ",", "1"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "0.9733004560767927`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Sat 2 Jul 2016\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2016", ",", "7", ",", "2"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", 
+     RowBox[{"QuantityMagnitude", "[", 
+      RowBox[{"Missing", "[", "\<\"NotAvailable\"\>", "]"}], "]"}]}], "}"}], 
+   ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Sun 3 Jul 2016\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2016", ",", "7", ",", "3"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "0.9743493367633643`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Mon 4 Jul 2016\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2016", ",", "7", ",", "4"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "0.9711151235587284`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Tue 5 Jul 2016\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2016", ",", "7", ",", "5"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "0.9773995645597395`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Wed 6 Jul 2016\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2016", ",", "7", ",", "6"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "0.9753347034467234`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Thu 7 Jul 2016\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2016", ",", "7", ",", "7"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "0.9792496535577584`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Fri 8 Jul 2016\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2016", ",", "7", ",", "8"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "0.9838501006355975`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Sat 9 Jul 2016\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2016", ",", "7", ",", "9"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", 
+     RowBox[{"QuantityMagnitude", "[", 
+      RowBox[{"Missing", "[", "\<\"NotAvailable\"\>", "]"}], "]"}]}], "}"}], 
+   ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Sun 10 Jul 2016\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2016", ",", "7", ",", "10"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "0.9831498362707709`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Mon 11 Jul 2016\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2016", ",", "7", ",", "11"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "0.9829796773018343`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Tue 12 Jul 2016\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2016", ",", "7", ",", "12"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "0.9889152381405969`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Wed 13 Jul 2016\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2016", ",", "7", ",", "13"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "0.985200282525754`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Thu 14 Jul 2016\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2016", ",", "7", ",", "14"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "0.9810702714916356`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Fri 15 Jul 2016\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2016", ",", "7", ",", "15"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "0.9829352175699707`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Sat 16 Jul 2016\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2016", ",", "7", ",", "16"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", 
+     RowBox[{"QuantityMagnitude", "[", 
+      RowBox[{"Missing", "[", "\<\"NotAvailable\"\>", "]"}], "]"}]}], "}"}], 
+   ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Sun 17 Jul 2016\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2016", ",", "7", ",", "17"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "0.982150348264613`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Mon 18 Jul 2016\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2016", ",", "7", ",", "18"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "0.98233471437304`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Tue 19 Jul 2016\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2016", ",", "7", ",", "19"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "0.9856149189758243`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Wed 20 Jul 2016\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2016", ",", "7", ",", "20"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "0.9874251318678486`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Thu 21 Jul 2016\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2016", ",", "7", ",", "21"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "0.9856751408844583`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Fri 22 Jul 2016\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2016", ",", "7", ",", "22"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "0.9875099871013797`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Sat 23 Jul 2016\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2016", ",", "7", ",", "23"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", 
+     RowBox[{"QuantityMagnitude", "[", 
+      RowBox[{"Missing", "[", "\<\"NotAvailable\"\>", "]"}], "]"}]}], "}"}], 
+   ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Sun 24 Jul 2016\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2016", ",", "7", ",", "24"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "0.9874495407833127`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Mon 25 Jul 2016\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2016", ",", "7", ",", "25"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "0.9857898144785905`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Tue 26 Jul 2016\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2016", ",", "7", ",", "26"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "0.9920654706292796`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Wed 27 Jul 2016\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2016", ",", "7", ",", "27"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "0.9873753879092947`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Thu 28 Jul 2016\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2016", ",", "7", ",", "28"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "0.9807247999001109`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Fri 29 Jul 2016\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2016", ",", "7", ",", "29"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "0.9692900153263363`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Sat 30 Jul 2016\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2016", ",", "7", ",", "30"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", 
+     RowBox[{"QuantityMagnitude", "[", 
+      RowBox[{"Missing", "[", "\<\"NotAvailable\"\>", "]"}], "]"}]}], "}"}], 
+   ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Sun 31 Jul 2016\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2016", ",", "7", ",", "31"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "0.9692495850542101`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Mon 1 Aug 2016\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2016", ",", "8", ",", "1"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "0.9680298650418606`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Tue 2 Aug 2016\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2016", ",", "8", ",", "2"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "0.9647350937207635`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Wed 3 Aug 2016\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2016", ",", "8", ",", "3"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "0.9731498326345368`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Thu 4 Aug 2016\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2016", ",", "8", ",", "4"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "0.9743502421412408`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Fri 5 Aug 2016\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2016", ",", "8", ",", "5"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "0.9800751196263927`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Sat 6 Aug 2016\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2016", ",", "8", ",", "6"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", 
+     RowBox[{"QuantityMagnitude", "[", 
+      RowBox[{"Missing", "[", "\<\"NotAvailable\"\>", "]"}], "]"}]}], "}"}], 
+   ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Sun 7 Aug 2016\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2016", ",", "8", ",", "7"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "0.98064981929201`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Mon 8 Aug 2016\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2016", ",", "8", ",", "8"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "0.9829845151318606`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Tue 9 Aug 2016\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2016", ",", "8", ",", "9"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "0.9813851010380191`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Wed 10 Aug 2016\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2016", ",", "8", ",", "10"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "0.9746246491524237`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Thu 11 Aug 2016\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2016", ",", "8", ",", "11"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "0.9758002104309298`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Fri 12 Aug 2016\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2016", ",", "8", ",", "12"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "0.975039949563821`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Sat 13 Aug 2016\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2016", ",", "8", ",", "13"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", 
+     RowBox[{"QuantityMagnitude", "[", 
+      RowBox[{"Missing", "[", "\<\"NotAvailable\"\>", "]"}], "]"}]}], "}"}], 
+   ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Sun 14 Aug 2016\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2016", ",", "8", ",", "14"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "0.9747491115122563`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Mon 15 Aug 2016\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2016", ",", "8", ",", "15"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "0.9730296157472756`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Tue 16 Aug 2016\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2016", ",", "8", ",", "16"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "0.9619796721409984`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Wed 17 Aug 2016\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2016", ",", "8", ",", "17"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "0.962374989517091`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Thu 18 Aug 2016\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2016", ",", "8", ",", "18"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "0.9547496490513632`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Fri 19 Aug 2016\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2016", ",", "8", ",", "19"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "0.959295232129075`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Sat 20 Aug 2016\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2016", ",", "8", ",", "20"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", 
+     RowBox[{"QuantityMagnitude", "[", 
+      RowBox[{"Missing", "[", "\<\"NotAvailable\"\>", "]"}], "]"}]}], "}"}], 
+   ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Sun 21 Aug 2016\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2016", ",", "8", ",", "21"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "0.9601499135435536`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Mon 22 Aug 2016\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2016", ",", "8", ",", "22"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "0.9618297748898986`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Tue 23 Aug 2016\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2016", ",", "8", ",", "23"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "0.963139727346042`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Wed 24 Aug 2016\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2016", ",", "8", ",", "24"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "0.9668149938587264`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Thu 25 Aug 2016\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2016", ",", "8", ",", "25"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "0.9679502231789737`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Fri 26 Aug 2016\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2016", ",", "8", ",", "26"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "0.978280208218171`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Sat 27 Aug 2016\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2016", ",", "8", ",", "27"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", 
+     RowBox[{"QuantityMagnitude", "[", 
+      RowBox[{"Missing", "[", "\<\"NotAvailable\"\>", "]"}], "]"}]}], "}"}], 
+   ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Sun 28 Aug 2016\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2016", ",", "8", ",", "28"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "0.9785491855055033`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Mon 29 Aug 2016\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2016", ",", "8", ",", "29"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "0.9785348028333458`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Tue 30 Aug 2016\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2016", ",", "8", ",", "30"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "0.9836198362089151`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Wed 31 Aug 2016\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2016", ",", "8", ",", "31"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "0.9835549063615256`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Thu 1 Sep 2016\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2016", ",", "9", ",", "1"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "0.9799502093341086`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Fri 2 Sep 2016\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2016", ",", "9", ",", "2"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "0.9803354612519173`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Sat 3 Sep 2016\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2016", ",", "9", ",", "3"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", 
+     RowBox[{"QuantityMagnitude", "[", 
+      RowBox[{"Missing", "[", "\<\"NotAvailable\"\>", "]"}], "]"}]}], "}"}], 
+   ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Sun 4 Sep 2016\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2016", ",", "9", ",", "4"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "0.9803498969059394`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Mon 5 Sep 2016\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2016", ",", "9", ",", "5"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "0.9799502093341086`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Tue 6 Sep 2016\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2016", ",", "9", ",", "6"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "0.9697496567163938`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Wed 7 Sep 2016\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2016", ",", "9", ",", "7"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "0.9698502263455725`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Thu 8 Sep 2016\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2016", ",", "9", ",", "8"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "0.9723502998558271`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Fri 9 Sep 2016\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2016", ",", "9", ",", "9"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "0.975425092538318`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Sat 10 Sep 2016\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2016", ",", "9", ",", "10"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", 
+     RowBox[{"QuantityMagnitude", "[", 
+      RowBox[{"Missing", "[", "\<\"NotAvailable\"\>", "]"}], "]"}]}], "}"}], 
+   ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Sun 11 Sep 2016\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2016", ",", "9", ",", "11"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "0.9754499326258073`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Mon 12 Sep 2016\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2016", ",", "9", ",", "12"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "0.9719495619302391`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Tue 13 Sep 2016\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2016", ",", "9", ",", "13"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "0.9773499146104154`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Wed 14 Sep 2016\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2016", ",", "9", ",", "14"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "0.9729897757646139`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Thu 15 Sep 2016\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2016", ",", "9", ",", "15"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "0.9720298633022749`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Fri 16 Sep 2016\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2016", ",", "9", ",", "16"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "0.9807497959842212`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Sat 17 Sep 2016\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2016", ",", "9", ",", "17"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", 
+     RowBox[{"QuantityMagnitude", "[", 
+      RowBox[{"Missing", "[", "\<\"NotAvailable\"\>", "]"}], "]"}]}], "}"}], 
+   ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Sun 18 Sep 2016\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2016", ",", "9", ",", "18"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "0.9802489708014953`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Mon 19 Sep 2016\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2016", ",", "9", ",", "19"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "0.9801500123736723`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Tue 20 Sep 2016\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2016", ",", "9", ",", "20"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "0.979149982462253`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Wed 21 Sep 2016\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2016", ",", "9", ",", "21"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "0.9741499682739053`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Thu 22 Sep 2016\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2016", ",", "9", ",", "22"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "0.9686196000311303`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Fri 23 Sep 2016\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2016", ",", "9", ",", "23"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "0.9699500317685331`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Sat 24 Sep 2016\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2016", ",", "9", ",", "24"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", 
+     RowBox[{"QuantityMagnitude", "[", 
+      RowBox[{"Missing", "[", "\<\"NotAvailable\"\>", "]"}], "]"}]}], "}"}], 
+   ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Sun 25 Sep 2016\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2016", ",", "9", ",", "25"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "0.9696489958595242`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Mon 26 Sep 2016\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2016", ",", "9", ",", "26"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "0.9691950487289075`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Tue 27 Sep 2016\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2016", ",", "9", ",", "27"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "0.9707550568356258`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Wed 28 Sep 2016\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2016", ",", "9", ",", "28"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "0.9713801746736419`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Thu 29 Sep 2016\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2016", ",", "9", ",", "29"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "0.9660500847075152`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Fri 30 Sep 2016\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2016", ",", "9", ",", "30"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "0.9713698263078555`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Sat 1 Oct 2016\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2016", ",", "10", ",", "1"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", 
+     RowBox[{"QuantityMagnitude", "[", 
+      RowBox[{"Missing", "[", "\<\"NotAvailable\"\>", "]"}], "]"}]}], "}"}], 
+   ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Sun 2 Oct 2016\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2016", ",", "10", ",", "2"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "0.9698502263455725`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Mon 3 Oct 2016\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2016", ",", "10", ",", "3"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "0.9737449200735016`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Tue 4 Oct 2016\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2016", ",", "10", ",", "4"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "0.9790003996011458`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Wed 5 Oct 2016\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2016", ",", "10", ",", "5"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "0.9741499682739053`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Thu 6 Oct 2016\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2016", ",", "10", ",", "6"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "0.9808547246398502`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Fri 7 Oct 2016\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2016", ",", "10", ",", "7"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "0.9774750740365058`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Sat 8 Oct 2016\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2016", ",", "10", ",", "8"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", 
+     RowBox[{"QuantityMagnitude", "[", 
+      RowBox[{"Missing", "[", "\<\"NotAvailable\"\>", "]"}], "]"}]}], "}"}], 
+   ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Sun 9 Oct 2016\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2016", ",", "10", ",", "9"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "0.9788499486747801`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Mon 10 Oct 2016\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2016", ",", "10", ",", "10"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "0.983135318041382`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Tue 11 Oct 2016\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2016", ",", "10", ",", "11"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "0.9887754771279733`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Wed 12 Oct 2016\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2016", ",", "10", ",", "12"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "0.9905600143401155`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Thu 13 Oct 2016\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2016", ",", "10", ",", "13"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "0.9863751810810303`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Fri 14 Oct 2016\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2016", ",", "10", ",", "14"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "0.9904598987863023`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Sat 15 Oct 2016\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2016", ",", "10", ",", "15"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", 
+     RowBox[{"QuantityMagnitude", "[", 
+      RowBox[{"Missing", "[", "\<\"NotAvailable\"\>", "]"}], "]"}]}], "}"}], 
+   ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Sun 16 Oct 2016\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2016", ",", "10", ",", "16"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "0.9901499730053784`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Mon 17 Oct 2016\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2016", ",", "10", ",", "17"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "0.988714759258098`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Tue 18 Oct 2016\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2016", ",", "10", ",", "18"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "0.9899549513454942`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Wed 19 Oct 2016\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2016", ",", "10", ",", "19"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "0.9889397207827101`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Thu 20 Oct 2016\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2016", ",", "10", ",", "20"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "0.9928249100036548`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Fri 21 Oct 2016\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2016", ",", "10", ",", "21"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "0.9934501938319125`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Sat 22 Oct 2016\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2016", ",", "10", ",", "22"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", 
+     RowBox[{"QuantityMagnitude", "[", 
+      RowBox[{"Missing", "[", "\<\"NotAvailable\"\>", "]"}], "]"}]}], "}"}], 
+   ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Sun 23 Oct 2016\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2016", ",", "10", ",", "23"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "0.9946498168663211`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Mon 24 Oct 2016\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2016", ",", "10", ",", "24"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "0.9948002094289267`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Tue 25 Oct 2016\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2016", ",", "10", ",", "25"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "0.9950000954836699`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Wed 26 Oct 2016\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2016", ",", "10", ",", "26"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "0.9936397686744954`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Thu 27 Oct 2016\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2016", ",", "10", ",", "27"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "0.9934994928048159`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Fri 28 Oct 2016\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2016", ",", "10", ",", "28"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "0.9875802071154541`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Sat 29 Oct 2016\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2016", ",", "10", ",", "29"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", 
+     RowBox[{"QuantityMagnitude", "[", 
+      RowBox[{"Missing", "[", "\<\"NotAvailable\"\>", "]"}], "]"}]}], "}"}], 
+   ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Sun 30 Oct 2016\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2016", ",", "10", ",", "30"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "0.9873500529596991`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Mon 31 Oct 2016\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2016", ",", "10", ",", "31"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "0.9891001703798469`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Tue 1 Nov 2016\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2016", ",", "11", ",", "1"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "0.9744499571763304`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Wed 2 Nov 2016\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2016", ",", "11", ",", "2"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "0.9735496403535626`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Thu 3 Nov 2016\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2016", ",", "11", ",", "3"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "0.974094879114971`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Fri 4 Nov 2016\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2016", ",", "11", ",", "4"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "0.9689602878670776`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Sat 5 Nov 2016\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2016", ",", "11", ",", "5"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", 
+     RowBox[{"QuantityMagnitude", "[", 
+      RowBox[{"Missing", "[", "\<\"NotAvailable\"\>", "]"}], "]"}]}], "}"}], 
+   ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Sun 6 Nov 2016\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2016", ",", "11", ",", "6"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", 
+     RowBox[{"QuantityMagnitude", "[", 
+      RowBox[{"Missing", "[", "\<\"NotAvailable\"\>", "]"}], "]"}]}], "}"}], 
+   ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Mon 7 Nov 2016\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2016", ",", "11", ",", "7"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "0.9742847197630387`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Tue 8 Nov 2016\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2016", ",", "11", ",", "8"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "0.9779100215455687`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Wed 9 Nov 2016\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2016", ",", "11", ",", "9"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "0.9844496858039923`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Thu 10 Nov 2016\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2016", ",", "11", ",", "10"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "0.9878504845686633`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Fri 11 Nov 2016\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2016", ",", "11", ",", "11"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "0.9881100854839386`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Sat 12 Nov 2016\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2016", ",", "11", ",", "12"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", 
+     RowBox[{"QuantityMagnitude", "[", 
+      RowBox[{"Missing", "[", "\<\"NotAvailable\"\>", "]"}], "]"}]}], "}"}], 
+   ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Sun 13 Nov 2016\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2016", ",", "11", ",", "13"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", 
+     RowBox[{"QuantityMagnitude", "[", 
+      RowBox[{"Missing", "[", "\<\"NotAvailable\"\>", "]"}], "]"}]}], "}"}], 
+   ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Mon 14 Nov 2016\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2016", ",", "11", ",", "14"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "0.9980199282567528`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Tue 15 Nov 2016\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2016", ",", "11", ",", "15"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "1.001765082932506`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Wed 16 Nov 2016\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2016", ",", "11", ",", "16"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "1.0020150533846703`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Thu 17 Nov 2016\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2016", ",", "11", ",", "17"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "1.007164964677642`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Fri 18 Nov 2016\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2016", ",", "11", ",", "18"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "1.0101398017413172`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Sat 19 Nov 2016\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2016", ",", "11", ",", "19"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", 
+     RowBox[{"QuantityMagnitude", "[", 
+      RowBox[{"Missing", "[", "\<\"NotAvailable\"\>", "]"}], "]"}]}], "}"}], 
+   ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Sun 20 Nov 2016\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2016", ",", "11", ",", "20"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", 
+     RowBox[{"QuantityMagnitude", "[", 
+      RowBox[{"Missing", "[", "\<\"NotAvailable\"\>", "]"}], "]"}]}], "}"}], 
+   ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Mon 21 Nov 2016\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2016", ",", "11", ",", "21"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "1.0087600516200468`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Tue 22 Nov 2016\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2016", ",", "11", ",", "22"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "1.011269570303668`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Wed 23 Nov 2016\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2016", ",", "11", ",", "23"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "1.0168099052991677`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Thu 24 Nov 2016\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2016", ",", "11", ",", "24"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "1.0165504670182488`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Fri 25 Nov 2016\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2016", ",", "11", ",", "25"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "1.0142995839774769`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Sat 26 Nov 2016\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2016", ",", "11", ",", "26"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", 
+     RowBox[{"QuantityMagnitude", "[", 
+      RowBox[{"Missing", "[", "\<\"NotAvailable\"\>", "]"}], "]"}]}], "}"}], 
+   ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Sun 27 Nov 2016\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2016", ",", "11", ",", "27"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", 
+     RowBox[{"QuantityMagnitude", "[", 
+      RowBox[{"Missing", "[", "\<\"NotAvailable\"\>", "]"}], "]"}]}], "}"}], 
+   ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Mon 28 Nov 2016\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2016", ",", "11", ",", "28"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "1.0131496397981454`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Tue 29 Nov 2016\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2016", ",", "11", ",", "29"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "1.0117248700987198`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Wed 30 Nov 2016\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2016", ",", "11", ",", "30"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "1.017499961337076`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Thu 1 Dec 2016\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2016", ",", "12", ",", "1"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "1.0105501352783768`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Fri 2 Dec 2016\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2016", ",", "12", ",", "2"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "1.0107452579415557`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Sat 3 Dec 2016\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2016", ",", "12", ",", "3"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", 
+     RowBox[{"QuantityMagnitude", "[", 
+      RowBox[{"Missing", "[", "\<\"NotAvailable\"\>", "]"}], "]"}]}], "}"}], 
+   ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Sun 4 Dec 2016\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2016", ",", "12", ",", "4"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", 
+     RowBox[{"QuantityMagnitude", "[", 
+      RowBox[{"Missing", "[", "\<\"NotAvailable\"\>", "]"}], "]"}]}], "}"}], 
+   ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Mon 5 Dec 2016\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2016", ",", "12", ",", "5"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "1.0065202498624202`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Tue 6 Dec 2016\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2016", ",", "12", ",", "6"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "1.0103500377890258`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Wed 7 Dec 2016\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2016", ",", "12", ",", "7"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "1.0073496489812641`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Thu 8 Dec 2016\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2016", ",", "12", ",", "8"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "1.0164998393203273`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Fri 9 Dec 2016\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2016", ",", "12", ",", "9"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "1.0174502879716572`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Sat 10 Dec 2016\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2016", ",", "12", ",", "10"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", 
+     RowBox[{"QuantityMagnitude", "[", 
+      RowBox[{"Missing", "[", "\<\"NotAvailable\"\>", "]"}], "]"}]}], "}"}], 
+   ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Sun 11 Dec 2016\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2016", ",", "12", ",", "11"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", 
+     RowBox[{"QuantityMagnitude", "[", 
+      RowBox[{"Missing", "[", "\<\"NotAvailable\"\>", "]"}], "]"}]}], "}"}], 
+   ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Mon 12 Dec 2016\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2016", ",", "12", ",", "12"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "1.0133354851662448`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Tue 13 Dec 2016\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2016", ",", "12", ",", "13"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "1.0120504661452756`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Wed 14 Dec 2016\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2016", ",", "12", ",", "14"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "1.020294706114878`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Thu 15 Dec 2016\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2016", ",", "12", ",", "15"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "1.0299000499688769`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Fri 16 Dec 2016\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2016", ",", "12", ",", "16"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "1.0271201029984272`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Sat 17 Dec 2016\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2016", ",", "12", ",", "17"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", 
+     RowBox[{"QuantityMagnitude", "[", 
+      RowBox[{"Missing", "[", "\<\"NotAvailable\"\>", "]"}], "]"}]}], "}"}], 
+   ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Sun 18 Dec 2016\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2016", ",", "12", ",", "18"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", 
+     RowBox[{"QuantityMagnitude", "[", 
+      RowBox[{"Missing", "[", "\<\"NotAvailable\"\>", "]"}], "]"}]}], "}"}], 
+   ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Mon 19 Dec 2016\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2016", ",", "12", ",", "19"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "1.0272846901282804`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Tue 20 Dec 2016\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2016", ",", "12", ",", "20"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "1.028710254797648`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Wed 21 Dec 2016\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2016", ",", "12", ",", "21"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "1.026899625082715`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Thu 22 Dec 2016\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2016", ",", "12", ",", "22"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "1.0256199963308745`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Fri 23 Dec 2016\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2016", ",", "12", ",", "23"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "1.027799923864022`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Sat 24 Dec 2016\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2016", ",", "12", ",", "24"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", 
+     RowBox[{"QuantityMagnitude", "[", 
+      RowBox[{"Missing", "[", "\<\"NotAvailable\"\>", "]"}], "]"}]}], "}"}], 
+   ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Sun 25 Dec 2016\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2016", ",", "12", ",", "25"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", 
+     RowBox[{"QuantityMagnitude", "[", 
+      RowBox[{"Missing", "[", "\<\"NotAvailable\"\>", "]"}], "]"}]}], "}"}], 
+   ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Mon 26 Dec 2016\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2016", ",", "12", ",", "26"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "1.027149595246312`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Tue 27 Dec 2016\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2016", ",", "12", ",", "27"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "1.0281000383548626`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Wed 28 Dec 2016\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2016", ",", "12", ",", "28"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "1.0284500047446508`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Thu 29 Dec 2016\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2016", ",", "12", ",", "29"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "1.022904859976267`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Fri 30 Dec 2016\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2016", ",", "12", ",", "30"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "1.018349663521621`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Sat 31 Dec 2016\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2016", ",", "12", ",", "31"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", 
+     RowBox[{"QuantityMagnitude", "[", 
+      RowBox[{"Missing", "[", "\<\"NotAvailable\"\>", "]"}], "]"}]}], "}"}], 
+   ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Sun 1 Jan 2017\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2017", ",", "1", ",", "1"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", 
+     RowBox[{"QuantityMagnitude", "[", 
+      RowBox[{"Missing", "[", "\<\"NotAvailable\"\>", "]"}], "]"}]}], "}"}], 
+   ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Mon 2 Jan 2017\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2017", ",", "1", ",", "2"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "1.0237499985507688`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Tue 3 Jan 2017\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2017", ",", "1", ",", "3"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "1.0274398289145168`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Wed 4 Jan 2017\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2017", ",", "1", ",", "4"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "1.0214504885084799`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Thu 5 Jan 2017\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2017", ",", "1", ",", "5"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "1.0096502594142491`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Fri 6 Jan 2017\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2017", ",", "1", ",", "6"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "1.0173001866431057`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Sat 7 Jan 2017\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2017", ",", "1", ",", "7"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", 
+     RowBox[{"QuantityMagnitude", "[", 
+      RowBox[{"Missing", "[", "\<\"NotAvailable\"\>", "]"}], "]"}]}], "}"}], 
+   ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Sun 8 Jan 2017\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2017", ",", "1", ",", "8"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", 
+     RowBox[{"QuantityMagnitude", "[", 
+      RowBox[{"Missing", "[", "\<\"NotAvailable\"\>", "]"}], "]"}]}], "}"}], 
+   ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Mon 9 Jan 2017\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2017", ",", "1", ",", "9"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "1.0151902626735434`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Tue 10 Jan 2017\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2017", ",", "1", ",", "10"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "1.016855386867067`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Wed 11 Jan 2017\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2017", ",", "1", ",", "11"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "1.0141000218448488`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Thu 12 Jan 2017\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2017", ",", "1", ",", "12"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "1.0109301612737327`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Fri 13 Jan 2017\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2017", ",", "1", ",", "13"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "1.0091499616513513`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Sat 14 Jan 2017\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2017", ",", "1", ",", "14"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", 
+     RowBox[{"QuantityMagnitude", "[", 
+      RowBox[{"Missing", "[", "\<\"NotAvailable\"\>", "]"}], "]"}]}], "}"}], 
+   ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Sun 15 Jan 2017\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2017", ",", "1", ",", "15"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", 
+     RowBox[{"QuantityMagnitude", "[", 
+      RowBox[{"Missing", "[", "\<\"NotAvailable\"\>", "]"}], "]"}]}], "}"}], 
+   ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Mon 16 Jan 2017\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2017", ",", "1", ",", "16"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "1.0117698978901697`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Tue 17 Jan 2017\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2017", ",", "1", ",", "17"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "1.001599541695156`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Wed 18 Jan 2017\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2017", ",", "1", ",", "18"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "1.0075596932546618`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Thu 19 Jan 2017\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2017", ",", "1", ",", "19"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "1.0062295826848933`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Fri 20 Jan 2017\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2017", ",", "1", ",", "20"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "1.0023002964624756`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Sat 21 Jan 2017\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2017", ",", "1", ",", "21"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", 
+     RowBox[{"QuantityMagnitude", "[", 
+      RowBox[{"Missing", "[", "\<\"NotAvailable\"\>", "]"}], "]"}]}], "}"}], 
+   ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Sun 22 Jan 2017\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2017", ",", "1", ",", "22"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", 
+     RowBox[{"QuantityMagnitude", "[", 
+      RowBox[{"Missing", "[", "\<\"NotAvailable\"\>", "]"}], "]"}]}], "}"}], 
+   ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Mon 23 Jan 2017\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2017", ",", "1", ",", "23"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "0.9962997770839868`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Tue 24 Jan 2017\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2017", ",", "1", ",", "24"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "1.0009298618332463`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Wed 25 Jan 2017\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2017", ",", "1", ",", "25"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "0.9994003794062672`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Thu 26 Jan 2017\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2017", ",", "1", ",", "26"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "0.9998999934083855`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Fri 27 Jan 2017\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2017", ",", "1", ",", "27"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "0.999199673818542`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Sat 28 Jan 2017\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2017", ",", "1", ",", "28"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", 
+     RowBox[{"QuantityMagnitude", "[", 
+      RowBox[{"Missing", "[", "\<\"NotAvailable\"\>", "]"}], "]"}]}], "}"}], 
+   ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Sun 29 Jan 2017\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2017", ",", "1", ",", "29"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", 
+     RowBox[{"QuantityMagnitude", "[", 
+      RowBox[{"Missing", "[", "\<\"NotAvailable\"\>", "]"}], "]"}]}], "}"}], 
+   ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Mon 30 Jan 2017\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2017", ",", "1", ",", "30"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "0.9953595968350144`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Tue 31 Jan 2017\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2017", ",", "1", ",", "31"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "0.9891548704033367`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Wed 1 Feb 2017\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2017", ",", "2", ",", "1"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "0.9930249433858181`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Thu 2 Feb 2017\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2017", ",", "2", ",", "2"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "0.9927548821112098`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Fri 3 Feb 2017\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2017", ",", "2", ",", "3"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "0.9926297729719215`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Sat 4 Feb 2017\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2017", ",", "2", ",", "4"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", 
+     RowBox[{"QuantityMagnitude", "[", 
+      RowBox[{"Missing", "[", "\<\"NotAvailable\"\>", "]"}], "]"}]}], "}"}], 
+   ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Sun 5 Feb 2017\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2017", ",", "2", ",", "5"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", 
+     RowBox[{"QuantityMagnitude", "[", 
+      RowBox[{"Missing", "[", "\<\"NotAvailable\"\>", "]"}], "]"}]}], "}"}], 
+   ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Mon 6 Feb 2017\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2017", ",", "2", ",", "6"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "0.9908799115312792`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Tue 7 Feb 2017\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2017", ",", "2", ",", "7"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "0.9976605200659968`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Wed 8 Feb 2017\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2017", ",", "2", ",", "8"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "0.9946399102470127`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Thu 9 Feb 2017\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2017", ",", "2", ",", "9"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "1.0016647828104428`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Fri 10 Feb 2017\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2017", ",", "2", ",", "10"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "1.0029496874498218`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Sat 11 Feb 2017\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2017", ",", "2", ",", "11"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", 
+     RowBox[{"QuantityMagnitude", "[", 
+      RowBox[{"Missing", "[", "\<\"NotAvailable\"\>", "]"}], "]"}]}], "}"}], 
+   ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Sun 12 Feb 2017\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2017", ",", "2", ",", "12"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", 
+     RowBox[{"QuantityMagnitude", "[", 
+      RowBox[{"Missing", "[", "\<\"NotAvailable\"\>", "]"}], "]"}]}], "}"}], 
+   ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Mon 13 Feb 2017\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2017", ",", "2", ",", "13"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "1.0057853042612748`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Tue 14 Feb 2017\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2017", ",", "2", ",", "14"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "1.0060848248657164`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Wed 15 Feb 2017\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2017", ",", "2", ",", "15"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "1.0054748138903684`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Thu 16 Feb 2017\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2017", ",", "2", ",", "16"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "0.9970845591940983`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Fri 17 Feb 2017\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2017", ",", "2", ",", "17"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "1.0029295423718378`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Sat 18 Feb 2017\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2017", ",", "2", ",", "18"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", 
+     RowBox[{"QuantityMagnitude", "[", 
+      RowBox[{"Missing", "[", "\<\"NotAvailable\"\>", "]"}], "]"}]}], "}"}], 
+   ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Sun 19 Feb 2017\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2017", ",", "2", ",", "19"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", 
+     RowBox[{"QuantityMagnitude", "[", 
+      RowBox[{"Missing", "[", "\<\"NotAvailable\"\>", "]"}], "]"}]}], "}"}], 
+   ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Mon 20 Feb 2017\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2017", ",", "2", ",", "20"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "1.00276463497823`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Tue 21 Feb 2017\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2017", ",", "2", ",", "21"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "1.0096400517372932`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Wed 22 Feb 2017\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2017", ",", "2", ",", "22"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "1.010300025797637`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Thu 23 Feb 2017\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2017", ",", "2", ",", "23"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "1.0064098188149724`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Fri 24 Feb 2017\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2017", ",", "2", ",", "24"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "1.007479524895179`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Sat 25 Feb 2017\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2017", ",", "2", ",", "25"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", 
+     RowBox[{"QuantityMagnitude", "[", 
+      RowBox[{"Missing", "[", "\<\"NotAvailable\"\>", "]"}], "]"}]}], "}"}], 
+   ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Sun 26 Feb 2017\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2017", ",", "2", ",", "26"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", 
+     RowBox[{"QuantityMagnitude", "[", 
+      RowBox[{"Missing", "[", "\<\"NotAvailable\"\>", "]"}], "]"}]}], "}"}], 
+   ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Mon 27 Feb 2017\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2017", ",", "2", ",", "27"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "1.0089555150583334`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Tue 28 Feb 2017\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2017", ",", "2", ",", "28"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "1.0058652032076956`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Wed 1 Mar 2017\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2017", ",", "3", ",", "1"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "1.0089147417582554`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Thu 2 Mar 2017\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2017", ",", "3", ",", "2"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "1.0134001829376096`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Fri 3 Mar 2017\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2017", ",", "3", ",", "3"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "1.0088404845715295`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     TemplateBox[{RowBox[{"\"Sat 4 Mar 2017\""}],RowBox[{"DateObject", "[", 
+         RowBox[{"{", 
+           RowBox[{"2017", ",", "3", ",", "4"}], "}"}], "]"}]},
+      "DateObject",
+      Editable->False], ",", 
+     RowBox[{"QuantityMagnitude", "[", 
+      RowBox[{"Missing", "[", "\<\"NotAvailable\"\>", "]"}], "]"}]}], "}"}]}],
+   "}"}]], "Output",
+ CellChangeTimes->{3.697677203598959*^9, 3.6976772509414787`*^9, 
+  3.69767759955508*^9, 3.697679132332806*^9, 3.697679232887796*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"DateListPlot", "[", 
+  RowBox[{
+   RowBox[{"Cases", "[", 
+    RowBox[{"data", ",", 
+     RowBox[{"{", 
+      RowBox[{"_", ",", 
+       RowBox[{"_", "?", "NumericQ"}]}], "}"}]}], "]"}], ",", 
+   RowBox[{"ImageSize", "\[Rule]", " ", "600"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.697679574735498*^9, 3.697679610302987*^9}, {
+  3.6976796408736887`*^9, 3.697679649577044*^9}}],
+
+Cell[BoxData[
+ GraphicsBox[{{}, {{}, {}, 
+    {RGBColor[0.368417, 0.506779, 0.709798], PointSize[0.007333333333333334], 
+     AbsoluteThickness[1.6], LineBox[CompressedData["
+1:eJxV2HtYTXkXB/BziiK9KiWkOJUolxxdEEV7BiElKbdSpzsJpZKIUkpKN0Iq
+SdTQSKEYpEJFcjmoSS7JZSibOplCF/V+7dXzzMM/ns+zT836/tZav32Mputm
+Ww8pHo83gc/j/fwbf8TrbVjGL2Nquv7d1rmwqAm2Gbwm8UM958Rhy1hmvtGo
+3v0vOZeZwh0WAys+NXOWeMLbczpW7I3kLEiCT3yaXJa/hXPYP7BY+16RdiDn
+AgVblukdqh5wO4Vzown8vqRA9vAhzoru8CHFhBV8K87m8fAJgy6F6PaWn/b9
+C7a8n19nLMs9F8svZ5n4PZErpQdz5s2AI0wGHTBV4Cx0gXdlTgh6pEX5YmF7
+e3nNwhmUrwgOCvSaHWdC+V7BEscHXzPnUx4jO5Z56ieT8X4hZxsnOC6y6NFt
+PcoXDc9K7LB1a+HqK7gA/1DO0nvVyLnxBfxSKf7+m9ucFWXtWWbxdJ6UyjnK
+4wBvfO/tuOI058xI+PBEY6X39FycD+v6/zh6LIUz7xlc5NDkI5XKWThgBcv4
+Ts8/lJrMWaQPj0lfvbF9D+eycLh03Ju/1EM4S87CsmKHZxoJnAV18LgkpaEn
+D3C24a9kmYMWwxNetnIOmwSPifY2efeF8tnDNx1EadpdlCcXTtr1ujadPm9e
+A4vbl/L4DZSvF66ZE6Necofy6a5iGVHA+rH5o6h/tvA4076kKgPq3044qfsP
+wXVb6tcjmHcv2Ul6BfWrGzbQOszWGlG/dFazjJKHtGKHLs3jUli97VBMkzL1
+bztcbPUgtfIz5TsFTzLV16s4T3m+w7m+DU2dZ6hfWmtY5va3F/qh8ZTPCp43
+ReFGIdk8CBa9e+aulE35TsBz2IeGWj8oXzXcMzFHNnkk5RE4oJ93KwJuCWge
+F8OGh3+f5zOc8gXADRH8JzKzKV8GHFSvH1U3jPLd+fnz4tdzs8iSL3CGX903
+FzovGwtHlpGq7mlLNaR59INf3Yo6ZbqI9i0N/kdoODpXRPtWAavZjTyWnUb7
+JoHHK9tdsi6kfVNbyzLfs9v5kZc4Z26CP/RJjfK8SP1KgfepSX1deZry3YI1
+n6dtbamifJ/hcnFm+rW/KN8IJ5bZeieiWpo+n8jATlHz64RPKM8h2M0bx04W
+lMGh/2oZh5dRvo9w661FroL7lE/FmWXut571PpZF+ebAlvuXOJSfp3zr4K1T
+Vy80NaM81+H80Qps1yzOvh/glpi6lCS6HzKVRLgfHBxT49/Rvs2GEzuPJ7ws
+oH3zhL+d2ODiTfMsTIT/zE52bH/OOfEd3PPfvpcNdfnluWQmvGy+e9uJv2nf
+3ODi5Q3SdRU0j3Hwuc7i9vA3tG+XYT3HXLORl2keh7hi3+wuNLY9pnmcDk9R
+l5e1q6Z5FMExprFJsg9oHmPgiLtPpJadpXkshCudn3zpFFO+BvjfsFMyHhOp
+X4ZuLCMnscodMZ76tRaWEaXxkmh+EvfCty7oXQl1onk8D0d9TLWLWkP9ew6H
+flALuUfzK5Bxx+eld/ct0KF+rYHfvht0pmEK9WsPvLZETkZE+9l4DjZXOeb/
+fAHNYz2seapkbJsx9U/a45f9950Cn827Z3RxB83jbljRZHb2V3q/8M7CpWk1
+1UkBlO9v+M/4u0nTsikfzxPndVq/5GYU5ZsIa1u57/jsTvns4LeHz8cb0c8L
+zsAqOdOSKjfSPD6BY7N7jRdtpnw/4HUbNy3RjaF8E7xYxr1B+UhP//ttGZwf
+9fhIDj1XDIGzHF1jzx2lPGJ4bW7E7ankzC7Yw/K6ypFYyjduHcs87O0aziul
+fEvhwN975yXT7xcG/3xuXdI50pXynYR3Lo3c5TOA8nyDVw/MLxxBlmiuZ5mc
+3pDyUXR/C5bA8edTNdVf0TxuhTVLdMcMGUf5MuFOldEJjf39uwvv87AKrXSk
+PGO9Waatr/bqDhfq1yJ414cxbWl0fr7+8B95M67u9qJ8x+CZUXMHCYSU7zbs
+6frB8Qa9f3lf4CC/jq4ous9ECzawzHH+NnmdadQvX9g5yZivoE35UuHdHk1H
+9tH7RVIOC55bZ1XSfgha4RbRI62lcZRvlA/L1IWO/xh7ge7/jfC809eX7r9C
++3YEvqy82XRp//v6Jryq9L6XHO2f+SeY6Q7p05HQvqluxPu+ULV0Syftmzk8
+ufGg5TBrynMIHnPjtMsCG+pXKbxk1cCZumRRMxz4LMpaHEz5lDexjGlysvZC
+cpkZrLr/aEyZA/XPCzZq1wluon20KYZztWaXyjhTv97/+vkCxc0sc7ElfZNw
+EM3jLDjhv+9Lih7wXad5ol0a1L8EOKl6QP656dSvt3C4j6TyDVn8P1+Wqf7t
+2jdjNco3E5bj8+z8aX+FrrDbkIUB1/q/b+2HS6sNnRvo84mX4OYv6z2saF4l
+cn74/vNVompIeQTG8EEjuQS3tZTPGTa7rrTKwJ7y7YM7V72LM51M+S7CbIl8
+dEsv9e8lvNNzfE4N5TM32MIyj0dftVtL3xd9HeHY2Mv22dKULwr+qH2+yUeR
+8hXAcikLGmPp/cx7Dr8tlm543Uz3/0B/nKdszOSt9Dxxtf8v51kWAQ9NthzN
+9n8fyYNb6l2yvy+nfE/9f6nfRioA85UUv0XPjfJNhmVjAx4EW1C/wuAD/30f
+UvwTnvxdbPCU7jvzWlhq7qRt8qcoXx/sprH4Y+4FyqcXyDLS0XL5romUbzk8
+brJex1N6XwpPwwZCmT7rfOrXY7ixLFwr7iTl64G3rE7iX8qjfOO34r6f97DZ
+ne5TiQ1cXPu2ZGYF5dsBLxQfVlhF/54Iewibm1g9m1RD/eqEHU6en+tVS/m0
+g3B/iS/6ytVRPmvY686DzH+qKd82OGJo5ZZS+n2+WXBzWtADJpXyfIUHW3to
+O9N9yNPcxjJnuvd6FuVQPkt4w3jjvPP6lC8QtjW1PLhsAuU7Dn/rHStTNYny
+VcEyLr78K3zqz8JglpnYO2T8Srr/wrbAUvyxHYMtKU86vOF6VmZ6GOWphJ9+
+SsrYlk552uBdcmVyRzOoH5u34+cfKu+83Ur1H4W37al7PEtWwtVfDscJK1vN
+B3EWtsCl2xOkVmtwFo3cATdYrYnW4yw5DMeF+ye/1uYsuAHfsJ7D09PnbMPC
+ndopW5/N4xw2PIRl+LP1fO7+zrlgLhwVvMrwwCzO5iXwIIN4jxfGnH2b4MXd
+9d4yQs6Zw3ZinrtHyZ2z4Cw2hb8+ds6YPonq94JVtWfMlJ7MOfEfuPLanK5C
+Nc5lCrtYxkJB4777RKrfBI6bKspVG0P1u8OTbN/ZH6L6bOJhWWup9mD67zXK
+h+L9lC03//h0zooz4MzPzjUO06h+F/jclYIYwXKqPxZ+ZLY/eNt2qr8IHqoy
+Y+fwzXS+RmH4PrTHdNhNssgJFueseJMSSPVHw3oqAiv9TVT/BZj3t0eEZB3V
+/wLebmpm3+BH5+uwG+8Ptmu9Ef2+gkj4Oz9dZpQ/1Z8Pewv7fuwNoPqfwVUW
+0SGP1lL9A8JxH4dYDtCzpPMNh4vfFuRZuND55sGCaz0l7r5Ufx1cNSg36MVK
+qp8fgfe9TZXs3glU/yT45P6dCS8W0PnmwlHrVHVmzqHzrYHlCwInyM2n+nvh
+5nHVbWUmVL/uHpbpcnqiVkH9bLSFn9YKNm3XofN9BGfPbTph3D8f3XCPdaFZ
+nAzVrxPJMldLCpu/Un95NvBltwbhnlFU/3Z4qpnmYJ/BdL7fYaeHX5QKXtP9
+ohXFMsMy3sg+lKb6reBuDZ3dqt20n0GwVZHTfP0+2s8T8PipE1L8Omn/BHtZ
+pt0m0qmH/n+G+WLY45uLhu4fdJ8EwB37eue8qKT9zIDXHPr3TXY57ecdmF23
+K+L4Lbo/LKLx74tFVVWLiuj+8IPzDBfcqP1E90ca7Fh7RXkE3XeSCvh5+rWc
+R3QeAgmso3rhu4o8ne+mfSzz/kiV3YURdL4psPP9Ys9PI2k+bsEfK/Ru+qjS
+fHyGp13NatRoovpHxODzDXL1fUPofA/Dn5T+12JLFpbBv43MXx5C8yD6CNvo
+j3UU0v4lqsSyTG9rlj7Tv59z4BrZvPos6pfNdbiiqHzfuXE0Hx9gVddQdRmq
+r0BpP8tMeFl+J4KeN86GT56cof62fz89Ye363awxnv8fmEuwpg==
+      
+      "]]}}, {}, {}, {{}, {}}},
+  AspectRatio->NCache[GoldenRatio^(-1), 0.6180339887498948],
+  Axes->{False, False},
+  AxesLabel->{None, None},
+  AxesOrigin->{3.6660384*^9, 0.9487879327922315},
+  DisplayFunction->Identity,
+  Frame->{{True, True}, {True, True}},
+  FrameLabel->{{None, None}, {None, None}},
+  FrameTicks->
+   FrontEndValueCache[{{Automatic, Automatic}, {Charting`FindScaledTicks[
+       (Charting`getDateTicks[Automatic, {Automatic}, 
+        (Map[DateList, {
+          SlotSequence[1]}]& )[
+         SlotSequence[1]], None, 5, {{0.0125, 0}, {0.0075, 0}}, Automatic]& )[
+       
+        SlotSequence[1]], {Identity, Identity}]& , Charting`ScaledFrameTicks[
+       (Charting`getDateTicks[Charting`getDateTicks[Automatic, {Automatic}, 
+         (Map[DateList, {
+           SlotSequence[1]}]& )[
+          SlotSequence[1]], None, 5, {{0.0125, 0}, {0.0075, 0}}, 
+         Automatic]& , {Automatic}, 
+        (Map[DateList, {
+          SlotSequence[1]}]& )[
+         SlotSequence[1]], None, 5, {{0.0125, 0}, {0.0075, 0}}, None]& )[
+        SlotSequence[1]], {Identity, Identity}]& }}, {{
+     Automatic, Automatic}, {{{3.6605952*^9, 
+        FormBox["\"Jan\"", TraditionalForm], {0.008333333333333333, 0.}}, {
+       3.6684576*^9, 
+        FormBox["\"Apr\"", TraditionalForm], {0.008333333333333333, 0.}}, {
+       3.67632*^9, 
+        FormBox["\"Jul\"", TraditionalForm], {0.008333333333333333, 0.}}, {
+       3.6842688*^9, 
+        FormBox["\"Oct\"", TraditionalForm], {0.008333333333333333, 0.}}, {
+       3.6922176*^9, 
+        FormBox["\"Jan\"", TraditionalForm], {0.008333333333333333, 0.}}, {
+       3.6999936*^9, 
+        FormBox["\"Apr\"", TraditionalForm], {0.008333333333333333, 0.}}, {
+       3.6605952*^9, 
+        FormBox[
+         InterpretationBox[
+          StyleBox[
+           
+           GraphicsBox[{}, ImageSize -> {0., 0.}, BaselinePosition -> 
+            Baseline], "CacheGraphics" -> False], 
+          Spacer[{0., 0.}]], TraditionalForm], {0.008333333333333333, 0.}}, {
+       3.6632736*^9, 
+        FormBox[
+         InterpretationBox[
+          StyleBox[
+           
+           GraphicsBox[{}, ImageSize -> {0., 0.}, BaselinePosition -> 
+            Baseline], "CacheGraphics" -> False], 
+          Spacer[{0., 0.}]], TraditionalForm], {0.008333333333333333, 0.}}, {
+       3.6657792*^9, 
+        FormBox[
+         InterpretationBox[
+          StyleBox[
+           
+           GraphicsBox[{}, ImageSize -> {0., 0.}, BaselinePosition -> 
+            Baseline], "CacheGraphics" -> False], 
+          Spacer[{0., 0.}]], TraditionalForm], {0.008333333333333333, 0.}}, {
+       3.6684576*^9, 
+        FormBox[
+         InterpretationBox[
+          StyleBox[
+           
+           GraphicsBox[{}, ImageSize -> {0., 0.}, BaselinePosition -> 
+            Baseline], "CacheGraphics" -> False], 
+          Spacer[{0., 0.}]], TraditionalForm], {0.008333333333333333, 0.}}, {
+       3.6710496*^9, 
+        FormBox[
+         InterpretationBox[
+          StyleBox[
+           
+           GraphicsBox[{}, ImageSize -> {0., 0.}, BaselinePosition -> 
+            Baseline], "CacheGraphics" -> False], 
+          Spacer[{0., 0.}]], TraditionalForm], {0.008333333333333333, 0.}}, {
+       3.673728*^9, 
+        FormBox[
+         InterpretationBox[
+          StyleBox[
+           
+           GraphicsBox[{}, ImageSize -> {0., 0.}, BaselinePosition -> 
+            Baseline], "CacheGraphics" -> False], 
+          Spacer[{0., 0.}]], TraditionalForm], {0.008333333333333333, 0.}}, {
+       3.67632*^9, 
+        FormBox[
+         InterpretationBox[
+          StyleBox[
+           
+           GraphicsBox[{}, ImageSize -> {0., 0.}, BaselinePosition -> 
+            Baseline], "CacheGraphics" -> False], 
+          Spacer[{0., 0.}]], TraditionalForm], {0.008333333333333333, 0.}}, {
+       3.6789984*^9, 
+        FormBox[
+         InterpretationBox[
+          StyleBox[
+           
+           GraphicsBox[{}, ImageSize -> {0., 0.}, BaselinePosition -> 
+            Baseline], "CacheGraphics" -> False], 
+          Spacer[{0., 0.}]], TraditionalForm], {0.008333333333333333, 0.}}, {
+       3.6816768*^9, 
+        FormBox[
+         InterpretationBox[
+          StyleBox[
+           
+           GraphicsBox[{}, ImageSize -> {0., 0.}, BaselinePosition -> 
+            Baseline], "CacheGraphics" -> False], 
+          Spacer[{0., 0.}]], TraditionalForm], {0.008333333333333333, 0.}}, {
+       3.6842688*^9, 
+        FormBox[
+         InterpretationBox[
+          StyleBox[
+           
+           GraphicsBox[{}, ImageSize -> {0., 0.}, BaselinePosition -> 
+            Baseline], "CacheGraphics" -> False], 
+          Spacer[{0., 0.}]], TraditionalForm], {0.008333333333333333, 0.}}, {
+       3.6869472*^9, 
+        FormBox[
+         InterpretationBox[
+          StyleBox[
+           
+           GraphicsBox[{}, ImageSize -> {0., 0.}, BaselinePosition -> 
+            Baseline], "CacheGraphics" -> False], 
+          Spacer[{0., 0.}]], TraditionalForm], {0.008333333333333333, 0.}}, {
+       3.6895392*^9, 
+        FormBox[
+         InterpretationBox[
+          StyleBox[
+           
+           GraphicsBox[{}, ImageSize -> {0., 0.}, BaselinePosition -> 
+            Baseline], "CacheGraphics" -> False], 
+          Spacer[{0., 0.}]], TraditionalForm], {0.008333333333333333, 0.}}, {
+       3.6922176*^9, 
+        FormBox[
+         InterpretationBox[
+          StyleBox[
+           
+           GraphicsBox[{}, ImageSize -> {0., 0.}, BaselinePosition -> 
+            Baseline], "CacheGraphics" -> False], 
+          Spacer[{0., 0.}]], TraditionalForm], {0.008333333333333333, 0.}}, {
+       3.694896*^9, 
+        FormBox[
+         InterpretationBox[
+          StyleBox[
+           
+           GraphicsBox[{}, ImageSize -> {0., 0.}, BaselinePosition -> 
+            Baseline], "CacheGraphics" -> False], 
+          Spacer[{0., 0.}]], TraditionalForm], {0.008333333333333333, 0.}}, {
+       3.6973152*^9, 
+        FormBox[
+         InterpretationBox[
+          StyleBox[
+           
+           GraphicsBox[{}, ImageSize -> {0., 0.}, BaselinePosition -> 
+            Baseline], "CacheGraphics" -> False], 
+          Spacer[{0., 0.}]], TraditionalForm], {0.008333333333333333, 
+        0.}}}, {{3.6605952*^9, 
+        FormBox[
+         InterpretationBox[
+          StyleBox[
+           
+           GraphicsBox[{}, ImageSize -> {0., 0.}, BaselinePosition -> 
+            Baseline], "CacheGraphics" -> False], 
+          Spacer[{0., 0.}]], TraditionalForm], {0.008333333333333333, 0.}}, {
+       3.6684576*^9, 
+        FormBox[
+         InterpretationBox[
+          StyleBox[
+           
+           GraphicsBox[{}, ImageSize -> {0., 0.}, BaselinePosition -> 
+            Baseline], "CacheGraphics" -> False], 
+          Spacer[{0., 0.}]], TraditionalForm], {0.008333333333333333, 0.}}, {
+       3.67632*^9, 
+        FormBox[
+         InterpretationBox[
+          StyleBox[
+           
+           GraphicsBox[{}, ImageSize -> {0., 0.}, BaselinePosition -> 
+            Baseline], "CacheGraphics" -> False], 
+          Spacer[{0., 0.}]], TraditionalForm], {0.008333333333333333, 0.}}, {
+       3.6842688*^9, 
+        FormBox[
+         InterpretationBox[
+          StyleBox[
+           
+           GraphicsBox[{}, ImageSize -> {0., 0.}, BaselinePosition -> 
+            Baseline], "CacheGraphics" -> False], 
+          Spacer[{0., 0.}]], TraditionalForm], {0.008333333333333333, 0.}}, {
+       3.6922176*^9, 
+        FormBox[
+         InterpretationBox[
+          StyleBox[
+           
+           GraphicsBox[{}, ImageSize -> {0., 0.}, BaselinePosition -> 
+            Baseline], "CacheGraphics" -> False], 
+          Spacer[{0., 0.}]], TraditionalForm], {0.008333333333333333, 0.}}, {
+       3.6999936*^9, 
+        FormBox[
+         InterpretationBox[
+          StyleBox[
+           
+           GraphicsBox[{}, ImageSize -> {0., 0.}, BaselinePosition -> 
+            Baseline], "CacheGraphics" -> False], 
+          Spacer[{0., 0.}]], TraditionalForm], {0.008333333333333333, 0.}}, {
+       3.6605952*^9, 
+        FormBox[
+         InterpretationBox[
+          StyleBox[
+           
+           GraphicsBox[{}, ImageSize -> {0., 0.}, BaselinePosition -> 
+            Baseline], "CacheGraphics" -> False], 
+          Spacer[{0., 0.}]], TraditionalForm], {0.008333333333333333, 0.}}, {
+       3.6632736*^9, 
+        FormBox[
+         InterpretationBox[
+          StyleBox[
+           
+           GraphicsBox[{}, ImageSize -> {0., 0.}, BaselinePosition -> 
+            Baseline], "CacheGraphics" -> False], 
+          Spacer[{0., 0.}]], TraditionalForm], {0.008333333333333333, 0.}}, {
+       3.6657792*^9, 
+        FormBox[
+         InterpretationBox[
+          StyleBox[
+           
+           GraphicsBox[{}, ImageSize -> {0., 0.}, BaselinePosition -> 
+            Baseline], "CacheGraphics" -> False], 
+          Spacer[{0., 0.}]], TraditionalForm], {0.008333333333333333, 0.}}, {
+       3.6684576*^9, 
+        FormBox[
+         InterpretationBox[
+          StyleBox[
+           
+           GraphicsBox[{}, ImageSize -> {0., 0.}, BaselinePosition -> 
+            Baseline], "CacheGraphics" -> False], 
+          Spacer[{0., 0.}]], TraditionalForm], {0.008333333333333333, 0.}}, {
+       3.6710496*^9, 
+        FormBox[
+         InterpretationBox[
+          StyleBox[
+           
+           GraphicsBox[{}, ImageSize -> {0., 0.}, BaselinePosition -> 
+            Baseline], "CacheGraphics" -> False], 
+          Spacer[{0., 0.}]], TraditionalForm], {0.008333333333333333, 0.}}, {
+       3.673728*^9, 
+        FormBox[
+         InterpretationBox[
+          StyleBox[
+           
+           GraphicsBox[{}, ImageSize -> {0., 0.}, BaselinePosition -> 
+            Baseline], "CacheGraphics" -> False], 
+          Spacer[{0., 0.}]], TraditionalForm], {0.008333333333333333, 0.}}, {
+       3.67632*^9, 
+        FormBox[
+         InterpretationBox[
+          StyleBox[
+           
+           GraphicsBox[{}, ImageSize -> {0., 0.}, BaselinePosition -> 
+            Baseline], "CacheGraphics" -> False], 
+          Spacer[{0., 0.}]], TraditionalForm], {0.008333333333333333, 0.}}, {
+       3.6789984*^9, 
+        FormBox[
+         InterpretationBox[
+          StyleBox[
+           
+           GraphicsBox[{}, ImageSize -> {0., 0.}, BaselinePosition -> 
+            Baseline], "CacheGraphics" -> False], 
+          Spacer[{0., 0.}]], TraditionalForm], {0.008333333333333333, 0.}}, {
+       3.6816768*^9, 
+        FormBox[
+         InterpretationBox[
+          StyleBox[
+           
+           GraphicsBox[{}, ImageSize -> {0., 0.}, BaselinePosition -> 
+            Baseline], "CacheGraphics" -> False], 
+          Spacer[{0., 0.}]], TraditionalForm], {0.008333333333333333, 0.}}, {
+       3.6842688*^9, 
+        FormBox[
+         InterpretationBox[
+          StyleBox[
+           
+           GraphicsBox[{}, ImageSize -> {0., 0.}, BaselinePosition -> 
+            Baseline], "CacheGraphics" -> False], 
+          Spacer[{0., 0.}]], TraditionalForm], {0.008333333333333333, 0.}}, {
+       3.6869472*^9, 
+        FormBox[
+         InterpretationBox[
+          StyleBox[
+           
+           GraphicsBox[{}, ImageSize -> {0., 0.}, BaselinePosition -> 
+            Baseline], "CacheGraphics" -> False], 
+          Spacer[{0., 0.}]], TraditionalForm], {0.008333333333333333, 0.}}, {
+       3.6895392*^9, 
+        FormBox[
+         InterpretationBox[
+          StyleBox[
+           
+           GraphicsBox[{}, ImageSize -> {0., 0.}, BaselinePosition -> 
+            Baseline], "CacheGraphics" -> False], 
+          Spacer[{0., 0.}]], TraditionalForm], {0.008333333333333333, 0.}}, {
+       3.6922176*^9, 
+        FormBox[
+         InterpretationBox[
+          StyleBox[
+           
+           GraphicsBox[{}, ImageSize -> {0., 0.}, BaselinePosition -> 
+            Baseline], "CacheGraphics" -> False], 
+          Spacer[{0., 0.}]], TraditionalForm], {0.008333333333333333, 0.}}, {
+       3.694896*^9, 
+        FormBox[
+         InterpretationBox[
+          StyleBox[
+           
+           GraphicsBox[{}, ImageSize -> {0., 0.}, BaselinePosition -> 
+            Baseline], "CacheGraphics" -> False], 
+          Spacer[{0., 0.}]], TraditionalForm], {0.008333333333333333, 0.}}, {
+       3.6973152*^9, 
+        FormBox[
+         InterpretationBox[
+          StyleBox[
+           
+           GraphicsBox[{}, ImageSize -> {0., 0.}, BaselinePosition -> 
+            Baseline], "CacheGraphics" -> False], 
+          Spacer[{0., 0.}]], TraditionalForm], {0.008333333333333333, 0.}}}}}],
+  GridLines->{None, None},
+  GridLinesStyle->Directive[
+    GrayLevel[0.5, 0.4]],
+  ImagePadding->All,
+  ImageSize->600,
+  Method->{"CoordinatesToolOptions" -> {"DisplayFunction" -> ({
+        (Part[{{Identity, Identity}, {Identity, Identity}}, 1, 2][#]& )[
+         Part[#, 1]], 
+        (Part[{{Identity, Identity}, {Identity, Identity}}, 2, 2][#]& )[
+         Part[#, 2]]}& ), "CopiedValueFunction" -> ({
+        (Part[{{Identity, Identity}, {Identity, Identity}}, 1, 2][#]& )[
+         Part[#, 1]], 
+        (Part[{{Identity, Identity}, {Identity, Identity}}, 2, 2][#]& )[
+         Part[#, 2]]}& )}},
+  PlotRange->{{3.6660384*^9, 3.697488*^9}, {0.952650414562548, 
+   1.0299000499688769`}},
+  PlotRangeClipping->True,
+  PlotRangePadding->{{
+     Scaled[0.02], 
+     Scaled[0.02]}, {
+     Scaled[0.05], 
+     Scaled[0.05]}},
+  Ticks->{{}, Automatic}]], "Output",
+ CellChangeTimes->{{3.69767960455628*^9, 3.6976796112162523`*^9}, {
+  3.697679641815989*^9, 3.697679650150897*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["References", "Section",
+ CellChangeTimes->{{3.69767733623363*^9, 3.697677337312131*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"?", "TimeSeries"}]], "Input",
+ CellChangeTimes->{{3.697677345076824*^9, 3.6976773513698*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox["\<\"\!\(\*RowBox[{\\\"TimeSeries\\\", \\\"[\\\", \
+RowBox[{\\\"{\\\", RowBox[{RowBox[{\\\"{\\\", \
+RowBox[{SubscriptBox[StyleBox[\\\"t\\\", \\\"TI\\\"], StyleBox[\\\"1\\\", \
+\\\"TR\\\"]], \\\",\\\", SubscriptBox[StyleBox[\\\"v\\\", \\\"TI\\\"], \
+StyleBox[\\\"1\\\", \\\"TR\\\"]]}], \\\"}\\\"}], \\\",\\\", \
+RowBox[{RowBox[{\\\"{\\\", RowBox[{SubscriptBox[StyleBox[\\\"t\\\", \
+\\\"TI\\\"], StyleBox[\\\"2\\\", \\\"TR\\\"]], \\\",\\\", \
+SubscriptBox[StyleBox[\\\"v\\\", \\\"TI\\\"], StyleBox[\\\"2\\\", \
+\\\"TR\\\"]]}], \\\"}\\\"}], StyleBox[\\\"\[Ellipsis]\\\", \\\"TR\\\"]}]}], \
+\\\"}\\\"}], \\\"]\\\"}]\) represents a time series specified by time-value \
+pairs \!\(\*RowBox[{\\\"{\\\", RowBox[{SubscriptBox[StyleBox[\\\"t\\\", \
+\\\"TI\\\"], StyleBox[\\\"i\\\", \\\"TI\\\"]], \\\",\\\", \
+SubscriptBox[StyleBox[\\\"v\\\", \\\"TI\\\"], StyleBox[\\\"i\\\", \
+\\\"TI\\\"]]}], \\\"}\\\"}]\).\\n\!\(\*RowBox[{\\\"TimeSeries\\\", \\\"[\\\", \
+RowBox[{RowBox[{\\\"{\\\", RowBox[{SubscriptBox[StyleBox[\\\"v\\\", \
+\\\"TI\\\"], StyleBox[\\\"1\\\", \\\"TR\\\"]], \\\",\\\", \
+SubscriptBox[StyleBox[\\\"v\\\", \\\"TI\\\"], StyleBox[\\\"2\\\", \
+\\\"TR\\\"]], \\\",\\\", StyleBox[\\\"\[Ellipsis]\\\", \\\"TR\\\"]}], \\\"}\\\
+\"}], \\\",\\\", StyleBox[\\\"tspec\\\", \\\"TI\\\"]}], \\\"]\\\"}]\) \
+represents a time series with values \!\(\*SubscriptBox[StyleBox[\\\"v\\\", \
+\\\"TI\\\"], StyleBox[\\\"i\\\", \\\"TI\\\"]]\) at times specified by \
+\!\(\*StyleBox[\\\"tspec\\\", \\\"TI\\\"]\).\"\>", "MSG"], 
+  "\[NonBreakingSpace]", 
+  ButtonBox[
+   StyleBox["\[RightSkeleton]", "SR"],
+   Active->True,
+   BaseStyle->"Link",
+   ButtonData->"paclet:ref/TimeSeries"]}]], "Print", "PrintUsage",
+ CellChangeTimes->{3.697677600297023*^9},
+ CellTags->"Info73697648800-6583753"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"?", "DateRange"}]], "Input",
+ CellChangeTimes->{{3.697677268200239*^9, 3.6976772736390247`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox["\<\"\!\(\*RowBox[{\\\"DateRange\\\", \\\"[\\\", \
+RowBox[{SubscriptBox[StyleBox[\\\"date\\\", \\\"TI\\\"], StyleBox[\\\"1\\\", \
+\\\"TR\\\"]], \\\",\\\", SubscriptBox[StyleBox[\\\"date\\\", \\\"TI\\\"], \
+StyleBox[\\\"2\\\", \\\"TR\\\"]]}], \\\"]\\\"}]\) gives all dates in the \
+range from \!\(\*StyleBox[SubscriptBox[\\\"date\\\", StyleBox[\\\"1\\\", \
+\\\"TR\\\"]], \\\"TI\\\"]\) to \!\(\*StyleBox[SubscriptBox[\\\"date\\\", \
+StyleBox[\\\"2\\\", \\\"TR\\\"]], \
+\\\"TI\\\"]\).\\n\!\(\*RowBox[{\\\"DateRange\\\", \\\"[\\\", \
+RowBox[{SubscriptBox[StyleBox[\\\"date\\\", \\\"TI\\\"], StyleBox[\\\"1\\\", \
+\\\"TR\\\"]], \\\",\\\", SubscriptBox[StyleBox[\\\"date\\\", \\\"TI\\\"], \
+StyleBox[\\\"2\\\", \\\"TR\\\"]], \\\",\\\", StyleBox[\\\"increment\\\", \
+\\\"TI\\\"]}], \\\"]\\\"}]\) gives the date lists in the range from \
+\!\(\*StyleBox[SubscriptBox[\\\"date\\\", StyleBox[\\\"1\\\", \\\"TR\\\"]], \
+\\\"TI\\\"]\) to \!\(\*StyleBox[SubscriptBox[\\\"date\\\", \
+StyleBox[\\\"2\\\", \\\"TR\\\"]], \\\"TI\\\"]\) that are \
+\!\(\*StyleBox[\\\"increment\\\", \\\"TI\\\"]\) apart.\"\>", "MSG"], 
+  "\[NonBreakingSpace]", 
+  ButtonBox[
+   StyleBox["\[RightSkeleton]", "SR"],
+   Active->True,
+   BaseStyle->"Link",
+   ButtonData->"paclet:ref/DateRange"]}]], "Print", "PrintUsage",
+ CellChangeTimes->{3.697677274186158*^9},
+ CellTags->"Info43697648473-6583753"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"?", "Today"}]], "Input",
+ CellChangeTimes->{{3.697677293497961*^9, 3.69767729640764*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox["\<\"Today gives a DateObject representing the current day.\"\>", 
+   "MSG"], "\[NonBreakingSpace]", 
+  ButtonBox[
+   StyleBox["\[RightSkeleton]", "SR"],
+   Active->True,
+   BaseStyle->"Link",
+   ButtonData->"paclet:ref/Today"]}]], "Print", "PrintUsage",
+ CellChangeTimes->{3.6976772970393667`*^9},
+ CellTags->"Info53697648496-6583753"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{1920, 1151},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+FrontEndVersion->"11.0 for Mac OS X x86 (32-bit, 64-bit Kernel) (September \
+21, 2016)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{
+ "Info73697648800-6583753"->{
+  Cell[132570, 3342, 1804, 31, 63, "Print",
+   CellTags->"Info73697648800-6583753"]},
+ "Info43697648473-6583753"->{
+  Cell[134534, 3382, 1395, 25, 63, "Print",
+   CellTags->"Info43697648473-6583753"]},
+ "Info53697648496-6583753"->{
+  Cell[136082, 3416, 371, 10, 43, "Print",
+   CellTags->"Info53697648496-6583753"]}
+ }
+*)
+(*CellTagsIndex
+CellTagsIndex->{
+ {"Info73697648800-6583753", 136817, 3442},
+ {"Info43697648473-6583753", 136933, 3445},
+ {"Info53697648496-6583753", 137049, 3448}
+ }
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 100, 1, 92, "Title"],
+Cell[683, 25, 363, 6, 30, "Text"],
+Cell[CellGroupData[{
+Cell[1071, 35, 971, 26, 32, "Input"],
+Cell[2045, 63, 527, 10, 24, "Message"],
+Cell[2575, 75, 527, 10, 24, "Message"],
+Cell[3105, 87, 528, 10, 24, "Message"],
+Cell[3636, 99, 400, 8, 24, "Message"],
+Cell[4039, 109, 109983, 2779, 1902, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[114059, 2893, 399, 10, 32, "Input"],
+Cell[114461, 2905, 17833, 423, 392, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[132331, 3333, 94, 1, 64, "Section"],
+Cell[CellGroupData[{
+Cell[132450, 3338, 117, 2, 32, "Input"],
+Cell[132570, 3342, 1804, 31, 63, "Print",
+ CellTags->"Info73697648800-6583753"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[134411, 3378, 120, 2, 32, "Input"],
+Cell[134534, 3382, 1395, 25, 63, "Print",
+ CellTags->"Info43697648473-6583753"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[135966, 3412, 113, 2, 32, "Input"],
+Cell[136082, 3416, 371, 10, 43, "Print",
+ CellTags->"Info53697648496-6583753"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+

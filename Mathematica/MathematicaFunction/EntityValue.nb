@@ -1,0 +1,329 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.1' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     14269,        321]
+NotebookOptionsPosition[     12775,        276]
+NotebookOutlinePosition[     13128,        292]
+CellTagsIndexPosition[     13085,        289]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["EntityValue", "Title",ExpressionUUID->"4b7968bf-f0dc-4c87-82df-740ec4b0e8ed"],
+
+Cell[CellGroupData[{
+
+Cell["Topics", "Section",ExpressionUUID->"83e6f433-fd59-4fa3-b4b2-99366d9a51c1"],
+
+Cell[CellGroupData[{
+
+Cell["All entities that are not missing a property", "Subsection",ExpressionUUID->"3ef1cd61-fb52-45b9-9faf-cbb28cd4d88f"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"EntityValue", "[", 
+  RowBox[{"\"\<Person\>\"", ",", "\"\<Properties\>\""}], "]"}]], "Input",Expre\
+ssionUUID->"9aab18b6-bec6-40df-b6bc-00d7dc769e36"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   TemplateBox[{"\"other names\"",RowBox[{"EntityProperty", "[", 
+       RowBox[{"\"Person\"", ",", "\"AlternateNames\""}], "]"}],
+     "\"EntityProperty[\\\"Person\\\", \\\"AlternateNames\\\"]\""},
+    "EntityProperty"], ",", 
+   TemplateBox[{"\"astrological sign\"",RowBox[{"EntityProperty", "[", 
+       RowBox[{"\"Person\"", ",", "\"AstrologicalSign\""}], "]"}],
+     "\"EntityProperty[\\\"Person\\\", \\\"AstrologicalSign\\\"]\""},
+    "EntityProperty"], ",", 
+   TemplateBox[{"\"date of birth\"",RowBox[{"EntityProperty", "[", 
+       RowBox[{"\"Person\"", ",", "\"BirthDate\""}], "]"}],
+     "\"EntityProperty[\\\"Person\\\", \\\"BirthDate\\\"]\""},
+    "EntityProperty"], ",", 
+   TemplateBox[{"\"place of birth\"",RowBox[{"EntityProperty", "[", 
+       RowBox[{"\"Person\"", ",", "\"BirthPlace\""}], "]"}],
+     "\"EntityProperty[\\\"Person\\\", \\\"BirthPlace\\\"]\""},
+    "EntityProperty"], ",", 
+   TemplateBox[{"\"brothers\"",RowBox[{"EntityProperty", "[", 
+       RowBox[{"\"Person\"", ",", "\"Brothers\""}], "]"}],
+     "\"EntityProperty[\\\"Person\\\", \\\"Brothers\\\"]\""},
+    "EntityProperty"], ",", 
+   TemplateBox[{"\"children\"",RowBox[{"EntityProperty", "[", 
+       RowBox[{"\"Person\"", ",", "\"Children\""}], "]"}],
+     "\"EntityProperty[\\\"Person\\\", \\\"Children\\\"]\""},
+    "EntityProperty"], ",", 
+   TemplateBox[{"\"Chinese zodiac sign\"",RowBox[{"EntityProperty", "[", 
+       RowBox[{"\"Person\"", ",", "\"ChineseZodiacSign\""}], "]"}],
+     "\"EntityProperty[\\\"Person\\\", \\\"ChineseZodiacSign\\\"]\""},
+    "EntityProperty"], ",", 
+   TemplateBox[{"\"daughters\"",RowBox[{"EntityProperty", "[", 
+       RowBox[{"\"Person\"", ",", "\"Daughters\""}], "]"}],
+     "\"EntityProperty[\\\"Person\\\", \\\"Daughters\\\"]\""},
+    "EntityProperty"], ",", 
+   TemplateBox[{"\"date of death\"",RowBox[{"EntityProperty", "[", 
+       RowBox[{"\"Person\"", ",", "\"DeathDate\""}], "]"}],
+     "\"EntityProperty[\\\"Person\\\", \\\"DeathDate\\\"]\""},
+    "EntityProperty"], ",", 
+   TemplateBox[{"\"place of death\"",RowBox[{"EntityProperty", "[", 
+       RowBox[{"\"Person\"", ",", "\"DeathPlace\""}], "]"}],
+     "\"EntityProperty[\\\"Person\\\", \\\"DeathPlace\\\"]\""},
+    "EntityProperty"], ",", 
+   TemplateBox[{"\"father\"",RowBox[{"EntityProperty", "[", 
+       RowBox[{"\"Person\"", ",", "\"Father\""}], "]"}],
+     "\"EntityProperty[\\\"Person\\\", \\\"Father\\\"]\""},
+    "EntityProperty"], ",", 
+   TemplateBox[{"\"full name\"",RowBox[{"EntityProperty", "[", 
+       RowBox[{"\"Person\"", ",", "\"FullName\""}], "]"}],
+     "\"EntityProperty[\\\"Person\\\", \\\"FullName\\\"]\""},
+    "EntityProperty"], ",", 
+   TemplateBox[{"\"gender\"",RowBox[{"EntityProperty", "[", 
+       RowBox[{"\"Person\"", ",", "\"Gender\""}], "]"}],
+     "\"EntityProperty[\\\"Person\\\", \\\"Gender\\\"]\""},
+    "EntityProperty"], ",", 
+   TemplateBox[{"\"height\"",RowBox[{"EntityProperty", "[", 
+       RowBox[{"\"Person\"", ",", "\"Height\""}], "]"}],
+     "\"EntityProperty[\\\"Person\\\", \\\"Height\\\"]\""},
+    "EntityProperty"], ",", 
+   TemplateBox[{"\"husbands\"",RowBox[{"EntityProperty", "[", 
+       RowBox[{"\"Person\"", ",", "\"Husbands\""}], "]"}],
+     "\"EntityProperty[\\\"Person\\\", \\\"Husbands\\\"]\""},
+    "EntityProperty"], ",", 
+   TemplateBox[{"\"image\"",RowBox[{"EntityProperty", "[", 
+       RowBox[{"\"Person\"", ",", "\"Image\""}], "]"}],
+     "\"EntityProperty[\\\"Person\\\", \\\"Image\\\"]\""},
+    "EntityProperty"], ",", 
+   TemplateBox[{"\"space missions\"",RowBox[{"EntityProperty", "[", 
+       RowBox[{"\"Person\"", ",", "\"MannedSpaceMissions\""}], "]"}],
+     "\"EntityProperty[\\\"Person\\\", \\\"MannedSpaceMissions\\\"]\""},
+    "EntityProperty"], ",", 
+   TemplateBox[{
+    "\"mathematical contributions\"",RowBox[{"EntityProperty", "[", 
+       RowBox[{"\"Person\"", ",", "\"MathematicalAchievements\""}], "]"}],
+     "\"EntityProperty[\\\"Person\\\", \\\"MathematicalAchievements\\\"]\""},
+    "EntityProperty"], ",", 
+   TemplateBox[{"\"mother\"",RowBox[{"EntityProperty", "[", 
+       RowBox[{"\"Person\"", ",", "\"Mother\""}], "]"}],
+     "\"EntityProperty[\\\"Person\\\", \\\"Mother\\\"]\""},
+    "EntityProperty"], ",", 
+   TemplateBox[{
+    "\"notable film appearances\"",RowBox[{"EntityProperty", "[", 
+       RowBox[{"\"Person\"", ",", "\"MovieAppearances\""}], "]"}],
+     "\"EntityProperty[\\\"Person\\\", \\\"MovieAppearances\\\"]\""},
+    "EntityProperty"], ",", 
+   TemplateBox[{
+    "\"notable film direction credits\"",RowBox[{"EntityProperty", "[", 
+       RowBox[{"\"Person\"", ",", "\"MoviesDirected\""}], "]"}],
+     "\"EntityProperty[\\\"Person\\\", \\\"MoviesDirected\\\"]\""},
+    "EntityProperty"], ",", 
+   TemplateBox[{
+    "\"notable film production credits\"",RowBox[{"EntityProperty", "[", 
+       RowBox[{"\"Person\"", ",", "\"MoviesProduced\""}], "]"}],
+     "\"EntityProperty[\\\"Person\\\", \\\"MoviesProduced\\\"]\""},
+    "EntityProperty"], ",", 
+   TemplateBox[{
+    "\"notable film writing credits\"",RowBox[{"EntityProperty", "[", 
+       RowBox[{"\"Person\"", ",", "\"MoviesWritten\""}], "]"}],
+     "\"EntityProperty[\\\"Person\\\", \\\"MoviesWritten\\\"]\""},
+    "EntityProperty"], ",", 
+   TemplateBox[{"\"name\"",RowBox[{"EntityProperty", "[", 
+       RowBox[{"\"Person\"", ",", "\"Name\""}], "]"}],
+     "\"EntityProperty[\\\"Person\\\", \\\"Name\\\"]\""},
+    "EntityProperty"], ",", 
+   TemplateBox[{"\"nationality\"",RowBox[{"EntityProperty", "[", 
+       RowBox[{"\"Person\"", ",", "\"NationalityCountries\""}], "]"}],
+     "\"EntityProperty[\\\"Person\\\", \\\"NationalityCountries\\\"]\""},
+    "EntityProperty"], ",", 
+   TemplateBox[{"\"net worth\"",RowBox[{"EntityProperty", "[", 
+       RowBox[{"\"Person\"", ",", "\"NetWorth\""}], "]"}],
+     "\"EntityProperty[\\\"Person\\\", \\\"NetWorth\\\"]\""},
+    "EntityProperty"], ",", 
+   TemplateBox[{"\"notable artworks\"",RowBox[{"EntityProperty", "[", 
+       RowBox[{"\"Person\"", ",", "\"NotableArtworks\""}], "]"}],
+     "\"EntityProperty[\\\"Person\\\", \\\"NotableArtworks\\\"]\""},
+    "EntityProperty"], ",", 
+   TemplateBox[{
+    "\"astronomical discoveries\"",RowBox[{"EntityProperty", "[", 
+       RowBox[{"\"Person\"", ",", "\"NotableAstronomicalDiscoveries\""}], 
+       "]"}],"\"EntityProperty[\\\"Person\\\", \
+\\\"NotableAstronomicalDiscoveries\\\"]\""},
+    "EntityProperty"], ",", 
+   TemplateBox[{"\"notable books\"",RowBox[{"EntityProperty", "[", 
+       RowBox[{"\"Person\"", ",", "\"NotableBooks\""}], "]"}],
+     "\"EntityProperty[\\\"Person\\\", \\\"NotableBooks\\\"]\""},
+    "EntityProperty"], ",", 
+   TemplateBox[{"\"famous chemistry problems\"",RowBox[{"EntityProperty", "[", 
+       RowBox[{"\"Person\"", ",", "\"NotableChemistryProblems\""}], "]"}],
+     "\"EntityProperty[\\\"Person\\\", \\\"NotableChemistryProblems\\\"]\""},
+    "EntityProperty"], ",", 
+   TemplateBox[{"\"notable facts\"",RowBox[{"EntityProperty", "[", 
+       RowBox[{"\"Person\"", ",", "\"NotableFacts\""}], "]"}],
+     "\"EntityProperty[\\\"Person\\\", \\\"NotableFacts\\\"]\""},
+    "EntityProperty"], ",", 
+   TemplateBox[{"\"notable inventions\"",RowBox[{"EntityProperty", "[", 
+       RowBox[{"\"Person\"", ",", "\"NotableInventions\""}], "]"}],
+     "\"EntityProperty[\\\"Person\\\", \\\"NotableInventions\\\"]\""},
+    "EntityProperty"], ",", 
+   TemplateBox[{"\"physics contributions\"",RowBox[{"EntityProperty", "[", 
+       RowBox[{"\"Person\"", ",", "\"NotablePhysicsProblems\""}], "]"}],
+     "\"EntityProperty[\\\"Person\\\", \\\"NotablePhysicsProblems\\\"]\""},
+    "EntityProperty"], ",", 
+   TemplateBox[{"\"occupation\"",RowBox[{"EntityProperty", "[", 
+       RowBox[{"\"Person\"", ",", "\"Occupation\""}], "]"}],
+     "\"EntityProperty[\\\"Person\\\", \\\"Occupation\\\"]\""},
+    "EntityProperty"], ",", 
+   TemplateBox[{"\"parents\"",RowBox[{"EntityProperty", "[", 
+       RowBox[{"\"Person\"", ",", "\"Parents\""}], "]"}],
+     "\"EntityProperty[\\\"Person\\\", \\\"Parents\\\"]\""},
+    "EntityProperty"], ",", 
+   TemplateBox[{"\"siblings\"",RowBox[{"EntityProperty", "[", 
+       RowBox[{"\"Person\"", ",", "\"Siblings\""}], "]"}],
+     "\"EntityProperty[\\\"Person\\\", \\\"Siblings\\\"]\""},
+    "EntityProperty"], ",", 
+   TemplateBox[{"\"sisters\"",RowBox[{"EntityProperty", "[", 
+       RowBox[{"\"Person\"", ",", "\"Sisters\""}], "]"}],
+     "\"EntityProperty[\\\"Person\\\", \\\"Sisters\\\"]\""},
+    "EntityProperty"], ",", 
+   TemplateBox[{"\"sons\"",RowBox[{"EntityProperty", "[", 
+       RowBox[{"\"Person\"", ",", "\"Sons\""}], "]"}],
+     "\"EntityProperty[\\\"Person\\\", \\\"Sons\\\"]\""},
+    "EntityProperty"], ",", 
+   TemplateBox[{"\"spouses\"",RowBox[{"EntityProperty", "[", 
+       RowBox[{"\"Person\"", ",", "\"Spouses\""}], "]"}],
+     "\"EntityProperty[\\\"Person\\\", \\\"Spouses\\\"]\""},
+    "EntityProperty"], ",", 
+   TemplateBox[{"\"weight\"",RowBox[{"EntityProperty", "[", 
+       RowBox[{"\"Person\"", ",", "\"Weight\""}], "]"}],
+     "\"EntityProperty[\\\"Person\\\", \\\"Weight\\\"]\""},
+    "EntityProperty"], ",", 
+   TemplateBox[{"\"wives\"",RowBox[{"EntityProperty", "[", 
+       RowBox[{"\"Person\"", ",", "\"Wives\""}], "]"}],
+     "\"EntityProperty[\\\"Person\\\", \\\"Wives\\\"]\""},
+    "EntityProperty"]}], "}"}]], "Output",ExpressionUUID->"d8e014b2-4cf4-486a-\
+bba5-b1711d9fd9fa"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"EntityValue", "[", 
+  RowBox[{
+  "\"\<Person\>\"", ",", "\"\<Husbands\>\"", ",", 
+   "\"\<NonMissingEntityAssociation\>\""}], "]"}]], "Input",ExpressionUUID->\
+"05045ba1-1ba5-4d54-8588-51df95a08c93"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "EntityValue","nodat",
+   "\"Unable to download data. Some or all results may be missing.\"",2,6,1,
+   21843359708269050592,"Local"},
+  "MessageTemplate"]], "Message", \
+"MSG",ExpressionUUID->"b73556ab-da2e-40b3-90ab-86e3272d9bf0"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "EntityValue","conopen",
+   "\"Using \\!\\(\\*RowBox[{\\\"EntityValue\\\"}]\\) requires internet \
+connectivity. Please check your network connection. You may need to configure \
+your firewall program or set a proxy in the Internet Connectivity tab of the \
+Preferences dialog.\"",2,6,2,21843359708269050592,"Local"},
+  "MessageTemplate"]], "Message", \
+"MSG",ExpressionUUID->"c9fde89a-00a1-4768-a668-2dd89a3785aa"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "EntityValue","conopen",
+   "\"Using \\!\\(\\*RowBox[{\\\"EntityValue\\\"}]\\) requires internet \
+connectivity. Please check your network connection. You may need to configure \
+your firewall program or set a proxy in the Internet Connectivity tab of the \
+Preferences dialog.\"",2,6,3,21843359708269050592,"Local"},
+  "MessageTemplate"]], "Message", \
+"MSG",ExpressionUUID->"40ce0b4f-490b-4184-87b7-8d5ed4195cea"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "EntityValue","conopen",
+   "\"Using \\!\\(\\*RowBox[{\\\"EntityValue\\\"}]\\) requires internet \
+connectivity. Please check your network connection. You may need to configure \
+your firewall program or set a proxy in the Internet Connectivity tab of the \
+Preferences dialog.\"",2,6,4,21843359708269050592,"Local"},
+  "MessageTemplate"]], "Message", \
+"MSG",ExpressionUUID->"3004a2c3-e782-474b-80ce-de3dfdfba8f1"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "General","stop",
+   "\"Further output of \\!\\(\\*StyleBox[RowBox[{\\\"EntityValue\\\", \\\"::\
+\\\", \\\"conopen\\\"}], \\\"MessageName\\\"]\\) will be suppressed during \
+this calculation.\"",2,6,5,21843359708269050592,"Local"},
+  "MessageTemplate"]], "Message", \
+"MSG",ExpressionUUID->"0575b94e-eaac-4d30-8aca-506ed58a337b"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{808, 752},
+WindowMargins->{{4, Automatic}, {Automatic, 4}},
+FrontEndVersion->"11.1 for Mac OS X x86 (32-bit, 64-bit Kernel) (March 13, \
+2017)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 83, 0, 92, "Title", "ExpressionUUID" -> \
+"4b7968bf-f0dc-4c87-82df-740ec4b0e8ed"],
+Cell[CellGroupData[{
+Cell[688, 26, 80, 0, 64, "Section", "ExpressionUUID" -> \
+"83e6f433-fd59-4fa3-b4b2-99366d9a51c1"],
+Cell[CellGroupData[{
+Cell[793, 30, 121, 0, 44, "Subsection", "ExpressionUUID" -> \
+"3ef1cd61-fb52-45b9-9faf-cbb28cd4d88f"],
+Cell[CellGroupData[{
+Cell[939, 34, 174, 3, 32, "Input", "ExpressionUUID" -> \
+"9aab18b6-bec6-40df-b6bc-00d7dc769e36"],
+Cell[1116, 39, 9372, 174, 254, "Output", "ExpressionUUID" -> \
+"d8e014b2-4cf4-486a-bba5-b1711d9fd9fa"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[10525, 218, 223, 5, 32, "Input", "ExpressionUUID" -> \
+"05045ba1-1ba5-4d54-8588-51df95a08c93"],
+Cell[10751, 225, 262, 6, 24, "Message", "ExpressionUUID" -> \
+"b73556ab-da2e-40b3-90ab-86e3272d9bf0"],
+Cell[11016, 233, 446, 8, 42, "Message", "ExpressionUUID" -> \
+"c9fde89a-00a1-4768-a668-2dd89a3785aa"],
+Cell[11465, 243, 446, 8, 42, "Message", "ExpressionUUID" -> \
+"40ce0b4f-490b-4184-87b7-8d5ed4195cea"],
+Cell[11914, 253, 446, 8, 42, "Message", "ExpressionUUID" -> \
+"3004a2c3-e782-474b-80ce-de3dfdfba8f1"],
+Cell[12363, 263, 360, 7, 24, "Message", "ExpressionUUID" -> \
+"0575b94e-eaac-4d30-8aca-506ed58a337b"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+

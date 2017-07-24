@@ -1,0 +1,1447 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 10.4' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     57350,       1439]
+NotebookOptionsPosition[     56701,       1409]
+NotebookOutlinePosition[     57057,       1425]
+CellTagsIndexPosition[     57014,       1422]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["BubbleChart", "Title"],
+
+Cell[CellGroupData[{
+
+Cell["Topics", "Section"],
+
+Cell[CellGroupData[{
+
+Cell["How to specify edge style for chart elements?", "Subsection"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"chartElement", "=", 
+  RowBox[{"Graphics", "[", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"EdgeForm", "[", 
+      RowBox[{"{", 
+       RowBox[{"Red", ",", 
+        RowBox[{"Thickness", "[", "0.08", "]"}]}], "}"}], "]"}], ",", 
+     "LightGray", ",", 
+     RowBox[{"Disk", "[", "]"}]}], "}"}], "]"}]}]], "Input"],
+
+Cell[BoxData[
+ GraphicsBox[
+  {GrayLevel[0.85], EdgeForm[{RGBColor[1, 0, 0], Thickness[0.08]}], 
+   DiskBox[{0, 0}]}]], "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"BubbleChart", "[", 
+  RowBox[{
+   RowBox[{"Table", "[", 
+    RowBox[{
+     RowBox[{"RandomReal", "[", "]"}], ",", 
+     RowBox[{"{", "30", "}"}], ",", 
+     RowBox[{"{", "3", "}"}]}], "]"}], ",", 
+   RowBox[{"ChartElements", "\[Rule]", " ", "chartElement"}]}], 
+  "]"}]], "Input"],
+
+Cell[BoxData[
+ GraphicsBox[{
+   {RGBColor[0.982864, 0.7431472, 0.3262672], EdgeForm[{GrayLevel[0], Opacity[
+    0.3]}], 
+    {RGBColor[0.982864, 0.7431472, 0.3262672], EdgeForm[{GrayLevel[0], 
+     Opacity[0.3]}], 
+     TagBox[
+      TooltipBox[
+       TagBox[
+        DynamicBox[{
+          FEPrivate`If[
+           CurrentValue["MouseOver"], 
+           EdgeForm[{
+             GrayLevel[0.5], 
+             AbsoluteThickness[1.5], 
+             Opacity[0.66]}], {}, {}], {
+           InsetBox[
+            GraphicsBox[
+             InsetBox[
+              GraphicsBox[{
+                EdgeForm[{
+                  RGBColor[1, 0, 0], 
+                  Thickness[0.08]}], 
+                GrayLevel[0.85], 
+                DiskBox[{0, 0}]}, {
+               DisplayFunction -> Identity, AspectRatio -> Full, 
+                DefaultBaseStyle -> {"Graphics", 
+                  Directive[
+                   EdgeForm[
+                    Directive[
+                    GrayLevel[0], 
+                    Opacity[0.3]]], 
+                   RGBColor[0.982864, 0.7431472, 0.3262672]]}}], {0, 0}, {
+              Left, Bottom}, {0.19240498657234006`, 0.18878347354074299`}], 
+             PlotRange -> {{0, 0.19240498657234006`}, {
+               0, 0.18878347354074299`}}, AspectRatio -> Full, ImagePadding -> 
+             None], {0.5081726574614791, 0.8387612830898346}, {
+            Left, Bottom}, {0.19240498657234006`, 0.18878347354074299`}, {{1, 
+            0}, {0, 1}}], {
+            Opacity[0], 
+            PointBox[{0.7005776440338192, 1.0275447566305775`}]}}},
+         ImageSizeCache->{{183.65346826040263`, 
+          239.3426710197457}, {-146.0848484279407, -90.24024704826917}}],
+        StatusArea[#, 0.9966728753046576]& ,
+        TagBoxNote->"0.9966728753046576"],
+       StyleBox["0.9966728753046576`", {}, StripOnInput -> False]],
+      Annotation[#, 
+       Style[0.9966728753046576, {}], "Tooltip"]& ]}, 
+    {RGBColor[0.982864, 0.7431472, 0.3262672], EdgeForm[{GrayLevel[0], 
+     Opacity[0.3]}], 
+     TagBox[
+      TooltipBox[
+       TagBox[
+        DynamicBox[{
+          FEPrivate`If[
+           CurrentValue["MouseOver"], 
+           EdgeForm[{
+             GrayLevel[0.5], 
+             AbsoluteThickness[1.5], 
+             Opacity[0.66]}], {}, {}], {
+           InsetBox[
+            GraphicsBox[
+             InsetBox[
+              GraphicsBox[{
+                EdgeForm[{
+                  RGBColor[1, 0, 0], 
+                  Thickness[0.08]}], 
+                GrayLevel[0.85], 
+                DiskBox[{0, 0}]}, {
+               DisplayFunction -> Identity, AspectRatio -> Full, 
+                DefaultBaseStyle -> {"Graphics", 
+                  Directive[
+                   EdgeForm[
+                    Directive[
+                    GrayLevel[0], 
+                    Opacity[0.3]]], 
+                   RGBColor[0.982864, 0.7431472, 0.3262672]]}}], {0, 0}, {
+              Left, Bottom}, {0.1889505856098117, 0.18539409250480254`}], 
+             PlotRange -> {{0, 0.1889505856098117}, {
+               0, 0.18539409250480254`}}, AspectRatio -> Full, ImagePadding -> 
+             None], {0.5637478484632854, 0.8045252615629375}, {
+            Left, Bottom}, {0.1889505856098117, 0.18539409250480254`}, {{1, 
+            0}, {0, 1}}], {
+            Opacity[0], 
+            PointBox[{0.7526984340730971, 0.98991935406774}]}}},
+         ImageSizeCache->{{198.84545929053945`, 
+          253.58869055522845`}, {-135.58365132973495`, -80.71203569739049}}],
+        StatusArea[#, 0.9600942828866141]& ,
+        TagBoxNote->"0.9600942828866141"],
+       StyleBox["0.9600942828866141`", {}, StripOnInput -> False]],
+      Annotation[#, 
+       Style[0.9600942828866141, {}], "Tooltip"]& ]}, 
+    {RGBColor[0.982864, 0.7431472, 0.3262672], EdgeForm[{GrayLevel[0], 
+     Opacity[0.3]}], 
+     TagBox[
+      TooltipBox[
+       TagBox[
+        DynamicBox[{
+          FEPrivate`If[
+           CurrentValue["MouseOver"], 
+           EdgeForm[{
+             GrayLevel[0.5], 
+             AbsoluteThickness[1.5], 
+             Opacity[0.66]}], {}, {}], {
+           InsetBox[
+            GraphicsBox[
+             InsetBox[
+              GraphicsBox[{
+                EdgeForm[{
+                  RGBColor[1, 0, 0], 
+                  Thickness[0.08]}], 
+                GrayLevel[0.85], 
+                DiskBox[{0, 0}]}, {
+               DisplayFunction -> Identity, AspectRatio -> Full, 
+                DefaultBaseStyle -> {"Graphics", 
+                  Directive[
+                   EdgeForm[
+                    Directive[
+                    GrayLevel[0], 
+                    Opacity[0.3]]], 
+                   RGBColor[0.982864, 0.7431472, 0.3262672]]}}], {0, 0}, {
+              Left, Bottom}, {0.17711692763611953`, 0.1737831717237719}], 
+             PlotRange -> {{0, 0.17711692763611953`}, {
+               0, 0.1737831717237719}}, AspectRatio -> Full, ImagePadding -> 
+             None], {0.14031997443630717`, 0.9117090540650514}, {
+            Left, Bottom}, {0.17711692763611953`, 0.1737831717237719}, {{1, 
+            0}, {0, 1}}], {
+            Opacity[0], 
+            PointBox[{0.3174369020724267, 1.0854922257888233`}]}}},
+         ImageSizeCache->{{83.01201867509135, 
+          134.51465823023983`}, {-162.2579058180022, -110.506586040428}}],
+        StatusArea[#, 0.8399716868851763]& ,
+        TagBoxNote->"0.8399716868851763"],
+       StyleBox["0.8399716868851763`", {}, StripOnInput -> False]],
+      Annotation[#, 
+       Style[0.8399716868851763, {}], "Tooltip"]& ]}, 
+    {RGBColor[0.982864, 0.7431472, 0.3262672], EdgeForm[{GrayLevel[0], 
+     Opacity[0.3]}], 
+     TagBox[
+      TooltipBox[
+       TagBox[
+        DynamicBox[{
+          FEPrivate`If[
+           CurrentValue["MouseOver"], 
+           EdgeForm[{
+             GrayLevel[0.5], 
+             AbsoluteThickness[1.5], 
+             Opacity[0.66]}], {}, {}], {
+           InsetBox[
+            GraphicsBox[
+             InsetBox[
+              GraphicsBox[{
+                EdgeForm[{
+                  RGBColor[1, 0, 0], 
+                  Thickness[0.08]}], 
+                GrayLevel[0.85], 
+                DiskBox[{0, 0}]}, {
+               DisplayFunction -> Identity, AspectRatio -> Full, 
+                DefaultBaseStyle -> {"Graphics", 
+                  Directive[
+                   EdgeForm[
+                    Directive[
+                    GrayLevel[0], 
+                    Opacity[0.3]]], 
+                   RGBColor[0.982864, 0.7431472, 0.3262672]]}}], {0, 0}, {
+              Left, Bottom}, {0.17608016507114377`, 0.17276592346144826`}], 
+             PlotRange -> {{0, 0.17608016507114377`}, {
+               0, 0.17276592346144826`}}, AspectRatio -> Full, ImagePadding -> 
+             None], {0.11719526435864996`, 0.31051496379007104`}, {
+            Left, Bottom}, {0.17608016507114377`, 0.17276592346144826`}, {{1, 
+            0}, {0, 1}}], {
+            Opacity[0], 
+            PointBox[{0.29327542942979373`, 0.4832808872515193}]}}},
+         ImageSizeCache->{{76.32138160922082, 127.64947209644899`}, {
+          5.818434367143652, 57.14652485437175}}],
+        StatusArea[#, 0.8298299256106971]& ,
+        TagBoxNote->"0.8298299256106971"],
+       StyleBox["0.8298299256106971`", {}, StripOnInput -> False]],
+      Annotation[#, 
+       Style[0.8298299256106971, {}], "Tooltip"]& ]}, 
+    {RGBColor[0.982864, 0.7431472, 0.3262672], EdgeForm[{GrayLevel[0], 
+     Opacity[0.3]}], 
+     TagBox[
+      TooltipBox[
+       TagBox[
+        DynamicBox[{
+          FEPrivate`If[
+           CurrentValue["MouseOver"], 
+           EdgeForm[{
+             GrayLevel[0.5], 
+             AbsoluteThickness[1.5], 
+             Opacity[0.66]}], {}, {}], {
+           InsetBox[
+            GraphicsBox[
+             InsetBox[
+              GraphicsBox[{
+                EdgeForm[{
+                  RGBColor[1, 0, 0], 
+                  Thickness[0.08]}], 
+                GrayLevel[0.85], 
+                DiskBox[{0, 0}]}, {
+               DisplayFunction -> Identity, AspectRatio -> Full, 
+                DefaultBaseStyle -> {"Graphics", 
+                  Directive[
+                   EdgeForm[
+                    Directive[
+                    GrayLevel[0], 
+                    Opacity[0.3]]], 
+                   RGBColor[0.982864, 0.7431472, 0.3262672]]}}], {0, 0}, {
+              Left, Bottom}, {0.17321707612715276`, 0.16995672456524646`}], 
+             PlotRange -> {{0, 0.17321707612715276`}, {
+               0, 0.16995672456524646`}}, AspectRatio -> Full, ImagePadding -> 
+             None], {0.896950296843092, 0.4528140862399612}, {Left, Bottom}, {
+            0.17321707612715276`, 0.16995672456524646`}, {{1, 0}, {0, 1}}], {
+            Opacity[0], 
+            PointBox[{1.0701673729702448`, 0.6227708108052077}]}}},
+         ImageSizeCache->{{289.7456601811776, 
+          340.39768545895816`}, {-33.11300770858108, 17.53901756919936}}],
+        StatusArea[#, 0.8021427095546902]& ,
+        TagBoxNote->"0.8021427095546902"],
+       StyleBox["0.8021427095546902`", {}, StripOnInput -> False]],
+      Annotation[#, 
+       Style[0.8021427095546902, {}], "Tooltip"]& ]}, 
+    {RGBColor[0.982864, 0.7431472, 0.3262672], EdgeForm[{GrayLevel[0], 
+     Opacity[0.3]}], 
+     TagBox[
+      TooltipBox[
+       TagBox[
+        DynamicBox[{
+          FEPrivate`If[
+           CurrentValue["MouseOver"], 
+           EdgeForm[{
+             GrayLevel[0.5], 
+             AbsoluteThickness[1.5], 
+             Opacity[0.66]}], {}, {}], {
+           InsetBox[
+            GraphicsBox[
+             InsetBox[
+              GraphicsBox[{
+                EdgeForm[{
+                  RGBColor[1, 0, 0], 
+                  Thickness[0.08]}], 
+                GrayLevel[0.85], 
+                DiskBox[{0, 0}]}, {
+               DisplayFunction -> Identity, AspectRatio -> Full, 
+                DefaultBaseStyle -> {"Graphics", 
+                  Directive[
+                   EdgeForm[
+                    Directive[
+                    GrayLevel[0], 
+                    Opacity[0.3]]], 
+                   RGBColor[0.982864, 0.7431472, 0.3262672]]}}], {0, 0}, {
+              Left, Bottom}, {0.1712634286447643, 0.16803984930972538`}], 
+             PlotRange -> {{0, 0.1712634286447643}, {
+               0, 0.16803984930972538`}}, AspectRatio -> Full, ImagePadding -> 
+             None], {0.9081329304339676, 0.411167322789743}, {Left, Bottom}, {
+            0.1712634286447643, 0.16803984930972538`}, {{1, 0}, {0, 1}}], {
+            Opacity[0], 
+            PointBox[{1.0793963590787319`, 0.5792071720994684}]}}},
+         ImageSizeCache->{{293.07547051627574`, 
+          342.97515683875855`}, {-20.954457229287726`, 28.995385931953663`}}],
+        
+        StatusArea[#, 0.7835197915064713]& ,
+        TagBoxNote->"0.7835197915064713"],
+       StyleBox["0.7835197915064713`", {}, StripOnInput -> False]],
+      Annotation[#, 
+       Style[0.7835197915064713, {}], "Tooltip"]& ]}, 
+    {RGBColor[0.982864, 0.7431472, 0.3262672], EdgeForm[{GrayLevel[0], 
+     Opacity[0.3]}], 
+     TagBox[
+      TooltipBox[
+       TagBox[
+        DynamicBox[{
+          FEPrivate`If[
+           CurrentValue["MouseOver"], 
+           EdgeForm[{
+             GrayLevel[0.5], 
+             AbsoluteThickness[1.5], 
+             Opacity[0.66]}], {}, {}], {
+           InsetBox[
+            GraphicsBox[
+             InsetBox[
+              GraphicsBox[{
+                EdgeForm[{
+                  RGBColor[1, 0, 0], 
+                  Thickness[0.08]}], 
+                GrayLevel[0.85], 
+                DiskBox[{0, 0}]}, {
+               DisplayFunction -> Identity, AspectRatio -> Full, 
+                DefaultBaseStyle -> {"Graphics", 
+                  Directive[
+                   EdgeForm[
+                    Directive[
+                    GrayLevel[0], 
+                    Opacity[0.3]]], 
+                   RGBColor[0.982864, 0.7431472, 0.3262672]]}}], {0, 0}, {
+              Left, Bottom}, {0.1682019019946175, 0.1650359477703287}], 
+             PlotRange -> {{0, 0.1682019019946175}, {0, 0.1650359477703287}}, 
+             AspectRatio -> Full, ImagePadding -> None], {0.7995660688216564, 
+            0.30227186978159837`}, {Left, Bottom}, {0.1682019019946175, 
+            0.1650359477703287}, {{1, 0}, {0, 1}}], {
+            Opacity[0], 
+            PointBox[{0.9677679708162739, 0.4673078175519271}]}}},
+         ImageSizeCache->{{263.2641372411121, 312.3560896633234}, {
+          10.276495723395271`, 59.36844814560658}}],
+        StatusArea[#, 0.7547760917787005]& ,
+        TagBoxNote->"0.7547760917787005"],
+       StyleBox["0.7547760917787005`", {}, StripOnInput -> False]],
+      Annotation[#, 
+       Style[0.7547760917787005, {}], "Tooltip"]& ]}, 
+    {RGBColor[0.982864, 0.7431472, 0.3262672], EdgeForm[{GrayLevel[0], 
+     Opacity[0.3]}], 
+     TagBox[
+      TooltipBox[
+       TagBox[
+        DynamicBox[{
+          FEPrivate`If[
+           CurrentValue["MouseOver"], 
+           EdgeForm[{
+             GrayLevel[0.5], 
+             AbsoluteThickness[1.5], 
+             Opacity[0.66]}], {}, {}], {
+           InsetBox[
+            GraphicsBox[
+             InsetBox[
+              GraphicsBox[{
+                EdgeForm[{
+                  RGBColor[1, 0, 0], 
+                  Thickness[0.08]}], 
+                GrayLevel[0.85], 
+                DiskBox[{0, 0}]}, {
+               DisplayFunction -> Identity, AspectRatio -> Full, 
+                DefaultBaseStyle -> {"Graphics", 
+                  Directive[
+                   EdgeForm[
+                    Directive[
+                    GrayLevel[0], 
+                    Opacity[0.3]]], 
+                   RGBColor[0.982864, 0.7431472, 0.3262672]]}}], {0, 0}, {
+              Left, Bottom}, {0.16578289705460603`, 0.16266247417578694`}], 
+             PlotRange -> {{0, 0.16578289705460603`}, {
+               0, 0.16266247417578694`}}, AspectRatio -> Full, ImagePadding -> 
+             None], {0.7660174254597756, 0.3003231934522682}, {
+            Left, Bottom}, {0.16578289705460603`, 0.16266247417578694`}, {{1, 
+            0}, {0, 1}}], {
+            Opacity[0], 
+            PointBox[{0.9318003225143816, 0.46298566762805515`}]}}},
+         ImageSizeCache->{{253.90821525140672`, 302.5065179452712}, {
+          11.482801706773728`, 60.08110440063817}}],
+        StatusArea[#, 0.7324446954890382]& ,
+        TagBoxNote->"0.7324446954890382"],
+       StyleBox["0.7324446954890382`", {}, StripOnInput -> False]],
+      Annotation[#, 
+       Style[0.7324446954890382, {}], "Tooltip"]& ]}, 
+    {RGBColor[0.982864, 0.7431472, 0.3262672], EdgeForm[{GrayLevel[0], 
+     Opacity[0.3]}], 
+     TagBox[
+      TooltipBox[
+       TagBox[
+        DynamicBox[{
+          FEPrivate`If[
+           CurrentValue["MouseOver"], 
+           EdgeForm[{
+             GrayLevel[0.5], 
+             AbsoluteThickness[1.5], 
+             Opacity[0.66]}], {}, {}], {
+           InsetBox[
+            GraphicsBox[
+             InsetBox[
+              GraphicsBox[{
+                EdgeForm[{
+                  RGBColor[1, 0, 0], 
+                  Thickness[0.08]}], 
+                GrayLevel[0.85], 
+                DiskBox[{0, 0}]}, {
+               DisplayFunction -> Identity, AspectRatio -> Full, 
+                DefaultBaseStyle -> {"Graphics", 
+                  Directive[
+                   EdgeForm[
+                    Directive[
+                    GrayLevel[0], 
+                    Opacity[0.3]]], 
+                   RGBColor[0.982864, 0.7431472, 0.3262672]]}}], {0, 0}, {
+              Left, Bottom}, {0.15502097247221958`, 0.15210311425045275`}], 
+             PlotRange -> {{0, 0.15502097247221958`}, {
+               0, 0.15210311425045275`}}, AspectRatio -> Full, ImagePadding -> 
+             None], {0.8153942154651298, 0.2614776878011261}, {
+            Left, Bottom}, {0.15502097247221958`, 0.15210311425045275`}, {{1, 
+            0}, {0, 1}}], {
+            Opacity[0], 
+            PointBox[{0.9704151879373494, 0.4135808020515789}]}}},
+         ImageSizeCache->{{267.40336878041313`, 313.081017650509}, {
+          25.271630415316636`, 70.94927928541237}}],
+        StatusArea[#, 0.6371589793271011]& ,
+        TagBoxNote->"0.6371589793271011"],
+       StyleBox["0.6371589793271011`", {}, StripOnInput -> False]],
+      Annotation[#, 
+       Style[0.6371589793271011, {}], "Tooltip"]& ]}, 
+    {RGBColor[0.982864, 0.7431472, 0.3262672], EdgeForm[{GrayLevel[0], 
+     Opacity[0.3]}], 
+     TagBox[
+      TooltipBox[
+       TagBox[
+        DynamicBox[{
+          FEPrivate`If[
+           CurrentValue["MouseOver"], 
+           EdgeForm[{
+             GrayLevel[0.5], 
+             AbsoluteThickness[1.5], 
+             Opacity[0.66]}], {}, {}], {
+           InsetBox[
+            GraphicsBox[
+             InsetBox[
+              GraphicsBox[{
+                EdgeForm[{
+                  RGBColor[1, 0, 0], 
+                  Thickness[0.08]}], 
+                GrayLevel[0.85], 
+                DiskBox[{0, 0}]}, {
+               DisplayFunction -> Identity, AspectRatio -> Full, 
+                DefaultBaseStyle -> {"Graphics", 
+                  Directive[
+                   EdgeForm[
+                    Directive[
+                    GrayLevel[0], 
+                    Opacity[0.3]]], 
+                   RGBColor[0.982864, 0.7431472, 0.3262672]]}}], {0, 0}, {
+              Left, Bottom}, {0.15160802508854543`, 0.1487544065398056}], 
+             PlotRange -> {{0, 0.15160802508854543`}, {
+               0, 0.1487544065398056}}, AspectRatio -> Full, ImagePadding -> 
+             None], {0.45588441751786346`, 0.16318387679740742`}, {
+            Left, Bottom}, {0.15160802508854543`, 0.1487544065398056}, {{1, 
+            0}, {0, 1}}], {
+            Opacity[0], 
+            PointBox[{0.6074924426064089, 0.311938283337213}]}}},
+         ImageSizeCache->{{169.4206073379326, 213.9377536247342}, {
+          53.63991486875284, 98.39848801215363}}],
+        StatusArea[#, 0.608327059067987]& ,
+        TagBoxNote->"0.608327059067987"],
+       StyleBox["0.608327059067987`", {}, StripOnInput -> False]],
+      Annotation[#, 
+       Style[0.608327059067987, {}], "Tooltip"]& ]}, 
+    {RGBColor[0.982864, 0.7431472, 0.3262672], EdgeForm[{GrayLevel[0], 
+     Opacity[0.3]}], 
+     TagBox[
+      TooltipBox[
+       TagBox[
+        DynamicBox[{
+          FEPrivate`If[
+           CurrentValue["MouseOver"], 
+           EdgeForm[{
+             GrayLevel[0.5], 
+             AbsoluteThickness[1.5], 
+             Opacity[0.66]}], {}, {}], {
+           InsetBox[
+            GraphicsBox[
+             InsetBox[
+              GraphicsBox[{
+                EdgeForm[{
+                  RGBColor[1, 0, 0], 
+                  Thickness[0.08]}], 
+                GrayLevel[0.85], 
+                DiskBox[{0, 0}]}, {
+               DisplayFunction -> Identity, AspectRatio -> Full, 
+                DefaultBaseStyle -> {"Graphics", 
+                  Directive[
+                   EdgeForm[
+                    Directive[
+                    GrayLevel[0], 
+                    Opacity[0.3]]], 
+                   RGBColor[0.982864, 0.7431472, 0.3262672]]}}], {0, 0}, {
+              Left, Bottom}, {0.14938465231019946`, 0.14657288285089498`}], 
+             PlotRange -> {{0, 0.14938465231019946`}, {
+               0, 0.14657288285089498`}}, AspectRatio -> Full, ImagePadding -> 
+             None], {-0.0429526142604512, 0.3394070528390627}, {
+            Left, Bottom}, {0.14938465231019946`, 0.14657288285089498`}, {{1, 
+            0}, {0, 1}}], {
+            Opacity[0], 
+            PointBox[{0.10643203804974825`, 0.4859799356899577}]}}},
+         ImageSizeCache->{{32.62085695795686, 76.52914304204312}, {
+          5.065133732491034, 49.01927677453417}}],
+        StatusArea[#, 0.5899035103443468]& ,
+        TagBoxNote->"0.5899035103443468"],
+       StyleBox["0.5899035103443468`", {}, StripOnInput -> False]],
+      Annotation[#, 
+       Style[0.5899035103443468, {}], "Tooltip"]& ]}, 
+    {RGBColor[0.982864, 0.7431472, 0.3262672], EdgeForm[{GrayLevel[0], 
+     Opacity[0.3]}], 
+     TagBox[
+      TooltipBox[
+       TagBox[
+        DynamicBox[{
+          FEPrivate`If[
+           CurrentValue["MouseOver"], 
+           EdgeForm[{
+             GrayLevel[0.5], 
+             AbsoluteThickness[1.5], 
+             Opacity[0.66]}], {}, {}], {
+           InsetBox[
+            GraphicsBox[
+             InsetBox[
+              GraphicsBox[{
+                EdgeForm[{
+                  RGBColor[1, 0, 0], 
+                  Thickness[0.08]}], 
+                GrayLevel[0.85], 
+                DiskBox[{0, 0}]}, {
+               DisplayFunction -> Identity, AspectRatio -> Full, 
+                DefaultBaseStyle -> {"Graphics", 
+                  Directive[
+                   EdgeForm[
+                    Directive[
+                    GrayLevel[0], 
+                    Opacity[0.3]]], 
+                   RGBColor[0.982864, 0.7431472, 0.3262672]]}}], {0, 0}, {
+              Left, Bottom}, {0.14030410601947263`, 0.13766325373498622`}], 
+             PlotRange -> {{0, 0.14030410601947263`}, {
+               0, 0.13766325373498622`}}, AspectRatio -> Full, ImagePadding -> 
+             None], {0.2370542884320755, 0.8245685323852325}, {
+            Left, Bottom}, {0.14030410601947263`, 0.13766325373498622`}, {{1, 
+            0}, {0, 1}}], {
+            Opacity[0], 
+            PointBox[{0.3773583944515481, 0.9622317861202188}]}}},
+         ImageSizeCache->{{109.04276589291139`, 
+          150.67519752884198`}, {-127.85608993816436`, -86.22365830223382}}],
+        StatusArea[#, 0.5176004765184141]& ,
+        TagBoxNote->"0.5176004765184141"],
+       StyleBox["0.5176004765184141`", {}, StripOnInput -> False]],
+      Annotation[#, 
+       Style[0.5176004765184141, {}], "Tooltip"]& ]}, 
+    {RGBColor[0.982864, 0.7431472, 0.3262672], EdgeForm[{GrayLevel[0], 
+     Opacity[0.3]}], 
+     TagBox[
+      TooltipBox[
+       TagBox[
+        DynamicBox[{
+          FEPrivate`If[
+           CurrentValue["MouseOver"], 
+           EdgeForm[{
+             GrayLevel[0.5], 
+             AbsoluteThickness[1.5], 
+             Opacity[0.66]}], {}, {}], {
+           InsetBox[
+            GraphicsBox[
+             InsetBox[
+              GraphicsBox[{
+                EdgeForm[{
+                  RGBColor[1, 0, 0], 
+                  Thickness[0.08]}], 
+                GrayLevel[0.85], 
+                DiskBox[{0, 0}]}, {
+               DisplayFunction -> Identity, AspectRatio -> Full, 
+                DefaultBaseStyle -> {"Graphics", 
+                  Directive[
+                   EdgeForm[
+                    Directive[
+                    GrayLevel[0], 
+                    Opacity[0.3]]], 
+                   RGBColor[0.982864, 0.7431472, 0.3262672]]}}], {0, 0}, {
+              Left, Bottom}, {0.13957590431833133`, 0.1369487584974732}], 
+             PlotRange -> {{0, 0.13957590431833133`}, {
+               0, 0.1369487584974732}}, AspectRatio -> Full, ImagePadding -> 
+             None], {0.6810284758259693, 0.010546618877986302`}, {
+            Left, Bottom}, {0.13957590431833133`, 0.1369487584974732}, {{1, 
+            0}, {0, 1}}], {
+            Opacity[0], 
+            PointBox[{0.8206043801443006, 0.1474953773754595}]}}},
+         ImageSizeCache->{{230.72272117956746`, 272.05603088707517`}, {
+          99.53569934633045, 140.86900905383817`}}],
+        StatusArea[#, 0.5120069004275476]& ,
+        TagBoxNote->"0.5120069004275476"],
+       StyleBox["0.5120069004275476`", {}, StripOnInput -> False]],
+      Annotation[#, 
+       Style[0.5120069004275476, {}], "Tooltip"]& ]}, 
+    {RGBColor[0.982864, 0.7431472, 0.3262672], EdgeForm[{GrayLevel[0], 
+     Opacity[0.3]}], 
+     TagBox[
+      TooltipBox[
+       TagBox[
+        DynamicBox[{
+          FEPrivate`If[
+           CurrentValue["MouseOver"], 
+           EdgeForm[{
+             GrayLevel[0.5], 
+             AbsoluteThickness[1.5], 
+             Opacity[0.66]}], {}, {}], {
+           InsetBox[
+            GraphicsBox[
+             InsetBox[
+              GraphicsBox[{
+                EdgeForm[{
+                  RGBColor[1, 0, 0], 
+                  Thickness[0.08]}], 
+                GrayLevel[0.85], 
+                DiskBox[{0, 0}]}, {
+               DisplayFunction -> Identity, AspectRatio -> Full, 
+                DefaultBaseStyle -> {"Graphics", 
+                  Directive[
+                   EdgeForm[
+                    Directive[
+                    GrayLevel[0], 
+                    Opacity[0.3]]], 
+                   RGBColor[0.982864, 0.7431472, 0.3262672]]}}], {0, 0}, {
+              Left, Bottom}, {0.13870711947890024`, 0.13609632622599643`}], 
+             PlotRange -> {{0, 0.13870711947890024`}, {
+               0, 0.13609632622599643`}}, AspectRatio -> Full, ImagePadding -> 
+             None], {0.5457586835830845, 0.3473299359907779}, {
+            Left, Bottom}, {0.13870711947890024`, 0.13609632622599643`}, {{1, 
+            0}, {0, 1}}], {
+            Opacity[0], 
+            PointBox[{0.6844658030619848, 0.4834262622167743}]}}},
+         ImageSizeCache->{{193.79867962023417`, 234.7829734401888}, {
+          5.777860418180893, 46.77000732815826}}],
+        StatusArea[#, 0.5053732101941335]& ,
+        TagBoxNote->"0.5053732101941335"],
+       StyleBox["0.5053732101941335`", {}, StripOnInput -> False]],
+      Annotation[#, 
+       Style[0.5053732101941335, {}], "Tooltip"]& ]}, 
+    {RGBColor[0.982864, 0.7431472, 0.3262672], EdgeForm[{GrayLevel[0], 
+     Opacity[0.3]}], 
+     TagBox[
+      TooltipBox[
+       TagBox[
+        DynamicBox[{
+          FEPrivate`If[
+           CurrentValue["MouseOver"], 
+           EdgeForm[{
+             GrayLevel[0.5], 
+             AbsoluteThickness[1.5], 
+             Opacity[0.66]}], {}, {}], {
+           InsetBox[
+            GraphicsBox[
+             InsetBox[
+              GraphicsBox[{
+                EdgeForm[{
+                  RGBColor[1, 0, 0], 
+                  Thickness[0.08]}], 
+                GrayLevel[0.85], 
+                DiskBox[{0, 0}]}, {
+               DisplayFunction -> Identity, AspectRatio -> Full, 
+                DefaultBaseStyle -> {"Graphics", 
+                  Directive[
+                   EdgeForm[
+                    Directive[
+                    GrayLevel[0], 
+                    Opacity[0.3]]], 
+                   RGBColor[0.982864, 0.7431472, 0.3262672]]}}], {0, 0}, {
+              Left, Bottom}, {0.13226674290238627`, 0.129777172639155}], 
+             PlotRange -> {{0, 0.13226674290238627`}, {0, 0.129777172639155}},
+              AspectRatio -> Full, ImagePadding -> None], {0.3262899967033561,
+             0.25369047193396843`}, {Left, Bottom}, {0.13226674290238627`, 
+            0.129777172639155}, {{1, 0}, {0, 1}}], {
+            Opacity[0], 
+            PointBox[{0.4585567396057424, 0.38346764457312343`}]}}},
+         ImageSizeCache->{{133.58004297431924`, 172.91098334587912`}, {
+          33.67617044389037, 73.00711081545026}}],
+        StatusArea[#, 0.4575459217027269]& ,
+        TagBoxNote->"0.4575459217027269"],
+       StyleBox["0.4575459217027269`", {}, StripOnInput -> False]],
+      Annotation[#, 
+       Style[0.4575459217027269, {}], "Tooltip"]& ]}, 
+    {RGBColor[0.982864, 0.7431472, 0.3262672], EdgeForm[{GrayLevel[0], 
+     Opacity[0.3]}], 
+     TagBox[
+      TooltipBox[
+       TagBox[
+        DynamicBox[{
+          FEPrivate`If[
+           CurrentValue["MouseOver"], 
+           EdgeForm[{
+             GrayLevel[0.5], 
+             AbsoluteThickness[1.5], 
+             Opacity[0.66]}], {}, {}], {
+           InsetBox[
+            GraphicsBox[
+             InsetBox[
+              GraphicsBox[{
+                EdgeForm[{
+                  RGBColor[1, 0, 0], 
+                  Thickness[0.08]}], 
+                GrayLevel[0.85], 
+                DiskBox[{0, 0}]}, {
+               DisplayFunction -> Identity, AspectRatio -> Full, 
+                DefaultBaseStyle -> {"Graphics", 
+                  Directive[
+                   EdgeForm[
+                    Directive[
+                    GrayLevel[0], 
+                    Opacity[0.3]]], 
+                   RGBColor[0.982864, 0.7431472, 0.3262672]]}}], {0, 0}, {
+              Left, Bottom}, {0.12934136749163272`, 0.12690685965355541`}], 
+             PlotRange -> {{0, 0.12934136749163272`}, {
+               0, 0.12690685965355541`}}, AspectRatio -> Full, ImagePadding -> 
+             None], {0.3771047080954898, 0.8244826548317368}, {
+            Left, Bottom}, {0.12934136749163272`, 0.12690685965355541`}, {{1, 
+            0}, {0, 1}}], {
+            Opacity[0], 
+            PointBox[{0.5064460755871225, 0.9513895144852922}]}}},
+         ImageSizeCache->{{147.39596341822212`, 
+          186.02525329534612`}, {-124.83002712752733`, -86.20073725040326}}],
+        StatusArea[#, 0.43660666368463485`]& ,
+        TagBoxNote->"0.43660666368463485"],
+       StyleBox["0.43660666368463485`", {}, StripOnInput -> False]],
+      Annotation[#, 
+       Style[0.43660666368463485`, {}], "Tooltip"]& ]}, 
+    {RGBColor[0.982864, 0.7431472, 0.3262672], EdgeForm[{GrayLevel[0], 
+     Opacity[0.3]}], 
+     TagBox[
+      TooltipBox[
+       TagBox[
+        DynamicBox[{
+          FEPrivate`If[
+           CurrentValue["MouseOver"], 
+           EdgeForm[{
+             GrayLevel[0.5], 
+             AbsoluteThickness[1.5], 
+             Opacity[0.66]}], {}, {}], {
+           InsetBox[
+            GraphicsBox[
+             InsetBox[
+              GraphicsBox[{
+                EdgeForm[{
+                  RGBColor[1, 0, 0], 
+                  Thickness[0.08]}], 
+                GrayLevel[0.85], 
+                DiskBox[{0, 0}]}, {
+               DisplayFunction -> Identity, AspectRatio -> Full, 
+                DefaultBaseStyle -> {"Graphics", 
+                  Directive[
+                   EdgeForm[
+                    Directive[
+                    GrayLevel[0], 
+                    Opacity[0.3]]], 
+                   RGBColor[0.982864, 0.7431472, 0.3262672]]}}], {0, 0}, {
+              Left, Bottom}, {0.12463399936181328`, 0.12228809523058547`}], 
+             PlotRange -> {{0, 0.12463399936181328`}, {
+               0, 0.12228809523058547`}}, AspectRatio -> Full, ImagePadding -> 
+             None], {-0.017435092109579484`, 0.07864803114791825}, {
+            Left, Bottom}, {0.12463399936181328`, 0.12228809523058547`}, {{1, 
+            0}, {0, 1}}], {
+            Opacity[0], 
+            PointBox[{0.1071989072522338, 0.20093612637850372`}]}}},
+         ImageSizeCache->{{39.49763575097674, 76.69328961684013}, {
+          84.6204612324133, 121.81611509827668`}}],
+        StatusArea[#, 0.40394177774096285`]& ,
+        TagBoxNote->"0.40394177774096285"],
+       StyleBox["0.40394177774096285`", {}, StripOnInput -> False]],
+      Annotation[#, 
+       Style[0.40394177774096285`, {}], "Tooltip"]& ]}, 
+    {RGBColor[0.982864, 0.7431472, 0.3262672], EdgeForm[{GrayLevel[0], 
+     Opacity[0.3]}], 
+     TagBox[
+      TooltipBox[
+       TagBox[
+        DynamicBox[{
+          FEPrivate`If[
+           CurrentValue["MouseOver"], 
+           EdgeForm[{
+             GrayLevel[0.5], 
+             AbsoluteThickness[1.5], 
+             Opacity[0.66]}], {}, {}], {
+           InsetBox[
+            GraphicsBox[
+             InsetBox[
+              GraphicsBox[{
+                EdgeForm[{
+                  RGBColor[1, 0, 0], 
+                  Thickness[0.08]}], 
+                GrayLevel[0.85], 
+                DiskBox[{0, 0}]}, {
+               DisplayFunction -> Identity, AspectRatio -> Full, 
+                DefaultBaseStyle -> {"Graphics", 
+                  Directive[
+                   EdgeForm[
+                    Directive[
+                    GrayLevel[0], 
+                    Opacity[0.3]]], 
+                   RGBColor[0.982864, 0.7431472, 0.3262672]]}}], {0, 0}, {
+              Left, Bottom}, {0.12260419663466027`, 0.12029649815058807`}], 
+             PlotRange -> {{0, 0.12260419663466027`}, {
+               0, 0.12029649815058807`}}, AspectRatio -> Full, ImagePadding -> 
+             None], {0.722197991697632, 0.5376073456933474}, {Left, Bottom}, {
+            0.12260419663466027`, 0.12029649815058807`}, {{1, 0}, {0, 1}}], {
+            Opacity[0], 
+            PointBox[{0.8448021883322923, 0.6579038438439355}]}}},
+         ImageSizeCache->{{242.32061117989227`, 
+          278.89519513799144`}, {-42.918587967325095`, -6.131295988275497}}],
+        StatusArea[#, 0.3902486188369354]& ,
+        TagBoxNote->"0.3902486188369354"],
+       StyleBox["0.3902486188369354`", {}, StripOnInput -> False]],
+      Annotation[#, 
+       Style[0.3902486188369354, {}], "Tooltip"]& ]}, 
+    {RGBColor[0.982864, 0.7431472, 0.3262672], EdgeForm[{GrayLevel[0], 
+     Opacity[0.3]}], 
+     TagBox[
+      TooltipBox[
+       TagBox[
+        DynamicBox[{
+          FEPrivate`If[
+           CurrentValue["MouseOver"], 
+           EdgeForm[{
+             GrayLevel[0.5], 
+             AbsoluteThickness[1.5], 
+             Opacity[0.66]}], {}, {}], {
+           InsetBox[
+            GraphicsBox[
+             InsetBox[
+              GraphicsBox[{
+                EdgeForm[{
+                  RGBColor[1, 0, 0], 
+                  Thickness[0.08]}], 
+                GrayLevel[0.85], 
+                DiskBox[{0, 0}]}, {
+               DisplayFunction -> Identity, AspectRatio -> Full, 
+                DefaultBaseStyle -> {"Graphics", 
+                  Directive[
+                   EdgeForm[
+                    Directive[
+                    GrayLevel[0], 
+                    Opacity[0.3]]], 
+                   RGBColor[0.982864, 0.7431472, 0.3262672]]}}], {0, 0}, {
+              Left, Bottom}, {0.11941645594032518`, 0.11716875821128303`}], 
+             PlotRange -> {{0, 0.11941645594032518`}, {
+               0, 0.11716875821128303`}}, AspectRatio -> Full, ImagePadding -> 
+             None], {0.023494763574183147`, 0.6014318356253132}, {
+            Left, Bottom}, {0.11941645594032518`, 0.11716875821128303`}, {{1, 
+            0}, {0, 1}}], {
+            Opacity[0], 
+            PointBox[{0.14291121951450833`, 0.7186005938365962}]}}},
+         ImageSizeCache->{{50.9204845685678, 
+          86.6221206952194}, {-59.85896578332208, -24.008147719996288`}}],
+        StatusArea[#, 0.3692205174316412]& ,
+        TagBoxNote->"0.3692205174316412"],
+       StyleBox["0.3692205174316412`", {}, StripOnInput -> False]],
+      Annotation[#, 
+       Style[0.3692205174316412, {}], "Tooltip"]& ]}, 
+    {RGBColor[0.982864, 0.7431472, 0.3262672], EdgeForm[{GrayLevel[0], 
+     Opacity[0.3]}], 
+     TagBox[
+      TooltipBox[
+       TagBox[
+        DynamicBox[{
+          FEPrivate`If[
+           CurrentValue["MouseOver"], 
+           EdgeForm[{
+             GrayLevel[0.5], 
+             AbsoluteThickness[1.5], 
+             Opacity[0.66]}], {}, {}], {
+           InsetBox[
+            GraphicsBox[
+             InsetBox[
+              GraphicsBox[{
+                EdgeForm[{
+                  RGBColor[1, 0, 0], 
+                  Thickness[0.08]}], 
+                GrayLevel[0.85], 
+                DiskBox[{0, 0}]}, {
+               DisplayFunction -> Identity, AspectRatio -> Full, 
+                DefaultBaseStyle -> {"Graphics", 
+                  Directive[
+                   EdgeForm[
+                    Directive[
+                    GrayLevel[0], 
+                    Opacity[0.3]]], 
+                   RGBColor[0.982864, 0.7431472, 0.3262672]]}}], {0, 0}, {
+              Left, Bottom}, {0.11738075275926596`, 0.11517137173775827`}], 
+             PlotRange -> {{0, 0.11738075275926596`}, {
+               0, 0.11517137173775827`}}, AspectRatio -> Full, ImagePadding -> 
+             None], {0.10846849134740427`, 0.369994469068836}, {
+            Left, Bottom}, {0.11738075275926596`, 0.11517137173775827`}, {{1, 
+            0}, {0, 1}}], {
+            Opacity[0], 
+            PointBox[{0.22584924410667023`, 0.48516584080659425`}]}}},
+         ImageSizeCache->{{73.96887508280903, 109.18512762664812`}, {
+          5.292346472941119, 40.50859901678021}}],
+        StatusArea[#, 0.3560965762053441]& ,
+        TagBoxNote->"0.3560965762053441"],
+       StyleBox["0.3560965762053441`", {}, StripOnInput -> False]],
+      Annotation[#, 
+       Style[0.3560965762053441, {}], "Tooltip"]& ]}, 
+    {RGBColor[0.982864, 0.7431472, 0.3262672], EdgeForm[{GrayLevel[0], 
+     Opacity[0.3]}], 
+     TagBox[
+      TooltipBox[
+       TagBox[
+        DynamicBox[{
+          FEPrivate`If[
+           CurrentValue["MouseOver"], 
+           EdgeForm[{
+             GrayLevel[0.5], 
+             AbsoluteThickness[1.5], 
+             Opacity[0.66]}], {}, {}], {
+           InsetBox[
+            GraphicsBox[
+             InsetBox[
+              GraphicsBox[{
+                EdgeForm[{
+                  RGBColor[1, 0, 0], 
+                  Thickness[0.08]}], 
+                GrayLevel[0.85], 
+                DiskBox[{0, 0}]}, {
+               DisplayFunction -> Identity, AspectRatio -> Full, 
+                DefaultBaseStyle -> {"Graphics", 
+                  Directive[
+                   EdgeForm[
+                    Directive[
+                    GrayLevel[0], 
+                    Opacity[0.3]]], 
+                   RGBColor[0.982864, 0.7431472, 0.3262672]]}}], {0, 0}, {
+              Left, Bottom}, {0.11734818980422757`, 0.11513942169389291`}], 
+             PlotRange -> {{0, 0.11734818980422757`}, {
+               0, 0.11513942169389291`}}, AspectRatio -> Full, ImagePadding -> 
+             None], {0.05675111472447155, 0.41275123438722916`}, {
+            Left, Bottom}, {0.11734818980422757`, 0.11513942169389291`}, {{1, 
+            0}, {0, 1}}], {
+            Opacity[0], 
+            PointBox[{0.17409930452869912`, 0.5278906560811221}]}}},
+         ImageSizeCache->{{59.81077277202208, 
+          95.01364949719587}, {-6.632089562871272, 28.57078716230251}}],
+        StatusArea[#, 0.35588857640689175`]& ,
+        TagBoxNote->"0.35588857640689175"],
+       StyleBox["0.35588857640689175`", {}, StripOnInput -> False]],
+      Annotation[#, 
+       Style[0.35588857640689175`, {}], "Tooltip"]& ]}, 
+    {RGBColor[0.982864, 0.7431472, 0.3262672], EdgeForm[{GrayLevel[0], 
+     Opacity[0.3]}], 
+     TagBox[
+      TooltipBox[
+       TagBox[
+        DynamicBox[{
+          FEPrivate`If[
+           CurrentValue["MouseOver"], 
+           EdgeForm[{
+             GrayLevel[0.5], 
+             AbsoluteThickness[1.5], 
+             Opacity[0.66]}], {}, {}], {
+           InsetBox[
+            GraphicsBox[
+             InsetBox[
+              GraphicsBox[{
+                EdgeForm[{
+                  RGBColor[1, 0, 0], 
+                  Thickness[0.08]}], 
+                GrayLevel[0.85], 
+                DiskBox[{0, 0}]}, {
+               DisplayFunction -> Identity, AspectRatio -> Full, 
+                DefaultBaseStyle -> {"Graphics", 
+                  Directive[
+                   EdgeForm[
+                    Directive[
+                    GrayLevel[0], 
+                    Opacity[0.3]]], 
+                   RGBColor[0.982864, 0.7431472, 0.3262672]]}}], {0, 0}, {
+              Left, Bottom}, {0.1159117942815926, 0.11373006250330131`}], 
+             PlotRange -> {{0, 0.1159117942815926}, {
+               0, 0.11373006250330131`}}, AspectRatio -> Full, ImagePadding -> 
+             None], {0.18785136516719447`, 0.43616027117880884`}, {
+            Left, Bottom}, {0.1159117942815926, 0.11373006250330131`}, {{1, 
+            0}, {0, 1}}], {
+            Opacity[0], 
+            PointBox[{0.30376315944878707`, 0.5498903336821102}]}}},
+         ImageSizeCache->{{95.9086362867669, 
+          130.650537262945}, {-12.772168734094237`, 22.0987817539948}}],
+        StatusArea[#, 0.3467738859354077]& ,
+        TagBoxNote->"0.3467738859354077"],
+       StyleBox["0.3467738859354077`", {}, StripOnInput -> False]],
+      Annotation[#, 
+       Style[0.3467738859354077, {}], "Tooltip"]& ]}, 
+    {RGBColor[0.982864, 0.7431472, 0.3262672], EdgeForm[{GrayLevel[0], 
+     Opacity[0.3]}], 
+     TagBox[
+      TooltipBox[
+       TagBox[
+        DynamicBox[{
+          FEPrivate`If[
+           CurrentValue["MouseOver"], 
+           EdgeForm[{
+             GrayLevel[0.5], 
+             AbsoluteThickness[1.5], 
+             Opacity[0.66]}], {}, {}], {
+           InsetBox[
+            GraphicsBox[
+             InsetBox[
+              GraphicsBox[{
+                EdgeForm[{
+                  RGBColor[1, 0, 0], 
+                  Thickness[0.08]}], 
+                GrayLevel[0.85], 
+                DiskBox[{0, 0}]}, {
+               DisplayFunction -> Identity, AspectRatio -> Full, 
+                DefaultBaseStyle -> {"Graphics", 
+                  Directive[
+                   EdgeForm[
+                    Directive[
+                    GrayLevel[0], 
+                    Opacity[0.3]]], 
+                   RGBColor[0.982864, 0.7431472, 0.3262672]]}}], {0, 0}, {
+              Left, Bottom}, {0.10640782797063009`, 0.10440498312484592`}], 
+             PlotRange -> {{0, 0.10640782797063009`}, {
+               0, 0.10440498312484592`}}, AspectRatio -> Full, ImagePadding -> 
+             None], {0.24487434176535877`, 0.7088691232121148}, {
+            Left, Bottom}, {0.10640782797063009`, 0.10440498312484592`}, {{1, 
+            0}, {0, 1}}], {
+            Opacity[0], 
+            PointBox[{0.35128216973598886`, 0.8132741063369607}]}}},
+         ImageSizeCache->{{111.32541915136447`, 
+          143.53434574681333`}, {-86.28221037413815, -54.07328377868929}}],
+        StatusArea[#, 0.2894454827113635]& ,
+        TagBoxNote->"0.2894454827113635"],
+       StyleBox["0.2894454827113635`", {}, StripOnInput -> False]],
+      Annotation[#, 
+       Style[0.2894454827113635, {}], "Tooltip"]& ]}, 
+    {RGBColor[0.982864, 0.7431472, 0.3262672], EdgeForm[{GrayLevel[0], 
+     Opacity[0.3]}], 
+     TagBox[
+      TooltipBox[
+       TagBox[
+        DynamicBox[{
+          FEPrivate`If[
+           CurrentValue["MouseOver"], 
+           EdgeForm[{
+             GrayLevel[0.5], 
+             AbsoluteThickness[1.5], 
+             Opacity[0.66]}], {}, {}], {
+           InsetBox[
+            GraphicsBox[
+             InsetBox[
+              GraphicsBox[{
+                EdgeForm[{
+                  RGBColor[1, 0, 0], 
+                  Thickness[0.08]}], 
+                GrayLevel[0.85], 
+                DiskBox[{0, 0}]}, {
+               DisplayFunction -> Identity, AspectRatio -> Full, 
+                DefaultBaseStyle -> {"Graphics", 
+                  Directive[
+                   EdgeForm[
+                    Directive[
+                    GrayLevel[0], 
+                    Opacity[0.3]]], 
+                   RGBColor[0.982864, 0.7431472, 0.3262672]]}}], {0, 0}, {
+              Left, Bottom}, {0.10097549197160582`, 0.09907489642799883}], 
+             PlotRange -> {{0, 0.10097549197160582`}, {
+               0, 0.09907489642799883}}, AspectRatio -> Full, ImagePadding -> 
+             None], {-0.007076870373239619, 0.8834773725607084}, {
+            Left, Bottom}, {0.10097549197160582`, 0.09907489642799883}, {{1, 
+            0}, {0, 1}}], {
+            Opacity[0], 
+            PointBox[{0.0938986215983662, 0.9825522689887072}]}}},
+         ImageSizeCache->{{42.57357178855828, 
+          73.2252364621037}, {-133.52750821405743`, -102.70167587728474`}}],
+        StatusArea[#, 0.2590022730969419]& ,
+        TagBoxNote->"0.2590022730969419"],
+       StyleBox["0.2590022730969419`", {}, StripOnInput -> False]],
+      Annotation[#, 
+       Style[0.2590022730969419, {}], "Tooltip"]& ]}, 
+    {RGBColor[0.982864, 0.7431472, 0.3262672], EdgeForm[{GrayLevel[0], 
+     Opacity[0.3]}], 
+     TagBox[
+      TooltipBox[
+       TagBox[
+        DynamicBox[{
+          FEPrivate`If[
+           CurrentValue["MouseOver"], 
+           EdgeForm[{
+             GrayLevel[0.5], 
+             AbsoluteThickness[1.5], 
+             Opacity[0.66]}], {}, {}], {
+           InsetBox[
+            GraphicsBox[
+             InsetBox[
+              GraphicsBox[{
+                EdgeForm[{
+                  RGBColor[1, 0, 0], 
+                  Thickness[0.08]}], 
+                GrayLevel[0.85], 
+                DiskBox[{0, 0}]}, {
+               DisplayFunction -> Identity, AspectRatio -> Full, 
+                DefaultBaseStyle -> {"Graphics", 
+                  Directive[
+                   EdgeForm[
+                    Directive[
+                    GrayLevel[0], 
+                    Opacity[0.3]]], 
+                   RGBColor[0.982864, 0.7431472, 0.3262672]]}}], {0, 0}, {
+              Left, Bottom}, {0.0890964952201683, 0.08741949025133833}], 
+             PlotRange -> {{0, 0.0890964952201683}, {0, 0.08741949025133833}},
+              AspectRatio -> Full, ImagePadding -> 
+             None], {-0.0027958048994681933`, 0.2884072109857596}, {
+            Left, Bottom}, {0.0890964952201683, 0.08741949025133833}, {{1, 
+            0}, {0, 1}}], {
+            Opacity[0], 
+            PointBox[{0.0863006903207001, 0.37582670123709794`}]}}},
+         ImageSizeCache->{{43.37242524123702, 70.97041096992773}, {
+          35.80874701509967, 63.40673274379036}}],
+        StatusArea[#, 0.19832384018323235`]& ,
+        TagBoxNote->"0.19832384018323235"],
+       StyleBox["0.19832384018323235`", {}, StripOnInput -> False]],
+      Annotation[#, 
+       Style[0.19832384018323235`, {}], "Tooltip"]& ]}, 
+    {RGBColor[0.982864, 0.7431472, 0.3262672], EdgeForm[{GrayLevel[0], 
+     Opacity[0.3]}], 
+     TagBox[
+      TooltipBox[
+       TagBox[
+        DynamicBox[{
+          FEPrivate`If[
+           CurrentValue["MouseOver"], 
+           EdgeForm[{
+             GrayLevel[0.5], 
+             AbsoluteThickness[1.5], 
+             Opacity[0.66]}], {}, {}], {
+           InsetBox[
+            GraphicsBox[
+             InsetBox[
+              GraphicsBox[{
+                EdgeForm[{
+                  RGBColor[1, 0, 0], 
+                  Thickness[0.08]}], 
+                GrayLevel[0.85], 
+                DiskBox[{0, 0}]}, {
+               DisplayFunction -> Identity, AspectRatio -> Full, 
+                DefaultBaseStyle -> {"Graphics", 
+                  Directive[
+                   EdgeForm[
+                    Directive[
+                    GrayLevel[0], 
+                    Opacity[0.3]]], 
+                   RGBColor[0.982864, 0.7431472, 0.3262672]]}}], {0, 0}, {
+              Left, Bottom}, {0.08502364081947977, 0.0834232965212004}], 
+             PlotRange -> {{0, 0.08502364081947977}, {0, 0.0834232965212004}},
+              AspectRatio -> Full, ImagePadding -> None], {0.7607438767272547,
+             0.012971623962622025`}, {Left, Bottom}, {0.08502364081947977, 
+            0.0834232965212004}, {{1, 0}, {0, 1}}], {
+            Opacity[0], 
+            PointBox[{0.8457675175467345, 0.09639492048382242}]}}},
+         ImageSizeCache->{{252.52185036428168`, 278.94683799284405`}, {
+          113.79776521343325`, 140.22275284199566`}}],
+        StatusArea[#, 0.17938112628062952`]& ,
+        TagBoxNote->"0.17938112628062952"],
+       StyleBox["0.17938112628062952`", {}, StripOnInput -> False]],
+      Annotation[#, 
+       Style[0.17938112628062952`, {}], "Tooltip"]& ]}, 
+    {RGBColor[0.982864, 0.7431472, 0.3262672], EdgeForm[{GrayLevel[0], 
+     Opacity[0.3]}], 
+     TagBox[
+      TooltipBox[
+       TagBox[
+        DynamicBox[{
+          FEPrivate`If[
+           CurrentValue["MouseOver"], 
+           EdgeForm[{
+             GrayLevel[0.5], 
+             AbsoluteThickness[1.5], 
+             Opacity[0.66]}], {}, {}], {
+           InsetBox[
+            GraphicsBox[
+             InsetBox[
+              GraphicsBox[{
+                EdgeForm[{
+                  RGBColor[1, 0, 0], 
+                  Thickness[0.08]}], 
+                GrayLevel[0.85], 
+                DiskBox[{0, 0}]}, {
+               DisplayFunction -> Identity, AspectRatio -> Full, 
+                DefaultBaseStyle -> {"Graphics", 
+                  Directive[
+                   EdgeForm[
+                    Directive[
+                    GrayLevel[0], 
+                    Opacity[0.3]]], 
+                   RGBColor[0.982864, 0.7431472, 0.3262672]]}}], {0, 0}, {
+              Left, Bottom}, {0.06265221070405014, 0.06147294918092028}], 
+             PlotRange -> {{0, 0.06265221070405014}, {
+               0, 0.06147294918092028}}, AspectRatio -> Full, ImagePadding -> 
+             None], {0.7248222583779359, 0.6048380762530894}, {
+            Left, Bottom}, {0.06265221070405014, 0.06147294918092028}, {{1, 
+            0}, {0, 1}}], {
+            Opacity[0], 
+            PointBox[{0.787474469081986, 0.6663110254340097}]}}},
+         ImageSizeCache->{{242.74803931507165`, 
+          262.9835601966911}, {-45.2650205608457, -25.029499679226188`}}],
+        StatusArea[#, 0.09228362332503814]& ,
+        TagBoxNote->"0.09228362332503814"],
+       StyleBox["0.09228362332503814`", {}, StripOnInput -> False]],
+      Annotation[#, 
+       Style[0.09228362332503814, {}], "Tooltip"]& ]}, 
+    {RGBColor[0.982864, 0.7431472, 0.3262672], EdgeForm[{GrayLevel[0], 
+     Opacity[0.3]}], 
+     TagBox[
+      TooltipBox[
+       TagBox[
+        DynamicBox[{
+          FEPrivate`If[
+           CurrentValue["MouseOver"], 
+           EdgeForm[{
+             GrayLevel[0.5], 
+             AbsoluteThickness[1.5], 
+             Opacity[0.66]}], {}, {}], {
+           InsetBox[
+            GraphicsBox[
+             InsetBox[
+              GraphicsBox[{
+                EdgeForm[{
+                  RGBColor[1, 0, 0], 
+                  Thickness[0.08]}], 
+                GrayLevel[0.85], 
+                DiskBox[{0, 0}]}, {
+               DisplayFunction -> Identity, AspectRatio -> Full, 
+                DefaultBaseStyle -> {"Graphics", 
+                  Directive[
+                   EdgeForm[
+                    Directive[
+                    GrayLevel[0], 
+                    Opacity[0.3]]], 
+                   RGBColor[0.982864, 0.7431472, 0.3262672]]}}], {0, 0}, {
+              Left, Bottom}, {0.058425989809066436`, 0.057326275673549754`}], 
+             PlotRange -> {{0, 0.058425989809066436`}, {
+               0, 0.057326275673549754`}}, AspectRatio -> Full, ImagePadding -> 
+             None], {0.47346921344677506`, 0.6745528073376864}, {
+            Left, Bottom}, {0.058425989809066436`, 0.057326275673549754`}, {{
+            1, 0}, {0, 1}}], {
+            Opacity[0], 
+            PointBox[{0.5318952032558415, 0.7318790830112362}]}}},
+         ImageSizeCache->{{173.99485275434822`, 
+          192.99453591384778`}, {-63.56497349331025, -44.565131913560464`}}],
+        StatusArea[#, 0.07905076832488511]& ,
+        TagBoxNote->"0.07905076832488511"],
+       StyleBox["0.07905076832488511`", {}, StripOnInput -> False]],
+      Annotation[#, 
+       Style[0.07905076832488511, {}], "Tooltip"]& ]}, 
+    {RGBColor[0.982864, 0.7431472, 0.3262672], EdgeForm[{GrayLevel[0], 
+     Opacity[0.3]}], 
+     TagBox[
+      TooltipBox[
+       TagBox[
+        DynamicBox[{
+          FEPrivate`If[
+           CurrentValue["MouseOver"], 
+           EdgeForm[{
+             GrayLevel[0.5], 
+             AbsoluteThickness[1.5], 
+             Opacity[0.66]}], {}, {}], {
+           InsetBox[
+            GraphicsBox[
+             InsetBox[
+              GraphicsBox[{
+                EdgeForm[{
+                  RGBColor[1, 0, 0], 
+                  Thickness[0.08]}], 
+                GrayLevel[0.85], 
+                DiskBox[{0, 0}]}, {
+               DisplayFunction -> Identity, AspectRatio -> Full, 
+                DefaultBaseStyle -> {"Graphics", 
+                  Directive[
+                   EdgeForm[
+                    Directive[
+                    GrayLevel[0], 
+                    Opacity[0.3]]], 
+                   RGBColor[0.982864, 0.7431472, 0.3262672]]}}], {0, 0}, {
+              Left, Bottom}, {0.058155162313415554`, 0.05706054578644992}], 
+             PlotRange -> {{0, 0.058155162313415554`}, {
+               0, 0.05706054578644992}}, AspectRatio -> Full, ImagePadding -> 
+             None], {0.7926253718137621, 0.6924712486273884}, {
+            Left, Bottom}, {0.058155162313415554`, 0.05706054578644992}, {{1, 
+            0}, {0, 1}}], {
+            Opacity[0], 
+            PointBox[{0.8507805341271777, 0.7495317944138383}]}}},
+         ImageSizeCache->{{261.4313515801289, 
+          280.35686990073646`}, {-68.49182049373448, -49.52906133343069}}],
+        StatusArea[#, 0.07823766948164801]& ,
+        TagBoxNote->"0.07823766948164801"],
+       StyleBox["0.07823766948164801`", {}, StripOnInput -> False]],
+      Annotation[#, 
+       Style[0.07823766948164801, {}], "Tooltip"]& ]}, 
+    {RGBColor[0.982864, 0.7431472, 0.3262672], EdgeForm[{GrayLevel[0], 
+     Opacity[0.3]}], 
+     TagBox[
+      TooltipBox[
+       TagBox[
+        DynamicBox[{
+          FEPrivate`If[
+           CurrentValue["MouseOver"], 
+           EdgeForm[{
+             GrayLevel[0.5], 
+             AbsoluteThickness[1.5], 
+             Opacity[0.66]}], {}, {}], {
+           InsetBox[
+            GraphicsBox[
+             InsetBox[
+              GraphicsBox[{
+                EdgeForm[{
+                  RGBColor[1, 0, 0], 
+                  Thickness[0.08]}], 
+                GrayLevel[0.85], 
+                DiskBox[{0, 0}]}, {
+               DisplayFunction -> Identity, AspectRatio -> Full, 
+                DefaultBaseStyle -> {"Graphics", 
+                  Directive[
+                   EdgeForm[
+                    Directive[
+                    GrayLevel[0], 
+                    Opacity[0.3]]], 
+                   RGBColor[0.982864, 0.7431472, 0.3262672]]}}], {0, 0}, {
+              Left, Bottom}, {0.019240498657234095`, 0.018878347354074343`}], 
+             PlotRange -> {{0, 0.019240498657234095`}, {
+               0, 0.018878347354074343`}}, AspectRatio -> Full, ImagePadding -> 
+             None], {0.3706448995017104, 0.5380955964858267}, {
+            Left, Bottom}, {0.019240498657234095`, 0.018878347354074343`}, {{
+            1, 0}, {0, 1}}], {
+            Opacity[0], 
+            PointBox[{0.3898853981589445, 0.5569739438399011}]}}},
+         ImageSizeCache->{{145.70227830030012`, 
+          154.1056587142016}, {-14.749194396732236`, -6.345813982830741}}],
+        StatusArea[#, 0.005098517587426299]& ,
+        TagBoxNote->"0.005098517587426299"],
+       StyleBox["0.005098517587426299`", {}, StripOnInput -> False]],
+      Annotation[#, 
+       Style[0.005098517587426299, {}], 
+       "Tooltip"]& ]}}, {{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, \
+{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}}},
+  AspectRatio->1,
+  AxesLabel->{None, None},
+  AxesOrigin->{-0.0429526142604512, -0.0025924445586078954`},
+  Frame->True,
+  FrameLabel->{{None, None}, {None, None}},
+  FrameTicks->{{Automatic, Automatic}, {Automatic, Automatic}},
+  GridLines->{None, None},
+  GridLinesStyle->Directive[
+    GrayLevel[0.5, 0.4]],
+  PlotRange->{{-0.0429526142604512, 
+   1.0793963590787319`}, {-0.0025924445586078954`, 1.0986312892254175`}},
+  PlotRangeClipping->True,
+  PlotRangePadding->{{
+     Scaled[0.05], 
+     Scaled[0.05]}, {
+     Scaled[0.05], 
+     Scaled[0.05]}},
+  Ticks->{Automatic, Automatic}]], "Output"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{808, 751},
+WindowMargins->{{4, Automatic}, {Automatic, 4}},
+FrontEndVersion->"10.4 for Mac OS X x86 (32-bit, 64-bit Kernel) (February 25, \
+2016)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 28, 0, 92, "Title"],
+Cell[CellGroupData[{
+Cell[633, 26, 25, 0, 64, "Section"],
+Cell[CellGroupData[{
+Cell[683, 30, 67, 0, 44, "Subsection"],
+Cell[CellGroupData[{
+Cell[775, 34, 337, 10, 28, "Input"],
+Cell[1115, 46, 129, 3, 375, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[1281, 54, 304, 9, 28, "Input"],
+Cell[1588, 65, 55061, 1338, 374, "Output"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+

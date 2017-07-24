@@ -1,0 +1,677 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.1' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     27868,        669]
+NotebookOptionsPosition[     25213,        595]
+NotebookOutlinePosition[     25563,        610]
+CellTagsIndexPosition[     25520,        607]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["Coefficient", "Title",ExpressionUUID->"9ded5d91-7f7f-4e92-ab91-08ca5e704ab4"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{"$polynomial", "=", 
+  RowBox[{
+   RowBox[{"(", 
+    RowBox[{"x", "+", "1"}], ")"}], "^", "3"}]}], "\[IndentingNewLine]", 
+ RowBox[{"%", "//", "Expand"}]}], "Input",ExpressionUUID->"f1e25d14-fcfe-49a7-\
+9403-de96c3d1f5cc"],
+
+Cell[BoxData[
+ SuperscriptBox[
+  RowBox[{"(", 
+   RowBox[{"1", "+", "x"}], ")"}], "3"]], "Output",ExpressionUUID->"499f0aba-\
+34aa-4056-86e5-58faa0e30443"],
+
+Cell[BoxData[
+ RowBox[{"1", "+", 
+  RowBox[{"3", " ", "x"}], "+", 
+  RowBox[{"3", " ", 
+   SuperscriptBox["x", "2"]}], "+", 
+  SuperscriptBox["x", "3"]}]], "Output",ExpressionUUID->"e0b56ebe-7ee6-4fd8-\
+974d-b911aa61ee9e"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Coefficient", "[", 
+  RowBox[{"$polynomial", ",", "x", ",", "2"}], "]"}]], "Input",ExpressionUUID-\
+>"02b17e81-717f-4cac-8076-1dc6ea420184"],
+
+Cell[BoxData["3"], "Output",ExpressionUUID->"d8967af1-c565-4d5d-8a22-f61f435af85a"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Coefficient", "[", 
+  RowBox[{"$polynomial", ",", "x", ",", 
+   RowBox[{"{", 
+    RowBox[{"2", ",", "3"}], "}"}]}], "]"}]], "Input",ExpressionUUID->\
+"0205414b-0280-45dc-a236-03ea46c9085a"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"3", ",", "1"}], "}"}]], "Output",ExpressionUUID->"e9a7f128-fb14-4977-bf37-3f1eeae00dda"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Coefficient", "[", 
+  RowBox[{"$polynomial", ",", "x", ",", "0"}], "]"}]], "Input",ExpressionUUID-\
+>"2489f792-cce5-472c-bca5-ed1be58de2b1"],
+
+Cell[BoxData["1"], "Output",ExpressionUUID->"35b5e58d-fef1-4db6-9277-6534581a952d"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Table", "[", 
+   RowBox[{
+    RowBox[{"<|", 
+     RowBox[{
+      RowBox[{"\"\<exponent\>\"", "\[Rule]", " ", "p"}], ",", 
+      RowBox[{"\"\<term\>\"", "\[Rule]", " ", 
+       RowBox[{"x", "^", "p"}]}], ",", 
+      RowBox[{"\"\<coefficient\>\"", "\[Rule]", " ", 
+       RowBox[{"Coefficient", "[", 
+        RowBox[{"$polynomial", ",", "x", ",", "p"}], "]"}]}]}], "|>"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"p", ",", "0", ",", "3"}], "}"}]}], "]"}], "//", 
+  "Dataset"}]], "Input",ExpressionUUID->"fd2f7e1b-b45b-4b79-bb99-\
+5bbd0f665db4"],
+
+Cell[BoxData[
+ TemplateBox[{TagBox[
+    DynamicModuleBox[{
+     TypeSystem`NestedGrid`PackagePrivate`$state$$ = 
+      Data`UnorderedAssociation[
+       "RowCount" -> 4, "Length" -> 4, "InitialType" -> TypeSystem`Vector[
+          TypeSystem`Struct[{"exponent", "term", "coefficient"}, {
+            TypeSystem`Atom[Integer], TypeSystem`AnyType, 
+            TypeSystem`Atom[Integer]}], 4], "Shape" -> 
+        TypeSystem`PackageScope`HeaderShape[
+          
+          Association[{All, "exponent"} -> 1, {All, "term"} -> 
+           1, {All, "coefficient"} -> 1], 
+          TypeSystem`PackageScope`Limited[
+           TypeSystem`PackageScope`ColumnShape[
+            TypeSystem`PackageScope`RowShape[
+             Association[
+             "exponent" -> TypeSystem`PackageScope`AtomShape[34], "term" -> 
+              TypeSystem`PackageScope`UnknownShape, "coefficient" -> 
+              TypeSystem`PackageScope`AtomShape[34]]]], 4, {}]], 
+        "InitialData" -> TypeSystem`PackageScope`CacheHandle[1920342265], 
+        "Type" -> TypeSystem`Vector[
+          TypeSystem`Struct[{"exponent", "term", "coefficient"}, {
+            TypeSystem`Atom[Integer], TypeSystem`AnyType, 
+            TypeSystem`Atom[Integer]}], 4], "HandleQ" -> True, "RowTarget" -> 
+        20, "Data" -> TypeSystem`PackageScope`CacheHandle[1920342265]], 
+      TypeSystem`NestedGrid`PackagePrivate`$path$$ = {}, 
+      TypeSystem`NestedGrid`PackagePrivate`$pos$$ = 1, 
+      TypeSystem`NestedGrid`PackagePrivate`$grid$$ = 
+      DynamicModule[{
+        TypeSystem`NestedGrid`PackagePrivate`renderedGrid = Deploy[
+           Style[
+            Grid[{{
+               Item[
+                Annotation[
+                 EventHandler[
+                  MouseAppearance[
+                   Mouseover[
+                    Pane[
+                    RawBoxes[
+                    StyleBox["\"exponent\"", FontColor -> GrayLevel[0.4]]], {{
+                    20, Full}, 15}], 
+                    Style[
+                    Pane[
+                    RawBoxes[
+                    StyleBox[
+                    "\"exponent\"", FontColor -> 
+                    RGBColor[
+                    0.27450980392156865`, 0.5372549019607843, 
+                    0.792156862745098]]], {{20, Full}, 15}], FontColor -> 
+                    RGBColor[
+                    0.27450980392156865`, 0.5372549019607843, 
+                    0.792156862745098]]], "LinkHand"], {"MouseClicked", 1} :> 
+                  TypeSystem`NestedGrid`PackagePrivate`updateState[
+                   TypeSystem`NestedGrid`PackagePrivate`$state$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$path$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$pos$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$grid$$, 819945670][{
+                    All, "exponent"}]], 
+                 TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[819945670][
+                 
+                  GeneralUtilities`Slice[All, "exponent"]], "Mouse"], 
+                Background -> GrayLevel[0.95], Alignment -> {Left, Baseline}], 
+               Item[
+                Annotation[
+                 EventHandler[
+                  MouseAppearance[
+                   Mouseover[
+                    Pane[
+                    RawBoxes[
+                    StyleBox["\"term\"", FontColor -> GrayLevel[0.4]]], {{
+                    20, Full}, 15}], 
+                    Style[
+                    Pane[
+                    RawBoxes[
+                    StyleBox[
+                    "\"term\"", FontColor -> 
+                    RGBColor[
+                    0.27450980392156865`, 0.5372549019607843, 
+                    0.792156862745098]]], {{20, Full}, 15}], FontColor -> 
+                    RGBColor[
+                    0.27450980392156865`, 0.5372549019607843, 
+                    0.792156862745098]]], "LinkHand"], {"MouseClicked", 1} :> 
+                  TypeSystem`NestedGrid`PackagePrivate`updateState[
+                   TypeSystem`NestedGrid`PackagePrivate`$state$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$path$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$pos$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$grid$$, 819945670][{
+                    All, "term"}]], 
+                 TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[819945670][
+                 
+                  GeneralUtilities`Slice[All, "term"]], "Mouse"], Background -> 
+                GrayLevel[0.95], Alignment -> {Left, Baseline}], 
+               Item[
+                Annotation[
+                 EventHandler[
+                  MouseAppearance[
+                   Mouseover[
+                    Pane[
+                    RawBoxes[
+                    StyleBox[
+                    "\"coefficient\"", FontColor -> GrayLevel[0.4]]], {{
+                    20, Full}, 15}], 
+                    Style[
+                    Pane[
+                    RawBoxes[
+                    StyleBox[
+                    "\"coefficient\"", FontColor -> 
+                    RGBColor[
+                    0.27450980392156865`, 0.5372549019607843, 
+                    0.792156862745098]]], {{20, Full}, 15}], FontColor -> 
+                    RGBColor[
+                    0.27450980392156865`, 0.5372549019607843, 
+                    0.792156862745098]]], "LinkHand"], {"MouseClicked", 1} :> 
+                  TypeSystem`NestedGrid`PackagePrivate`updateState[
+                   TypeSystem`NestedGrid`PackagePrivate`$state$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$path$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$pos$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$grid$$, 819945670][{
+                    All, "coefficient"}]], 
+                 TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[819945670][
+                 
+                  GeneralUtilities`Slice[All, "coefficient"]], "Mouse"], 
+                Background -> GrayLevel[0.95], 
+                Alignment -> {Left, Baseline}]}, {
+               Pane[
+                Annotation[
+                 RawBoxes["0"], 
+                 TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[819945670][
+                 
+                  GeneralUtilities`Slice[1, 
+                   Key["exponent"]]], "Mouse"], 
+                ImageSize -> {{34, Full}, Automatic}, 
+                Alignment -> {Left, Baseline}], 
+               Pane[
+                Annotation[
+                 RawBoxes["1"], 
+                 TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[819945670][
+                 
+                  GeneralUtilities`Slice[1, 
+                   Key["term"]]], "Mouse"], 
+                ImageSize -> {{34, Full}, Automatic}, 
+                Alignment -> {Left, Baseline}], 
+               Pane[
+                Annotation[
+                 RawBoxes["1"], 
+                 TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[819945670][
+                 
+                  GeneralUtilities`Slice[1, 
+                   Key["coefficient"]]], "Mouse"], 
+                ImageSize -> {{34, Full}, Automatic}, 
+                Alignment -> {Left, Baseline}]}, {
+               Pane[
+                Annotation[
+                 RawBoxes["1"], 
+                 TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[819945670][
+                 
+                  GeneralUtilities`Slice[2, 
+                   Key["exponent"]]], "Mouse"], 
+                ImageSize -> {{34, Full}, Automatic}, 
+                Alignment -> {Left, Baseline}], 
+               Pane[
+                Annotation[
+                 RawBoxes[
+                  StyleBox[
+                  "x", FontFamily -> "Source Code Pro", FontSize -> 13, 
+                   ShowStringCharacters -> True]], 
+                 TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[819945670][
+                 
+                  GeneralUtilities`Slice[2, 
+                   Key["term"]]], "Mouse"], 
+                ImageSize -> {{60, Full}, Automatic}, 
+                Alignment -> {Left, Baseline}], 
+               Pane[
+                Annotation[
+                 RawBoxes["3"], 
+                 TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[819945670][
+                 
+                  GeneralUtilities`Slice[2, 
+                   Key["coefficient"]]], "Mouse"], 
+                ImageSize -> {{34, Full}, Automatic}, 
+                Alignment -> {Left, Baseline}]}, {
+               Pane[
+                Annotation[
+                 RawBoxes["2"], 
+                 TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[819945670][
+                 
+                  GeneralUtilities`Slice[3, 
+                   Key["exponent"]]], "Mouse"], 
+                ImageSize -> {{34, Full}, Automatic}, 
+                Alignment -> {Left, Baseline}], 
+               Pane[
+                Annotation[
+                 RawBoxes[
+                  StyleBox[
+                   SuperscriptBox["x", "2"], FontFamily -> "Source Code Pro", 
+                   FontSize -> 13, ShowStringCharacters -> True]], 
+                 TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[819945670][
+                 
+                  GeneralUtilities`Slice[3, 
+                   Key["term"]]], "Mouse"], 
+                ImageSize -> {{60, Full}, Automatic}, 
+                Alignment -> {Left, Baseline}], 
+               Pane[
+                Annotation[
+                 RawBoxes["3"], 
+                 TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[819945670][
+                 
+                  GeneralUtilities`Slice[3, 
+                   Key["coefficient"]]], "Mouse"], 
+                ImageSize -> {{34, Full}, Automatic}, 
+                Alignment -> {Left, Baseline}]}, {
+               Pane[
+                Annotation[
+                 RawBoxes["3"], 
+                 TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[819945670][
+                 
+                  GeneralUtilities`Slice[4, 
+                   Key["exponent"]]], "Mouse"], 
+                ImageSize -> {{34, Full}, Automatic}, 
+                Alignment -> {Left, Baseline}], 
+               Pane[
+                Annotation[
+                 RawBoxes[
+                  StyleBox[
+                   SuperscriptBox["x", "3"], FontFamily -> "Source Code Pro", 
+                   FontSize -> 13, ShowStringCharacters -> True]], 
+                 TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[819945670][
+                 
+                  GeneralUtilities`Slice[4, 
+                   Key["term"]]], "Mouse"], 
+                ImageSize -> {{60, Full}, Automatic}, 
+                Alignment -> {Left, Baseline}], 
+               Pane[
+                Annotation[
+                 RawBoxes["1"], 
+                 TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[819945670][
+                 
+                  GeneralUtilities`Slice[4, 
+                   Key["coefficient"]]], "Mouse"], 
+                ImageSize -> {{34, Full}, Automatic}, 
+                Alignment -> {Left, Baseline}]}}, BaseStyle -> {ContextMenu -> {
+                 MenuItem["Copy position to clipboard", 
+                  KernelExecute[
+                   TypeSystem`NestedGrid`PackagePrivate`toCurrentPosition[
+                   TypeSystem`NestedGrid`PackagePrivate`copyClip]], 
+                  MenuEvaluator -> Automatic], 
+                 MenuItem["Copy data to clipboard", 
+                  KernelExecute[
+                   TypeSystem`NestedGrid`PackagePrivate`toCurrentData[
+                   TypeSystem`NestedGrid`PackagePrivate`$state$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`copyClip]], 
+                  MenuEvaluator -> Automatic], Delimiter, 
+                 MenuItem["Paste position in new cell", 
+                  KernelExecute[
+                   TypeSystem`NestedGrid`PackagePrivate`toCurrentPosition[
+                   TypeSystem`NestedGrid`PackagePrivate`cellPaste]], 
+                  MenuEvaluator -> Automatic], 
+                 MenuItem["Paste data in new cell", 
+                  KernelExecute[
+                   TypeSystem`NestedGrid`PackagePrivate`toCurrentData[
+                   TypeSystem`NestedGrid`PackagePrivate`$state$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`cellPaste]], 
+                  MenuEvaluator -> Automatic]}, FontFamily -> "Verdana", 
+               FontSize -> 12}, Alignment -> Left, RowMinHeight -> 1.5, 
+             Dividers -> All, FrameStyle -> GrayLevel[0.85], 
+             BaseStyle -> {FontFamily -> "Verdana", FontSize -> 12}], 
+            LineBreakWithin -> False, ContextMenu -> {}, NumberMarks -> False,
+             ShowAutoStyles -> False]], 
+         TypeSystem`NestedGrid`PackagePrivate`initialQ = True, 
+         TypeSystem`NestedGrid`PackagePrivate`self = $Failed}, 
+        Dynamic[
+         TypeSystem`NestedGrid`PackagePrivate`setupViewPath[
+         TypeSystem`NestedGrid`PackagePrivate`$path$$, If[
+            Not[TypeSystem`NestedGrid`PackagePrivate`initialQ], 
+            
+            Module[{TypeSystem`NestedGrid`PackagePrivate`tmpGrid$ = $Failed, 
+              TypeSystem`NestedGrid`PackagePrivate`tmpData$ = 
+              TypeSystem`NestedGrid`PackagePrivate`LookupCacheValue[
+                TypeSystem`NestedGrid`PackagePrivate`$state$$["Data"]]}, 
+             TypeSystem`NestedGrid`PackagePrivate`tmpGrid$ = 
+              If[TypeSystem`NestedGrid`PackagePrivate`tmpData$ === 
+                TypeSystem`NestedGrid`PackagePrivate`$NotCached, 
+                TypeSystem`NestedGrid`PackagePrivate`renderedGrid, 
+                TypeSystem`NestedGrid`PackagePrivate`renderGrid[
+                TypeSystem`NestedGrid`PackagePrivate`$state$$, 
+                 TypeSystem`NestedGrid`PackagePrivate`$path$$, 
+                 TypeSystem`NestedGrid`PackagePrivate`$pos$$, 
+                 TypeSystem`NestedGrid`PackagePrivate`$grid$$, 819945670][
+                TypeSystem`NestedGrid`PackagePrivate`tmpData$]]; If[
+               Not[
+                FailureQ[TypeSystem`NestedGrid`PackagePrivate`tmpGrid$]], 
+               TypeSystem`NestedGrid`PackagePrivate`renderedGrid = 
+               TypeSystem`NestedGrid`PackagePrivate`tmpGrid$]; Null]]; 
+          TypeSystem`NestedGrid`PackagePrivate`initialQ = False; 
+          TypeSystem`NestedGrid`PackagePrivate`$pos$$; If[
+            FailureQ[TypeSystem`NestedGrid`PackagePrivate`renderedGrid], 
+            TypeSystem`SparseGrid[
+             TypeSystem`H["(data no longer present)"]], 
+            If[GeneralUtilities`$DebugMode, 
+             Row[{TypeSystem`NestedGrid`PackagePrivate`renderedGrid, "  ", 
+               TypeSystem`NestedGrid`PackagePrivate`formatState[
+               TypeSystem`NestedGrid`PackagePrivate`$state$$, 
+                TypeSystem`NestedGrid`PackagePrivate`$path$$, 
+                TypeSystem`NestedGrid`PackagePrivate`$pos$$]}], 
+             TypeSystem`NestedGrid`PackagePrivate`renderedGrid]]], 
+         TrackedSymbols :> {TypeSystem`NestedGrid`PackagePrivate`$pos$$}], 
+        DynamicModuleValues :> {}], 
+      TypeSystem`NestedGrid`PackagePrivate`$posCell$$, 
+      TypeSystem`NestedGrid`PackagePrivate`$topBar$$ = Dynamic[
+        TypeSystem`NestedGrid`PackagePrivate`alignBar[
+        TypeSystem`NestedGrid`PackagePrivate`$state$$][
+         TypeSystem`NestedGrid`PackagePrivate`makeFramedBar[
+          TypeSystem`PackageScope`Pathbar[
+          TypeSystem`NestedGrid`PackagePrivate`$path$$, 
+           TypeSystem`NestedGrid`PackagePrivate`updateState[
+           TypeSystem`NestedGrid`PackagePrivate`$state$$, 
+            TypeSystem`NestedGrid`PackagePrivate`$path$$, 
+            TypeSystem`NestedGrid`PackagePrivate`$pos$$, 
+            TypeSystem`NestedGrid`PackagePrivate`$grid$$, 819945670]]]], 
+        TrackedSymbols :> {TypeSystem`NestedGrid`PackagePrivate`$path$$}], 
+      TypeSystem`NestedGrid`PackagePrivate`$bottomBar$$ = Framed[
+        Dynamic[
+         Replace[
+          MouseAnnotation[Null], {
+          TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[819945670][Null] -> 
+           "", TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[819945670][
+             Pattern[TypeSystem`NestedGrid`PackagePrivate`path, 
+              Blank[]]] :> (
+            TypeSystem`NestedGrid`PackagePrivate`$lastPath = 
+             TypeSystem`NestedGrid`PackagePrivate`path; 
+            TypeSystem`NestedGrid`PackagePrivate`makePathTrail[
+             TypeSystem`NestedGrid`PackagePrivate`path, 
+              TypeSystem`NestedGrid`PackagePrivate`makePathElements]), Null :> 
+           Spacer[10], Blank[] :> Spacer[10]}], TrackedSymbols :> {}], 
+        FrameStyle -> None, ImageMargins -> 0, FrameMargins -> 0, Alignment -> 
+        Top, ImageSize -> {Automatic, 14}]}, 
+     DynamicBox[
+      ToBoxes[
+       Column[
+        If[TypeSystem`NestedGrid`PackagePrivate`$path$$ == {}, {
+          TypeSystem`NestedGrid`PackagePrivate`displayScrollBar[
+          TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
+           TypeSystem`NestedGrid`PackagePrivate`$state$$, 
+           TypeSystem`NestedGrid`PackagePrivate`$pos$$], 
+          TypeSystem`NestedGrid`PackagePrivate`onDesktopShow[
+           TypeSystem`NestedGrid`PackagePrivate`alignBar[
+           TypeSystem`NestedGrid`PackagePrivate`$state$$][
+           TypeSystem`NestedGrid`PackagePrivate`$bottomBar$$]]}, {
+         TypeSystem`NestedGrid`PackagePrivate`$topBar$$, 
+          TypeSystem`NestedGrid`PackagePrivate`displayScrollBar[
+          TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
+           TypeSystem`NestedGrid`PackagePrivate`$state$$, 
+           TypeSystem`NestedGrid`PackagePrivate`$pos$$], 
+          TypeSystem`NestedGrid`PackagePrivate`onDesktopShow[
+           TypeSystem`NestedGrid`PackagePrivate`alignBar[
+           TypeSystem`NestedGrid`PackagePrivate`$state$$][
+           TypeSystem`NestedGrid`PackagePrivate`$bottomBar$$]]}], Spacings -> 
+        If[TypeSystem`NestedGrid`PackagePrivate`$path$$ == {}, 
+          0, {{}, {0, 0.05, 0}}]], StandardForm], 
+      ImageSizeCache -> {206., {67.134033203125, 72.865966796875}}, 
+      TrackedSymbols :> {
+       TypeSystem`NestedGrid`PackagePrivate`$state$$, 
+        TypeSystem`NestedGrid`PackagePrivate`$grid$$}], 
+     BaseStyle -> {LineBreakWithin -> False}, Deinitialization :> 
+     TypeSystem`NestedGrid`PackagePrivate`deleteState[
+      TypeSystem`NestedGrid`PackagePrivate`$state$$], 
+     DynamicModuleValues :> {}, Initialization :> 
+     Block[{$ContextPath = $ContextPath}, 
+       Needs["TypeSystem`"]]], Deploy, DefaultBaseStyle -> "Deploy"]},
+  "CopyTag",
+  DisplayFunction->(#& ),
+  InterpretationFunction->("Dataset[<>]"& )]], "Output",ExpressionUUID->\
+"d08f7d28-b68f-4c00-bc5e-68af2d31212e"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Find coefficients of terms of a multivariate polynomial", "Subsection",ExpressionUUID->"cdc8fef7-bcaf-41e1-9a55-d2f9663f54b0"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"generalCoefficient", "[", 
+   RowBox[{"expression_", ",", "variables_List", ",", "exponents_List"}], 
+   "]"}], ":=", 
+  RowBox[{"Fold", "[", "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"Function", "[", "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"polynomial", ",", "variableexponentpair"}], "}"}], ",", 
+      RowBox[{"Coefficient", "[", 
+       RowBox[{"polynomial", ",", 
+        RowBox[{"First", "[", "variableexponentpair", "]"}], ",", 
+        RowBox[{"Last", "[", "variableexponentpair", "]"}]}], "]"}]}], 
+     "\[IndentingNewLine]", "]"}], ",", "\[IndentingNewLine]", "expression", 
+    ",", "\[IndentingNewLine]", 
+    RowBox[{"Transpose", "[", 
+     RowBox[{"{", 
+      RowBox[{"variables", ",", "exponents"}], "}"}], "]"}]}], 
+   "\[IndentingNewLine]", "]"}]}]], "Input",ExpressionUUID->"b61c76fe-6c35-\
+4c1b-aa7f-ec39bf70022d"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{"$multivariatePolynomial", "=", 
+  RowBox[{
+   RowBox[{"(", 
+    RowBox[{"1", "+", "x", "+", "y"}], ")"}], "^", 
+   "3"}]}], "\[IndentingNewLine]", 
+ RowBox[{"%", "//", "Expand"}]}], "Input",ExpressionUUID->"75800857-3e17-4d4a-\
+abd0-51b379d31574"],
+
+Cell[BoxData[
+ SuperscriptBox[
+  RowBox[{"(", 
+   RowBox[{"1", "+", "x", "+", "y"}], ")"}], "3"]], "Output",ExpressionUUID->\
+"7231a709-7d77-4066-8139-ab6ef224a6aa"],
+
+Cell[BoxData[
+ RowBox[{"1", "+", 
+  RowBox[{"3", " ", "x"}], "+", 
+  RowBox[{"3", " ", 
+   SuperscriptBox["x", "2"]}], "+", 
+  SuperscriptBox["x", "3"], "+", 
+  RowBox[{"3", " ", "y"}], "+", 
+  RowBox[{"6", " ", "x", " ", "y"}], "+", 
+  RowBox[{"3", " ", 
+   SuperscriptBox["x", "2"], " ", "y"}], "+", 
+  RowBox[{"3", " ", 
+   SuperscriptBox["y", "2"]}], "+", 
+  RowBox[{"3", " ", "x", " ", 
+   SuperscriptBox["y", "2"]}], "+", 
+  SuperscriptBox["y", "3"]}]], "Output",ExpressionUUID->"f78b5a24-87a6-45a9-\
+a9dc-4df46af53b9e"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"generalCoefficient", "[", 
+  RowBox[{"$multivariatePolynomial", ",", 
+   RowBox[{"{", 
+    RowBox[{"xy", ",", "x"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"1", ",", "1"}], "}"}]}], "]"}]], "Input",ExpressionUUID->\
+"cd8d4e7c-dcde-4834-869c-f2f84333e039"],
+
+Cell[BoxData["0"], "Output",ExpressionUUID->"3efa8f55-5685-467b-ac9c-39321949eb85"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Normal", "@", 
+  RowBox[{"CoefficientArrays", "[", 
+   RowBox[{"$multivariatePolynomial", ",", 
+    RowBox[{"{", 
+     RowBox[{"x", ",", "y"}], "}"}], ",", 
+    RowBox[{"\"\<Symmetric\>\"", "\[Rule]", "True"}]}], "]"}]}]], "Input",Expr\
+essionUUID->"cc437cc5-1902-4b86-b79a-0fb01ea16c93"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"1", ",", 
+   RowBox[{"{", 
+    RowBox[{"3", ",", "3"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"3", ",", "3"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"3", ",", "3"}], "}"}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"1", ",", "1"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"1", ",", "1"}], "}"}]}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"1", ",", "1"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"1", ",", "1"}], "}"}]}], "}"}]}], "}"}]}], "}"}]], "Output",E\
+xpressionUUID->"ca983a84-7fc4-4419-962b-e525cd0dc121"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{808, 752},
+WindowMargins->{{28, Automatic}, {36, Automatic}},
+FrontEndVersion->"11.1 for Mac OS X x86 (32-bit, 64-bit Kernel) (May 2, 2017)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 83, 0, 92, "Title", "ExpressionUUID" -> \
+"9ded5d91-7f7f-4e92-ab91-08ca5e704ab4"],
+Cell[CellGroupData[{
+Cell[688, 26, 246, 6, 54, "Input", "ExpressionUUID" -> \
+"f1e25d14-fcfe-49a7-9403-de96c3d1f5cc"],
+Cell[937, 34, 155, 4, 32, "Output", "ExpressionUUID" -> \
+"499f0aba-34aa-4056-86e5-58faa0e30443"],
+Cell[1095, 40, 222, 6, 32, "Output", "ExpressionUUID" -> \
+"e0b56ebe-7ee6-4fd8-974d-b911aa61ee9e"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[1354, 51, 164, 3, 32, "Input", "ExpressionUUID" -> \
+"02b17e81-717f-4cac-8076-1dc6ea420184"],
+Cell[1521, 56, 83, 0, 32, "Output", "ExpressionUUID" -> \
+"d8967af1-c565-4d5d-8a22-f61f435af85a"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[1641, 61, 213, 5, 32, "Input", "ExpressionUUID" -> \
+"0205414b-0280-45dc-a236-03ea46c9085a"],
+Cell[1857, 68, 128, 2, 32, "Output", "ExpressionUUID" -> \
+"e9a7f128-fb14-4977-bf37-3f1eeae00dda"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[2022, 75, 164, 3, 32, "Input", "ExpressionUUID" -> \
+"2489f792-cce5-472c-bca5-ed1be58de2b1"],
+Cell[2189, 80, 83, 0, 32, "Output", "ExpressionUUID" -> \
+"35b5e58d-fef1-4db6-9277-6534581a952d"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[2309, 85, 574, 15, 54, "Input", "ExpressionUUID" -> \
+"fd2f7e1b-b45b-4b79-bb99-5bbd0f665db4"],
+Cell[2886, 102, 18719, 373, 157, "Output", "ExpressionUUID" -> \
+"d08f7d28-b68f-4c00-bc5e-68af2d31212e"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[21642, 480, 132, 0, 44, "Subsection", "ExpressionUUID" -> \
+"cdc8fef7-bcaf-41e1-9a55-d2f9663f54b0"],
+Cell[21777, 482, 908, 21, 180, "Input", "ExpressionUUID" -> \
+"b61c76fe-6c35-4c1b-aa7f-ec39bf70022d"],
+Cell[CellGroupData[{
+Cell[22710, 507, 272, 7, 54, "Input", "ExpressionUUID" -> \
+"75800857-3e17-4d4a-abd0-51b379d31574"],
+Cell[22985, 516, 165, 4, 32, "Output", "ExpressionUUID" -> \
+"7231a709-7d77-4066-8139-ab6ef224a6aa"],
+Cell[23153, 522, 526, 15, 32, "Output", "ExpressionUUID" -> \
+"f78b5a24-87a6-45a9-a9dc-4df46af53b9e"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[23716, 542, 282, 7, 32, "Input", "ExpressionUUID" -> \
+"cd8d4e7c-dcde-4834-869c-f2f84333e039"],
+Cell[24001, 551, 83, 0, 32, "Output", "ExpressionUUID" -> \
+"3efa8f55-5685-467b-ac9c-39321949eb85"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[24121, 556, 312, 7, 32, "Input", "ExpressionUUID" -> \
+"cc437cc5-1902-4b86-b79a-0fb01ea16c93"],
+Cell[24436, 565, 737, 25, 32, "Output", "ExpressionUUID" -> \
+"ca983a84-7fc4-4419-962b-e525cd0dc121"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+

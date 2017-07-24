@@ -1,0 +1,141 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.1' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      3875,        133]
+NotebookOptionsPosition[      2971,        103]
+NotebookOutlinePosition[      3321,        118]
+CellTagsIndexPosition[      3278,        115]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["CoefficientList", "Title",ExpressionUUID->"7154d5dc-dfaf-4e46-a042-54b7a872d8ca"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{"$multivariatePolynomial", "=", 
+  RowBox[{
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{"3", "*", "x"}], "+", 
+     RowBox[{"4", "*", "y"}], "+", "1"}], ")"}], "^", "3"}]}], "\n", 
+ RowBox[{"%", "//", "Expand"}]}], "Input",ExpressionUUID->"a5afcce6-c55b-40c6-\
+8ffb-e0a74249bc0a"],
+
+Cell[BoxData[
+ SuperscriptBox[
+  RowBox[{"(", 
+   RowBox[{"1", "+", 
+    RowBox[{"3", " ", "x"}], "+", 
+    RowBox[{"4", " ", "y"}]}], ")"}], "3"]], "Output",ExpressionUUID->\
+"16a18493-21d0-4d9d-8326-efeee29ed33f"],
+
+Cell[BoxData[
+ RowBox[{"1", "+", 
+  RowBox[{"9", " ", "x"}], "+", 
+  RowBox[{"27", " ", 
+   SuperscriptBox["x", "2"]}], "+", 
+  RowBox[{"27", " ", 
+   SuperscriptBox["x", "3"]}], "+", 
+  RowBox[{"12", " ", "y"}], "+", 
+  RowBox[{"72", " ", "x", " ", "y"}], "+", 
+  RowBox[{"108", " ", 
+   SuperscriptBox["x", "2"], " ", "y"}], "+", 
+  RowBox[{"48", " ", 
+   SuperscriptBox["y", "2"]}], "+", 
+  RowBox[{"144", " ", "x", " ", 
+   SuperscriptBox["y", "2"]}], "+", 
+  RowBox[{"64", " ", 
+   SuperscriptBox["y", "3"]}]}]], "Output",ExpressionUUID->"b5da1429-69bf-\
+402b-b5b5-a8727efa69e4"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"CoefficientList", "[", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"3", "*", "x"}], "+", 
+       RowBox[{"4", "*", "y"}], "+", "1"}], ")"}], "^", "3"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"x", ",", "y"}], "}"}]}], "]"}], "//", "MatrixForm"}]], "Input",E\
+xpressionUUID->"f0e57d97-9460-4035-a84e-4e23605477c1"],
+
+Cell[BoxData[
+ TagBox[
+  RowBox[{"(", "\[NoBreak]", GridBox[{
+     {"1", "12", "48", "64"},
+     {"9", "72", "144", "0"},
+     {"27", "108", "0", "0"},
+     {"27", "0", "0", "0"}
+    },
+    GridBoxAlignment->{
+     "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+      "RowsIndexed" -> {}},
+    GridBoxSpacings->{"Columns" -> {
+        Offset[0.27999999999999997`], {
+         Offset[0.7]}, 
+        Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+        Offset[0.2], {
+         Offset[0.4]}, 
+        Offset[0.2]}, "RowsIndexed" -> {}}], "\[NoBreak]", ")"}],
+  Function[BoxForm`e$, 
+   MatrixForm[BoxForm`e$]]]], "Output",ExpressionUUID->"08115eee-7de9-4fda-\
+941c-b034c3a9547e"]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{808, 752},
+WindowMargins->{{36, Automatic}, {16, Automatic}},
+FrontEndVersion->"11.1 for Mac OS X x86 (32-bit, 64-bit Kernel) (May 2, 2017)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 87, 0, 92, "Title", "ExpressionUUID" -> \
+"7154d5dc-dfaf-4e46-a042-54b7a872d8ca"],
+Cell[CellGroupData[{
+Cell[692, 26, 303, 8, 54, "Input", "ExpressionUUID" -> \
+"a5afcce6-c55b-40c6-8ffb-e0a74249bc0a"],
+Cell[998, 36, 215, 6, 32, "Output", "ExpressionUUID" -> \
+"16a18493-21d0-4d9d-8326-efeee29ed33f"],
+Cell[1216, 44, 584, 17, 32, "Output", "ExpressionUUID" -> \
+"b5da1429-69bf-402b-b5b5-a8727efa69e4"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[1837, 66, 377, 11, 32, "Input", "ExpressionUUID" -> \
+"f0e57d97-9460-4035-a84e-4e23605477c1"],
+Cell[2217, 79, 726, 20, 92, "Output", "ExpressionUUID" -> \
+"08115eee-7de9-4fda-941c-b034c3a9547e"]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+

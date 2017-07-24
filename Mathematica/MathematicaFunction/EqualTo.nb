@@ -1,0 +1,259 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.1' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      8282,        251]
+NotebookOptionsPosition[      6609,        198]
+NotebookOutlinePosition[      7181,        221]
+CellTagsIndexPosition[      7096,        216]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["EqualTo", "Title",ExpressionUUID->"82c9c15c-fe44-4425-9ce1-9e5c65a84492"],
+
+Cell[CellGroupData[{
+
+Cell["EqualTo[entity1][entity2]", "Subsection",ExpressionUUID->"a0cbed81-7ac1-42be-8363-afa487a41117"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  TemplateBox[{"\"Portland\"",RowBox[{"Entity", "[", 
+      RowBox[{"\"City\"", ",", 
+        RowBox[{"{", 
+          
+          RowBox[{"\"Portland\"", ",", "\"Oregon\"", ",", 
+            "\"UnitedStates\""}], "}"}]}], "]"}],
+    "\"Entity[\\\"City\\\", {\\\"Portland\\\", \\\"Oregon\\\", \
+\\\"UnitedStates\\\"}]\"","\"city\""},
+   "Entity"], "==", 
+  TemplateBox[{"\"New York City\"",RowBox[{"Entity", "[", 
+      RowBox[{"\"City\"", ",", 
+        RowBox[{"{", 
+          
+          RowBox[{"\"NewYork\"", ",", "\"NewYork\"", ",", 
+            "\"UnitedStates\""}], "}"}]}], "]"}],
+    "\"Entity[\\\"City\\\", {\\\"NewYork\\\", \\\"NewYork\\\", \
+\\\"UnitedStates\\\"}]\"","\"city\""},
+   "Entity"]}]], "Input",ExpressionUUID->"cbd42456-f2b0-4922-9694-\
+0cf52867356d"],
+
+Cell[BoxData[
+ RowBox[{
+  TemplateBox[{"\"Portland\"",RowBox[{"Entity", "[", 
+      RowBox[{"\"City\"", ",", 
+        RowBox[{"{", 
+          
+          RowBox[{"\"Portland\"", ",", "\"Oregon\"", ",", 
+            "\"UnitedStates\""}], "}"}]}], "]"}],
+    "\"Entity[\\\"City\\\", {\\\"Portland\\\", \\\"Oregon\\\", \
+\\\"UnitedStates\\\"}]\"","\"city\""},
+   "Entity"], "\[Equal]", 
+  TemplateBox[{"\"New York City\"",RowBox[{"Entity", "[", 
+      RowBox[{"\"City\"", ",", 
+        RowBox[{"{", 
+          
+          RowBox[{"\"NewYork\"", ",", "\"NewYork\"", ",", 
+            "\"UnitedStates\""}], "}"}]}], "]"}],
+    "\"Entity[\\\"City\\\", {\\\"NewYork\\\", \\\"NewYork\\\", \
+\\\"UnitedStates\\\"}]\"","\"city\""},
+   "Entity"]}]], "Output",ExpressionUUID->"70f3b2ff-e058-4531-9b80-\
+c3ca3fe6ab24"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"HoldComplete", "[", 
+   RowBox[{
+    TemplateBox[{"\"Portland\"",RowBox[{"Entity", "[", 
+        RowBox[{"\"City\"", ",", 
+          RowBox[{"{", 
+            
+            RowBox[{"\"Portland\"", ",", "\"Oregon\"", ",", 
+              "\"UnitedStates\""}], "}"}]}], "]"}],
+      "\"Entity[\\\"City\\\", {\\\"Portland\\\", \\\"Oregon\\\", \
+\\\"UnitedStates\\\"}]\"","\"city\""},
+     "Entity"], "==", 
+    TemplateBox[{"\"New York City\"",RowBox[{"Entity", "[", 
+        RowBox[{"\"City\"", ",", 
+          RowBox[{"{", 
+            
+            RowBox[{"\"NewYork\"", ",", "\"NewYork\"", ",", 
+              "\"UnitedStates\""}], "}"}]}], "]"}],
+      "\"Entity[\\\"City\\\", {\\\"NewYork\\\", \\\"NewYork\\\", \
+\\\"UnitedStates\\\"}]\"","\"city\""},
+     "Entity"]}], "]"}], "//", "FullForm"}]], "Input",ExpressionUUID->\
+"7a0626b3-1df4-46e0-b245-c535487005d0"],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   RowBox[{"HoldComplete", "[", 
+    RowBox[{"Equal", "[", 
+     RowBox[{
+      RowBox[{"Entity", "[", 
+       RowBox[{"\"\<City\>\"", ",", 
+        RowBox[{"List", "[", 
+         RowBox[{
+         "\"\<Portland\>\"", ",", "\"\<Oregon\>\"", ",", 
+          "\"\<UnitedStates\>\""}], "]"}]}], "]"}], ",", 
+      RowBox[{"Entity", "[", 
+       RowBox[{"\"\<City\>\"", ",", 
+        RowBox[{"List", "[", 
+         RowBox[{
+         "\"\<NewYork\>\"", ",", "\"\<NewYork\>\"", ",", 
+          "\"\<UnitedStates\>\""}], "]"}]}], "]"}]}], "]"}], "]"}],
+   ShowSpecialCharacters->False,
+   ShowStringCharacters->True,
+   NumberMarks->True],
+  FullForm]], "Output",ExpressionUUID->"01a8674d-f0a4-4ac9-80d3-00c00bb7b9fb"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"?", "EqualTo"}]], "Input",ExpressionUUID->"0f7ca7c3-9b2d-48c8-8b7d-bfce4faa49e8"],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox["\<\"\\!\\(\\*RowBox[{\\\"EqualTo\\\", \\\"[\\\", StyleBox[\\\"y\\\
+\", \\\"TI\\\"], \\\"]\\\"}]\\) is an operator form that yields \
+\\!\\(\\*RowBox[{StyleBox[\\\"x\\\", \\\"TI\\\"], \\\"==\\\", \
+StyleBox[\\\"y\\\", \\\"TI\\\"]}]\\) when applied to an expression \
+\\!\\(\\*StyleBox[\\\"x\\\", \\\"TI\\\"]\\). \"\>", "MSG"], 
+  "\[NonBreakingSpace]", 
+  ButtonBox[
+   StyleBox["\[RightSkeleton]", "SR"],
+   Active->True,
+   BaseStyle->"Link",
+   ButtonData->"paclet:ref/EqualTo"]}]], "Print", "PrintUsage",
+ CellTags->
+  "Info33699086004-3491148",ExpressionUUID->"a66cd180-8f62-4fec-aa4a-\
+050b2c0cc8e2"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"EqualTo", "[", 
+   TemplateBox[{"\"Portland\"",RowBox[{"Entity", "[", 
+       RowBox[{"\"City\"", ",", 
+         RowBox[{"{", 
+           
+           RowBox[{"\"Portland\"", ",", "\"Oregon\"", ",", 
+             "\"UnitedStates\""}], "}"}]}], "]"}],
+     "\"Entity[\\\"City\\\", {\\\"Portland\\\", \\\"Oregon\\\", \
+\\\"UnitedStates\\\"}]\"","\"city\""},
+    "Entity"], "]"}], "[", 
+  TemplateBox[{"\"New York City\"",RowBox[{"Entity", "[", 
+      RowBox[{"\"City\"", ",", 
+        RowBox[{"{", 
+          
+          RowBox[{"\"NewYork\"", ",", "\"NewYork\"", ",", 
+            "\"UnitedStates\""}], "}"}]}], "]"}],
+    "\"Entity[\\\"City\\\", {\\\"NewYork\\\", \\\"NewYork\\\", \
+\\\"UnitedStates\\\"}]\"","\"city\""},
+   "Entity"], "]"}]], "Input",ExpressionUUID->"69b00a8d-bf72-45ac-9c03-\
+12e45093562a"],
+
+Cell[BoxData[
+ RowBox[{
+  TemplateBox[{"\"New York City\"",RowBox[{"Entity", "[", 
+      RowBox[{"\"City\"", ",", 
+        RowBox[{"{", 
+          
+          RowBox[{"\"NewYork\"", ",", "\"NewYork\"", ",", 
+            "\"UnitedStates\""}], "}"}]}], "]"}],
+    "\"Entity[\\\"City\\\", {\\\"NewYork\\\", \\\"NewYork\\\", \
+\\\"UnitedStates\\\"}]\"","\"city\""},
+   "Entity"], "\[Equal]", 
+  TemplateBox[{"\"Portland\"",RowBox[{"Entity", "[", 
+      RowBox[{"\"City\"", ",", 
+        RowBox[{"{", 
+          
+          RowBox[{"\"Portland\"", ",", "\"Oregon\"", ",", 
+            "\"UnitedStates\""}], "}"}]}], "]"}],
+    "\"Entity[\\\"City\\\", {\\\"Portland\\\", \\\"Oregon\\\", \
+\\\"UnitedStates\\\"}]\"","\"city\""},
+   "Entity"]}]], "Output",ExpressionUUID->"82d319a8-29f7-4f67-a12e-\
+e11372b191b1"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{1440, 852},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+FrontEndVersion->"11.1 for Mac OS X x86 (32-bit, 64-bit Kernel) (March 13, \
+2017)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{
+ "Info33699086004-3491148"->{
+  Cell[4243, 130, 641, 15, 
+  43, "Print", "ExpressionUUID" -> "a66cd180-8f62-4fec-aa4a-050b2c0cc8e2",
+   CellTags->"Info33699086004-3491148"]}
+ }
+*)
+(*CellTagsIndex
+CellTagsIndex->{
+ {"Info33699086004-3491148", 6928, 209}
+ }
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 79, 0, 92, "Title", "ExpressionUUID" -> \
+"82c9c15c-fe44-4425-9ce1-9e5c65a84492"],
+Cell[CellGroupData[{
+Cell[684, 26, 102, 0, 44, "Subsection", "ExpressionUUID" -> \
+"a0cbed81-7ac1-42be-8363-afa487a41117"],
+Cell[CellGroupData[{
+Cell[811, 30, 796, 20, 41, "Input", "ExpressionUUID" -> \
+"cbd42456-f2b0-4922-9694-0cf52867356d"],
+Cell[1610, 52, 803, 20, 41, "Output", "ExpressionUUID" -> \
+"70f3b2ff-e058-4531-9b80-c3ca3fe6ab24"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[2450, 77, 899, 22, 42, "Input", "ExpressionUUID" -> \
+"7a0626b3-1df4-46e0-b245-c535487005d0"],
+Cell[3352, 101, 746, 21, 43, "Output", "ExpressionUUID" -> \
+"01a8674d-f0a4-4ac9-80d3-00c00bb7b9fb"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[4135, 127, 105, 1, 32, "Input", "ExpressionUUID" -> \
+"0f7ca7c3-9b2d-48c8-8b7d-bfce4faa49e8"],
+Cell[4243, 130, 641, 15, 43, "Print", "ExpressionUUID" -> \
+"a66cd180-8f62-4fec-aa4a-050b2c0cc8e2",
+ CellTags->"Info33699086004-3491148"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[4921, 150, 842, 21, 42, "Input", "ExpressionUUID" -> \
+"69b00a8d-bf72-45ac-9c03-12e45093562a"],
+Cell[5766, 173, 803, 20, 41, "Output", "ExpressionUUID" -> \
+"82d319a8-29f7-4f67-a12e-e11372b191b1"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+

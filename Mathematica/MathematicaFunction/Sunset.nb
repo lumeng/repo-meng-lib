@@ -1,0 +1,506 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     17543,        498]
+NotebookOptionsPosition[     16489,        463]
+NotebookOutlinePosition[     16844,        479]
+CellTagsIndexPosition[     16801,        476]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["Sunset", "Title"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Table", "[", 
+  RowBox[{
+   RowBox[{"Sunset", "[", 
+    RowBox[{
+     RowBox[{"Entity", "[", 
+      RowBox[{"\"\<City\>\"", ",", 
+       RowBox[{"{", 
+        RowBox[{
+        "\"\<Baoding\>\"", ",", "\"\<Hebei\>\"", ",", "\"\<China\>\""}], 
+        "}"}]}], "]"}], ",", 
+     RowBox[{"DateObject", "[", "date", "]"}]}], "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"date", ",", 
+     RowBox[{
+      RowBox[{"DateRange", "[", 
+       RowBox[{
+        RowBox[{"{", "2017", "}"}], ",", 
+        RowBox[{"{", "2018", "}"}]}], "]"}], "[", 
+      RowBox[{"[", 
+       RowBox[{";;", "5"}], "]"}], "]"}]}], "}"}]}], "]"}]], "Input"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   TemplateBox[{RowBox[{"\"Sun 1 Jan 2017 01:08\"", 
+       StyleBox[
+        RowBox[{"\"GMT\"", "\[InvisibleSpace]", 
+          RowBox[{"-", "8.`"}]}], FontColor -> GrayLevel[0.5]]}],
+     RowBox[{"DateObject", "[", 
+       RowBox[{
+         RowBox[{"{", 
+           RowBox[{"2017", ",", "1", ",", "1"}], "}"}], ",", 
+         RowBox[{"TimeObject", "[", 
+           RowBox[{
+             RowBox[{"{", 
+               RowBox[{"1", ",", "8"}], "}"}], ",", 
+             RowBox[{"TimeZone", "\[Rule]", 
+               RowBox[{"-", "8.`"}]}]}], "]"}], ",", 
+         RowBox[{"TimeZone", "\[Rule]", 
+           RowBox[{"-", "8.`"}]}]}], "]"}]},
+    "DateObject",
+    Editable->False], ",", 
+   TemplateBox[{RowBox[{"\"Mon 2 Jan 2017 01:09\"", 
+       StyleBox[
+        RowBox[{"\"GMT\"", "\[InvisibleSpace]", 
+          RowBox[{"-", "8.`"}]}], FontColor -> GrayLevel[0.5]]}],
+     RowBox[{"DateObject", "[", 
+       RowBox[{
+         RowBox[{"{", 
+           RowBox[{"2017", ",", "1", ",", "2"}], "}"}], ",", 
+         RowBox[{"TimeObject", "[", 
+           RowBox[{
+             RowBox[{"{", 
+               RowBox[{"1", ",", "9"}], "}"}], ",", 
+             RowBox[{"TimeZone", "\[Rule]", 
+               RowBox[{"-", "8.`"}]}]}], "]"}], ",", 
+         RowBox[{"TimeZone", "\[Rule]", 
+           RowBox[{"-", "8.`"}]}]}], "]"}]},
+    "DateObject",
+    Editable->False], ",", 
+   TemplateBox[{RowBox[{"\"Tue 3 Jan 2017 01:10\"", 
+       StyleBox[
+        RowBox[{"\"GMT\"", "\[InvisibleSpace]", 
+          RowBox[{"-", "8.`"}]}], FontColor -> GrayLevel[0.5]]}],
+     RowBox[{"DateObject", "[", 
+       RowBox[{
+         RowBox[{"{", 
+           RowBox[{"2017", ",", "1", ",", "3"}], "}"}], ",", 
+         RowBox[{"TimeObject", "[", 
+           RowBox[{
+             RowBox[{"{", 
+               RowBox[{"1", ",", "10"}], "}"}], ",", 
+             RowBox[{"TimeZone", "\[Rule]", 
+               RowBox[{"-", "8.`"}]}]}], "]"}], ",", 
+         RowBox[{"TimeZone", "\[Rule]", 
+           RowBox[{"-", "8.`"}]}]}], "]"}]},
+    "DateObject",
+    Editable->False], ",", 
+   TemplateBox[{RowBox[{"\"Wed 4 Jan 2017 01:11\"", 
+       StyleBox[
+        RowBox[{"\"GMT\"", "\[InvisibleSpace]", 
+          RowBox[{"-", "8.`"}]}], FontColor -> GrayLevel[0.5]]}],
+     RowBox[{"DateObject", "[", 
+       RowBox[{
+         RowBox[{"{", 
+           RowBox[{"2017", ",", "1", ",", "4"}], "}"}], ",", 
+         RowBox[{"TimeObject", "[", 
+           RowBox[{
+             RowBox[{"{", 
+               RowBox[{"1", ",", "11"}], "}"}], ",", 
+             RowBox[{"TimeZone", "\[Rule]", 
+               RowBox[{"-", "8.`"}]}]}], "]"}], ",", 
+         RowBox[{"TimeZone", "\[Rule]", 
+           RowBox[{"-", "8.`"}]}]}], "]"}]},
+    "DateObject",
+    Editable->False], ",", 
+   TemplateBox[{RowBox[{"\"Thu 5 Jan 2017 01:11\"", 
+       StyleBox[
+        RowBox[{"\"GMT\"", "\[InvisibleSpace]", 
+          RowBox[{"-", "8.`"}]}], FontColor -> GrayLevel[0.5]]}],
+     RowBox[{"DateObject", "[", 
+       RowBox[{
+         RowBox[{"{", 
+           RowBox[{"2017", ",", "1", ",", "5"}], "}"}], ",", 
+         RowBox[{"TimeObject", "[", 
+           RowBox[{
+             RowBox[{"{", 
+               RowBox[{"1", ",", "11"}], "}"}], ",", 
+             RowBox[{"TimeZone", "\[Rule]", 
+               RowBox[{"-", "8.`"}]}]}], "]"}], ",", 
+         RowBox[{"TimeZone", "\[Rule]", 
+           RowBox[{"-", "8.`"}]}]}], "]"}]},
+    "DateObject",
+    Editable->False]}], "}"}]], "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Table", "[", 
+  RowBox[{
+   RowBox[{"Sunset", "[", 
+    RowBox[{
+     TemplateBox[{"\"Harbin\"",RowBox[{"Entity", "[", 
+         RowBox[{"\"City\"", ",", 
+           RowBox[{"{", 
+             
+             RowBox[{"\"Harbin\"", ",", "\"Heilongjiang\"", ",", 
+               "\"China\""}], "}"}]}], "]"}],
+       "\"Entity[\\\"City\\\", {\\\"Harbin\\\", \\\"Heilongjiang\\\", \
+\\\"China\\\"}]\"","\"city\""},
+      "Entity"], ",", 
+     RowBox[{"DateObject", "[", "date", "]"}]}], "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"date", ",", 
+     RowBox[{
+      RowBox[{"DateRange", "[", 
+       RowBox[{
+        RowBox[{"{", "2017", "}"}], ",", 
+        RowBox[{"{", "2018", "}"}]}], "]"}], "[", 
+      RowBox[{"[", 
+       RowBox[{";;", "5"}], "]"}], "]"}]}], "}"}]}], "]"}]], "Input"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   TemplateBox[{RowBox[{"\"Sun 1 Jan 2017 00:01\"", 
+       StyleBox[
+        RowBox[{"\"GMT\"", "\[InvisibleSpace]", 
+          RowBox[{"-", "8.`"}]}], FontColor -> GrayLevel[0.5]]}],
+     RowBox[{"DateObject", "[", 
+       RowBox[{
+         RowBox[{"{", 
+           RowBox[{"2017", ",", "1", ",", "1"}], "}"}], ",", 
+         RowBox[{"TimeObject", "[", 
+           RowBox[{
+             RowBox[{"{", 
+               RowBox[{"0", ",", "1"}], "}"}], ",", 
+             RowBox[{"TimeZone", "\[Rule]", 
+               RowBox[{"-", "8.`"}]}]}], "]"}], ",", 
+         RowBox[{"TimeZone", "\[Rule]", 
+           RowBox[{"-", "8.`"}]}]}], "]"}]},
+    "DateObject",
+    Editable->False], ",", 
+   TemplateBox[{RowBox[{"\"Mon 2 Jan 2017 00:02\"", 
+       StyleBox[
+        RowBox[{"\"GMT\"", "\[InvisibleSpace]", 
+          RowBox[{"-", "8.`"}]}], FontColor -> GrayLevel[0.5]]}],
+     RowBox[{"DateObject", "[", 
+       RowBox[{
+         RowBox[{"{", 
+           RowBox[{"2017", ",", "1", ",", "2"}], "}"}], ",", 
+         RowBox[{"TimeObject", "[", 
+           RowBox[{
+             RowBox[{"{", 
+               RowBox[{"0", ",", "2"}], "}"}], ",", 
+             RowBox[{"TimeZone", "\[Rule]", 
+               RowBox[{"-", "8.`"}]}]}], "]"}], ",", 
+         RowBox[{"TimeZone", "\[Rule]", 
+           RowBox[{"-", "8.`"}]}]}], "]"}]},
+    "DateObject",
+    Editable->False], ",", 
+   TemplateBox[{RowBox[{"\"Tue 3 Jan 2017 00:03\"", 
+       StyleBox[
+        RowBox[{"\"GMT\"", "\[InvisibleSpace]", 
+          RowBox[{"-", "8.`"}]}], FontColor -> GrayLevel[0.5]]}],
+     RowBox[{"DateObject", "[", 
+       RowBox[{
+         RowBox[{"{", 
+           RowBox[{"2017", ",", "1", ",", "3"}], "}"}], ",", 
+         RowBox[{"TimeObject", "[", 
+           RowBox[{
+             RowBox[{"{", 
+               RowBox[{"0", ",", "3"}], "}"}], ",", 
+             RowBox[{"TimeZone", "\[Rule]", 
+               RowBox[{"-", "8.`"}]}]}], "]"}], ",", 
+         RowBox[{"TimeZone", "\[Rule]", 
+           RowBox[{"-", "8.`"}]}]}], "]"}]},
+    "DateObject",
+    Editable->False], ",", 
+   TemplateBox[{RowBox[{"\"Wed 4 Jan 2017 00:04\"", 
+       StyleBox[
+        RowBox[{"\"GMT\"", "\[InvisibleSpace]", 
+          RowBox[{"-", "8.`"}]}], FontColor -> GrayLevel[0.5]]}],
+     RowBox[{"DateObject", "[", 
+       RowBox[{
+         RowBox[{"{", 
+           RowBox[{"2017", ",", "1", ",", "4"}], "}"}], ",", 
+         RowBox[{"TimeObject", "[", 
+           RowBox[{
+             RowBox[{"{", 
+               RowBox[{"0", ",", "4"}], "}"}], ",", 
+             RowBox[{"TimeZone", "\[Rule]", 
+               RowBox[{"-", "8.`"}]}]}], "]"}], ",", 
+         RowBox[{"TimeZone", "\[Rule]", 
+           RowBox[{"-", "8.`"}]}]}], "]"}]},
+    "DateObject",
+    Editable->False], ",", 
+   TemplateBox[{RowBox[{"\"Thu 5 Jan 2017 00:05\"", 
+       StyleBox[
+        RowBox[{"\"GMT\"", "\[InvisibleSpace]", 
+          RowBox[{"-", "8.`"}]}], FontColor -> GrayLevel[0.5]]}],
+     RowBox[{"DateObject", "[", 
+       RowBox[{
+         RowBox[{"{", 
+           RowBox[{"2017", ",", "1", ",", "5"}], "}"}], ",", 
+         RowBox[{"TimeObject", "[", 
+           RowBox[{
+             RowBox[{"{", 
+               RowBox[{"0", ",", "5"}], "}"}], ",", 
+             RowBox[{"TimeZone", "\[Rule]", 
+               RowBox[{"-", "8.`"}]}]}], "]"}], ",", 
+         RowBox[{"TimeZone", "\[Rule]", 
+           RowBox[{"-", "8.`"}]}]}], "]"}]},
+    "DateObject",
+    Editable->False]}], "}"}]], "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Table", "[", 
+  RowBox[{
+   RowBox[{"Sunset", "[", 
+    RowBox[{
+     TemplateBox[{"\"Portland\"",RowBox[{"Entity", "[", 
+         RowBox[{"\"City\"", ",", 
+           RowBox[{"{", 
+             
+             RowBox[{"\"Portland\"", ",", "\"Oregon\"", ",", 
+               "\"UnitedStates\""}], "}"}]}], "]"}],
+       "\"Entity[\\\"City\\\", {\\\"Portland\\\", \\\"Oregon\\\", \
+\\\"UnitedStates\\\"}]\"","\"city\""},
+      "Entity"], ",", 
+     RowBox[{"DateObject", "[", "date", "]"}]}], "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"date", ",", 
+     RowBox[{"DateRange", "[", 
+      RowBox[{"Today", ",", 
+       RowBox[{"Today", "+", 
+        TemplateBox[{"10","\"days\"","days","\"Days\""},
+         "Quantity"]}]}], "]"}]}], "}"}]}], "]"}]], "Input",ExpressionUUID->\
+"31c67ef7-655e-4f3e-ad98-32fdb272aa2a"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   TemplateBox[{RowBox[{
+       StyleBox[
+       "\"Minute: \"", FontColor -> GrayLevel[0.5], FontWeight -> Plain], 
+       "\"Fri 31 Mar 2017 19:39\"", 
+       StyleBox[
+        RowBox[{"\"GMT\"", "\[InvisibleSpace]", 
+          RowBox[{"-", "7.`"}]}], FontColor -> GrayLevel[0.5]]}],
+     RowBox[{"DateObject", "[", 
+       RowBox[{
+         RowBox[{"{", 
+           RowBox[{"2017", ",", "3", ",", "31", ",", "19", ",", "39"}], "}"}],
+          ",", "\"Minute\"", ",", "\"Gregorian\"", ",", 
+         RowBox[{"-", "7.`"}]}], "]"}]},
+    "DateObject",
+    Editable->False], ",", 
+   TemplateBox[{RowBox[{
+       StyleBox[
+       "\"Minute: \"", FontColor -> GrayLevel[0.5], FontWeight -> Plain], 
+       "\"Sat 1 Apr 2017 19:41\"", 
+       StyleBox[
+        RowBox[{"\"GMT\"", "\[InvisibleSpace]", 
+          RowBox[{"-", "7.`"}]}], FontColor -> GrayLevel[0.5]]}],
+     RowBox[{"DateObject", "[", 
+       RowBox[{
+         RowBox[{"{", 
+           RowBox[{"2017", ",", "4", ",", "1", ",", "19", ",", "41"}], "}"}], 
+         ",", "\"Minute\"", ",", "\"Gregorian\"", ",", 
+         RowBox[{"-", "7.`"}]}], "]"}]},
+    "DateObject",
+    Editable->False], ",", 
+   TemplateBox[{RowBox[{
+       StyleBox[
+       "\"Minute: \"", FontColor -> GrayLevel[0.5], FontWeight -> Plain], 
+       "\"Sun 2 Apr 2017 19:42\"", 
+       StyleBox[
+        RowBox[{"\"GMT\"", "\[InvisibleSpace]", 
+          RowBox[{"-", "7.`"}]}], FontColor -> GrayLevel[0.5]]}],
+     RowBox[{"DateObject", "[", 
+       RowBox[{
+         RowBox[{"{", 
+           RowBox[{"2017", ",", "4", ",", "2", ",", "19", ",", "42"}], "}"}], 
+         ",", "\"Minute\"", ",", "\"Gregorian\"", ",", 
+         RowBox[{"-", "7.`"}]}], "]"}]},
+    "DateObject",
+    Editable->False], ",", 
+   TemplateBox[{RowBox[{
+       StyleBox[
+       "\"Minute: \"", FontColor -> GrayLevel[0.5], FontWeight -> Plain], 
+       "\"Mon 3 Apr 2017 19:43\"", 
+       StyleBox[
+        RowBox[{"\"GMT\"", "\[InvisibleSpace]", 
+          RowBox[{"-", "7.`"}]}], FontColor -> GrayLevel[0.5]]}],
+     RowBox[{"DateObject", "[", 
+       RowBox[{
+         RowBox[{"{", 
+           RowBox[{"2017", ",", "4", ",", "3", ",", "19", ",", "43"}], "}"}], 
+         ",", "\"Minute\"", ",", "\"Gregorian\"", ",", 
+         RowBox[{"-", "7.`"}]}], "]"}]},
+    "DateObject",
+    Editable->False], ",", 
+   TemplateBox[{RowBox[{
+       StyleBox[
+       "\"Minute: \"", FontColor -> GrayLevel[0.5], FontWeight -> Plain], 
+       "\"Tue 4 Apr 2017 19:44\"", 
+       StyleBox[
+        RowBox[{"\"GMT\"", "\[InvisibleSpace]", 
+          RowBox[{"-", "7.`"}]}], FontColor -> GrayLevel[0.5]]}],
+     RowBox[{"DateObject", "[", 
+       RowBox[{
+         RowBox[{"{", 
+           RowBox[{"2017", ",", "4", ",", "4", ",", "19", ",", "44"}], "}"}], 
+         ",", "\"Minute\"", ",", "\"Gregorian\"", ",", 
+         RowBox[{"-", "7.`"}]}], "]"}]},
+    "DateObject",
+    Editable->False], ",", 
+   TemplateBox[{RowBox[{
+       StyleBox[
+       "\"Minute: \"", FontColor -> GrayLevel[0.5], FontWeight -> Plain], 
+       "\"Wed 5 Apr 2017 19:46\"", 
+       StyleBox[
+        RowBox[{"\"GMT\"", "\[InvisibleSpace]", 
+          RowBox[{"-", "7.`"}]}], FontColor -> GrayLevel[0.5]]}],
+     RowBox[{"DateObject", "[", 
+       RowBox[{
+         RowBox[{"{", 
+           RowBox[{"2017", ",", "4", ",", "5", ",", "19", ",", "46"}], "}"}], 
+         ",", "\"Minute\"", ",", "\"Gregorian\"", ",", 
+         RowBox[{"-", "7.`"}]}], "]"}]},
+    "DateObject",
+    Editable->False], ",", 
+   TemplateBox[{RowBox[{
+       StyleBox[
+       "\"Minute: \"", FontColor -> GrayLevel[0.5], FontWeight -> Plain], 
+       "\"Thu 6 Apr 2017 19:47\"", 
+       StyleBox[
+        RowBox[{"\"GMT\"", "\[InvisibleSpace]", 
+          RowBox[{"-", "7.`"}]}], FontColor -> GrayLevel[0.5]]}],
+     RowBox[{"DateObject", "[", 
+       RowBox[{
+         RowBox[{"{", 
+           RowBox[{"2017", ",", "4", ",", "6", ",", "19", ",", "47"}], "}"}], 
+         ",", "\"Minute\"", ",", "\"Gregorian\"", ",", 
+         RowBox[{"-", "7.`"}]}], "]"}]},
+    "DateObject",
+    Editable->False], ",", 
+   TemplateBox[{RowBox[{
+       StyleBox[
+       "\"Minute: \"", FontColor -> GrayLevel[0.5], FontWeight -> Plain], 
+       "\"Fri 7 Apr 2017 19:48\"", 
+       StyleBox[
+        RowBox[{"\"GMT\"", "\[InvisibleSpace]", 
+          RowBox[{"-", "7.`"}]}], FontColor -> GrayLevel[0.5]]}],
+     RowBox[{"DateObject", "[", 
+       RowBox[{
+         RowBox[{"{", 
+           RowBox[{"2017", ",", "4", ",", "7", ",", "19", ",", "48"}], "}"}], 
+         ",", "\"Minute\"", ",", "\"Gregorian\"", ",", 
+         RowBox[{"-", "7.`"}]}], "]"}]},
+    "DateObject",
+    Editable->False], ",", 
+   TemplateBox[{RowBox[{
+       StyleBox[
+       "\"Minute: \"", FontColor -> GrayLevel[0.5], FontWeight -> Plain], 
+       "\"Sat 8 Apr 2017 19:50\"", 
+       StyleBox[
+        RowBox[{"\"GMT\"", "\[InvisibleSpace]", 
+          RowBox[{"-", "7.`"}]}], FontColor -> GrayLevel[0.5]]}],
+     RowBox[{"DateObject", "[", 
+       RowBox[{
+         RowBox[{"{", 
+           RowBox[{"2017", ",", "4", ",", "8", ",", "19", ",", "50"}], "}"}], 
+         ",", "\"Minute\"", ",", "\"Gregorian\"", ",", 
+         RowBox[{"-", "7.`"}]}], "]"}]},
+    "DateObject",
+    Editable->False], ",", 
+   TemplateBox[{RowBox[{
+       StyleBox[
+       "\"Minute: \"", FontColor -> GrayLevel[0.5], FontWeight -> Plain], 
+       "\"Sun 9 Apr 2017 19:51\"", 
+       StyleBox[
+        RowBox[{"\"GMT\"", "\[InvisibleSpace]", 
+          RowBox[{"-", "7.`"}]}], FontColor -> GrayLevel[0.5]]}],
+     RowBox[{"DateObject", "[", 
+       RowBox[{
+         RowBox[{"{", 
+           RowBox[{"2017", ",", "4", ",", "9", ",", "19", ",", "51"}], "}"}], 
+         ",", "\"Minute\"", ",", "\"Gregorian\"", ",", 
+         RowBox[{"-", "7.`"}]}], "]"}]},
+    "DateObject",
+    Editable->False], ",", 
+   TemplateBox[{RowBox[{
+       StyleBox[
+       "\"Minute: \"", FontColor -> GrayLevel[0.5], FontWeight -> Plain], 
+       "\"Mon 10 Apr 2017 19:52\"", 
+       StyleBox[
+        RowBox[{"\"GMT\"", "\[InvisibleSpace]", 
+          RowBox[{"-", "7.`"}]}], FontColor -> GrayLevel[0.5]]}],
+     RowBox[{"DateObject", "[", 
+       RowBox[{
+         RowBox[{"{", 
+           RowBox[{"2017", ",", "4", ",", "10", ",", "19", ",", "52"}], "}"}],
+          ",", "\"Minute\"", ",", "\"Gregorian\"", ",", 
+         RowBox[{"-", "7.`"}]}], "]"}]},
+    "DateObject",
+    Editable->False]}], "}"}]], "Output",ExpressionUUID->"c7561e24-75b2-4091-\
+a93b-1699d040e178"]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{808, 751},
+WindowMargins->{{12, Automatic}, {Automatic, 24}},
+FrontEndVersion->"11.1 for Mac OS X x86 (32-bit, 64-bit Kernel) (March 13, \
+2017)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 23, 0, 92, "Title", "ExpressionUUID" -> \
+"4fd8fb58-a51e-4910-95c8-86335bc76a9c"],
+Cell[CellGroupData[{
+Cell[628, 26, 646, 20, 54, "Input", "ExpressionUUID" -> \
+"1cc12d27-ff1b-45d6-9527-b48003b7d6fc"],
+Cell[1277, 48, 3491, 92, 73, "Output", "ExpressionUUID" -> \
+"efa7a1af-996c-43a8-9e50-77db8b5f40e2"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[4805, 145, 807, 23, 42, "Input", "ExpressionUUID" -> \
+"d8f2a6a4-b9bf-4b79-9cd2-58afe3b07544"],
+Cell[5615, 170, 3488, 92, 73, "Output", "ExpressionUUID" -> \
+"6b58b4c1-019c-4ade-b60f-0dab8417792d"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[9140, 267, 835, 22, 42, "Input", "ExpressionUUID" -> \
+"31c67ef7-655e-4f3e-ad98-32fdb272aa2a"],
+Cell[9978, 291, 6483, 168, 194, "Output", "ExpressionUUID" -> \
+"c7561e24-75b2-4091-a93b-1699d040e178"]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+
