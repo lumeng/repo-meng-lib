@@ -1,0 +1,169 @@
+(Adapted from https://stats.stackexchange.com/posts/44841/.)
+
+<code>{r setup, include=FALSE} knitr::opts_chunk$set(echo = TRUE)</code>
+
+== Linear model ==
+
+<math>
+\left\{
+\begin{array}{l}
+\mathbf{y} = \mathbf{X} \mathbf{\beta} + \mathbf{\epsilon} \\
+\mathbf{\epsilon} \sim \mathcal{N}(0, \sigma^2 \mathbf{I}),
+\end{array}
+\right.
+</math>
+
+where
+
+* <math>\mathbf{y}</math> denotes the vector of responses,
+* <math>\mathbf{X}</math> is the corresponding design matrix whose columns are the values of the explanatory variables,
+* <math>\mathbf{\beta}</math> is the vector of fixed effects parameters, and
+* <math>\mathbf{\epsilon}</math> is the vector of random errors.
+
+Assuming the random error <math>\mathbf{\epsilon}</math> is small relative to <math>\mathbf{X} \mathbf{\beta}</math>, an estimate of <math>\beta</math> is (see [the wikipedia article][1])
+
+<math>
+\hat{\mathbf{\beta}} = (\mathbf{X}^{\mathrm{T}} \mathbf{X})^{-1} \mathbf{X}^{\mathrm{T}} \mathbf{y}~.
+</math>
+
+Hence <math>
+\mathop{Var}(\hat{\mathbf{\beta}}) =
+ (\mathbf{X}^{\prime} \mathbf{X})^{-1} \mathbf{X}^{\prime}
+ \;\sigma^2 \mathbf{I} \; \mathbf{X}  (\mathbf{X}^{\prime} \mathbf{X})^{-1}
+= \sigma^2  (\mathbf{X}^{\prime} \mathbf{X})^{-1},
+</math> Note
+
+* <math>\mathop{Var}(AX)=A \mathop{Var}(X) A^{\mathrm{T}}</math>, for a random vector <math>X</math> and a non-random matrix <math>A</math>,
+* <math>\mathop{Var}(\mathbf{y}) = \mathop{Var}(\mathbf{X} \beta) + \mathop{Var}(\mathbf{\epsilon}) = \mathop{Var}(\mathbf{\epsilon})</math>
+
+so that
+
+<math>
+\widehat{\mathop{Var}(\hat{\mathbf{\beta}})} = \widehat{\sigma^2}(\mathbf{X}^{\prime} \mathbf{X})^{-1},
+</math> where <math>\widehat{\sigma^2}</math> can be obtained by the Mean Square Error (MSE) in the ANOVA table for the linear model <code>m</code>. <math>\widehat{\mathop{Var}(\hat{\mathbf{\beta}})}</math> in general will be the [https://en.wikipedia.org/wiki/Covariance_matrix covariance matrix] whose diagonal elements are the variances of each of <math>\hat{\beta}_i</math>, and the off diagonal elements are the other covariances.
+
+== Generate a dataset with <math>\mathbf{\epsilon} \sim \mathcal{N}(0, 0.3)</math> ==
+
+```{r dataset} seed &lt;- 9999 #seed n &lt;- 100 #nb of observations a &lt;- 1.2 #intercept b &lt;- 2.3 #slope
+
+set.seed(seed) epsilon &lt;- rnorm(n, mean=0, sd=sqrt(0.3)) x &lt;- sample(x=c(0, 1), size=n, replace=TRUE) y &lt;- a + b * x + epsilon
+
+hist(y) ```
+
+== Compute <math>\hat{\beta}</math> and <math>\widehat{\mathop{Var}(\hat{\beta})}</math> ==
+
+=== Compute explicitly ===
+
+<code>{r DEBUG, include=FALSE} x cbind(1, x)</code>
+
+Define linear model <code>m</code> and check its ANOVA table:
+
+<pre class="{r}">m &lt;- lm(y ~ x)
+anova(m)
+anova(m)[[3]]</pre>
+Solve for <math>\hat{\beta}</math> and <math>\widehat{\mathop{Var}(\hat{\beta})}</math><ref>In R, <code>solve(m)</code> gives the inverse of a matrix <code>m</code>.
+</ref>:
+
+<pre class="{r}">X &lt;- cbind(1, x)
+
+solve(t(X) %*% X)
+
+betaHat &lt;- solve(t(X) %*% X) %*% t(X) %*% y
+varHat &lt;- anova(m)[[3]][2]
+covar_betaHat &lt;-  varHat * solve(t(X) %*% X)
+var_betaHat &lt;- diag(covar_betaHat)
+se_betaHat &lt;- sqrt(var_betaHat)
+
+betaHat
+
+var_betaHat
+
+se_betaHat</pre>
+=== Compute using <code>lm</code> built-in functions ===
+
+<pre class="{r}">m &lt;- lm(y ~ x)
+
+summary(m)</pre>
+Just print the coefficients <math>\hat{\beta}</math> and the standard error of the coefficients <math>\sqrt{\mathop{VAR}(\hat{\beta})}</math>
+
+<pre class="{r}">t(m$coef)</pre>
+or
+
+<pre class="{r}">summary(m)$coefficients[, 2]</pre>
+=== Comparison ===
+
+* <math>\hat{\beta}</math>
+
+<pre class="{r}">m$coef
+betaHat</pre>
+* <math>\widehat{\mathop{Var}(\hat{\beta})}</math>
+
+<pre class="{r}">summary(m)$coefficients[, 2]
+se_betaHat</pre>
+== Univariate linear model ==
+
+When there is a single explanatory variable, the model reduces to <math>y_i = a + bx_i + \epsilon_i, \qquad i = 1, \dotsc, n</math> and <math>\mathbf{X} = \left(
+\begin{array}{cc}
+1 & x_1 \\
+1 & x_2 \\
+\vdots & \vdots \\
+1 & x_n
+\end{array}
+\right), \qquad \mathbf{\beta} = \left(
+\begin{array}{c}
+\beta_0\\\beta_1
+\end{array}
+\right)
+</math>
+
+so that the covariance matrix is
+
+<math>
+\begin{eqnarray}
+\mathop{Cov}(\hat{\beta}) & = & \sigma^2 (\mathbf{X}^{\prime} \mathbf{X})^{-1}\\
+& = & \frac{\sigma^2}{n\sum x_i^2 - (\sum x_i)^2} 
+\left(
+\begin{array}{cc}
+\sum x_i^2 & -\sum x_i \\
+-\sum x_i  & n
+\end{array}
+\right)
+\end{eqnarray}
+</math>
+
+The standard error of the estimated slope is
+
+<math>
+SE_{\hat{\beta}_1} = \sqrt{\mathop{Cov}(\hat{\beta})_{22}} = \sqrt{\frac{n \hat{\sigma^2}}{n\sum x_i^2 - (\sum x_i)^2}}~.
+</math>
+
+The standard error of the estimated intercept is
+
+<math>
+SE_{\hat{\beta}_0} = \sqrt{\mathop{Cov}(\hat{\beta})_{11}} = \sqrt{\frac{\sum x_i^2 \hat{\sigma^2}}{n\sum x_i^2 - (\sum x_i)^2}}~.
+</math>
+
+<pre class="{r}">mse &lt;- anova(m)[[3]][2]
+se_beta1 &lt;- sqrt(n * mse / (n * sum(x^2) - sum(x)^2))
+se_beta0 &lt;- sqrt(sum(x^2) * mse / (n * sum(x^2) - sum(x)^2))
+se_beta &lt;- c(se_beta0, se_beta1)
+se_beta</pre>
+where <code>mse</code>, the Mean Squared Error<ref>In regression analysis, the term 'mean squared error' (MSE) is sometimes used to refer to the unbiased estimate of error variance: the sum of squared residuals divided by the number of degrees of freedom.
+</ref>, is taken from
+
+<pre class="{r}">anova(m)</pre>
+and used as the estimate <math>\hat{\sigma^2}</math>.
+
+With the R built-in functions, they can be read off of:
+
+<pre class="{r}">summary(m)
+se_beta_R &lt;- summary(m)$coefficients[,2]
+se_beta_R</pre>
+== References ==
+
+* http://en.wikipedia.org/wiki/Linear_regression
+* https://stats.stackexchange.com/posts/44841/
+
+== Footnotes ==
+
+<references />
