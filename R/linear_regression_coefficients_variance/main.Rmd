@@ -1,0 +1,239 @@
+---
+title: "Linear regression coefficients and their variance"
+author: "Meng Lu <lumeng.dev@gmail.com>"
+date: "7/22/2017"
+output: html_document
+---
+
+(Adapted from https://stats.stackexchange.com/posts/44841/.)
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+## Linear model
+
+$$
+\left\{
+\begin{array}{l}
+\mathbf{y} = \mathbf{X} \mathbf{\beta} + \mathbf{\epsilon} \\
+\mathbf{\epsilon} \sim \mathcal{N}(0, \sigma^2 \mathbf{I}),
+\end{array}
+\right.
+$$
+
+where
+
+* $\mathbf{y}$ denotes the vector of responses,
+* $\mathbf{X}$ is the corresponding design matrix whose columns are the values of the explanatory variables, 
+* $\mathbf{\beta}$ is the vector of fixed effects parameters, and
+* $\mathbf{\epsilon}$ is the vector of random errors.
+
+
+Assuming the random error $\mathbf{\epsilon}$ is small relative to $\mathbf{X} \mathbf{\beta}$, an estimate of $\beta$ is (see [the wikipedia article][1])
+
+$$
+\hat{\mathbf{\beta}} = (\mathbf{X}^{\mathrm{T}} \mathbf{X})^{-1} \mathbf{X}^{\mathrm{T}} \mathbf{y}~.
+$$
+
+Hence
+$$
+\mathop{Var}(\hat{\mathbf{\beta}}) =
+ (\mathbf{X}^{\prime} \mathbf{X})^{-1} \mathbf{X}^{\prime}
+ \;\sigma^2 \mathbf{I} \; \mathbf{X}  (\mathbf{X}^{\prime} \mathbf{X})^{-1}
+= \sigma^2  (\mathbf{X}^{\prime} \mathbf{X})^{-1},
+$$
+Note
+
+* $\mathop{Var}(AX)=A \mathop{Var}(X) A^{\mathrm{T}}$, for a random vector $X$ and a non-random matrix $A$,
+* $\mathop{Var}(\mathbf{y}) = \mathop{Var}(\mathbf{X} \beta) + \mathop{Var}(\mathbf{\epsilon}) = \mathop{Var}(\mathbf{\epsilon})$
+
+so that
+
+$$
+\widehat{\mathop{Var}(\hat{\mathbf{\beta}})} = \widehat{\sigma^2}(\mathbf{X}^{\prime} \mathbf{X})^{-1},
+$$
+where $\widehat{\sigma^2}$ can be obtained by the Mean Square Error (MSE) in the ANOVA table for the linear model `m`. $\widehat{\mathop{Var}(\hat{\mathbf{\beta}})}$ in general will be the [covariance matrix](
+https://en.wikipedia.org/wiki/Covariance_matrix) whose diagonal elements are the variances of each of $\hat{\beta}_i$, and the off diagonal elements are the other covariances.
+
+## Generate a dataset with $\mathbf{\epsilon} \sim \mathcal{N}(0, 0.3)$
+
+```{r dataset}
+seed <- 9999 #seed
+n <- 100     #nb of observations
+a <- 1.2       #intercept
+b <- 2.3     #slope
+
+set.seed(seed)
+epsilon <- rnorm(n, mean=0, sd=sqrt(0.3))
+x <- sample(x=c(0, 1), size=n, replace=TRUE)
+y <- a + b * x + epsilon
+
+hist(y)
+```
+
+
+## Compute $\hat{\beta}$ and $\widehat{\mathop{Var}(\hat{\beta})}$
+
+### Compute explicitly
+
+
+```{r DEBUG, include=FALSE}
+x
+cbind(1, x)
+```
+
+Define linear model `m` and check its ANOVA table:
+
+```{r}
+m <- lm(y ~ x)
+anova(m)
+anova(m)[[3]]
+```
+
+Solve for $\hat{\beta}$ and $\widehat{\mathop{Var}(\hat{\beta})}$[^matrixInverseR]:
+
+
+```{r}
+X <- cbind(1, x)
+
+solve(t(X) %*% X)
+
+betaHat <- solve(t(X) %*% X) %*% t(X) %*% y
+varHat <- anova(m)[[3]][2]
+covar_betaHat <-  varHat * solve(t(X) %*% X)
+var_betaHat <- diag(covar_betaHat)
+se_betaHat <- sqrt(var_betaHat)
+
+betaHat
+
+var_betaHat
+
+se_betaHat
+```
+
+
+### Compute using `lm` built-in functions
+
+```{r}
+m <- lm(y ~ x)
+
+summary(m)
+```
+
+Just print the coefficients $\hat{\beta}$ and the standard error of the coefficients $\sqrt{\mathop{VAR}(\hat{\beta})}$
+
+```{r}
+t(m$coef)
+```
+
+or
+
+```{r}
+summary(m)$coefficients[, 2]
+```
+
+
+### Comparison
+
+* $\hat{\beta}$
+
+```{r}
+m$coef
+betaHat
+```
+
+* $\widehat{\mathop{Var}(\hat{\beta})}$
+
+```{r}
+summary(m)$coefficients[, 2]
+se_betaHat
+```
+
+## Univariate linear model
+
+
+When there is a single explanatory variable, the model reduces to
+$$y_i = a + bx_i + \epsilon_i, \qquad i = 1, \dotsc, n$$
+and
+$$\mathbf{X} = \left(
+\begin{array}{cc}
+1 & x_1 \\
+1 & x_2 \\
+\vdots & \vdots \\
+1 & x_n
+\end{array}
+\right), \qquad \mathbf{\beta} = \left(
+\begin{array}{c}
+\beta_0\\\beta_1
+\end{array}
+\right)
+$$
+
+so that the covariance matrix is
+
+$$
+\begin{eqnarray}
+\mathop{Cov}(\hat{\beta}) & = & \sigma^2 (\mathbf{X}^{\prime} \mathbf{X})^{-1}\\
+& = & \frac{\sigma^2}{n\sum x_i^2 - (\sum x_i)^2} 
+\left(
+\begin{array}{cc}
+\sum x_i^2 & -\sum x_i \\
+-\sum x_i  & n
+\end{array}
+\right)
+\end{eqnarray}
+$$
+
+The standard error of the estimated slope is
+
+$$
+SE_{\hat{\beta}_1} = \sqrt{\mathop{Cov}(\hat{\beta})_{22}} = \sqrt{\frac{n \hat{\sigma^2}}{n\sum x_i^2 - (\sum x_i)^2}}~.
+$$
+
+The standard error of the estimated intercept is
+
+$$
+SE_{\hat{\beta}_0} = \sqrt{\mathop{Cov}(\hat{\beta})_{11}} = \sqrt{\frac{\sum x_i^2 \hat{\sigma^2}}{n\sum x_i^2 - (\sum x_i)^2}}~.
+$$
+
+
+
+```{r}
+mse <- anova(m)[[3]][2]
+se_beta1 <- sqrt(n * mse / (n * sum(x^2) - sum(x)^2))
+se_beta0 <- sqrt(sum(x^2) * mse / (n * sum(x^2) - sum(x)^2))
+se_beta <- c(se_beta0, se_beta1)
+se_beta
+```
+
+where `mse`, the Mean Squared Error[^MSE_in_regression], is taken from
+
+```{r}
+anova(m)
+```
+
+and used as the estimate $\hat{\sigma^2}$.
+
+With the R built-in functions, they can be read off of:
+
+```{r}
+summary(m)
+se_beta_R <- summary(m)$coefficients[,2]
+se_beta_R
+```
+
+
+## References
+
+* http://en.wikipedia.org/wiki/Linear_regression
+* https://stats.stackexchange.com/posts/44841/
+
+
+## Footnotes
+
+[^matrixInverseR]: In R, `solve(m)` gives the inverse of a matrix `m`.
+
+[^MSE_in_regression]: In regression analysis, the term 'mean squared error' (MSE) is sometimes used to refer to the unbiased estimate of error variance: the sum of squared residuals divided by the number of degrees of freedom.
+
