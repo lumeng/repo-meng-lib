@@ -1,11 +1,11 @@
-#!/usr/bin/env python
+#!/usr/local/bin/python3
 
 __author__ = 'meng'
 
 
-## Install
-##     $ brew install python
-##     $ pip install pandas
+# Install
+#     $ brew install python
+#     $ pip install pandas
 #
 # from nltk.corpus import gutenberg
 #
