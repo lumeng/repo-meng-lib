@@ -1,0 +1,871 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.1' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     24824,        863]
+NotebookOptionsPosition[     19110,        734]
+NotebookOutlinePosition[     19462,        750]
+CellTagsIndexPosition[     19419,        747]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["Using condition to choose down value definitions", "Title",ExpressionUUID->"b19df2c0-50d8-47f6-aa29-abc7751e993b"],
+
+Cell["\<\
+This is a pretty convoluted way to define two down values of a function head \
+myFunc such that when the argument causes some special condition to be \
+satisfied the second down value definition should be used:\
+\>", "Text",ExpressionUUID->"4595f133-e79c-4de6-9230-13cc596684ac"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"ClearAll", "[", 
+   RowBox[{
+   "myFunc", ",", "someCondition", ",", "def11", ",", "def12", ",", "def2"}], 
+   "]"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"someCondition", "[", "1", "]"}], "=", "\"\<specialValue\>\""}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    RowBox[{"someCondition", "[", "x_", "]"}], ":=", "x"}], ";"}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"myFunc", "[", "x_", "]"}], ":=", 
+   RowBox[{"With", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"xx", "=", 
+       RowBox[{"someCondition", "[", "x", "]"}]}], "}"}], ",", 
+     RowBox[{
+      RowBox[{"If", "[", 
+       RowBox[{"True", ",", 
+        RowBox[{"def11", "[", "x", "]"}], ",", 
+        RowBox[{"def12", "[", "x", "]"}]}], "]"}], "/;", 
+      RowBox[{"xx", "=!=", "\"\<specialValue\>\""}]}]}], "]"}]}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"myFunc", "[", "x_", "]"}], ":=", 
+   RowBox[{"def2", "[", "x", "]"}]}], ";"}]}], "Input",ExpressionUUID->\
+"8d503c1f-9800-40df-8702-3b94e6ee7373"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"TracePrint", "[", 
+  RowBox[{"myFunc", "[", "1", "]"}], "]"}]], "Input",ExpressionUUID->\
+"e8d425ed-297b-4316-baa9-b0940c12578c"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{" ", "\[InvisibleSpace]", 
+   TagBox[
+    RowBox[{"myFunc", "[", "1", "]"}],
+    HoldForm]}],
+  SequenceForm[
+   Indent[1], 
+   HoldForm[
+    $CellContext`myFunc[1]]],
+  Editable->False]], "Print",ExpressionUUID->"c46f5fa5-d522-49aa-abd7-\
+a43e0605d359"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"  ", "\[InvisibleSpace]", 
+   TagBox["myFunc",
+    HoldForm]}],
+  SequenceForm[
+   Indent[2], 
+   HoldForm[$CellContext`myFunc]],
+  Editable->False]], "Print",ExpressionUUID->"99ff5a2a-e360-4100-96e5-\
+c59feed800d1"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"  ", "\[InvisibleSpace]", 
+   TagBox["1",
+    HoldForm]}],
+  SequenceForm[
+   Indent[2], 
+   HoldForm[1]],
+  Editable->False]], "Print",ExpressionUUID->"5c630106-68c2-4c44-9477-\
+9ff8431341bb"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"  ", "\[InvisibleSpace]", 
+   TagBox[
+    RowBox[{"With", "[", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"xx$", "=", 
+        RowBox[{"someCondition", "[", "1", "]"}]}], "}"}], ",", 
+      RowBox[{"RuleCondition", "[", 
+       RowBox[{
+        RowBox[{"$ConditionHold", "[", 
+         RowBox[{"$ConditionHold", "[", 
+          RowBox[{"If", "[", 
+           RowBox[{"True", ",", 
+            RowBox[{"def11", "[", "1", "]"}], ",", 
+            RowBox[{"def12", "[", "1", "]"}]}], "]"}], "]"}], "]"}], ",", 
+        RowBox[{"xx$", "=!=", "\<\"specialValue\"\>"}]}], "]"}]}], "]"}],
+    HoldForm]}],
+  SequenceForm[
+   Indent[2], 
+   HoldForm[
+    With[{$CellContext`xx$ = $CellContext`someCondition[1]}, 
+     RuleCondition[
+      $ConditionHold[
+       $ConditionHold[
+        If[True, 
+         $CellContext`def11[1], 
+         $CellContext`def12[1]]]], $CellContext`xx$ =!= "specialValue"]]]],
+  Editable->False]], "Print",ExpressionUUID->"49bc13d2-6e50-44fb-954f-\
+c8e919e4109b"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"   ", "\[InvisibleSpace]", 
+   TagBox["With",
+    HoldForm]}],
+  SequenceForm[
+   Indent[3], 
+   HoldForm[With]],
+  Editable->False]], "Print",ExpressionUUID->"79d9c50b-9ca9-4251-b242-\
+8c64e9abfe51"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"   ", "\[InvisibleSpace]", 
+   TagBox[
+    RowBox[{"someCondition", "[", "1", "]"}],
+    HoldForm]}],
+  SequenceForm[
+   Indent[3], 
+   HoldForm[
+    $CellContext`someCondition[1]]],
+  Editable->False]], "Print",ExpressionUUID->"a0731c23-fd11-4519-a120-\
+40b8e6f57803"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"    ", "\[InvisibleSpace]", 
+   TagBox["someCondition",
+    HoldForm]}],
+  SequenceForm[
+   Indent[4], 
+   HoldForm[$CellContext`someCondition]],
+  Editable->False]], "Print",ExpressionUUID->"9155463e-8153-4bae-88ef-\
+93546b4849db"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"    ", "\[InvisibleSpace]", 
+   TagBox["1",
+    HoldForm]}],
+  SequenceForm[
+   Indent[4], 
+   HoldForm[1]],
+  Editable->False]], "Print",ExpressionUUID->"c064fd74-a50a-44c1-b5db-\
+da7c93f39902"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"   ", "\[InvisibleSpace]", 
+   TagBox["\<\"specialValue\"\>",
+    HoldForm]}],
+  SequenceForm[
+   Indent[3], 
+   HoldForm["specialValue"]],
+  Editable->False]], "Print",ExpressionUUID->"a2ee7104-4bb2-4161-82b5-\
+110709401212"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"  ", "\[InvisibleSpace]", 
+   TagBox[
+    RowBox[{"RuleCondition", "[", 
+     RowBox[{
+      RowBox[{"$ConditionHold", "[", 
+       RowBox[{"$ConditionHold", "[", 
+        RowBox[{"If", "[", 
+         RowBox[{"True", ",", 
+          RowBox[{"def11", "[", "1", "]"}], ",", 
+          RowBox[{"def12", "[", "1", "]"}]}], "]"}], "]"}], "]"}], ",", 
+      RowBox[{"\<\"specialValue\"\>", "=!=", "\<\"specialValue\"\>"}]}], "]"}],
+    HoldForm]}],
+  SequenceForm[
+   Indent[2], 
+   HoldForm[
+    RuleCondition[
+     $ConditionHold[
+      $ConditionHold[
+       If[True, 
+        $CellContext`def11[1], 
+        $CellContext`def12[1]]]], "specialValue" =!= "specialValue"]]],
+  Editable->False]], "Print",ExpressionUUID->"a1f46703-14f9-46a0-87d2-\
+c8777832fcfd"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"   ", "\[InvisibleSpace]", 
+   TagBox["RuleCondition",
+    HoldForm]}],
+  SequenceForm[
+   Indent[3], 
+   HoldForm[RuleCondition]],
+  Editable->False]], "Print",ExpressionUUID->"1d7540a2-a69b-4ebf-bb42-\
+596cba5e8de1"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"   ", "\[InvisibleSpace]", 
+   TagBox[
+    RowBox[{"\<\"specialValue\"\>", "=!=", "\<\"specialValue\"\>"}],
+    HoldForm]}],
+  SequenceForm[
+   Indent[3], 
+   HoldForm["specialValue" =!= "specialValue"]],
+  Editable->False]], "Print",ExpressionUUID->"fe5bea7a-07c4-4e3f-8799-\
+6adc0208337c"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"    ", "\[InvisibleSpace]", 
+   TagBox["UnsameQ",
+    HoldForm]}],
+  SequenceForm[
+   Indent[4], 
+   HoldForm[UnsameQ]],
+  Editable->False]], "Print",ExpressionUUID->"05266c63-908e-43dc-b47d-\
+10ced0901f0e"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"    ", "\[InvisibleSpace]", 
+   TagBox["\<\"specialValue\"\>",
+    HoldForm]}],
+  SequenceForm[
+   Indent[4], 
+   HoldForm["specialValue"]],
+  Editable->False]], "Print",ExpressionUUID->"60334d48-6fcd-43bf-8e4b-\
+08c29db61624"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"    ", "\[InvisibleSpace]", 
+   TagBox["\<\"specialValue\"\>",
+    HoldForm]}],
+  SequenceForm[
+   Indent[4], 
+   HoldForm["specialValue"]],
+  Editable->False]], "Print",ExpressionUUID->"4a41cf0c-2362-47bc-8a5b-\
+0ce41d6626fe"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"   ", "\[InvisibleSpace]", 
+   TagBox["False",
+    HoldForm]}],
+  SequenceForm[
+   Indent[3], 
+   HoldForm[False]],
+  Editable->False]], "Print",ExpressionUUID->"f05b0c0e-d589-4594-94bc-\
+72a9a4dd44c6"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"  ", "\[InvisibleSpace]", 
+   TagBox[
+    RowBox[{"RuleCondition", "[", 
+     RowBox[{
+      RowBox[{"$ConditionHold", "[", 
+       RowBox[{"$ConditionHold", "[", 
+        RowBox[{"If", "[", 
+         RowBox[{"True", ",", 
+          RowBox[{"def11", "[", "1", "]"}], ",", 
+          RowBox[{"def12", "[", "1", "]"}]}], "]"}], "]"}], "]"}], ",", 
+      "False"}], "]"}],
+    HoldForm]}],
+  SequenceForm[
+   Indent[2], 
+   HoldForm[
+    RuleCondition[
+     $ConditionHold[
+      $ConditionHold[
+       If[True, 
+        $CellContext`def11[1], 
+        $CellContext`def12[1]]]], False]]],
+  Editable->False]], "Print",ExpressionUUID->"83b67814-f98d-446e-b326-\
+0c3a5b0f1002"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"  ", "\[InvisibleSpace]", 
+   TagBox["Fail",
+    HoldForm]}],
+  SequenceForm[
+   Indent[2], 
+   HoldForm[Fail]],
+  Editable->False]], "Print",ExpressionUUID->"03fbc7a0-932f-4a82-beba-\
+e2c738d44e95"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{" ", "\[InvisibleSpace]", 
+   TagBox[
+    RowBox[{"def2", "[", "1", "]"}],
+    HoldForm]}],
+  SequenceForm[
+   Indent[1], 
+   HoldForm[
+    $CellContext`def2[1]]],
+  Editable->False]], "Print",ExpressionUUID->"b914170a-67be-48ae-b9ba-\
+492a08377048"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"  ", "\[InvisibleSpace]", 
+   TagBox["def2",
+    HoldForm]}],
+  SequenceForm[
+   Indent[2], 
+   HoldForm[$CellContext`def2]],
+  Editable->False]], "Print",ExpressionUUID->"33ccc325-64fa-4057-9526-\
+58c59254a47c"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"  ", "\[InvisibleSpace]", 
+   TagBox["1",
+    HoldForm]}],
+  SequenceForm[
+   Indent[2], 
+   HoldForm[1]],
+  Editable->False]], "Print",ExpressionUUID->"2691760d-f66a-4ac8-9d31-\
+7af24e47db01"]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{"def2", "[", "1", "]"}]], "Output",ExpressionUUID->"9abbf728-4144-4a14-a89a-8e7c3b8e9dd6"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"TracePrint", "[", 
+  RowBox[{"myFunc", "[", "2", "]"}], "]"}]], "Input",ExpressionUUID->\
+"342dd73e-5257-4a27-bda4-58d9e849a374"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{" ", "\[InvisibleSpace]", 
+   TagBox[
+    RowBox[{"myFunc", "[", "2", "]"}],
+    HoldForm]}],
+  SequenceForm[
+   Indent[1], 
+   HoldForm[
+    $CellContext`myFunc[2]]],
+  Editable->False]], "Print",ExpressionUUID->"5ead0879-4b8e-4257-9393-\
+4919cc337c99"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"  ", "\[InvisibleSpace]", 
+   TagBox["myFunc",
+    HoldForm]}],
+  SequenceForm[
+   Indent[2], 
+   HoldForm[$CellContext`myFunc]],
+  Editable->False]], "Print",ExpressionUUID->"62a2320e-172f-499e-979c-\
+31cd62b66fb9"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"  ", "\[InvisibleSpace]", 
+   TagBox["2",
+    HoldForm]}],
+  SequenceForm[
+   Indent[2], 
+   HoldForm[2]],
+  Editable->False]], "Print",ExpressionUUID->"307465d1-dc99-42f2-bdac-\
+d2abd7477250"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"  ", "\[InvisibleSpace]", 
+   TagBox[
+    RowBox[{"With", "[", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"xx$", "=", 
+        RowBox[{"someCondition", "[", "2", "]"}]}], "}"}], ",", 
+      RowBox[{"RuleCondition", "[", 
+       RowBox[{
+        RowBox[{"$ConditionHold", "[", 
+         RowBox[{"$ConditionHold", "[", 
+          RowBox[{"If", "[", 
+           RowBox[{"True", ",", 
+            RowBox[{"def11", "[", "2", "]"}], ",", 
+            RowBox[{"def12", "[", "2", "]"}]}], "]"}], "]"}], "]"}], ",", 
+        RowBox[{"xx$", "=!=", "\<\"specialValue\"\>"}]}], "]"}]}], "]"}],
+    HoldForm]}],
+  SequenceForm[
+   Indent[2], 
+   HoldForm[
+    With[{$CellContext`xx$ = $CellContext`someCondition[2]}, 
+     RuleCondition[
+      $ConditionHold[
+       $ConditionHold[
+        If[True, 
+         $CellContext`def11[2], 
+         $CellContext`def12[2]]]], $CellContext`xx$ =!= "specialValue"]]]],
+  Editable->False]], "Print",ExpressionUUID->"a89d7e15-20e2-4003-8da7-\
+e47c18a657c0"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"   ", "\[InvisibleSpace]", 
+   TagBox["With",
+    HoldForm]}],
+  SequenceForm[
+   Indent[3], 
+   HoldForm[With]],
+  Editable->False]], "Print",ExpressionUUID->"6772a767-30df-49b8-af76-\
+823579f7a56f"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"   ", "\[InvisibleSpace]", 
+   TagBox[
+    RowBox[{"someCondition", "[", "2", "]"}],
+    HoldForm]}],
+  SequenceForm[
+   Indent[3], 
+   HoldForm[
+    $CellContext`someCondition[2]]],
+  Editable->False]], "Print",ExpressionUUID->"32dae106-10e9-4bd5-ba5c-\
+bde4c7ebfc76"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"    ", "\[InvisibleSpace]", 
+   TagBox["someCondition",
+    HoldForm]}],
+  SequenceForm[
+   Indent[4], 
+   HoldForm[$CellContext`someCondition]],
+  Editable->False]], "Print",ExpressionUUID->"f07eb36c-0ef9-41df-a4bb-\
+f61125200440"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"    ", "\[InvisibleSpace]", 
+   TagBox["2",
+    HoldForm]}],
+  SequenceForm[
+   Indent[4], 
+   HoldForm[2]],
+  Editable->False]], "Print",ExpressionUUID->"387ca082-beba-4f2e-8afe-\
+e588107d121a"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"   ", "\[InvisibleSpace]", 
+   TagBox["2",
+    HoldForm]}],
+  SequenceForm[
+   Indent[3], 
+   HoldForm[2]],
+  Editable->False]], "Print",ExpressionUUID->"8fc5f1db-98c9-46cf-a4cd-\
+abc12b3dc8ed"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"  ", "\[InvisibleSpace]", 
+   TagBox[
+    RowBox[{"RuleCondition", "[", 
+     RowBox[{
+      RowBox[{"$ConditionHold", "[", 
+       RowBox[{"$ConditionHold", "[", 
+        RowBox[{"If", "[", 
+         RowBox[{"True", ",", 
+          RowBox[{"def11", "[", "2", "]"}], ",", 
+          RowBox[{"def12", "[", "2", "]"}]}], "]"}], "]"}], "]"}], ",", 
+      RowBox[{"2", "=!=", "\<\"specialValue\"\>"}]}], "]"}],
+    HoldForm]}],
+  SequenceForm[
+   Indent[2], 
+   HoldForm[
+    RuleCondition[
+     $ConditionHold[
+      $ConditionHold[
+       If[True, 
+        $CellContext`def11[2], 
+        $CellContext`def12[2]]]], 2 =!= "specialValue"]]],
+  Editable->False]], "Print",ExpressionUUID->"5ccca277-5e33-41e1-900c-\
+8dbb5e3a7b2c"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"   ", "\[InvisibleSpace]", 
+   TagBox["RuleCondition",
+    HoldForm]}],
+  SequenceForm[
+   Indent[3], 
+   HoldForm[RuleCondition]],
+  Editable->False]], "Print",ExpressionUUID->"a3047c08-0708-4192-9f9b-\
+eb8c37e9a139"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"   ", "\[InvisibleSpace]", 
+   TagBox[
+    RowBox[{"2", "=!=", "\<\"specialValue\"\>"}],
+    HoldForm]}],
+  SequenceForm[
+   Indent[3], 
+   HoldForm[2 =!= "specialValue"]],
+  Editable->False]], "Print",ExpressionUUID->"e8c7621c-5280-4ffa-95aa-\
+58540e3672ba"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"    ", "\[InvisibleSpace]", 
+   TagBox["UnsameQ",
+    HoldForm]}],
+  SequenceForm[
+   Indent[4], 
+   HoldForm[UnsameQ]],
+  Editable->False]], "Print",ExpressionUUID->"b0280517-8599-4343-ab0c-\
+feb6facb50fd"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"    ", "\[InvisibleSpace]", 
+   TagBox["2",
+    HoldForm]}],
+  SequenceForm[
+   Indent[4], 
+   HoldForm[2]],
+  Editable->False]], "Print",ExpressionUUID->"8287e55c-7ade-410c-bbce-\
+c738a4b3bde8"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"    ", "\[InvisibleSpace]", 
+   TagBox["\<\"specialValue\"\>",
+    HoldForm]}],
+  SequenceForm[
+   Indent[4], 
+   HoldForm["specialValue"]],
+  Editable->False]], "Print",ExpressionUUID->"8f8fdbc6-cf76-4016-ba33-\
+98d54eb68d27"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"   ", "\[InvisibleSpace]", 
+   TagBox["True",
+    HoldForm]}],
+  SequenceForm[
+   Indent[3], 
+   HoldForm[True]],
+  Editable->False]], "Print",ExpressionUUID->"b1b6def9-1b5a-4e9d-bff1-\
+21d253aa349b"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"  ", "\[InvisibleSpace]", 
+   TagBox[
+    RowBox[{"RuleCondition", "[", 
+     RowBox[{
+      RowBox[{"$ConditionHold", "[", 
+       RowBox[{"$ConditionHold", "[", 
+        RowBox[{"If", "[", 
+         RowBox[{"True", ",", 
+          RowBox[{"def11", "[", "2", "]"}], ",", 
+          RowBox[{"def12", "[", "2", "]"}]}], "]"}], "]"}], "]"}], ",", 
+      "True"}], "]"}],
+    HoldForm]}],
+  SequenceForm[
+   Indent[2], 
+   HoldForm[
+    RuleCondition[
+     $ConditionHold[
+      $ConditionHold[
+       If[True, 
+        $CellContext`def11[2], 
+        $CellContext`def12[2]]]], True]]],
+  Editable->False]], "Print",ExpressionUUID->"85b98642-44f5-4ada-818d-\
+a8b441181802"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"  ", "\[InvisibleSpace]", 
+   TagBox[
+    RowBox[{"$ConditionHold", "[", 
+     RowBox[{"$ConditionHold", "[", 
+      RowBox[{"If", "[", 
+       RowBox[{"True", ",", 
+        RowBox[{"def11", "[", "2", "]"}], ",", 
+        RowBox[{"def12", "[", "2", "]"}]}], "]"}], "]"}], "]"}],
+    HoldForm]}],
+  SequenceForm[
+   Indent[2], 
+   HoldForm[
+    $ConditionHold[
+     $ConditionHold[
+      If[True, 
+       $CellContext`def11[2], 
+       $CellContext`def12[2]]]]]],
+  Editable->False]], "Print",ExpressionUUID->"516bdc21-b66a-48c4-9234-\
+d9da7606df64"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"   ", "\[InvisibleSpace]", 
+   TagBox["$ConditionHold",
+    HoldForm]}],
+  SequenceForm[
+   Indent[3], 
+   HoldForm[$ConditionHold]],
+  Editable->False]], "Print",ExpressionUUID->"e6bc3112-ab01-4391-8df1-\
+cd24666b5568"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{" ", "\[InvisibleSpace]", 
+   TagBox[
+    RowBox[{"If", "[", 
+     RowBox[{"True", ",", 
+      RowBox[{"def11", "[", "2", "]"}], ",", 
+      RowBox[{"def12", "[", "2", "]"}]}], "]"}],
+    HoldForm]}],
+  SequenceForm[
+   Indent[1], 
+   HoldForm[
+    If[True, 
+     $CellContext`def11[2], 
+     $CellContext`def12[2]]]],
+  Editable->False]], "Print",ExpressionUUID->"ddf6c110-5729-4949-8572-\
+4f08c836ab7f"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"  ", "\[InvisibleSpace]", 
+   TagBox["If",
+    HoldForm]}],
+  SequenceForm[
+   Indent[2], 
+   HoldForm[If]],
+  Editable->False]], "Print",ExpressionUUID->"872a8ea0-ae3f-4f0c-8ceb-\
+3294cafe8719"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"  ", "\[InvisibleSpace]", 
+   TagBox["True",
+    HoldForm]}],
+  SequenceForm[
+   Indent[2], 
+   HoldForm[True]],
+  Editable->False]], "Print",ExpressionUUID->"55f20413-28cf-4253-adab-\
+bbec5e622b81"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{" ", "\[InvisibleSpace]", 
+   TagBox[
+    RowBox[{"def11", "[", "2", "]"}],
+    HoldForm]}],
+  SequenceForm[
+   Indent[1], 
+   HoldForm[
+    $CellContext`def11[2]]],
+  Editable->False]], "Print",ExpressionUUID->"e70c2f55-6e12-4041-8c96-\
+ca4d5d4cf24e"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"  ", "\[InvisibleSpace]", 
+   TagBox["def11",
+    HoldForm]}],
+  SequenceForm[
+   Indent[2], 
+   HoldForm[$CellContext`def11]],
+  Editable->False]], "Print",ExpressionUUID->"49980dc1-f3d1-4aa6-9e95-\
+7292d9190e99"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"  ", "\[InvisibleSpace]", 
+   TagBox["2",
+    HoldForm]}],
+  SequenceForm[
+   Indent[2], 
+   HoldForm[2]],
+  Editable->False]], "Print",ExpressionUUID->"7337bf6b-233b-4556-a021-\
+5b9f37959db5"]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{"def11", "[", "2", "]"}]], "Output",ExpressionUUID->"daffcae7-e3a3-43bd-96c6-489273dc5338"]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{1440, 855},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+FrontEndVersion->"11.1 for Mac OS X x86 (32-bit, 64-bit Kernel) (June 2, \
+2017)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 120, 0, 92, "Title", "ExpressionUUID" -> \
+"b19df2c0-50d8-47f6-aa29-abc7751e993b"],
+Cell[703, 24, 289, 4, 30, "Text", "ExpressionUUID" -> \
+"4595f133-e79c-4de6-9230-13cc596684ac"],
+Cell[995, 30, 1116, 33, 138, "Input", "ExpressionUUID" -> \
+"8d503c1f-9800-40df-8702-3b94e6ee7373"],
+Cell[CellGroupData[{
+Cell[2136, 67, 153, 3, 32, "Input", "ExpressionUUID" -> \
+"e8d425ed-297b-4316-baa9-b0940c12578c"],
+Cell[CellGroupData[{
+Cell[2314, 74, 298, 11, 24, "Print", "ExpressionUUID" -> \
+"c46f5fa5-d522-49aa-abd7-a43e0605d359"],
+Cell[2615, 87, 261, 9, 24, "Print", "ExpressionUUID" -> \
+"99ff5a2a-e360-4100-96e5-c59feed800d1"],
+Cell[2879, 98, 238, 9, 24, "Print", "ExpressionUUID" -> \
+"5c630106-68c2-4c44-9477-9ff8431341bb"],
+Cell[3120, 109, 1035, 30, 24, "Print", "ExpressionUUID" -> \
+"49bc13d2-6e50-44fb-954f-c8e919e4109b"],
+Cell[4158, 141, 245, 9, 24, "Print", "ExpressionUUID" -> \
+"79d9c50b-9ca9-4251-b242-8c64e9abfe51"],
+Cell[4406, 152, 314, 11, 24, "Print", "ExpressionUUID" -> \
+"a0731c23-fd11-4519-a120-40b8e6f57803"],
+Cell[4723, 165, 277, 9, 24, "Print", "ExpressionUUID" -> \
+"9155463e-8153-4bae-88ef-93546b4849db"],
+Cell[5003, 176, 240, 9, 24, "Print", "ExpressionUUID" -> \
+"c064fd74-a50a-44c1-b5db-da7c93f39902"],
+Cell[5246, 187, 271, 9, 24, "Print", "ExpressionUUID" -> \
+"a2ee7104-4bb2-4161-82b5-110709401212"],
+Cell[5520, 198, 801, 24, 24, "Print", "ExpressionUUID" -> \
+"a1f46703-14f9-46a0-87d2-c8777832fcfd"],
+Cell[6324, 224, 263, 9, 24, "Print", "ExpressionUUID" -> \
+"1d7540a2-a69b-4ebf-bb42-596cba5e8de1"],
+Cell[6590, 235, 336, 10, 24, "Print", "ExpressionUUID" -> \
+"fe5bea7a-07c4-4e3f-8799-6adc0208337c"],
+Cell[6929, 247, 252, 9, 24, "Print", "ExpressionUUID" -> \
+"05266c63-908e-43dc-b47d-10ced0901f0e"],
+Cell[7184, 258, 272, 9, 24, "Print", "ExpressionUUID" -> \
+"60334d48-6fcd-43bf-8e4b-08c29db61624"],
+Cell[7459, 269, 272, 9, 24, "Print", "ExpressionUUID" -> \
+"4a41cf0c-2362-47bc-8a5b-0ce41d6626fe"],
+Cell[7734, 280, 247, 9, 24, "Print", "ExpressionUUID" -> \
+"f05b0c0e-d589-4594-94bc-72a9a4dd44c6"],
+Cell[7984, 291, 717, 24, 24, "Print", "ExpressionUUID" -> \
+"83b67814-f98d-446e-b326-0c3a5b0f1002"],
+Cell[8704, 317, 244, 9, 24, "Print", "ExpressionUUID" -> \
+"03fbc7a0-932f-4a82-beba-e2c738d44e95"],
+Cell[8951, 328, 294, 11, 24, "Print", "ExpressionUUID" -> \
+"b914170a-67be-48ae-b9ba-492a08377048"],
+Cell[9248, 341, 257, 9, 24, "Print", "ExpressionUUID" -> \
+"33ccc325-64fa-4057-9526-58c59254a47c"],
+Cell[9508, 352, 238, 9, 24, "Print", "ExpressionUUID" -> \
+"2691760d-f66a-4ac8-9d31-7af24e47db01"]
+}, Open  ]],
+Cell[9761, 364, 113, 1, 32, "Output", "ExpressionUUID" -> \
+"9abbf728-4144-4a14-a89a-8e7c3b8e9dd6"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[9911, 370, 153, 3, 32, "Input", "ExpressionUUID" -> \
+"342dd73e-5257-4a27-bda4-58d9e849a374"],
+Cell[CellGroupData[{
+Cell[10089, 377, 298, 11, 24, "Print", "ExpressionUUID" -> \
+"5ead0879-4b8e-4257-9393-4919cc337c99"],
+Cell[10390, 390, 261, 9, 24, "Print", "ExpressionUUID" -> \
+"62a2320e-172f-499e-979c-31cd62b66fb9"],
+Cell[10654, 401, 238, 9, 24, "Print", "ExpressionUUID" -> \
+"307465d1-dc99-42f2-bdac-d2abd7477250"],
+Cell[10895, 412, 1035, 30, 24, "Print", "ExpressionUUID" -> \
+"a89d7e15-20e2-4003-8da7-e47c18a657c0"],
+Cell[11933, 444, 245, 9, 24, "Print", "ExpressionUUID" -> \
+"6772a767-30df-49b8-af76-823579f7a56f"],
+Cell[12181, 455, 314, 11, 24, "Print", "ExpressionUUID" -> \
+"32dae106-10e9-4bd5-ba5c-bde4c7ebfc76"],
+Cell[12498, 468, 277, 9, 24, "Print", "ExpressionUUID" -> \
+"f07eb36c-0ef9-41df-a4bb-f61125200440"],
+Cell[12778, 479, 240, 9, 24, "Print", "ExpressionUUID" -> \
+"387ca082-beba-4f2e-8afe-e588107d121a"],
+Cell[13021, 490, 239, 9, 24, "Print", "ExpressionUUID" -> \
+"8fc5f1db-98c9-46cf-a4cd-abc12b3dc8ed"],
+Cell[13263, 501, 769, 24, 24, "Print", "ExpressionUUID" -> \
+"5ccca277-5e33-41e1-900c-8dbb5e3a7b2c"],
+Cell[14035, 527, 263, 9, 24, "Print", "ExpressionUUID" -> \
+"a3047c08-0708-4192-9f9b-eb8c37e9a139"],
+Cell[14301, 538, 304, 10, 24, "Print", "ExpressionUUID" -> \
+"e8c7621c-5280-4ffa-95aa-58540e3672ba"],
+Cell[14608, 550, 252, 9, 24, "Print", "ExpressionUUID" -> \
+"b0280517-8599-4343-ab0c-feb6facb50fd"],
+Cell[14863, 561, 240, 9, 24, "Print", "ExpressionUUID" -> \
+"8287e55c-7ade-410c-bbce-c738a4b3bde8"],
+Cell[15106, 572, 272, 9, 24, "Print", "ExpressionUUID" -> \
+"8f8fdbc6-cf76-4016-ba33-98d54eb68d27"],
+Cell[15381, 583, 245, 9, 24, "Print", "ExpressionUUID" -> \
+"b1b6def9-1b5a-4e9d-bff1-21d253aa349b"],
+Cell[15629, 594, 715, 24, 24, "Print", "ExpressionUUID" -> \
+"85b98642-44f5-4ada-818d-a8b441181802"],
+Cell[16347, 620, 594, 20, 24, "Print", "ExpressionUUID" -> \
+"516bdc21-b66a-48c4-9234-d9da7606df64"],
+Cell[16944, 642, 265, 9, 24, "Print", "ExpressionUUID" -> \
+"e6bc3112-ab01-4391-8df1-cd24666b5568"],
+Cell[17212, 653, 449, 16, 24, "Print", "ExpressionUUID" -> \
+"ddf6c110-5729-4949-8572-4f08c836ab7f"],
+Cell[17664, 671, 240, 9, 24, "Print", "ExpressionUUID" -> \
+"872a8ea0-ae3f-4f0c-8ceb-3294cafe8719"],
+Cell[17907, 682, 244, 9, 24, "Print", "ExpressionUUID" -> \
+"55f20413-28cf-4253-adab-bbec5e622b81"],
+Cell[18154, 693, 296, 11, 24, "Print", "ExpressionUUID" -> \
+"e70c2f55-6e12-4041-8c96-ca4d5d4cf24e"],
+Cell[18453, 706, 259, 9, 24, "Print", "ExpressionUUID" -> \
+"49980dc1-f3d1-4aa6-9e95-7292d9190e99"],
+Cell[18715, 717, 238, 9, 24, "Print", "ExpressionUUID" -> \
+"7337bf6b-233b-4556-a021-5b9f37959db5"]
+}, Open  ]],
+Cell[18968, 729, 114, 1, 32, "Output", "ExpressionUUID" -> \
+"daffcae7-e3a3-43bd-96c6-489273dc5338"]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+

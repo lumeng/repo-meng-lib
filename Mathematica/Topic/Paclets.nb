@@ -1,0 +1,376 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.1' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     15201,        368]
+NotebookOptionsPosition[     11215,        304]
+NotebookOutlinePosition[     11551,        319]
+CellTagsIndexPosition[     11508,        316]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["Paclets", "Title",
+ CellChangeTimes->{{3.7887140203264914`*^9, 
+  3.788714021821691*^9}},ExpressionUUID->"2b654a6d-7d30-40ae-8172-\
+eb2eee32c0c0"],
+
+Cell[CellGroupData[{
+
+Cell["Finding largest paclet directories", "Subsection",
+ CellChangeTimes->{{3.788883834287594*^9, 
+  3.788883851669526*^9}},ExpressionUUID->"fc817efe-a1dd-4334-a099-\
+c5a7e551ad54"],
+
+Cell[BoxData[
+ RowBox[{"Needs", "[", "\"\<PacletManager`\>\"", "]"}]], "Input",
+ CellLabel->"In[1]:=",ExpressionUUID->"327ecf13-612b-4840-9526-d2a8b2686d23"],
+
+Cell[BoxData[
+ RowBox[{"With", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"dir", "=", 
+     RowBox[{"FileNameJoin", "[", 
+      RowBox[{"{", 
+       RowBox[{
+       "$UserBaseDirectory", ",", "\"\<Paclets\>\"", ",", 
+        "\"\<Repository\>\""}], "}"}], "]"}]}], "}"}], ",", 
+   "\[IndentingNewLine]", 
+   RowBox[{"If", "[", 
+    RowBox[{
+     RowBox[{"DirectoryQ", "[", "dir", "]"}], ",", 
+     RowBox[{"SystemOpen", "[", "dir", "]"}]}], "]"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.788712665947958*^9, 3.788712666211873*^9}, {
+   3.788713030839765*^9, 3.78871305782792*^9}, 3.78871320850357*^9},
+ EmphasizeSyntaxErrors->
+  True,ExpressionUUID->"f3fcbba4-2a2f-49f5-b07f-836fec64ff72"],
+
+Cell[BoxData[
+ RowBox[{"PacletFind", "[", "\"\<*\>\"", "]"}]], "Input",
+ CellChangeTimes->{{3.788714025982623*^9, 3.788714025984681*^9}},
+ CellLabel->"In[20]:=",ExpressionUUID->"95fd3be8-ddb4-4079-a43d-52f1c77bb7a0"],
+
+Cell["\<\
+Finding all paclet directories in the personal Repository directory:\
+\>", "Item",
+ CellChangeTimes->{{3.788883279360927*^9, 
+  3.788883299882769*^9}},ExpressionUUID->"e0c056b5-a0d3-4ec3-9172-\
+f921b03a64d1"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"paclets", "=", 
+   RowBox[{"FileNames", "[", 
+    RowBox[{"\"\<*\>\"", ",", 
+     RowBox[{"FileNameJoin", "[", 
+      RowBox[{"{", 
+       RowBox[{"$UserBasePacletsDirectory", ",", "\"\<Repository\>\""}], 
+       "}"}], "]"}]}], "]"}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.788714048379057*^9, 3.7887140812519293`*^9}},
+ CellLabel->"In[3]:=",ExpressionUUID->"27bb5db1-d201-42ea-97d2-403f74432c1b"],
+
+Cell["\<\
+List paclets in my personal repository directory by descending size:\
+\>", "Item",
+ CellChangeTimes->{{3.7887140961068687`*^9, 
+  3.788714118170615*^9}},ExpressionUUID->"c18209e3-a7d2-4526-b1a9-\
+9622456bced0"],
+
+Cell[BoxData[
+ RowBox[{"ds", "=", 
+  RowBox[{
+   RowBox[{"AssociationMap", "[", 
+    RowBox[{
+     RowBox[{"ResourceFunction", "[", "\"\<DirectorySize\>\"", "]"}], ",", 
+     "paclets"}], "]"}], "//", "Dataset"}]}]], "Input",
+ CellChangeTimes->{
+  3.788714088147628*^9, {3.788714484210181*^9, 3.78871448573956*^9}, 
+   3.7887146090268908`*^9},
+ CellLabel->"In[4]:=",ExpressionUUID->"51c6aa39-27de-498c-a304-4446ca084a56"],
+
+Cell[BoxData[
+ RowBox[{"ds", "[", "ReverseSort", "]"}]], "Input",
+ CellLabel->"In[5]:=",ExpressionUUID->"58929069-b144-4f3c-b7db-dd5f3dd12802"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["GraphData", "Subsection",
+ CellChangeTimes->{{3.788713372298441*^9, 
+  3.788713373287775*^9}},ExpressionUUID->"028ce543-8165-4bb9-91f3-\
+b0f8755eff18"],
+
+Cell[BoxData[
+ RowBox[{"PacletInformation", "[", "\"\<GraphData\>\"", "]"}]], "Input",
+ CellChangeTimes->{{3.788713218574787*^9, 3.78871322368538*^9}},
+ CellLabel->"In[11]:=",ExpressionUUID->"c2712303-9641-42eb-a680-e666ff31cb17"],
+
+Cell[BoxData[
+ RowBox[{"PacletUninstall", "[", "\"\<GraphData\>\"", "]"}]], "Input",
+ CellChangeTimes->{{3.788712496366542*^9, 3.788712510027656*^9}, {
+  3.788712681323616*^9, 3.788712688969502*^9}, {3.788712796393385*^9, 
+  3.788712797721024*^9}},
+ CellLabel->"In[14]:=",ExpressionUUID->"46d8355e-ef03-4a7c-b1f1-e2e292d8e5d8"],
+
+Cell[BoxData[
+ RowBox[{"PacletFind", "[", "\"\<GraphData*\>\"", "]"}]], "Input",
+ CellChangeTimes->{{3.788713218574787*^9, 3.78871322368538*^9}, {
+  3.7887188106958227`*^9, 3.788718815299601*^9}},
+ CellLabel->"In[15]:=",ExpressionUUID->"24f83fcf-9265-43cc-b076-efa47575b07f"],
+
+Cell[BoxData[
+ RowBox[{"PacletUninstall", "/@", "%"}]], "Input",
+ CellChangeTimes->{{3.788718828154125*^9, 3.78871883193505*^9}},
+ CellLabel->"In[16]:=",ExpressionUUID->"f834fa74-65bb-4fbb-aedd-014fef6cb1ca"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"PacletUpdate", "[", 
+    RowBox[{"#1", ",", 
+     RowBox[{
+     "\"\<Site\>\"", "\[Rule]", 
+      "\"\<http://paclet.wolfram.com:8080/PacletServer\>\""}]}], "]"}], "&"}],
+   "/@", 
+  RowBox[{"{", "\"\<GraphData\>\"", "}"}]}]], "Input",
+ CellChangeTimes->{{3.7887138198549633`*^9, 3.788713844445568*^9}},
+ CellLabel->"In[17]:=",ExpressionUUID->"414a968c-2562-4cc1-95c4-128633c454b6"],
+
+Cell[BoxData[
+ RowBox[{"PacletInstall", "[", "\"\<GraphData\>\"", "]"}]], "Input",
+ CellChangeTimes->{{3.788718889045862*^9, 3.788718891084424*^9}, {
+  3.7887190598908443`*^9, 3.788719060535429*^9}},
+ CellLabel->"In[20]:=",ExpressionUUID->"9e997015-1c8a-4c8c-a1dc-73c2db304ae5"],
+
+Cell[BoxData[
+ RowBox[{"PacletInformation", "[", "\"\<GraphData\>\"", "]"}]], "Input",
+ CellLabel->"In[21]:=",ExpressionUUID->"9b8a13e9-a93b-4f6f-b84d-637536ab0845"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["AstronomicalData", "Subsection",
+ CellChangeTimes->{{3.788713377831902*^9, 
+  3.788713379599472*^9}},ExpressionUUID->"3f51a45f-3c12-46ab-9981-\
+4d2d09cf4902"],
+
+Cell[BoxData[
+ RowBox[{"PacletInformation", "[", "AstronomicalData", "]"}]], "Input",
+ CellChangeTimes->{{3.788713231132374*^9, 3.788713236856647*^9}},
+ CellLabel->"In[7]:=",ExpressionUUID->"6e55735e-67aa-4a40-adaf-ce5b36b74e7b"],
+
+Cell[BoxData[
+ RowBox[{"PacletUninstall", "/@", 
+  RowBox[{"PacletFind", "[", "\"\<AstronomicalData*\>\"", "]"}]}]], "Input",
+ CellChangeTimes->{{3.788712523591181*^9, 3.7887125267545147`*^9}, {
+  3.788712967702199*^9, 3.788712993598331*^9}, {3.788883369132402*^9, 
+  3.788883380408741*^9}, {3.7888835867861023`*^9, 
+  3.788883597873385*^9}},ExpressionUUID->"036404b5-5fa7-4350-8872-\
+333e229baced"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["CalculateFiles", "Subsection",
+ CellChangeTimes->{{3.788713377831902*^9, 3.788713379599472*^9}, {
+  3.788883394969026*^9, 3.788883396248476*^9}, {3.78888355026969*^9, 
+  3.788883551997553*^9}},ExpressionUUID->"2c8bbd0e-8115-41ca-b740-\
+37834e29cb5f"],
+
+Cell[BoxData[
+ RowBox[{"PacletInformation", "[", "\"\<WolframAlpha\>\"", "]"}]], "Input",
+ CellChangeTimes->{{3.788713231132374*^9, 3.788713236856647*^9}, {
+  3.7888835335453053`*^9, 3.788883561875209*^9}},
+ CellLabel->"In[12]:=",ExpressionUUID->"233620e6-97dc-4ac4-b8f4-36ea39ba2d5b"],
+
+Cell[BoxData[
+ RowBox[{"PacletUninstall", "/@", 
+  RowBox[{"PacletFind", "[", "\"\<CalculateFiles*\>\"", "]"}]}]], "Input",
+ CellChangeTimes->{{3.788712523591181*^9, 3.7887125267545147`*^9}, {
+  3.788712967702199*^9, 3.788712993598331*^9}, {3.788883369132402*^9, 
+  3.788883380408741*^9}, {3.7888835415757647`*^9, 3.788883568604082*^9}},
+ CellLabel->"In[13]:=",ExpressionUUID->"87e7ec5b-15ec-4848-a566-da64ea655075"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["CountryData", "Subsection",
+ CellChangeTimes->{{3.788713377831902*^9, 3.788713379599472*^9}, {
+  3.788883394969026*^9, 
+  3.788883396248476*^9}},ExpressionUUID->"04b99a26-42ca-42a6-9d22-\
+c6bdefc74ef5"],
+
+Cell[BoxData[
+ RowBox[{"PacletInformation", "[", "\"\<CountryData\>\"", "]"}]], "Input",
+ CellChangeTimes->{{3.788713231132374*^9, 3.788713236856647*^9}, {
+  3.7888835335453053`*^9, 3.788883537805806*^9}},
+ CellLabel->"In[9]:=",ExpressionUUID->"f485bea6-4bb9-4ff9-ab6f-4257ae5c26d0"],
+
+Cell[BoxData[
+ RowBox[{"PacletUninstall", "/@", 
+  RowBox[{"PacletFind", "[", "\"\<CountryData*\>\"", "]"}]}]], "Input",
+ CellChangeTimes->{{3.788712523591181*^9, 3.7887125267545147`*^9}, {
+   3.788712967702199*^9, 3.788712993598331*^9}, {3.788883369132402*^9, 
+   3.788883380408741*^9}, 3.7888835415757647`*^9},
+ CellLabel->"In[10]:=",ExpressionUUID->"f7acaca6-97d0-47d0-95aa-5d3275e873af"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["GitLink", "Subsection",
+ CellChangeTimes->{{3.788713384806746*^9, 
+  3.7887133858111687`*^9}},ExpressionUUID->"e74c9569-c1ca-4622-a9fc-\
+3427cd7f93cc"],
+
+Cell[BoxData[
+ RowBox[{"PacletInformation", "[", "\"\<GitLink\>\"", "]"}]], "Input",
+ CellChangeTimes->{{3.7887133882353077`*^9, 3.788713395590206*^9}},
+ CellLabel->"In[10]:=",ExpressionUUID->"1c8bd010-5a38-402e-9a9d-eceffa55222b"],
+
+Cell[BoxData[
+ RowBox[{"PacletUpdate", "[", "\"\<GitLink\>\"", "]"}]], "Input",
+ CellChangeTimes->{{3.78871340507866*^9, 3.788713407965453*^9}},
+ CellLabel->"In[11]:=",ExpressionUUID->"a1acf390-8c3a-4ac3-b4c1-ce9308fa77a6"],
+
+Cell[BoxData[
+ RowBox[{"PacletUninstall", "[", "\"\<GitLink\>\"", "]"}]], "Input",
+ CellChangeTimes->{{3.788713417566824*^9, 3.788713418357283*^9}},
+ CellLabel->"In[12]:=",ExpressionUUID->"5a2de578-a28f-434d-9c4c-21462bda958b"],
+
+Cell[BoxData[
+ RowBox[{"PacletInformation", "[", "\"\<GitLink\>\"", "]"}]], "Input",
+ CellLabel->"In[13]:=",ExpressionUUID->"308cc696-963f-4694-9468-ab4f3c0f918a"],
+
+Cell[BoxData[
+ RowBox[{"PacletInstall", "[", "\"\<GitLink\>\"", "]"}]], "Input",
+ CellChangeTimes->{{3.7887134332457027`*^9, 3.788713433973175*^9}},
+ CellLabel->"In[14]:=",ExpressionUUID->"8f9bb756-1977-4ad2-897d-c24f6297cf45"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"PacletUpdate", "[", 
+    RowBox[{"#1", ",", 
+     RowBox[{
+     "\"\<Site\>\"", "\[Rule]", 
+      "\"\<http://paclet-int.wolfram.com:8080/PacletServerInternal\>\""}]}], 
+    "]"}], "&"}], "/@", 
+  RowBox[{"{", 
+   RowBox[{"\"\<GitLink\>\"", ",", "\"\<StashLink\>\""}], "}"}]}]], "Input",
+ CellLabel->"In[15]:=",ExpressionUUID->"79a1c6d4-271e-4ad8-be9c-2610755aeda7"],
+
+Cell[BoxData[
+ RowBox[{"PacletInformation", "[", "\"\<GitLink\>\"", "]"}]], "Input",
+ CellLabel->"In[3]:=",ExpressionUUID->"613bac4e-48e4-4ebd-9d51-2d3af86546eb"],
+
+Cell[BoxData[
+ RowBox[{"PacletInformation", "[", "\"\<StashLink\>\"", "]"}]], "Input",
+ CellChangeTimes->{{3.788825361974869*^9, 3.7888253631168737`*^9}},
+ CellLabel->"In[4]:=",ExpressionUUID->"d203b0ab-23d9-4905-b79b-ecf71ad90d38"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"PacletUpdate", "[", 
+    RowBox[{"#1", ",", 
+     RowBox[{
+     "\"\<Site\>\"", "\[Rule]", 
+      "\"\<http://paclet-int.wolfram.com:8080/PacletServerInternal\>\""}]}], 
+    "]"}], "&"}], "/@", 
+  RowBox[{"{", "\"\<StashLink\>\"", "}"}]}]], "Input",
+ CellChangeTimes->{{3.788715630103997*^9, 3.788715637029731*^9}},
+ CellLabel->"In[5]:=",ExpressionUUID->"7ec4cd82-97e0-4fb6-9c9d-919c53cef33a"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"PacletUpdate", "[", "#1", "]"}], "&"}], "/@", 
+  RowBox[{"{", "\"\<StashLink\>\"", "}"}]}]], "Input",
+ CellChangeTimes->{{3.788825336376524*^9, 3.788825337105487*^9}},
+ CellLabel->"In[6]:=",ExpressionUUID->"90d29014-5410-470f-91b3-6fd0b4408bd0"]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{1440, 855},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+FrontEndVersion->"12.0 for Mac OS X x86 (64-bit) (April 8, 2019)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 152, 3, 98, "Title",ExpressionUUID->"2b654a6d-7d30-40ae-8172-eb2eee32c0c0"],
+Cell[CellGroupData[{
+Cell[757, 29, 182, 3, 54, "Subsection",ExpressionUUID->"fc817efe-a1dd-4334-a099-c5a7e551ad54"],
+Cell[942, 34, 157, 2, 33, "Input",ExpressionUUID->"327ecf13-612b-4840-9526-d2a8b2686d23"],
+Cell[1102, 38, 693, 18, 52, "Input",ExpressionUUID->"f3fcbba4-2a2f-49f5-b07f-836fec64ff72"],
+Cell[1798, 58, 216, 3, 30, "Input",ExpressionUUID->"95fd3be8-ddb4-4079-a43d-52f1c77bb7a0"],
+Cell[2017, 63, 218, 5, 32, "Item",ExpressionUUID->"e0c056b5-a0d3-4ec3-9172-f921b03a64d1"],
+Cell[2238, 70, 435, 10, 30, "Input",ExpressionUUID->"27bb5db1-d201-42ea-97d2-403f74432c1b"],
+Cell[2676, 82, 220, 5, 32, "Item",ExpressionUUID->"c18209e3-a7d2-4526-b1a9-9622456bced0"],
+Cell[2899, 89, 421, 10, 30, "Input",ExpressionUUID->"51c6aa39-27de-498c-a304-4446ca084a56"],
+Cell[3323, 101, 143, 2, 30, "Input",ExpressionUUID->"58929069-b144-4f3c-b7db-dd5f3dd12802"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[3503, 108, 157, 3, 54, "Subsection",ExpressionUUID->"028ce543-8165-4bb9-91f3-b0f8755eff18"],
+Cell[3663, 113, 230, 3, 30, "Input",ExpressionUUID->"c2712303-9641-42eb-a680-e666ff31cb17"],
+Cell[3896, 118, 327, 5, 30, "Input",ExpressionUUID->"46d8355e-ef03-4a7c-b1f1-e2e292d8e5d8"],
+Cell[4226, 125, 275, 4, 30, "Input",ExpressionUUID->"24f83fcf-9265-43cc-b076-efa47575b07f"],
+Cell[4504, 131, 208, 3, 30, "Input",ExpressionUUID->"f834fa74-65bb-4fbb-aedd-014fef6cb1ca"],
+Cell[4715, 136, 429, 11, 30, "Input",ExpressionUUID->"414a968c-2562-4cc1-95c4-128633c454b6"],
+Cell[5147, 149, 278, 4, 30, "Input",ExpressionUUID->"9e997015-1c8a-4c8c-a1dc-73c2db304ae5"],
+Cell[5428, 155, 165, 2, 30, "Input",ExpressionUUID->"9b8a13e9-a93b-4f6f-b84d-637536ab0845"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[5630, 162, 164, 3, 54, "Subsection",ExpressionUUID->"3f51a45f-3c12-46ab-9981-4d2d09cf4902"],
+Cell[5797, 167, 229, 3, 30, "Input",ExpressionUUID->"6e55735e-67aa-4a40-adaf-ce5b36b74e7b"],
+Cell[6029, 172, 399, 7, 30, "Input",ExpressionUUID->"036404b5-5fa7-4350-8872-333e229baced"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[6465, 184, 256, 4, 54, "Subsection",ExpressionUUID->"2c8bbd0e-8115-41ca-b740-37834e29cb5f"],
+Cell[6724, 190, 285, 4, 30, "Input",ExpressionUUID->"233620e6-97dc-4ac4-b8f4-36ea39ba2d5b"],
+Cell[7012, 196, 416, 6, 30, "Input",ExpressionUUID->"87e7ec5b-15ec-4848-a566-da64ea655075"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[7465, 207, 208, 4, 54, "Subsection",ExpressionUUID->"04b99a26-42ca-42a6-9d22-c6bdefc74ef5"],
+Cell[7676, 213, 283, 4, 30, "Input",ExpressionUUID->"f485bea6-4bb9-4ff9-ab6f-4257ae5c26d0"],
+Cell[7962, 219, 391, 6, 30, "Input",ExpressionUUID->"f7acaca6-97d0-47d0-95aa-5d3275e873af"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[8390, 230, 157, 3, 54, "Subsection",ExpressionUUID->"e74c9569-c1ca-4622-a9fc-3427cd7f93cc"],
+Cell[8550, 235, 231, 3, 30, "Input",ExpressionUUID->"1c8bd010-5a38-402e-9a9d-eceffa55222b"],
+Cell[8784, 240, 223, 3, 30, "Input",ExpressionUUID->"a1acf390-8c3a-4ac3-b4c1-ce9308fa77a6"],
+Cell[9010, 245, 227, 3, 30, "Input",ExpressionUUID->"5a2de578-a28f-434d-9c4c-21462bda958b"],
+Cell[9240, 250, 163, 2, 30, "Input",ExpressionUUID->"308cc696-963f-4694-9468-ab4f3c0f918a"],
+Cell[9406, 254, 227, 3, 30, "Input",ExpressionUUID->"8f9bb756-1977-4ad2-897d-c24f6297cf45"],
+Cell[9636, 259, 413, 11, 30, "Input",ExpressionUUID->"79a1c6d4-271e-4ad8-be9c-2610755aeda7"],
+Cell[10052, 272, 162, 2, 30, "Input",ExpressionUUID->"613bac4e-48e4-4ebd-9d51-2d3af86546eb"],
+Cell[10217, 276, 232, 3, 30, "Input",ExpressionUUID->"d203b0ab-23d9-4905-b79b-ecf71ad90d38"],
+Cell[10452, 281, 440, 11, 30, "Input",ExpressionUUID->"7ec4cd82-97e0-4fb6-9c9d-919c53cef33a"],
+Cell[10895, 294, 292, 6, 30, "Input",ExpressionUUID->"90d29014-5410-470f-91b3-6fd0b4408bd0"]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+
