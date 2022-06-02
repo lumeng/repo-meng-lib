@@ -1,0 +1,334 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 13.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     12996,        326]
+NotebookOptionsPosition[     11369,        288]
+NotebookOutlinePosition[     11801,        305]
+CellTagsIndexPosition[     11758,        302]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["WeChatLink", "Title",
+ CellChangeTimes->{{3.860346368058484*^9, 
+  3.860346369853759*^9}},ExpressionUUID->"715a6293-2d8a-47dc-8c5b-\
+23e0c06ecc90"],
+
+Cell[CellGroupData[{
+
+Cell["Downloading audios", "Subsection",
+ CellChangeTimes->{{3.86313251838949*^9, 
+  3.8631325328946037`*^9}},ExpressionUUID->"2e93b806-29a5-4824-a2dd-\
+39fc4efd88a7"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"WeChatLink", "[", 
+   RowBox[{
+    RowBox[{"url_String", "|", "url_URL"}], ",", "\"\<Audio\>\""}], "]"}], ":=", 
+  RowBox[{
+   RowBox[{"RightComposition", "[", "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"Import", "[", 
+       RowBox[{"#", ",", "\"\<XMLObject\>\""}], "]"}], "&"}], ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{"Cases", "[", "\[IndentingNewLine]", 
+       RowBox[{"#", ",", "\[IndentingNewLine]", 
+        RowBox[{
+         RowBox[{"XMLElement", "[", 
+          RowBox[{"\"\<mpvoice\>\"", ",", 
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{
+             "\"\<class\>\"", "\[Rule]", 
+              "\"\<rich_pages res_iframe js_editor_audio audio_iframe \
+place_audio_area\>\""}], ",", 
+             RowBox[{"\"\<name\>\"", "\[Rule]", "name_String"}], ",", "___", 
+             ",", 
+             RowBox[{
+             "\"\<voice_encode_fileid\>\"", "->", " ", "audioID_String"}], 
+             ",", "___"}], "}"}], ",", 
+           RowBox[{"{", "}"}]}], "]"}], ":>", 
+         RowBox[{"<|", 
+          RowBox[{
+           RowBox[{"\"\<name\>\"", "\[Rule]", "name"}], ",", 
+           RowBox[{"\"\<voice_encode_fileid\>\"", "->", " ", "audioID"}]}], 
+          "|>"}]}], ",", "\[IndentingNewLine]", "Infinity"}], 
+       "\[IndentingNewLine]", "]"}], "&"}], ",", "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{"URLSave", "[", 
+       RowBox[{
+        RowBox[{"URLBuild", "[", 
+         RowBox[{"\"\<https://res.wx.qq.com/voice/getvoice\>\"", ",", 
+          RowBox[{"{", 
+           RowBox[{"\"\<mediaid\>\"", "->", 
+            RowBox[{"(", 
+             RowBox[{"\"\<voice_encode_fileid\>\"", "/.", "#"}], ")"}]}], 
+           "}"}]}], "]"}], ",", 
+        RowBox[{"FileNameJoin", "[", 
+         RowBox[{"Flatten", "[", 
+          RowBox[{"{", 
+           RowBox[{"$TemporaryDirectory", ",", 
+            RowBox[{"StringReplace", "[", 
+             RowBox[{
+              RowBox[{"\"\<name\>\"", "/.", "#"}], ",", 
+              RowBox[{"\"\< \>\"", "->", " ", "\"\<_\>\""}]}], "]"}]}], "}"}],
+           "]"}], "]"}]}], "]"}], "&"}]}], "\[IndentingNewLine]", "]"}], "[", 
+   "url", "]"}]}]], "Input",
+ CellChangeTimes->{{3.860346320101952*^9, 3.860346364873274*^9}, {
+  3.863101423959708*^9, 3.8631014733615303`*^9}},
+ CellLabel->"In[1]:=",ExpressionUUID->"77e6a72a-4f1f-433f-976d-bdb6f5486631"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"WeChatLink", "[", 
+  RowBox[{
+  "\"\<https://mp.weixin.qq.com/s?__biz=Mzg5MTE0OTgxMA==&mid=2247484172&idx=1&\
+sn=7ea7cf970f9d972e5220c81a04fa12ee\>\"", ",", "\"\<Audio\>\""}], 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.863101474223361*^9, 3.863101480708129*^9}},
+ CellLabel->"In[2]:=",ExpressionUUID->"2cbc4916-4b68-4be2-ad5d-bd720024bb52"],
+
+Cell[BoxData["\<\"/private/var/folders/l5/nmc5j7hs7tg5mqys26nrlwym000bxz/T/\
+\:91d1\:74f6\:6885067\[NonBreakingSpace]\:521d\:73b0\:7aef\:502a.mp3\"\>"], \
+"Output",
+ CellChangeTimes->{3.863101493715992*^9},
+ CellLabel->"Out[2]=",ExpressionUUID->"b38e8a7b-2a58-4184-bd53-45df8eea2911"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Downloading videos", "Subsection",
+ CellChangeTimes->{{3.863132526430039*^9, 
+  3.86313252863717*^9}},ExpressionUUID->"30ca93ce-9337-4bae-a262-\
+1433d02fa5fe"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"WeChatLink", "[", 
+   RowBox[{
+    RowBox[{"url_String", "|", "url_URL"}], ",", "\"\<Video\>\""}], "]"}], ":=", 
+  RowBox[{
+   RowBox[{"RightComposition", "[", "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"Import", "[", 
+       RowBox[{"#", ",", "\"\<XMLObject\>\""}], "]"}], "&"}], ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{"Cases", "[", "\[IndentingNewLine]", 
+       RowBox[{"#", ",", "\[IndentingNewLine]", 
+        RowBox[{
+         RowBox[{"XMLElement", "[", 
+          RowBox[{"\"\<script\>\"", ",", 
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"\"\<type\>\"", "\[Rule]", "\"\<text/javascript\>\""}], 
+             ",", "___"}], "}"}], ",", 
+           RowBox[{"{", 
+            RowBox[{"s_String", "?", 
+             RowBox[{"(", 
+              RowBox[{
+               RowBox[{"StringContainsQ", "[", 
+                RowBox[{"#", ",", "\"\<http://mpvideo.qpic.cn\>\""}], "]"}], 
+               "&"}], ")"}]}], "}"}]}], "]"}], ":>", " ", "s"}], ",", 
+        "\[IndentingNewLine]", "Infinity"}], "\[IndentingNewLine]", "]"}], 
+      "&"}], ",", "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{
+       RowBox[{
+        RowBox[{"StringCases", "[", 
+         RowBox[{"#", ",", 
+          RowBox[{
+           RowBox[{
+           "RegularExpression", "[", 
+            "\"\<'(https?://mpvideo\\\\.qpic\\\\.cn/[^']+)'\>\"", "]"}], ":>", 
+           RowBox[{"StringReplace", "[", " ", 
+            RowBox[{"\"\<$1\>\"", ",", 
+             RowBox[{"{", 
+              RowBox[{"\"\<\\\\x26\>\"", "->", "\"\<&\>\""}], "}"}]}], 
+            "]"}]}]}], "]"}], "&"}], "/@", "#"}], "&"}], ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{"DeleteDuplicates", "[", 
+       RowBox[{"Flatten", "[", 
+        RowBox[{"{", "#", "}"}], "]"}], "]"}], "&"}], ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{"#", ",", 
+          RowBox[{"Last", "[", 
+           RowBox[{"\"\<Path\>\"", "/.", 
+            RowBox[{"URLParse", "[", "#", "]"}]}], "]"}]}], "}"}], "&"}], "/@",
+        "#"}], "&"}], ",", "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{
+       RowBox[{
+        RowBox[{"URLSave", "[", "\[IndentingNewLine]", 
+         RowBox[{
+          RowBox[{"#", "[", 
+           RowBox[{"[", "1", "]"}], "]"}], ",", "\[IndentingNewLine]", 
+          RowBox[{"FileNameJoin", "[", 
+           RowBox[{"Flatten", "[", 
+            RowBox[{"{", 
+             RowBox[{"$TemporaryDirectory", ",", 
+              RowBox[{"StringReplace", "[", 
+               RowBox[{
+                RowBox[{"#", "[", 
+                 RowBox[{"[", "2", "]"}], "]"}], ",", 
+                RowBox[{"\"\< \>\"", "->", " ", "\"\<_\>\""}]}], "]"}]}], 
+             "}"}], "]"}], "]"}]}], "\[IndentingNewLine]", "]"}], "&"}], "/@",
+        "#"}], "&"}]}], "\[IndentingNewLine]", "]"}], "[", "url", 
+   "]"}]}]], "Input",
+ CellChangeTimes->{{3.863103399125421*^9, 3.863103416958515*^9}, {
+   3.863103524523881*^9, 3.863103537513513*^9}, {3.8631038712099953`*^9, 
+   3.863103898447509*^9}, {3.863104195678318*^9, 3.863104197924089*^9}, {
+   3.863126245058401*^9, 3.863126247673068*^9}, {3.863126645982781*^9, 
+   3.863126650269136*^9}, {3.863129216157669*^9, 3.863129223938121*^9}, {
+   3.863129498963519*^9, 3.863129520007359*^9}, {3.863129566470017*^9, 
+   3.8631296035301323`*^9}, {3.863129704161405*^9, 3.86312973614674*^9}, {
+   3.863129965560322*^9, 3.86312998005888*^9}, {3.863130037041542*^9, 
+   3.863130207247514*^9}, {3.8631309859929457`*^9, 3.8631310267152977`*^9}, {
+   3.863131139728696*^9, 3.86313121533809*^9}, {3.863131270962181*^9, 
+   3.863131299197516*^9}, {3.8631314416806307`*^9, 3.8631314437956142`*^9}, {
+   3.863132306810158*^9, 3.863132313966968*^9}, {3.863132540006816*^9, 
+   3.8631325890794687`*^9}, {3.863133256787057*^9, 3.863133286469718*^9}, {
+   3.863133337984528*^9, 3.863133395301426*^9}, 3.8631337134975367`*^9, {
+   3.863133802114606*^9, 3.863133807083797*^9}, {3.8631340057687902`*^9, 
+   3.863134050540794*^9}, {3.863134570813211*^9, 3.863134577310677*^9}},
+ CellLabel->
+  "In[113]:=",ExpressionUUID->"7ef506e5-efb3-4501-81de-71897e75fb64"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"WeChatLink", "[", 
+  RowBox[{
+  "\"\<https://mp.weixin.qq.com/s/y1hpH7K3WDlpvd6v7_5o6g\>\"", ",", 
+   "\"\<Video\>\""}], "]"}]], "Input",
+ CellChangeTimes->{{3.863103429579859*^9, 3.863103438398947*^9}},
+ CellLabel->
+  "In[114]:=",ExpressionUUID->"2dba578a-a913-4ec4-ade7-bd8348fb5a87"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"\<\"/private/var/folders/l5/nmc5j7hs7tg5mqys26nrlwym000bxz/T/\
+0bc3oyaamaaau4ak6ll5z5rfa5wdaz3aabqa.f10002.mp4\"\>", 
+   ",", "\<\"/private/var/folders/l5/nmc5j7hs7tg5mqys26nrlwym000bxz/T/\
+0bc3oyaamaaau4ak6ll5z5rfa5wdaz3aabqa.f10003.mp4\"\>", 
+   ",", "\<\"/private/var/folders/l5/nmc5j7hs7tg5mqys26nrlwym000bxz/T/\
+0bc3oyaamaaau4ak6ll5z5rfa5wdaz3aabqa.f10004.mp4\"\>"}], "}"}]], "Output",
+ CellChangeTimes->{
+  3.86310344112785*^9, {3.8631035310019903`*^9, 3.8631035423262777`*^9}, {
+   3.8631038844976797`*^9, 3.86310390178913*^9}, 3.86310420819866*^9, 
+   3.863129232621928*^9, 3.863129526013172*^9, 3.8631297463882313`*^9, {
+   3.8631299733805237`*^9, 3.8631299854043407`*^9}, {3.863130052429371*^9, 
+   3.863130102337245*^9}, 3.863130134949417*^9, 3.863130168860956*^9, 
+   3.863131189557989*^9, 3.8631312291619873`*^9, 3.86313130495184*^9, 
+   3.8631314507687283`*^9, 3.8631323199509773`*^9, 3.863132558948481*^9, 
+   3.863132593047611*^9, {3.863133281771163*^9, 3.863133289301029*^9}, {
+   3.8631333646704493`*^9, 3.863133388287911*^9}, 3.863133762816236*^9, 
+   3.86313406168852*^9, 3.8631346553421507`*^9},
+ CellLabel->
+  "Out[114]=",ExpressionUUID->"77f706ed-4a24-48a3-af11-28b10d2c46e2"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"WeChatLink", "[", 
+  RowBox[{
+  "\"\<https://mp.weixin.qq.com/s/uAIbS_lHkjj-AmPu_FTjtQ\>\"", ",", 
+   "\"\<Video\>\""}], "]"}]], "Input",
+ CellChangeTimes->{{3.8631858675493193`*^9, 3.863185885101439*^9}, {
+  3.863186082000679*^9, 3.8631860969953423`*^9}},
+ CellLabel->
+  "In[117]:=",ExpressionUUID->"02bd237d-0183-4a7b-85b5-426e1f9a761f"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"\<\"/private/var/folders/l5/nmc5j7hs7tg5mqys26nrlwym000bxz/T/\
+0bc3eaaayaaa34ae2ptonvrfaigdbqqaadaa.f10002.mp4\"\>", 
+   ",", "\<\"/private/var/folders/l5/nmc5j7hs7tg5mqys26nrlwym000bxz/T/\
+0bc3eaaayaaa34ae2ptonvrfaigdbqqaadaa.f10003.mp4\"\>", 
+   ",", "\<\"/private/var/folders/l5/nmc5j7hs7tg5mqys26nrlwym000bxz/T/\
+0bc3eaaayaaa34ae2ptonvrfaigdbqqaadaa.f10004.mp4\"\>"}], "}"}]], "Output",
+ CellChangeTimes->{3.8631860863128023`*^9, 3.863186173632071*^9},
+ CellLabel->
+  "Out[117]=",ExpressionUUID->"1916b117-6e40-401f-b119-22de52c33d18"]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{"SystemOpen", "[", 
+  RowBox[{"DirectoryName", "[", 
+   RowBox[{"%", "[", 
+    RowBox[{"[", "1", "]"}], "]"}], "]"}], "]"}]], "Input",
+ CellChangeTimes->{{3.863134607930752*^9, 3.863134622910349*^9}},
+ CellLabel->
+  "In[115]:=",ExpressionUUID->"b53bb22d-f1ff-473d-855b-f78aa2fdbb20"]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{1440, 1662},
+WindowMargins->{{Automatic, -1440}, {Automatic, 845}},
+Magnification:>1.5 Inherited,
+FrontEndVersion->"13.0 for Mac OS X x86 (64-bit) (December 2, 2021)",
+StyleDefinitions->"Dracula.nb",
+ExpressionUUID->"3e0dec07-92fa-4707-8b65-9321a9994991"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 153, 3, 146, "Title",ExpressionUUID->"715a6293-2d8a-47dc-8c5b-23e0c06ecc90"],
+Cell[CellGroupData[{
+Cell[758, 29, 167, 3, 81, "Subsection",ExpressionUUID->"2e93b806-29a5-4824-a2dd-39fc4efd88a7"],
+Cell[928, 34, 2414, 58, 446, "Input",ExpressionUUID->"77e6a72a-4f1f-433f-976d-bdb6f5486631"],
+Cell[CellGroupData[{
+Cell[3367, 96, 363, 7, 104, "Input",ExpressionUUID->"2cbc4916-4b68-4be2-ad5d-bd720024bb52"],
+Cell[3733, 105, 284, 4, 52, "Output",ExpressionUUID->"b38e8a7b-2a58-4184-bd53-45df8eea2911"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[4066, 115, 165, 3, 81, "Subsection",ExpressionUUID->"30ca93ce-9337-4bae-a262-1433d02fa5fe"],
+Cell[4234, 120, 4227, 96, 585, "Input",ExpressionUUID->"7ef506e5-efb3-4501-81de-71897e75fb64"],
+Cell[CellGroupData[{
+Cell[8486, 220, 310, 7, 87, "Input",ExpressionUUID->"2dba578a-a913-4ec4-ade7-bd8348fb5a87"],
+Cell[8799, 229, 1239, 20, 223, "Output",ExpressionUUID->"77f706ed-4a24-48a3-af11-28b10d2c46e2"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[10075, 254, 363, 8, 87, "Input",ExpressionUUID->"02bd237d-0183-4a7b-85b5-426e1f9a761f"],
+Cell[10441, 264, 579, 10, 223, "Output",ExpressionUUID->"1916b117-6e40-401f-b119-22de52c33d18"]
+}, Open  ]],
+Cell[11035, 277, 306, 7, 87, "Input",ExpressionUUID->"b53bb22d-f1ff-473d-855b-f78aa2fdbb20"]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+
